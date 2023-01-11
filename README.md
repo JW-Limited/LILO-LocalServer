@@ -13,7 +13,7 @@ Full Changelog: https://github.com/JoeyWezt/LILO-LocalServer/commits/1.1beta
 
 ## Help
 
-If you want how to know how to use LILO LocalServer start it with the --help argument
+If you want how to know how to use LILO LocalServer start it with the _--help_ argument
 
 Response :
 
