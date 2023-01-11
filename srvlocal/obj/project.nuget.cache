@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "l+sYdFo5julZhLvBpxsnmBSc4hURlUVz2+b134tWiOrg8pbxBPumeVqP4QAdWjjMehMAoOXakeCahhva0RmYFA==",
+  "dgSpecHash": "H2pZrNiKXOdqq2FOqUeXwPgQ2YnquLNjK4PPaZlXGJN6OWKtS5bpgLWl1TzHfe2FG12fOT/BZ4QJAawNaFYVKg==",
   "success": true,
-  "projectFilePath": "D:\\LILO\\source\\repos\\srvlocal\\srvlocal.csproj",
+  "projectFilePath": "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\srvlocal\\srvlocal.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

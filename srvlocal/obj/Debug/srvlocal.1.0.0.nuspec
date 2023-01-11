@@ -9,14 +9,12 @@
     <copyright>Copyright© 2023 - JW Limited</copyright>
     <tags>server lilo</tags>
     <dependencies>
-      <group targetFramework="net7.0">
-        <dependency id="PortMonitor" version="1.0.0" exclude="Build,Analyzers" />
-      </group>
+      <group targetFramework="net7.0" />
     </dependencies>
   </metadata>
   <files>
-    <file src="D:\LILO\source\repos\srvlocal\bin\Debug\net7.0\srvlocal.runtimeconfig.json" target="lib\net7.0\srvlocal.runtimeconfig.json" />
-    <file src="D:\LILO\source\repos\srvlocal\bin\Debug\net7.0\srvlocal.dll" target="lib\net7.0\srvlocal.dll" />
-    <file src="D:\LILO\source\repos\srvlocal\bin\Debug\net7.0\documentation.xml" target="lib\net7.0\documentation.xml" />
+    <file src="C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal\bin\Debug\net7.0\srvlocal.runtimeconfig.json" target="lib\net7.0\srvlocal.runtimeconfig.json" />
+    <file src="C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal\bin\Debug\net7.0\srvlocal.dll" target="lib\net7.0\srvlocal.dll" />
+    <file src="C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal\bin\Debug\net7.0\documentation.xml" target="lib\net7.0\documentation.xml" />
   </files>
 </package>

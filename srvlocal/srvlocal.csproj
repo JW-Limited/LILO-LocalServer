@@ -20,7 +20,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PortMonitor\PortMonitor.csproj" />
+    <Reference Include="PortMonitor">
+      <HintPath>D:\LILO\source\repos\PortMonitor\bin\Debug\net7.0\PortMonitor.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
