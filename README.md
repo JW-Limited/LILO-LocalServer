@@ -18,3 +18,10 @@ If you want how to know how to use LILO LocalServer start it with the --help arg
 Response :
 
 ![grafik](https://user-images.githubusercontent.com/120219149/211900446-e76da3bb-f979-4d46-a94d-b3e0187e9152.png)
+
+## Troubleshooting
+
+If you had any trouble with the binary 
+
+- start with higher Rights 
+- use the Argument _--help-error-fix_ to fix it
