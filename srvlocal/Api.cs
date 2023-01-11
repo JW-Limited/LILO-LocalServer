@@ -27,51 +27,57 @@ class ApiToRecevieCommands
     public void Start()
     {
         _listener = new TcpListener(IPAddress.Any, _port);
-        _listener.Start();
-
-        apiListening = true;
-
-        while (true)
+        try
         {
-            using (TcpClient client = _listener.AcceptTcpClient())
-            {
-                using (SslStream sslStream = new SslStream(client.GetStream()))
-                {
-                    try
-                    {
-                        sslStream.AuthenticateAsServer(_certificate);
-                        certAcepted = true;
-                        // check for authentication 
-                        string authMessage = ReadMessage(sslStream);
-                        if (!IsAuthenticated(authMessage))
-                        {
-                            sslStream.Write(Encoding.ASCII.GetBytes("Access Denied"));
-                            continue;
-                        }
-                        // authenticated
-                        OAuth2 = true;
-                        sslStream.Write(Encoding.ASCII.GetBytes("Access granted"));
-                        string message = ReadMessage(sslStream);
-                        Console.WriteLine("Received: {0}", message);
+            _listener.Start();
 
-                        string response = "Work is done";
-                        byte[] data = Encoding.ASCII.GetBytes(response);
-                        sslStream.Write(data, 0, data.Length);
-                    }
-                    catch (AuthenticationException e)
+            apiListening = true;
+
+            while (true)
+            {
+                using (TcpClient client = _listener.AcceptTcpClient())
+                {
+                    using (SslStream sslStream = new SslStream(client.GetStream()))
                     {
-                        Console.WriteLine("Error: {0}", e.Message);
-                        if (e.InnerException != null)
+                        try
                         {
-                            Console.WriteLine("Inner exception: {0}", e.InnerException.Message);
+                            sslStream.AuthenticateAsServer(_certificate);
+                            certAcepted = true;
+                            // check for authentication 
+                            string authMessage = ReadMessage(sslStream);
+                            if (!IsAuthenticated(authMessage))
+                            {
+                                sslStream.Write(Encoding.ASCII.GetBytes("Access Denied"));
+                                continue;
+                            }
+                            // authenticated
+                            OAuth2 = true;
+                            sslStream.Write(Encoding.ASCII.GetBytes("Access granted"));
+                            string message = ReadMessage(sslStream);
+                            Console.WriteLine("Received: {0}", message);
+
+                            string response = "Work is done";
+                            byte[] data = Encoding.ASCII.GetBytes(response);
+                            sslStream.Write(data, 0, data.Length);
                         }
-                        Console.WriteLine("Authentication failed - closing the connection.");
-                        sslStream.Close();
-                        client.Close();
+                        catch (AuthenticationException e)
+                        {
+                            Console.WriteLine("Error: {0}", e.Message);
+                            if (e.InnerException != null)
+                            {
+                                Console.WriteLine("Inner exception: {0}", e.InnerException.Message);
+                            }
+                            Console.WriteLine("Authentication failed - closing the connection.");
+                            sslStream.Close();
+                            client.Close();
+                        }
                     }
                 }
             }
         }
+        catch (Exception ex) { return; }
+
+        
     }
 
     public bool IsAuthenticated(string authMessage)
