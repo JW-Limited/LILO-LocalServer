@@ -15,4 +15,6 @@ Full Changelog: https://github.com/JoeyWezt/LILO-LocalServer/commits/1.1beta
 
 If you want how to know how to use LILO LocalServer start it with the --help argument
 
+Response :
+
 ![grafik](https://user-images.githubusercontent.com/120219149/211900446-e76da3bb-f979-4d46-a94d-b3e0187e9152.png)
