@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <AssemblyVersion>1.2.0.1</AssemblyVersion>
+    <FileVersion>1.2.0.1</FileVersion>
+    <PackageTags>server;lilo</PackageTags>
+    <Copyright>Copyright© 2023 - JW Limited</Copyright>
+    <Description>A LocalServer Host</Description>
+    <Company>JW Limited</Company>
+    <Authors>Joe Valentino Lengefeld</Authors>
+    <Title>SrvLocal</Title>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <DocumentationFile>D:\LILO\source\repos\srvlocal\bin\Debug\net7.0\documentation.xml</DocumentationFile>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PortMonitor\PortMonitor.csproj" />
+  </ItemGroup>
+
+</Project>
