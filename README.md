@@ -11,7 +11,7 @@ Please be Patient.
 
 ## Docs
 
-Full Changelog: https://github.com/JoeyWezt/LILO-LocalServer/commits/1.1beta
+Full Changelog: https://github.com/JoeyWezt/LILO-LocalServer/commits/1.1.2beta
 
 ## Help
 
