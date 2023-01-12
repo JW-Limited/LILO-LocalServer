@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jx2Ao2Hchx0b+8g4EA14ru8egY62OIXjU0zrDz8AE+Cr2E+qVlbFSwvt6jS/i27miznuDpT2WufXSFwzFJEvwQ==",
+  "dgSpecHash": "WjVLqufeew/p6D7KGXUr5IlYgmMF6uXgUuApO1RBWXpYURz2d9g4mks3/AHu34XQqy0xzb9HGpgqZk3VZyrNFA==",
   "success": true,
   "projectFilePath": "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\srvlocal\\srvlocal.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\joeva\\.nuget\\packages\\conemu.core\\22.12.18\\conemu.core.22.12.18.nupkg.sha512",
-    "C:\\Users\\joeva\\.nuget\\packages\\trivial\\6.6.0\\trivial.6.6.0.nupkg.sha512",
-    "C:\\Users\\joeva\\.nuget\\packages\\trivial.console\\6.6.0\\trivial.console.6.6.0.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }

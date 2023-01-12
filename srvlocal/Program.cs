@@ -4,8 +4,6 @@ using System.Net;
 using System.Reflection;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
-using Trivial;
-
 namespace Local
 {
     public class Server
@@ -29,7 +27,15 @@ namespace Local
         private readonly string serverUrl = "http://localhost:8080/api";
         private readonly string _apiKey = "liloDev-420";
         private readonly string _logFile = ".\\portmonitor";
+
         public static int _port = 8080;
+
+        public static int[] _extraPorts = 
+        { 
+            8081, 
+            10908 
+        };
+
         public static bool isLoggingEnabled = true;
         public static string mediaDirectory = "C:\\LILO\\req\\media\\";
         public static bool advancedDebugg = false;
@@ -91,12 +97,32 @@ namespace Local
                     }
                 }
             }
-            
+
+            try
+            {
+                thread.Start();
+
+                Console.Title = "LILO™ LocalServer";
+                var server = new Server(distDirectory, _port);
+
+                var threadMain = new Thread(server.Start);
+                threadMain.Start();
+            }
+            catch (HttpListenerException httpEx)
+            {
+                ChangePort(_port);
+            }
+            catch (Exception ex)
+            {
+                ChangePort(_port);
+            }
+
+
 
             Console.WriteLine("Configurations: ");
             Console.WriteLine("");
 
-            thread.Start();
+            
 
             Console.WriteLine("Directory    :   {0} [{1}]",distDirectory, distDirectory == "C:\\LILO\\dist" ? "DEFAULT" : "CHANGED");
             Console.WriteLine("Media        :   {0} [{1}]", mediaDirectory, mediaDirectory == "C:\\LILO\\req\\media\\" ? "DEFAULT" : "CHANGED");
@@ -109,15 +135,37 @@ namespace Local
             Console.WriteLine("|-- X509Cert :   {0} ", recevieCommands.certAcepted ? "valid" : "error");
             Console.WriteLine("");
 
-            Console.Title = "LILO™ LocalServer";
-            var server = new Server(distDirectory, _port);
+        }
 
-            var threadMain = new Thread(server.Start);
-            threadMain.Start();
+        public static void ChangePort(int port)
+        {
+            if(port != _extraPorts[0])
+            {
+                var thread = new Thread(() =>
+                {
+                    var proc = new Process();
+                    proc.StartInfo.FileName = ".\\srvlocal.exe";
+                    proc.StartInfo.Arguments = "--port=" + _extraPorts[0];
+                    proc.Start();
+                });
+                Console.Clear();
+                thread.Start();
+                Environment.Exit(0);
+            }
+            else if (port == _extraPorts[0])
+            {
+                var thread = new Thread(() =>
+                {
+                    var proc = new Process();
+                    proc.StartInfo.FileName = ".\\srvlocal.exe";
+                    proc.StartInfo.Arguments = "--port=" + _extraPorts[1];
 
-            
-            Trivial.CommandLine.StyleConsole style = new Trivial.CommandLine.StyleConsole();
-            style.Mode = Trivial.CommandLine.StyleConsole.Modes.Text;
+                    proc.Start();
+                });
+                Console.Clear();
+                thread.Start();
+                Environment.Exit(01);
+            }
         }
 
         private static void ShowVersion()
@@ -140,40 +188,48 @@ namespace Local
 
         public void Start()
         {
-            var mediasvr = new MediaServer();
+            
             try
             {
-                mediasvr.Start();
-
-                if (!mediasvr._isRunning)
+                var mediasvr = new MediaServer();
+                try
                 {
-                    var error = new Errorhandling();
-                    error.ThrowError("The MediaServer is not reachable!");
+                    mediasvr.Start();
+
+                    if (!mediasvr._isRunning)
+                    {
+                        var error = new Errorhandling();
+                        error.ThrowError("The MediaServer is not reachable!");
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"{DateTime.Now} : {ex.Message}");
                 }
 
-            }
-            catch(Exception ex) 
-            {
-                Console.WriteLine($"{DateTime.Now} : {ex.Message}");  
-            }
+                _listener.Start();
+                if (_listener.IsListening)
+                {
+                    Console.WriteLine($"Local Server server started at http://localhost:{_port}/");
+                    Console.WriteLine();
+                    Console.WriteLine("Listening for requests...");
 
-            _listener.Start();
-            if (_listener.IsListening)
-            {
-                Console.WriteLine($"Local Server server started at http://localhost:{_port}/");
-                Console.WriteLine();
-                Console.WriteLine("Listening for requests...");
-                
-                var thread = new Thread(HandelRequest);
-                thread.Start();
-                thread.Join();
-            }
+                    var thread = new Thread(HandelRequest);
+                    thread.Start();
+                    thread.Join();
+                }
 
-            else if (!_listener.IsListening)
+                else if (!_listener.IsListening)
+                {
+                    var error = new Errorhandling();
+                    error.ThrowError("The Port cant be opened");
+                    return;
+                }
+            }
+            catch (Exception ex)
             {
-                var error = new Errorhandling();
-                error.ThrowError("The Port cant be opened");
-                return;
+                ChangePort(_port);
             }
             
 

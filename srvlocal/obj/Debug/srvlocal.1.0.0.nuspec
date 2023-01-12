@@ -5,14 +5,18 @@
     <version>1.0.0</version>
     <title>SrvLocal</title>
     <authors>Joe Valentino Lengefeld</authors>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <license type="file">LICENSE</license>
+    <licenseUrl>https://aka.ms/deprecateLicenseUrl</licenseUrl>
+    <icon>icons8_server_windows_32.png</icon>
+    <readme>README.md</readme>
+    <projectUrl>https://github.com/JW-Limited/LILO-LocalServer</projectUrl>
     <description>A LocalServer Host</description>
     <copyright>Copyright© 2023 - JW Limited</copyright>
     <tags>server lilo</tags>
+    <repository type="git" url="https://github.com/JW-Limited/LILO-LocalServer" />
     <dependencies>
-      <group targetFramework="net7.0-windows7.0">
-        <dependency id="ConEmu.Core" version="22.12.18" exclude="Build,Analyzers" />
-        <dependency id="Trivial.Console" version="6.6.0" exclude="Build,Analyzers" />
-      </group>
+      <group targetFramework="net7.0-windows7.0" />
     </dependencies>
     <contentFiles>
       <files include="any/net7.0-windows7.0/icons8_server_windows.ico" buildAction="Content" />
@@ -24,5 +28,8 @@
     <file src="C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal\bin\Debug\net7.0-windows\documentation.xml" target="lib\net7.0-windows7.0\documentation.xml" />
     <file src="C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal\icons8_server_windows.ico" target="content\icons8_server_windows.ico" />
     <file src="C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal\icons8_server_windows.ico" target="contentFiles\any\net7.0-windows7.0\icons8_server_windows.ico" />
+    <file src="C:\Users\joeva\Downloads\icons8_server_windows_32.png" target="\icons8_server_windows_32.png" />
+    <file src="C:\Users\joeva\Documents\GitHub\LILO-LocalServer\LICENSE" target="\LICENSE" />
+    <file src="C:\Users\joeva\Documents\GitHub\LILO-LocalServer\README.md" target="\README.md" />
   </files>
 </package>

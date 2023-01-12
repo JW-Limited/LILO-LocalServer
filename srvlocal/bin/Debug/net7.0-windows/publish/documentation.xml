@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>srvlocal</name>
+    </assembly>
+    <members>
+        <member name="M:Local.Server.Main(System.String[])">
+            <summary>
+            Main Entry
+            </summary>
+        </member>
+    </members>
+</doc>

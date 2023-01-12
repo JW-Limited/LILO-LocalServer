@@ -7,61 +7,8 @@
   "targets": {
     ".NETCoreApp,Version=v7.0": {
       "srvlocal/1.0.0": {
-        "dependencies": {
-          "ConEmu.Core": "22.12.18",
-          "Trivial.Console": "6.6.0"
-        },
         "runtime": {
           "srvlocal.dll": {}
-        }
-      },
-      "ConEmu.Core/22.12.18": {},
-      "Trivial/6.6.0": {
-        "runtime": {
-          "lib/net7.0/Trivial.dll": {
-            "assemblyVersion": "6.6.0.0",
-            "fileVersion": "6.6.0.0"
-          }
-        }
-      },
-      "Trivial.Console/6.6.0": {
-        "dependencies": {
-          "Trivial": "6.6.0"
-        },
-        "runtime": {
-          "lib/net7.0/Trivial.Console.dll": {
-            "assemblyVersion": "6.6.0.0",
-            "fileVersion": "6.6.0.0"
-          }
-        },
-        "resources": {
-          "lib/net7.0/en/Trivial.Console.resources.dll": {
-            "locale": "en"
-          },
-          "lib/net7.0/es/Trivial.Console.resources.dll": {
-            "locale": "es"
-          },
-          "lib/net7.0/fr/Trivial.Console.resources.dll": {
-            "locale": "fr"
-          },
-          "lib/net7.0/ja/Trivial.Console.resources.dll": {
-            "locale": "ja"
-          },
-          "lib/net7.0/ko/Trivial.Console.resources.dll": {
-            "locale": "ko"
-          },
-          "lib/net7.0/pt/Trivial.Console.resources.dll": {
-            "locale": "pt"
-          },
-          "lib/net7.0/ru/Trivial.Console.resources.dll": {
-            "locale": "ru"
-          },
-          "lib/net7.0/zh-Hans/Trivial.Console.resources.dll": {
-            "locale": "zh-Hans"
-          },
-          "lib/net7.0/zh-Hant/Trivial.Console.resources.dll": {
-            "locale": "zh-Hant"
-          }
         }
       }
     }
@@ -71,27 +18,6 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
-    },
-    "ConEmu.Core/22.12.18": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-3IjAFvN8RR7w+4owL0QKG1QwMZn7Fnhzse+pAia97Q/z+Glz75jGH+J2UQcNLuq+i+NZsYI7vKetH+zP7llLiw==",
-      "path": "conemu.core/22.12.18",
-      "hashPath": "conemu.core.22.12.18.nupkg.sha512"
-    },
-    "Trivial/6.6.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-a7SjjFmz6P0dURQrR647e5EYWnU17W2Ac8EnVcqMd2g0ZOgwJFy8AQfQcZ832GiQpC7IrhGMHqTRUlwqTU9fnQ==",
-      "path": "trivial/6.6.0",
-      "hashPath": "trivial.6.6.0.nupkg.sha512"
-    },
-    "Trivial.Console/6.6.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-B56c0/csvnHegU4v5NYYHu8rMoNfjnrimHjrIOTUfp7uFa4sCuyTCqS947COcJmgL/jsLKNIswH5JlXNcY7Sew==",
-      "path": "trivial.console/6.6.0",
-      "hashPath": "trivial.console.6.6.0.nupkg.sha512"
     }
   }
 }
