@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net7.0-windows</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
@@ -17,7 +17,13 @@
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <DocumentationFile>D:\LILO\source\repos\srvlocal\bin\Debug\net7.0\documentation.xml</DocumentationFile>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <StartupObject>Local.Server</StartupObject>
+    <ApplicationIcon>icons8_server_windows.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="icons8_server_windows.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="ConEmu.Core" Version="22.12.18" />
