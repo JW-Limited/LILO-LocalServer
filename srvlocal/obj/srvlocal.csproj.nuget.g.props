@@ -13,4 +13,7 @@
     <SourceRoot Include="C:\Users\joeva\.nuget\packages\" />
     <SourceRoot Include="C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages\" />
   </ItemGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgConEmu_Core Condition=" '$(PkgConEmu_Core)' == '' ">C:\Users\joeva\.nuget\packages\conemu.core\22.12.18</PkgConEmu_Core>
+  </PropertyGroup>
 </Project>

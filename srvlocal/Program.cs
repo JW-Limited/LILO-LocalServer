@@ -4,6 +4,7 @@ using System.Net;
 using System.Reflection;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
+using Trivial;
 
 namespace Local
 {
@@ -113,6 +114,10 @@ namespace Local
 
             var threadMain = new Thread(server.Start);
             threadMain.Start();
+
+            
+            Trivial.CommandLine.StyleConsole style = new Trivial.CommandLine.StyleConsole();
+            style.Mode = Trivial.CommandLine.StyleConsole.Modes.Text;
         }
 
         private static void ShowVersion()

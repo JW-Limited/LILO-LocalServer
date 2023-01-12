@@ -1,11 +1,237 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {}
+    "net7.0": {
+      "ConEmu.Core/22.12.18": {
+        "type": "package",
+        "build": {
+          "Build/ConEmu.Core.Targets": {}
+        }
+      },
+      "Trivial/6.6.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/Trivial.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Trivial.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Trivial.Console/6.6.0": {
+        "type": "package",
+        "dependencies": {
+          "Trivial": "6.6.0"
+        },
+        "compile": {
+          "lib/net7.0/Trivial.Console.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Trivial.Console.dll": {
+            "related": ".xml"
+          }
+        },
+        "resource": {
+          "lib/net7.0/en/Trivial.Console.resources.dll": {
+            "locale": "en"
+          },
+          "lib/net7.0/es/Trivial.Console.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net7.0/fr/Trivial.Console.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net7.0/ja/Trivial.Console.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net7.0/ko/Trivial.Console.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net7.0/pt/Trivial.Console.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net7.0/ru/Trivial.Console.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net7.0/zh-Hans/Trivial.Console.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/net7.0/zh-Hant/Trivial.Console.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "ConEmu.Core/22.12.18": {
+      "sha512": "3IjAFvN8RR7w+4owL0QKG1QwMZn7Fnhzse+pAia97Q/z+Glz75jGH+J2UQcNLuq+i+NZsYI7vKetH+zP7llLiw==",
+      "type": "package",
+      "path": "conemu.core/22.12.18",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Build/ConEmu.Core.Targets",
+        "Tools/ConEmu/CmdInit.cmd",
+        "Tools/ConEmu/ConEmu.exe",
+        "Tools/ConEmu/ConEmu64.exe",
+        "Tools/ConEmu/ConEmuC.exe",
+        "Tools/ConEmu/ConEmuC64.exe",
+        "Tools/ConEmu/ConEmuCD.dll",
+        "Tools/ConEmu/ConEmuCD64.dll",
+        "Tools/ConEmu/ConEmuHk.dll",
+        "Tools/ConEmu/ConEmuHk64.dll",
+        "Tools/ConEmu/GitShowBranch.cmd",
+        "conemu.core.22.12.18.nupkg.sha512",
+        "conemu.core.nuspec",
+        "images/icon.png",
+        "license/license.txt"
+      ]
+    },
+    "Trivial/6.6.0": {
+      "sha512": "a7SjjFmz6P0dURQrR647e5EYWnU17W2Ac8EnVcqMd2g0ZOgwJFy8AQfQcZ832GiQpC7IrhGMHqTRUlwqTU9fnQ==",
+      "type": "package",
+      "path": "trivial/6.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE/LICENSE",
+        "README.md",
+        "lib/net461/Trivial.dll",
+        "lib/net461/Trivial.xml",
+        "lib/net48/Trivial.dll",
+        "lib/net48/Trivial.xml",
+        "lib/net481/Trivial.dll",
+        "lib/net481/Trivial.xml",
+        "lib/net5.0/Trivial.dll",
+        "lib/net5.0/Trivial.xml",
+        "lib/net6.0/Trivial.dll",
+        "lib/net6.0/Trivial.xml",
+        "lib/net7.0/Trivial.dll",
+        "lib/net7.0/Trivial.xml",
+        "lib/netcoreapp3.1/Trivial.dll",
+        "lib/netcoreapp3.1/Trivial.xml",
+        "lib/netstandard2.0/Trivial.dll",
+        "lib/netstandard2.0/Trivial.xml",
+        "logo.png",
+        "trivial.6.6.0.nupkg.sha512",
+        "trivial.nuspec"
+      ]
+    },
+    "Trivial.Console/6.6.0": {
+      "sha512": "B56c0/csvnHegU4v5NYYHu8rMoNfjnrimHjrIOTUfp7uFa4sCuyTCqS947COcJmgL/jsLKNIswH5JlXNcY7Sew==",
+      "type": "package",
+      "path": "trivial.console/6.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE/LICENSE",
+        "README.md",
+        "cmd.png",
+        "lib/net461/Trivial.Console.dll",
+        "lib/net461/Trivial.Console.xml",
+        "lib/net461/en/Trivial.Console.resources.dll",
+        "lib/net461/es/Trivial.Console.resources.dll",
+        "lib/net461/fr/Trivial.Console.resources.dll",
+        "lib/net461/ja/Trivial.Console.resources.dll",
+        "lib/net461/ko/Trivial.Console.resources.dll",
+        "lib/net461/pt/Trivial.Console.resources.dll",
+        "lib/net461/ru/Trivial.Console.resources.dll",
+        "lib/net461/zh-Hans/Trivial.Console.resources.dll",
+        "lib/net461/zh-Hant/Trivial.Console.resources.dll",
+        "lib/net48/Trivial.Console.dll",
+        "lib/net48/Trivial.Console.xml",
+        "lib/net48/en/Trivial.Console.resources.dll",
+        "lib/net48/es/Trivial.Console.resources.dll",
+        "lib/net48/fr/Trivial.Console.resources.dll",
+        "lib/net48/ja/Trivial.Console.resources.dll",
+        "lib/net48/ko/Trivial.Console.resources.dll",
+        "lib/net48/pt/Trivial.Console.resources.dll",
+        "lib/net48/ru/Trivial.Console.resources.dll",
+        "lib/net48/zh-Hans/Trivial.Console.resources.dll",
+        "lib/net48/zh-Hant/Trivial.Console.resources.dll",
+        "lib/net481/Trivial.Console.dll",
+        "lib/net481/Trivial.Console.xml",
+        "lib/net481/en/Trivial.Console.resources.dll",
+        "lib/net481/es/Trivial.Console.resources.dll",
+        "lib/net481/fr/Trivial.Console.resources.dll",
+        "lib/net481/ja/Trivial.Console.resources.dll",
+        "lib/net481/ko/Trivial.Console.resources.dll",
+        "lib/net481/pt/Trivial.Console.resources.dll",
+        "lib/net481/ru/Trivial.Console.resources.dll",
+        "lib/net481/zh-Hans/Trivial.Console.resources.dll",
+        "lib/net481/zh-Hant/Trivial.Console.resources.dll",
+        "lib/net5.0/Trivial.Console.dll",
+        "lib/net5.0/Trivial.Console.xml",
+        "lib/net5.0/en/Trivial.Console.resources.dll",
+        "lib/net5.0/es/Trivial.Console.resources.dll",
+        "lib/net5.0/fr/Trivial.Console.resources.dll",
+        "lib/net5.0/ja/Trivial.Console.resources.dll",
+        "lib/net5.0/ko/Trivial.Console.resources.dll",
+        "lib/net5.0/pt/Trivial.Console.resources.dll",
+        "lib/net5.0/ru/Trivial.Console.resources.dll",
+        "lib/net5.0/zh-Hans/Trivial.Console.resources.dll",
+        "lib/net5.0/zh-Hant/Trivial.Console.resources.dll",
+        "lib/net6.0/Trivial.Console.dll",
+        "lib/net6.0/Trivial.Console.xml",
+        "lib/net6.0/en/Trivial.Console.resources.dll",
+        "lib/net6.0/es/Trivial.Console.resources.dll",
+        "lib/net6.0/fr/Trivial.Console.resources.dll",
+        "lib/net6.0/ja/Trivial.Console.resources.dll",
+        "lib/net6.0/ko/Trivial.Console.resources.dll",
+        "lib/net6.0/pt/Trivial.Console.resources.dll",
+        "lib/net6.0/ru/Trivial.Console.resources.dll",
+        "lib/net6.0/zh-Hans/Trivial.Console.resources.dll",
+        "lib/net6.0/zh-Hant/Trivial.Console.resources.dll",
+        "lib/net7.0/Trivial.Console.dll",
+        "lib/net7.0/Trivial.Console.xml",
+        "lib/net7.0/en/Trivial.Console.resources.dll",
+        "lib/net7.0/es/Trivial.Console.resources.dll",
+        "lib/net7.0/fr/Trivial.Console.resources.dll",
+        "lib/net7.0/ja/Trivial.Console.resources.dll",
+        "lib/net7.0/ko/Trivial.Console.resources.dll",
+        "lib/net7.0/pt/Trivial.Console.resources.dll",
+        "lib/net7.0/ru/Trivial.Console.resources.dll",
+        "lib/net7.0/zh-Hans/Trivial.Console.resources.dll",
+        "lib/net7.0/zh-Hant/Trivial.Console.resources.dll",
+        "lib/netcoreapp3.1/Trivial.Console.dll",
+        "lib/netcoreapp3.1/Trivial.Console.xml",
+        "lib/netcoreapp3.1/en/Trivial.Console.resources.dll",
+        "lib/netcoreapp3.1/es/Trivial.Console.resources.dll",
+        "lib/netcoreapp3.1/fr/Trivial.Console.resources.dll",
+        "lib/netcoreapp3.1/ja/Trivial.Console.resources.dll",
+        "lib/netcoreapp3.1/ko/Trivial.Console.resources.dll",
+        "lib/netcoreapp3.1/pt/Trivial.Console.resources.dll",
+        "lib/netcoreapp3.1/ru/Trivial.Console.resources.dll",
+        "lib/netcoreapp3.1/zh-Hans/Trivial.Console.resources.dll",
+        "lib/netcoreapp3.1/zh-Hant/Trivial.Console.resources.dll",
+        "lib/netstandard2.0/Trivial.Console.dll",
+        "lib/netstandard2.0/Trivial.Console.xml",
+        "lib/netstandard2.0/en/Trivial.Console.resources.dll",
+        "lib/netstandard2.0/es/Trivial.Console.resources.dll",
+        "lib/netstandard2.0/fr/Trivial.Console.resources.dll",
+        "lib/netstandard2.0/ja/Trivial.Console.resources.dll",
+        "lib/netstandard2.0/ko/Trivial.Console.resources.dll",
+        "lib/netstandard2.0/pt/Trivial.Console.resources.dll",
+        "lib/netstandard2.0/ru/Trivial.Console.resources.dll",
+        "lib/netstandard2.0/zh-Hans/Trivial.Console.resources.dll",
+        "lib/netstandard2.0/zh-Hant/Trivial.Console.resources.dll",
+        "trivial.console.6.6.0.nupkg.sha512",
+        "trivial.console.nuspec"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net7.0": []
+    "net7.0": [
+      "ConEmu.Core >= 22.12.18",
+      "Trivial.Console >= 6.6.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\joeva\\.nuget\\packages\\": {},
@@ -50,6 +276,16 @@
     "frameworks": {
       "net7.0": {
         "targetAlias": "net7.0",
+        "dependencies": {
+          "ConEmu.Core": {
+            "target": "Package",
+            "version": "[22.12.18, )"
+          },
+          "Trivial.Console": {
+            "target": "Package",
+            "version": "[6.6.0, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

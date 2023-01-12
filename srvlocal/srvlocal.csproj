@@ -19,4 +19,9 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="ConEmu.Core" Version="22.12.18" />
+    <PackageReference Include="Trivial.Console" Version="6.6.0" />
+  </ItemGroup>
+
 </Project>
