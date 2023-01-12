@@ -7,19 +7,8 @@
   "targets": {
     ".NETCoreApp,Version=v7.0": {
       "srvlocal/1.0.0": {
-        "dependencies": {
-          "PortMonitor": "1.0.0.0"
-        },
         "runtime": {
           "srvlocal.dll": {}
-        }
-      },
-      "PortMonitor/1.0.0.0": {
-        "runtime": {
-          "PortMonitor.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
         }
       }
     }
@@ -27,11 +16,6 @@
   "libraries": {
     "srvlocal/1.0.0": {
       "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "PortMonitor/1.0.0.0": {
-      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }

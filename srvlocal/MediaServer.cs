@@ -60,9 +60,10 @@ public class MediaServer
                 writer.WriteLine("<html>");
                 writer.WriteLine("<head>");
                 writer.WriteLine("<title>Media Search</title>");
+                writer.WriteLine("<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'><link rel=\"stylesheet\" href=\"./style.css\">");
                 writer.WriteLine("</head>");
                 writer.WriteLine("<body>");
-                writer.WriteLine("<form>");
+                writer.WriteLine("<form class=\"form\">");
                 writer.WriteLine("<label for='search'>Search:</label>");
                 writer.WriteLine("<input type='text' id='search' name='search'/>");
                 writer.WriteLine("<input type='submit' value='Search'/>");
@@ -79,6 +80,8 @@ public class MediaServer
 
                 writer.WriteLine("</ul>");
                 writer.WriteLine("</body>");
+                writer.WriteLine("<footer>\r\n\t<p><font style=\"vertical-align: inherit;\">Created with </font><i class=\"fa fa-heart\"></i><font style=\"vertical-align: inherit;\"> by \r\n\t\t </font><a target=\"_blank\" href=\"https://florin-pop.com\"><font style=\"vertical-align: inherit;\"> JW Lmt. </font></a><font style=\"vertical-align: inherit;\">\r\n\t\t  - CopyRight© 2023</font><a target=\"_blank\" href=\"https://www.florin-pop.com/blog/2019/03/double-slider-sign-in-up-form/\">\r\n\t </font></p>\r\n</footer>");
+                writer.WriteLine("<script  src=\"./script.js\"></script>");
                 writer.WriteLine("</html>");
             }
         }
@@ -159,7 +162,7 @@ public class MediaServer
             filename = filename.Substring(1);
             var filePath = Path.Combine(_mediaFolder, request.Url.LocalPath.TrimStart('/'));
 
-            Console.WriteLine("[MEDIA] {0} request for: {1}", request.HttpMethod, filename);
+            Console.WriteLine("[MEDIA - " + DateTime.UtcNow + "] {0} request for: {1}", request.HttpMethod, filename);
 
             if (request.Url.AbsolutePath == "/search/v1")
             {

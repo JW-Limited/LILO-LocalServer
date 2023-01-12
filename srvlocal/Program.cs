@@ -31,6 +31,7 @@ namespace Local
         public static int _port = 8080;
         public static bool isLoggingEnabled = true;
         public static string mediaDirectory = "C:\\LILO\\req\\media\\";
+        public static bool advancedDebugg = false;
 
         public Server(string directory, int port)
         {
@@ -73,6 +74,10 @@ namespace Local
                     {
                         isLoggingEnabled = false;
                     }
+                    else if (args[i].StartsWith("--enable-debug"))
+                    {
+                        isLoggingEnabled = false;
+                    }
                     else if (args[i] == "--help")
                     {
                         ShowHelp();
@@ -96,6 +101,7 @@ namespace Local
             Console.WriteLine("Media        :   {0} [{1}]", mediaDirectory, mediaDirectory == "C:\\LILO\\req\\media\\" ? "DEFAULT" : "CHANGED");
             Console.WriteLine("Port         :   {0} [{1}]", _port, _port == 8080 ? "DEFAULT" : "CHANGED");
             Console.WriteLine("Logging      :   {0} [{1}]", isLoggingEnabled ? "enabled" : "disabled",isLoggingEnabled ? "DEFAULT" : "CHANGED");
+            Console.WriteLine("Debugger     :   {0} [{1}]", advancedDebugg ? "enabled" : "disabled", advancedDebugg == false ? "DEFAULT" : "CHANGED");
             Console.WriteLine("--------------------------------------------------");
             Console.WriteLine("API          :   {0} ", recevieCommands.apiListening ? "enabled" : "disabled");
             Console.WriteLine("|-- OAuth2   :   {0} ", recevieCommands.OAuth2 ? "authenticated" : "no access");
@@ -104,7 +110,9 @@ namespace Local
 
             Console.Title = "LILO™ LocalServer";
             var server = new Server(distDirectory, _port);
-            server.Start();
+
+            var threadMain = new Thread(server.Start);
+            threadMain.Start();
         }
 
         private static void ShowVersion()
@@ -305,11 +313,15 @@ namespace Local
 
         private void LogRequest(HttpListenerRequest request)
         {
-            Console.WriteLine($"[{DateTime.UtcNow}] : {request.HttpMethod} {request.Url}");
-            Console.WriteLine($"User-Agent: {request.UserAgent}");
-            Console.WriteLine($"Accept-Encoding: {request.Headers["Accept-Encoding"]}");
-            Console.WriteLine($"Accept-Language: {request.Headers["Accept-Language"]}");
-            Console.WriteLine();
+            Console.WriteLine($"[LILO SERVER - {DateTime.UtcNow}] : {request.HttpMethod} {request.Url}");
+            if(advancedDebugg)
+            {
+                Console.WriteLine($"User-Agent: {request.UserAgent}");
+                Console.WriteLine($"Accept-Encoding: {request.Headers["Accept-Encoding"]}");
+                Console.WriteLine($"Accept-Language: {request.Headers["Accept-Language"]}");
+                Console.WriteLine();
+            }
+            
         }
 
         private string GenerateIndexHtml(string reqDirectory)
