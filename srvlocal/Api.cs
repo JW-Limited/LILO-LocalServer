@@ -5,8 +5,47 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Net.Security;
+using Newtonsoft.Json.Linq;
 
 namespace Local;
+class OpenAI
+{
+    public string postPromt = "Tell a Joke";
+
+    public OpenAI(string promt)
+    {
+        this.postPromt = promt;
+    }
+
+    public string GetReponse()
+    {
+        try
+        {
+            var client = new HttpClient();
+            var queryString = new FormUrlEncodedContent(new[] {
+            new KeyValuePair<string, string>("prompt", postPromt+"?"),
+            new KeyValuePair<string, string>("model", "text-davinci-002"),
+            new KeyValuePair<string, string>("max_tokens", "2048"),
+            });
+
+            var apiKey = "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";
+            var url = "https://api.openai.com/v1/engines/davinci/completions";
+            client.DefaultRequestHeaders.Add("Authorization", $"Bearer {apiKey}");
+
+
+            var response = client.PostAsync(url, queryString).Result;
+            var responseString = response.Content.ReadAsStringAsync().Result;
+            var json = JObject.Parse(responseString);
+            return json["choices"][0]["text"].ToString();
+        }
+        catch (Exception ex)
+        {
+            return ex.Message.ToString();
+        }
+        
+    }
+}
+
 class ApiToRecevieCommands
 {
     private int _port;

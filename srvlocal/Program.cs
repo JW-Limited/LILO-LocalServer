@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
 using System.IO;
 using System.Net;
+using System.Net.WebSockets;
 using System.Reflection;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -26,7 +27,7 @@ namespace Local
         private readonly string logDirectory = "C:\\LILO\\dist\\log";
         private readonly string serverUrl = "http://localhost:8080/api";
         private readonly string _apiKey = "liloDev-420";
-        private readonly string _logFile = ".\\portmonitor";
+        private static string _logFile = ".\\portmonitor";
 
         public static int _port = 8080;
 
@@ -77,13 +78,17 @@ namespace Local
                     {
                         mediaDirectory = args[i].Substring(9);
                     }
+                    else if (args[i].StartsWith("--log-file="))
+                    {
+                        _logFile = args[i].Substring(9);
+                    }
                     else if (args[i].StartsWith("--disable-logging"))
                     {
                         isLoggingEnabled = false;
                     }
                     else if (args[i].StartsWith("--enable-debug"))
                     {
-                        isLoggingEnabled = false;
+                        advancedDebugg = true;
                     }
                     else if (args[i] == "--help")
                     {
@@ -100,7 +105,45 @@ namespace Local
 
             try
             {
+                Console.WriteLine("Configurations: ");
+                Console.WriteLine("");
+
+
+
+                Console.WriteLine("Directory    :   {0} [{1}]", distDirectory, distDirectory == "C:\\LILO\\dist" ? "DEFAULT" : "CHANGED");
+                Console.WriteLine("Media        :   {0} [{1}]", mediaDirectory, mediaDirectory == "C:\\LILO\\req\\media\\" ? "DEFAULT" : "CHANGED");
+                Console.WriteLine("Port         :   {0} [{1}]", _port, _port == 8080 ? "DEFAULT" : "CHANGED");
+                Console.WriteLine("Logging      :   {0} [{1}]", isLoggingEnabled ? "enabled" : "disabled", isLoggingEnabled ? "DEFAULT" : "CHANGED");
+                Console.WriteLine("Debugger     :   {0} [{1}]", advancedDebugg ? "enabled" : "disabled", advancedDebugg == false ? "DEFAULT" : "CHANGED");
+                Console.WriteLine("--------------------------------------------------");
+                Console.WriteLine("API          :   {0} ", recevieCommands.apiListening ? "enabled" : "disabled");
+                Console.WriteLine("|-- OAuth2   :   {0} ", recevieCommands.OAuth2 ? "authenticated" : "no access");
+                Console.WriteLine("|-- X509Cert :   {0} ", recevieCommands.certAcepted ? "valid" : "error");
+                Console.WriteLine("");
+
+                OpenAI ai = new OpenAI("Tell me a joke");
+
+                Console.WriteLine(ai.GetReponse());
                 thread.Start();
+
+                if (!recevieCommands.apiListening)
+                {
+                    ApiUnsafe api = new ApiUnsafe(8989);
+                    try
+                    {
+                        var apiThread = new Thread(() =>
+                        {
+                            api.Start();
+                        });
+                        apiThread.Start();
+                        
+                    }
+                    catch(Exception ex)
+                    {
+                        Console.WriteLine($"[{DateTime.Now}] - ERROR {ex.Message.ToString()}");
+                    }
+                }
+
 
                 Console.Title = "LILO™ LocalServer";
                 var server = new Server(distDirectory, _port);
@@ -119,21 +162,7 @@ namespace Local
 
 
 
-            Console.WriteLine("Configurations: ");
-            Console.WriteLine("");
-
-            
-
-            Console.WriteLine("Directory    :   {0} [{1}]",distDirectory, distDirectory == "C:\\LILO\\dist" ? "DEFAULT" : "CHANGED");
-            Console.WriteLine("Media        :   {0} [{1}]", mediaDirectory, mediaDirectory == "C:\\LILO\\req\\media\\" ? "DEFAULT" : "CHANGED");
-            Console.WriteLine("Port         :   {0} [{1}]", _port, _port == 8080 ? "DEFAULT" : "CHANGED");
-            Console.WriteLine("Logging      :   {0} [{1}]", isLoggingEnabled ? "enabled" : "disabled",isLoggingEnabled ? "DEFAULT" : "CHANGED");
-            Console.WriteLine("Debugger     :   {0} [{1}]", advancedDebugg ? "enabled" : "disabled", advancedDebugg == false ? "DEFAULT" : "CHANGED");
-            Console.WriteLine("--------------------------------------------------");
-            Console.WriteLine("API          :   {0} ", recevieCommands.apiListening ? "enabled" : "disabled");
-            Console.WriteLine("|-- OAuth2   :   {0} ", recevieCommands.OAuth2 ? "authenticated" : "no access");
-            Console.WriteLine("|-- X509Cert :   {0} ", recevieCommands.certAcepted ? "valid" : "error");
-            Console.WriteLine("");
+           
 
         }
 
@@ -184,6 +213,7 @@ namespace Local
             Console.WriteLine("  --logfile=<file>           Specify the file to log requests to (default is access.log)");
             Console.WriteLine("  --version                  Shows the current version");
             Console.WriteLine("  --help                     Show this help message");
+
         }
 
         public void Start()
@@ -387,6 +417,11 @@ namespace Local
 
         private string GenerateIndexHtml(string reqDirectory)
         {
+            /// <example>
+            /// Example of an IndexHtml
+            /// </example>
+
+
             var sb = new StringBuilder();
             sb.Append("<html>");
             sb.Append("<head>");
@@ -423,6 +458,11 @@ namespace Local
         }
 
     }
+
+    /// <summary>
+    /// <see href="Api"/>
+    /// </summary>
+
     public class BatchStarter
     {
         private readonly string _batchFile;

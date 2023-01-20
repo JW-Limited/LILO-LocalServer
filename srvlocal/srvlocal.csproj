@@ -15,7 +15,7 @@
     <Authors>Joe Valentino Lengefeld</Authors>
     <Title>SrvLocal</Title>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
-    <DocumentationFile>D:\LILO\source\repos\srvlocal\bin\Debug\net7.0\documentation.xml</DocumentationFile>
+    <DocumentationFile>C:\Users\joeva\Documents\GitHub\LILO-LocalServer\documentation.xml</DocumentationFile>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <StartupObject>Local.Server</StartupObject>
     <ApplicationIcon>icons8_server_windows.ico</ApplicationIcon>
@@ -56,6 +56,10 @@
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Remote.Linq.Newtonsoft.Json" Version="7.1.0" />
   </ItemGroup>
 
 </Project>

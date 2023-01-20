@@ -14,3 +14,9 @@ C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal\obj\Debug\net7.0-windo
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal\obj\Debug\net7.0-windows\srvlocal.pdb
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal\obj\Debug\net7.0-windows\srvlocal.genruntimeconfig.cache
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal\obj\Debug\net7.0-windows\ref\srvlocal.dll
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal\bin\Debug\net7.0-windows\Aqua.dll
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal\bin\Debug\net7.0-windows\Aqua.Newtonsoft.Json.dll
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal\bin\Debug\net7.0-windows\Newtonsoft.Json.dll
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal\bin\Debug\net7.0-windows\Remote.Linq.dll
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal\bin\Debug\net7.0-windows\Remote.Linq.Newtonsoft.Json.dll
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal\obj\Debug\net7.0-windows\srvlocal.csproj.CopyComplete

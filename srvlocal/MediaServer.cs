@@ -25,7 +25,7 @@ public class MediaServer
     {
         _listener.Start();
         _isRunning = true;
-
+        
         Console.WriteLine($"Media server started at http://localhost:{_port}/");
 
         Thread thread = new Thread(HandleRequests);
