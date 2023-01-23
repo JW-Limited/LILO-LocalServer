@@ -608,6 +608,7 @@
             this.Controls.Add(this.guna2Panel3);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.guna2GroupBox1);
+            this.MinimumSize = new System.Drawing.Size(1578, 1174);
             this.Name = "srvlocal_Bibo";
             this.Text = "srvlocal_Bibo";
             this.guna2GroupBox1.ResumeLayout(false);

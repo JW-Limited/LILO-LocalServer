@@ -225,13 +225,32 @@ namespace srvlocal_gui
             feed.Show();
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private async void guna2Button1_Click(object sender, EventArgs e)
         {
-            var login = new Login()
+            try
             {
+                var status = new LILO.JBO.StatusSender();
+                if( await status.SendStatus(this) != "Error" )
+                {
+                    var login = new Login()
+                    {
+                        WindowState = FormWindowState.Normal,
+                        StartPosition = FormStartPosition.CenterScreen
+                    };
+                    login.ShowDialog();
+                }
+                else
+                {
+                    bntStartCon(sender, e);
+                }
+                
+            }
+            catch (Exception ex) {
+                MessageBox.Show(ex.Message);
+                bntStartCon(sender, e);
+            }
 
-            };
-            login.ShowDialog();
+            
         }
     }
 }
