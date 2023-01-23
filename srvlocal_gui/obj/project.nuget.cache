@@ -1,0 +1,131 @@
+{
+  "version": 2,
+  "dgSpecHash": "QA0Eyvav/0Vf5vIYSSgo3k0Ie3topUigL52wCC4V60f1c3BsILh/WCL7bT3uyxOxTnrMKwlBi1XXlHjlDo5xBg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\srvlocal_gui\\srvlocal_gui.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\joeva\\.nuget\\packages\\aqua-core\\5.2.0\\aqua-core.5.2.0.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\aqua-core-newtonsoft-json\\5.2.0\\aqua-core-newtonsoft-json.5.2.0.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\dynamicdata\\7.12.8\\dynamicdata.7.12.8.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\guna.ui2.winforms\\2.0.3.5\\guna.ui2.winforms.2.0.3.5.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\harfbuzzsharp\\2.8.2.1\\harfbuzzsharp.2.8.2.1.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\harfbuzzsharp.nativeassets.linux\\2.8.2.1\\harfbuzzsharp.nativeassets.linux.2.8.2.1.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\harfbuzzsharp.nativeassets.macos\\2.8.2.1\\harfbuzzsharp.nativeassets.macos.2.8.2.1.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\harfbuzzsharp.nativeassets.win32\\2.8.2.1\\harfbuzzsharp.nativeassets.win32.2.8.2.1.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\microsoft.web.webview2\\1.0.1619-prerelease\\microsoft.web.webview2.1.0.1619-prerelease.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\modern.forms\\0.3.0\\modern.forms.0.3.0.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\modern.windowkit\\0.1.2\\modern.windowkit.0.1.2.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\modern.windowkit.backend.mac\\0.1.2\\modern.windowkit.backend.mac.0.1.2.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\opentk\\3.1.0\\opentk.3.1.0.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\opentk.glcontrol\\3.1.0\\opentk.glcontrol.3.1.0.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\pharmacist.common\\2.0.8\\pharmacist.common.2.0.8.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\reactiveui\\18.4.1\\reactiveui.18.4.1.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\reactiveui.events.winforms\\15.1.1\\reactiveui.events.winforms.15.1.1.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\reactiveui.winforms\\18.4.1\\reactiveui.winforms.18.4.1.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\reactorui\\0.0.41-beta\\reactorui.0.0.41-beta.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\reactorui.skia.winforms\\0.0.41-beta\\reactorui.skia.winforms.0.0.41-beta.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\remote.linq\\7.1.0\\remote.linq.7.1.0.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\remote.linq.newtonsoft.json\\7.1.0\\remote.linq.newtonsoft.json.7.1.0.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\skiasharp\\2.88.2\\skiasharp.2.88.2.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\skiasharp.harfbuzz\\2.80.2\\skiasharp.harfbuzz.2.80.2.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\skiasharp.nativeassets.linux\\2.88.2\\skiasharp.nativeassets.linux.2.88.2.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\skiasharp.nativeassets.macos\\2.88.2\\skiasharp.nativeassets.macos.2.88.2.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\skiasharp.nativeassets.win32\\2.88.2\\skiasharp.nativeassets.win32.2.88.2.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\skiasharp.views\\1.68.1.1\\skiasharp.views.1.68.1.1.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\splat\\14.5.1\\splat.14.5.1.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\system.diagnostics.debug\\4.3.0\\system.diagnostics.debug.4.3.0.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\system.globalization\\4.3.0\\system.globalization.4.3.0.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\system.io\\4.3.0\\system.io.4.3.0.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\system.linq\\4.3.0\\system.linq.4.3.0.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\system.linq.expressions\\4.3.0\\system.linq.expressions.4.3.0.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\system.objectmodel\\4.3.0\\system.objectmodel.4.3.0.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\system.reactive\\5.0.0\\system.reactive.5.0.0.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\system.reflection\\4.3.0\\system.reflection.4.3.0.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\system.reflection.emit.ilgeneration\\4.3.0\\system.reflection.emit.ilgeneration.4.3.0.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\system.reflection.emit.lightweight\\4.3.0\\system.reflection.emit.lightweight.4.3.0.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\system.reflection.extensions\\4.3.0\\system.reflection.extensions.4.3.0.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\system.reflection.primitives\\4.3.0\\system.reflection.primitives.4.3.0.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\system.reflection.typeextensions\\4.3.0\\system.reflection.typeextensions.4.3.0.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\system.resources.resourcemanager\\4.3.0\\system.resources.resourcemanager.4.3.0.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.7.0\\system.runtime.compilerservices.unsafe.4.7.0.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\system.runtime.extensions\\4.3.0\\system.runtime.extensions.4.3.0.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\system.runtime.loader\\4.3.0\\system.runtime.loader.4.3.0.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\system.threading\\4.3.0\\system.threading.4.3.0.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\topten.richtextkit\\0.4.151\\topten.richtextkit.0.4.151.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\windows-forms-aero\\3.1.1\\windows-forms-aero.3.1.1.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Das Paket \"Guna.UI2.WinForms 2.0.3.5\" wurde nicht mit dem Projektzielframework \"net7.0-windows7.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
+      "libraryId": "Guna.UI2.WinForms",
+      "targetGraphs": [
+        "net7.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Das Paket \"OpenTK 3.1.0\" wurde nicht mit dem Projektzielframework \"net7.0-windows7.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
+      "libraryId": "OpenTK",
+      "targetGraphs": [
+        "net7.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Das Paket \"OpenTK.GLControl 3.1.0\" wurde nicht mit dem Projektzielframework \"net7.0-windows7.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
+      "libraryId": "OpenTK.GLControl",
+      "targetGraphs": [
+        "net7.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Das Paket \"ReactorUI.Skia.WinForms 0.0.41-beta\" wurde nicht mit dem Projektzielframework \"net7.0-windows7.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
+      "libraryId": "ReactorUI.Skia.WinForms",
+      "targetGraphs": [
+        "net7.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Das Paket \"SkiaSharp.Views 1.68.1.1\" wurde nicht mit dem Projektzielframework \"net7.0-windows7.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
+      "libraryId": "SkiaSharp.Views",
+      "targetGraphs": [
+        "net7.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Das Paket \"Windows-Forms-Aero 3.1.1\" wurde nicht mit dem Projektzielframework \"net7.0-windows7.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
+      "libraryId": "Windows-Forms-Aero",
+      "targetGraphs": [
+        "net7.0-windows7.0"
+      ]
+    }
+  ]
+}

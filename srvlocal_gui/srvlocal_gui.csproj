@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Guna.UI2.WinForms" Version="2.0.3.5" />
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.1619-prerelease" />
+    <PackageReference Include="Modern.Forms" Version="0.3.0" />
+    <PackageReference Include="ReactiveUI.Events.Winforms" Version="15.1.1" />
+    <PackageReference Include="ReactiveUI.WinForms" Version="18.4.1" />
+    <PackageReference Include="ReactorUI.Skia.WinForms" Version="0.0.41-beta" />
+    <PackageReference Include="Windows-Forms-Aero" Version="3.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\srvlocal\srvlocal.csproj" />
+  </ItemGroup>
+
+</Project>
