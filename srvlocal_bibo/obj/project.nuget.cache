@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "6FdgY/h3O8pxSKr6jz45uNTnO87Dt0MJoruqLdfE4LcYVV78FTu3cfWzxxqVE+mQGzlA0vOQQ9k254Z+ZaPNeA==",
+  "dgSpecHash": "NEaJzWigzbKDVElpQ93sdb+/9ltRY/NRyy4o6CxdJIs/TQQlFy5zqxYEHyAIV0zrdMkyQIqwBpMrXegnMR+mdw==",
   "success": true,
   "projectFilePath": "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\srvlocal_bibo\\srvlocal_bibo.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "C:\\Users\\joeva\\.nuget\\packages\\harfbuzzsharp.nativeassets.linux\\2.8.2.1\\harfbuzzsharp.nativeassets.linux.2.8.2.1.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\harfbuzzsharp.nativeassets.macos\\2.8.2.1\\harfbuzzsharp.nativeassets.macos.2.8.2.1.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\harfbuzzsharp.nativeassets.win32\\2.8.2.1\\harfbuzzsharp.nativeassets.win32.2.8.2.1.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\microsoft.web.webview2\\1.0.1619-prerelease\\microsoft.web.webview2.1.0.1619-prerelease.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\modern.forms\\0.3.0\\modern.forms.0.3.0.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\modern.windowkit\\0.1.2\\modern.windowkit.0.1.2.nupkg.sha512",

@@ -9,6 +9,7 @@
       "srvlocal_bibo/1.0.0": {
         "dependencies": {
           "Guna.UI2.WinForms": "2.0.3.5",
+          "Microsoft.Web.WebView2": "1.0.1619-prerelease",
           "Modern.Forms": "0.3.0",
           "Windows-Forms-Aero": "3.1.1"
         },
@@ -88,6 +89,39 @@
             "rid": "win-x86",
             "assetType": "native",
             "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "Microsoft.Web.WebView2/1.0.1619-prerelease": {
+        "runtime": {
+          "lib/netcoreapp3.0/Microsoft.Web.WebView2.Core.dll": {
+            "assemblyVersion": "1.0.1619.0",
+            "fileVersion": "1.0.1619.0"
+          },
+          "lib/netcoreapp3.0/Microsoft.Web.WebView2.WinForms.dll": {
+            "assemblyVersion": "1.0.1619.0",
+            "fileVersion": "1.0.1619.0"
+          },
+          "lib/netcoreapp3.0/Microsoft.Web.WebView2.Wpf.dll": {
+            "assemblyVersion": "1.0.1619.0",
+            "fileVersion": "1.0.1619.0"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win-arm64/native/WebView2Loader.dll": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "1.0.1619.0"
+          },
+          "runtimes/win-x64/native/WebView2Loader.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "1.0.1619.0"
+          },
+          "runtimes/win-x86/native/WebView2Loader.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "1.0.1619.0"
           }
         }
       },
@@ -281,6 +315,13 @@
       "sha512": "sha512-fiWnIGd0UAfB30SNJTPF75FLKnQKaWtehA4KdHBcjgUUCd2T724W5l2fzxbY0NFLlSg0tb9zT3ZzO2qvJ/jksg==",
       "path": "harfbuzzsharp.nativeassets.win32/2.8.2.1",
       "hashPath": "harfbuzzsharp.nativeassets.win32.2.8.2.1.nupkg.sha512"
+    },
+    "Microsoft.Web.WebView2/1.0.1619-prerelease": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xiKvGH01mi49OYkElpcKE0tBlnBH/ipAuGPwqxN/RSz+X83Y6Vo/9vMxtFwf0gDVOF0vKqBOlN5hpxV9n1TRsA==",
+      "path": "microsoft.web.webview2/1.0.1619-prerelease",
+      "hashPath": "microsoft.web.webview2.1.0.1619-prerelease.nupkg.sha512"
     },
     "Microsoft.Win32.SystemEvents/6.0.0": {
       "type": "package",

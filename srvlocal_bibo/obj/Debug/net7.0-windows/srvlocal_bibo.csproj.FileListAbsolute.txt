@@ -43,3 +43,9 @@ C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_bibo\obj\Debug\net7.0-
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_bibo\obj\Debug\net7.0-windows\srvlocal_bibo.genruntimeconfig.cache
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_bibo\obj\Debug\net7.0-windows\ref\srvlocal_bibo.dll
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_bibo\obj\Debug\net7.0-windows\srvlocal_bibo.Properties.Resources.resources
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_bibo\bin\Debug\net7.0-windows\runtimes\win-x86\native\WebView2Loader.dll
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_bibo\bin\Debug\net7.0-windows\runtimes\win-x64\native\WebView2Loader.dll
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_bibo\bin\Debug\net7.0-windows\runtimes\win-arm64\native\WebView2Loader.dll
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_bibo\bin\Debug\net7.0-windows\Microsoft.Web.WebView2.Core.dll
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_bibo\bin\Debug\net7.0-windows\Microsoft.Web.WebView2.WinForms.dll
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_bibo\bin\Debug\net7.0-windows\Microsoft.Web.WebView2.Wpf.dll

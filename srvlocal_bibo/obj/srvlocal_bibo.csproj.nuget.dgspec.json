@@ -48,6 +48,10 @@
               "target": "Package",
               "version": "[2.0.3.5, )"
             },
+            "microsoft.web.webview2": {
+              "target": "Package",
+              "version": "[1.0.1619-prerelease, )"
+            },
             "modern.forms": {
               "target": "Package",
               "version": "[0.3.0, )"
