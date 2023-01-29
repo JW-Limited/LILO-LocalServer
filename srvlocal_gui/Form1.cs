@@ -5,6 +5,9 @@ using System;
 using System.Net;
 using Newtonsoft.Json;
 using System.Text;
+using System.Net.Sockets;
+using System.Net.Http;
+using System.Net.NetworkInformation;
 
 namespace srvlocal_gui
 {
@@ -15,6 +18,7 @@ namespace srvlocal_gui
             InitializeComponent();
         }
 
+        NotifyIcon noty;
 
         public static string filePath = ".\\srvlocal.exe";
 
@@ -108,7 +112,7 @@ namespace srvlocal_gui
             {
                 if (Process.GetProcessesByName("srvlocal").Length > 0)
                 {
-                    foreach (var prockill in Process.GetProcessesByName("lghcon"))
+                    foreach (var prockill in Process.GetProcessesByName("srvlocal"))
                     {
 
                         prockill.Kill();
@@ -129,13 +133,20 @@ namespace srvlocal_gui
 
                 process.OutputDataReceived += (sender, args) => _outputTextBox.Invoke(new Action(() => _outputTextBox.AppendText(args.Data + Environment.NewLine)));
                 process.Start();
-                var login = new Login();
-                login.ShowDialog();
+
+                NotyFi();
+
+                bool reachable = false;
+                Ping ping = new Ping();
+
                 process.BeginOutputReadLine();
                 while (process.HasExited == false)
                 {
                     Application.DoEvents();
                     process.WaitForExitAsync();
+                    PingReply reply = ping.Send("localhost", 8080);
+                    reachable = reply.Status == IPStatus.Success;
+                    lblReach.Text = reachable.ToString() as string;
                 }
 
                 ConsolePanel.Visible = true;
@@ -146,9 +157,32 @@ namespace srvlocal_gui
             }
         }
 
-        private void guna2Button6_Click(object sender, EventArgs e)
+        private async void guna2Button6_Click(object sender, EventArgs e)
         {
+            var url = $"http://localhost:{txtPort.Text}/api/com?command=close";
+
             ConsolePanel.Visible = false;
+            var status = await GetFromHost(url);
+            ConsolePanel.Visible = false;
+            lblError.Text = status.ToString();
+        }
+
+        public static async Task<string> GetFromHost(string url)
+        {
+            using (var client = new HttpClient())
+            {
+                try
+                {
+                    var response = await client.GetAsync(url);
+
+                    response.EnsureSuccessStatusCode();
+
+                    var responseContent = await response.Content.ReadAsStringAsync();
+                    client.CancelPendingRequests();
+                    return responseContent;
+                }
+                catch { return "Error while closing the Stream"; };
+            }
         }
 
         private void bntStartWithArguments(object sender, EventArgs e)
@@ -180,7 +214,7 @@ namespace srvlocal_gui
             {
                 if (Process.GetProcessesByName("srvlocal").Length > 0)
                 {
-                    foreach (var prockill in Process.GetProcessesByName("lghcon"))
+                    foreach (var prockill in Process.GetProcessesByName("srvlocal"))
                     {
 
                         prockill.Kill();
@@ -202,8 +236,6 @@ namespace srvlocal_gui
 
                 process.OutputDataReceived += (sender, args) => _outputTextBox.Invoke(new Action(() => _outputTextBox.AppendText(args.Data + Environment.NewLine)));
                 process.Start();
-                var login = new Login();
-                login.ShowDialog();
                 process.BeginOutputReadLine();
                 while (process.HasExited == false)
                 {
@@ -223,6 +255,25 @@ namespace srvlocal_gui
         {
             var feed = new Feed();
             feed.Show();
+        }
+
+
+        public void NotyFi()
+        {
+            noty = new NotifyIcon()
+            {
+                BalloonTipText = "LocalHost is Running..."
+                    as string,
+                BalloonTipTitle = "Started Succesfully"
+                    as string,
+                Icon = this.Icon,
+                ContextMenuStrip = conMenu
+            };
+
+            noty.Tag = "STATUS";
+            noty.Events();
+            noty.Visible = true;
+            noty.ShowBalloonTip(1000);
         }
 
         private async void guna2Button1_Click(object sender, EventArgs e)
@@ -251,6 +302,29 @@ namespace srvlocal_gui
             }
 
             
+        }
+
+        private void conMenuShowConsole_Click(object sender, EventArgs e)
+        {
+            var conEmu = new ConsoleEmu();
+            conEmu.Show();
+        }
+
+        private async void conMenuCloseStream_Click(object sender, EventArgs e)
+        {
+            var url = $"http://localhost:{txtPort.Text}/api/com?command=close";
+            ConsolePanel.Visible = false;
+            var status = await GetFromHost(url);
+            ConsolePanel.Visible = false;
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var about = new AboutBox()
+            {
+                StartPosition = FormStartPosition.CenterScreen
+            };
+            about.Show();
         }
     }
 }

@@ -6,6 +6,18 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>True</UseWPF>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <Title>Local Server Manager</Title>
+    <Authors>JW Limited.</Authors>
+    <Company>JW Limited</Company>
+    <Product>Local Server Manager</Product>
+    <Description>An easy way to Build and Run youre LILO Apps</Description>
+    <Copyright>Copyright© 2023 - JW Limited</Copyright>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Optimize>True</Optimize>
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,6 +28,7 @@
     <PackageReference Include="ReactiveUI.WinForms" Version="18.4.1" />
     <PackageReference Include="ReactorUI.Skia.WinForms" Version="0.0.41-beta" />
     <PackageReference Include="Windows-Forms-Aero" Version="3.1.1" />
+    <PackageReference Include="xunit" Version="2.4.2" />
   </ItemGroup>
 
   <ItemGroup>

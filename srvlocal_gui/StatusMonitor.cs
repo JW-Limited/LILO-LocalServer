@@ -8,7 +8,7 @@ namespace LILO.JBO
 {
     public class StatusSender
     {
-        private string _serverUrl = "http://localhost:8080/api/data?key=liloDev-420";
+        private readonly string _serverUrl = "http://localhost:8080/api/data?key=liloDev-420";
         private readonly string _statusFile = ".\\srvlocal.runtimeconfig.json";
         private readonly string _accountFile = ".\\srvlocal.deps.json";
         private System.Threading.Timer _timer;
@@ -17,11 +17,9 @@ namespace LILO.JBO
         {
             try
             {
-                // Read status and account from files
                 var status = File.ReadAllText(_statusFile);
                 var account = File.ReadAllText(_accountFile);
 
-                // Send status and account to server
                 using (var client = new WebClient())
                 {
                     var data = new NameValueCollection
@@ -29,7 +27,7 @@ namespace LILO.JBO
                 { "status", status },
                 { "account", account }
             };
-                    var response = client.UploadValues(_serverUrl, "POST", data);
+                    var response = await client.UploadFileAsync(new Uri(_serverUrl),data);
                     return Encoding.UTF8.GetString(response);
                 }
             }

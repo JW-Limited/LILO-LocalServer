@@ -121,8 +121,7 @@ namespace Local
                 Console.WriteLine("|-- X509Cert :   {0} ", recevieCommands.certAcepted ? "valid" : "error");
                 Console.WriteLine("");
 
-                OpenAI ai = new OpenAI("Tell me a joke");
-
+                OpenAI ai = new OpenAI("dev420");
                 Console.WriteLine(ai.GetReponse());
                 thread.Start();
 
@@ -301,6 +300,32 @@ namespace Local
                     else
                     {
                         var buffer = Encoding.UTF8.GetBytes($"[{DateTime.UtcNow}] : The ApiKey isn´t valid. (Key {key})");
+                        response.ContentLength64 = buffer.Length;
+                        response.OutputStream.Write(buffer, 0, buffer.Length);
+                    }
+
+
+                }
+                else if (request.Url.AbsolutePath == "/api/com")
+                {
+                    var command = request.QueryString["command"];
+                    if(command == "close")
+                    {
+                        var body = new StreamReader(request.InputStream).ReadToEnd();
+
+                        ProcessData(body);
+
+                        var buffer = Encoding.UTF8.GetBytes($"[{this.ToString()}] : Closing");
+                        response.ContentLength64 = buffer.Length;
+                        response.OutputStream.Write(buffer, 0, buffer.Length);
+
+                        var rq = new RequestLogger.WriteWithoutServerConnection("Command from Api : ShutDown",".\\");
+                        rq.WriteLog();
+                        Environment.Exit(0);        
+                    }
+                    else
+                    {
+                        var buffer = Encoding.UTF8.GetBytes($"[{DateTime.UtcNow}] : The Command isn´t valid. (Command {command})");
                         response.ContentLength64 = buffer.Length;
                         response.OutputStream.Write(buffer, 0, buffer.Length);
                     }

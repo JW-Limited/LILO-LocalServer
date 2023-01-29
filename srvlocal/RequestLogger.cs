@@ -7,6 +7,24 @@ namespace Local
 {
     public class RequestLogger
     {
+        public class WriteWithoutServerConnection 
+        {
+            private string _connectionString;
+            private string _error;
+
+            public WriteWithoutServerConnection(string Error, string OutputPath) 
+            { 
+                this._connectionString = OutputPath;
+                this._error = Error;
+            }
+
+            public async void WriteLog()
+            {
+                File.AppendAllText(_connectionString, _error);
+            }
+        }
+
+
         private readonly string _logDirectory;
         private readonly string _serverUrl;
 

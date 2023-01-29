@@ -11,11 +11,13 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("srvlocal_gui")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("JW Limited")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
+[assembly: System.Reflection.AssemblyCopyrightAttribute("Copyright© 2023 - JW Limited")]
+[assembly: System.Reflection.AssemblyDescriptionAttribute("An easy way to Build and Run youre LILO Apps")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("srvlocal_gui")]
+[assembly: System.Reflection.AssemblyProductAttribute("Local Server Manager")]
 [assembly: System.Reflection.AssemblyTitleAttribute("srvlocal_gui")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 [assembly: System.Runtime.Versioning.TargetPlatformAttribute("Windows7.0")]

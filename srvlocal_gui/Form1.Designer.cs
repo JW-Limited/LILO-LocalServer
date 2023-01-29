@@ -73,11 +73,20 @@
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
             this.label12 = new System.Windows.Forms.Label();
             this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
+            this.conMenu = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
+            this.conMenuStatus = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.conMenuShowConsole = new System.Windows.Forms.ToolStripMenuItem();
+            this.conMenuCloseStream = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.conMenuVersion = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.ConsolePanel.SuspendLayout();
+            this.conMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // thumbnailViewer1
@@ -139,7 +148,7 @@
             this.bntOpen.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.bntOpen.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.bntOpen.ForeColor = System.Drawing.Color.White;
-            this.bntOpen.Location = new System.Drawing.Point(107, 145);
+            this.bntOpen.Location = new System.Drawing.Point(109, 145);
             this.bntOpen.Margin = new System.Windows.Forms.Padding(2);
             this.bntOpen.Name = "bntOpen";
             this.bntOpen.Size = new System.Drawing.Size(154, 48);
@@ -151,7 +160,7 @@
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(107, 12);
+            this.label7.Location = new System.Drawing.Point(109, 12);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(154, 49);
@@ -163,7 +172,7 @@
             // label9
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label9.Location = new System.Drawing.Point(95, 62);
+            this.label9.Location = new System.Drawing.Point(96, 62);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(189, 66);
@@ -225,7 +234,7 @@
             // label11
             // 
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label11.Location = new System.Drawing.Point(99, 62);
+            this.label11.Location = new System.Drawing.Point(100, 62);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(189, 66);
@@ -527,6 +536,7 @@
             this.txtPort.PlaceholderText = "From 8080 - 12000";
             this.txtPort.Size = new System.Drawing.Size(182, 31);
             this.txtPort.TabIndex = 6;
+            this.txtPort.Text = "8080";
             // 
             // txtMediaFolder
             // 
@@ -626,11 +636,14 @@
             // 
             // _outputTextBox
             // 
+            this._outputTextBox.AcceptsTab = true;
+            this._outputTextBox.CueBannerText = "Console";
             this._outputTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this._outputTextBox.Location = new System.Drawing.Point(0, 32);
             this._outputTextBox.Margin = new System.Windows.Forms.Padding(2);
             this._outputTextBox.Multiline = true;
             this._outputTextBox.Name = "_outputTextBox";
+            this._outputTextBox.PlaceholderText = "Mhh really quite, to quite";
             this._outputTextBox.Size = new System.Drawing.Size(1110, 168);
             this._outputTextBox.TabIndex = 1;
             this._outputTextBox.WordWrap = false;
@@ -685,6 +698,78 @@
             this.guna2Button7.Text = "Open";
             this.guna2Button7.Click += new System.EventHandler(this.bntUFeed);
             // 
+            // conMenu
+            // 
+            this.conMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.conMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.conMenuStatus,
+            this.toolStripSeparator1,
+            this.conMenuShowConsole,
+            this.conMenuCloseStream,
+            this.toolStripSeparator2,
+            this.aboutToolStripMenuItem,
+            this.conMenuVersion});
+            this.conMenu.Name = "guna2ContextMenuStrip1";
+            this.conMenu.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.conMenu.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
+            this.conMenu.RenderStyle.ColorTable = null;
+            this.conMenu.RenderStyle.RoundedEdges = true;
+            this.conMenu.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
+            this.conMenu.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.conMenu.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.conMenu.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
+            this.conMenu.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.conMenu.Size = new System.Drawing.Size(241, 209);
+            this.conMenu.Text = "&Close Stream";
+            // 
+            // conMenuStatus
+            // 
+            this.conMenuStatus.Enabled = false;
+            this.conMenuStatus.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.conMenuStatus.Name = "conMenuStatus";
+            this.conMenuStatus.Size = new System.Drawing.Size(240, 32);
+            this.conMenuStatus.Text = "Server : n/a";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(237, 6);
+            // 
+            // conMenuShowConsole
+            // 
+            this.conMenuShowConsole.Name = "conMenuShowConsole";
+            this.conMenuShowConsole.Size = new System.Drawing.Size(240, 32);
+            this.conMenuShowConsole.Text = "Show Console";
+            this.conMenuShowConsole.Click += new System.EventHandler(this.conMenuShowConsole_Click);
+            // 
+            // conMenuCloseStream
+            // 
+            this.conMenuCloseStream.AutoToolTip = true;
+            this.conMenuCloseStream.Name = "conMenuCloseStream";
+            this.conMenuCloseStream.Size = new System.Drawing.Size(240, 32);
+            this.conMenuCloseStream.Text = "Close Stream";
+            this.conMenuCloseStream.Click += new System.EventHandler(this.conMenuCloseStream_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(237, 6);
+            // 
+            // conMenuVersion
+            // 
+            this.conMenuVersion.Enabled = false;
+            this.conMenuVersion.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.conMenuVersion.Name = "conMenuVersion";
+            this.conMenuVersion.Size = new System.Drawing.Size(240, 32);
+            this.conMenuVersion.Text = "Version : n/a";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(240, 32);
+            this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -719,7 +804,7 @@
             this.Controls.Add(this.thumbnailViewer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.MinimumSize = new System.Drawing.Size(897, 690);
+            this.MinimumSize = new System.Drawing.Size(895, 687);
             this.Name = "Form1";
             this.Text = "srvlocal_gui";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -729,6 +814,7 @@
             this.guna2Panel2.ResumeLayout(false);
             this.ConsolePanel.ResumeLayout(false);
             this.ConsolePanel.PerformLayout();
+            this.conMenu.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -778,5 +864,13 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button6;
         private Label label12;
         private Guna.UI2.WinForms.Guna2Button guna2Button7;
+        private Guna.UI2.WinForms.Guna2ContextMenuStrip conMenu;
+        private ToolStripMenuItem conMenuStatus;
+        private ToolStripSeparator toolStripSeparator1;
+        private ToolStripMenuItem conMenuShowConsole;
+        private ToolStripMenuItem conMenuCloseStream;
+        private ToolStripSeparator toolStripSeparator2;
+        private ToolStripMenuItem conMenuVersion;
+        private ToolStripMenuItem aboutToolStripMenuItem;
     }
 }
