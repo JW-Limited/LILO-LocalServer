@@ -27,7 +27,7 @@ namespace LILO.JBO
                 { "status", status },
                 { "account", account }
             };
-                    var response = await client.UploadFileAsync(new Uri(_serverUrl),data);
+                    var response = client.UploadValues(_serverUrl, "POST", data);
                     return Encoding.UTF8.GetString(response);
                 }
             }

@@ -4,6 +4,9 @@
     <Compile Update="AboutBox.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Bibo.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="ConsoleEmu.cs">
       <SubType>Form</SubType>
     </Compile>

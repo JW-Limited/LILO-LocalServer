@@ -159,13 +159,22 @@ namespace srvlocal_gui
 
         private async void guna2Button6_Click(object sender, EventArgs e)
         {
-            var url = $"http://localhost:{txtPort.Text}/api/com?command=close";
-
             ConsolePanel.Visible = false;
-            var status = await GetFromHost(url);
+            //var url = $"http://localhost:{txtPort.Text}/api/com?command=close";
+            foreach (var srv in Process.GetProcessesByName("srvlocal"))
+            {
+                var time = srv.StartTime;
+                var overall = srv.TotalProcessorTime;
+                srv.Kill();
+                ConsolePanel.Visible = false;
+                //lblError.Text = String.Format("[LocalServer] Closed (TotalOn:{1},Start:{2})");
+            }
             ConsolePanel.Visible = false;
-            lblError.Text = status.ToString();
+            //var status = await GetFromHost(url);
+            //ConsolePanel.Visible = false;
+            //lblError.Text = status.ToString();
         }
+        /*
 
         public static async Task<string> GetFromHost(string url)
         {
@@ -184,6 +193,7 @@ namespace srvlocal_gui
                 catch { return "Error while closing the Stream"; };
             }
         }
+        */
 
         private void bntStartWithArguments(object sender, EventArgs e)
         {
@@ -257,20 +267,52 @@ namespace srvlocal_gui
             feed.Show();
         }
 
+        public static long PingServer(string host)
+        {
+            try
+            {
+                Ping ping = new Ping();
+                PingReply reply = ping.Send(host);
+
+                if (reply.Status == IPStatus.Success)
+                {
+                    return reply.RoundtripTime;
+                }
+                else
+                {
+                    return -1;
+                }
+            }
+            catch { return -1; }
+            
+            
+        }
+
 
         public void NotyFi()
         {
+            var ping = new Ping()
+            {
+
+            };
+            var pingResu = ping.SendPingAsync("http://localhost:8080").Status;
+
             noty = new NotifyIcon()
             {
-                BalloonTipText = "LocalHost is Running..."
+                BalloonTipText = $"LocalHost is Running...\nVersion : {VersionApp()}\nPing : {PingServer("http://localhost:8080")}ms"
                     as string,
-                BalloonTipTitle = "Started Succesfully"
+                BalloonTipTitle = $"Started Succesfully"
                     as string,
+                BalloonTipIcon = ToolTipIcon.Info,
+
+                Text = "Manages the DesktopClient.",
+
                 Icon = this.Icon,
                 ContextMenuStrip = conMenu
             };
 
             noty.Tag = "STATUS";
+            noty.BalloonTipClicked += (sender, e) => bntUFeed(sender, e);
             noty.Events();
             noty.Visible = true;
             noty.ShowBalloonTip(1000);
@@ -312,9 +354,15 @@ namespace srvlocal_gui
 
         private async void conMenuCloseStream_Click(object sender, EventArgs e)
         {
-            var url = $"http://localhost:{txtPort.Text}/api/com?command=close";
-            ConsolePanel.Visible = false;
-            var status = await GetFromHost(url);
+            foreach (var srv in Process.GetProcessesByName("srvlocal"))
+            {
+                if (srv.Id == 0) continue;
+                var time = srv.StartTime;
+                var overall = srv.TotalProcessorTime;
+                srv.Kill();
+
+                lblError.Text = String.Format("[LocalServer] Closed (TotalOn:{1},Start:{2})", overall, time);
+            }
             ConsolePanel.Visible = false;
         }
 
@@ -325,6 +373,12 @@ namespace srvlocal_gui
                 StartPosition = FormStartPosition.CenterScreen
             };
             about.Show();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Bibo bibo = new Bibo();
+            bibo.Show();
         }
     }
 }
