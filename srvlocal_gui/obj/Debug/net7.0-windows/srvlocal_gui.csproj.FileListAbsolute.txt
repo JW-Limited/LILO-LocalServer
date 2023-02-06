@@ -2,7 +2,6 @@ C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-w
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-windows\srvlocal_gui.deps.json
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-windows\srvlocal_gui.runtimeconfig.json
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-windows\srvlocal_gui.dll
-C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-windows\srvlocal_gui.pdb
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-windows\DynamicData.dll
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-windows\OpenTK.dll
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-windows\OpenTK.GLControl.dll
@@ -30,7 +29,6 @@ C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\obj\Debug\net7.0-w
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\obj\Debug\net7.0-windows\srvlocal_gui.csproj.CopyComplete
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\obj\Debug\net7.0-windows\srvlocal_gui.dll
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\obj\Debug\net7.0-windows\refint\srvlocal_gui.dll
-C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\obj\Debug\net7.0-windows\srvlocal_gui.pdb
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\obj\Debug\net7.0-windows\srvlocal_gui.genruntimeconfig.cache
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\obj\Debug\net7.0-windows\ref\srvlocal_gui.dll
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-windows\Guna.UI2.dll
@@ -81,3 +79,18 @@ C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-w
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-windows\xunit.execution.dotnet.dll
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\obj\Debug\net7.0-windows\srvlocal_gui.Properties.Resources.resources
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\obj\Debug\net7.0-windows\srvlocal_gui.Bibo.resources
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\obj\Debug\net7.0-windows\srvlocal_gui.ArgStart.resources
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-windows\MetroFramework.Design.dll
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-windows\MetroFramework.Fonts.dll
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-windows\MetroFramework.dll
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-windows\Zeroit.Framework.Metro.dll
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\obj\Debug\net7.0-windows\MetroFramework.Demo.MainForm.resources
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\obj\Debug\net7.0-windows\srvlocal_gui.Setup.resources
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-windows\SaaUI.dll
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\obj\Debug\net7.0-windows\srvlocal_gui.AppSelector.resources
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-windows\Google.Apis.dll
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-windows\Google.Apis.Auth.PlatformServices.dll
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-windows\Google.Apis.Auth.dll
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-windows\Google.Apis.Core.dll
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-windows\Google.Apis.Gmail.v1.dll
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\obj\Debug\net7.0-windows\srvlocal_gui.GoogleLogin.resources

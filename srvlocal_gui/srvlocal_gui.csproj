@@ -18,17 +18,29 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <Optimize>True</Optimize>
+    <DebugType>embedded</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>embedded</DebugType>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Google.Apis.Auth" Version="1.59.0" />
+    <PackageReference Include="Google.Apis.Gmail.v1" Version="1.59.0.2944" />
     <PackageReference Include="Guna.UI2.WinForms" Version="2.0.3.5" />
+    <PackageReference Include="MetroFramework" Version="1.2.0.3" />
+    <PackageReference Include="MetroFramework.Design" Version="1.2.0.3" />
+    <PackageReference Include="MetroModernUI" Version="1.4.0" />
     <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.1619-prerelease" />
     <PackageReference Include="Modern.Forms" Version="0.3.0" />
     <PackageReference Include="ReactiveUI.Events.Winforms" Version="15.1.1" />
     <PackageReference Include="ReactiveUI.WinForms" Version="18.4.1" />
     <PackageReference Include="ReactorUI.Skia.WinForms" Version="0.0.41-beta" />
+    <PackageReference Include="SaaUI.Winforms" Version="1.1.0" />
     <PackageReference Include="Windows-Forms-Aero" Version="3.1.1" />
     <PackageReference Include="xunit" Version="2.4.2" />
+    <PackageReference Include="Zeroit.Framework.Metro" Version="1.0.0" />
   </ItemGroup>
 
   <ItemGroup>

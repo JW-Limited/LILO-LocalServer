@@ -19,5 +19,6 @@
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <Pkgxunit_analyzers Condition=" '$(Pkgxunit_analyzers)' == '' ">C:\Users\joeva\.nuget\packages\xunit.analyzers\1.0.0</Pkgxunit_analyzers>
     <PkgMicrosoft_Web_WebView2 Condition=" '$(PkgMicrosoft_Web_WebView2)' == '' ">C:\Users\joeva\.nuget\packages\microsoft.web.webview2\1.0.1619-prerelease</PkgMicrosoft_Web_WebView2>
+    <PkgMetroFramework_Design Condition=" '$(PkgMetroFramework_Design)' == '' ">C:\Users\joeva\.nuget\packages\metroframework.design\1.2.0.3</PkgMetroFramework_Design>
   </PropertyGroup>
 </Project>

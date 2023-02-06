@@ -380,6 +380,12 @@ namespace srvlocal_gui
             Bibo bibo = new Bibo();
             bibo.Show();
         }
+
+        private void bntMEtro(object sender, EventArgs e)
+        {
+            var setup = new Setup();
+            setup.Show();
+        }
     }
 }
 

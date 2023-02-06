@@ -51,6 +51,74 @@
           }
         }
       },
+      "Google.Apis/1.59.0": {
+        "type": "package",
+        "dependencies": {
+          "Google.Apis.Core": "1.59.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Google.Apis.Auth/1.59.0": {
+        "type": "package",
+        "dependencies": {
+          "Google.Apis": "1.59.0",
+          "Google.Apis.Core": "1.59.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.Auth.PlatformServices.dll": {},
+          "lib/netstandard2.0/Google.Apis.Auth.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.Auth.PlatformServices.dll": {},
+          "lib/netstandard2.0/Google.Apis.Auth.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Google.Apis.Core/1.59.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Google.Apis.Gmail.v1/1.59.0.2944": {
+        "type": "package",
+        "dependencies": {
+          "Google.Apis": "1.59.0",
+          "Google.Apis.Auth": "1.59.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.Gmail.v1.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.Gmail.v1.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Guna.UI2.WinForms/2.0.3.5": {
         "type": "package",
         "compile": {
@@ -143,6 +211,60 @@
             "assetType": "native",
             "rid": "win-x86"
           }
+        }
+      },
+      "MetroFramework/1.2.0.3": {
+        "type": "package",
+        "dependencies": {
+          "MetroFramework.Design": "1.2.0.3",
+          "MetroFramework.Fonts": "1.2.0.3",
+          "MetroFramework.RunTime": "1.2.0.3"
+        }
+      },
+      "MetroFramework.Design/1.2.0.3": {
+        "type": "package",
+        "dependencies": {
+          "MetroFramework.RunTime": "1.2.0.3"
+        },
+        "compile": {
+          "lib/net40/MetroFramework.Design.dll": {}
+        },
+        "runtime": {
+          "lib/net40/MetroFramework.Design.dll": {}
+        }
+      },
+      "MetroFramework.Fonts/1.2.0.3": {
+        "type": "package",
+        "dependencies": {
+          "MetroFramework.RunTime": "1.2.0.3"
+        },
+        "compile": {
+          "lib/net40/MetroFramework.Fonts.dll": {}
+        },
+        "runtime": {
+          "lib/net40/MetroFramework.Fonts.dll": {}
+        }
+      },
+      "MetroFramework.RunTime/1.2.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net40-Client/MetroFramework.dll": {}
+        },
+        "runtime": {
+          "lib/net40-Client/MetroFramework.dll": {}
+        }
+      },
+      "MetroModernUI/1.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net/MetroFramework.Design.dll": {},
+          "lib/net/MetroFramework.Fonts.dll": {},
+          "lib/net/MetroFramework.dll": {}
+        },
+        "runtime": {
+          "lib/net/MetroFramework.Design.dll": {},
+          "lib/net/MetroFramework.Fonts.dll": {},
+          "lib/net/MetroFramework.dll": {}
         }
       },
       "Microsoft.NETCore.Platforms/1.1.0": {
@@ -342,15 +464,15 @@
           "System.Xml.XDocument": "4.3.0"
         }
       },
-      "Newtonsoft.Json/13.0.1": {
+      "Newtonsoft.Json/13.0.2": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
         }
@@ -688,6 +810,19 @@
           "runtimes/ubuntu.16.10-x64/native/System.Security.Cryptography.Native.OpenSsl.so": {
             "assetType": "native",
             "rid": "ubuntu.16.10-x64"
+          }
+        }
+      },
+      "SaaUI.Winforms/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net35/SaaUI.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net35/SaaUI.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -2039,6 +2174,15 @@
           }
         }
       },
+      "Zeroit.Framework.Metro/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/Zeroit.Framework.Metro.dll": {}
+        },
+        "runtime": {
+          "lib/Zeroit.Framework.Metro.dll": {}
+        }
+      },
       "srvlocal/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -2111,6 +2255,102 @@
         "lib/uap10.0.16299/DynamicData.pri",
         "lib/uap10.0.16299/DynamicData.xml",
         "logo.png"
+      ]
+    },
+    "Google.Apis/1.59.0": {
+      "sha512": "1RJ9tY4tkm2M5IXGLHtJCxx+TLYujJ1mxn15l1ZrQXdR9O2fAYY/l8j2p53ZJJFVTybo5XIM4FuCJyW8wVcIsw==",
+      "type": "package",
+      "path": "google.apis/1.59.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "NuGetIcon.png",
+        "google.apis.1.59.0.nupkg.sha512",
+        "google.apis.nuspec",
+        "lib/net45/Google.Apis.PlatformServices.dll",
+        "lib/net45/Google.Apis.dll",
+        "lib/net45/Google.Apis.pdb",
+        "lib/net45/Google.Apis.xml",
+        "lib/netstandard1.3/Google.Apis.dll",
+        "lib/netstandard1.3/Google.Apis.pdb",
+        "lib/netstandard1.3/Google.Apis.xml",
+        "lib/netstandard2.0/Google.Apis.dll",
+        "lib/netstandard2.0/Google.Apis.pdb",
+        "lib/netstandard2.0/Google.Apis.xml"
+      ]
+    },
+    "Google.Apis.Auth/1.59.0": {
+      "sha512": "zPZoEwf+Fi26YUAfN/HUyhThPneUQFwtT+RJHLAEfTm1CpPu4nCWDP0Hwx796o57WxvVrffzj0bsjBHsdFHDWg==",
+      "type": "package",
+      "path": "google.apis.auth/1.59.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "NuGetIcon.png",
+        "google.apis.auth.1.59.0.nupkg.sha512",
+        "google.apis.auth.nuspec",
+        "lib/net45/Google.Apis.Auth.PlatformServices.dll",
+        "lib/net45/Google.Apis.Auth.dll",
+        "lib/net45/Google.Apis.Auth.pdb",
+        "lib/net45/Google.Apis.Auth.xml",
+        "lib/net461/Google.Apis.Auth.PlatformServices.dll",
+        "lib/net461/Google.Apis.Auth.dll",
+        "lib/net461/Google.Apis.Auth.pdb",
+        "lib/net461/Google.Apis.Auth.xml",
+        "lib/netstandard1.3/Google.Apis.Auth.PlatformServices.dll",
+        "lib/netstandard1.3/Google.Apis.Auth.dll",
+        "lib/netstandard1.3/Google.Apis.Auth.pdb",
+        "lib/netstandard1.3/Google.Apis.Auth.xml",
+        "lib/netstandard2.0/Google.Apis.Auth.PlatformServices.dll",
+        "lib/netstandard2.0/Google.Apis.Auth.dll",
+        "lib/netstandard2.0/Google.Apis.Auth.pdb",
+        "lib/netstandard2.0/Google.Apis.Auth.xml"
+      ]
+    },
+    "Google.Apis.Core/1.59.0": {
+      "sha512": "LouWN5JzAJnOVbK3bLTX9WzIppggO1kE8u8PNe5fTLMLVzGzjqpDcbtJc15tGgUHzUVSZaSOdLWWegjH57fluw==",
+      "type": "package",
+      "path": "google.apis.core/1.59.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "NuGetIcon.png",
+        "google.apis.core.1.59.0.nupkg.sha512",
+        "google.apis.core.nuspec",
+        "lib/net45/Google.Apis.Core.dll",
+        "lib/net45/Google.Apis.Core.pdb",
+        "lib/net45/Google.Apis.Core.xml",
+        "lib/netstandard1.3/Google.Apis.Core.dll",
+        "lib/netstandard1.3/Google.Apis.Core.pdb",
+        "lib/netstandard1.3/Google.Apis.Core.xml",
+        "lib/netstandard2.0/Google.Apis.Core.dll",
+        "lib/netstandard2.0/Google.Apis.Core.pdb",
+        "lib/netstandard2.0/Google.Apis.Core.xml"
+      ]
+    },
+    "Google.Apis.Gmail.v1/1.59.0.2944": {
+      "sha512": "YsZYg2zn1uwbtF/He7+ZSSnMU98c0pM+56ncIYzZZ+iziQF1ebtK9+Qfr987WJqL1pWR3jDFy6nr68K9FgQd2w==",
+      "type": "package",
+      "path": "google.apis.gmail.v1/1.59.0.2944",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "NuGetIcon.png",
+        "google.apis.gmail.v1.1.59.0.2944.nupkg.sha512",
+        "google.apis.gmail.v1.nuspec",
+        "lib/net45/Google.Apis.Gmail.v1.dll",
+        "lib/net45/Google.Apis.Gmail.v1.pdb",
+        "lib/net45/Google.Apis.Gmail.v1.xml",
+        "lib/netstandard1.3/Google.Apis.Gmail.v1.dll",
+        "lib/netstandard1.3/Google.Apis.Gmail.v1.pdb",
+        "lib/netstandard1.3/Google.Apis.Gmail.v1.xml",
+        "lib/netstandard2.0/Google.Apis.Gmail.v1.dll",
+        "lib/netstandard2.0/Google.Apis.Gmail.v1.pdb",
+        "lib/netstandard2.0/Google.Apis.Gmail.v1.xml"
       ]
     },
     "Guna.UI2.WinForms/2.0.3.5": {
@@ -2269,6 +2509,74 @@
         "runtimes/win-arm64/native/libHarfBuzzSharp.dll",
         "runtimes/win-x64/native/libHarfBuzzSharp.dll",
         "runtimes/win-x86/native/libHarfBuzzSharp.dll"
+      ]
+    },
+    "MetroFramework/1.2.0.3": {
+      "sha512": "PldREwx2yJ9GFXoR4IsXgsrTuOOEL1c5qZYeIfv9SVCSd7cJobmNRDHo+2v78E6U1lIWHM+ZIceZEETdOj0+oA==",
+      "type": "package",
+      "path": "metroframework/1.2.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Content/MetroFramework.txt",
+        "README.TXT",
+        "metroframework.1.2.0.3.nupkg.sha512",
+        "metroframework.nuspec"
+      ]
+    },
+    "MetroFramework.Design/1.2.0.3": {
+      "sha512": "JhXzz2m1ofJu+vcqxib1s9nmI1akoDHTRweNISsVcvk38bVabqHpwrTpwvz3z4lcwqIe19/B6M4Rrk5uXdNmhA==",
+      "type": "package",
+      "path": "metroframework.design/1.2.0.3",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.TXT",
+        "Tools/install.ps1",
+        "lib/net40/MetroFramework.Design.dll",
+        "metroframework.design.1.2.0.3.nupkg.sha512",
+        "metroframework.design.nuspec"
+      ]
+    },
+    "MetroFramework.Fonts/1.2.0.3": {
+      "sha512": "5PAtJsIKfg4bzXPH3MeS4UFDxc4bgCe9yEEg+HS9+lOuwdChpMtawFw0XK4/u7OZxnCfkcHbnjTpu4IUpBBsfA==",
+      "type": "package",
+      "path": "metroframework.fonts/1.2.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.TXT",
+        "lib/net40/MetroFramework.Fonts.dll",
+        "metroframework.fonts.1.2.0.3.nupkg.sha512",
+        "metroframework.fonts.nuspec"
+      ]
+    },
+    "MetroFramework.RunTime/1.2.0.3": {
+      "sha512": "7AFviJ+uFd/jApvUzOU8mMzl3NCj/sjIKQgCeJqqEEc78R6LoOTH+qGFZBRIEV+6nqgt9h2Y/ei6xVkTNZ3sJA==",
+      "type": "package",
+      "path": "metroframework.runtime/1.2.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.TXT",
+        "lib/net40-Client/MetroFramework.dll",
+        "metroframework.runtime.1.2.0.3.nupkg.sha512",
+        "metroframework.runtime.nuspec"
+      ]
+    },
+    "MetroModernUI/1.4.0": {
+      "sha512": "p2F3w8bF1tb0tpkDceEVO65UYMKnJxdQyNxVyl/OjrFZHighicLYZDppKkiqmvBZ10XUi2mqHiIJUzXBP3GElQ==",
+      "type": "package",
+      "path": "metromodernui/1.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net/MetroFramework.Design.dll",
+        "lib/net/MetroFramework.Fonts.dll",
+        "lib/net/MetroFramework.dll",
+        "metromodernui.1.4.0.nupkg.sha512",
+        "metromodernui.nuspec"
       ]
     },
     "Microsoft.NETCore.Platforms/1.1.0": {
@@ -2515,14 +2823,15 @@
         "netstandard.library.nuspec"
       ]
     },
-    "Newtonsoft.Json/13.0.1": {
-      "sha512": "ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
+    "Newtonsoft.Json/13.0.2": {
+      "sha512": "R2pZ3B0UjeyHShm9vG+Tu0EBb2lC8b0dFzV9gVn50ofHXh9Smjk6kTn7A/FdAsC8B5cKib1OnGYOXxRBz5XQDg==",
       "type": "package",
-      "path": "newtonsoft.json/13.0.1",
+      "path": "newtonsoft.json/13.0.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.md",
+        "README.md",
         "lib/net20/Newtonsoft.Json.dll",
         "lib/net20/Newtonsoft.Json.xml",
         "lib/net35/Newtonsoft.Json.dll",
@@ -2531,13 +2840,15 @@
         "lib/net40/Newtonsoft.Json.xml",
         "lib/net45/Newtonsoft.Json.dll",
         "lib/net45/Newtonsoft.Json.xml",
+        "lib/net6.0/Newtonsoft.Json.dll",
+        "lib/net6.0/Newtonsoft.Json.xml",
         "lib/netstandard1.0/Newtonsoft.Json.dll",
         "lib/netstandard1.0/Newtonsoft.Json.xml",
         "lib/netstandard1.3/Newtonsoft.Json.dll",
         "lib/netstandard1.3/Newtonsoft.Json.xml",
         "lib/netstandard2.0/Newtonsoft.Json.dll",
         "lib/netstandard2.0/Newtonsoft.Json.xml",
-        "newtonsoft.json.13.0.1.nupkg.sha512",
+        "newtonsoft.json.13.0.2.nupkg.sha512",
         "newtonsoft.json.nuspec",
         "packageIcon.png"
       ]
@@ -2970,6 +3281,19 @@
         "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
         "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.nuspec",
         "runtimes/ubuntu.16.10-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
+      ]
+    },
+    "SaaUI.Winforms/1.1.0": {
+      "sha512": "tITFOL8Zuie5h7YgfZw/SNee3buVN3Z1s1PhNuH+bGUKn7i7612wIIO+YMOkhoL5MNRnbnQkY2J1qyfYbZfYag==",
+      "type": "package",
+      "path": "saaui.winforms/1.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net35/SaaUI.dll",
+        "lib/net35/SaaUI.xml",
+        "saaui.winforms.1.1.0.nupkg.sha512",
+        "saaui.winforms.nuspec"
       ]
     },
     "SkiaSharp/2.88.2": {
@@ -6505,6 +6829,19 @@
         "xunit.extensibility.execution.nuspec"
       ]
     },
+    "Zeroit.Framework.Metro/1.0.0": {
+      "sha512": "FPVSWC+uQIp3+KdW+LFUApwZTG/9rvQbrZtcRNhl1l4iVAjVa4yP4Vq5aIsEvsRZ7yUcgCQB58Gs7G/hvnnCDQ==",
+      "type": "package",
+      "path": "zeroit.framework.metro/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "lib/Zeroit.Framework.Metro.dll",
+        "zeroit.framework.metro.1.0.0.nupkg.sha512",
+        "zeroit.framework.metro.nuspec"
+      ]
+    },
     "srvlocal/1.0.0": {
       "type": "project",
       "path": "../srvlocal/srvlocal.csproj",
@@ -6513,13 +6850,20 @@
   },
   "projectFileDependencyGroups": {
     "net7.0-windows7.0": [
+      "Google.Apis.Auth >= 1.59.0",
+      "Google.Apis.Gmail.v1 >= 1.59.0.2944",
       "Guna.UI2.WinForms >= 2.0.3.5",
+      "MetroFramework >= 1.2.0.3",
+      "MetroFramework.Design >= 1.2.0.3",
+      "MetroModernUI >= 1.4.0",
       "Microsoft.Web.WebView2 >= 1.0.1619-prerelease",
       "Modern.Forms >= 0.3.0",
       "ReactiveUI.Events.Winforms >= 15.1.1",
       "ReactiveUI.WinForms >= 18.4.1",
       "ReactorUI.Skia.WinForms >= 0.0.41-beta",
+      "SaaUI.Winforms >= 1.1.0",
       "Windows-Forms-Aero >= 3.1.1",
+      "Zeroit.Framework.Metro >= 1.0.0",
       "srvlocal >= 1.0.0",
       "xunit >= 2.4.2"
     ]
@@ -6572,9 +6916,29 @@
       "net7.0-windows7.0": {
         "targetAlias": "net7.0-windows",
         "dependencies": {
+          "Google.Apis.Auth": {
+            "target": "Package",
+            "version": "[1.59.0, )"
+          },
+          "Google.Apis.Gmail.v1": {
+            "target": "Package",
+            "version": "[1.59.0.2944, )"
+          },
           "Guna.UI2.WinForms": {
             "target": "Package",
             "version": "[2.0.3.5, )"
+          },
+          "MetroFramework": {
+            "target": "Package",
+            "version": "[1.2.0.3, )"
+          },
+          "MetroFramework.Design": {
+            "target": "Package",
+            "version": "[1.2.0.3, )"
+          },
+          "MetroModernUI": {
+            "target": "Package",
+            "version": "[1.4.0, )"
           },
           "Microsoft.Web.WebView2": {
             "target": "Package",
@@ -6596,9 +6960,17 @@
             "target": "Package",
             "version": "[0.0.41-beta, )"
           },
+          "SaaUI.Winforms": {
+            "target": "Package",
+            "version": "[1.1.0, )"
+          },
           "Windows-Forms-Aero": {
             "target": "Package",
             "version": "[3.1.1, )"
+          },
+          "Zeroit.Framework.Metro": {
+            "target": "Package",
+            "version": "[1.0.0, )"
           },
           "xunit": {
             "target": "Package",
@@ -6643,6 +7015,46 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
+      "message": "Das Paket \"MetroFramework.Design 1.2.0.3\" wurde nicht mit dem Projektzielframework \"net7.0-windows7.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
+      "libraryId": "MetroFramework.Design",
+      "targetGraphs": [
+        "net7.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Das Paket \"MetroFramework.Fonts 1.2.0.3\" wurde nicht mit dem Projektzielframework \"net7.0-windows7.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
+      "libraryId": "MetroFramework.Fonts",
+      "targetGraphs": [
+        "net7.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Das Paket \"MetroFramework.RunTime 1.2.0.3\" wurde nicht mit dem Projektzielframework \"net7.0-windows7.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
+      "libraryId": "MetroFramework.RunTime",
+      "targetGraphs": [
+        "net7.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Das Paket \"MetroModernUI 1.4.0\" wurde nicht mit dem Projektzielframework \"net7.0-windows7.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
+      "libraryId": "MetroModernUI",
+      "targetGraphs": [
+        "net7.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
       "message": "Das Paket \"OpenTK 3.1.0\" wurde nicht mit dem Projektzielframework \"net7.0-windows7.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
       "libraryId": "OpenTK",
       "targetGraphs": [
@@ -6673,6 +7085,16 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
+      "message": "Das Paket \"SaaUI.Winforms 1.1.0\" wurde nicht mit dem Projektzielframework \"net7.0-windows7.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
+      "libraryId": "SaaUI.Winforms",
+      "targetGraphs": [
+        "net7.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
       "message": "Das Paket \"SkiaSharp.Views 1.68.1.1\" wurde nicht mit dem Projektzielframework \"net7.0-windows7.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
       "libraryId": "SkiaSharp.Views",
       "targetGraphs": [
@@ -6685,6 +7107,16 @@
       "warningLevel": 1,
       "message": "Das Paket \"Windows-Forms-Aero 3.1.1\" wurde nicht mit dem Projektzielframework \"net7.0-windows7.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
       "libraryId": "Windows-Forms-Aero",
+      "targetGraphs": [
+        "net7.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Das Paket \"Zeroit.Framework.Metro 1.0.0\" wurde nicht mit dem Projektzielframework \"net7.0-windows7.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
+      "libraryId": "Zeroit.Framework.Metro",
       "targetGraphs": [
         "net7.0-windows7.0"
       ]

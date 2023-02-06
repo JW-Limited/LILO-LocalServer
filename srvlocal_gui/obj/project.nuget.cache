@@ -1,17 +1,26 @@
 {
   "version": 2,
-  "dgSpecHash": "v/UAdwcngM6S+bLNKoJ10UyUpvMFhHXjI3Lkgcms9iBKX2IKUcEb2gg2N0EsjyuXr2ZylwaTCqigIEmiamrO6g==",
+  "dgSpecHash": "jCDaZtGsdwsU7ts1kTnj63G3G1OE9Mt52F0cIDfnPAe/27r4F2779qlp1dmYPBRUkb7Nd+xsQ9PfXVHku9R5dw==",
   "success": true,
   "projectFilePath": "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\srvlocal_gui\\srvlocal_gui.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\joeva\\.nuget\\packages\\aqua-core\\5.2.0\\aqua-core.5.2.0.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\aqua-core-newtonsoft-json\\5.2.0\\aqua-core-newtonsoft-json.5.2.0.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\dynamicdata\\7.12.8\\dynamicdata.7.12.8.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\google.apis\\1.59.0\\google.apis.1.59.0.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\google.apis.auth\\1.59.0\\google.apis.auth.1.59.0.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\google.apis.core\\1.59.0\\google.apis.core.1.59.0.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\google.apis.gmail.v1\\1.59.0.2944\\google.apis.gmail.v1.1.59.0.2944.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\guna.ui2.winforms\\2.0.3.5\\guna.ui2.winforms.2.0.3.5.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\harfbuzzsharp\\2.8.2.1\\harfbuzzsharp.2.8.2.1.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\harfbuzzsharp.nativeassets.linux\\2.8.2.1\\harfbuzzsharp.nativeassets.linux.2.8.2.1.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\harfbuzzsharp.nativeassets.macos\\2.8.2.1\\harfbuzzsharp.nativeassets.macos.2.8.2.1.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\harfbuzzsharp.nativeassets.win32\\2.8.2.1\\harfbuzzsharp.nativeassets.win32.2.8.2.1.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\metroframework\\1.2.0.3\\metroframework.1.2.0.3.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\metroframework.design\\1.2.0.3\\metroframework.design.1.2.0.3.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\metroframework.fonts\\1.2.0.3\\metroframework.fonts.1.2.0.3.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\metroframework.runtime\\1.2.0.3\\metroframework.runtime.1.2.0.3.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\metromodernui\\1.4.0\\metromodernui.1.4.0.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\microsoft.web.webview2\\1.0.1619-prerelease\\microsoft.web.webview2.1.0.1619-prerelease.nupkg.sha512",
@@ -21,7 +30,7 @@
     "C:\\Users\\joeva\\.nuget\\packages\\modern.windowkit\\0.1.2\\modern.windowkit.0.1.2.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\modern.windowkit.backend.mac\\0.1.2\\modern.windowkit.backend.mac.0.1.2.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
-    "C:\\Users\\joeva\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\opentk\\3.1.0\\opentk.3.1.0.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\opentk.glcontrol\\3.1.0\\opentk.glcontrol.3.1.0.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\pharmacist.common\\2.0.8\\pharmacist.common.2.0.8.nupkg.sha512",
@@ -48,6 +57,7 @@
     "C:\\Users\\joeva\\.nuget\\packages\\runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\saaui.winforms\\1.1.0\\saaui.winforms.1.1.0.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\skiasharp\\2.88.2\\skiasharp.2.88.2.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\skiasharp.harfbuzz\\2.80.2\\skiasharp.harfbuzz.2.80.2.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\skiasharp.nativeassets.linux\\2.88.2\\skiasharp.nativeassets.linux.2.88.2.nupkg.sha512",
@@ -121,7 +131,8 @@
     "C:\\Users\\joeva\\.nuget\\packages\\xunit.assert\\2.4.2\\xunit.assert.2.4.2.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\xunit.core\\2.4.2\\xunit.core.2.4.2.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\xunit.extensibility.core\\2.4.2\\xunit.extensibility.core.2.4.2.nupkg.sha512",
-    "C:\\Users\\joeva\\.nuget\\packages\\xunit.extensibility.execution\\2.4.2\\xunit.extensibility.execution.2.4.2.nupkg.sha512"
+    "C:\\Users\\joeva\\.nuget\\packages\\xunit.extensibility.execution\\2.4.2\\xunit.extensibility.execution.2.4.2.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\zeroit.framework.metro\\1.0.0\\zeroit.framework.metro.1.0.0.nupkg.sha512"
   ],
   "logs": [
     {
@@ -130,6 +141,46 @@
       "warningLevel": 1,
       "message": "Das Paket \"Guna.UI2.WinForms 2.0.3.5\" wurde nicht mit dem Projektzielframework \"net7.0-windows7.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
       "libraryId": "Guna.UI2.WinForms",
+      "targetGraphs": [
+        "net7.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Das Paket \"MetroFramework.Design 1.2.0.3\" wurde nicht mit dem Projektzielframework \"net7.0-windows7.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
+      "libraryId": "MetroFramework.Design",
+      "targetGraphs": [
+        "net7.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Das Paket \"MetroFramework.Fonts 1.2.0.3\" wurde nicht mit dem Projektzielframework \"net7.0-windows7.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
+      "libraryId": "MetroFramework.Fonts",
+      "targetGraphs": [
+        "net7.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Das Paket \"MetroFramework.RunTime 1.2.0.3\" wurde nicht mit dem Projektzielframework \"net7.0-windows7.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
+      "libraryId": "MetroFramework.RunTime",
+      "targetGraphs": [
+        "net7.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Das Paket \"MetroModernUI 1.4.0\" wurde nicht mit dem Projektzielframework \"net7.0-windows7.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
+      "libraryId": "MetroModernUI",
       "targetGraphs": [
         "net7.0-windows7.0"
       ]
@@ -168,6 +219,16 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
+      "message": "Das Paket \"SaaUI.Winforms 1.1.0\" wurde nicht mit dem Projektzielframework \"net7.0-windows7.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
+      "libraryId": "SaaUI.Winforms",
+      "targetGraphs": [
+        "net7.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
       "message": "Das Paket \"SkiaSharp.Views 1.68.1.1\" wurde nicht mit dem Projektzielframework \"net7.0-windows7.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
       "libraryId": "SkiaSharp.Views",
       "targetGraphs": [
@@ -180,6 +241,16 @@
       "warningLevel": 1,
       "message": "Das Paket \"Windows-Forms-Aero 3.1.1\" wurde nicht mit dem Projektzielframework \"net7.0-windows7.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
       "libraryId": "Windows-Forms-Aero",
+      "targetGraphs": [
+        "net7.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Das Paket \"Zeroit.Framework.Metro 1.0.0\" wurde nicht mit dem Projektzielframework \"net7.0-windows7.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
+      "libraryId": "Zeroit.Framework.Metro",
       "targetGraphs": [
         "net7.0-windows7.0"
       ]

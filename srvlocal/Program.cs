@@ -57,6 +57,8 @@ namespace Local
 
         public static void Main(string[] args)
         {
+            var srmng = new StartupManager();
+            srmng.AddApplicationToStartup("srvlocal",AppDomain.CurrentDomain.BaseDirectory + "\\srvlocal.exe");
             var distDirectory = "C:\\LILO\\dist";
             var recevieCommands = new ApiToRecevieCommands(8000, certificate2);
             var thread = new Thread(recevieCommands.Start);
@@ -120,11 +122,11 @@ namespace Local
                 Console.WriteLine("|-- OAuth2   :   {0} ", recevieCommands.OAuth2 ? "authenticated" : "no access");
                 Console.WriteLine("|-- X509Cert :   {0} ", recevieCommands.certAcepted ? "valid" : "error");
                 Console.WriteLine("");
-
+                /*
                 OpenAI ai = new OpenAI("dev420");
-                Console.WriteLine(ai.GetReponse());
-                thread.Start();
-
+                Console.WriteLine(ai.GetReponse());*/
+                //thread.Start();
+                /*
                 if (!recevieCommands.apiListening)
                 {
                     ApiUnsafe api = new ApiUnsafe(8989);
@@ -141,7 +143,7 @@ namespace Local
                     {
                         Console.WriteLine($"[{DateTime.Now}] - ERROR {ex.Message.ToString()}");
                     }
-                }
+                }*/
 
 
                 Console.Title = "LILO™ LocalServer";
@@ -158,10 +160,6 @@ namespace Local
             {
                 ChangePort(_port);
             }
-
-
-
-           
 
         }
 

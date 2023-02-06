@@ -76,12 +76,13 @@
             this.conMenu = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
             this.conMenuStatus = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.conMenuShowConsole = new System.Windows.Forms.ToolStripMenuItem();
             this.conMenuCloseStream = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.conMenuVersion = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
@@ -112,12 +113,12 @@
             this.tableLayoutPanel1.Controls.Add(this.guna2Panel1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.guna2Panel3, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.guna2Panel2, 2, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(26, 416);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(26, 684);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(890, 186);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1048, 186);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
             // guna2Panel1
@@ -133,7 +134,7 @@
             this.guna2Panel1.Location = new System.Drawing.Point(2, 2);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(292, 182);
+            this.guna2Panel1.Size = new System.Drawing.Size(345, 182);
             this.guna2Panel1.TabIndex = 2;
             // 
             // bntOpen
@@ -149,7 +150,7 @@
             this.bntOpen.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.bntOpen.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.bntOpen.ForeColor = System.Drawing.Color.White;
-            this.bntOpen.Location = new System.Drawing.Point(87, 116);
+            this.bntOpen.Location = new System.Drawing.Point(113, 116);
             this.bntOpen.Margin = new System.Windows.Forms.Padding(2);
             this.bntOpen.Name = "bntOpen";
             this.bntOpen.Size = new System.Drawing.Size(123, 38);
@@ -161,7 +162,7 @@
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(87, 10);
+            this.label7.Location = new System.Drawing.Point(113, 10);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(123, 39);
@@ -173,7 +174,7 @@
             // label9
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label9.Location = new System.Drawing.Point(77, 50);
+            this.label9.Location = new System.Drawing.Point(103, 50);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(151, 53);
@@ -192,10 +193,10 @@
             this.guna2Panel3.Controls.Add(this.label5);
             this.guna2Panel3.Controls.Add(this.label11);
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel3.Location = new System.Drawing.Point(298, 2);
+            this.guna2Panel3.Location = new System.Drawing.Point(351, 2);
             this.guna2Panel3.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(292, 182);
+            this.guna2Panel3.Size = new System.Drawing.Size(345, 182);
             this.guna2Panel3.TabIndex = 2;
             // 
             // guna2Button1
@@ -211,7 +212,7 @@
             this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(90, 116);
+            this.guna2Button1.Location = new System.Drawing.Point(116, 116);
             this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(123, 38);
@@ -223,7 +224,7 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(90, 10);
+            this.label5.Location = new System.Drawing.Point(116, 10);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(123, 39);
@@ -235,7 +236,7 @@
             // label11
             // 
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label11.Location = new System.Drawing.Point(80, 50);
+            this.label11.Location = new System.Drawing.Point(106, 50);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(151, 53);
@@ -254,10 +255,10 @@
             this.guna2Panel2.Controls.Add(this.label8);
             this.guna2Panel2.Controls.Add(this.label10);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel2.Location = new System.Drawing.Point(594, 2);
+            this.guna2Panel2.Location = new System.Drawing.Point(700, 2);
             this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(294, 182);
+            this.guna2Panel2.Size = new System.Drawing.Size(346, 182);
             this.guna2Panel2.TabIndex = 2;
             // 
             // guna2Button2
@@ -273,7 +274,7 @@
             this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(91, 116);
+            this.guna2Button2.Location = new System.Drawing.Point(117, 116);
             this.guna2Button2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.Size = new System.Drawing.Size(123, 38);
@@ -285,7 +286,7 @@
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(91, 10);
+            this.label8.Location = new System.Drawing.Point(117, 10);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(123, 39);
@@ -297,7 +298,7 @@
             // label10
             // 
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label10.Location = new System.Drawing.Point(79, 50);
+            this.label10.Location = new System.Drawing.Point(105, 50);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(151, 53);
@@ -411,7 +412,7 @@
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(655, 74);
+            this.label3.Location = new System.Drawing.Point(813, 74);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(75, 20);
@@ -431,7 +432,7 @@
             this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.Location = new System.Drawing.Point(734, 70);
+            this.guna2Button3.Location = new System.Drawing.Point(892, 70);
             this.guna2Button3.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.Size = new System.Drawing.Size(182, 27);
@@ -442,7 +443,7 @@
             // lblError
             // 
             this.lblError.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblError.Location = new System.Drawing.Point(660, 145);
+            this.lblError.Location = new System.Drawing.Point(818, 145);
             this.lblError.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblError.Name = "lblError";
             this.lblError.Size = new System.Drawing.Size(256, 58);
@@ -457,7 +458,7 @@
             this.chbChangePort.CheckedState.BorderRadius = 0;
             this.chbChangePort.CheckedState.BorderThickness = 0;
             this.chbChangePort.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.chbChangePort.Location = new System.Drawing.Point(169, 241);
+            this.chbChangePort.Location = new System.Drawing.Point(248, 375);
             this.chbChangePort.Margin = new System.Windows.Forms.Padding(2);
             this.chbChangePort.Name = "chbChangePort";
             this.chbChangePort.Size = new System.Drawing.Size(111, 24);
@@ -477,7 +478,7 @@
             this.chbChangeMediaFolder.CheckedState.BorderRadius = 0;
             this.chbChangeMediaFolder.CheckedState.BorderThickness = 0;
             this.chbChangeMediaFolder.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.chbChangeMediaFolder.Location = new System.Drawing.Point(169, 269);
+            this.chbChangeMediaFolder.Location = new System.Drawing.Point(248, 403);
             this.chbChangeMediaFolder.Margin = new System.Windows.Forms.Padding(2);
             this.chbChangeMediaFolder.Name = "chbChangeMediaFolder";
             this.chbChangeMediaFolder.Size = new System.Drawing.Size(147, 24);
@@ -497,7 +498,7 @@
             this.chbDistFolder.CheckedState.BorderRadius = 0;
             this.chbDistFolder.CheckedState.BorderThickness = 0;
             this.chbDistFolder.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.chbDistFolder.Location = new System.Drawing.Point(169, 297);
+            this.chbDistFolder.Location = new System.Drawing.Point(248, 431);
             this.chbDistFolder.Margin = new System.Windows.Forms.Padding(2);
             this.chbDistFolder.Name = "chbDistFolder";
             this.chbDistFolder.Size = new System.Drawing.Size(151, 24);
@@ -517,7 +518,7 @@
             this.chbDisable.CheckedState.BorderRadius = 0;
             this.chbDisable.CheckedState.BorderThickness = 0;
             this.chbDisable.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.chbDisable.Location = new System.Drawing.Point(169, 325);
+            this.chbDisable.Location = new System.Drawing.Point(248, 459);
             this.chbDisable.Margin = new System.Windows.Forms.Padding(2);
             this.chbDisable.Name = "chbDisable";
             this.chbDisable.Size = new System.Drawing.Size(140, 24);
@@ -531,7 +532,7 @@
             // txtPort
             // 
             this.txtPort.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtPort.Location = new System.Drawing.Point(377, 239);
+            this.txtPort.Location = new System.Drawing.Point(456, 373);
             this.txtPort.Margin = new System.Windows.Forms.Padding(2);
             this.txtPort.Name = "txtPort";
             this.txtPort.PlaceholderText = "From 8080 - 12000";
@@ -542,7 +543,7 @@
             // txtMediaFolder
             // 
             this.txtMediaFolder.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtMediaFolder.Location = new System.Drawing.Point(377, 269);
+            this.txtMediaFolder.Location = new System.Drawing.Point(456, 403);
             this.txtMediaFolder.Margin = new System.Windows.Forms.Padding(2);
             this.txtMediaFolder.Name = "txtMediaFolder";
             this.txtMediaFolder.PlaceholderText = "A Valid Folder";
@@ -562,7 +563,7 @@
             this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.guna2Button4.ForeColor = System.Drawing.Color.White;
-            this.guna2Button4.Location = new System.Drawing.Point(608, 236);
+            this.guna2Button4.Location = new System.Drawing.Point(687, 370);
             this.guna2Button4.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button4.Name = "guna2Button4";
             this.guna2Button4.Size = new System.Drawing.Size(83, 112);
@@ -583,7 +584,7 @@
             this.guna2Button5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.guna2Button5.ForeColor = System.Drawing.Color.White;
-            this.guna2Button5.Location = new System.Drawing.Point(702, 236);
+            this.guna2Button5.Location = new System.Drawing.Point(781, 370);
             this.guna2Button5.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button5.Name = "guna2Button5";
             this.guna2Button5.Size = new System.Drawing.Size(81, 112);
@@ -594,7 +595,7 @@
             // txtDistFolder
             // 
             this.txtDistFolder.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtDistFolder.Location = new System.Drawing.Point(377, 298);
+            this.txtDistFolder.Location = new System.Drawing.Point(456, 432);
             this.txtDistFolder.Margin = new System.Windows.Forms.Padding(2);
             this.txtDistFolder.Name = "txtDistFolder";
             this.txtDistFolder.PlaceholderText = "A Valid Folder";
@@ -628,10 +629,10 @@
             this.ConsolePanel.Controls.Add(this._outputTextBox);
             this.ConsolePanel.Controls.Add(this.guna2Button6);
             this.ConsolePanel.CustomBorderColor = System.Drawing.Color.Gray;
-            this.ConsolePanel.Location = new System.Drawing.Point(26, 213);
+            this.ConsolePanel.Location = new System.Drawing.Point(105, 213);
             this.ConsolePanel.Margin = new System.Windows.Forms.Padding(2);
             this.ConsolePanel.Name = "ConsolePanel";
-            this.ConsolePanel.Size = new System.Drawing.Size(888, 160);
+            this.ConsolePanel.Size = new System.Drawing.Size(888, 428);
             this.ConsolePanel.TabIndex = 7;
             this.ConsolePanel.Visible = false;
             // 
@@ -647,7 +648,7 @@
             this._outputTextBox.PlaceholderText = "Mhh really quite, to quite";
             this._outputTextBox.ReadOnly = true;
             this._outputTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this._outputTextBox.Size = new System.Drawing.Size(888, 134);
+            this._outputTextBox.Size = new System.Drawing.Size(888, 402);
             this._outputTextBox.TabIndex = 1;
             this._outputTextBox.WordWrap = false;
             // 
@@ -673,7 +674,7 @@
             // 
             this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(655, 110);
+            this.label12.Location = new System.Drawing.Point(813, 110);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(48, 20);
@@ -693,7 +694,7 @@
             this.guna2Button7.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.guna2Button7.ForeColor = System.Drawing.Color.White;
-            this.guna2Button7.Location = new System.Drawing.Point(734, 105);
+            this.guna2Button7.Location = new System.Drawing.Point(892, 105);
             this.guna2Button7.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button7.Name = "guna2Button7";
             this.guna2Button7.Size = new System.Drawing.Size(182, 28);
@@ -723,7 +724,7 @@
             this.conMenu.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.conMenu.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
             this.conMenu.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.conMenu.Size = new System.Drawing.Size(211, 188);
+            this.conMenu.Size = new System.Drawing.Size(172, 160);
             this.conMenu.Text = "&Close Stream";
             // 
             // conMenuStatus
@@ -731,18 +732,25 @@
             this.conMenuStatus.Enabled = false;
             this.conMenuStatus.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.conMenuStatus.Name = "conMenuStatus";
-            this.conMenuStatus.Size = new System.Drawing.Size(210, 24);
+            this.conMenuStatus.Size = new System.Drawing.Size(171, 24);
             this.conMenuStatus.Text = "Server : n/a";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(207, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(168, 6);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(171, 24);
+            this.toolStripMenuItem1.Text = "Bibliothek";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // conMenuShowConsole
             // 
             this.conMenuShowConsole.Name = "conMenuShowConsole";
-            this.conMenuShowConsole.Size = new System.Drawing.Size(210, 24);
+            this.conMenuShowConsole.Size = new System.Drawing.Size(171, 24);
             this.conMenuShowConsole.Text = "Show Console";
             this.conMenuShowConsole.Click += new System.EventHandler(this.conMenuShowConsole_Click);
             // 
@@ -750,19 +758,19 @@
             // 
             this.conMenuCloseStream.AutoToolTip = true;
             this.conMenuCloseStream.Name = "conMenuCloseStream";
-            this.conMenuCloseStream.Size = new System.Drawing.Size(210, 24);
+            this.conMenuCloseStream.Size = new System.Drawing.Size(171, 24);
             this.conMenuCloseStream.Text = "Close Stream";
             this.conMenuCloseStream.Click += new System.EventHandler(this.conMenuCloseStream_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(207, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(168, 6);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(171, 24);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -771,22 +779,36 @@
             this.conMenuVersion.Enabled = false;
             this.conMenuVersion.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.conMenuVersion.Name = "conMenuVersion";
-            this.conMenuVersion.Size = new System.Drawing.Size(210, 24);
+            this.conMenuVersion.Size = new System.Drawing.Size(171, 24);
             this.conMenuVersion.Text = "Version : n/a";
             // 
-            // toolStripMenuItem1
+            // guna2Button8
             // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(210, 24);
-            this.toolStripMenuItem1.Text = "Bibliothek";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            this.guna2Button8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Button8.Animated = true;
+            this.guna2Button8.BorderColor = System.Drawing.Color.Gainsboro;
+            this.guna2Button8.BorderRadius = 15;
+            this.guna2Button8.BorderThickness = 2;
+            this.guna2Button8.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button8.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button8.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button8.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.guna2Button8.ForeColor = System.Drawing.Color.White;
+            this.guna2Button8.Location = new System.Drawing.Point(483, 110);
+            this.guna2Button8.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Button8.Name = "guna2Button8";
+            this.guna2Button8.Size = new System.Drawing.Size(182, 28);
+            this.guna2Button8.TabIndex = 0;
+            this.guna2Button8.Text = "Open";
+            this.guna2Button8.Click += new System.EventHandler(this.bntMEtro);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(950, 628);
+            this.ClientSize = new System.Drawing.Size(1108, 896);
             this.Controls.Add(this.ConsolePanel);
             this.Controls.Add(this.txtDistFolder);
             this.Controls.Add(this.txtMediaFolder);
@@ -797,6 +819,7 @@
             this.Controls.Add(this.chbChangePort);
             this.Controls.Add(this.guna2Button5);
             this.Controls.Add(this.guna2Button4);
+            this.Controls.Add(this.guna2Button8);
             this.Controls.Add(this.guna2Button7);
             this.Controls.Add(this.guna2Button3);
             this.Controls.Add(this.lblError);
@@ -884,5 +907,6 @@
         private ToolStripMenuItem conMenuVersion;
         private ToolStripMenuItem aboutToolStripMenuItem;
         private ToolStripMenuItem toolStripMenuItem1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button8;
     }
 }

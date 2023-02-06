@@ -59,5 +59,65 @@ namespace srvlocal_gui.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dropbox_512px {
+            get {
+                object obj = ResourceManager.GetObject("dropbox_512px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap google_icon_131222 {
+            get {
+                object obj = ResourceManager.GetObject("google_icon_131222", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_google_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_google_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_server_windows_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_server_windows_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ocean_backgrounds_wallpapers_HD {
+            get {
+                object obj = ResourceManager.GetObject("Ocean-backgrounds-wallpapers-HD", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap qrcode_github_com {
+            get {
+                object obj = ResourceManager.GetObject("qrcode_github.com", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
