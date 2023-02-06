@@ -62,4 +62,8 @@
     <PackageReference Include="Remote.Linq.Newtonsoft.Json" Version="7.1.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Server\Server.csproj" />
+  </ItemGroup>
+
 </Project>

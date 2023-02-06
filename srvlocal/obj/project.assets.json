@@ -399,6 +399,15 @@
             "related": ".xml"
           }
         }
+      },
+      "Server/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Server.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Server.dll": {}
+        }
       }
     }
   },
@@ -1870,11 +1879,17 @@
         "system.threading.tasks.4.3.0.nupkg.sha512",
         "system.threading.tasks.nuspec"
       ]
+    },
+    "Server/1.0.0": {
+      "type": "project",
+      "path": "../Server/Server.csproj",
+      "msbuildProject": "../Server/Server.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0-windows7.0": [
-      "Remote.Linq.Newtonsoft.Json >= 7.1.0"
+      "Remote.Linq.Newtonsoft.Json >= 7.1.0",
+      "Server >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1908,7 +1923,11 @@
       "frameworks": {
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\Server\\Server.csproj": {
+              "projectPath": "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\Server\\Server.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

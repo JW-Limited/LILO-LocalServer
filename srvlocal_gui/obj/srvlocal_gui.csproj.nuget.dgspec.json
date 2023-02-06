@@ -4,6 +4,21 @@
     "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\srvlocal_gui\\srvlocal_gui.csproj": {}
   },
   "projects": {
+    "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\Server\\Server.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\Server\\Server.csproj",
+        "projectName": "Server",
+        "projectPath": "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\Server\\Server.csproj",
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    },
     "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\srvlocal\\srvlocal.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -31,7 +46,11 @@
         "frameworks": {
           "net7.0-windows7.0": {
             "targetAlias": "net7.0-windows",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\Server\\Server.csproj": {
+                "projectPath": "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\Server\\Server.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

@@ -2183,11 +2183,21 @@
           "lib/Zeroit.Framework.Metro.dll": {}
         }
       },
+      "Server/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Server.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Server.dll": {}
+        }
+      },
       "srvlocal/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
-          "Remote.Linq.Newtonsoft.Json": "7.1.0"
+          "Remote.Linq.Newtonsoft.Json": "7.1.0",
+          "Server": "1.0.0"
         },
         "compile": {
           "bin/placeholder/srvlocal.dll": {}
@@ -6841,6 +6851,11 @@
         "zeroit.framework.metro.1.0.0.nupkg.sha512",
         "zeroit.framework.metro.nuspec"
       ]
+    },
+    "Server/1.0.0": {
+      "type": "project",
+      "path": "../Server/Server.csproj",
+      "msbuildProject": "../Server/Server.csproj"
     },
     "srvlocal/1.0.0": {
       "type": "project",

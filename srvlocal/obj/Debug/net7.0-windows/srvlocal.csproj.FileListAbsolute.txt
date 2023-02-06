@@ -20,3 +20,6 @@ C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal\bin\Debug\net7.0-windo
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal\bin\Debug\net7.0-windows\Remote.Linq.dll
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal\bin\Debug\net7.0-windows\Remote.Linq.Newtonsoft.Json.dll
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal\obj\Debug\net7.0-windows\srvlocal.csproj.CopyComplete
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal\bin\Debug\net7.0-windows\Server.exe
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal\bin\Debug\net7.0-windows\Server.pdb
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal\bin\Debug\net7.0-windows\Server.exe.config

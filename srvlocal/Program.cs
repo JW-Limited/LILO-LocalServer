@@ -1,8 +1,12 @@
-﻿using System.Diagnostics;
+﻿using Server;
+using System.ComponentModel.DataAnnotations;
+using System.Diagnostics;
 using System.IO;
 using System.Net;
+using System.Net.Sockets;
 using System.Net.WebSockets;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 namespace Local
@@ -28,6 +32,9 @@ namespace Local
         private readonly string serverUrl = "http://localhost:8080/api";
         private readonly string _apiKey = "liloDev-420";
         private static string _logFile = ".\\portmonitor";
+        public static bool isRunning = false;
+        public static TcpListener listener;
+        public static Thread listenerThread;
 
         public static int _port = 8080;
 
@@ -36,6 +43,8 @@ namespace Local
             8081, 
             10908 
         };
+
+        public static object redirect;
 
         public static bool isLoggingEnabled = true;
         public static string mediaDirectory = "C:\\LILO\\req\\media\\";
@@ -54,9 +63,13 @@ namespace Local
         /// <summary>
         /// Main Entry
         /// </summary>
+        /// 
+
 
         public static void Main(string[] args)
         {
+
+            redirect = new object();
             var srmng = new StartupManager();
             srmng.AddApplicationToStartup("srvlocal",AppDomain.CurrentDomain.BaseDirectory + "\\srvlocal.exe");
             var distDirectory = "C:\\LILO\\dist";
@@ -71,6 +84,7 @@ namespace Local
                     if (args[i].StartsWith("--port="))
                     {
                         int.TryParse(args[i].Substring(7), out _port);
+                        _port = CheckPort(_port);
                     }
                     else if (args[i].StartsWith("--folder="))
                     {
@@ -107,10 +121,21 @@ namespace Local
 
             try
             {
+
                 Console.WriteLine("Configurations: ");
                 Console.WriteLine("");
 
 
+                listener = new TcpListener(IPAddress.Any, _port + 1);
+                listener.Start();
+                isRunning = true;
+                listenerThread = new Thread(AcceptConnections);
+                listenerThread.Start();
+
+                var externalIP = "";
+
+                try { externalIP = Convert.ToString(GetExternalIPAddress()); }
+                catch (Exception e) { externalIP = e.Message; }
 
                 Console.WriteLine("Directory    :   {0} [{1}]", distDirectory, distDirectory == "C:\\LILO\\dist" ? "DEFAULT" : "CHANGED");
                 Console.WriteLine("Media        :   {0} [{1}]", mediaDirectory, mediaDirectory == "C:\\LILO\\req\\media\\" ? "DEFAULT" : "CHANGED");
@@ -121,30 +146,11 @@ namespace Local
                 Console.WriteLine("API          :   {0} ", recevieCommands.apiListening ? "enabled" : "disabled");
                 Console.WriteLine("|-- OAuth2   :   {0} ", recevieCommands.OAuth2 ? "authenticated" : "no access");
                 Console.WriteLine("|-- X509Cert :   {0} ", recevieCommands.certAcepted ? "valid" : "error");
-                Console.WriteLine("");
-                /*
-                OpenAI ai = new OpenAI("dev420");
-                Console.WriteLine(ai.GetReponse());*/
-                //thread.Start();
-                /*
-                if (!recevieCommands.apiListening)
-                {
-                    ApiUnsafe api = new ApiUnsafe(8989);
-                    try
-                    {
-                        var apiThread = new Thread(() =>
-                        {
-                            api.Start();
-                        });
-                        apiThread.Start();
-                        
-                    }
-                    catch(Exception ex)
-                    {
-                        Console.WriteLine($"[{DateTime.Now}] - ERROR {ex.Message.ToString()}");
-                    }
-                }*/
-
+                Console.WriteLine("--------------------------------------------------");
+                Console.WriteLine("IPs          ");
+                Console.WriteLine("|-- Internal :   {0} ", GetInternalIPAddress());
+                Console.WriteLine("|-- External :   {0} ", externalIP);
+                Console.WriteLine();
 
                 Console.Title = "LILO™ LocalServer";
                 var server = new Server(distDirectory, _port);
@@ -161,6 +167,83 @@ namespace Local
                 ChangePort(_port);
             }
 
+        }
+
+        public static void AcceptConnections()
+        {
+            while (isRunning)
+            {
+                if (listener.Pending() == false)
+                {
+                    Thread.Sleep(100);
+                    continue;
+                }
+
+                TcpClient client = listener.AcceptTcpClient();
+                Thread session = new Thread(new ParameterizedThreadStart(HandleNewSession));
+                session.Start(client);
+            }
+        }
+
+        public static void HandleNewSession(object data)
+        {
+            TcpClient client = (TcpClient)data;
+            NetworkWatcher networkWatcher = new NetworkWatcher(client);
+            networkWatcher.ConnectionLost += (sender, e) => Console.WriteLine("Connection Lost");
+            networkWatcher.DataReceived += NetworkWatcher_DataReceived; ;
+            networkWatcher.Start();
+        }
+
+        public static void NetworkWatcher_DataReceived(object? sender, global::Server.DataReceivedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static IPAddress GetExternalIPAddress()
+        {
+            string externalIPString = new WebClient().DownloadString("http://icanhazip.com");
+
+            char[] externalIPArray = externalIPString.ToCharArray();
+
+            string externalIP = string.Empty;
+
+            for (int i = 0; i < externalIPArray.Length; i++)
+            {
+                if (externalIPArray[i] == '\n')
+                {
+                    continue;
+                }
+
+                externalIP = externalIP + externalIPArray[i];
+            }
+
+            return IPAddress.Parse(externalIP);
+        }
+
+        public static IPAddress GetInternalIPAddress()
+        {
+            IPAddress[] localIPs = Dns.GetHostAddresses(Dns.GetHostName());
+
+            foreach (IPAddress ip in localIPs)
+            {
+                if (ip.AddressFamily == AddressFamily.InterNetwork)
+                {
+                    return ip;
+                }
+            }
+
+            return IPAddress.Parse("0.0.0.0");
+        }
+
+        public static int CheckPort(int port)
+        {
+
+                if (port >= 3000 && port <= 9000)
+                {
+                    return port;
+                }
+
+                return 0;
         }
 
         public static void ChangePort(int port)
@@ -358,15 +441,20 @@ namespace Local
                     }
                     else
                     {
-                        var indexFilePath = Path.Combine("C:\\LILO\\dist\\error\\404\\", "index.html");
-                        if (Directory.Exists("C:\\LILO\\dist\\error\\404\\"))
+
+                        //HandelError(context, request);
+
+                        
+                        var indexFilePath = Path.Combine(_directory + "\\error\\404\\index.html");
+                        
+                        if (File.Exists(indexFilePath))
                         {
                             if (File.Exists(indexFilePath))
                             {
                                 var content = File.ReadAllBytes(indexFilePath);
                                 response.ContentLength64 = content.Length;
                                 response.OutputStream.Write(content, 0, content.Length);
-                            }
+                            };
                         }
                         else
                         {
@@ -376,6 +464,7 @@ namespace Local
                             response.ContentLength64 = content.Length;
                             response.OutputStream.Write(content, 0, content.Length);
                         }
+                        
                     }
                 }
 
@@ -393,6 +482,28 @@ namespace Local
             {
                 File.AppendAllText(logFilePath, logEntry.ToString());
             }
+        }
+
+        public async void HandelError(HttpListenerContext context,HttpListenerRequest request)
+        {
+            lock (redirect)
+            {
+                var bufferD = new byte[2048];
+
+                HttpWebRequest redirectRequest = (HttpWebRequest)WebRequest.Create("http://localhost:8080/error/404/");
+                redirectRequest.Method = request.HttpMethod;
+                    var response = context.Response;
+
+                    var filePath = "C:\\LILO\\dist\\error\\404\\";
+                    var indexFilePath = Path.Combine(filePath, "index.html");
+                    if (File.Exists(indexFilePath))
+                    {
+                        var content = File.ReadAllBytes(indexFilePath);
+                        response.ContentLength64 = content.Length;
+                        response.OutputStream.Write(content, 0, content.Length);
+                    };
+            }
+            
         }
 
 
