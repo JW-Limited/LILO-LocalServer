@@ -83,6 +83,8 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.conMenuVersion = new System.Windows.Forms.ToolStripMenuItem();
             this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
+            this.FolderBrowser_Host = new Ookii.Dialogs.WinForms.VistaFolderBrowserDialog();
+            this.FolderBorwser_Media = new Ookii.Dialogs.WinForms.VistaFolderBrowserDialog();
             this.tableLayoutPanel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
@@ -483,6 +485,7 @@
             this.chbChangeMediaFolder.Name = "chbChangeMediaFolder";
             this.chbChangeMediaFolder.Size = new System.Drawing.Size(147, 24);
             this.chbChangeMediaFolder.TabIndex = 5;
+            this.chbChangeMediaFolder.CheckedChanged += ChbChangeMediaFolder_CheckedChanged;
             this.chbChangeMediaFolder.Text = "Change recFolder";
             this.chbChangeMediaFolder.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.chbChangeMediaFolder.UncheckedState.BorderRadius = 0;
@@ -508,6 +511,7 @@
             this.chbDistFolder.UncheckedState.BorderRadius = 0;
             this.chbDistFolder.UncheckedState.BorderThickness = 0;
             this.chbDistFolder.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.chbDistFolder.CheckedChanged += new System.EventHandler(this.chbDistFolder_CheckedChanged);
             // 
             // chbDisable
             // 
@@ -601,6 +605,7 @@
             this.txtDistFolder.PlaceholderText = "A Valid Folder";
             this.txtDistFolder.Size = new System.Drawing.Size(146, 27);
             this.txtDistFolder.TabIndex = 6;
+            this.txtDistFolder.TextChanged += new System.EventHandler(this.txtDistFolder_TextChanged);
             // 
             // messageBoxForm1
             // 
@@ -803,6 +808,16 @@
             this.guna2Button8.Text = "Open";
             this.guna2Button8.Click += new System.EventHandler(this.bntMEtro);
             // 
+            // FolderBrowser_Host
+            // 
+            this.FolderBrowser_Host.Description = "Open Host Directory";
+            this.FolderBrowser_Host.UseDescriptionForTitle = true;
+            // 
+            // FolderBorwser_Media
+            // 
+            this.FolderBorwser_Media.Description = "Open Hosted Media";
+            this.FolderBorwser_Media.UseDescriptionForTitle = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -853,6 +868,8 @@
             this.PerformLayout();
 
         }
+
+        
 
         #endregion
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
@@ -908,5 +925,7 @@
         private ToolStripMenuItem aboutToolStripMenuItem;
         private ToolStripMenuItem toolStripMenuItem1;
         private Guna.UI2.WinForms.Guna2Button guna2Button8;
+        private Ookii.Dialogs.WinForms.VistaFolderBrowserDialog FolderBrowser_Host;
+        private Ookii.Dialogs.WinForms.VistaFolderBrowserDialog FolderBorwser_Media;
     }
 }

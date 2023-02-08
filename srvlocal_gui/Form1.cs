@@ -105,7 +105,7 @@ namespace srvlocal_gui
 
         private void bntStartCon(object sender, EventArgs e)
         {
-            string filePath = "srvlocal.exe";
+            string filePath = ".\\srvlocal.exe";
             ConsolePanel.Visible = true;
 
             try
@@ -385,6 +385,43 @@ namespace srvlocal_gui
         {
             var setup = new Setup();
             setup.Show();
+        }
+
+        private void txtDistFolder_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void ChbChangeMediaFolder_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chbChangeMediaFolder.Checked)
+            {
+                FolderBorwser_Media.RootFolder = Environment.SpecialFolder.MyDocuments;
+                if (FolderBrowser_Host.ShowDialog() == DialogResult.OK)
+                {
+                    txtMediaFolder.Text = FolderBrowser_Host.SelectedPath;
+                }
+                else
+                {
+                    chbChangeMediaFolder.Checked = false;
+                }
+            }
+        }
+
+        private void chbDistFolder_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chbDistFolder.Checked)
+            {
+                FolderBrowser_Host.RootFolder = Environment.SpecialFolder.MyDocuments;
+                if (FolderBrowser_Host.ShowDialog() == DialogResult.OK)
+                {
+                    txtDistFolder.Text = FolderBrowser_Host.SelectedPath;
+                }
+                else
+                {
+                    chbDistFolder.Checked = false;
+                }
+            }
         }
     }
 }

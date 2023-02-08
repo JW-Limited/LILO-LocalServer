@@ -23,3 +23,7 @@ C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal\obj\Debug\net7.0-windo
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal\bin\Debug\net7.0-windows\Server.exe
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal\bin\Debug\net7.0-windows\Server.pdb
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal\bin\Debug\net7.0-windows\Server.exe.config
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal\bin\Debug\net7.0-windows\System.Windows.Forms.dll
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal\bin\Debug\net7.0-windows\Accessibility.dll
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal\bin\Debug\net7.0-windows\System.Deployment.dll
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal\bin\Debug\net7.0-windows\System.Runtime.Serialization.Formatters.Soap.dll

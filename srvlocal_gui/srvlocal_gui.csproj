@@ -34,6 +34,7 @@
     <PackageReference Include="MetroModernUI" Version="1.4.0" />
     <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.1619-prerelease" />
     <PackageReference Include="Modern.Forms" Version="0.3.0" />
+    <PackageReference Include="Ookii.Dialogs.WinForms" Version="4.0.0" />
     <PackageReference Include="ReactiveUI.Events.Winforms" Version="15.1.1" />
     <PackageReference Include="ReactiveUI.WinForms" Version="18.4.1" />
     <PackageReference Include="ReactorUI.Skia.WinForms" Version="0.0.41-beta" />

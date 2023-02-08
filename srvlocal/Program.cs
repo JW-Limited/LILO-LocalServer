@@ -1,6 +1,8 @@
 ﻿using Server;
+using srvlocal;
 using System.ComponentModel.DataAnnotations;
 using System.Diagnostics;
+using System.Drawing;
 using System.IO;
 using System.Net;
 using System.Net.Sockets;
@@ -61,110 +63,151 @@ namespace Local
         }
 
         /// <summary>
-        /// Main Entry
+        ///     <para name="colors"/>
         /// </summary>
-        /// 
 
+
+        public static ConsoleColor[] colors = new ConsoleColor[]
+        {
+            ConsoleColor.Black,
+            ConsoleColor.DarkBlue,
+            ConsoleColor.DarkRed,
+            ConsoleColor.DarkGray,
+            ConsoleColor.White
+        };
+
+
+        public static bool menu = true;
+
+
+        public static void SetColor(ConsoleColor fore, ConsoleColor back = ConsoleColor.Black)
+        {
+            Color screenTextColor = Color.Orange;
+            Color screenBackgroundColor = Color.Black;
+            int irc = SetScreenColorsApp.SetScreenColors(screenTextColor, screenBackgroundColor);
+            Debug.Assert(irc == 0, "SetScreenColors failed, Win32Error code = " + irc + " = 0x" + irc.ToString("x"));
+            Debug.WriteLine("LargestWindowHeight=" + Console.LargestWindowHeight + " LargestWindowWidth=" + Console.LargestWindowWidth);
+            Debug.WriteLine("BufferHeight=" + Console.BufferHeight + " WindowHeight=" + Console.WindowHeight + " BufferWidth=" + Console.BufferWidth + " WindowWidth=" + Console.WindowWidth);
+            Debug.WriteLine("WindowTop=" + Console.WindowTop + " WindowLeft=" + Console.WindowLeft);
+            Debug.WriteLine("ForegroundColor=" + Console.ForegroundColor + " BackgroundColor=" + Console.BackgroundColor);
+            Console.BackgroundColor = back;
+            Console.ForegroundColor = fore;
+        }
+
+        /// <summary>
+        ///     Einstiegspunkt der Application
+        ///     <paramref name="args"/>
+        ///     <see cref="Start()"/>
+        /// </summary>
+        ///  b
 
         public static void Main(string[] args)
         {
+            if (Process.GetProcessesByName("srvlocal_gui").Length > 0) menu = false;
+             if (!menu)
+             {
+                if (Process.GetProcessesByName("srvlocal_gui").Length <= 0) SetColor(colors[4]);
+                redirect = new object();
+                var srmng = new StartupManager();
+                srmng.AddApplicationToStartup("srvlocal", AppDomain.CurrentDomain.BaseDirectory + "\\srvlocal.exe");
+                var distDirectory = "C:\\LILO\\dist";
+                var recevieCommands = new ApiToRecevieCommands(8000, certificate2);
+                var thread = new Thread(recevieCommands.Start);
 
-            redirect = new object();
-            var srmng = new StartupManager();
-            srmng.AddApplicationToStartup("srvlocal",AppDomain.CurrentDomain.BaseDirectory + "\\srvlocal.exe");
-            var distDirectory = "C:\\LILO\\dist";
-            var recevieCommands = new ApiToRecevieCommands(8000, certificate2);
-            var thread = new Thread(recevieCommands.Start);
-
-            if (args.Length > 0)
-            {
-                
-                for (int i = 0; i < args.Length; i++)
+                if (args.Length > 0)
                 {
-                    if (args[i].StartsWith("--port="))
+                    for (int i = 0; i < args.Length; i++)
                     {
-                        int.TryParse(args[i].Substring(7), out _port);
-                        _port = CheckPort(_port);
-                    }
-                    else if (args[i].StartsWith("--folder="))
-                    {
-                        distDirectory = args[i].Substring(9);
-                    }
-                    else if (args[i].StartsWith("--media-folder="))
-                    {
-                        mediaDirectory = args[i].Substring(9);
-                    }
-                    else if (args[i].StartsWith("--log-file="))
-                    {
-                        _logFile = args[i].Substring(9);
-                    }
-                    else if (args[i].StartsWith("--disable-logging"))
-                    {
-                        isLoggingEnabled = false;
-                    }
-                    else if (args[i].StartsWith("--enable-debug"))
-                    {
-                        advancedDebugg = true;
-                    }
-                    else if (args[i] == "--help")
-                    {
-                        ShowHelp();
-                        return;
-                    }
-                    else if (args[i] == "--version")
-                    {
-                        ShowVersion();
-                        return;
+                        if (args[i].StartsWith("--port="))
+                        {
+                            int.TryParse(args[i].Substring(7), out _port);
+                            _port = CheckPort(_port);
+                        }
+                        else if (args[i].StartsWith("--folder="))
+                        {
+                            distDirectory = args[i].Substring(9);
+                        }
+                        else if (args[i].StartsWith("--media-folder="))
+                        {
+                            mediaDirectory = args[i].Substring(9);
+                        }
+                        else if (args[i].StartsWith("--log-file="))
+                        {
+                            _logFile = args[i].Substring(9);
+                        }
+                        else if (args[i].StartsWith("--disable-logging"))
+                        {
+                            isLoggingEnabled = false;
+                        }
+                        else if (args[i].StartsWith("--enable-debug"))
+                        {
+                            advancedDebugg = true;
+                        }
+                        else if (args[i] == "--help")
+                        {
+                            ShowHelp();
+                            return;
+                        }
+                        else if (args[i] == "--version")
+                        {
+                            ShowVersion();
+                            return;
+                        }
                     }
                 }
+
+                try
+                {
+
+                    Console.WriteLine("Configurations: ");
+                    Console.WriteLine("");
+
+
+                    listener = new TcpListener(IPAddress.Any, _port + 1);
+                    listener.Start();
+                    isRunning = true;
+                    listenerThread = new Thread(AcceptConnections);
+                    listenerThread.Start();
+
+                    var externalIP = "";
+
+                    try { externalIP = Convert.ToString(GetExternalIPAddress()); }
+                    catch (Exception e) { externalIP = "Something went wrong!"; }
+
+                    Console.WriteLine("Directory    :   {0} [{1}]", distDirectory, distDirectory == "C:\\LILO\\dist" ? "DEFAULT" : "CHANGED");
+                    Console.WriteLine("Media        :   {0} [{1}]", mediaDirectory, mediaDirectory == "C:\\LILO\\req\\media\\" ? "DEFAULT" : "CHANGED");
+                    Console.WriteLine("Port         :   {0} [{1}]", _port, _port == 8080 ? "DEFAULT" : "CHANGED");
+                    Console.WriteLine("Logging      :   {0} [{1}]", isLoggingEnabled ? "enabled" : "disabled", isLoggingEnabled ? "DEFAULT" : "CHANGED");
+                    Console.WriteLine("Debugger     :   {0} [{1}]", advancedDebugg ? "enabled" : "disabled", advancedDebugg == false ? "DEFAULT" : "CHANGED");
+                    Console.WriteLine("--------------------------------------------------");
+                    Console.WriteLine("API          :   {0} ", recevieCommands.apiListening ? "enabled" : "disabled");
+                    Console.WriteLine("|-- OAuth2   :   {0} ", recevieCommands.OAuth2 ? "authenticated" : "no access");
+                    Console.WriteLine("|-- X509Cert :   {0} ", recevieCommands.certAcepted ? "valid" : "error");
+                    Console.WriteLine("--------------------------------------------------");
+                    Console.WriteLine("IPs          ");
+                    Console.WriteLine("|-- Internal :   {0} ", GetInternalIPAddress());
+                    Console.WriteLine("|-- External :   {0} ", externalIP);
+                    Console.WriteLine();
+
+                    Console.Title = "LILO™ LocalServer";
+                    var server = new Server(distDirectory, _port);
+
+                    var threadMain = new Thread(server.Start);
+                    threadMain.Start();
+                }
+                catch (HttpListenerException httpEx)
+                {
+                    ChangePort(_port);
+                }
+                catch (Exception ex)
+                {
+                    ChangePort(_port);
+                }
             }
-
-            try
+            else
             {
-
-                Console.WriteLine("Configurations: ");
-                Console.WriteLine("");
-
-
-                listener = new TcpListener(IPAddress.Any, _port + 1);
-                listener.Start();
-                isRunning = true;
-                listenerThread = new Thread(AcceptConnections);
-                listenerThread.Start();
-
-                var externalIP = "";
-
-                try { externalIP = Convert.ToString(GetExternalIPAddress()); }
-                catch (Exception e) { externalIP = e.Message; }
-
-                Console.WriteLine("Directory    :   {0} [{1}]", distDirectory, distDirectory == "C:\\LILO\\dist" ? "DEFAULT" : "CHANGED");
-                Console.WriteLine("Media        :   {0} [{1}]", mediaDirectory, mediaDirectory == "C:\\LILO\\req\\media\\" ? "DEFAULT" : "CHANGED");
-                Console.WriteLine("Port         :   {0} [{1}]", _port, _port == 8080 ? "DEFAULT" : "CHANGED");
-                Console.WriteLine("Logging      :   {0} [{1}]", isLoggingEnabled ? "enabled" : "disabled", isLoggingEnabled ? "DEFAULT" : "CHANGED");
-                Console.WriteLine("Debugger     :   {0} [{1}]", advancedDebugg ? "enabled" : "disabled", advancedDebugg == false ? "DEFAULT" : "CHANGED");
-                Console.WriteLine("--------------------------------------------------");
-                Console.WriteLine("API          :   {0} ", recevieCommands.apiListening ? "enabled" : "disabled");
-                Console.WriteLine("|-- OAuth2   :   {0} ", recevieCommands.OAuth2 ? "authenticated" : "no access");
-                Console.WriteLine("|-- X509Cert :   {0} ", recevieCommands.certAcepted ? "valid" : "error");
-                Console.WriteLine("--------------------------------------------------");
-                Console.WriteLine("IPs          ");
-                Console.WriteLine("|-- Internal :   {0} ", GetInternalIPAddress());
-                Console.WriteLine("|-- External :   {0} ", externalIP);
-                Console.WriteLine();
-
-                Console.Title = "LILO™ LocalServer";
-                var server = new Server(distDirectory, _port);
-
-                var threadMain = new Thread(server.Start);
-                threadMain.Start();
-            }
-            catch (HttpListenerException httpEx)
-            {
-                ChangePort(_port);
-            }
-            catch (Exception ex)
-            {
-                ChangePort(_port);
+                Menu menu1 = new Menu();
+                menu1.Show();
             }
 
         }
@@ -189,9 +232,30 @@ namespace Local
         {
             TcpClient client = (TcpClient)data;
             NetworkWatcher networkWatcher = new NetworkWatcher(client);
-            networkWatcher.ConnectionLost += (sender, e) => Console.WriteLine("Connection Lost");
+            networkWatcher.ConnectionLost += NetworkWatcher_ConnectionLost;
             networkWatcher.DataReceived += NetworkWatcher_DataReceived; ;
             networkWatcher.Start();
+        }
+
+        private static List<User> users;
+
+        private static void NetworkWatcher_ConnectionLost(object? sender, ConnectionLostEventArgs args)
+        {
+            try
+            {
+                for (int i = 0; i < users.Count; i++)
+                {
+                    if (((IPEndPoint)users[i].NetworkWatcher.Client.Client.RemoteEndPoint).Address == ((IPEndPoint)args.Client.Client.RemoteEndPoint).Address)
+                    {
+                        if (((IPEndPoint)users[i].NetworkWatcher.Client.Client.RemoteEndPoint).Port == ((IPEndPoint)args.Client.Client.RemoteEndPoint).Port)
+                        {
+                            //RemoveUser(users[i].Username, users[i].SessionKey);
+                            break;
+                        }
+                    }
+                }
+            }
+            catch { }
         }
 
         public static void NetworkWatcher_DataReceived(object? sender, global::Server.DataReceivedEventArgs e)
@@ -203,21 +267,7 @@ namespace Local
         {
             string externalIPString = new WebClient().DownloadString("http://icanhazip.com");
 
-            char[] externalIPArray = externalIPString.ToCharArray();
-
-            string externalIP = string.Empty;
-
-            for (int i = 0; i < externalIPArray.Length; i++)
-            {
-                if (externalIPArray[i] == '\n')
-                {
-                    continue;
-                }
-
-                externalIP = externalIP + externalIPArray[i];
-            }
-
-            return IPAddress.Parse(externalIP);
+            return IPAddress.Parse(externalIPString.Trim());
         }
 
         public static IPAddress GetInternalIPAddress()
@@ -348,129 +398,138 @@ namespace Local
 
         public void HandelRequest()
         {
-            while (true)
+            try
             {
-                var context = _listener.GetContext();
-                var request = context.Request;
-                var response = context.Response;
-
-                LogRequest(request);
-                SendLog(request);
-
-                if (request.Url.AbsolutePath == "/api/logs")
+                while (true)
                 {
-                    var log = System.IO.File.ReadAllText(_logFile);
-                    var buffer = Encoding.UTF8.GetBytes(log);
-                    response.ContentLength64 = buffer.Length;
-                    response.OutputStream.Write(buffer, 0, buffer.Length);
-                }
-                else if (request.Url.AbsolutePath == "/api/data" && request.HttpMethod == "POST")
-                {
-                    var key = request.QueryString["key"];
+                    var context = _listener.GetContext();
+                    var request = context.Request;
+                    var response = context.Response;
 
-                    if (key == _apiKey)
+                    LogRequest(request);
+                    SendLog(request);
+
+                    if (request.Url.AbsolutePath == "/api/logs")
                     {
-                        var body = new StreamReader(request.InputStream).ReadToEnd();
-
-                        ProcessData(body);
-
-                        var buffer = Encoding.UTF8.GetBytes($"[{DateTime.UtcNow}] : Successfuly loaded up Logs.");
+                        var log = System.IO.File.ReadAllText(_logFile);
+                        var buffer = Encoding.UTF8.GetBytes(log);
                         response.ContentLength64 = buffer.Length;
                         response.OutputStream.Write(buffer, 0, buffer.Length);
                     }
-                    else
+                    else if (request.Url.AbsolutePath == "/api/data" && request.HttpMethod == "POST")
                     {
-                        var buffer = Encoding.UTF8.GetBytes($"[{DateTime.UtcNow}] : The ApiKey isn´t valid. (Key {key})");
-                        response.ContentLength64 = buffer.Length;
-                        response.OutputStream.Write(buffer, 0, buffer.Length);
-                    }
+                        var key = request.QueryString["key"];
 
-
-                }
-                else if (request.Url.AbsolutePath == "/api/com")
-                {
-                    var command = request.QueryString["command"];
-                    if(command == "close")
-                    {
-                        var body = new StreamReader(request.InputStream).ReadToEnd();
-
-                        ProcessData(body);
-
-                        var buffer = Encoding.UTF8.GetBytes($"[{this.ToString()}] : Closing");
-                        response.ContentLength64 = buffer.Length;
-                        response.OutputStream.Write(buffer, 0, buffer.Length);
-
-                        var rq = new RequestLogger.WriteWithoutServerConnection("Command from Api : ShutDown",".\\");
-                        rq.WriteLog();
-                        Environment.Exit(0);        
-                    }
-                    else
-                    {
-                        var buffer = Encoding.UTF8.GetBytes($"[{DateTime.UtcNow}] : The Command isn´t valid. (Command {command})");
-                        response.ContentLength64 = buffer.Length;
-                        response.OutputStream.Write(buffer, 0, buffer.Length);
-                    }
-
-
-                }
-                else
-                {
-                    var filePath = Path.Combine(_directory, request.Url.LocalPath.TrimStart('/'));
-                    if (File.Exists(filePath))
-                    {
-                        var content = File.ReadAllBytes(filePath);
-                        response.ContentLength64 = content.Length;
-                        response.OutputStream.Write(content, 0, content.Length);
-                    }
-                    else if (Directory.Exists(filePath))
-                    {
-                        var indexFilePath = Path.Combine(filePath, "index.html");
-                        if (File.Exists(indexFilePath))
+                        if (key == _apiKey)
                         {
-                            var content = File.ReadAllBytes(indexFilePath);
-                            response.ContentLength64 = content.Length;
-                            response.OutputStream.Write(content, 0, content.Length);
+                            var body = new StreamReader(request.InputStream).ReadToEnd();
+
+                            ProcessData(body);
+
+                            var buffer = Encoding.UTF8.GetBytes($"[{DateTime.UtcNow}] : Successfuly loaded up Logs.");
+                            response.ContentLength64 = buffer.Length;
+                            response.OutputStream.Write(buffer, 0, buffer.Length);
                         }
                         else
                         {
-                            var indexHtml = GenerateIndexHtml(filePath);
-                            var content = Encoding.UTF8.GetBytes(indexHtml);
-                            response.ContentLength64 = content.Length;
-                            response.OutputStream.Write(content, 0, content.Length);
+                            var buffer = Encoding.UTF8.GetBytes($"[{DateTime.UtcNow}] : The ApiKey isn´t valid. (Key {key})");
+                            response.ContentLength64 = buffer.Length;
+                            response.OutputStream.Write(buffer, 0, buffer.Length);
                         }
+
+
+                    }
+                    else if (request.Url.AbsolutePath == "/api/com")
+                    {
+                        var command = request.QueryString["command"];
+                        if (command == "close")
+                        {
+                            var body = new StreamReader(request.InputStream).ReadToEnd();
+
+                            ProcessData(body);
+
+                            var buffer = Encoding.UTF8.GetBytes($"[{this.ToString()}] : Closing");
+                            response.ContentLength64 = buffer.Length;
+                            response.OutputStream.Write(buffer, 0, buffer.Length);
+
+                            var rq = new RequestLogger.WriteWithoutServerConnection("Command from Api : ShutDown", ".\\");
+                            rq.WriteLog();
+                            Environment.Exit(0);
+                        }
+                        else
+                        {
+                            var buffer = Encoding.UTF8.GetBytes($"[{DateTime.UtcNow}] : The Command isn´t valid. (Command {command})");
+                            response.ContentLength64 = buffer.Length;
+                            response.OutputStream.Write(buffer, 0, buffer.Length);
+                        }
+
+
                     }
                     else
                     {
-
-                        //HandelError(context, request);
-
-                        
-                        var indexFilePath = Path.Combine(_directory + "\\error\\404\\index.html");
-                        
-                        if (File.Exists(indexFilePath))
+                        var filePath = Path.Combine(_directory, request.Url.LocalPath.TrimStart('/'));
+                        if (File.Exists(filePath))
                         {
+                            var content = File.ReadAllBytes(filePath);
+                            response.ContentLength64 = content.Length;
+                            response.OutputStream.Write(content, 0, content.Length);
+                        }
+                        else if (Directory.Exists(filePath))
+                        {
+                            var indexFilePath = Path.Combine(filePath, "index.html");
                             if (File.Exists(indexFilePath))
                             {
                                 var content = File.ReadAllBytes(indexFilePath);
                                 response.ContentLength64 = content.Length;
                                 response.OutputStream.Write(content, 0, content.Length);
-                            };
+                            }
+                            else
+                            {
+                                var indexHtml = GenerateIndexHtml(filePath);
+                                var content = Encoding.UTF8.GetBytes(indexHtml);
+                                response.ContentLength64 = content.Length;
+                                response.OutputStream.Write(content, 0, content.Length);
+                            }
                         }
                         else
                         {
-                            response.StatusCode = (int)HttpStatusCode.NotFound;
-                            var errorHtml = GenerateErrorHtml(HttpStatusCode.NotFound, "The File, you searching for doesn´t exist.");
-                            var content = Encoding.UTF8.GetBytes(errorHtml);
-                            response.ContentLength64 = content.Length;
-                            response.OutputStream.Write(content, 0, content.Length);
+
+                            //HandelError(context, request);
+
+
+                            var indexFilePath = Path.Combine(_directory + "\\error\\404\\index.html");
+
+                            if (File.Exists(indexFilePath))
+                            {
+                                if (File.Exists(indexFilePath))
+                                {
+                                    var content = File.ReadAllBytes(indexFilePath);
+                                    response.ContentLength64 = content.Length;
+                                    response.OutputStream.Write(content, 0, content.Length);
+                                };
+                            }
+                            else
+                            {
+                                response.StatusCode = (int)HttpStatusCode.NotFound;
+                                var errorHtml = GenerateErrorHtml(HttpStatusCode.NotFound, "The File, you searching for doesn´t exist.");
+                                var content = Encoding.UTF8.GetBytes(errorHtml);
+                                response.ContentLength64 = content.Length;
+                                response.OutputStream.Write(content, 0, content.Length);
+                            }
+
                         }
-                        
                     }
+
+
+                    response.Close();
                 }
-
-
-                response.Close();
             }
+            catch (Exception ex)
+            {
+                SetColor(colors[2]);
+                Console.WriteLine("[{0}] - An Error Accured\n\n{1}",DateTime.Now.ToString("HH:mm"),ex.Message);
+            }
+            
         }
 
         private void ProcessData(string data)

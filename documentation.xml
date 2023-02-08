@@ -4,11 +4,18 @@
         <name>srvlocal</name>
     </assembly>
     <members>
+        <member name="F:Local.Server.colors">
+            <summary>
+                <para name="colors"/>
+            </summary>
+        </member>
         <member name="M:Local.Server.Main(System.String[])">
             <summary>
-            Main Entry
+                Einstiegspunkt der Application
+                <paramref name="args"/>
+                <see cref="M:Local.Server.Start"/>
             </summary>
-            
+             b
         </member>
         <member name="T:Local.BatchStarter">
             <summary>

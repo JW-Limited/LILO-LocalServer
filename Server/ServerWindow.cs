@@ -456,5 +456,10 @@ namespace Server
                 catch { }
             }
         }
+
+        private void ServerWindow_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
