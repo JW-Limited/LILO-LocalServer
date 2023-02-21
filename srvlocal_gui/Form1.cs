@@ -385,6 +385,8 @@ namespace srvlocal_gui
         {
             var setup = new Setup();
             setup.Show();
+
+            this.WindowState = FormWindowState.Minimized;
         }
 
         private void txtDistFolder_TextChanged(object sender, EventArgs e)

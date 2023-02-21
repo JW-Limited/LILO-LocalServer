@@ -4,11 +4,14 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Serialization;
+using static srvlocal_gui.ProjectFile;
 
 namespace srvlocal_gui
 {
@@ -42,6 +45,7 @@ namespace srvlocal_gui
             slc.ShowDialog();
 
             AppTypeSelector.TextSubline = slc.mainDescription;
+            mainApp = slc.mainAppName;
         }
 
         private void bntOFD_Click(object sender, EventArgs e)
@@ -169,7 +173,7 @@ namespace srvlocal_gui
         private void AdjustForm()
         {
             switch (this.WindowState)
-            {
+            { 
                 case FormWindowState.Maximized: //Maximized form (After)
                     this.Padding = new Padding(8, 8, 8, 0);
                     break;
@@ -190,8 +194,63 @@ namespace srvlocal_gui
 
         private void zeroitMetroButton1_Click(object sender, EventArgs e)
         {
-            saaToast1.Show();
+            var dir = txtOrt.Text + "\\" + txtAppName.Text;
+            var rnd = new Random();
+
+            var myProject = new Project
+            {
+                Name = txtAppName.Text,
+                Id = rnd.Next(10000, 99999),
+                Target = RuntimeInformation.OSDescription,
+                ApplicationType = mainApp,
+                CloudSave = tglCloud.Checked,
+                Author = "Joey West",
+                Company = "My Company",
+                Framework = cmbFramework.Text,
+                Language = "en",
+                CreationDate = DateTime.Now ,
+                LastModifiedDate = DateTime.Now,
+                Description = "This is my project.",
+                Version = "1.0.0",
+                BuildDate = DateTime.Now,
+                MachineName = Environment.MachineName,
+                ServerIP = "127.0.0.1",
+                ApplicationName = txtAppName.Text.ToLower() + ".exe",
+                ApplicationDescription = "A LILO Application build with the LAB App.",
+                Files = new List<string> { "file1.txt", "file2.txt" },
+                References = new List<string> { "Form1.cs", "Form1.Designer.cs", "Form1.Resx.cs", "Programm.cs" }
+            };
+
+            
+
+            CreateProject(myProject);
+
+            var gui = new LAB.builder_gui(dir + "\\" + txtNameMappe.Text + ".lab");
+            gui.Show();
+
+            this.Close();
         }
+
+        public void CreateProject(Project values)
+        {
+            var dir = txtOrt.Text + "\\" + txtAppName.Text;
+            var sb = new StringBuilder();
+
+            sb.AppendLine("[.ShellClassInfo]");
+            sb.AppendLine("IconFile=lab\\Folder.ico");
+
+            do
+            {
+                Directory.CreateDirectory(dir);
+                Directory.CreateDirectory(dir + "\\lab");
+            }
+            while (!Directory.Exists(dir + "\\lab"));
+            File.Copy(".\\Folder.ico", dir + "\\lab\\Folder.ico", true);
+            File.WriteAllText(dir + "\\desktop.ini", sb.ToString());
+            values.SaveToFile(dir + "\\" + txtNameMappe.Text + ".lab");
+        }
+
+        
 
         private void saaToggle1_CheckChanged(object sender, EventArgs e)
         {

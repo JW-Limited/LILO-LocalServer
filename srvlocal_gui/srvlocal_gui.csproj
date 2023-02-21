@@ -14,6 +14,7 @@
     <Product>Local Server Manager</Product>
     <Description>An easy way to Build and Run youre LILO Apps</Description>
     <Copyright>Copyright© 2023 - JW Limited</Copyright>
+    <ApplicationIcon>AQADtccxG4C3oUt-.ico</ApplicationIcon>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -24,6 +25,10 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DebugType>embedded</DebugType>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="AQADtccxG4C3oUt-.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Google.Apis.Auth" Version="1.59.0" />

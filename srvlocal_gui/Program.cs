@@ -26,12 +26,9 @@ namespace srvlocal_gui
         [STAThread]
         static void Main(string[] args)
         {
-            if (!CheckIfDirIsValid())
-            {
-                var BrwThread = new Thread(Browser_);
-            }
+            
 
-            if (args.Length > 0 && !RestartTrue) 
+            if (args.Length > 0) 
             {
 
                 for (int i = 0; i < args.Length; i++)
@@ -86,10 +83,20 @@ namespace srvlocal_gui
                         ShowVersion();
                         return;
                     }
+                    else
+                    {
+                        ApplicationConfiguration.Initialize();
+                        Application.Run(new LAB.builder_gui(args[i]));
+                    }
                 }
             }
             else
             {
+                if (!CheckIfDirIsValid())
+                {
+                    var BrwThread = new Thread(Browser_);
+                }
+
                 ApplicationConfiguration.Initialize();
                 Application.Run(new Form1());
             }

@@ -57,8 +57,21 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="saaLabel11.Text" xml:space="preserve">
+    <value>Frameworks are like dictonarys you can find
+classes, objects and even ressources in them
+which you can use in youre Project. 
+
+An Example : 
+
+LAB Framework contains a lot of cool modern
+UI objects like buttons,panels etc.</value>
+  </data>
   <metadata name="DragControl.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>431, 29</value>
+    <value>396, 26</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>157</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -157,7 +170,7 @@
 </value>
   </data>
   <metadata name="saaToast1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>567, 29</value>
+    <value>586, 51</value>
   </metadata>
   <data name="saaToast1.CloseActiveImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -196,4 +209,7 @@
         aFu+i/rpttem/yeASuUf+2/6FnpUhS4AAAAASUVORK5CYII=
 </value>
   </data>
+  <metadata name="Shadow.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>752, 51</value>
+  </metadata>
 </root>

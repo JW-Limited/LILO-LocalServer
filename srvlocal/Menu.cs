@@ -1,4 +1,5 @@
-﻿using System;
+﻿using srvlocal;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -28,9 +29,6 @@ namespace Local
         {
             ConsoleKeyInfo key;
             int selectedIndex = 0;
-            
-
-            
 
             do
             {
@@ -112,7 +110,7 @@ namespace Local
             }
             else if (selectedMenuItem == menuItems[1])
             {
-
+                AdvStart();
             }
             else if (selectedMenuItem == menuItems[2])
             {
@@ -128,6 +126,23 @@ namespace Local
             {
                 Show();
             }
+        }
+
+        public void AdvStart()
+        {
+            long _port;
+            string _dir;
+            Console.Clear();
+            Console.Write("On which port you want the Host Listen to? (3000 - 11000) Port : ");
+            _port = Convert.ToInt32(Console.ReadLine());
+            Console.Clear();
+            Console.Write("In which directory is youre Project? Directory : ");
+            _dir = Console.ReadLine();
+            Console.Clear();
+
+            var start = new AdvancedStart(new AdvancedStartValues(_port, "admin", "admin", _dir));
+            var srvthr = new Thread(start.Start);
+            srvthr.Start();
         }
     }
 }

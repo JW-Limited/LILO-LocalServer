@@ -29,56 +29,63 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            SaaUI.Properties.SaaToggleColors saaToggleColors1 = new SaaUI.Properties.SaaToggleColors();
-            SaaUI.Properties.Flat flat1 = new SaaUI.Properties.Flat();
-            SaaUI.Properties.Radius radius1 = new SaaUI.Properties.Radius();
-            SaaUI.Properties.Radius radius2 = new SaaUI.Properties.Radius();
-            SaaUI.Properties.iOS ios1 = new SaaUI.Properties.iOS();
-            SaaUI.Properties.Radius radius3 = new SaaUI.Properties.Radius();
-            SaaUI.Properties.Radius radius4 = new SaaUI.Properties.Radius();
-            SaaUI.Properties.Skewed skewed1 = new SaaUI.Properties.Skewed();
-            SaaUI.Properties.ToggleSkewedCoordinates toggleSkewedCoordinates1 = new SaaUI.Properties.ToggleSkewedCoordinates();
-            Zeroit.Framework.Metro.ZeroitMetroSeparator.MainColorScheme mainColorScheme1 = new Zeroit.Framework.Metro.ZeroitMetroSeparator.MainColorScheme();
-            Zeroit.Framework.Metro.ZeroitMetroPanelSelection.MainColorScheme mainColorScheme2 = new Zeroit.Framework.Metro.ZeroitMetroPanelSelection.MainColorScheme();
+            SaaUI.Properties.SaaToggleColors saaToggleColors2 = new SaaUI.Properties.SaaToggleColors();
+            SaaUI.Properties.Flat flat2 = new SaaUI.Properties.Flat();
+            SaaUI.Properties.Radius radius5 = new SaaUI.Properties.Radius();
+            SaaUI.Properties.Radius radius6 = new SaaUI.Properties.Radius();
+            SaaUI.Properties.iOS ios2 = new SaaUI.Properties.iOS();
+            SaaUI.Properties.Radius radius7 = new SaaUI.Properties.Radius();
+            SaaUI.Properties.Radius radius8 = new SaaUI.Properties.Radius();
+            SaaUI.Properties.Skewed skewed2 = new SaaUI.Properties.Skewed();
+            SaaUI.Properties.ToggleSkewedCoordinates toggleSkewedCoordinates2 = new SaaUI.Properties.ToggleSkewedCoordinates();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Setup));
+            Zeroit.Framework.Metro.ZeroitMetroSeparator.MainColorScheme mainColorScheme3 = new Zeroit.Framework.Metro.ZeroitMetroSeparator.MainColorScheme();
+            Zeroit.Framework.Metro.ZeroitMetroPanelSelection.MainColorScheme mainColorScheme4 = new Zeroit.Framework.Metro.ZeroitMetroPanelSelection.MainColorScheme();
             this.zeroitMetroNavigationButton2 = new Zeroit.Framework.Metro.ZeroitMetroNavigationButton();
             this.zeroitMetroNavigationButton1 = new Zeroit.Framework.Metro.ZeroitMetroNavigationButton();
             this.tabControl = new Zeroit.Framework.Metro.ZeroitMetroTabControl();
             this.tbProject = new System.Windows.Forms.TabPage();
+            this.saaLabel15 = new SaaUI.SaaLabel();
+            this.saaLabel14 = new SaaUI.SaaLabel();
+            this.saaLabel13 = new SaaUI.SaaLabel();
+            this.saaLabel12 = new SaaUI.SaaLabel();
+            this.saaLabel8 = new SaaUI.SaaLabel();
+            this.saaLabel7 = new SaaUI.SaaLabel();
+            this.saaLabel6 = new SaaUI.SaaLabel();
+            this.saaLabel5 = new SaaUI.SaaLabel();
+            this.saaLabel4 = new SaaUI.SaaLabel();
             this.lblStatus = new SaaUI.SaaLabel();
-            this.saaToggle1 = new SaaUI.SaaToggle();
+            this.tglCloud = new SaaUI.SaaToggle();
             this.saaGlowing1 = new SaaUI.SaaGlowing();
             this.bntOFD = new Zeroit.Framework.Metro.ZeroitMetroButton();
-            this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.txtNameMappe = new WindowsFormsAero.TextBox();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.txtOrtProj = new WindowsFormsAero.TextBox();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.txtOrt = new WindowsFormsAero.TextBox();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.txtAppName = new WindowsFormsAero.TextBox();
             this.tbFramework = new System.Windows.Forms.TabPage();
+            this.saaLabel17 = new SaaUI.SaaLabel();
+            this.saaLabel11 = new SaaUI.SaaLabel();
+            this.saaLabel16 = new SaaUI.SaaLabel();
+            this.saaLabel10 = new SaaUI.SaaLabel();
+            this.saaLabel9 = new SaaUI.SaaLabel();
             this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.preLoad = new SaaUI.SaaPreloader();
             this.panel1 = new Zeroit.Framework.Metro.ZeroitMetroPanelCategory();
             this.zeroitMetroSeparator1 = new Zeroit.Framework.Metro.ZeroitMetroSeparator();
             this.cmbFramework = new MetroFramework.Controls.MetroComboBox();
-            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.tbCreate = new System.Windows.Forms.TabPage();
             this.saaPanel1 = new SaaUI.SaaPanel();
             this.zeroitMetroButton1 = new Zeroit.Framework.Metro.ZeroitMetroButton();
             this.saaLabel2 = new SaaUI.SaaLabel();
-            this.saaLabel3 = new SaaUI.SaaLabel();
             this.saaLabel1 = new SaaUI.SaaLabel();
+            this.saaLabel3 = new SaaUI.SaaLabel();
             this.AppTypeSelector = new Zeroit.Framework.Metro.ZeroitMetroPanelSelection();
             this.DragControl = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.saaToast1 = new SaaUI.SaaToast();
+            this.Shadow = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.tabControl.SuspendLayout();
             this.tbProject.SuspendLayout();
             this.tbFramework.SuspendLayout();
@@ -148,7 +155,7 @@
             this.tabControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControl.AnimationSpeed = 40;
+            this.tabControl.AnimationSpeed = 50;
             this.tabControl.Appearance = System.Windows.Forms.Appearance.Normal;
             this.tabControl.AutoStyle = false;
             this.tabControl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
@@ -187,18 +194,23 @@
             // tbProject
             // 
             this.tbProject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.tbProject.Controls.Add(this.saaLabel15);
+            this.tbProject.Controls.Add(this.saaLabel14);
+            this.tbProject.Controls.Add(this.saaLabel13);
+            this.tbProject.Controls.Add(this.saaLabel12);
+            this.tbProject.Controls.Add(this.saaLabel8);
+            this.tbProject.Controls.Add(this.saaLabel7);
+            this.tbProject.Controls.Add(this.saaLabel6);
+            this.tbProject.Controls.Add(this.saaLabel5);
+            this.tbProject.Controls.Add(this.saaLabel4);
             this.tbProject.Controls.Add(this.lblStatus);
-            this.tbProject.Controls.Add(this.saaToggle1);
+            this.tbProject.Controls.Add(this.tglCloud);
             this.tbProject.Controls.Add(this.saaGlowing1);
             this.tbProject.Controls.Add(this.bntOFD);
-            this.tbProject.Controls.Add(this.metroLabel10);
             this.tbProject.Controls.Add(this.metroLabel4);
             this.tbProject.Controls.Add(this.txtNameMappe);
-            this.tbProject.Controls.Add(this.metroLabel3);
             this.tbProject.Controls.Add(this.txtOrtProj);
-            this.tbProject.Controls.Add(this.metroLabel2);
             this.tbProject.Controls.Add(this.txtOrt);
-            this.tbProject.Controls.Add(this.metroLabel1);
             this.tbProject.Controls.Add(this.txtAppName);
             this.tbProject.Location = new System.Drawing.Point(4, 49);
             this.tbProject.Margin = new System.Windows.Forms.Padding(4);
@@ -208,68 +220,159 @@
             this.tbProject.TabIndex = 0;
             this.tbProject.Text = "   Project";
             // 
+            // saaLabel15
+            // 
+            this.saaLabel15.BackColor = System.Drawing.Color.Transparent;
+            this.saaLabel15.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.saaLabel15.Location = new System.Drawing.Point(298, 406);
+            this.saaLabel15.Name = "saaLabel15";
+            this.saaLabel15.Size = new System.Drawing.Size(338, 34);
+            this.saaLabel15.TabIndex = 5;
+            this.saaLabel15.Text = "( How the directory will be called )";
+            // 
+            // saaLabel14
+            // 
+            this.saaLabel14.BackColor = System.Drawing.Color.Transparent;
+            this.saaLabel14.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.saaLabel14.Location = new System.Drawing.Point(270, 297);
+            this.saaLabel14.Name = "saaLabel14";
+            this.saaLabel14.Size = new System.Drawing.Size(338, 34);
+            this.saaLabel14.TabIndex = 5;
+            this.saaLabel14.Text = "( Where youre Project will be )";
+            // 
+            // saaLabel13
+            // 
+            this.saaLabel13.BackColor = System.Drawing.Color.Transparent;
+            this.saaLabel13.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.saaLabel13.Location = new System.Drawing.Point(146, 184);
+            this.saaLabel13.Name = "saaLabel13";
+            this.saaLabel13.Size = new System.Drawing.Size(338, 34);
+            this.saaLabel13.TabIndex = 5;
+            this.saaLabel13.Text = "( Where youre Project will be )";
+            // 
+            // saaLabel12
+            // 
+            this.saaLabel12.BackColor = System.Drawing.Color.Transparent;
+            this.saaLabel12.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.saaLabel12.Location = new System.Drawing.Point(217, 85);
+            this.saaLabel12.Name = "saaLabel12";
+            this.saaLabel12.Size = new System.Drawing.Size(338, 34);
+            this.saaLabel12.TabIndex = 5;
+            this.saaLabel12.Text = "( How youre Apps name will be )";
+            // 
+            // saaLabel8
+            // 
+            this.saaLabel8.BackColor = System.Drawing.Color.Transparent;
+            this.saaLabel8.ForeColor = System.Drawing.Color.White;
+            this.saaLabel8.Location = new System.Drawing.Point(98, 403);
+            this.saaLabel8.Name = "saaLabel8";
+            this.saaLabel8.Size = new System.Drawing.Size(223, 34);
+            this.saaLabel8.TabIndex = 5;
+            this.saaLabel8.Text = "Projektmappen Name";
+            // 
+            // saaLabel7
+            // 
+            this.saaLabel7.BackColor = System.Drawing.Color.Transparent;
+            this.saaLabel7.ForeColor = System.Drawing.Color.White;
+            this.saaLabel7.Location = new System.Drawing.Point(98, 294);
+            this.saaLabel7.Name = "saaLabel7";
+            this.saaLabel7.Size = new System.Drawing.Size(166, 34);
+            this.saaLabel7.TabIndex = 5;
+            this.saaLabel7.Text = "Projektmappen Ort";
+            // 
+            // saaLabel6
+            // 
+            this.saaLabel6.BackColor = System.Drawing.Color.Transparent;
+            this.saaLabel6.ForeColor = System.Drawing.Color.White;
+            this.saaLabel6.Location = new System.Drawing.Point(98, 181);
+            this.saaLabel6.Name = "saaLabel6";
+            this.saaLabel6.Size = new System.Drawing.Size(166, 34);
+            this.saaLabel6.TabIndex = 5;
+            this.saaLabel6.Text = "Ort";
+            // 
+            // saaLabel5
+            // 
+            this.saaLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.saaLabel5.ForeColor = System.Drawing.Color.White;
+            this.saaLabel5.Location = new System.Drawing.Point(98, 83);
+            this.saaLabel5.Name = "saaLabel5";
+            this.saaLabel5.Size = new System.Drawing.Size(166, 34);
+            this.saaLabel5.TabIndex = 5;
+            this.saaLabel5.Text = "Projektname";
+            // 
+            // saaLabel4
+            // 
+            this.saaLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.saaLabel4.ForeColor = System.Drawing.Color.White;
+            this.saaLabel4.Location = new System.Drawing.Point(847, 125);
+            this.saaLabel4.Name = "saaLabel4";
+            this.saaLabel4.Size = new System.Drawing.Size(166, 34);
+            this.saaLabel4.TabIndex = 5;
+            this.saaLabel4.Text = "Cloud Autosave";
+            // 
             // lblStatus
             // 
             this.lblStatus.BackColor = System.Drawing.Color.Transparent;
-            this.lblStatus.Location = new System.Drawing.Point(326, 516);
+            this.lblStatus.Location = new System.Drawing.Point(847, 169);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(150, 34);
             this.lblStatus.TabIndex = 5;
             this.lblStatus.Text = "not Logged in";
             // 
-            // saaToggle1
+            // tglCloud
             // 
-            this.saaToggle1.Checked = false;
-            saaToggleColors1.OffBackColor = System.Drawing.Color.LightGray;
-            saaToggleColors1.OffForeColor = System.Drawing.Color.White;
-            saaToggleColors1.OffHeadColor = System.Drawing.Color.WhiteSmoke;
-            saaToggleColors1.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
-            saaToggleColors1.OnForeColor = System.Drawing.Color.White;
-            saaToggleColors1.OnHeadColor = System.Drawing.Color.White;
-            this.saaToggle1.Colors = saaToggleColors1;
-            flat1.Border = 5;
-            flat1.HeadColorType = SaaUI.ToggleFlatHeadColorType.BackColor;
-            flat1.HeadOffSize = new System.Drawing.Size(0, 0);
-            flat1.HeadRadius = radius1;
-            flat1.OffHeadOffset = new System.Drawing.Point(0, 0);
-            flat1.Offset = new System.Drawing.Point(0, 0);
-            flat1.OffSize = new System.Drawing.Size(0, 0);
-            flat1.OnHeadOffset = new System.Drawing.Point(0, 0);
-            flat1.Radius = radius2;
-            flat1.RadiusStyle = SaaUI.ToggleRadius.Round;
-            flat1.Speed = 5;
-            this.saaToggle1.FlatStyle = flat1;
-            ios1.HeadOffSize = new System.Drawing.Size(0, 0);
-            ios1.HeadRadius = radius3;
-            ios1.OffHeadOffset = new System.Drawing.Point(1, 0);
-            ios1.Offset = new System.Drawing.Point(0, 0);
-            ios1.OffSize = new System.Drawing.Size(0, 1);
-            ios1.OnHeadOffset = new System.Drawing.Point(0, 0);
-            ios1.Radius = radius4;
-            ios1.RadiusStyle = SaaUI.ToggleRadius.Round;
-            ios1.Speed = 5;
-            this.saaToggle1.iOSStyle = ios1;
-            this.saaToggle1.Location = new System.Drawing.Point(235, 516);
-            this.saaToggle1.MouseClicks = SaaUI.CheckBoxMouseClick.LeftClick;
-            this.saaToggle1.Name = "saaToggle1";
-            this.saaToggle1.Size = new System.Drawing.Size(56, 26);
-            toggleSkewedCoordinates1.BottomLeft = new System.Drawing.Point(0, 0);
-            toggleSkewedCoordinates1.BottomRight = new System.Drawing.Point(0, 0);
-            toggleSkewedCoordinates1.TopLeft = new System.Drawing.Point(0, 0);
-            toggleSkewedCoordinates1.TopRight = new System.Drawing.Point(0, 0);
-            skewed1.Coordinates = toggleSkewedCoordinates1;
-            skewed1.OffFont = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            skewed1.OffSet = new System.Drawing.Point(0, 0);
-            skewed1.OffText = "OFF";
-            skewed1.OnFont = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            skewed1.OnText = "ON";
-            skewed1.SizeOffSet = new System.Drawing.Size(0, 0);
-            skewed1.Speed = 5;
-            this.saaToggle1.SkewedStyle = skewed1;
-            this.saaToggle1.TabIndex = 4;
-            this.saaToggle1.Text = "saaToggle1";
-            this.saaToggle1.ToggleStyle = SaaUI.ToggleStyle.iOS;
-            this.saaToggle1.CheckChanged += new SaaUI.SaaToggle.OnCheckChanged(this.saaToggle1_CheckChanged);
+            this.tglCloud.Checked = false;
+            saaToggleColors2.OffBackColor = System.Drawing.Color.LightGray;
+            saaToggleColors2.OffForeColor = System.Drawing.Color.White;
+            saaToggleColors2.OffHeadColor = System.Drawing.Color.WhiteSmoke;
+            saaToggleColors2.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
+            saaToggleColors2.OnForeColor = System.Drawing.Color.White;
+            saaToggleColors2.OnHeadColor = System.Drawing.Color.White;
+            this.tglCloud.Colors = saaToggleColors2;
+            flat2.Border = 5;
+            flat2.HeadColorType = SaaUI.ToggleFlatHeadColorType.BackColor;
+            flat2.HeadOffSize = new System.Drawing.Size(0, 0);
+            flat2.HeadRadius = radius5;
+            flat2.OffHeadOffset = new System.Drawing.Point(0, 0);
+            flat2.Offset = new System.Drawing.Point(0, 0);
+            flat2.OffSize = new System.Drawing.Size(0, 0);
+            flat2.OnHeadOffset = new System.Drawing.Point(0, 0);
+            flat2.Radius = radius6;
+            flat2.RadiusStyle = SaaUI.ToggleRadius.Round;
+            flat2.Speed = 5;
+            this.tglCloud.FlatStyle = flat2;
+            this.tglCloud.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            ios2.HeadOffSize = new System.Drawing.Size(0, 0);
+            ios2.HeadRadius = radius7;
+            ios2.OffHeadOffset = new System.Drawing.Point(1, 0);
+            ios2.Offset = new System.Drawing.Point(0, 0);
+            ios2.OffSize = new System.Drawing.Size(0, 1);
+            ios2.OnHeadOffset = new System.Drawing.Point(0, 0);
+            ios2.Radius = radius8;
+            ios2.RadiusStyle = SaaUI.ToggleRadius.Round;
+            ios2.Speed = 5;
+            this.tglCloud.iOSStyle = ios2;
+            this.tglCloud.Location = new System.Drawing.Point(1012, 126);
+            this.tglCloud.MouseClicks = SaaUI.CheckBoxMouseClick.LeftClick;
+            this.tglCloud.Name = "tglCloud";
+            this.tglCloud.Size = new System.Drawing.Size(56, 26);
+            toggleSkewedCoordinates2.BottomLeft = new System.Drawing.Point(0, 0);
+            toggleSkewedCoordinates2.BottomRight = new System.Drawing.Point(0, 0);
+            toggleSkewedCoordinates2.TopLeft = new System.Drawing.Point(0, 0);
+            toggleSkewedCoordinates2.TopRight = new System.Drawing.Point(0, 0);
+            skewed2.Coordinates = toggleSkewedCoordinates2;
+            skewed2.OffFont = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            skewed2.OffSet = new System.Drawing.Point(0, 0);
+            skewed2.OffText = "OFF";
+            skewed2.OnFont = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            skewed2.OnText = "ON";
+            skewed2.SizeOffSet = new System.Drawing.Size(0, 0);
+            skewed2.Speed = 5;
+            this.tglCloud.SkewedStyle = skewed2;
+            this.tglCloud.TabIndex = 4;
+            this.tglCloud.Text = "saaToggle1";
+            this.tglCloud.ToggleStyle = SaaUI.ToggleStyle.Flat;
+            this.tglCloud.CheckChanged += new SaaUI.SaaToggle.OnCheckChanged(this.saaToggle1_CheckChanged);
             // 
             // saaGlowing1
             // 
@@ -277,7 +380,7 @@
             this.saaGlowing1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
             this.saaGlowing1.ForceTransparence = true;
             this.saaGlowing1.GrowingSpeed = 5;
-            this.saaGlowing1.Location = new System.Drawing.Point(615, 186);
+            this.saaGlowing1.Location = new System.Drawing.Point(653, 224);
             this.saaGlowing1.Margin = new System.Windows.Forms.Padding(4);
             this.saaGlowing1.Name = "saaGlowing1";
             this.saaGlowing1.Size = new System.Drawing.Size(36, 36);
@@ -296,7 +399,7 @@
             this.bntOFD.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.bntOFD.HoverColor = System.Drawing.Color.SteelBlue;
             this.bntOFD.IsRound = true;
-            this.bntOFD.Location = new System.Drawing.Point(681, 189);
+            this.bntOFD.Location = new System.Drawing.Point(719, 227);
             this.bntOFD.Margin = new System.Windows.Forms.Padding(4);
             this.bntOFD.Name = "bntOFD";
             this.bntOFD.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
@@ -307,23 +410,6 @@
             this.bntOFD.Text = "...";
             this.bntOFD.Click += new System.EventHandler(this.bntOFD_Click);
             // 
-            // metroLabel10
-            // 
-            this.metroLabel10.AutoSize = true;
-            this.metroLabel10.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.metroLabel10.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.metroLabel10.LiveSetting = System.Windows.Forms.Automation.AutomationLiveSetting.Polite;
-            this.metroLabel10.Location = new System.Drawing.Point(59, 518);
-            this.metroLabel10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.metroLabel10.Name = "metroLabel10";
-            this.metroLabel10.Size = new System.Drawing.Size(143, 19);
-            this.metroLabel10.Style = MetroFramework.MetroColorStyle.Black;
-            this.metroLabel10.TabIndex = 1;
-            this.metroLabel10.Text = "Autosave in die Cloud";
-            this.metroLabel10.UseCustomBackColor = true;
-            this.metroLabel10.UseCustomForeColor = true;
-            // 
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
@@ -331,7 +417,7 @@
             this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.metroLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.metroLabel4.LiveSetting = System.Windows.Forms.Automation.AutomationLiveSetting.Polite;
-            this.metroLabel4.Location = new System.Drawing.Point(59, 378);
+            this.metroLabel4.Location = new System.Drawing.Point(97, 416);
             this.metroLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(166, 19);
@@ -346,29 +432,12 @@
             this.txtNameMappe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.txtNameMappe.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNameMappe.ForeColor = System.Drawing.Color.White;
-            this.txtNameMappe.Location = new System.Drawing.Point(60, 421);
+            this.txtNameMappe.Location = new System.Drawing.Point(98, 446);
             this.txtNameMappe.Margin = new System.Windows.Forms.Padding(4);
             this.txtNameMappe.Name = "txtNameMappe";
             this.txtNameMappe.Size = new System.Drawing.Size(591, 31);
             this.txtNameMappe.TabIndex = 0;
             this.txtNameMappe.Text = " LILOApp1";
-            // 
-            // metroLabel3
-            // 
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.metroLabel3.LiveSetting = System.Windows.Forms.Automation.AutomationLiveSetting.Polite;
-            this.metroLabel3.Location = new System.Drawing.Point(59, 255);
-            this.metroLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(101, 19);
-            this.metroLabel3.Style = MetroFramework.MetroColorStyle.Black;
-            this.metroLabel3.TabIndex = 1;
-            this.metroLabel3.Text = "Projektmappe :";
-            this.metroLabel3.UseCustomBackColor = true;
-            this.metroLabel3.UseCustomForeColor = true;
             // 
             // txtOrtProj
             // 
@@ -376,65 +445,31 @@
             this.txtOrtProj.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtOrtProj.Enabled = false;
             this.txtOrtProj.ForeColor = System.Drawing.Color.White;
-            this.txtOrtProj.Location = new System.Drawing.Point(60, 300);
+            this.txtOrtProj.Location = new System.Drawing.Point(98, 338);
             this.txtOrtProj.Margin = new System.Windows.Forms.Padding(4);
             this.txtOrtProj.Name = "txtOrtProj";
             this.txtOrtProj.Size = new System.Drawing.Size(591, 31);
             this.txtOrtProj.TabIndex = 0;
             this.txtOrtProj.Text = " ";
             // 
-            // metroLabel2
-            // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.metroLabel2.LiveSetting = System.Windows.Forms.Automation.AutomationLiveSetting.Polite;
-            this.metroLabel2.Location = new System.Drawing.Point(59, 144);
-            this.metroLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(33, 19);
-            this.metroLabel2.Style = MetroFramework.MetroColorStyle.Black;
-            this.metroLabel2.TabIndex = 1;
-            this.metroLabel2.Text = "Ort:";
-            this.metroLabel2.UseCustomBackColor = true;
-            this.metroLabel2.UseCustomForeColor = true;
-            // 
             // txtOrt
             // 
             this.txtOrt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.txtOrt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtOrt.ForeColor = System.Drawing.Color.White;
-            this.txtOrt.Location = new System.Drawing.Point(60, 189);
+            this.txtOrt.Location = new System.Drawing.Point(98, 227);
             this.txtOrt.Margin = new System.Windows.Forms.Padding(4);
             this.txtOrt.Name = "txtOrt";
             this.txtOrt.Size = new System.Drawing.Size(591, 31);
             this.txtOrt.TabIndex = 0;
             this.txtOrt.Text = " ";
             // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.metroLabel1.LiveSetting = System.Windows.Forms.Automation.AutomationLiveSetting.Polite;
-            this.metroLabel1.Location = new System.Drawing.Point(59, 45);
-            this.metroLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(89, 19);
-            this.metroLabel1.Style = MetroFramework.MetroColorStyle.Black;
-            this.metroLabel1.TabIndex = 1;
-            this.metroLabel1.Text = "Projektname:";
-            this.metroLabel1.UseCustomBackColor = true;
-            this.metroLabel1.UseCustomForeColor = true;
-            // 
             // txtAppName
             // 
             this.txtAppName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.txtAppName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtAppName.ForeColor = System.Drawing.Color.White;
-            this.txtAppName.Location = new System.Drawing.Point(60, 90);
+            this.txtAppName.Location = new System.Drawing.Point(98, 128);
             this.txtAppName.Margin = new System.Windows.Forms.Padding(4);
             this.txtAppName.Name = "txtAppName";
             this.txtAppName.Size = new System.Drawing.Size(591, 31);
@@ -444,15 +479,16 @@
             // tbFramework
             // 
             this.tbFramework.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.tbFramework.Controls.Add(this.saaLabel17);
+            this.tbFramework.Controls.Add(this.saaLabel11);
+            this.tbFramework.Controls.Add(this.saaLabel16);
+            this.tbFramework.Controls.Add(this.saaLabel10);
+            this.tbFramework.Controls.Add(this.saaLabel9);
             this.tbFramework.Controls.Add(this.metroLabel9);
             this.tbFramework.Controls.Add(this.guna2Panel1);
             this.tbFramework.Controls.Add(this.panel1);
             this.tbFramework.Controls.Add(this.zeroitMetroSeparator1);
             this.tbFramework.Controls.Add(this.cmbFramework);
-            this.tbFramework.Controls.Add(this.metroLabel8);
-            this.tbFramework.Controls.Add(this.metroLabel7);
-            this.tbFramework.Controls.Add(this.metroLabel6);
-            this.tbFramework.Controls.Add(this.metroLabel5);
             this.tbFramework.Location = new System.Drawing.Point(4, 49);
             this.tbFramework.Margin = new System.Windows.Forms.Padding(4);
             this.tbFramework.Name = "tbFramework";
@@ -461,19 +497,76 @@
             this.tbFramework.TabIndex = 1;
             this.tbFramework.Text = "   Framework";
             // 
+            // saaLabel17
+            // 
+            this.saaLabel17.BackColor = System.Drawing.Color.Transparent;
+            this.saaLabel17.ForeColor = System.Drawing.Color.White;
+            this.saaLabel17.Location = new System.Drawing.Point(758, 138);
+            this.saaLabel17.Name = "saaLabel17";
+            this.saaLabel17.Size = new System.Drawing.Size(465, 112);
+            this.saaLabel17.TabIndex = 8;
+            this.saaLabel17.Text = "You can manually install youre Supportet Frameworks here. \r\nPlease notice that we" +
+    " arent responsibel for any failures \r\nwith youre Frameworks.\r\n";
+            // 
+            // saaLabel11
+            // 
+            this.saaLabel11.BackColor = System.Drawing.Color.Transparent;
+            this.saaLabel11.ForeColor = System.Drawing.Color.White;
+            this.saaLabel11.Location = new System.Drawing.Point(106, 288);
+            this.saaLabel11.Name = "saaLabel11";
+            this.saaLabel11.Size = new System.Drawing.Size(456, 230);
+            this.saaLabel11.TabIndex = 8;
+            this.saaLabel11.Text = resources.GetString("saaLabel11.Text");
+            // 
+            // saaLabel16
+            // 
+            this.saaLabel16.BackColor = System.Drawing.Color.Transparent;
+            this.saaLabel16.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.saaLabel16.ForeColor = System.Drawing.Color.White;
+            this.saaLabel16.Location = new System.Drawing.Point(758, 87);
+            this.saaLabel16.Name = "saaLabel16";
+            this.saaLabel16.Size = new System.Drawing.Size(456, 41);
+            this.saaLabel16.TabIndex = 8;
+            this.saaLabel16.Text = "Youre Frameworks\r\n";
+            // 
+            // saaLabel10
+            // 
+            this.saaLabel10.BackColor = System.Drawing.Color.Transparent;
+            this.saaLabel10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.saaLabel10.ForeColor = System.Drawing.Color.White;
+            this.saaLabel10.Location = new System.Drawing.Point(80, 240);
+            this.saaLabel10.Name = "saaLabel10";
+            this.saaLabel10.Size = new System.Drawing.Size(456, 41);
+            this.saaLabel10.TabIndex = 8;
+            this.saaLabel10.Text = "What are Frameworks?";
+            // 
+            // saaLabel9
+            // 
+            this.saaLabel9.BackColor = System.Drawing.Color.Transparent;
+            this.saaLabel9.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.saaLabel9.ForeColor = System.Drawing.Color.White;
+            this.saaLabel9.Location = new System.Drawing.Point(80, 84);
+            this.saaLabel9.Name = "saaLabel9";
+            this.saaLabel9.Size = new System.Drawing.Size(166, 34);
+            this.saaLabel9.TabIndex = 8;
+            this.saaLabel9.Text = "From JW Limited";
+            // 
             // metroLabel9
             // 
             this.metroLabel9.AllowDrop = true;
+            this.metroLabel9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.metroLabel9.AutoSize = true;
             this.metroLabel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.metroLabel9.Font = new System.Drawing.Font("Segoe UI Light", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.metroLabel9.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel9.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.metroLabel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.metroLabel9.LiveSetting = System.Windows.Forms.Automation.AutomationLiveSetting.Polite;
-            this.metroLabel9.Location = new System.Drawing.Point(837, 328);
+            this.metroLabel9.Location = new System.Drawing.Point(921, 323);
             this.metroLabel9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel9.Name = "metroLabel9";
-            this.metroLabel9.Size = new System.Drawing.Size(71, 19);
+            this.metroLabel9.Size = new System.Drawing.Size(93, 25);
             this.metroLabel9.Style = MetroFramework.MetroColorStyle.Black;
             this.metroLabel9.TabIndex = 2;
             this.metroLabel9.Text = "DropZone";
@@ -485,11 +578,13 @@
             // guna2Panel1
             // 
             this.guna2Panel1.AllowDrop = true;
+            this.guna2Panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.guna2Panel1.BackgroundImage = global::srvlocal_gui.Properties.Resources.dropbox_512px;
             this.guna2Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.guna2Panel1.Controls.Add(this.preLoad);
-            this.guna2Panel1.Location = new System.Drawing.Point(810, 375);
+            this.guna2Panel1.Location = new System.Drawing.Point(904, 377);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(131, 120);
@@ -502,6 +597,8 @@
             // 
             // preLoad
             // 
+            this.preLoad.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.preLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.preLoad.DashCap = System.Drawing.Drawing2D.DashCap.Round;
             this.preLoad.DashOffset = 0F;
@@ -510,7 +607,7 @@
             this.preLoad.LineStart = System.Drawing.Drawing2D.LineCap.Round;
             this.preLoad.LoaderColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(170)))), ((int)(((byte)(255)))));
             this.preLoad.LoaderWidth = 5;
-            this.preLoad.Location = new System.Drawing.Point(-12, -12);
+            this.preLoad.Location = new System.Drawing.Point(-84, -14);
             this.preLoad.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.preLoad.MaxAngle = 360;
             this.preLoad.MinAngle = 0;
@@ -528,6 +625,8 @@
             // 
             this.panel1.AccentColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.panel1.AllowDrop = true;
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Appearance = Zeroit.Framework.Metro.ZeroitMetroPanelCategory.PanelAppearance.Rounded;
             this.panel1.AutoStyle = false;
             this.panel1.BackColor = System.Drawing.Color.Transparent;
@@ -541,7 +640,7 @@
             this.panel1.GradientPointB = new System.Drawing.Point(422, 278);
             this.panel1.LineGradientColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(98)))), ((int)(((byte)(163)))));
             this.panel1.LineOrientation = System.Windows.Forms.Orientation.Horizontal;
-            this.panel1.Location = new System.Drawing.Point(666, 278);
+            this.panel1.Location = new System.Drawing.Point(758, 278);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(422, 278);
@@ -557,10 +656,10 @@
             // 
             // zeroitMetroSeparator1
             // 
-            mainColorScheme1.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
-            mainColorScheme1.Color2 = System.Drawing.Color.White;
-            this.zeroitMetroSeparator1.ColorScheme = mainColorScheme1;
-            this.zeroitMetroSeparator1.Location = new System.Drawing.Point(604, 110);
+            mainColorScheme3.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            mainColorScheme3.Color2 = System.Drawing.Color.White;
+            this.zeroitMetroSeparator1.ColorScheme = mainColorScheme3;
+            this.zeroitMetroSeparator1.Location = new System.Drawing.Point(636, 84);
             this.zeroitMetroSeparator1.Margin = new System.Windows.Forms.Padding(4);
             this.zeroitMetroSeparator1.Name = "zeroitMetroSeparator1";
             this.zeroitMetroSeparator1.Orientation = Zeroit.Framework.Metro.Design.Orientation.Vertical;
@@ -571,19 +670,21 @@
             // cmbFramework
             // 
             this.cmbFramework.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.cmbFramework.DisplayFocus = true;
             this.cmbFramework.DropDownHeight = 502;
+            this.cmbFramework.FontSize = MetroFramework.MetroComboBoxSize.Tall;
             this.cmbFramework.FormattingEnabled = true;
             this.cmbFramework.IntegralHeight = false;
-            this.cmbFramework.ItemHeight = 23;
+            this.cmbFramework.ItemHeight = 29;
             this.cmbFramework.Items.AddRange(new object[] {
+            "LAB Core (Best)",
             ".NET 7.0 (Well Supportet)",
-            ".NET 6.0",
-            "LILO Framework"});
-            this.cmbFramework.Location = new System.Drawing.Point(85, 155);
+            ".NET 6.0"});
+            this.cmbFramework.Location = new System.Drawing.Point(80, 138);
             this.cmbFramework.Margin = new System.Windows.Forms.Padding(4);
             this.cmbFramework.Name = "cmbFramework";
             this.cmbFramework.PromptText = "Choose one...";
-            this.cmbFramework.Size = new System.Drawing.Size(456, 29);
+            this.cmbFramework.Size = new System.Drawing.Size(456, 35);
             this.cmbFramework.Style = MetroFramework.MetroColorStyle.Black;
             this.cmbFramework.TabIndex = 3;
             this.cmbFramework.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -591,89 +692,14 @@
             this.cmbFramework.UseCustomForeColor = true;
             this.cmbFramework.UseSelectable = true;
             // 
-            // metroLabel8
-            // 
-            this.metroLabel8.Font = new System.Drawing.Font("Segoe UI Light", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.metroLabel8.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel8.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.metroLabel8.LiveSetting = System.Windows.Forms.Automation.AutomationLiveSetting.Polite;
-            this.metroLabel8.Location = new System.Drawing.Point(666, 155);
-            this.metroLabel8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.metroLabel8.Name = "metroLabel8";
-            this.metroLabel8.Size = new System.Drawing.Size(422, 76);
-            this.metroLabel8.Style = MetroFramework.MetroColorStyle.Black;
-            this.metroLabel8.TabIndex = 2;
-            this.metroLabel8.Text = "You can manually install youre Supportet Frameworks here. \r\nPlease notice that we" +
-    " arent responsibel for any failures \r\nwith youre Frameworks.";
-            this.metroLabel8.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroLabel8.UseCustomBackColor = true;
-            this.metroLabel8.UseCustomForeColor = true;
-            // 
-            // metroLabel7
-            // 
-            this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Font = new System.Drawing.Font("Segoe UI Light", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.metroLabel7.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.metroLabel7.LiveSetting = System.Windows.Forms.Automation.AutomationLiveSetting.Polite;
-            this.metroLabel7.Location = new System.Drawing.Point(666, 110);
-            this.metroLabel7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(129, 19);
-            this.metroLabel7.Style = MetroFramework.MetroColorStyle.Black;
-            this.metroLabel7.TabIndex = 2;
-            this.metroLabel7.Text = "Youre Frameworks :";
-            this.metroLabel7.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroLabel7.UseCustomBackColor = true;
-            this.metroLabel7.UseCustomForeColor = true;
-            // 
-            // metroLabel6
-            // 
-            this.metroLabel6.AutoSize = true;
-            this.metroLabel6.Font = new System.Drawing.Font("Segoe UI Light", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.metroLabel6.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.metroLabel6.LiveSetting = System.Windows.Forms.Automation.AutomationLiveSetting.Polite;
-            this.metroLabel6.Location = new System.Drawing.Point(85, 110);
-            this.metroLabel6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(119, 19);
-            this.metroLabel6.Style = MetroFramework.MetroColorStyle.Black;
-            this.metroLabel6.TabIndex = 2;
-            this.metroLabel6.Text = "From JW Limited :";
-            this.metroLabel6.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroLabel6.UseCustomBackColor = true;
-            this.metroLabel6.UseCustomForeColor = true;
-            // 
-            // metroLabel5
-            // 
-            this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Font = new System.Drawing.Font("Segoe UI Light", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.metroLabel5.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.metroLabel5.LiveSetting = System.Windows.Forms.Automation.AutomationLiveSetting.Polite;
-            this.metroLabel5.Location = new System.Drawing.Point(41, 38);
-            this.metroLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(108, 25);
-            this.metroLabel5.Style = MetroFramework.MetroColorStyle.Black;
-            this.metroLabel5.TabIndex = 2;
-            this.metroLabel5.Text = "Frameworks";
-            this.metroLabel5.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroLabel5.UseCustomBackColor = true;
-            this.metroLabel5.UseCustomForeColor = true;
-            this.metroLabel5.UseStyleColors = true;
-            // 
             // tbCreate
             // 
             this.tbCreate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
             this.tbCreate.Controls.Add(this.saaPanel1);
             this.tbCreate.Controls.Add(this.zeroitMetroButton1);
             this.tbCreate.Controls.Add(this.saaLabel2);
-            this.tbCreate.Controls.Add(this.saaLabel3);
             this.tbCreate.Controls.Add(this.saaLabel1);
+            this.tbCreate.Controls.Add(this.saaLabel3);
             this.tbCreate.Location = new System.Drawing.Point(4, 49);
             this.tbCreate.Margin = new System.Windows.Forms.Padding(4);
             this.tbCreate.Name = "tbCreate";
@@ -695,14 +721,14 @@
             this.saaPanel1.ColorType = SaaUI.PanelColorType.Default;
             this.saaPanel1.EnableDoubleBuffering = true;
             this.saaPanel1.ForceDrawRegion = false;
-            this.saaPanel1.Location = new System.Drawing.Point(809, 148);
+            this.saaPanel1.Location = new System.Drawing.Point(1087, 92);
             this.saaPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.saaPanel1.Name = "saaPanel1";
             this.saaPanel1.Radius.BottomLeft = 2;
             this.saaPanel1.Radius.BottomRight = 2;
             this.saaPanel1.Radius.TopLeft = 2;
             this.saaPanel1.Radius.TopRight = 2;
-            this.saaPanel1.Size = new System.Drawing.Size(392, 386);
+            this.saaPanel1.Size = new System.Drawing.Size(136, 134);
             this.saaPanel1.TabIndex = 4;
             this.saaPanel1.Transparence = 0;
             // 
@@ -718,12 +744,12 @@
             this.zeroitMetroButton1.ForeColor = System.Drawing.Color.Black;
             this.zeroitMetroButton1.HoverColor = System.Drawing.Color.White;
             this.zeroitMetroButton1.IsRound = true;
-            this.zeroitMetroButton1.Location = new System.Drawing.Point(54, 148);
+            this.zeroitMetroButton1.Location = new System.Drawing.Point(54, 477);
             this.zeroitMetroButton1.Margin = new System.Windows.Forms.Padding(4);
             this.zeroitMetroButton1.Name = "zeroitMetroButton1";
             this.zeroitMetroButton1.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.zeroitMetroButton1.RoundingArc = 86;
-            this.zeroitMetroButton1.Size = new System.Drawing.Size(604, 86);
+            this.zeroitMetroButton1.RoundingArc = 57;
+            this.zeroitMetroButton1.Size = new System.Drawing.Size(1186, 57);
             this.zeroitMetroButton1.TabIndex = 3;
             this.zeroitMetroButton1.Text = "Lets Start!";
             this.zeroitMetroButton1.Click += new System.EventHandler(this.zeroitMetroButton1_Click);
@@ -739,18 +765,6 @@
             this.saaLabel2.TabIndex = 2;
             this.saaLabel2.Text = "To welcome youre Future";
             // 
-            // saaLabel3
-            // 
-            this.saaLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.saaLabel3.Font = new System.Drawing.Font("Segoe UI Light", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.saaLabel3.ForeColor = System.Drawing.Color.White;
-            this.saaLabel3.Location = new System.Drawing.Point(809, 54);
-            this.saaLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.saaLabel3.Name = "saaLabel3";
-            this.saaLabel3.Size = new System.Drawing.Size(200, 59);
-            this.saaLabel3.TabIndex = 1;
-            this.saaLabel3.Text = "Share It";
-            // 
             // saaLabel1
             // 
             this.saaLabel1.BackColor = System.Drawing.Color.Transparent;
@@ -763,29 +777,41 @@
             this.saaLabel1.TabIndex = 1;
             this.saaLabel1.Text = "Ready?";
             // 
+            // saaLabel3
+            // 
+            this.saaLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.saaLabel3.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.saaLabel3.ForeColor = System.Drawing.Color.White;
+            this.saaLabel3.Location = new System.Drawing.Point(1086, 48);
+            this.saaLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.saaLabel3.Name = "saaLabel3";
+            this.saaLabel3.Size = new System.Drawing.Size(154, 33);
+            this.saaLabel3.TabIndex = 1;
+            this.saaLabel3.Text = "Share It";
+            // 
             // AppTypeSelector
             // 
             this.AppTypeSelector.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.AppTypeSelector.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.AppTypeSelector.CheckOnClick = false;
-            mainColorScheme2.BackgroundColorChecked = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            mainColorScheme2.BackgroundColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            mainColorScheme2.BackgroundColorNormal = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            mainColorScheme2.EffectBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(164)))), ((int)(((byte)(240)))));
-            mainColorScheme2.HeaderColor = System.Drawing.Color.White;
-            mainColorScheme2.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
-            mainColorScheme2.SubTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(164)))), ((int)(((byte)(240)))));
-            this.AppTypeSelector.ColorScheme = mainColorScheme2;
+            mainColorScheme4.BackgroundColorChecked = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            mainColorScheme4.BackgroundColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            mainColorScheme4.BackgroundColorNormal = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            mainColorScheme4.EffectBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(164)))), ((int)(((byte)(240)))));
+            mainColorScheme4.HeaderColor = System.Drawing.Color.White;
+            mainColorScheme4.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            mainColorScheme4.SubTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(164)))), ((int)(((byte)(240)))));
+            this.AppTypeSelector.ColorScheme = mainColorScheme4;
             this.AppTypeSelector.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AppTypeSelector.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.AppTypeSelector.HeadlineFont = new System.Drawing.Font("Segoe UI Light", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AppTypeSelector.HeadlineFont = new System.Drawing.Font("Segoe UI Variable Display Semib", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.AppTypeSelector.Location = new System.Drawing.Point(46, 59);
             this.AppTypeSelector.Margin = new System.Windows.Forms.Padding(4);
             this.AppTypeSelector.Name = "AppTypeSelector";
             this.AppTypeSelector.Size = new System.Drawing.Size(1289, 86);
             this.AppTypeSelector.Style = Zeroit.Framework.Metro.Design.Style.Custom;
-            this.AppTypeSelector.SubTextFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AppTypeSelector.SubTextFont = new System.Drawing.Font("Segoe UI Variable Display Semib", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AppTypeSelector.TabIndex = 0;
             this.AppTypeSelector.TextHeadline = "LILO App Creator Setup";
             this.AppTypeSelector.TextSubline = "LILO UI - App (C#, Windows, Desktop)";
@@ -864,6 +890,10 @@
             this.saaToast1.TitleTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.saaToast1.TitleTextFont = null;
             // 
+            // Shadow
+            // 
+            this.Shadow.TargetForm = this;
+            // 
             // Setup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -881,6 +911,7 @@
             this.MaximumSize = new System.Drawing.Size(1376, 931);
             this.MinimumSize = new System.Drawing.Size(1376, 931);
             this.Name = "Setup";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Setup";
             this.Load += new System.EventHandler(this.Setup_Load);
             this.ResizeBegin += new System.EventHandler(this.Setup_ResizeBegin);
@@ -906,23 +937,16 @@
         private Zeroit.Framework.Metro.ZeroitMetroButton bntOFD;
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private WindowsFormsAero.TextBox txtNameMappe;
-        private MetroFramework.Controls.MetroLabel metroLabel3;
         private WindowsFormsAero.TextBox txtOrtProj;
-        private MetroFramework.Controls.MetroLabel metroLabel2;
         private WindowsFormsAero.TextBox txtOrt;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
         private WindowsFormsAero.TextBox txtAppName;
         private Guna.UI2.WinForms.Guna2DragControl DragControl;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
-        private MetroFramework.Controls.MetroLabel metroLabel5;
         private Zeroit.Framework.Metro.ZeroitMetroPanelCategory panel1;
         private Zeroit.Framework.Metro.ZeroitMetroSeparator zeroitMetroSeparator1;
         private MetroFramework.Controls.MetroComboBox cmbFramework;
-        private MetroFramework.Controls.MetroLabel metroLabel7;
-        private MetroFramework.Controls.MetroLabel metroLabel6;
         private MetroFramework.Controls.MetroLabel metroLabel9;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private MetroFramework.Controls.MetroLabel metroLabel8;
         private TabPage tbCreate;
         private SaaUI.SaaGlowing saaGlowing1;
         private Zeroit.Framework.Metro.ZeroitMetroButton zeroitMetroButton1;
@@ -932,9 +956,23 @@
         private SaaUI.SaaToast saaToast1;
         private SaaUI.SaaLabel saaLabel3;
         private SaaUI.SaaPanel saaPanel1;
-        private SaaUI.SaaToggle saaToggle1;
-        private MetroFramework.Controls.MetroLabel metroLabel10;
+        private SaaUI.SaaToggle tglCloud;
         private SaaUI.SaaLabel lblStatus;
         private SaaUI.SaaPreloader preLoad;
+        private SaaUI.SaaLabel saaLabel6;
+        private SaaUI.SaaLabel saaLabel5;
+        private SaaUI.SaaLabel saaLabel4;
+        private SaaUI.SaaLabel saaLabel8;
+        private SaaUI.SaaLabel saaLabel7;
+        private SaaUI.SaaLabel saaLabel15;
+        private SaaUI.SaaLabel saaLabel14;
+        private SaaUI.SaaLabel saaLabel13;
+        private SaaUI.SaaLabel saaLabel12;
+        private SaaUI.SaaLabel saaLabel11;
+        private SaaUI.SaaLabel saaLabel10;
+        private SaaUI.SaaLabel saaLabel9;
+        private Guna.UI2.WinForms.Guna2ShadowForm Shadow;
+        private SaaUI.SaaLabel saaLabel17;
+        private SaaUI.SaaLabel saaLabel16;
     }
 }

@@ -527,7 +527,7 @@ namespace Local
             catch (Exception ex)
             {
                 SetColor(colors[2]);
-                Console.WriteLine("[{0}] - An Error Accured\n\n{1}",DateTime.Now.ToString("HH:mm"),ex.Message);
+                Console.WriteLine("[{0}] - An Error Accured\n\n{1}\n{2}", DateTime.Now.ToString("HH:mm"),ex.Message,ex.Data.ToString());
             }
             
         }
