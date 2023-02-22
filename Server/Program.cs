@@ -12,11 +12,26 @@ namespace Server
         /// Der Haupteinstiegspunkt für die Anwendung.
         /// </summary>
         [STAThread]
-        static void Main()
+        static void Main(string[] args)
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ServerWindow());
+            if (args.Length > 0) {
+
+                for (int i = 0; i < args.Length; i++)
+                {
+                    if (args[i]== "--start") {
+                        Application.EnableVisualStyles();
+                        Application.SetCompatibleTextRenderingDefault(false);
+                        Application.Run(new ServerWindow(true));
+                    }
+                }
+            }
+            else {
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new ServerWindow(false));
+            }
+
+            
         }
     }
 }
