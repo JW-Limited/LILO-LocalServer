@@ -1,9 +1,7 @@
 ﻿using System;
 
-namespace Client
-{
-    partial class ChatWindow
-    {
+namespace Client {
+    partial class ChatWindow {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -13,10 +11,8 @@ namespace Client
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
+        protected override void Dispose(bool disposing) {
+            if (disposing && (components != null)) {
                 components.Dispose();
             }
             base.Dispose(disposing);
@@ -28,113 +24,150 @@ namespace Client
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
-        {
+        private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChatWindow));
-            this.messageRichTextBox = new System.Windows.Forms.RichTextBox();
-            this.onlineUserRichTextBox = new System.Windows.Forms.RichTextBox();
-            this.messagesLabel = new System.Windows.Forms.Label();
-            this.onlineUsersLabel = new System.Windows.Forms.Label();
-            this.sendMessageTextBox = new System.Windows.Forms.TextBox();
-            this.sendButton = new System.Windows.Forms.Button();
-            this.usernameLabel = new System.Windows.Forms.Label();
-            this.SuspendLayout();
+            messageRichTextBox = new System.Windows.Forms.RichTextBox();
+            onlineUserRichTextBox = new System.Windows.Forms.RichTextBox();
+            messagesLabel = new System.Windows.Forms.Label();
+            onlineUsersLabel = new System.Windows.Forms.Label();
+            sendMessageTextBox = new System.Windows.Forms.TextBox();
+            sendButton = new System.Windows.Forms.Button();
+            usernameLabel = new System.Windows.Forms.Label();
+            button1 = new System.Windows.Forms.Button();
+            SuspendLayout();
             // 
             // messageRichTextBox
             // 
-            this.messageRichTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.messageRichTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.messageRichTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.messageRichTextBox.Location = new System.Drawing.Point(26, 52);
-            this.messageRichTextBox.Name = "messageRichTextBox";
-            this.messageRichTextBox.ReadOnly = true;
-            this.messageRichTextBox.Size = new System.Drawing.Size(852, 528);
-            this.messageRichTextBox.TabIndex = 0;
-            this.messageRichTextBox.TabStop = false;
-            this.messageRichTextBox.Text = "";
+            messageRichTextBox.BackColor = System.Drawing.Color.FromArgb(32, 32, 32);
+            messageRichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            messageRichTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            messageRichTextBox.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F);
+            messageRichTextBox.ForeColor = System.Drawing.Color.FromArgb(224, 224, 224);
+            messageRichTextBox.Location = new System.Drawing.Point(17, 33);
+            messageRichTextBox.Margin = new System.Windows.Forms.Padding(2);
+            messageRichTextBox.Name = "messageRichTextBox";
+            messageRichTextBox.ReadOnly = true;
+            messageRichTextBox.Size = new System.Drawing.Size(569, 339);
+            messageRichTextBox.TabIndex = 0;
+            messageRichTextBox.TabStop = false;
+            messageRichTextBox.Text = "";
             // 
             // onlineUserRichTextBox
             // 
-            this.onlineUserRichTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.onlineUserRichTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.onlineUserRichTextBox.Location = new System.Drawing.Point(907, 52);
-            this.onlineUserRichTextBox.Name = "onlineUserRichTextBox";
-            this.onlineUserRichTextBox.ReadOnly = true;
-            this.onlineUserRichTextBox.Size = new System.Drawing.Size(227, 528);
-            this.onlineUserRichTextBox.TabIndex = 1;
-            this.onlineUserRichTextBox.TabStop = false;
-            this.onlineUserRichTextBox.Text = "";
+            onlineUserRichTextBox.BackColor = System.Drawing.Color.FromArgb(32, 32, 32);
+            onlineUserRichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            onlineUserRichTextBox.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F);
+            onlineUserRichTextBox.ForeColor = System.Drawing.Color.FromArgb(224, 224, 224);
+            onlineUserRichTextBox.Location = new System.Drawing.Point(605, 33);
+            onlineUserRichTextBox.Margin = new System.Windows.Forms.Padding(2);
+            onlineUserRichTextBox.Name = "onlineUserRichTextBox";
+            onlineUserRichTextBox.ReadOnly = true;
+            onlineUserRichTextBox.Size = new System.Drawing.Size(153, 292);
+            onlineUserRichTextBox.TabIndex = 1;
+            onlineUserRichTextBox.TabStop = false;
+            onlineUserRichTextBox.Text = "";
             // 
             // messagesLabel
             // 
-            this.messagesLabel.AutoSize = true;
-            this.messagesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.messagesLabel.Location = new System.Drawing.Point(19, 1);
-            this.messagesLabel.Name = "messagesLabel";
-            this.messagesLabel.Size = new System.Drawing.Size(190, 42);
-            this.messagesLabel.TabIndex = 2;
-            this.messagesLabel.Text = "Messages";
+            messagesLabel.AutoSize = true;
+            messagesLabel.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 13.8F, System.Drawing.FontStyle.Bold);
+            messagesLabel.ForeColor = System.Drawing.Color.Silver;
+            messagesLabel.Location = new System.Drawing.Point(13, 1);
+            messagesLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            messagesLabel.Name = "messagesLabel";
+            messagesLabel.Size = new System.Drawing.Size(120, 32);
+            messagesLabel.TabIndex = 2;
+            messagesLabel.Text = "Messages";
             // 
             // onlineUsersLabel
             // 
-            this.onlineUsersLabel.AutoSize = true;
-            this.onlineUsersLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.onlineUsersLabel.Location = new System.Drawing.Point(900, 1);
-            this.onlineUsersLabel.Name = "onlineUsersLabel";
-            this.onlineUsersLabel.Size = new System.Drawing.Size(215, 42);
-            this.onlineUsersLabel.TabIndex = 3;
-            this.onlineUsersLabel.Text = "Online User";
+            onlineUsersLabel.AutoSize = true;
+            onlineUsersLabel.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 13.8F, System.Drawing.FontStyle.Bold);
+            onlineUsersLabel.ForeColor = System.Drawing.Color.Silver;
+            onlineUsersLabel.Location = new System.Drawing.Point(600, 1);
+            onlineUsersLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            onlineUsersLabel.Name = "onlineUsersLabel";
+            onlineUsersLabel.Size = new System.Drawing.Size(142, 32);
+            onlineUsersLabel.TabIndex = 3;
+            onlineUsersLabel.Text = "Online User";
             // 
             // sendMessageTextBox
             // 
-            this.sendMessageTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sendMessageTextBox.Location = new System.Drawing.Point(26, 635);
-            this.sendMessageTextBox.Name = "sendMessageTextBox";
-            this.sendMessageTextBox.Size = new System.Drawing.Size(852, 44);
-            this.sendMessageTextBox.TabIndex = 4;
+            sendMessageTextBox.BackColor = System.Drawing.Color.FromArgb(32, 32, 32);
+            sendMessageTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            sendMessageTextBox.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F);
+            sendMessageTextBox.ForeColor = System.Drawing.Color.FromArgb(224, 224, 224);
+            sendMessageTextBox.Location = new System.Drawing.Point(17, 406);
+            sendMessageTextBox.Margin = new System.Windows.Forms.Padding(2);
+            sendMessageTextBox.Name = "sendMessageTextBox";
+            sendMessageTextBox.Size = new System.Drawing.Size(569, 27);
+            sendMessageTextBox.TabIndex = 4;
             // 
             // sendButton
             // 
-            this.sendButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sendButton.Location = new System.Drawing.Point(907, 633);
-            this.sendButton.Name = "sendButton";
-            this.sendButton.Size = new System.Drawing.Size(239, 54);
-            this.sendButton.TabIndex = 5;
-            this.sendButton.Text = "Send";
-            this.sendButton.UseVisualStyleBackColor = true;
-            this.sendButton.Click += new System.EventHandler(this.SendButton_Click);
+            sendButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
+            sendButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            sendButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            sendButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            sendButton.Location = new System.Drawing.Point(605, 402);
+            sendButton.Margin = new System.Windows.Forms.Padding(2);
+            sendButton.Name = "sendButton";
+            sendButton.Size = new System.Drawing.Size(153, 35);
+            sendButton.TabIndex = 5;
+            sendButton.Text = "Send";
+            sendButton.UseVisualStyleBackColor = false;
+            sendButton.Click += SendButton_Click;
             // 
             // usernameLabel
             // 
-            this.usernameLabel.AutoSize = true;
-            this.usernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameLabel.Location = new System.Drawing.Point(19, 588);
-            this.usernameLabel.Name = "usernameLabel";
-            this.usernameLabel.Size = new System.Drawing.Size(200, 42);
-            this.usernameLabel.TabIndex = 6;
-            this.usernameLabel.Text = "Username:";
+            usernameLabel.AutoSize = true;
+            usernameLabel.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 13.8F, System.Drawing.FontStyle.Bold);
+            usernameLabel.ForeColor = System.Drawing.Color.Silver;
+            usernameLabel.Location = new System.Drawing.Point(13, 373);
+            usernameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            usernameLabel.Name = "usernameLabel";
+            usernameLabel.Size = new System.Drawing.Size(131, 32);
+            usernameLabel.TabIndex = 6;
+            usernameLabel.Text = "Username:";
+            // 
+            // button1
+            // 
+            button1.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
+            button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            button1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            button1.Location = new System.Drawing.Point(605, 337);
+            button1.Margin = new System.Windows.Forms.Padding(2);
+            button1.Name = "button1";
+            button1.Size = new System.Drawing.Size(154, 35);
+            button1.TabIndex = 5;
+            button1.Text = "Log Off";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += LogOffButton_Click;
             // 
             // ChatWindow
             // 
-            this.AcceptButton = this.sendButton;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1158, 700);
-            this.Controls.Add(this.usernameLabel);
-            this.Controls.Add(this.sendButton);
-            this.Controls.Add(this.sendMessageTextBox);
-            this.Controls.Add(this.onlineUsersLabel);
-            this.Controls.Add(this.messagesLabel);
-            this.Controls.Add(this.onlineUserRichTextBox);
-            this.Controls.Add(this.messageRichTextBox);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
-            this.Name = "ChatWindow";
-            this.Text = "Chat";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AcceptButton = sendButton;
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackColor = System.Drawing.Color.FromArgb(18, 18, 18);
+            ClientSize = new System.Drawing.Size(772, 448);
+            Controls.Add(usernameLabel);
+            Controls.Add(button1);
+            Controls.Add(sendButton);
+            Controls.Add(sendMessageTextBox);
+            Controls.Add(onlineUsersLabel);
+            Controls.Add(messagesLabel);
+            Controls.Add(onlineUserRichTextBox);
+            Controls.Add(messageRichTextBox);
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
+            Margin = new System.Windows.Forms.Padding(2);
+            MaximizeBox = false;
+            Name = "ChatWindow";
+            Text = "Chat";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -146,5 +179,6 @@ namespace Client
         private System.Windows.Forms.TextBox sendMessageTextBox;
         private System.Windows.Forms.Button sendButton;
         private System.Windows.Forms.Label usernameLabel;
+        private System.Windows.Forms.Button button1;
     }
 }

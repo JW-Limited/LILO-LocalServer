@@ -10,3 +10,19 @@ C:\Users\joeva\Source\Repos\TeamChat\Client\obj\Debug\Client.csproj.GenerateReso
 C:\Users\joeva\Source\Repos\TeamChat\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
 C:\Users\joeva\Source\Repos\TeamChat\Client\obj\Debug\Client.exe
 C:\Users\joeva\Source\Repos\TeamChat\Client\obj\Debug\Client.pdb
+C:\Users\Joey West\Documents\GitHub\LILO-LocalServer\Client\bin\Debug\Client.exe.config
+C:\Users\Joey West\Documents\GitHub\LILO-LocalServer\Client\bin\Debug\Client.exe
+C:\Users\Joey West\Documents\GitHub\LILO-LocalServer\Client\bin\Debug\Client.pdb
+C:\Users\Joey West\Documents\GitHub\LILO-LocalServer\Client\obj\Debug\Client.csproj.AssemblyReference.cache
+C:\Users\Joey West\Documents\GitHub\LILO-LocalServer\Client\obj\Debug\Client.csproj.SuggestedBindingRedirects.cache
+C:\Users\Joey West\Documents\GitHub\LILO-LocalServer\Client\obj\Debug\Client.ChatWindow.resources
+C:\Users\Joey West\Documents\GitHub\LILO-LocalServer\Client\obj\Debug\Client.LoginWindow.resources
+C:\Users\Joey West\Documents\GitHub\LILO-LocalServer\Client\obj\Debug\Client.Properties.Resources.resources
+C:\Users\Joey West\Documents\GitHub\LILO-LocalServer\Client\obj\Debug\Client.csproj.GenerateResource.cache
+C:\Users\Joey West\Documents\GitHub\LILO-LocalServer\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+C:\Users\Joey West\Documents\GitHub\LILO-LocalServer\Client\obj\Debug\Client.exe
+C:\Users\Joey West\Documents\GitHub\LILO-LocalServer\Client\obj\Debug\Client.pdb
+C:\Users\Joey West\Documents\GitHub\LILO-LocalServer\Client\bin\Debug\Guna.UI2.dll
+C:\Users\Joey West\Documents\GitHub\LILO-LocalServer\Client\bin\Debug\SaaUI.dll
+C:\Users\Joey West\Documents\GitHub\LILO-LocalServer\Client\bin\Debug\SaaUI.xml
+C:\Users\Joey West\Documents\GitHub\LILO-LocalServer\Client\obj\Debug\Client.csproj.CopyComplete

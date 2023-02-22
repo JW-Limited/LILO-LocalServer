@@ -2218,8 +2218,20 @@
           "lib/Zeroit.Framework.Metro.dll": {}
         }
       },
+      "Client/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Client.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Client.dll": {}
+        }
+      },
       "Server/1.0.0": {
         "type": "project",
+        "dependencies": {
+          "Client": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/Server.dll": {}
         },
@@ -6931,6 +6943,11 @@
         "zeroit.framework.metro.nuspec"
       ]
     },
+    "Client/1.0.0": {
+      "type": "project",
+      "path": "../Client/Client.csproj",
+      "msbuildProject": "../Client/Client.csproj"
+    },
     "Server/1.0.0": {
       "type": "project",
       "path": "../Server/Server.csproj",
@@ -6964,23 +6981,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\joeva\\.nuget\\packages\\": {},
+    "C:\\Users\\Joey West\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\srvlocal_gui\\srvlocal_gui.csproj",
+      "projectUniqueName": "C:\\Users\\Joey West\\Documents\\GitHub\\LILO-LocalServer\\srvlocal_gui\\srvlocal_gui.csproj",
       "projectName": "srvlocal_gui",
-      "projectPath": "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\srvlocal_gui\\srvlocal_gui.csproj",
-      "packagesPath": "C:\\Users\\joeva\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\srvlocal_gui\\obj\\",
+      "projectPath": "C:\\Users\\Joey West\\Documents\\GitHub\\LILO-LocalServer\\srvlocal_gui\\srvlocal_gui.csproj",
+      "packagesPath": "C:\\Users\\Joey West\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Joey West\\Documents\\GitHub\\LILO-LocalServer\\srvlocal_gui\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\joeva\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Joey West\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -6989,14 +7006,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
           "projectReferences": {
-            "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\srvlocal\\srvlocal.csproj": {
-              "projectPath": "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\srvlocal\\srvlocal.csproj"
+            "C:\\Users\\Joey West\\Documents\\GitHub\\LILO-LocalServer\\srvlocal\\srvlocal.csproj": {
+              "projectPath": "C:\\Users\\Joey West\\Documents\\GitHub\\LILO-LocalServer\\srvlocal\\srvlocal.csproj"
             }
           }
         }
@@ -7095,7 +7113,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   },
