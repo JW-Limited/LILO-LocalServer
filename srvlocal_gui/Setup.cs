@@ -1,4 +1,5 @@
 ﻿using Modern.WindowKit.Controls;
+using srvlocal_gui.LAB.HELPER;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -217,11 +218,20 @@ namespace srvlocal_gui
                 ServerIP = "127.0.0.1",
                 ApplicationName = txtAppName.Text.ToLower() + ".exe",
                 ApplicationDescription = "A LILO Application build with the LAB App.",
-                Files = new List<string> { "file1.txt", "file2.txt" },
-                References = new List<string> { "Form1.cs", "Form1.Designer.cs", "Form1.Resx.cs", "Programm.cs" }
+                Files = new List<string> 
+                { 
+                    "desktop.ini",
+                    "lab\\Folder.ico" 
+                },
+                References = new List<string> 
+                {
+                    "Form1.cs", 
+                    "Form1.Designer.cs", 
+                    "Form1.Resx.cs", 
+                    "Programm.cs" 
+                }
             };
 
-            
 
             CreateProject(myProject);
 
@@ -248,6 +258,8 @@ namespace srvlocal_gui
             File.Copy(".\\Folder.ico", dir + "\\lab\\Folder.ico", true);
             File.WriteAllText(dir + "\\desktop.ini", sb.ToString());
             values.SaveToFile(dir + "\\" + txtNameMappe.Text + ".lab");
+            var form = new LAB.HELPER.FormsHandler(dir);
+            form.Add(txtAppName.Text);
         }
 
         

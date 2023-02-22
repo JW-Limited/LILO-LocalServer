@@ -29,7 +29,7 @@ namespace srvlocal_gui
             public string Author { get; set; }
 
             [XmlElement("CloudSave_v3")]
-            public bool CloudSave { get; set; }
+            public bool CloudSave { get; set; } 
 
             [XmlElement("Company")]
             public string Company { get; set; }

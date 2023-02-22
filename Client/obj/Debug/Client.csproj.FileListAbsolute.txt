@@ -1,0 +1,12 @@
+C:\Users\joeva\Source\Repos\TeamChat\Client\bin\Debug\Client.exe.config
+C:\Users\joeva\Source\Repos\TeamChat\Client\bin\Debug\Client.exe
+C:\Users\joeva\Source\Repos\TeamChat\Client\bin\Debug\Client.pdb
+C:\Users\joeva\Source\Repos\TeamChat\Client\obj\Debug\Client.csproj.AssemblyReference.cache
+C:\Users\joeva\Source\Repos\TeamChat\Client\obj\Debug\Client.csproj.SuggestedBindingRedirects.cache
+C:\Users\joeva\Source\Repos\TeamChat\Client\obj\Debug\Client.ChatWindow.resources
+C:\Users\joeva\Source\Repos\TeamChat\Client\obj\Debug\Client.LoginWindow.resources
+C:\Users\joeva\Source\Repos\TeamChat\Client\obj\Debug\Client.Properties.Resources.resources
+C:\Users\joeva\Source\Repos\TeamChat\Client\obj\Debug\Client.csproj.GenerateResource.cache
+C:\Users\joeva\Source\Repos\TeamChat\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+C:\Users\joeva\Source\Repos\TeamChat\Client\obj\Debug\Client.exe
+C:\Users\joeva\Source\Repos\TeamChat\Client\obj\Debug\Client.pdb

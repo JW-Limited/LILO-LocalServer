@@ -62,7 +62,7 @@ namespace Server
 
                         this.AddLineToLog("The server was successfully started!");
                     }
-                    catch
+                    catch(Exception ex)
                     {
                         this.isRunning = false;
                         this.portTextBox.Enabled = true;
@@ -74,7 +74,7 @@ namespace Server
                             this.listener.Stop();
                         }
 
-                        MessageBox.Show("The server couldn't be started!", "Chat - Server", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                        MessageBox.Show($"The server couldn't be started!\r\n{ex.Message}", "Chat - Server", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
                     }
                 }
             }
