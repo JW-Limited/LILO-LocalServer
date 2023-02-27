@@ -8,6 +8,7 @@ using System.Text;
 using System.Net.Sockets;
 using System.Net.Http;
 using System.Net.NetworkInformation;
+using System.IO;
 
 namespace srvlocal_gui
 {
@@ -36,6 +37,11 @@ namespace srvlocal_gui
             try
             {
                 lblVersion.Text = VersionApp();
+                if(!File.Exists("C:\\LILO" + filePath)) 
+                {
+                    File.Copy(filePath, "C:\\LILO" + filePath);
+                    File.Copy(filePath.Replace(".exe", ".dll"), "C:\\LILO" + filePath.Replace(".exe",".dll"));
+                }
             }
             catch
             {

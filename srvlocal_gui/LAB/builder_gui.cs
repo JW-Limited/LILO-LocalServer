@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -28,15 +29,7 @@ namespace srvlocal_gui.LAB
 
         private void builder_gui_Load(object sender, EventArgs e)
         {
-            var loadedProject = Project.LoadFromFile(projectFile);
-            this.Text = loadedProject.Name + $" - LAB";
-
-            if(loadedProject.Target != RuntimeInformation.OSDescription)
-            {
-                MessageBox.Show("You are Developing a Programm for another OperatingSystem. You cant test or Debug", "LAB Compiler", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2, MessageBoxOptions.ServiceNotification);
-            }
-
-
+            LoadProject();
             var bag = new LAB.TOOLS.Bag();
             bag.MdiParent = this;
             bagHandle = bag;
@@ -51,6 +44,31 @@ namespace srvlocal_gui.LAB
             bag.Show();
         }
 
+        public void LoadProject(string FILE = null)
+        {
+            if(FILE != null)
+            {
+                var loadedProject = Project.LoadFromFile(FILE);
+                this.Text = loadedProject.Name + $" - LAB";
+                projectFile = FILE;
+                if (loadedProject.Target != RuntimeInformation.OSDescription)
+                {
+                    MessageBox.Show("You are Developing a Programm for another OperatingSystem. You cant test or Debug", "LAB Compiler", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2, MessageBoxOptions.ServiceNotification);
+                }
+            }
+            else
+            {
+                var loadedProject = Project.LoadFromFile(projectFile);
+                this.Text = loadedProject.Name + $" - LAB";
+
+                if (loadedProject.Target != RuntimeInformation.OSDescription)
+                {
+                    MessageBox.Show("You are Developing a Programm for another OperatingSystem. You cant test or Debug", "LAB Compiler", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2, MessageBoxOptions.ServiceNotification);
+                }
+            }
+            
+        }
+
         private void ShowNewForm(object sender, EventArgs e)
         {
             Form childForm = new Form();
@@ -63,10 +81,11 @@ namespace srvlocal_gui.LAB
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-            openFileDialog.Filter = "Textdateien (*.txt)|*.txt|Alle Dateien (*.*)|*.*";
+            openFileDialog.Filter = "LAP Project (*.lab)|*.lab|All Files (*.*)|*.*";
             if (openFileDialog.ShowDialog(this) == DialogResult.OK)
             {
                 string FileName = openFileDialog.FileName;
+                LoadProject(FileName);
             }
         }
 
@@ -74,7 +93,7 @@ namespace srvlocal_gui.LAB
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-            saveFileDialog.Filter = "Textdateien (*.txt)|*.txt|Alle Dateien (*.*)|*.*";
+            saveFileDialog.Filter = "LAP Project (*.lab)|*.lab|All Files (*.*)|*.*";
             if (saveFileDialog.ShowDialog(this) == DialogResult.OK)
             {
                 string FileName = saveFileDialog.FileName;
@@ -139,6 +158,31 @@ namespace srvlocal_gui.LAB
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void builder_gui_Shown(object sender, EventArgs e)
+        {
+            this.Enabled = false;
+
+            var filePath = "C:\\LILO\\srvlocal.exe";
+            var process = new Process
+            {
+                StartInfo = new ProcessStartInfo
+                {
+                    FileName = filePath,
+                    RedirectStandardOutput = true,
+                    UseShellExecute = false,
+                    CreateNoWindow = true,
+                }
+            };
+            process.Start();
+
+            while (!process.Responding)
+            {
+                
+            }
+
+            this.Enabled = true;  
         }
     }
 }

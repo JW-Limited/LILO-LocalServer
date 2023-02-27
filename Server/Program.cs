@@ -18,17 +18,22 @@ namespace Server
 
                 for (int i = 0; i < args.Length; i++)
                 {
-                    if (args[i]== "--start") {
+                    if (args[i]== "--start") 
+                    {
                         Application.EnableVisualStyles();
                         Application.SetCompatibleTextRenderingDefault(false);
-                        Application.Run(new ServerWindow(true));
+                        var gui = new ServerWindow(true);
+                        gui.Show();
+                        Application.Run();
                     }
                 }
             }
             else {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new ServerWindow(false));
+                var gui = new ServerWindow(false);
+                gui.Show();
+                Application.Run();
             }
 
             

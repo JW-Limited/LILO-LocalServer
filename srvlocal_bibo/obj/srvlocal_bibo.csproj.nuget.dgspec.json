@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Joey West\\Documents\\GitHub\\LILO-LocalServer\\srvlocal_bibo\\srvlocal_bibo.csproj": {}
+    "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\srvlocal_bibo\\srvlocal_bibo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Joey West\\Documents\\GitHub\\LILO-LocalServer\\srvlocal_bibo\\srvlocal_bibo.csproj": {
+    "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\srvlocal_bibo\\srvlocal_bibo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Joey West\\Documents\\GitHub\\LILO-LocalServer\\srvlocal_bibo\\srvlocal_bibo.csproj",
+        "projectUniqueName": "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\srvlocal_bibo\\srvlocal_bibo.csproj",
         "projectName": "srvlocal_bibo",
-        "projectPath": "C:\\Users\\Joey West\\Documents\\GitHub\\LILO-LocalServer\\srvlocal_bibo\\srvlocal_bibo.csproj",
-        "packagesPath": "C:\\Users\\Joey West\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Joey West\\Documents\\GitHub\\LILO-LocalServer\\srvlocal_bibo\\obj\\",
+        "projectPath": "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\srvlocal_bibo\\srvlocal_bibo.csproj",
+        "packagesPath": "C:\\Users\\joeva\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\srvlocal_bibo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Joey West\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\joeva\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -81,7 +80,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

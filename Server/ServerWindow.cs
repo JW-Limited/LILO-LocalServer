@@ -22,12 +22,37 @@ namespace Server {
         private static object usersLocker;
         private static object logLocker;
         public bool _back;
+        public NotifyIcon notyFi;
+        public object ContextMenuBrocker;
+        public static NotifyIcon notyIcoHandler;
 
         public ServerWindow(bool Background) {
-            this._back = Background;
-            InitializeComponent();
-            logLocker = new object();
-            this.FormClosing += this.CleanClosing;
+
+            ContextMenuBrocker = new object();
+            lock(ContextMenuBrocker)
+            {
+                this._back = Background;
+                InitializeComponent();
+                logLocker = new object();
+                this.FormClosing += this.CleanClosing;
+
+                notyFi = new NotifyIcon();
+                notyFi.BalloonTipClicked += (sender, e) => Application.ExitThread();
+
+            }
+
+        }
+
+        public void ShowContextMenuTray(NotifyIcon notC)
+        {
+            notC.ContextMenuStrip = conMenu;
+            notC.Icon = this.Icon;
+            notC.BalloonTipIcon = ToolTipIcon.Info;
+            notC.BalloonTipText = "Server started.\nClick to close.";
+            notC.BalloonTipTitle = "ChatServer";
+            notC.Visible = true;
+            notC.ShowBalloonTip(2000);
+            notC: ShowDialog();
         }
 
         public void StartButton_Click(object sender, EventArgs e) {
@@ -42,6 +67,7 @@ namespace Server {
                 }
                 else {
                     try {
+                        ShowContextMenuTray(notyFi);
 
                         this.isRunning = true;
                         usersLocker = new object();
@@ -58,7 +84,6 @@ namespace Server {
                         this.listenerThread.Start();
 
                         this.AddLineToLog("The server was successfully started!");
-                        ShowContextMenu();
 
 
                         try {
@@ -466,12 +491,7 @@ namespace Server {
         }
         #endregion
 
-        public static NotifyIcon notyIcoHandler;
 
-        public void ShowContextMenu() {
-            noty.Visible = true;
-            noty.ShowBalloonTip(1200);
-        }
 
         private void BntCopy_Click(object sender, EventArgs e) {
             CopyToClipBoaord(ipAddressPubTextBox);
@@ -506,6 +526,19 @@ namespace Server {
         }
 
         private void Noty_MouseDoubleClick(object sender, MouseEventArgs e) {
+
+        }
+
+        private void ServerWindow_Load_1(object sender, EventArgs e)
+        {
+            if (_back)
+            {
+                this.ShowInTaskbar = false;
+                this.WindowState = FormWindowState.Minimized;
+                StartButton_Click(sender, e);
+            }
+
+            lblInfo.Text = $"Version : {AssemblyVersion}b1\nAuthor : Joey West\nCopyright © 2023 JW Limited";
 
         }
     }

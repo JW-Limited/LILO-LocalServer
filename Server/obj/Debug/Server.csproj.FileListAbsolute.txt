@@ -15,3 +15,20 @@ C:\Users\Joey West\Documents\GitHub\LILO-LocalServer\Server\obj\Debug\Server.csp
 C:\Users\Joey West\Documents\GitHub\LILO-LocalServer\Server\bin\Debug\Server.pdb
 C:\Users\Joey West\Documents\GitHub\LILO-LocalServer\Server\obj\Debug\Server.exe
 C:\Users\Joey West\Documents\GitHub\LILO-LocalServer\Server\obj\Debug\Server.pdb
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Server\bin\Debug\Server.exe.config
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Server\bin\Debug\Server.exe
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Server\bin\Debug\Server.pdb
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Server\bin\Debug\Client.exe
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Server\bin\Debug\SipaaFramework.dll
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Server\bin\Debug\Client.pdb
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Server\bin\Debug\Client.exe.config
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Server\obj\Debug\Server.csproj.AssemblyReference.cache
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Server\obj\Debug\Server.csproj.SuggestedBindingRedirects.cache
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Server\obj\Debug\Server.exe.config
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Server\obj\Debug\Server.ServerWindow.resources
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Server\obj\Debug\Server.Properties.Resources.resources
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Server\obj\Debug\Server.csproj.GenerateResource.cache
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Server\obj\Debug\Server.csproj.CopyComplete
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Server\obj\Debug\Server.exe
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Server\obj\Debug\Server.pdb

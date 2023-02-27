@@ -85,6 +85,8 @@ namespace srvlocal_gui
                     }
                     else
                     {
+                        
+
                         ApplicationConfiguration.Initialize();
                         Application.Run(new LAB.builder_gui(args[i]));
                     }

@@ -26,3 +26,19 @@ C:\Users\Joey West\Documents\GitHub\LILO-LocalServer\Client\bin\Debug\Guna.UI2.d
 C:\Users\Joey West\Documents\GitHub\LILO-LocalServer\Client\bin\Debug\SaaUI.dll
 C:\Users\Joey West\Documents\GitHub\LILO-LocalServer\Client\bin\Debug\SaaUI.xml
 C:\Users\Joey West\Documents\GitHub\LILO-LocalServer\Client\obj\Debug\Client.csproj.CopyComplete
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Client\bin\Debug\Client.exe.config
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Client\bin\Debug\Client.exe
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Client\bin\Debug\Client.pdb
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Client\bin\Debug\Guna.UI2.dll
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Client\bin\Debug\SaaUI.dll
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Client\bin\Debug\SaaUI.xml
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Client\obj\Debug\Client.csproj.AssemblyReference.cache
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Client\obj\Debug\Client.csproj.SuggestedBindingRedirects.cache
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Client\obj\Debug\Client.ChatWindow.resources
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Client\obj\Debug\Client.LoginWindow.resources
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Client\obj\Debug\Client.Properties.Resources.resources
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Client\obj\Debug\Client.csproj.GenerateResource.cache
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Client\obj\Debug\Client.csproj.CopyComplete
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Client\obj\Debug\Client.exe
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Client\obj\Debug\Client.pdb

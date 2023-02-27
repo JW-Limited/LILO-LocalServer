@@ -1300,7 +1300,15 @@
           }
         }
       },
+      "Client/1.0.0": {
+        "runtime": {
+          "Client.exe": {}
+        }
+      },
       "Server/1.0.0": {
+        "dependencies": {
+          "Client": "1.0.0"
+        },
         "runtime": {
           "Server.exe": {}
         }
@@ -2238,6 +2246,11 @@
       "sha512": "sha512-FPVSWC+uQIp3+KdW+LFUApwZTG/9rvQbrZtcRNhl1l4iVAjVa4yP4Vq5aIsEvsRZ7yUcgCQB58Gs7G/hvnnCDQ==",
       "path": "zeroit.framework.metro/1.0.0",
       "hashPath": "zeroit.framework.metro.1.0.0.nupkg.sha512"
+    },
+    "Client/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Server/1.0.0": {
       "type": "project",

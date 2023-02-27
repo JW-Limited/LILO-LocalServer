@@ -1,14 +1,14 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Joey West\\Documents\\GitHub\\LILO-LocalServer\\srvlocal\\srvlocal.csproj": {}
+    "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\srvlocal\\srvlocal.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Joey West\\Documents\\GitHub\\LILO-LocalServer\\Client\\Client.csproj": {
+    "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\Client\\Client.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\Joey West\\Documents\\GitHub\\LILO-LocalServer\\Client\\Client.csproj",
+        "projectUniqueName": "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\Client\\Client.csproj",
         "projectName": "Client",
-        "projectPath": "C:\\Users\\Joey West\\Documents\\GitHub\\LILO-LocalServer\\Client\\Client.csproj",
+        "projectPath": "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\Client\\Client.csproj",
         "frameworks": {
           "net48": {
             "projectReferences": {}
@@ -19,16 +19,16 @@
         "net48": {}
       }
     },
-    "C:\\Users\\Joey West\\Documents\\GitHub\\LILO-LocalServer\\Server\\Server.csproj": {
+    "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\Server\\Server.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\Joey West\\Documents\\GitHub\\LILO-LocalServer\\Server\\Server.csproj",
+        "projectUniqueName": "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\Server\\Server.csproj",
         "projectName": "Server",
-        "projectPath": "C:\\Users\\Joey West\\Documents\\GitHub\\LILO-LocalServer\\Server\\Server.csproj",
+        "projectPath": "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\Server\\Server.csproj",
         "frameworks": {
           "net48": {
             "projectReferences": {
-              "C:\\Users\\Joey West\\Documents\\GitHub\\LILO-LocalServer\\Client\\Client.csproj": {
-                "projectPath": "C:\\Users\\Joey West\\Documents\\GitHub\\LILO-LocalServer\\Client\\Client.csproj"
+              "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\Client\\Client.csproj": {
+                "projectPath": "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\Client\\Client.csproj"
               }
             }
           }
@@ -38,20 +38,20 @@
         "net48": {}
       }
     },
-    "C:\\Users\\Joey West\\Documents\\GitHub\\LILO-LocalServer\\srvlocal\\srvlocal.csproj": {
+    "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\srvlocal\\srvlocal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Joey West\\Documents\\GitHub\\LILO-LocalServer\\srvlocal\\srvlocal.csproj",
+        "projectUniqueName": "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\srvlocal\\srvlocal.csproj",
         "projectName": "srvlocal",
-        "projectPath": "C:\\Users\\Joey West\\Documents\\GitHub\\LILO-LocalServer\\srvlocal\\srvlocal.csproj",
-        "packagesPath": "C:\\Users\\Joey West\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Joey West\\Documents\\GitHub\\LILO-LocalServer\\srvlocal\\obj\\",
+        "projectPath": "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\srvlocal\\srvlocal.csproj",
+        "packagesPath": "C:\\Users\\joeva\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\srvlocal\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Joey West\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\joeva\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -60,15 +60,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0-windows7.0": {
             "targetAlias": "net7.0-windows",
             "projectReferences": {
-              "C:\\Users\\Joey West\\Documents\\GitHub\\LILO-LocalServer\\Server\\Server.csproj": {
-                "projectPath": "C:\\Users\\Joey West\\Documents\\GitHub\\LILO-LocalServer\\Server\\Server.csproj"
+              "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\Server\\Server.csproj": {
+                "projectPath": "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\Server\\Server.csproj"
               }
             }
           }
@@ -104,7 +103,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
