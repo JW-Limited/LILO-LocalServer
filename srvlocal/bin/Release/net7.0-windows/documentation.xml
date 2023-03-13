@@ -4,9 +4,56 @@
         <name>srvlocal</name>
     </assembly>
     <members>
+        <member name="T:srvlocal.AdvancedStartValues">
+            <summary>
+            Start Values
+            </summary>
+        </member>
+        <member name="M:srvlocal.AdvancedStartValues.#ctor(System.Int64,System.String,System.String,System.String)">
+            <summary>
+            Class Builder
+            </summary>
+            <param name="port"></param>
+            <param name="user"></param>
+            <param name="password"></param>
+            <param name="dir"></param>
+        </member>
+        <member name="P:srvlocal.AdvancedStartValues.Port">
+            <summary>
+             Listening Port
+            </summary>
+        </member>
+        <member name="P:srvlocal.AdvancedStartValues.User">
+            <summary>
+            Registered User
+            </summary>
+        </member>
+        <member name="P:srvlocal.AdvancedStartValues.Password">
+            <summary>
+            Password used to Autheticate
+            </summary>
+        </member>
+        <member name="P:srvlocal.AdvancedStartValues.Dir">
+            <summary>
+            Host Directory
+            </summary>
+        </member>
+        <member name="F:Local.Server.colors">
+            <summary>
+                <para name="colors"/>
+            </summary>
+        </member>
         <member name="M:Local.Server.Main(System.String[])">
             <summary>
-            Main Entry
+                Einstiegspunkt der Application
+                <paramref name="args"/>
+                <see cref="M:Local.Server.Start"/>
+            </summary>
+             b
+        </member>
+        <member name="T:Local.BatchStarter">
+            <summary>
+            <see href="Api"/>
             </summary>
         </member>
     </members>

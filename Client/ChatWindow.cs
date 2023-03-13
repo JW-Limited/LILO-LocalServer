@@ -173,5 +173,10 @@ namespace Client {
         private void LogOffButton_Click(object sender, EventArgs e) {
             Application.Restart();
         }
+
+        private void ChatWindow_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

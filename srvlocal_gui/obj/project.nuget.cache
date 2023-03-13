@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "sd3lLYqnhw5nSCB8XADgRwop+vCtgtVbAQamXitx6L1bd8/EApYAR/KC+s398QZTJtt/nSiuF47t07idMiXHFg==",
+  "dgSpecHash": "WToCfCfPz/aaJau8yTv4LGeI6VzcnrNanCa5axy+VX6Qk6OzdRY+GrhzmrYtET3rr+ek99Be60ZJXf87cKMEbw==",
   "success": true,
   "projectFilePath": "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\srvlocal_gui\\srvlocal_gui.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\joeva\\.nuget\\packages\\aqua-core\\5.2.0\\aqua-core.5.2.0.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\aqua-core-newtonsoft-json\\5.2.0\\aqua-core-newtonsoft-json.5.2.0.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\dynamicdata\\7.12.8\\dynamicdata.7.12.8.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\experimental.system.messaging\\1.1.0\\experimental.system.messaging.1.1.0.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\google.apis\\1.59.0\\google.apis.1.59.0.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\google.apis.auth\\1.59.0\\google.apis.auth.1.59.0.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\google.apis.core\\1.59.0\\google.apis.core.1.59.0.nupkg.sha512",

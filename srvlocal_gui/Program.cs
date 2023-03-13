@@ -1,10 +1,16 @@
+using srvlocal_gui.LAB;
+using srvlocal_gui.Properties;
 using System.Diagnostics;
 using System.IO;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Security.Policy;
 using System.Text;
 using System.Threading;
+using LABLibary.Connect;
+using DarkUI;
+using Zeroit.Framework.Metro;
 
 namespace srvlocal_gui
 {
@@ -17,7 +23,6 @@ namespace srvlocal_gui
                 return Assembly.GetExecutingAssembly().GetName().Version.ToString();
             }
         }
-
         public static bool RestartTrue = false;
 
         /// <summary>
@@ -27,7 +32,7 @@ namespace srvlocal_gui
         static void Main(string[] args)
         {
             
-
+            // "--start-nowin"
             if (args.Length > 0) 
             {
 
@@ -36,6 +41,7 @@ namespace srvlocal_gui
                     if (args[i].StartsWith("--start"))
                     {
                         var filePath = ".\\srvlocal.exe";
+
                         var process = new Process
                         {
                             StartInfo = new ProcessStartInfo
@@ -46,21 +52,47 @@ namespace srvlocal_gui
                                 CreateNoWindow = true,
                             }
                         };
-
                         process.Start();
 
                         ApplicationConfiguration.Initialize();
-                        Application.Run(new ArgStart());
+                        var arg = new ArgStart(true);
+                        arg.Show();
+                        Application.Run();
+                    }
+                    else if (args[i].StartsWith("--nowin"))
+                    {
+                        var filePath = ".\\srvlocal.exe";
+
+                        var process = new Process
+                        {
+                            StartInfo = new ProcessStartInfo
+                            {
+                                FileName = filePath,
+                                RedirectStandardOutput = true,
+                                UseShellExecute = false,
+                                CreateNoWindow = true,
+                            }
+                        };
+                        process.Start();
+
+                        ApplicationConfiguration.Initialize();
+                        var arg = new ArgStart(false);
+                        Application.Run();
                     }
                     else if (args[i] == "--help")
                     {
                         var info = new Form()
                         {
-                            Text = args[i],
+                            Size = new Size(500, 500),
+                            Text = "Command : " + args[i],
                             StartPosition = FormStartPosition.CenterScreen,
                             TopMost = true,
-                            ShowIcon = false,
-                            Size = new Size(500,500)
+                            ShowIcon = true,
+                            ShowInTaskbar = false,
+                            Name = args[i],
+                            ControlBox = false,
+                            HelpButton = true,
+                            FormBorderStyle = FormBorderStyle.FixedDialog
                         };
 
                         var txtBox = new TextBox()
@@ -72,39 +104,98 @@ namespace srvlocal_gui
                             Enabled = false,
                         };
 
-                        info.Controls.Add(txtBox);
-                        info.ShowDialog();
+                        var bntClose = new Button()
+                        {
+                            Text = "OK",
+                            Dock = DockStyle.Bottom,
+                            Enabled = true,
+                            Size = new Size(100, 30)
+                        };
 
-                        ShowHelp();
+                        info.Controls.Add(bntClose);
+                        info.Controls.Add(txtBox);
+
+                        bntClose.Click += (sender, e) => info.Close();
+
+                        info.ShowDialog();
                         return;
                     }
                     else if (args[i] == "--version")
                     {
-                        ShowVersion();
+                        Console.WriteLine(ShowVersion());
+                        var ab = new AboutBox();
+                        ab.ShowDialog();
                         return;
                     }
-                    else
+                    else 
                     {
-                        
+                        try
+                        {
+                            var desk = new DesktopApi("liloDEV420");
+                            desk.Start();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message + "\nSome Features may dont work.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
 
                         ApplicationConfiguration.Initialize();
-                        Application.Run(new LAB.builder_gui(args[i]));
+                        var mdi = new LAB.builder_gui(args[i]);
+                        mdi.Show();
+                        Application.Run();
                     }
                 }
             }
             else
             {
+                try
+                {
+                    var desk = new DesktopApi("liloDEV420");
+                    desk.Start();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message + "\nSome Features may dont work.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
                 if (!CheckIfDirIsValid())
                 {
                     var BrwThread = new Thread(Browser_);
                 }
 
-                ApplicationConfiguration.Initialize();
-                Application.Run(new Form1());
+                if (DebugSettings.Default.debug)
+                {
+                    ApplicationConfiguration.Initialize();
+                    Application.Run(new builder_gui(""));
+                }
+                else
+                {
+                    ApplicationConfiguration.Initialize();
+                    Application.Run(new Form1());
+                }
             }
         }
 
-        private static string  ShowVersion()
+        public static bool CheckIfDirIsValid()
+        {
+            string[] files = { "srvlocal.exe", "srvlocal.dll", "srvlocal.runtimeconfig.json" };
+
+            foreach (var file in files)
+            {
+                if (!File.Exists(AppDomain.CurrentDomain.BaseDirectory + file))
+                {
+                    return false;
+                }
+                else
+                {
+                    continue;
+                }
+            }
+
+            return true;
+        }
+
+        private static string ShowVersion()
         {
             return String.Format("JW Lmt. LILO™ SrvLocal - [Local Server Application Host] version {0}", AssemblyVersion);
         }
@@ -158,25 +249,6 @@ namespace srvlocal_gui
             }
         }
     
-
-        public static bool CheckIfDirIsValid()
-        {
-            string[] files = { "srvlocal.exe", "srvlocal.dll", "srvlocal.runtimeconfig.json" };
-
-            foreach (var file in files)
-            {
-                if (!File.Exists(AppDomain.CurrentDomain.BaseDirectory + file))
-                {
-                    return false;
-                }
-                else
-                {
-                    continue;
-                }
-            }
-
-            return true;
-        }
     }
 }
 

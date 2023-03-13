@@ -202,7 +202,7 @@ namespace srvlocal_gui
             {
                 Name = txtAppName.Text,
                 Id = rnd.Next(10000, 99999),
-                Target = RuntimeInformation.OSDescription,
+                Target = RuntimeInformation.RuntimeIdentifier,
                 ApplicationType = mainApp,
                 CloudSave = tglCloud.Checked,
                 Author = "Joey West",

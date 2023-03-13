@@ -295,33 +295,65 @@ namespace srvlocal_gui
         }
 
 
-        public void NotyFi()
+        public void NotyFi(bool inTray = false)
         {
-            var ping = new Ping()
+            if(inTray)
             {
 
-            };
-            var pingResu = ping.SendPingAsync("http://localhost:8080").Status;
 
-            noty = new NotifyIcon()
+                var ping = new Ping()
+                {
+
+                };
+                var pingResu = ping.SendPingAsync("http://localhost:8080").Status;
+
+                noty = new NotifyIcon()
+                {
+                    BalloonTipText = $"LocalHost is Running...\nVersion : {VersionApp()}\nPing : {PingServer("http://localhost:8080")}ms"
+                        as string,
+                    BalloonTipTitle = $"Started Succesfully"
+                        as string,
+                    BalloonTipIcon = ToolTipIcon.Info,
+
+                    Text = "Manages the DesktopClient.",
+
+                    Icon = this.Icon,
+                    ContextMenuStrip = inTrayCon
+                };
+
+                noty.Tag = "STATUS";
+                noty.Events();
+                noty.Visible = true;
+                noty.ShowBalloonTip(1000);
+            }
+            else
             {
-                BalloonTipText = $"LocalHost is Running...\nVersion : {VersionApp()}\nPing : {PingServer("http://localhost:8080")}ms"
-                    as string,
-                BalloonTipTitle = $"Started Succesfully"
-                    as string,
-                BalloonTipIcon = ToolTipIcon.Info,
+                var ping = new Ping()
+                {
 
-                Text = "Manages the DesktopClient.",
+                };
+                var pingResu = ping.SendPingAsync("http://localhost:8080").Status;
 
-                Icon = this.Icon,
-                ContextMenuStrip = conMenu
-            };
+                noty = new NotifyIcon()
+                {
+                    BalloonTipText = $"LocalHost is Running...\nVersion : {VersionApp()}\nPing : {PingServer("http://localhost:8080")}ms"
+                        as string,
+                    BalloonTipTitle = $"Started Succesfully"
+                        as string,
+                    BalloonTipIcon = ToolTipIcon.Info,
 
-            noty.Tag = "STATUS";
-            noty.BalloonTipClicked += (sender, e) => bntUFeed(sender, e);
-            noty.Events();
-            noty.Visible = true;
-            noty.ShowBalloonTip(1000);
+                    Text = "Manages the DesktopClient.",
+
+                    Icon = this.Icon,
+                    ContextMenuStrip = conMenu
+                };
+
+                noty.Tag = "STATUS";
+                noty.BalloonTipClicked += (sender, e) => bntUFeed(sender, e);
+                noty.Events();
+                noty.Visible = true;
+                noty.ShowBalloonTip(1000);
+            }
         }
 
         private async void guna2Button1_Click(object sender, EventArgs e)
@@ -430,6 +462,11 @@ namespace srvlocal_gui
                     chbDistFolder.Checked = false;
                 }
             }
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            ArgStart.SaveExit(true);
         }
     }
 }

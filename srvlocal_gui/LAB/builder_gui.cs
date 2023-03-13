@@ -1,4 +1,5 @@
-﻿using System;
+﻿using srvlocal_gui.LAB.TOOLS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,10 +12,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Media.TextFormatting;
 using static srvlocal_gui.ProjectFile;
+using LABLibary;
+using DarkUI.Forms;
+using OpenTK.Graphics.OpenGL;
 
 namespace srvlocal_gui.LAB
 {
-    public partial class builder_gui : Form
+    public partial class builder_gui : DarkForm
     {
         private int childFormNumber = 0;
         public string projectFile = string.Empty;
@@ -25,45 +29,61 @@ namespace srvlocal_gui.LAB
         {
             InitializeComponent();
             this.projectFile = projectName;
+
+            try
+            {
+                LoadProject();
+                Thread.Sleep(300);
+                status.Text = "Projekt Bereit";
+
+                try
+                {
+                    menuStrip.Renderer = new LABLibary.Form.MenuStrip.MyRenderer(true, Color.FromArgb(21, 21, 21));
+                    dateiDrop.Renderer = new LABLibary.Form.MenuStrip.MyRenderer(true, Color.FromArgb(21, 21, 21));
+                    toolStrip.Renderer = new LABLibary.Form.MenuStrip.MyRenderer(false, Color.FromArgb(24, 24, 24));
+                }
+                catch (Exception ex)
+                {
+                    status.Text = ex.Message;
+                }
+            }
+            catch (Exception ey)
+            {
+                if (!DebugSettings.Default.debug)
+                {
+                    MessageBox.Show(ey.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void builder_gui_Load(object sender, EventArgs e)
         {
-            LoadProject();
-            var bag = new LAB.TOOLS.Bag();
-            bag.MdiParent = this;
-            bagHandle = bag;
-            bag.Dock = DockStyle.Left;
+            
+        }
 
-            var explorer = new LAB.TOOLS.ProjectExplorer(projectFile);
-            explorer.MdiParent = this;
-            prjExpHandle = explorer;
-            explorer.Dock = DockStyle.Right;
+        public void OpenProject(object sender, EventArgs e)
+        {
 
-            explorer.Show();
-            bag.Show();
+        }
+
+        public void NewProject(object sender, EventArgs e)
+        {
+            var setup = new Setup();
+            setup.Show();
         }
 
         public void LoadProject(string FILE = null)
         {
             if(FILE != null)
             {
+                ProjectExplorer.chnFile = FILE;
+
                 var loadedProject = Project.LoadFromFile(FILE);
                 this.Text = loadedProject.Name + $" - LAB";
                 projectFile = FILE;
-                if (loadedProject.Target != RuntimeInformation.OSDescription)
+                if (loadedProject.Target != RuntimeInformation.RuntimeIdentifier)
                 {
-                    MessageBox.Show("You are Developing a Programm for another OperatingSystem. You cant test or Debug", "LAB Compiler", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2, MessageBoxOptions.ServiceNotification);
-                }
-            }
-            else
-            {
-                var loadedProject = Project.LoadFromFile(projectFile);
-                this.Text = loadedProject.Name + $" - LAB";
-
-                if (loadedProject.Target != RuntimeInformation.OSDescription)
-                {
-                    MessageBox.Show("You are Developing a Programm for another OperatingSystem. You cant test or Debug", "LAB Compiler", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2, MessageBoxOptions.ServiceNotification);
+                    status.Text = "You are Developing a Programm for another OperatingSystem. You cant test or Debug";
                 }
             }
             
@@ -71,9 +91,22 @@ namespace srvlocal_gui.LAB
 
         private void ShowNewForm(object sender, EventArgs e)
         {
-            Form childForm = new Form();
+            Process proc = new Process();
+            proc.StartInfo.FileName = ".\\srvlocal_gui.exe";
+            proc.StartInfo.Arguments = "--nowin";
+            proc.StartInfo.UseShellExecute = false;
+            proc.StartInfo.CreateNoWindow = true;
+            proc.StartInfo.RedirectStandardInput = true;
+            proc.StartInfo.RedirectStandardOutput = true;
+            proc.StartInfo.RedirectStandardError = true;
+            proc.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+            proc.Start();
+
+            Form childForm = new EDITOR.EditorJS();
             childForm.MdiParent = this;
-            childForm.Text = "Fenster " + childFormNumber++;
+            childForm.Dock = DockStyle.Fill;
+            childForm.FormBorderStyle = FormBorderStyle.None;   
+            childForm.Text = "LAB Code";
             childForm.Show();
         }
 
@@ -98,6 +131,23 @@ namespace srvlocal_gui.LAB
             {
                 string FileName = saveFileDialog.FileName;
             }
+        }
+
+        protected override void OnShown(EventArgs e)
+        {
+            base.OnShown(e);
+            var bag = new LAB.TOOLS.Bag();
+            bag.MdiParent = this;
+            bagHandle = bag;
+            bag.Dock = DockStyle.Left;
+
+            var explorer = new LAB.TOOLS.ProjectExplorer(projectFile);
+            explorer.MdiParent = this;
+            prjExpHandle = explorer;
+            explorer.Dock = DockStyle.Left;
+            explorer.Show();
+            //bag.Show();
+            updater.Start();
         }
 
         private void ExitToolsStripMenuItem_Click(object sender, EventArgs e)
@@ -183,6 +233,36 @@ namespace srvlocal_gui.LAB
             }
 
             this.Enabled = true;  
+        }
+
+        private void fileMenu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void neuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void projectAusVorhandenemCodeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dropDown1_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void updater_Tick(object sender, EventArgs e)
+        {
+            this.Refresh();
         }
     }
 }

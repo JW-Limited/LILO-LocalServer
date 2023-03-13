@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "iz5pMRwLijkhAYvB3tC5+inQv+daB0YOXkNJzHNr0ZBHcRwsRB4OYojgYHFFiJZAgczAYWM6hGS7NQSd6D/3HA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\LABLibary\\LABLibary.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\joeva\\.nuget\\packages\\experimental.system.messaging\\1.1.0\\experimental.system.messaging.1.1.0.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

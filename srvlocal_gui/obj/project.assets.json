@@ -51,6 +51,19 @@
           }
         }
       },
+      "Experimental.System.Messaging/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Experimental.System.Messaging.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Experimental.System.Messaging.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Google.Apis/1.59.0": {
         "type": "package",
         "dependencies": {
@@ -2227,6 +2240,29 @@
           "bin/placeholder/Client.dll": {}
         }
       },
+      "DarkUI/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/DarkUI.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DarkUI.dll": {}
+        }
+      },
+      "LABLibary/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Experimental.System.Messaging": "1.1.0",
+          "System.Drawing.Common": "6.0.0"
+        },
+        "compile": {
+          "bin/placeholder/LABLibary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LABLibary.dll": {}
+        }
+      },
       "Server/1.0.0": {
         "type": "project",
         "dependencies": {
@@ -2312,6 +2348,20 @@
         "lib/uap10.0.16299/DynamicData.pri",
         "lib/uap10.0.16299/DynamicData.xml",
         "logo.png"
+      ]
+    },
+    "Experimental.System.Messaging/1.1.0": {
+      "sha512": "vub7Mtt2WFdFKTZKECVuZx6feP5kUpS9EfVy+Yu4GDfdlMwivRdX4TbdkDYS2lKqCjqzUbnxTbJei1IOqC+CnA==",
+      "type": "package",
+      "path": "experimental.system.messaging/1.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "experimental.system.messaging.1.1.0.nupkg.sha512",
+        "experimental.system.messaging.nuspec",
+        "lib/netstandard2.0/Experimental.System.Messaging.dll",
+        "lib/netstandard2.0/Experimental.System.Messaging.xml"
       ]
     },
     "Google.Apis/1.59.0": {
@@ -6948,6 +6998,16 @@
       "path": "../Client/Client.csproj",
       "msbuildProject": "../Client/Client.csproj"
     },
+    "DarkUI/1.0.0": {
+      "type": "project",
+      "path": "../../../../source/repos/DarkUI/DarkUI/DarkUI.csproj",
+      "msbuildProject": "../../../../source/repos/DarkUI/DarkUI/DarkUI.csproj"
+    },
+    "LABLibary/1.0.0": {
+      "type": "project",
+      "path": "../LABLibary/LABLibary.csproj",
+      "msbuildProject": "../LABLibary/LABLibary.csproj"
+    },
     "Server/1.0.0": {
       "type": "project",
       "path": "../Server/Server.csproj",
@@ -6961,9 +7021,11 @@
   },
   "projectFileDependencyGroups": {
     "net7.0-windows7.0": [
+      "DarkUI >= 1.0.0",
       "Google.Apis.Auth >= 1.59.0",
       "Google.Apis.Gmail.v1 >= 1.59.0.2944",
       "Guna.UI2.WinForms >= 2.0.3.5",
+      "LABLibary >= 1.0.0",
       "MetroFramework >= 1.2.0.3",
       "MetroFramework.Design >= 1.2.0.3",
       "MetroModernUI >= 1.4.0",
@@ -7012,8 +7074,14 @@
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
           "projectReferences": {
+            "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\LABLibary\\LABLibary.csproj": {
+              "projectPath": "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\LABLibary\\LABLibary.csproj"
+            },
             "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\srvlocal\\srvlocal.csproj": {
               "projectPath": "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\srvlocal\\srvlocal.csproj"
+            },
+            "C:\\Users\\joeva\\source\\repos\\DarkUI\\DarkUI\\DarkUI.csproj": {
+              "projectPath": "C:\\Users\\joeva\\source\\repos\\DarkUI\\DarkUI\\DarkUI.csproj"
             }
           }
         }

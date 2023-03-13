@@ -22,14 +22,14 @@ namespace Server {
         private static object usersLocker;
         private static object logLocker;
         public bool _back;
+        private static object onlineUserBoxLocker;
         public NotifyIcon notyFi;
         public object ContextMenuBrocker;
         public static NotifyIcon notyIcoHandler;
 
         public ServerWindow(bool Background) {
-
-            ContextMenuBrocker = new object();
-            lock(ContextMenuBrocker)
+            onlineUserBoxLocker = new object();
+           
             {
                 this._back = Background;
                 InitializeComponent();
@@ -84,7 +84,7 @@ namespace Server {
                         this.listenerThread.Start();
 
                         this.AddLineToLog("The server was successfully started!");
-
+                        pnlStats.Visible = true;
 
                         try {
                             var loginWindow = new Client.LoginWindow();
@@ -270,12 +270,81 @@ namespace Server {
             }
         }
 
+        private void AddUserToOnlineBox(string username)
+        {
+            lock (onlineUserBoxLocker)
+            {
+                MethodInvoker methodInvokerDelegate = delegate () {
+                    string[] newOnlineUserBox = new string[this.onlineUserRichTextBox.Lines.Length + 1];
+
+                    for (int i = 0; i < this.onlineUserRichTextBox.Lines.Length; i++)
+                    {
+                        newOnlineUserBox[i] = this.onlineUserRichTextBox.Lines[i];
+                    }
+
+                    newOnlineUserBox[this.onlineUserRichTextBox.Lines.Length] = username;
+
+                    this.onlineUserRichTextBox.Lines = newOnlineUserBox;
+                };
+
+                if (this.InvokeRequired)
+                {
+                    this.Invoke(methodInvokerDelegate);
+                }
+                else
+                {
+                    methodInvokerDelegate();
+                }
+            }
+        }
+
+        private void RemoveUserFromOnlineBox(string username)
+        {
+            lock (onlineUserBoxLocker)
+            {
+                MethodInvoker methodInvokerDelegate = delegate () {
+                    string[] newOnlineUserBox = new string[this.onlineUserRichTextBox.Lines.Length - 1];
+
+                    for (int i = 0, j = 0; i < this.onlineUserRichTextBox.Lines.Length; i++, j++)
+                    {
+                        if (this.onlineUserRichTextBox.Lines[i] != username)
+                        {
+                            newOnlineUserBox[j] = this.onlineUserRichTextBox.Lines[i];
+                        }
+                        else
+                        {
+                            j--;
+                        }
+                    }
+
+                    this.onlineUserRichTextBox.Lines = newOnlineUserBox;
+                };
+
+                if (this.InvokeRequired)
+                {
+                    this.Invoke(methodInvokerDelegate);
+                }
+                else
+                {
+                    methodInvokerDelegate();
+                }
+            }
+        }
+
         private void DataReceived(object sender, DataReceivedEventArgs args) {
             if (args.Protocol.Type.SequenceEqual(ProtocolType.LogIn)) {
                 if (args.Protocol.Content != null && args.Protocol.Content.Length >= 1) {
                     string username = Encoding.UTF8.GetString(args.Protocol.Content);
                     this.AddUser(username, (NetworkWatcher)sender);
                 }
+            }
+            else if (args.Protocol.Type.SequenceEqual(ProtocolType.AddUser))
+            {
+                this.AddUserToOnlineBox(Encoding.UTF8.GetString(args.Protocol.Content));
+            }
+            else if (args.Protocol.Type.SequenceEqual(ProtocolType.RemoveUser))
+            {
+                this.RemoveUserFromOnlineBox(Encoding.UTF8.GetString(args.Protocol.Content));
             }
             else if (args.Protocol.Type.SequenceEqual(ProtocolType.SessionKeyReceived)) {
                 if (args.Protocol.Content != null && args.Protocol.Content.Length >= 1) {
@@ -539,6 +608,11 @@ namespace Server {
             }
 
             lblInfo.Text = $"Version : {AssemblyVersion}b1\nAuthor : Joey West\nCopyright © 2023 JW Limited";
+
+        }
+
+        private void onlineUserRichTextBox_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

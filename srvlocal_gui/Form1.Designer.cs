@@ -85,12 +85,18 @@
             this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
             this.FolderBrowser_Host = new Ookii.Dialogs.WinForms.VistaFolderBrowserDialog();
             this.FolderBorwser_Media = new Ookii.Dialogs.WinForms.VistaFolderBrowserDialog();
+            this.inTrayCon = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
+            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.ConsolePanel.SuspendLayout();
             this.conMenu.SuspendLayout();
+            this.inTrayCon.SuspendLayout();
             this.SuspendLayout();
             // 
             // thumbnailViewer1
@@ -485,7 +491,6 @@
             this.chbChangeMediaFolder.Name = "chbChangeMediaFolder";
             this.chbChangeMediaFolder.Size = new System.Drawing.Size(147, 24);
             this.chbChangeMediaFolder.TabIndex = 5;
-            this.chbChangeMediaFolder.CheckedChanged += ChbChangeMediaFolder_CheckedChanged;
             this.chbChangeMediaFolder.Text = "Change recFolder";
             this.chbChangeMediaFolder.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.chbChangeMediaFolder.UncheckedState.BorderRadius = 0;
@@ -818,6 +823,52 @@
             this.FolderBorwser_Media.Description = "Open Hosted Media";
             this.FolderBorwser_Media.UseDescriptionForTitle = true;
             // 
+            // inTrayCon
+            // 
+            this.inTrayCon.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.inTrayCon.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripTextBox1,
+            this.toolStripSeparator3,
+            this.toolStripMenuItem2,
+            this.toolStripMenuItem3});
+            this.inTrayCon.Name = "guna2ContextMenuStrip1";
+            this.inTrayCon.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.inTrayCon.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
+            this.inTrayCon.RenderStyle.ColorTable = null;
+            this.inTrayCon.RenderStyle.RoundedEdges = true;
+            this.inTrayCon.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
+            this.inTrayCon.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.inTrayCon.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.inTrayCon.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
+            this.inTrayCon.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.inTrayCon.Size = new System.Drawing.Size(211, 115);
+            // 
+            // toolStripTextBox1
+            // 
+            this.toolStripTextBox1.AutoSize = false;
+            this.toolStripTextBox1.Name = "toolStripTextBox1";
+            this.toolStripTextBox1.ReadOnly = true;
+            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 27);
+            this.toolStripTextBox1.Text = "DCC Version 1.0.0b";
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(207, 6);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(210, 24);
+            this.toolStripMenuItem2.Text = "Close Stream";
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(210, 24);
+            this.toolStripMenuItem3.Text = "About";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -864,6 +915,8 @@
             this.ConsolePanel.ResumeLayout(false);
             this.ConsolePanel.PerformLayout();
             this.conMenu.ResumeLayout(false);
+            this.inTrayCon.ResumeLayout(false);
+            this.inTrayCon.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -927,5 +980,10 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button8;
         private Ookii.Dialogs.WinForms.VistaFolderBrowserDialog FolderBrowser_Host;
         private Ookii.Dialogs.WinForms.VistaFolderBrowserDialog FolderBorwser_Media;
+        private Guna.UI2.WinForms.Guna2ContextMenuStrip inTrayCon;
+        private ToolStripTextBox toolStripTextBox1;
+        private ToolStripSeparator toolStripSeparator3;
+        private ToolStripMenuItem toolStripMenuItem2;
+        private ToolStripMenuItem toolStripMenuItem3;
     }
 }

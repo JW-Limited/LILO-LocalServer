@@ -10,13 +10,13 @@
         "projectName": "Client",
         "projectPath": "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\Client\\Client.csproj",
         "frameworks": {
-          "net48": {
+          "net472": {
             "projectReferences": {}
           }
         }
       },
       "frameworks": {
-        "net48": {}
+        "net472": {}
       }
     },
     "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\Server\\Server.csproj": {

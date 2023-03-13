@@ -1,0 +1,16 @@
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Client\bin\Release\Client.exe.config
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Client\bin\Release\Client.exe
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Client\bin\Release\Guna.UI2.dll
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Client\bin\Release\SaaUI.dll
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Client\bin\Release\SaaUI.xml
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Client\obj\Release\Client.csproj.AssemblyReference.cache
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Client\obj\Release\Client.csproj.SuggestedBindingRedirects.cache
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Client\obj\Release\Client.ChatWindow.resources
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Client\obj\Release\Client.LoginWindow.resources
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Client\obj\Release\Client.Properties.Resources.resources
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Client\obj\Release\Client.csproj.GenerateResource.cache
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Client\obj\Release\Client.csproj.CoreCompileInputs.cache
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Client\obj\Release\Client.csproj.CopyComplete
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Client\bin\Release\Client.pdb
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Client\obj\Release\Client.exe
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Client\obj\Release\Client.pdb

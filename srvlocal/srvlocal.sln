@@ -16,6 +16,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "..\Server\Server.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "..\Client\Client.csproj", "{74BC3CB8-3D35-4D41-B849-E95DD1A37F5D}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LABLibary", "..\LABLibary\LABLibary.csproj", "{209E5F74-43F2-49CC-831D-8A0ED9656067}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DarkUI", "..\..\..\..\source\repos\DarkUI\DarkUI\DarkUI.csproj", "{F19472F5-8C44-4C51-A8A0-B9DE5F555255}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,6 +46,14 @@ Global
 		{74BC3CB8-3D35-4D41-B849-E95DD1A37F5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74BC3CB8-3D35-4D41-B849-E95DD1A37F5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{74BC3CB8-3D35-4D41-B849-E95DD1A37F5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{209E5F74-43F2-49CC-831D-8A0ED9656067}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{209E5F74-43F2-49CC-831D-8A0ED9656067}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{209E5F74-43F2-49CC-831D-8A0ED9656067}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{209E5F74-43F2-49CC-831D-8A0ED9656067}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F19472F5-8C44-4C51-A8A0-B9DE5F555255}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F19472F5-8C44-4C51-A8A0-B9DE5F555255}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F19472F5-8C44-4C51-A8A0-B9DE5F555255}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F19472F5-8C44-4C51-A8A0-B9DE5F555255}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

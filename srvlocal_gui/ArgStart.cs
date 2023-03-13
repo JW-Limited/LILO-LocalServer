@@ -13,12 +13,20 @@ namespace srvlocal_gui
 {
     public partial class ArgStart : Form
     {
-        public ArgStart()
+        public bool visible;
+
+        public ArgStart(bool visible)
         {
             InitializeComponent();
 
+            this.visible = visible;
+
             var noti = new Form1();
-            noti.NotyFi();
+            noti.NotyFi(true);
+
+            this.Visible = visible;
+            this.ShowInTaskbar = visible;
+            this.ShowIcon = visible;
         }
 
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
@@ -28,17 +36,53 @@ namespace srvlocal_gui
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            if (Process.GetProcessesByName("srvlocal").Length > 0)
+            SaveExit(true);
+        }
+
+        public static void SaveExit(bool inTray)
+        {
+            if(inTray)
             {
-                foreach (var prockill in Process.GetProcessesByName("srvlocal"))
+                DialogResult msg = MessageBox.Show("Do you really want to close the JW Limited DCC. Some applications going to work no more.", "JW Limited DDC", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+
+                if(msg == DialogResult.OK)
                 {
+                    if (Process.GetProcessesByName("srvlocal").Length > 0)
+                    {
+                        foreach (var prockill in Process.GetProcessesByName("srvlocal"))
+                        {
 
-                    prockill.Kill();
+                            prockill.Kill();
 
+                        }
+                    }
+
+                    Application.ExitThread();
                 }
             }
-            Program.RestartTrue = true;
-            Application.ExitThread ();
+        }
+
+        private void Cred(object sender, EventArgs e)
+        {
+            credentialDialog1.ShowDialog();
+            if(credentialDialog1.Password == "password" && credentialDialog1.UserName == "admin")
+            {
+                var coon = new ConsoleEmu();
+                coon.Show();
+            }
+        }
+
+        private void ArgStart_Load(object sender, EventArgs e)
+        {
+            this.Visible = visible;
+            this.ShowInTaskbar = visible;
+            this.ShowIcon = visible;
+
+            if(!visible)
+            {
+                this.WindowState = FormWindowState.Minimized;
+                
+            }
         }
     }
 }
