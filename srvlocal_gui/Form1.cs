@@ -468,6 +468,16 @@ namespace srvlocal_gui
         {
             ArgStart.SaveExit(true);
         }
+
+        public int errorCount = 0;
+
+        private void bntAddError_Click(object sender, EventArgs e)
+        {
+            errorCount++;
+
+            LABLibary.Forms.ErrorDialog.message[errorCount] = "Example Error";
+            LABLibary.Forms.ErrorDialog.Show();
+        }
     }
 }
 

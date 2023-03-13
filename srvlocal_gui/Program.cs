@@ -31,7 +31,8 @@ namespace srvlocal_gui
         [STAThread]
         static void Main(string[] args)
         {
-            
+
+            ApplicationConfiguration.Initialize();
             // "--start-nowin"
             if (args.Length > 0) 
             {
@@ -54,7 +55,6 @@ namespace srvlocal_gui
                         };
                         process.Start();
 
-                        ApplicationConfiguration.Initialize();
                         var arg = new ArgStart(true);
                         arg.Show();
                         Application.Run();
@@ -75,56 +75,19 @@ namespace srvlocal_gui
                         };
                         process.Start();
 
-                        ApplicationConfiguration.Initialize();
                         var arg = new ArgStart(false);
                         Application.Run();
                     }
                     else if (args[i] == "--help")
                     {
-                        var info = new Form()
-                        {
-                            Size = new Size(500, 500),
-                            Text = "Command : " + args[i],
-                            StartPosition = FormStartPosition.CenterScreen,
-                            TopMost = true,
-                            ShowIcon = true,
-                            ShowInTaskbar = false,
-                            Name = args[i],
-                            ControlBox = false,
-                            HelpButton = true,
-                            FormBorderStyle = FormBorderStyle.FixedDialog
-                        };
-
-                        var txtBox = new TextBox()
-                        {
-                            Text = ShowHelp(),
-                            Location = new Point(12, 12),
-                            Multiline = true,
-                            Dock = DockStyle.Fill,
-                            Enabled = false,
-                        };
-
-                        var bntClose = new Button()
-                        {
-                            Text = "OK",
-                            Dock = DockStyle.Bottom,
-                            Enabled = true,
-                            Size = new Size(100, 30)
-                        };
-
-                        info.Controls.Add(bntClose);
-                        info.Controls.Add(txtBox);
-
-                        bntClose.Click += (sender, e) => info.Close();
-
-                        info.ShowDialog();
+                        LABLibary.Forms.InfoDialog.Show(ShowHelp(),"Help - Or visit US");
+   
                         return;
                     }
                     else if (args[i] == "--version")
                     {
-                        Console.WriteLine(ShowVersion());
-                        var ab = new AboutBox();
-                        ab.ShowDialog();
+                        LABLibary.Forms.InfoDialog.Show(ShowVersion(), "Version");
+
                         return;
                     }
                     else 
@@ -136,10 +99,10 @@ namespace srvlocal_gui
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show(ex.Message + "\nSome Features may dont work.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            LABLibary.Forms.ErrorDialog.message[0] = ex.Message + "\nSome Features may dont work.";
+                            LABLibary.Forms.ErrorDialog.Show();
                         }
 
-                        ApplicationConfiguration.Initialize();
                         var mdi = new LAB.builder_gui(args[i]);
                         mdi.Show();
                         Application.Run();
@@ -155,7 +118,8 @@ namespace srvlocal_gui
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message + "\nSome Features may dont work.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    LABLibary.Forms.ErrorDialog.message[0] = ex.Message + "\nSome Features may dont work.";
+                    LABLibary.Forms.ErrorDialog.Show();
                 }
 
                 if (!CheckIfDirIsValid())
@@ -165,12 +129,11 @@ namespace srvlocal_gui
 
                 if (DebugSettings.Default.debug)
                 {
-                    ApplicationConfiguration.Initialize();
+                    //ApplicationConfiguration.Initialize();
                     Application.Run(new builder_gui(""));
                 }
                 else
                 {
-                    ApplicationConfiguration.Initialize();
                     Application.Run(new Form1());
                 }
             }
@@ -216,6 +179,8 @@ namespace srvlocal_gui
 
             return sb.ToString();
         }
+
+
 
         public static void Browser_()
         {

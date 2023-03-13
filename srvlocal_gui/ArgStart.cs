@@ -27,6 +27,8 @@ namespace srvlocal_gui
             this.Visible = visible;
             this.ShowInTaskbar = visible;
             this.ShowIcon = visible;
+
+            
         }
 
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
