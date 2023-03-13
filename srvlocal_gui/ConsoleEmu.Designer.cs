@@ -41,20 +41,21 @@
             // 
             this.guna2WinProgressIndicator1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.guna2WinProgressIndicator1.AutoStart = true;
-            this.guna2WinProgressIndicator1.Location = new System.Drawing.Point(257, 126);
-            this.guna2WinProgressIndicator1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2WinProgressIndicator1.Location = new System.Drawing.Point(336, 196);
+            this.guna2WinProgressIndicator1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2WinProgressIndicator1.Name = "guna2WinProgressIndicator1";
-            this.guna2WinProgressIndicator1.Size = new System.Drawing.Size(108, 108);
+            this.guna2WinProgressIndicator1.Size = new System.Drawing.Size(135, 135);
             this.guna2WinProgressIndicator1.TabIndex = 0;
             // 
             // textBox1
             // 
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox1.Location = new System.Drawing.Point(0, 0);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(645, 367);
+            this.textBox1.Size = new System.Drawing.Size(837, 535);
             this.textBox1.TabIndex = 1;
             // 
             // statusStrip1
@@ -62,9 +63,10 @@
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripSplitButton1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 341);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 508);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(645, 26);
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 18, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(837, 27);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -76,25 +78,25 @@
             this.toolStripSplitButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton1.Image")));
             this.toolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripSplitButton1.Name = "toolStripSplitButton1";
-            this.toolStripSplitButton1.Size = new System.Drawing.Size(39, 24);
+            this.toolStripSplitButton1.Size = new System.Drawing.Size(41, 24);
             this.toolStripSplitButton1.Text = "toolStripSplitButton1";
             // 
             // consoleColorToolStripMenuItem
             // 
             this.consoleColorToolStripMenuItem.Name = "consoleColorToolStripMenuItem";
-            this.consoleColorToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.consoleColorToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.consoleColorToolStripMenuItem.Text = "Console Color";
             // 
             // ConsoleEmu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(645, 367);
+            this.ClientSize = new System.Drawing.Size(837, 535);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.guna2WinProgressIndicator1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ConsoleEmu";
             this.Text = "Console Output";
             this.statusStrip1.ResumeLayout(false);

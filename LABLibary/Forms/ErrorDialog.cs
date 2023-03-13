@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
 using System.Linq;
 using System.Net.Http.Headers;
@@ -10,6 +11,7 @@ using System.Windows.Forms;
 
 namespace LABLibary.Forms
 {
+    [Localizable(true)]
     public class ErrorDialog
     {
         public static string[] message = new string[99];
@@ -37,7 +39,8 @@ namespace LABLibary.Forms
                 Location = new Point(12, 12),
                 Multiline = true,
                 Dock = DockStyle.Fill,
-                Enabled = false,
+                ReadOnly = true,
+                ScrollBars = ScrollBars.Vertical | ScrollBars.Horizontal
             };
 
             var bntSave = new Button()
@@ -56,12 +59,9 @@ namespace LABLibary.Forms
                 Size = new Size(100, 50)
             };
 
-            
-
             info.Controls.Add(bntSave);
             info.Controls.Add(txtBox);
             info.Controls.Add(bntClose);
-
 
             bntSave.Click += (sender, e) => WriteToFile(message, info);
             bntClose.Click += (sender, e) => info.Close();
