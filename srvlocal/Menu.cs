@@ -24,6 +24,7 @@ namespace Local
         //-----------
 
         public string[] menuItems = { "Start", "Advanced Start", "Account", "Settings", "Help", "Quit" };
+        public string[] log = new string[10];
 
         public void Show()
         {

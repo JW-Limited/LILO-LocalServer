@@ -1,5 +1,4 @@
 ﻿using Server;
-using srvlocal;
 using System.ComponentModel.DataAnnotations;
 using System.Diagnostics;
 using System.Drawing;
@@ -11,6 +10,8 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
+using srvlocal;
+
 namespace Local
 {
     public class Server
@@ -104,7 +105,10 @@ namespace Local
         public static void Main(string[] args)
         {
             if (Process.GetProcessesByName("srvlocal_gui").Length > 0) menu = false;
-             if (!menu)
+
+            
+
+            if (!menu)
              {
                 if (Process.GetProcessesByName("srvlocal_gui").Length <= 0) SetColor(colors[4]);
                 redirect = new object();
@@ -162,7 +166,6 @@ namespace Local
                     Console.WriteLine("Configurations: ");
                     Console.WriteLine("");
 
-
                     listener = new TcpListener(IPAddress.Any, _port + 1);
                     listener.Start();
                     isRunning = true;
@@ -172,7 +175,7 @@ namespace Local
                     var externalIP = "";
 
                     try { externalIP = Convert.ToString(GetExternalIPAddress()); }
-                    catch (Exception e) { externalIP = "Something went wrong!"; }
+                    catch (Exception e) { externalIP = $"Something went wrong! ({e.Message.Replace(" (icanhazip.com:80)","")})"; }
 
                     Console.WriteLine("Directory    :   {0} [{1}]", distDirectory, distDirectory == "C:\\LILO\\dist" ? "DEFAULT" : "CHANGED");
                     Console.WriteLine("Media        :   {0} [{1}]", mediaDirectory, mediaDirectory == "C:\\LILO\\req\\media\\" ? "DEFAULT" : "CHANGED");
@@ -206,7 +209,7 @@ namespace Local
             }
             else
             {
-                Menu menu1 = new Menu();
+                var menu1 = new Menu();
                 menu1.Show();
             }
 
@@ -473,6 +476,7 @@ namespace Local
                             var content = File.ReadAllBytes(filePath);
                             response.ContentLength64 = content.Length;
                             response.OutputStream.Write(content, 0, content.Length);
+                            LogRequest(request,true);
                         }
                         else if (Directory.Exists(filePath))
                         {
@@ -482,6 +486,7 @@ namespace Local
                                 var content = File.ReadAllBytes(indexFilePath);
                                 response.ContentLength64 = content.Length;
                                 response.OutputStream.Write(content, 0, content.Length);
+                                LogRequest(request, true);
                             }
                             else
                             {
@@ -489,6 +494,7 @@ namespace Local
                                 var content = Encoding.UTF8.GetBytes(indexHtml);
                                 response.ContentLength64 = content.Length;
                                 response.OutputStream.Write(content, 0, content.Length);
+                                LogRequest(request, true);
                             }
                         }
                         else
@@ -595,17 +601,30 @@ namespace Local
             //logger.SendRequestToServer(request);
         }
 
-        private void LogRequest(HttpListenerRequest request)
+        private void LogRequest(HttpListenerRequest request, bool req = false)
         {
-            Console.WriteLine($"[LILO SERVER - {DateTime.UtcNow}] : {request.HttpMethod} {request.Url}");
+            
+
+            if(req)
+            {
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.WriteLine($"[LILO SERVER - {DateTime.UtcNow}] : SUCCEED {request.Url}");
+                Console.ForegroundColor = ConsoleColor.White;
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine($"[LILO SERVER - {DateTime.UtcNow}] : {request.HttpMethod} {request.Url}");
+                Console.ForegroundColor = ConsoleColor.White;
+            }
+
             if(advancedDebugg)
             {
                 Console.WriteLine($"User-Agent: {request.UserAgent}");
                 Console.WriteLine($"Accept-Encoding: {request.Headers["Accept-Encoding"]}");
                 Console.WriteLine($"Accept-Language: {request.Headers["Accept-Language"]}");
                 Console.WriteLine();
-            }
-            
+            } 
         }
 
         private string GenerateIndexHtml(string reqDirectory)

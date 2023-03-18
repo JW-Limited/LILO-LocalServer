@@ -11,9 +11,9 @@ namespace LILO.JBO
         private readonly string _serverUrl = "http://localhost:8080/api/data?key=liloDev-420";
         private readonly string _statusFile = ".\\srvlocal.runtimeconfig.json";
         private readonly string _accountFile = ".\\srvlocal.deps.json";
-        private System.Threading.Timer _timer;
+        //private System.Threading.Timer _timer;
 
-        public async Task<string> SendStatus(object state)
+        public Task<string> SendStatus(object state)
         {
             try
             {
@@ -28,12 +28,13 @@ namespace LILO.JBO
                 { "account", account }
             };
                     var response = client.UploadValues(_serverUrl, "POST", data);
-                    return Encoding.UTF8.GetString(response);
+                    return Task.FromResult(Encoding.UTF8.GetString(response));
                 }
             }
             catch (Exception ex)
             {
-                return "Error";
+                LABLibary.Forms.ErrorDialog.message[98] = ex.Message;
+                return Task.FromResult("Error");
             }
         }
     }

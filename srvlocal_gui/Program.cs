@@ -11,6 +11,7 @@ using System.Threading;
 using LABLibary.Connect;
 using DarkUI;
 using Zeroit.Framework.Metro;
+using LABLibary.Network;
 
 namespace srvlocal_gui
 {
@@ -25,6 +26,7 @@ namespace srvlocal_gui
         }
         public static bool RestartTrue = false;
 
+
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>
@@ -33,10 +35,11 @@ namespace srvlocal_gui
         {
 
             ApplicationConfiguration.Initialize();
+            
+
             // "--start-nowin"
             if (args.Length > 0) 
             {
-
                 for (int i = 0; i < args.Length; i++)
                 {
                     if (args[i].StartsWith("--start"))

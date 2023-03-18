@@ -15,6 +15,7 @@ using static srvlocal_gui.ProjectFile;
 using LABLibary;
 using DarkUI.Forms;
 using OpenTK.Graphics.OpenGL;
+using static Google.Apis.Requests.BatchRequest;
 
 namespace srvlocal_gui.LAB
 {
@@ -56,9 +57,24 @@ namespace srvlocal_gui.LAB
             }
         }
 
-        private void builder_gui_Load(object sender, EventArgs e)
+        private async void builder_gui_Load(object sender, EventArgs e)
         {
-            
+            var api = new Thread(StartPipe);
+            api.Start();
+        }
+
+        public async void StartPipe()
+        {
+            var pipe = new LABLibary.Network.DataPipe("MyNamedPipe", "mysecretkey");
+
+            // POST request
+            while (true)
+            {
+                Application.DoEvents();
+                var response = await pipe.GetDataAsync();
+
+                LABLibary.Forms.ErrorDialog.message[2] = response;
+            }
         }
 
         public void OpenProject(object sender, EventArgs e)

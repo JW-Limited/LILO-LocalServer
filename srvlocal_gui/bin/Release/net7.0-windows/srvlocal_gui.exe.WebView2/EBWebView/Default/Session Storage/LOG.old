@@ -1,3 +1,6 @@
-2023/03/11-00:35:57.550 25e8 Reusing MANIFEST C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Release\net7.0-windows\srvlocal_gui.exe.WebView2\EBWebView\Default\Session Storage/MANIFEST-000001
-2023/03/11-00:35:57.551 25e8 Recovering log #3
-2023/03/11-00:35:57.552 25e8 Reusing old log C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Release\net7.0-windows\srvlocal_gui.exe.WebView2\EBWebView\Default\Session Storage/000003.log 
+2023/03/16-14:05:50.356 32dc Reusing MANIFEST C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Release\net7.0-windows\srvlocal_gui.exe.WebView2\EBWebView\Default\Session Storage/MANIFEST-000001
+2023/03/16-14:05:50.357 32dc Recovering log #3
+2023/03/16-14:05:50.358 32dc Reusing old log C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Release\net7.0-windows\srvlocal_gui.exe.WebView2\EBWebView\Default\Session Storage/000003.log 
+2023/03/16-14:36:39.946 3178 Level-0 table #5: started
+2023/03/16-14:36:39.957 3178 Level-0 table #5: 288519 bytes OK
+2023/03/16-14:36:39.963 3178 Delete type=0 #3

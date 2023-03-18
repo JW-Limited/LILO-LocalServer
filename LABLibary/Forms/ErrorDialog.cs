@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LABLibary.Converter;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -35,7 +36,7 @@ namespace LABLibary.Forms
 
             var txtBox = new TextBox()
             {
-                Text = LABLibary.StringC.StrArrayToString(message),
+                Text = StringC.StrArrayToString(message),
                 Location = new Point(12, 12),
                 Multiline = true,
                 Dock = DockStyle.Fill,
@@ -76,7 +77,7 @@ namespace LABLibary.Forms
             
             if(sfd.ShowDialog() == DialogResult.OK)
             {
-                File.WriteAllText(sfd.FileName, LABLibary.StringC.StrArrayToString(content));
+                File.WriteAllText(sfd.FileName, StringC.StrArrayToString(content));
                 cl.Close();
             }
         }

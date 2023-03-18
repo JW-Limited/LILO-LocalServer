@@ -161,9 +161,9 @@ public class MediaServer
             string filename = request.Url.AbsolutePath;
             filename = filename.Substring(1);
             var filePath = Path.Combine(_mediaFolder, request.Url.LocalPath.TrimStart('/'));
-
-            Console.WriteLine("[MEDIA - " + DateTime.UtcNow + "] {0} request for: {1}", request.HttpMethod, filename);
-
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine("[LILO sMEDIA - " + DateTime.UtcNow + "] : {0} request for: {1}", request.HttpMethod, filename);
+            Console.ForegroundColor = ConsoleColor.White;
             if (request.Url.AbsolutePath == "/search/v1")
             {
                 var search = new GenerateSearchHtml(_mediaFolder);
@@ -244,6 +244,10 @@ public class MediaServer
 
     private void StreamAudio(HttpListenerRequest request, HttpListenerResponse response)
     {
+        Console.ForegroundColor = ConsoleColor.Magenta;
+        Console.WriteLine($"[LILO SERVER - {DateTime.UtcNow}] : STREAMING {request.Url}");
+        Console.ForegroundColor = ConsoleColor.White;
+
         string filename = request.Url.AbsolutePath;
         filename = filename.Substring(1);
 

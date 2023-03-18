@@ -89,7 +89,6 @@
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.bntAddError = new Zeroit.Framework.Metro.ZeroitMetroButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
@@ -848,31 +847,12 @@
             this.toolStripMenuItem3.Size = new System.Drawing.Size(187, 32);
             this.toolStripMenuItem3.Text = "About";
             // 
-            // bntAddError
-            // 
-            this.bntAddError.BackColor = System.Drawing.Color.Transparent;
-            this.bntAddError.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.bntAddError.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
-            this.bntAddError.DefaultColor = System.Drawing.Color.White;
-            this.bntAddError.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.bntAddError.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.bntAddError.HoverColor = System.Drawing.Color.White;
-            this.bntAddError.Location = new System.Drawing.Point(579, 88);
-            this.bntAddError.Name = "bntAddError";
-            this.bntAddError.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.bntAddError.RoundingArc = 101;
-            this.bntAddError.Size = new System.Drawing.Size(173, 101);
-            this.bntAddError.TabIndex = 8;
-            this.bntAddError.Text = "Add Error";
-            this.bntAddError.Click += new System.EventHandler(this.bntAddError_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1385, 1120);
-            this.Controls.Add(this.bntAddError);
             this.Controls.Add(this.ConsolePanel);
             this.Controls.Add(this.txtDistFolder);
             this.Controls.Add(this.txtMediaFolder);
@@ -981,6 +961,5 @@
         private ToolStripSeparator toolStripSeparator3;
         private ToolStripMenuItem toolStripMenuItem2;
         private ToolStripMenuItem toolStripMenuItem3;
-        private Zeroit.Framework.Metro.ZeroitMetroButton bntAddError;
     }
 }
