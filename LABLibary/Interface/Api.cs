@@ -8,20 +8,18 @@ using Newtonsoft.Json;
 using System.IO;
 using Newtonsoft.Json.Linq;
 using System.Net;
-using System.Diagnostics;
-using LILO.UI.Forms;
-using SQLitePCL;
-using Google.Apis.Auth.OAuth2;
-using Google.Apis.Services;
-using Google.Apis.Upload;
-using Google.Apis.Util.Store;
-using Google.Apis.YouTube.v3;
-using Google.Apis.YouTube.v3.Data;
 using Microsoft.Win32;
+using System.Windows.Forms;
+using System.Drawing;
 
-namespace LILO.Shell;
-internal class Api
+namespace LABLibary.Interface;
+public class ApiCollection
 {
+    public ApiCollection(ApiMode aMode) 
+    {
+        
+    }
+
     public class OneDrive
     {
         // Replace these values with your client ID and secret
@@ -69,9 +67,9 @@ internal class Api
 
     public class WinRegistry
     {
-        public class Keys
+        public static class Keys
         {
-            public void SetKeyValue(string keyName, string keyValue)
+            public static void SetKeyValue(string keyName, string keyValue)
             {
                 RegistryKey key = Registry.CurrentUser.OpenSubKey("LILO", true);
 
@@ -83,7 +81,7 @@ internal class Api
                 key.SetValue(keyName, keyValue);
             }
 
-            public string GetKeyValue(string keyName)
+            public static string GetKeyValue(string keyName)
             {
                 RegistryKey key = Registry.CurrentUser.OpenSubKey("LILO");
 
@@ -103,64 +101,6 @@ internal class Api
             }
         }
     }
-
-
-    public class Youtube
-    {
-
-        // Discontinued because of massiv code Changes in Youtubes Api
-
-        /*
-        public string _clientId = "YOUR_CLIENT_ID";
-        public string _clientSecret = "YOUR_CLIENT_SECRET";
-        public string _videoId = "VIDEO_ID";
-
-        public static void Download()
-        {
-            // Authenticate with YouTube
-            var credential = GoogleWebAuthorizationBroker.AuthorizeAsync(
-                new ClientSecrets
-                {
-                    ClientId = _clientId,
-                    ClientSecret = _clientSecret
-                },
-                new[] { YouTubeService.Scope.Youtube },
-                "user",
-                CancellationToken.None
-            ).Result;
-
-            // Create a new YouTube service
-            var youtubeService = new YouTubeService(new BaseClientService.Initializer()
-            {
-                HttpClientInitializer = credential,
-                ApplicationName = "YouTubeDownloader"
-            });
-
-            // Download the video
-            var video = youtubeService.Videos.List("snippet").ExecuteAsync(_videoId).Result;
-            if (video.Items.Count > 0)
-            {
-                var videoSnippet = video.Items[0].Snippet;
-                Console.WriteLine($"Downloading video: {videoSnippet.Title}");
-
-                var videoStream = youtubeService.Videos.List("id,contentDetails,fileDetails,liveStreamingDetails,player,processingDetails,recordingDetails,snippet,statistics,status,topicDetails").ExecuteAsync(_videoId).Result;
-                if (videoStream.Items.Count > 0)
-                {
-                    var downloadUrl = videoStream.Items[0].ContentDetails.;
-                    using (WebClient client = new WebClient())
-                    {
-                        // Set the user agent to mimic a web browser
-                        client.Headers.Add("user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3");
-
-                        // Download the video and save it to the current directory
-                        client.DownloadFile(downloadUrl, "video.mp4");
-                    }
-                }
-            }
-        }*/
-    }
-
-
     public class Deezer
     {
         public void requestSongTitle(string trackid,TextBox box)
@@ -259,11 +199,6 @@ internal class Api
             {
                 client.DownloadFile(url, $".\\temp\\tracks\\{trackName} - {artist}.mp3");
 
-                Player player = new Player($"{AppDomain.CurrentDomain.BaseDirectory}\\temp\\tracks\\{trackName} - {artist}.mp3");
-                player.cover = new Bitmap($"{AppDomain.CurrentDomain.BaseDirectory}\\temp\\covers\\{trackName}_cover.jpg");
-                player.title = trackName;
-                player.artist = artist;
-                player.Show();
             }
             catch (WebException ex)
             {
