@@ -29,7 +29,7 @@ public void ConsoleHandler()
     {
         Interface.ApiCollection.WinRegistry.Keys keys = new Interface.ApiCollection.WinRegistry.Keys();
 
-        if (keys.GetKeyValue("DebuggerMode") == "enabled")
+        if (keys.GetKeyValue("LILO\\local\\DebuggerMode") == "enabled")
         {
             var handle = AllocConsole();
             ShowWindow(handle, SW_SHOW);
