@@ -24,6 +24,27 @@ Example 1 : APICollection
 ```CSharp
 if (LABLibary.Interface.ApiCollection.WinRegistry.Keys.GetKeyValue("DebuggerMode") == "enabled") advancedDebugg = true;
 ```
+```CSharp
+public void ConsoleHandler()
+    {
+        Api.WinRegistry.Keys keys = new Api.WinRegistry.Keys();
+
+        if (keys.GetKeyValue("DebuggerMode") == "enabled")
+        {
+            var handle = AllocConsole();
+            ShowWindow(handle, SW_SHOW);
+        }
+        else
+        {
+            openInExtraWindow = false;
+            try
+            {
+                keys.SetKeyValue("DebuggerMode", "disabled");
+            }
+            catch (Exception msg) { Logger.Error(msg); }
+        }
+    }
+```
 Example 2 : Form Collection
 ```CSharp
 LABLibary.Forms.InfoDialog.Show(ShowVersion(), "Version");
