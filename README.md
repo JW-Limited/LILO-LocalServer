@@ -27,7 +27,7 @@ if (LABLibary.Interface.ApiCollection.WinRegistry.Keys.GetKeyValue("DebuggerMode
 ```CSharp
 public void ConsoleHandler()
     {
-        Api.WinRegistry.Keys keys = new Api.WinRegistry.Keys();
+        Interface.ApiCollection.WinRegistry.Keys keys = new Interface.ApiCollection.WinRegistry.Keys();
 
         if (keys.GetKeyValue("DebuggerMode") == "enabled")
         {
