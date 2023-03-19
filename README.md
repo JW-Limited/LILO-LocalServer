@@ -22,7 +22,7 @@ using LABLibary;
 
 Example 1 : APICollection
 ```CSharp
-if (LABLibary.Interface.ApiCollection.WinRegistry.Keys.GetKeyValue("LILO\\local\\DebuggerMode") == "enabled") advancedDebugg = true;
+if (LABLibary.Interface.ApiCollection.WinRegistry.Keys.GetKeyValue("LILO\\local\\DebuggerMode") == "enabled") advancedDebug = true;
 ```
 ```CSharp
 public void ConsoleHandler()
