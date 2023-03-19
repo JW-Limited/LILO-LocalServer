@@ -123,7 +123,7 @@
             this.startButton.Location = new System.Drawing.Point(0, 0);
             this.startButton.Margin = new System.Windows.Forms.Padding(2);
             this.startButton.Name = "startButton";
-            this.startButton.Size = new System.Drawing.Size(247, 42);
+            this.startButton.Size = new System.Drawing.Size(246, 42);
             this.startButton.TabIndex = 0;
             this.startButton.Text = "Start";
             this.startButton.UseVisualStyleBackColor = true;
@@ -136,7 +136,7 @@
             this.stopButton_Click.Location = new System.Drawing.Point(0, 0);
             this.stopButton_Click.Margin = new System.Windows.Forms.Padding(2);
             this.stopButton_Click.Name = "stopButton_Click";
-            this.stopButton_Click.Size = new System.Drawing.Size(259, 42);
+            this.stopButton_Click.Size = new System.Drawing.Size(260, 42);
             this.stopButton_Click.TabIndex = 1;
             this.stopButton_Click.Text = "Stop";
             this.stopButton_Click.UseVisualStyleBackColor = true;
@@ -245,7 +245,7 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.stopButton_Click);
             this.splitContainer1.Size = new System.Drawing.Size(510, 42);
-            this.splitContainer1.SplitterDistance = 247;
+            this.splitContainer1.SplitterDistance = 246;
             this.splitContainer1.TabIndex = 9;
             // 
             // panel1

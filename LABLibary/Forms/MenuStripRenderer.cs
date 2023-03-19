@@ -6,6 +6,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Color = System.Drawing.Color;
+using Image = System.Drawing.Image;
+using Point = System.Drawing.Point;
+using Rectangle = System.Drawing.Rectangle;
 
 namespace LABLibary.Form
 {
@@ -99,7 +103,7 @@ namespace LABLibary.Form
             {
                 //Fields
                 var graph = e.Graphics;
-                var arrowSize = new Size(5, 12);
+                var arrowSize = new System.Drawing.Size(5, 12);
                 var arrowColor = e.Item.Selected ? Color.White : primaryColor;
                 var rect = new Rectangle(e.ArrowRectangle.Location.X, (e.ArrowRectangle.Height - arrowSize.Height) / 2,
                     arrowSize.Width, arrowSize.Height);

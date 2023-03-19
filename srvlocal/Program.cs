@@ -107,6 +107,7 @@ namespace Local
             if (LABLibary.Interface.ApiCollection.WinRegistry.Keys.GetKeyValue("DebuggerMode") == "enabled") advancedDebugg = true;
 
             if (Process.GetProcessesByName("srvlocal_gui").Length > 0) menu = false;
+            if (Process.GetProcessesByName("LILO").Length > 0) menu = false;
 
             if (!menu)
              {

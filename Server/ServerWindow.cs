@@ -84,22 +84,17 @@ namespace Server {
                         this.listenerThread.Start();
 
                         this.AddLineToLog("The server was successfully started!");
-                        pnlStats.Visible = true;
+                        try
+                        {
+                            pnlStats.Visible = true;
 
-                        try {
-                            var loginWindow = new Client.LoginWindow();
-                            //panel1.Controls.Add(loginWindow);
-                            loginWindow.Show();
+                        }
+                        catch { }
 
-                            iconPictureBox.Visible = false;
-                        }
-                        catch (Exception ex) {
-                            lblError.Text = ex.Message;
-                            var proc = new Process();
-                            proc.StartInfo = new ProcessStartInfo(".\\Client.exe");
-                            proc.StartInfo.UseShellExecute = false;
-                            proc.Start();
-                        }
+                        var proc = new Process();
+                        proc.StartInfo = new ProcessStartInfo(".\\Client.exe");
+                        proc.StartInfo.UseShellExecute = false;
+                        proc.Start();
                     }
                     catch (Exception ex) {
                         this.isRunning = false;
@@ -111,7 +106,7 @@ namespace Server {
                             this.listener.Stop();
                         }
 
-                        MessageBox.Show($"The server couldn't be started!\r\n{ex.Message}", "Chat - Server", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                        MessageBox.Show($"The server couldn't be started!\r\n{ex.Message}\n\n{ex.InnerException}\n\n{ex.Source}\n\n{ex.TargetSite}", "Chat - Server", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
                     }
                 }
             }
@@ -612,6 +607,11 @@ namespace Server {
         }
 
         private void onlineUserRichTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }
