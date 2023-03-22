@@ -2254,6 +2254,7 @@
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "Experimental.System.Messaging": "1.1.0",
+          "Newtonsoft.Json": "13.0.2",
           "System.Drawing.Common": "6.0.0"
         },
         "compile": {
@@ -2279,6 +2280,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
+          "LABLibary": "1.0.0",
           "Remote.Linq.Newtonsoft.Json": "7.1.0",
           "Server": "1.0.0"
         },

@@ -10,13 +10,13 @@
         "projectName": "Client",
         "projectPath": "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\Client\\Client.csproj",
         "frameworks": {
-          "net472": {
+          "net48": {
             "projectReferences": {}
           }
         }
       },
       "frameworks": {
-        "net472": {}
+        "net48": {}
       }
     },
     "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\LABLibary\\LABLibary.csproj": {
@@ -62,6 +62,10 @@
             "Experimental.System.Messaging": {
               "target": "Package",
               "version": "[1.1.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.2, )"
             },
             "System.Drawing.Common": {
               "target": "Package",
@@ -135,6 +139,9 @@
           "net7.0-windows7.0": {
             "targetAlias": "net7.0-windows",
             "projectReferences": {
+              "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\LABLibary\\LABLibary.csproj": {
+                "projectPath": "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\LABLibary\\LABLibary.csproj"
+              },
               "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\Server\\Server.csproj": {
                 "projectPath": "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\Server\\Server.csproj"
               }
