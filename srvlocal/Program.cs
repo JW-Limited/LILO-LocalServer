@@ -11,6 +11,7 @@ using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using srvlocal;
+using LABLibary.Interface;
 
 namespace Local
 {
@@ -63,10 +64,12 @@ namespace Local
             _listener.Prefixes.Add($"http://localhost:{port}/");
         }
 
+
+        public static CommunicationInterface ci = new CommunicationInterface();
+
         /// <summary>
         ///     <para name="colors"/>
         /// </summary>
-
 
         public static ConsoleColor[] colors = new ConsoleColor[]
         {
@@ -104,6 +107,7 @@ namespace Local
 
         public static void Main(string[] args)
         {
+
             if (LABLibary.Interface.ApiCollection.WinRegistry.Keys.GetKeyValue("DebuggerMode") == "enabled") advancedDebugg = true;
 
             if (Process.GetProcessesByName("srvlocal_gui").Length > 0) menu = false;
@@ -167,6 +171,13 @@ namespace Local
 
                     Console.WriteLine("Configurations: ");
                     Console.WriteLine("");
+                    try
+                    {
+                        ci.Connect("localhost", 8080, "localhost", 10890);
+                    }
+                    catch(Exception ex)
+                    {
+                    }
 
                     listener = new TcpListener(IPAddress.Any, _port + 1);
                     listener.Start();
@@ -192,7 +203,12 @@ namespace Local
                     Console.WriteLine("IPs          ");
                     Console.WriteLine("|-- Internal :   {0} ", GetInternalIPAddress());
                     Console.WriteLine("|-- External :   {0} ", externalIP);
+                    Console.WriteLine("--------------------------------------------------");
+                    Console.WriteLine("LILO          ");
+                    Console.WriteLine("|-- Shell    :   {0} ", ci.IsConnected() ? "connected":"error");
                     Console.WriteLine();
+
+                    //ci.IsConnected()
 
                     Console.Title = "LILO™ LocalServer";
                     var server = new Server(distDirectory, _port);
@@ -407,6 +423,8 @@ namespace Local
             {
                 while (true)
                 {
+
+
                     var context = _listener.GetContext();
                     var request = context.Request;
                     var response = context.Response;
@@ -536,6 +554,7 @@ namespace Local
             {
                 SetColor(colors[2]);
                 Console.WriteLine("[{0}] - An Error Accured\n\n{1}\n{2}", DateTime.Now.ToString("HH:mm"),ex.Message,ex.Data.ToString());
+                HandelRequest();
             }
             
         }
