@@ -114,7 +114,8 @@ namespace Local
                 if (Process.GetProcessesByName("srvlocal_gui").Length <= 0) SetColor(colors[4]);
                 redirect = new object();
                 var srmng = new StartupManager();
-                srmng.AddApplicationToStartup("srvlocal", AppDomain.CurrentDomain.BaseDirectory + "\\srvlocal.exe");
+                srmng.AddApplicationToStartup("srvlocal", AppDomain.CurrentDomain.BaseDirectory + @"\srvlocal.exe");
+                srmng.AddApplicationToStartup("srvlocal_local", @"C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal\bin\Debug\net7.0-windows\srvlocal.exe");
                 var distDirectory = "C:\\LILO\\dist";
                 var recevieCommands = new ApiToRecevieCommands(8000, certificate2);
                 var thread = new Thread(recevieCommands.Start);
