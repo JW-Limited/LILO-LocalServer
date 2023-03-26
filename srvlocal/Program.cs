@@ -90,10 +90,6 @@ namespace Local
             Color screenBackgroundColor = Color.Black;
             int irc = SetScreenColorsApp.SetScreenColors(screenTextColor, screenBackgroundColor);
             Debug.Assert(irc == 0, "SetScreenColors failed, Win32Error code = " + irc + " = 0x" + irc.ToString("x"));
-            Debug.WriteLine("LargestWindowHeight=" + Console.LargestWindowHeight + " LargestWindowWidth=" + Console.LargestWindowWidth);
-            Debug.WriteLine("BufferHeight=" + Console.BufferHeight + " WindowHeight=" + Console.WindowHeight + " BufferWidth=" + Console.BufferWidth + " WindowWidth=" + Console.WindowWidth);
-            Debug.WriteLine("WindowTop=" + Console.WindowTop + " WindowLeft=" + Console.WindowLeft);
-            Debug.WriteLine("ForegroundColor=" + Console.ForegroundColor + " BackgroundColor=" + Console.BackgroundColor);
             Console.BackgroundColor = back;
             Console.ForegroundColor = fore;
         }
@@ -319,36 +315,19 @@ namespace Local
 
         public static void ChangePort(int port)
         {
-            if(port != _extraPorts[0])
+            var thread = new Thread(() =>
             {
-                var thread = new Thread(() =>
-                {
-                    var proc = new Process();
-                    proc.StartInfo.FileName = ".\\srvlocal.exe";
-                    proc.StartInfo.Arguments = "--port=" + _extraPorts[0];
-                    proc.Start();
-                });
-                Console.Clear();
-                thread.Start();
-                Environment.Exit(0);
-            }
-            else if (port == _extraPorts[0])
-            {
-                var thread = new Thread(() =>
-                {
-                    var proc = new Process();
-                    proc.StartInfo.FileName = ".\\srvlocal.exe";
-                    proc.StartInfo.Arguments = "--port=" + _extraPorts[1];
-
-                    proc.Start();
-                });
-                Console.Clear();
-                thread.Start();
-                Environment.Exit(01);
-            }
+                var proc = new Process();
+                proc.StartInfo.FileName = ".\\srvlocal.exe";
+                proc.StartInfo.Arguments = "--port=" + _extraPorts[port != _extraPorts[0] ? 0 : 1];
+                proc.Start();
+            });
+            Console.Clear();
+            thread.Start();
+            Environment.Exit(0);
         }
 
-        private static void ShowVersion()
+         private static void ShowVersion()
         {
             Console.WriteLine("JW Lmt. LILO™ SrvLocal - [Local Server Application Host] version {0}", AssemblyVersion);
         }
@@ -369,7 +348,6 @@ namespace Local
 
         public void Start()
         {
-            
             try
             {
                 var mediasvr = new MediaServer();
@@ -400,21 +378,11 @@ namespace Local
                     thread.Start();
                     thread.Join();
                 }
-
-                else if (!_listener.IsListening)
-                {
-                    var error = new Errorhandling();
-                    error.ThrowError("The Port cant be opened");
-                    return;
-                }
             }
             catch (Exception ex)
             {
                 ChangePort(_port);
             }
-            
-
-            
         }
 
         public void HandelRequest()
@@ -622,24 +590,13 @@ namespace Local
             //logger.SendRequestToServer(request);
         }
 
-        private void LogRequest(HttpListenerRequest request, bool req = false)
+       private void LogRequest(HttpListenerRequest request, bool req = false)
         {
-            
+            Console.ForegroundColor = req ? ConsoleColor.Blue : ConsoleColor.Green;
+            Console.WriteLine($"[LILO SERVER - {DateTime.UtcNow}] : {(req ? "SUCCEED" : request.HttpMethod)} {request.Url}");
+            Console.ForegroundColor = ConsoleColor.White;
 
-            if(req)
-            {
-                Console.ForegroundColor = ConsoleColor.Blue;
-                Console.WriteLine($"[LILO SERVER - {DateTime.UtcNow}] : SUCCEED {request.Url}");
-                Console.ForegroundColor = ConsoleColor.White;
-            }
-            else
-            {
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine($"[LILO SERVER - {DateTime.UtcNow}] : {request.HttpMethod} {request.Url}");
-                Console.ForegroundColor = ConsoleColor.White;
-            }
-
-            if(advancedDebugg)
+            if (advancedDebugg)
             {
                 Console.WriteLine($"User-Agent: {request.UserAgent}");
                 Console.WriteLine($"Accept-Encoding: {request.Headers["Accept-Encoding"]}");
@@ -647,14 +604,8 @@ namespace Local
                 Console.WriteLine();
             } 
         }
-
         private string GenerateIndexHtml(string reqDirectory)
         {
-            /// <example>
-            /// Example of an IndexHtml
-            /// </example>
-
-
             var sb = new StringBuilder();
             sb.Append("<html>");
             sb.Append("<head>");
@@ -681,7 +632,7 @@ namespace Local
 
             foreach (var file in currentDirectory.GetFiles())
             {
-                sb.Append($"<li><a href='{reqDirectory.Replace("C:\\LILO\\dist", "") + "\\" + file.Name}'>{file.Name}</a></li>");
+                sb.Append($"<li><a href='{file.Name}'>{file.Name}</a></li>");
             }
 
             sb.Append("</ul>");
@@ -689,7 +640,6 @@ namespace Local
             sb.Append("</html>");
             return sb.ToString();
         }
-
     }
 
     /// <summary>
@@ -715,7 +665,10 @@ namespace Local
 
         public void Stop()
         {
-            _process.Kill();
+            if (_process != null && !_process.HasExited)
+            {
+                _process.Kill();
+            }
             _thread.Join();
         }
 

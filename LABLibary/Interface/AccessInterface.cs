@@ -46,18 +46,13 @@ namespace LABLibary.Interface
         public void SendData(byte[] data1, byte[] data2) 
         { 
             // Send the data over each socket
-            Socket1.Send(data1); 
-            Socket2.Send(data2); 
+            SendToDefaultBuffer(data1, data2); 
         }
 
         public void ReceiveData() 
         { 
             // Receive data from each socket
-            byte[] data1 = new byte[1024]; 
-            Socket1.Receive(data1); 
-            
-            byte[] data2 = new byte[1024]; 
-            Socket2.Receive(data2); 
+            ReceiveFromDefaultBuffer(); 
         }
 
         public void Disconnect() 
@@ -102,17 +97,12 @@ namespace LABLibary.Interface
         public void ReceiveDataFromAnotherApplication() 
         { 
             // Receive data from each socket
-            byte[] data1 = new byte[1024]; 
-            Socket1.Receive(data1); 
-            
-            byte[] data2 = new byte[1024]; 
-            Socket2.Receive(data2); 
+            ReceiveFromDefaultBuffer(); 
         }
 
         public void SendDataFromAnotherApplication(byte[] data1, byte[] data2)
         {
-            Socket1.Send(data1);
-            Socket2.Send(data2);
+            SendToDefaultBuffer(data1, data2);
         }
     }
 }
