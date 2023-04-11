@@ -23,10 +23,10 @@ namespace LILO.JBO
                 using (var client = new WebClient())
                 {
                     var data = new NameValueCollection
-            {
-                { "status", status },
-                { "account", account }
-            };
+                    {
+                        { "status", status },
+                        { "account", account }
+                    };
                     var response = client.UploadValues(_serverUrl, "POST", data);
                     return Task.FromResult(Encoding.UTF8.GetString(response));
                 }

@@ -9,34 +9,17 @@ namespace LABLibary.Interface
 {
     public class CommunicationInterface
     {
-        /* Connects to the server 
-        // Create a CommunicationInterface object
-            CommunicationInterface ci = new CommunicationInterface(); 
-
-        // Connect to two application using their hostname/IP addresses and ports
-            ci.Connect("host1", port1, "host2", port2);
-
-        // Send data from our application to the other applications
-            byte[] data1 = Encoding.ASCII.GetBytes("Hello Application 1!"); 
-            byte[] data2 = Encoding.ASCII.GetBytes("Hello Application 2!"); 
-            ci.SendData(data1, data2); 
-
-        // Receive data from the other applications
-            ci.ReceiveDataFromAnotherApplication(); 
-
-        // Finally, disconnect from the applications
-            ci.Disconnect();
-        End*/
         Socket Socket1 { get; set; }
         Socket Socket2 { get; set; }
 
-        public void Connect(string host1, int port1, string host2, int port2)  
-        { 
-            // Initialize the socket objects
+        public CommunicationInterface()
+        {
             Socket1 = new Socket(SocketType.Stream, ProtocolType.Tcp);
             Socket2 = new Socket(SocketType.Stream, ProtocolType.Tcp); 
-            
-            // Connect to each host using the given ports
+        }
+
+        public void Connect(string host1, int port1, string host2, int port2)  
+        {
             Socket1.Connect(host1, port1); 
             Socket2.Connect(host2, port2);
             Socket1.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
@@ -45,14 +28,7 @@ namespace LABLibary.Interface
 
         public void SendData(byte[] data1, byte[] data2) 
         { 
-            // Send the data over each socket
             SendToDefaultBuffer(data1, data2); 
-        }
-
-        public void ReceiveData() 
-        { 
-            // Receive data from each socket
-            ReceiveFromDefaultBuffer(); 
         }
 
         public void Disconnect() 
@@ -82,21 +58,22 @@ namespace LABLibary.Interface
             Socket2.Send(data2); 
         }
 
-        public void ReceiveFromDefaultBuffer() 
+        public string ReceiveFromDefaultBuffer() 
         { 
             // Receive data from each socket
-            byte[] data1 = new byte[1024]; 
+            byte[] serverResponse = new byte[1024]; 
             Socket1.ReceiveBufferSize = 1024; 
-            Socket1.Receive(data1); 
+            Socket1.Receive(serverResponse); 
             
-            byte[] data2 = new byte[1024]; 
+            byte[] mediaResponse = new byte[1024]; 
             Socket2.ReceiveBufferSize = 1024; 
-            Socket2.Receive(data2); 
+            Socket2.Receive(mediaResponse); 
+
+            return Convert.ToString(serverResponse) + Convert.ToString(mediaResponse);
         }
 
         public void ReceiveDataFromAnotherApplication() 
-        { 
-            // Receive data from each socket
+        {
             ReceiveFromDefaultBuffer(); 
         }
 

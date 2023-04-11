@@ -21,7 +21,7 @@ namespace srvlocal_gui.LAB
         /// <param name="filepath">Path to the file</param>
         /// <param name="appname">Name of application without extension</param>
         /// <returns></returns>
-        public static Assembly CompileFromFile(string filepath, string appname)
+        public static Assembly CompileFromFile(string[] filepath, string appname)
         {
             setupParameters(appname); // Set the compiler parameters
             return applyCompileCode(ReadCodeFromFile(filepath), appname); // Compile the code
@@ -43,8 +43,8 @@ namespace srvlocal_gui.LAB
         /// Setup the compiler parameters
         /// </summary>
         /// <param name="appname">Name of application without extension</param>
-        private static void setupParameters(string appname){
-            // 📝 Set compiler parameters
+        private static void setupParameters(string appname)
+        {
             _parameters = new CompilerParameters();
             _parameters.GenerateExecutable = true; 
             _parameters.GenerateInMemory = true;
@@ -55,16 +55,21 @@ namespace srvlocal_gui.LAB
         /// <summary>
         /// Read the code from the given file path
         /// </summary>
-        /// <param name="filePath">Path to the file</param>
+        /// <param name="filePaths">Path to the file</param>
         /// <returns></returns>
-        private static string ReadCodeFromFile(string filePath)
-        {           
-            string code;
-            using (StreamReader sr = new StreamReader(filePath))
+        private static string ReadCodeFromFile(string[] filePaths)
+        {
+            StringBuilder sb = new StringBuilder();
+
+            foreach(string file in filePaths)
             {
-                code = sr.ReadToEnd();
-            }
-            return code;
+                using (StreamReader sr = new StreamReader(file))
+                {
+                    sb.AppendFormat( sr.ReadToEnd());
+                }
+            }    
+
+            return sb.ToString();
         }
         
         /// <summary>
@@ -80,7 +85,6 @@ namespace srvlocal_gui.LAB
             {
                 throw new Exception("Error compiling code: " + results.Errors[0].ErrorText);
             }
-            // 📦 Return the compiled assembly
             return results.CompiledAssembly;
         }
         

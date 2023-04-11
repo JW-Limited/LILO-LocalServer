@@ -53,7 +53,7 @@
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(470, 29);
+            this.guna2Panel1.Size = new System.Drawing.Size(474, 29);
             this.guna2Panel1.TabIndex = 1;
             this.guna2Panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.guna2Panel1_MouseDown);
             // 
@@ -62,7 +62,7 @@
             this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(431, -1);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(435, -1);
             this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(39, 30);
@@ -96,7 +96,7 @@
             this.pnlTreeView.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.pnlTreeView.Name = "pnlTreeView";
             this.pnlTreeView.SectionHeader = null;
-            this.pnlTreeView.Size = new System.Drawing.Size(470, 719);
+            this.pnlTreeView.Size = new System.Drawing.Size(474, 988);
             this.pnlTreeView.TabIndex = 14;
             // 
             // treeTest
@@ -109,7 +109,7 @@
             this.treeTest.MultiSelect = true;
             this.treeTest.Name = "treeTest";
             this.treeTest.ShowIcons = true;
-            this.treeTest.Size = new System.Drawing.Size(470, 719);
+            this.treeTest.Size = new System.Drawing.Size(474, 988);
             this.treeTest.TabIndex = 0;
             this.treeTest.Text = "darkTreeView1";
             // 
@@ -123,7 +123,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.ClientSize = new System.Drawing.Size(470, 748);
+            this.ClientSize = new System.Drawing.Size(474, 1017);
+            this.ControlBox = false;
             this.Controls.Add(this.treeTest);
             this.Controls.Add(this.pnlTreeView);
             this.Controls.Add(this.guna2Panel1);

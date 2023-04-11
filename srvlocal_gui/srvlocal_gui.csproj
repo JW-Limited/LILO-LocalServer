@@ -1,5 +1,4 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net7.0-windows</TargetFramework>
@@ -15,21 +14,21 @@
     <Description>An easy way to Build and Run youre LILO Apps</Description>
     <Copyright>Copyright© 2023 - JW Limited</Copyright>
     <ApplicationIcon>AQADtccxG4C3oUt-.ico</ApplicationIcon>
+    <StartupObject>srvlocal_gui.Program</StartupObject>
+    <ProduceReferenceAssembly>True</ProduceReferenceAssembly>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <DocumentationFile>C:\Users\joeva\Documents\GitHub\LILO-LocalServer\api.xml</DocumentationFile>
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <Optimize>True</Optimize>
     <DebugType>embedded</DebugType>
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DebugType>embedded</DebugType>
   </PropertyGroup>
-
   <ItemGroup>
     <Content Include="AQADtccxG4C3oUt-.ico" />
   </ItemGroup>
-
   <ItemGroup>
     <PackageReference Include="Google.Apis.Auth" Version="1.59.0" />
     <PackageReference Include="Google.Apis.Gmail.v1" Version="1.59.0.2944" />
@@ -37,6 +36,8 @@
     <PackageReference Include="MetroFramework" Version="1.2.0.3" />
     <PackageReference Include="MetroFramework.Design" Version="1.2.0.3" />
     <PackageReference Include="MetroModernUI" Version="1.4.0" />
+    <PackageReference Include="Microsoft.ML" Version="2.0.0" />
+    <PackageReference Include="Microsoft.ML.FastTree" Version="2.0.0" />
     <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.1619-prerelease" />
     <PackageReference Include="Modern.Forms" Version="0.3.0" />
     <PackageReference Include="Ookii.Dialogs.WinForms" Version="4.0.0" />
@@ -48,13 +49,12 @@
     <PackageReference Include="xunit" Version="2.4.2" />
     <PackageReference Include="Zeroit.Framework.Metro" Version="1.0.0" />
   </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\source\repos\DarkUI\DarkUI\DarkUI.csproj" />
     <ProjectReference Include="..\LABLibary\LABLibary.csproj" />
+    <ProjectReference Include="..\Project\ICSharpCode.TextEditor.csproj" />
     <ProjectReference Include="..\srvlocal\srvlocal.csproj" />
   </ItemGroup>
-
   <ItemGroup>
     <Compile Update="DebugSettings.Designer.cs">
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
@@ -67,19 +67,19 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
   </ItemGroup>
-
   <ItemGroup>
     <EmbeddedResource Update="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
-
   <ItemGroup>
     <None Update="DebugSettings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>DebugSettings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
-
+  <ItemGroup>
+    <Folder Include="LAB\TYP\" />
+  </ItemGroup>
 </Project>

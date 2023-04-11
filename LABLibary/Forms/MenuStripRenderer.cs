@@ -15,7 +15,7 @@ namespace LABLibary.Form
 {
     public class MenuStrip
     {
-        public class MyColorTable : ProfessionalColorTable
+        public class ColorTableWhite : ProfessionalColorTable
         {
             public override Color MenuItemBorder
             {
@@ -42,7 +42,7 @@ namespace LABLibary.Form
                 get { return Color.White; }
             }
         }
-        public class MyColorTableBlack : ProfessionalColorTable
+        public class ColorTableBlack : ProfessionalColorTable
         {
             public override Color MenuItemBorder
             {
@@ -79,7 +79,7 @@ namespace LABLibary.Form
             private int arrowThickness;
             public Color secondColor = Color.FromArgb(21, 21, 21);
 
-            public MyRenderer(bool isMainMenu,Color primaryColor) : base(new MyColorTableBlack())
+            public MyRenderer(bool isMainMenu,Color primaryColor) : base(new ColorTableBlack())
             {
                 this.primaryColor = primaryColor;
                 if (isMainMenu)

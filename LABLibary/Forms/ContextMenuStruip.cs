@@ -59,7 +59,6 @@ namespace LABLibary.Form
             set { primaryColor = value; }
         }
 
-        //Private methods
         private void LoadMenuItemHeight()
         {
             if (isMainMenu)
@@ -92,7 +91,6 @@ namespace LABLibary.Form
             }
         }
 
-        //Overrides
         protected override void OnHandleCreated(EventArgs e)
         {
             base.OnHandleCreated(e);

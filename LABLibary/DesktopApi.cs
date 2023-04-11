@@ -10,11 +10,43 @@ namespace LABLibary.Connect
         private Message test;
         public string ApiKey;
 
+        public static string Use(string message)
+        {
+            try
+            {
+                var api = new DesktopApi("liloDev420");
+                api.Start();
+
+                var queue = new MessageQueue(".\\private$\\Chat");
+
+                queue.Authenticate = true;
+
+                queue.Formatter = new XmlMessageFormatter(new Type[] { typeof(string) });
+
+                queue.Send(message);
+
+                return queue.Receive().ToString();
+            }
+            catch(Exception ex)
+            {
+                return $"Error({ex.Message})";
+            }
+            
+        }
+
         public DesktopApi(string apikey) 
         {
-            queue = new MessageQueue(".\\private$\\Commands");
-            this.ApiKey = apikey;
-            queue.Authenticate = true;
+            try
+            {
+                queue = new MessageQueue(".\\private$\\Commands");
+                this.ApiKey = apikey;
+                queue.Authenticate = true;
+            }
+            catch (Exception ex)
+            {
+
+            }
+            
         }
 
         public void Start()
@@ -27,11 +59,15 @@ namespace LABLibary.Connect
         {
             while (true)
             {
-                if(queue.GetAllMessages() != null)
+                try
                 {
-                    Message message = queue.Receive();
-                    message = message == null ? null : message;
+                    if (queue.GetAllMessages() != null)
+                    {
+                        Message message = queue.Receive();
+                        message = message == null ? null : message;
+                    }
                 }
+                catch { }
             }
 
         }

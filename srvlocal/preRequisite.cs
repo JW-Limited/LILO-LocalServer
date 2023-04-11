@@ -76,7 +76,7 @@ namespace srvlocal
                     log[1] = $"  {CommandRegistrar.SetEnvVar()}";
                     System.Threading.Thread.Sleep(rnd.Next(20,200));
 
-                    if (counter == 3) log[2] = $"  Opend Port at {Convert.ToString(GetExternalIPAddress())}:8080";
+                    if (counter == 3) { try { log[2] = $"  Opend Port at {Convert.ToString(GetExternalIPAddress())}:8080"; } catch { } }
                     if (counter == 4) log[3] = $"  Opend Port at {Convert.ToString(GetInternalIPAddress())}:8080";
                     if (counter == 18) { log[3] = $"  Requesting Token to Storage Controller (Network (lilo.storage.jwlmt.com))  ";  };
                     if (counter == 19) { Thread.Sleep(rnd.Next(10,250)); }

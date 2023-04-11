@@ -163,7 +163,7 @@ namespace srvlocal_gui
 
         private static string ShowVersion()
         {
-            return String.Format("JW Lmt. LILO™ SrvLocal - [Local Server Application Host] version {0}", AssemblyVersion);
+            return String.Format("JW Lmt. LILOï¿½ SrvLocal - [Local Server Application Host] version {0}", AssemblyVersion);
         }
 
         private static string ShowHelp()

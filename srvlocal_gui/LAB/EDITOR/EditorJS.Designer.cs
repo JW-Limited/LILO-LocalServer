@@ -51,6 +51,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1164, 691);
             this.Controls.Add(this.webView21);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EditorJS";
             this.Text = "EditorJS";
             ((System.ComponentModel.ISupportInitialize)(this.webView21)).EndInit();

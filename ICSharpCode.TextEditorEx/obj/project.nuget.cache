@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "7vLDzLfljpo6wxc725nOHcZjHrrKU7TI/Hyq/z507eADrW6qYoCV/La8gHWQouqNYU2IxkYByB/SNaJ3qB/5Pw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\ICSharpCode.TextEditorEx\\ICSharpCode.TextEditorEx.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\joeva\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.17\\microsoft.netcore.app.host.win-x64.5.0.17.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -105,3 +105,13 @@ C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\obj\Debug\net7.0-w
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-windows\Client.exe
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-windows\Client.pdb
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-windows\Client.exe.config
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-windows\srvlocal_gui.dll.config
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-windows\api.xml
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-windows\Experimental.System.Messaging.dll
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-windows\DarkUI.dll
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-windows\LABLibary.dll
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-windows\LABLibary.pdb
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-windows\DarkUI.pdb
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\obj\Debug\net7.0-windows\srvlocal_gui.LAB.EDITOR.EditorJS.resources
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\obj\Debug\net7.0-windows\srvlocal_gui.LAB.HELPER.Splash.resources
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\obj\Debug\net7.0-windows\srvlocal_gui.Splash.resources

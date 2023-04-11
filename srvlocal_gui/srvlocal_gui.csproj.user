@@ -4,34 +4,43 @@
     <_LastSelectedProfileId>C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\Properties\PublishProfiles\ClickOnceProfile.pubxml</_LastSelectedProfileId>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Update="AboutBox.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="AppSelector.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="ArgStart.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Bibo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="ConsoleEmu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Feed.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="GoogleLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="LAB\builder_gui.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="LAB\EDITOR\EditorJS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="LAB\HELPER\AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="LAB\HELPER\AppSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="LAB\HELPER\ArgStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="LAB\HELPER\Bibo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="LAB\HELPER\ConsoleEmu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="LAB\HELPER\Feed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="LAB\HELPER\GoogleLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="LAB\HELPER\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="LAB\HELPER\ProgressCallback\ProgressWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="LAB\HELPER\Setup.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="LAB\HELPER\Splash.cs">
@@ -46,17 +55,8 @@
     <Compile Update="LAB\TOOLS\ProjectExplorer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="MainForm.cs">
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Setup.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Splash.cs">
-      <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
 </Project>

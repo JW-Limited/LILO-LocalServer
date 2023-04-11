@@ -1,0 +1,809 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>srvlocal_gui</name>
+    </assembly>
+    <members>
+        <member name="F:srvlocal_gui.Form1.components">
+            <summary>
+             Required designer variable.
+            </summary>
+        </member>
+        <member name="M:srvlocal_gui.Form1.Dispose(System.Boolean)">
+            <summary>
+             Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:srvlocal_gui.Form1.InitializeComponent">
+            <summary>
+             Required method for Designer support - do not modify
+             the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:srvlocal_gui.LAB.builder_gui.components">
+            <summary>
+            Erforderliche Designervariable.
+            </summary>
+        </member>
+        <member name="M:srvlocal_gui.LAB.builder_gui.Dispose(System.Boolean)">
+            <summary>
+            Verwendete Ressourcen bereinigen.
+            </summary>
+            <param name="disposing">True, wenn verwaltete Ressourcen gelöscht werden sollen; andernfalls False.</param>
+        </member>
+        <member name="M:srvlocal_gui.LAB.builder_gui.InitializeComponent">
+            <summary>
+            Erforderliche Methode für die Designerunterstützung.
+            Der Inhalt der Methode darf nicht mit dem Code-Editor geändert werden.
+            </summary>
+        </member>
+        <member name="T:srvlocal_gui.LAB.Compiler">
+            🔨 Compiles C# code into an assembly
+        </member>
+        <member name="M:srvlocal_gui.LAB.Compiler.CompileFromFile(System.String[],System.String)">
+            <summary>
+            Setup the compiler parameters, compile a file and generate an executable
+            </summary>
+            <param name="filepath">Path to the file</param>
+            <param name="appname">Name of application without extension</param>
+            <returns></returns>
+        </member>
+        <member name="M:srvlocal_gui.LAB.Compiler.CompileCode(System.String,System.String)">
+            <summary>
+            Setup the compiler parameters, Compile c# code and generate an exe
+            </summary>
+            <param name="code">C# source code</param>
+            <param name="appname">Name of application without extension</param>
+            <returns></returns>
+        </member>
+        <member name="M:srvlocal_gui.LAB.Compiler.setupParameters(System.String)">
+            <summary>
+            Setup the compiler parameters
+            </summary>
+            <param name="appname">Name of application without extension</param>
+        </member>
+        <member name="M:srvlocal_gui.LAB.Compiler.ReadCodeFromFile(System.String[])">
+            <summary>
+            Read the code from the given file path
+            </summary>
+            <param name="filePaths">Path to the file</param>
+            <returns></returns>
+        </member>
+        <member name="M:srvlocal_gui.LAB.Compiler.applyCompileCode(System.String,System.String)">
+            <summary>
+            Compile the given code using the set parameters
+            </summary>
+            <param name="code">C# source code</param>
+            <param name="appname">Name of application without extension</param>
+            <returns></returns>
+        </member>
+        <member name="M:srvlocal_gui.LAB.Compiler.Compile(System.String)">
+            <summary>
+            Compile the given code using the set parameters
+            </summary>
+            <param name="code">C# source code</param>
+            <returns></returns>
+        </member>
+        <member name="M:srvlocal_gui.LAB.Compiler.GetCompileErrors(System.CodeDom.Compiler.CompilerResults)">
+            <summary>
+            Get the list of errors during compilation 
+            </summary>
+            <param name="results">compilation results</param>
+            <returns>List of errors</returns>
+        </member>
+        <member name="F:srvlocal_gui.LAB.EDITOR.EditorJS.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:srvlocal_gui.LAB.EDITOR.EditorJS.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:srvlocal_gui.LAB.EDITOR.EditorJS.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:srvlocal_gui.LAB.HELPER.Splash.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:srvlocal_gui.LAB.HELPER.Splash.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:srvlocal_gui.LAB.HELPER.Splash.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:srvlocal_gui.LAB.PROJEKT.Info.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:srvlocal_gui.LAB.PROJEKT.Info.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:srvlocal_gui.LAB.PROJEKT.Info.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:srvlocal_gui.LAB.TOOLS.Bag.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:srvlocal_gui.LAB.TOOLS.Bag.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:srvlocal_gui.LAB.TOOLS.Bag.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:srvlocal_gui.LAB.TOOLS.ProjectExplorer.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:srvlocal_gui.LAB.TOOLS.ProjectExplorer.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:srvlocal_gui.LAB.TOOLS.ProjectExplorer.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:srvlocal_gui.AboutBox.components">
+            <summary>
+            Erforderliche Designervariable.
+            </summary>
+        </member>
+        <member name="M:srvlocal_gui.AboutBox.Dispose(System.Boolean)">
+            <summary>
+            Verwendete Ressourcen bereinigen.
+            </summary>
+        </member>
+        <member name="M:srvlocal_gui.AboutBox.InitializeComponent">
+            <summary>
+            Erforderliche Methode für die Designerunterstützung.
+            Der Inhalt der Methode darf nicht mit dem Code-Editor geändert werden.
+            </summary>
+        </member>
+        <member name="F:srvlocal_gui.AppSelector.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:srvlocal_gui.AppSelector.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:srvlocal_gui.AppSelector.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:srvlocal_gui.ArgStart.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:srvlocal_gui.ArgStart.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:srvlocal_gui.ArgStart.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:srvlocal_gui.Bibo.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:srvlocal_gui.Bibo.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:srvlocal_gui.Bibo.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:srvlocal_gui.ConsoleEmu.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:srvlocal_gui.ConsoleEmu.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:srvlocal_gui.ConsoleEmu.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:srvlocal_gui.Feed.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:srvlocal_gui.Feed.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:srvlocal_gui.Feed.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:srvlocal_gui.GoogleLogin.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:srvlocal_gui.GoogleLogin.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:srvlocal_gui.GoogleLogin.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:srvlocal_gui.Login.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:srvlocal_gui.Login.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:srvlocal_gui.Login.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:srvlocal_gui.Setup.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:srvlocal_gui.Setup.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:srvlocal_gui.Setup.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:srvlocal_gui.Program.Main(System.String[])">
+            <summary>
+             The main entry point for the application.
+            </summary>
+        </member>
+        <member name="T:srvlocal_gui.Properties.Resources">
+            <summary>
+              Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
+            </summary>
+        </member>
+        <member name="P:srvlocal_gui.Properties.Resources.ResourceManager">
+            <summary>
+              Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
+            </summary>
+        </member>
+        <member name="P:srvlocal_gui.Properties.Resources.Culture">
+            <summary>
+              Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
+              Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
+            </summary>
+        </member>
+        <member name="P:srvlocal_gui.Properties.Resources._new">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Icon ähnlich wie (Symbol).
+            </summary>
+        </member>
+        <member name="P:srvlocal_gui.Properties.Resources.dropbox_512px">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:srvlocal_gui.Properties.Resources.google_icon_131222">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:srvlocal_gui.Properties.Resources.icons8_close">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Icon ähnlich wie (Symbol).
+            </summary>
+        </member>
+        <member name="P:srvlocal_gui.Properties.Resources.icons8_close_16">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:srvlocal_gui.Properties.Resources.icons8_close_32">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:srvlocal_gui.Properties.Resources.icons8_file_folder">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Icon ähnlich wie (Symbol).
+            </summary>
+        </member>
+        <member name="P:srvlocal_gui.Properties.Resources.icons8_file_folder_16">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:srvlocal_gui.Properties.Resources.icons8_file_folder_32">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:srvlocal_gui.Properties.Resources.icons8_google_32">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:srvlocal_gui.Properties.Resources.icons8_open_file_folder">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Icon ähnlich wie (Symbol).
+            </summary>
+        </member>
+        <member name="P:srvlocal_gui.Properties.Resources.icons8_open_file_folder_16">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:srvlocal_gui.Properties.Resources.icons8_open_file_folder_32">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:srvlocal_gui.Properties.Resources.icons8_opened_folder">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Icon ähnlich wie (Symbol).
+            </summary>
+        </member>
+        <member name="P:srvlocal_gui.Properties.Resources.icons8_opened_folder_16">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:srvlocal_gui.Properties.Resources.icons8_opened_folder_32">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:srvlocal_gui.Properties.Resources.icons8_print">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Icon ähnlich wie (Symbol).
+            </summary>
+        </member>
+        <member name="P:srvlocal_gui.Properties.Resources.icons8_print_16">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:srvlocal_gui.Properties.Resources.icons8_print_32">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:srvlocal_gui.Properties.Resources.icons8_save">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Icon ähnlich wie (Symbol).
+            </summary>
+        </member>
+        <member name="P:srvlocal_gui.Properties.Resources.icons8_save_16">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:srvlocal_gui.Properties.Resources.icons8_save_32">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:srvlocal_gui.Properties.Resources.icons8_save_all">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Icon ähnlich wie (Symbol).
+            </summary>
+        </member>
+        <member name="P:srvlocal_gui.Properties.Resources.icons8_save_all_16">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:srvlocal_gui.Properties.Resources.icons8_save_all_32">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:srvlocal_gui.Properties.Resources.icons8_save_as">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Icon ähnlich wie (Symbol).
+            </summary>
+        </member>
+        <member name="P:srvlocal_gui.Properties.Resources.icons8_save_as_16">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:srvlocal_gui.Properties.Resources.icons8_save_as_32">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:srvlocal_gui.Properties.Resources.icons8_server_windows_32">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:srvlocal_gui.Properties.Resources.icons8_time_machine">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Icon ähnlich wie (Symbol).
+            </summary>
+        </member>
+        <member name="P:srvlocal_gui.Properties.Resources.icons8_time_machine_16">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:srvlocal_gui.Properties.Resources.icons8_time_machine_32">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:srvlocal_gui.Properties.Resources.new_16">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:srvlocal_gui.Properties.Resources.new_32">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:srvlocal_gui.Properties.Resources.Ocean_backgrounds_wallpapers_HD">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:srvlocal_gui.Properties.Resources.qrcode_github_com">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="M:srvlocal_gui.XML.Write_XML``1(``0,System.String,System.Boolean,System.String)">
+            <summary>
+            Writes an object to an XML file.
+            With or without FileOpen dialog  
+            </summary>
+            <typeparam name="T">objectname/classname</typeparam>
+            <param name="filename">file.xml</param>
+            <param name="with SaveFileDialogSaveFileDialog">true/false</param>
+            <param name="FileTypeText">Xml-File (*.xml)|*.xml|txt files (*.txt)|*.txt|All files (*.*)|*.*</param>
+            <returns>true/false</returns>
+        </member>
+        <member name="M:srvlocal_gui.XML.Read_XML``1(System.String@,System.Boolean,System.String)">
+            <summary>
+            Reads an object from an XML file.
+            With or without FileOpen dialog
+            </summary>
+            <typeparam name="T">objectname/classname</typeparam>
+            <param name="ref filenamefilename">file.xml</param>
+            <param name="with OpenFileDialogOpenFileDialog">true/false</param>
+            <param name="FileTypeText">Xml-File (*.xml)|*.xml|txt files (*.txt)|*.txt|All files (*.*)|*.*</param>
+            <returns>XML object or default</returns>
+        </member>
+        <member name="T:srvlocal_gui.ApplicationConfiguration">
+            <summary>
+             Bootstrap the application configuration.
+            </summary>
+        </member>
+        <member name="M:srvlocal_gui.ApplicationConfiguration.Initialize">
+            <summary>
+             Bootstrap the application as follows:
+             <code>
+             global::System.Windows.Forms.Application.EnableVisualStyles();
+             global::System.Windows.Forms.Application.SetCompatibleTextRenderingDefault(false);
+             global::System.Windows.Forms.Application.SetHighDpiMode(HighDpiMode.SystemAware);
+            </code>
+            </summary>
+        </member>
+        <member name="T:RuFramework.IProgressCallback">
+            <summary>
+            This defines an interface which can be implemented by UI elements
+            which indicate the progress of a long operation.
+            (See ProgressWindow for a typical implementation)
+            </summary>
+        </member>
+        <member name="M:RuFramework.IProgressCallback.Begin(System.Int32,System.Int32)">
+            <summary>
+            Call this method from the worker thread to initialize
+            the progress callback.
+            </summary>
+            <param name="minimum">The minimum value in the progress range (e.g. 0)</param>
+            <param name="maximum">The maximum value in the progress range (e.g. 100)</param>
+        </member>
+        <member name="M:RuFramework.IProgressCallback.Begin">
+            <summary>
+            Call this method from the worker thread to initialize
+            the progress callback, without setting the range
+            </summary>
+        </member>
+        <member name="M:RuFramework.IProgressCallback.SetRange(System.Int32,System.Int32)">
+            <summary>
+            Call this method from the worker thread to reset the range in the progress callback
+            </summary>
+            <param name="minimum">The minimum value in the progress range (e.g. 0)</param>
+            <param name="maximum">The maximum value in the progress range (e.g. 100)</param>
+            <remarks>You must have called one of the Begin() methods prior to this call.</remarks>
+        </member>
+        <member name="M:RuFramework.IProgressCallback.SetText(System.String)">
+            <summary>
+            Call this method from the worker thread to update the progress text.
+            </summary>
+            <param name="text">The progress text to display</param>
+            <remarks>You must have called one of the Begin() methods prior to this call.</remarks>
+        </member>
+        <member name="M:RuFramework.IProgressCallback.StepTo(System.Int32)">
+            <summary>
+            Call this method from the worker thread to increase the progress counter by a specified value.
+            </summary>
+            <param name="val">The amount by which to increment the progress indicator</param>
+            <remarks>You must have called one of the Begin() methods prior to this call.</remarks>
+        </member>
+        <member name="M:RuFramework.IProgressCallback.Increment(System.Int32)">
+            <summary>
+            Call this method from the worker thread to step the progress meter to a particular value.
+            </summary>
+            <param name="val">The value to which to step the meter</param>
+            <remarks>You must have called one of the Begin() methods prior to this call.</remarks>
+        </member>
+        <member name="P:RuFramework.IProgressCallback.IsAborting">
+            <summary>
+            If this property is true, then you should abort work
+            </summary>
+            <remarks>You must have called one of the Begin() methods prior to this call.</remarks>
+        </member>
+        <member name="M:RuFramework.IProgressCallback.End">
+            <summary>
+            Call this method from the worker thread to finalize the progress meter
+            </summary>
+            <remarks>You must have called one of the Begin() methods prior to this call.</remarks>
+        </member>
+        <member name="T:RuFramework.RuProgressBar">
+            <summary>
+            RuProgressBar simplifies the use of progressbar version 3.2
+            </summary>
+        </member>
+        <member name="F:RuFramework.RuProgressBar.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:RuFramework.RuProgressBar.Begin(System.Int32,System.Int32)">
+            <summary>
+            Call this method from the worker thread to initialize
+            the progress meter.
+            </summary>
+            <param name="minimum">The minimum value in the progress range (e.g. 0)</param>
+            <param name="maximum">The maximum value in the progress range (e.g. 100)</param>
+        </member>
+        <member name="M:RuFramework.RuProgressBar.Begin">
+            <summary>
+            Call this method from the worker thread to initialize
+            the progress callback, without setting the range
+            </summary>
+        </member>
+        <member name="M:RuFramework.RuProgressBar.SetRange(System.Int32,System.Int32)">
+            <summary>
+            Call this method from the worker thread to reset the range in the progress callback
+            </summary>
+            <param name="minimum">The minimum value in the progress range (e.g. 0)</param>
+            <param name="maximum">The maximum value in the progress range (e.g. 100)</param>
+            <remarks>You must have called one of the Begin() methods prior to this call.</remarks>
+        </member>
+        <member name="M:RuFramework.RuProgressBar.SetText(System.String)">
+            <summary>
+            Call this method from the worker thread to update the progress text.
+            </summary>
+            <param name="text">The progress text to display</param>
+        </member>
+        <member name="M:RuFramework.RuProgressBar.Increment(System.Int32)">
+            <summary>
+            Call this method from the worker thread to increase the progress counter by a specified value.
+            </summary>
+            <param name="val">The amount by which to increment the progress indicator</param>
+        </member>
+        <member name="M:RuFramework.RuProgressBar.StepTo(System.Int32)">
+            <summary>
+            Call this method from the worker thread to step the progress meter to a particular value.
+            </summary>
+            <param name="val"></param>
+        </member>
+        <member name="P:RuFramework.RuProgressBar.IsAborting">
+            <summary>
+            If this property is true, then you should abort work
+            </summary>
+        </member>
+        <member name="M:RuFramework.RuProgressBar.End">
+            <summary>
+            Call this method from the worker thread to finalize the progress meter
+            </summary>
+        </member>
+        <member name="M:RuFramework.RuProgressBar.OnLoad(System.EventArgs)">
+            <summary>
+            Handles the form load, and sets an event to ensure that
+            intialization is synchronized with the appearance of the form.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:RuFramework.RuProgressBar.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:RuFramework.RuProgressBar.OnClosing(System.ComponentModel.CancelEventArgs)">
+            <summary>
+            Handler for 'Close' clicking
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:RuFramework.RuProgressBar.UpdateStatusText">
+            <summary>
+            Utility function that formats and updates the title bar text
+            </summary>
+        </member>
+        <member name="M:RuFramework.RuProgressBar.AbortWork">
+            <summary>
+            Utility function to terminate the thread
+            </summary>
+        </member>
+        <member name="M:RuFramework.RuProgressBar.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:RuFramework.MRU.MRUManager.#ctor(System.Windows.Forms.ToolStripMenuItem,System.Action{System.Object,System.EventArgs})">
+            <summary>
+            Init the MRUManager
+            </summary>
+            <param name="parentMenuItem">Recent Menu Item</param>
+            <param name="onRecentFileClick">Event to click resent menu item</param>
+        </member>
+        <member name="M:RuFramework.MRU.MRUManager.RemoveRecentFile(System.String)">
+            <summary>
+            Remove recent menu Item
+            </summary>
+            <param name="fileNameWithFullPath">file name</param>
+        </member>
+        <member name="M:RuFramework.MRU.MRUManager.AddRecentFile(System.String)">
+            <summary>
+            Add recent menu item
+            </summary>
+            <param name="fileNameWithFullPath">file name</param>
+        </member>
+        <member name="M:RuFramework.MRU.MRUManager._onClearRecentFiles_Click(System.Object,System.EventArgs)">
+            <summary>
+            Event to clear MRU-file an recent menu items
+            </summary>
+            <param name="obj"></param>
+            <param name="evt"></param>
+        </member>
+        <member name="M:RuFramework.MRU.MRUManager._refreshRecentFilesMenu">
+            <summary>
+            Refresh recent menu items
+            </summary>
+        </member>
+        <member name="M:RuFramework.MRU.MRUManager.GetAppDataPath(RuFramework.MRU.MRUManager.MRUDataPath)">
+            <summary>
+            Get MRU-Path depending on Local, Roaming, Common or ExePath
+            Default is Roaming
+            </summary>
+            <param name="mruDataPath"></param>
+            <returns>Filename with path</returns>
+        </member>
+        <member name="M:RuFramework.MRU.MRUManager.Read(RuFramework.MRU.MRUManager.MRUDataPath)">
+            <summary>
+            Read MRU data by Path to MRU-file or default by roaming
+            </summary>
+            <param name="ConfigPath">Config file name or nothig, default roaming</param>
+            <returns>Config data</returns>
+        </member>
+        <member name="M:RuFramework.MRU.MRUManager.Save(RuFramework.MRU.MRUSettings,RuFramework.MRU.MRUManager.MRUDataPath)">
+            <summary>
+            Save config data with Path to MRU-file
+            </summary>
+            <param name="appSettings">Config data</param>
+            <param name="ConfigPath">Config file name or nothig, default roaming</param>
+        </member>
+        <member name="M:RuFramework.MRU.MRUManager.Remove(System.String)">
+            <summary>
+            Remove file name from MRU-file.
+            Call this function when File - Open operation failed.
+            </summary>
+            <param name="file">File Name</param>
+        </member>
+        <member name="M:RuFramework.MRU.MRUManager.Remove">
+            <summary>
+            Remove all file name from the MRU-file
+            </summary>
+        </member>
+        <member name="F:MetroFramework.Demo.MainForm.components">
+            <summary>
+            Erforderliche Designervariable.
+            </summary>
+        </member>
+        <member name="M:MetroFramework.Demo.MainForm.Dispose(System.Boolean)">
+            <summary>
+            Verwendete Ressourcen bereinigen.
+            </summary>
+            <param name="disposing">True, wenn verwaltete Ressourcen gelöscht werden sollen; andernfalls False.</param>
+        </member>
+        <member name="M:MetroFramework.Demo.MainForm.InitializeComponent">
+            <summary>
+            Erforderliche Methode für die Designerunterstützung.
+            Der Inhalt der Methode darf nicht mit dem Code-Editor geändert werden.
+            </summary>
+        </member>
+    </members>
+</doc>

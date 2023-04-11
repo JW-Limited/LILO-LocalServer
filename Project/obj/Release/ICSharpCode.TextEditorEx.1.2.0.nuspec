@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>ICSharpCode.TextEditorEx</id>
+    <version>1.2.0</version>
+    <authors>Stef Heyenrath, SharpDevelop, Qwertie and MysticBoy</authors>
+    <projectUrl>https://github.com/StefH/ICSharpCode.TextEditorEx</projectUrl>
+    <description>Package Description</description>
+    <copyright>Copyright © Stef Heyenrath, SharpDevelop, Qwertie and MysticBoy 2014-2022</copyright>
+    <tags>TextEditor ICSharpCode</tags>
+    <repository type="git" commit="1f3407ff9e1a0834c9acb5b956b2fddb4b4fa60a" />
+    <dependencies>
+      <group targetFramework="net6.0-windows7.0" />
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework="net6.0-windows7.0">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WindowsForms" />
+      </group>
+    </frameworkReferences>
+  </metadata>
+  <files>
+    <file src="C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Project\bin\Release\net6.0-windows\ICSharpCode.TextEditor.dll" target="lib\net6.0-windows7.0\ICSharpCode.TextEditor.dll" />
+  </files>
+</package>

@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "aDTJuM2NccK+ZbCFIvOODKi/isj3TLgwHLJ700AItwgXfCG+HgVHoRp7aEAwJ3BQKtAxiWVJVV6ckT/nRqI/sA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\Project\\ICSharpCode.TextEditor.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\joeva\\.nuget\\packages\\microsoft.build.tasks.git\\1.0.0\\microsoft.build.tasks.git.1.0.0.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\microsoft.sourcelink.common\\1.0.0\\microsoft.sourcelink.common.1.0.0.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\microsoft.sourcelink.github\\1.0.0\\microsoft.sourcelink.github.1.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

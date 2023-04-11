@@ -1,4 +1,20 @@
-﻿using System;
+﻿/*
+
+        Copyright© 2023 Joe Valentino Lengefeld
+
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+
+        Last edit : 02.04.2023
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Drawing;
@@ -178,6 +194,36 @@ public class ImageProcessing
             }
 
             return outputImage;
+        }
+    }
+
+    public class Image
+    {
+        public static Bitmap ResizeImage(Bitmap originalImage, int width, int height)
+        {
+            var resizedImage = new Bitmap(width, height);
+            using var graphics = Graphics.FromImage(resizedImage);
+            graphics.DrawImage(originalImage, new Rectangle(0, 0, width, height), new Rectangle(0, 0, originalImage.Width, originalImage.Height), GraphicsUnit.Pixel);
+            return resizedImage;
+        }
+
+        public static Bitmap CropImage(Bitmap originalImage, int x, int y, int width, int height)
+        {
+            var croppedImage = new Bitmap(width, height);
+            using var graphics = Graphics.FromImage(croppedImage);
+            graphics.DrawImage(originalImage, new Rectangle(0, 0, width, height), new Rectangle(x, y, width, height), GraphicsUnit.Pixel);
+            return croppedImage;
+        }
+
+        public static Bitmap RotateImage(Bitmap originalImage, float angle)
+        {
+            var rotatedImage = new Bitmap(originalImage.Width, originalImage.Height);
+            using var graphics = Graphics.FromImage(rotatedImage);
+            graphics.TranslateTransform((float)originalImage.Width / 2, (float)originalImage.Height / 2);
+            graphics.RotateTransform(angle);
+            graphics.TranslateTransform(-(float)originalImage.Width / 2, -(float)originalImage.Height / 2);
+            graphics.DrawImage(originalImage, new Point(0, 0));
+            return rotatedImage;
         }
     }
 

@@ -111,7 +111,6 @@ namespace Local
 
             if (!menu)
              {
-                if (Process.GetProcessesByName("srvlocal_gui").Length <= 0) SetColor(colors[4]);
                 redirect = new object();
                 var srmng = new StartupManager();
                 srmng.AddApplicationToStartup("srvlocal", AppDomain.CurrentDomain.BaseDirectory + @"\srvlocal.exe");
@@ -167,13 +166,6 @@ namespace Local
 
                     Console.WriteLine("Configurations: ");
                     Console.WriteLine("");
-                    try
-                    {
-                        ci.Connect("localhost", 8080, "localhost", 10890);
-                    }
-                    catch(Exception ex)
-                    {
-                    }
 
                     listener = new TcpListener(IPAddress.Any, _port + 1);
                     listener.Start();
@@ -218,7 +210,14 @@ namespace Local
                 }
                 catch (Exception ex)
                 {
-                    ChangePort(_port);
+                    try
+                    {
+                        ChangePort(_port);
+                    }
+                    catch (Exception ex2)
+                    {
+                        Console.WriteLine(ex2.Message);
+                    }
                 }
             }
             else
@@ -350,6 +349,8 @@ namespace Local
         {
             try
             {
+                
+
                 var mediasvr = new MediaServer();
                 try
                 {
@@ -389,14 +390,24 @@ namespace Local
         {
             try
             {
+                var inter = new LABLibary.Interface.CommunicationInterface();
+
                 while (true)
                 {
+                    try
+                    {
+                        var responseString = inter.ReceiveFromDefaultBuffer();
+                        if(responseString != null) { LogRequest(null, false, responseString); responseString = null; }
 
+                    }
+                    catch{ }
 
                     var context = _listener.GetContext();
                     var request = context.Request;
                     var response = context.Response;
 
+
+                    
                     LogRequest(request);
                     SendLog(request);
 
@@ -443,13 +454,13 @@ namespace Local
                             response.ContentLength64 = buffer.Length;
                             response.OutputStream.Write(buffer, 0, buffer.Length);
 
-                            var rq = new RequestLogger.WriteWithoutServerConnection("Command from Api : ShutDown", ".\\");
+                            var rq = new RequestLogger.WriteWithoutServerConnection($"[{DateTime.UtcNow}] : ReceviedCommand : ShutDown", ".\\");
                             rq.WriteLog();
-                            Environment.Exit(0);
+                            Process.GetProcessesByName("srvlocal")[0].Kill();
                         }
                         else
                         {
-                            var buffer = Encoding.UTF8.GetBytes($"[{DateTime.UtcNow}] : The Command isn´t valid. (Command {command})");
+                            var buffer = Encoding.UTF8.GetBytes($"[{DateTime.UtcNow}] : UnknownCommandException. (Command {command})");
                             response.ContentLength64 = buffer.Length;
                             response.OutputStream.Write(buffer, 0, buffer.Length);
                         }
@@ -532,7 +543,7 @@ namespace Local
             var logEntry = data;
             var logFilePath = Path.Combine(logDirectory, DateTime.Now.ToString("yyyy-MM-dd") + "_API.log");
             
-            if(data.Contains("psw") && data.Contains("username"))
+            if(data.Contains("password") && data.Contains("username"))
             {
                 File.AppendAllText(logFilePath, logEntry.ToString());
             }
@@ -590,19 +601,27 @@ namespace Local
             //logger.SendRequestToServer(request);
         }
 
-       private void LogRequest(HttpListenerRequest request, bool req = false)
-        {
-            Console.ForegroundColor = req ? ConsoleColor.Blue : ConsoleColor.Green;
-            Console.WriteLine($"[LILO SERVER - {DateTime.UtcNow}] : {(req ? "SUCCEED" : request.HttpMethod)} {request.Url}");
-            Console.ForegroundColor = ConsoleColor.White;
-
-            if (advancedDebugg)
+       private void LogRequest(HttpListenerRequest request = null, bool req = false, string message = null)
+       {
+            if(message != null)
             {
-                Console.WriteLine($"User-Agent: {request.UserAgent}");
-                Console.WriteLine($"Accept-Encoding: {request.Headers["Accept-Encoding"]}");
-                Console.WriteLine($"Accept-Language: {request.Headers["Accept-Language"]}");
-                Console.WriteLine();
-            } 
+                Console.WriteLine($"[LILO SERVER - {DateTime.UtcNow}] : {message}");
+            }
+            else
+            {
+                Console.ForegroundColor = req ? ConsoleColor.Blue : ConsoleColor.Green;
+                Console.WriteLine($"[LILO SERVER - {DateTime.UtcNow}] : {(req ? "SUCCEED" : request.HttpMethod)} {request.Url}");
+                Console.ForegroundColor = ConsoleColor.White;
+
+                if (advancedDebugg)
+                {
+                    Console.WriteLine($"User-Agent: {request.UserAgent}");
+                    Console.WriteLine($"Accept-Encoding: {request.Headers["Accept-Encoding"]}");
+                    Console.WriteLine($"Accept-Language: {request.Headers["Accept-Language"]}");
+                    Console.WriteLine();
+                }
+            }
+             
         }
         private string GenerateIndexHtml(string reqDirectory)
         {
