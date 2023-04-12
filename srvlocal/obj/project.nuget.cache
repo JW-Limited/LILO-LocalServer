@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "OwLfRaB0z5LTnF4wxG576iJBjH8hdDbza1fMhk4oLb6B0pHzP+TI2MUTrjAUfooqTSpKgCieRIUg2o78YEjDZg==",
+  "dgSpecHash": "ERIjUaXadrtG+mIV4qt/cwq+fgZ2fujWRAcC8wwiHTSI1QYowgTrDqbYJSJxZ6E5RgTbmUzWFyvacR2v9tEUFg==",
   "success": true,
   "projectFilePath": "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\srvlocal\\srvlocal.csproj",
   "expectedPackageFiles": [
@@ -14,7 +14,9 @@
     "C:\\Users\\joeva\\.nuget\\packages\\remote.linq\\7.1.0\\remote.linq.7.1.0.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\remote.linq.newtonsoft.json\\7.1.0\\remote.linq.newtonsoft.json.7.1.0.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\system.configuration.configurationmanager\\8.0.0-preview.3.23174.8\\system.configuration.configurationmanager.8.0.0-preview.3.23174.8.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\system.diagnostics.debug\\4.3.0\\system.diagnostics.debug.4.3.0.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\system.diagnostics.eventlog\\8.0.0-preview.3.23174.8\\system.diagnostics.eventlog.8.0.0-preview.3.23174.8.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\system.globalization\\4.3.0\\system.globalization.4.3.0.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\system.io\\4.3.0\\system.io.4.3.0.nupkg.sha512",
@@ -31,6 +33,7 @@
     "C:\\Users\\joeva\\.nuget\\packages\\system.resources.resourcemanager\\4.3.0\\system.resources.resourcemanager.4.3.0.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\system.runtime.extensions\\4.3.0\\system.runtime.extensions.4.3.0.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\system.security.cryptography.protecteddata\\8.0.0-preview.3.23174.8\\system.security.cryptography.protecteddata.8.0.0-preview.3.23174.8.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\system.threading\\4.3.0\\system.threading.4.3.0.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512"

@@ -9,6 +9,8 @@ using System.Net.Sockets;
 using System.Net.Http;
 using System.Net.NetworkInformation;
 using System.IO;
+using LABLibary.Assistant;
+using System.ComponentModel;
 
 namespace srvlocal_gui
 {
@@ -22,6 +24,7 @@ namespace srvlocal_gui
         NotifyIcon noty;
 
         public static string filePath = ".\\srvlocal.exe";
+        public static Process consoleHandle;
 
         public static string VersionApp()
         {
@@ -42,6 +45,23 @@ namespace srvlocal_gui
                     File.Copy(filePath, "C:\\LILO" + filePath);
                     File.Copy(filePath.Replace(".exe", ".dll"), "C:\\LILO" + filePath.Replace(".exe",".dll"));
                 }
+
+                DateTime expireDate;
+
+                var lic = LABLibary.Assistant.ReadLicense.Read(".\\license.labl");
+                lblCode.Text = lic.Code;
+                if (LicenseGenerator.DecodeLicense(lic.Code, out string productName, out string productVersion, out DateTime expirationDate))
+                {
+                    lblExpires.Text = expirationDate.ToString();
+                }
+                else
+                {
+                    lblExpires.Text = ("Invalid license code.");
+                }
+                lblProduct.Text = lic.Assembly.Name;
+                lblProductVersion.Text = lic.Assembly.Version.ToString();
+                lbliv.Text = LicenseValues.Default.iv;
+                lblkey.Text = LicenseValues.Default.key;
             }
             catch
             {
@@ -103,10 +123,26 @@ namespace srvlocal_gui
                 }
             };
 
+            consoleHandle = process;
+
             process.OutputDataReceived += (sender, args) => _outputTextBox.Invoke(new Action(() => _outputTextBox.AppendText(args.Data + Environment.NewLine)));
             process.Start();
             process.BeginOutputReadLine();
-            process.WaitForExit();
+
+            NotyFi();
+
+            bool reachable = false;
+            Ping ping = new Ping();
+
+            while (process.HasExited == false)
+            {
+                Application.DoEvents();
+                //process.WaitForExitAsync();
+                PingReply reply = ping.Send("localhost", 8080);
+                reachable = reply.Status == IPStatus.Success;
+                lblReach.Text = reachable.ToString() as string;
+            }
+            //process.WaitForExit();
         }
 
         private void bntStartCon(object sender, EventArgs e)
@@ -149,7 +185,7 @@ namespace srvlocal_gui
                 while (process.HasExited == false)
                 {
                     Application.DoEvents();
-                    process.WaitForExitAsync();
+                    //process.WaitForExitAsync();
                     PingReply reply = ping.Send("localhost", 8080);
                     reachable = reply.Status == IPStatus.Success;
                     lblReach.Text = reachable.ToString() as string;
@@ -166,16 +202,28 @@ namespace srvlocal_gui
         private async void guna2Button6_Click(object sender, EventArgs e)
         {
             ConsolePanel.Visible = false;
-            //var url = $"http://localhost:{txtPort.Text}/api/com?command=close";
-            foreach (var srv in Process.GetProcessesByName("srvlocal"))
+
+            try
             {
-                var time = srv.StartTime;
-                var overall = srv.TotalProcessorTime;
-                srv.Kill();
-                ConsolePanel.Visible = false;
-                //lblError.Text = String.Format("[LocalServer] Closed (TotalOn:{1},Start:{2})");
+                var url = $"http://localhost:{txtPort.Text}/api/com?command=close";
+                foreach (var srv in Process.GetProcessesByName("srvlocal"))
+                {
+                    var time = srv.StartTime;
+                    var overall = srv.TotalProcessorTime;
+                    srv.Kill();
+                    //ConsolePanel.Visible = false;
+                    lblError.Text = String.Format("[LocalServer] Closed (TotalOn:{1},Start:{2})",time,overall);
+                }
             }
+            catch 
+            {
+                
+                
+            }
+            
+
             ConsolePanel.Visible = false;
+            
             //var status = await GetFromHost(url);
             //ConsolePanel.Visible = false;
             //lblError.Text = status.ToString();

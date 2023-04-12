@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyCopyrightAttribute("Copyright © Stef Heyenrath, SharpDevelop, Qwertie and MysticBoy 2014-2022")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.2.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.2.0+1f3407ff9e1a0834c9acb5b956b2fddb4b4fa60a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.2.0+6a6a42bd9635779f4778081eb61ea02817c73a4a")]
 [assembly: System.Reflection.AssemblyProductAttribute("ICSharpCode.TextEditor")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ICSharpCode.TextEditor")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.2.0.0")]

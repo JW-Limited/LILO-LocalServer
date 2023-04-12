@@ -8,7 +8,7 @@
     <description>Package Description</description>
     <copyright>Copyright © Stef Heyenrath, SharpDevelop, Qwertie and MysticBoy 2014-2022</copyright>
     <tags>TextEditor ICSharpCode</tags>
-    <repository type="git" commit="1f3407ff9e1a0834c9acb5b956b2fddb4b4fa60a" />
+    <repository type="git" commit="6a6a42bd9635779f4778081eb61ea02817c73a4a" />
     <dependencies>
       <group targetFramework="net6.0-windows7.0" />
     </dependencies>

@@ -35,7 +35,8 @@ namespace srvlocal_gui
         {
 
             ApplicationConfiguration.Initialize();
-            
+
+            if (!File.Exists(".\\license.labl")) LABLibary.Assistant.WriteLicense.Write(AppDomain.CurrentDomain.BaseDirectory);
 
             // "--start-nowin"
             if (args.Length > 0) 
@@ -133,7 +134,7 @@ namespace srvlocal_gui
                 if (DebugSettings.Default.debug)
                 {
                     //ApplicationConfiguration.Initialize();
-                    Application.Run(new builder_gui(""));
+                    Application.Run(new builder_gui(@"C:\LILO\dist\LILOApp1\LILOApp1.lab"));
                 }
                 else
                 {

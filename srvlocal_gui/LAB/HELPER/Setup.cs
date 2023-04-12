@@ -221,7 +221,7 @@ namespace srvlocal_gui
                 Files = new List<string> 
                 { 
                     "desktop.ini",
-                    "lab\\Folder.ico" 
+                    "Folder.ico" 
                 },
                 References = new List<string> 
                 {

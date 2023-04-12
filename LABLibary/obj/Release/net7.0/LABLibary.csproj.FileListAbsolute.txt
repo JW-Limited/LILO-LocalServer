@@ -15,3 +15,4 @@ C:\Users\joeva\Documents\GitHub\LILO-LocalServer\LABLibary\bin\Release\net7.0\Ac
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\LABLibary\bin\Release\net7.0\System.Deployment.dll
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\LABLibary\bin\Release\net7.0\System.Runtime.Serialization.Formatters.Soap.dll
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\LABLibary\obj\Release\net7.0\LABLibary.csproj.CopyComplete
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\LABLibary\bin\Release\net7.0\LABLibary.dll.config
