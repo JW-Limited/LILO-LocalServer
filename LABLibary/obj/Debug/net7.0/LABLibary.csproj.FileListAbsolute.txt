@@ -15,3 +15,4 @@ C:\Users\joeva\Documents\GitHub\LILO-LocalServer\LABLibary\obj\Debug\net7.0\LABL
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\LABLibary\obj\Debug\net7.0\refint\LABLibary.dll
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\LABLibary\obj\Debug\net7.0\LABLibary.pdb
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\LABLibary\obj\Debug\net7.0\ref\LABLibary.dll
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\LABLibary\bin\Debug\net7.0\LABLibary.dll.config

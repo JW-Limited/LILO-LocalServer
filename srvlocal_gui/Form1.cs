@@ -11,6 +11,7 @@ using System.Net.NetworkInformation;
 using System.IO;
 using LABLibary.Assistant;
 using System.ComponentModel;
+using LABLibary.Forms;
 
 namespace srvlocal_gui
 {
@@ -34,6 +35,7 @@ namespace srvlocal_gui
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
             lblDomain.Text = AppDomain.CurrentDomain.BaseDirectory;
             lblReach.Text = Program.CheckIfDirIsValid().ToString() as string;
             ToolTip.UseAnimation = true;
@@ -525,6 +527,16 @@ namespace srvlocal_gui
 
             LABLibary.Forms.ErrorDialog.message[errorCount] = "Example Error";
             LABLibary.Forms.ErrorDialog.Show();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void collapsibleGroupBox4_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

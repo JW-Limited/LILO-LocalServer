@@ -71,7 +71,6 @@
             this.ConsolePanel = new Guna.UI2.WinForms.Guna2Panel();
             this._outputTextBox = new WindowsFormsAero.TextBox();
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
-            this.label12 = new System.Windows.Forms.Label();
             this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
             this.conMenu = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
             this.conMenuStatus = new System.Windows.Forms.ToolStripMenuItem();
@@ -97,15 +96,23 @@
             this.label20 = new System.Windows.Forms.Label();
             this.lblProductVersion = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.thumbnailViewer2 = new WindowsFormsAero.Dwm.ThumbnailViewer();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label21 = new System.Windows.Forms.Label();
             this.lbliv = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.lblkey = new System.Windows.Forms.Label();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.collapsibleGroupBox4 = new LABLibary.Forms.CollapsibleGroupBox();
+            this.collapsibleGroupBox5 = new LABLibary.Forms.CollapsibleGroupBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.collapsibleGroupBox1 = new LABLibary.Forms.CollapsibleGroupBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.collapsibleGroupBox2 = new LABLibary.Forms.CollapsibleGroupBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
@@ -113,15 +120,15 @@
             this.ConsolePanel.SuspendLayout();
             this.conMenu.SuspendLayout();
             this.inTrayCon.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
+            this.collapsibleGroupBox4.SuspendLayout();
+            this.collapsibleGroupBox5.SuspendLayout();
+            this.collapsibleGroupBox1.SuspendLayout();
+            this.collapsibleGroupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // thumbnailViewer1
             // 
-            this.thumbnailViewer1.Location = new System.Drawing.Point(314, 138);
+            this.thumbnailViewer1.Location = new System.Drawing.Point(331, 295);
             this.thumbnailViewer1.Margin = new System.Windows.Forms.Padding(2);
             this.thumbnailViewer1.Name = "thumbnailViewer1";
             this.thumbnailViewer1.ScaleSmallerThumbnails = true;
@@ -360,7 +367,7 @@
             // lblVersion
             // 
             this.lblVersion.AutoSize = true;
-            this.lblVersion.Location = new System.Drawing.Point(137, 94);
+            this.lblVersion.Location = new System.Drawing.Point(156, 87);
             this.lblVersion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblVersion.Name = "lblVersion";
             this.lblVersion.Size = new System.Drawing.Size(38, 25);
@@ -381,7 +388,7 @@
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(32, 28);
+            this.label6.Location = new System.Drawing.Point(36, 26);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(462, 49);
@@ -403,7 +410,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(19, 130);
+            this.label13.Location = new System.Drawing.Point(33, 168);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(89, 25);
@@ -413,7 +420,7 @@
             // lblReach
             // 
             this.lblReach.AutoSize = true;
-            this.lblReach.Location = new System.Drawing.Point(137, 167);
+            this.lblReach.Location = new System.Drawing.Point(156, 127);
             this.lblReach.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblReach.Name = "lblReach";
             this.lblReach.Size = new System.Drawing.Size(38, 25);
@@ -424,7 +431,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(19, 167);
+            this.label15.Location = new System.Drawing.Point(33, 127);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(105, 25);
@@ -468,10 +475,10 @@
             // 
             // lblError
             // 
-            this.lblError.Location = new System.Drawing.Point(19, 138);
+            this.lblError.Location = new System.Drawing.Point(264, 522);
             this.lblError.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(402, 43);
+            this.lblError.Size = new System.Drawing.Size(225, 43);
             this.lblError.TabIndex = 4;
             // 
             // chbChangePort
@@ -658,10 +665,10 @@
             this.ConsolePanel.Controls.Add(this._outputTextBox);
             this.ConsolePanel.Controls.Add(this.guna2Button6);
             this.ConsolePanel.CustomBorderColor = System.Drawing.Color.Gray;
-            this.ConsolePanel.Location = new System.Drawing.Point(604, 105);
+            this.ConsolePanel.Location = new System.Drawing.Point(558, 105);
             this.ConsolePanel.Margin = new System.Windows.Forms.Padding(2);
             this.ConsolePanel.Name = "ConsolePanel";
-            this.ConsolePanel.Size = new System.Drawing.Size(1605, 1096);
+            this.ConsolePanel.Size = new System.Drawing.Size(1651, 1096);
             this.ConsolePanel.TabIndex = 7;
             this.ConsolePanel.Visible = false;
             // 
@@ -677,7 +684,7 @@
             this._outputTextBox.PlaceholderText = "Mhh really quite, to quite";
             this._outputTextBox.ReadOnly = true;
             this._outputTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this._outputTextBox.Size = new System.Drawing.Size(1605, 1064);
+            this._outputTextBox.Size = new System.Drawing.Size(1651, 1064);
             this._outputTextBox.TabIndex = 1;
             this._outputTextBox.WordWrap = false;
             // 
@@ -694,20 +701,10 @@
             this.guna2Button6.Location = new System.Drawing.Point(0, 0);
             this.guna2Button6.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button6.Name = "guna2Button6";
-            this.guna2Button6.Size = new System.Drawing.Size(1605, 32);
+            this.guna2Button6.Size = new System.Drawing.Size(1651, 32);
             this.guna2Button6.TabIndex = 0;
             this.guna2Button6.Text = "Close";
             this.guna2Button6.Click += new System.EventHandler(this.guna2Button6_Click);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(23, 92);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(59, 25);
-            this.label12.TabIndex = 4;
-            this.label12.Text = "Feed :";
             // 
             // guna2Button7
             // 
@@ -868,7 +865,7 @@
             // lblCode
             // 
             this.lblCode.AutoSize = true;
-            this.lblCode.Location = new System.Drawing.Point(137, 45);
+            this.lblCode.Location = new System.Drawing.Point(156, 51);
             this.lblCode.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCode.Name = "lblCode";
             this.lblCode.Size = new System.Drawing.Size(38, 25);
@@ -879,7 +876,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(21, 45);
+            this.label16.Location = new System.Drawing.Point(24, 51);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(63, 25);
@@ -890,7 +887,7 @@
             // lblProduct
             // 
             this.lblProduct.AutoSize = true;
-            this.lblProduct.Location = new System.Drawing.Point(137, 81);
+            this.lblProduct.Location = new System.Drawing.Point(158, 133);
             this.lblProduct.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblProduct.Name = "lblProduct";
             this.lblProduct.Size = new System.Drawing.Size(38, 25);
@@ -900,7 +897,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(19, 81);
+            this.label18.Location = new System.Drawing.Point(24, 133);
             this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(88, 25);
@@ -909,10 +906,10 @@
             // 
             // lblExpires
             // 
-            this.lblExpires.Location = new System.Drawing.Point(137, 117);
+            this.lblExpires.Location = new System.Drawing.Point(156, 91);
             this.lblExpires.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblExpires.Name = "lblExpires";
-            this.lblExpires.Size = new System.Drawing.Size(272, 25);
+            this.lblExpires.Size = new System.Drawing.Size(199, 25);
             this.lblExpires.TabIndex = 4;
             this.lblExpires.Text = "n/a";
             this.lblExpires.Click += new System.EventHandler(this.lblDomain_Click);
@@ -920,7 +917,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(19, 117);
+            this.label20.Location = new System.Drawing.Point(24, 91);
             this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(81, 25);
@@ -930,7 +927,7 @@
             // lblProductVersion
             // 
             this.lblProductVersion.AutoSize = true;
-            this.lblProductVersion.Location = new System.Drawing.Point(137, 154);
+            this.lblProductVersion.Location = new System.Drawing.Point(156, 171);
             this.lblProductVersion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblProductVersion.Name = "lblProductVersion";
             this.lblProductVersion.Size = new System.Drawing.Size(38, 25);
@@ -947,23 +944,6 @@
             this.label22.TabIndex = 4;
             this.label22.Text = "Package :";
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.label16);
-            this.groupBox1.Controls.Add(this.lblCode);
-            this.groupBox1.Controls.Add(this.lblProduct);
-            this.groupBox1.Controls.Add(this.label18);
-            this.groupBox1.Controls.Add(this.lblExpires);
-            this.groupBox1.Controls.Add(this.label20);
-            this.groupBox1.Controls.Add(this.lblProductVersion);
-            this.groupBox1.Controls.Add(this.label22);
-            this.groupBox1.Location = new System.Drawing.Point(34, 105);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(439, 217);
-            this.groupBox1.TabIndex = 8;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "License";
-            // 
             // thumbnailViewer2
             // 
             this.thumbnailViewer2.Location = new System.Drawing.Point(312, 312);
@@ -974,36 +954,6 @@
             this.thumbnailViewer2.TabIndex = 0;
             this.thumbnailViewer2.Text = "thumbnailViewer1";
             this.thumbnailViewer2.ThumbnailAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.lblVersion);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.lblDomain);
-            this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Controls.Add(this.lblReach);
-            this.groupBox2.Controls.Add(this.label15);
-            this.groupBox2.Location = new System.Drawing.Point(32, 346);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(439, 233);
-            this.groupBox2.TabIndex = 9;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Application";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.label21);
-            this.groupBox3.Controls.Add(this.lbliv);
-            this.groupBox3.Controls.Add(this.label14);
-            this.groupBox3.Controls.Add(this.lblkey);
-            this.groupBox3.Location = new System.Drawing.Point(35, 804);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(439, 252);
-            this.groupBox3.TabIndex = 9;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Encryption";
             // 
             // label21
             // 
@@ -1018,7 +968,7 @@
             // 
             // lbliv
             // 
-            this.lbliv.Location = new System.Drawing.Point(135, 62);
+            this.lbliv.Location = new System.Drawing.Point(156, 9);
             this.lbliv.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbliv.Name = "lbliv";
             this.lbliv.Size = new System.Drawing.Size(283, 51);
@@ -1029,7 +979,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(17, 129);
+            this.label14.Location = new System.Drawing.Point(37, 103);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(50, 25);
@@ -1038,26 +988,155 @@
             // 
             // lblkey
             // 
-            this.lblkey.Location = new System.Drawing.Point(135, 129);
+            this.lblkey.Location = new System.Drawing.Point(156, 103);
             this.lblkey.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblkey.Name = "lblkey";
             this.lblkey.Size = new System.Drawing.Size(283, 98);
             this.lblkey.TabIndex = 4;
             this.lblkey.Text = "n/a";
             // 
-            // groupBox4
+            // collapsibleGroupBox4
             // 
-            this.groupBox4.Controls.Add(this.label3);
-            this.groupBox4.Controls.Add(this.label12);
-            this.groupBox4.Controls.Add(this.guna2Button3);
-            this.groupBox4.Controls.Add(this.guna2Button7);
-            this.groupBox4.Controls.Add(this.lblError);
-            this.groupBox4.Location = new System.Drawing.Point(32, 597);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(441, 191);
-            this.groupBox4.TabIndex = 10;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Updates";
+            this.collapsibleGroupBox4.Controls.Add(this.label16);
+            this.collapsibleGroupBox4.Controls.Add(this.label20);
+            this.collapsibleGroupBox4.Controls.Add(this.label19);
+            this.collapsibleGroupBox4.Controls.Add(this.label18);
+            this.collapsibleGroupBox4.Controls.Add(this.lblExpires);
+            this.collapsibleGroupBox4.Controls.Add(this.lblCode);
+            this.collapsibleGroupBox4.Controls.Add(this.lblProductVersion);
+            this.collapsibleGroupBox4.Controls.Add(this.lblProduct);
+            this.collapsibleGroupBox4.Location = new System.Drawing.Point(36, 632);
+            this.collapsibleGroupBox4.Name = "collapsibleGroupBox4";
+            this.collapsibleGroupBox4.Size = new System.Drawing.Size(463, 230);
+            this.collapsibleGroupBox4.TabIndex = 8;
+            this.collapsibleGroupBox4.TabStop = false;
+            this.collapsibleGroupBox4.Text = "License";
+            this.collapsibleGroupBox4.Enter += new System.EventHandler(this.collapsibleGroupBox4_Enter);
+            // 
+            // collapsibleGroupBox5
+            // 
+            this.collapsibleGroupBox5.Controls.Add(this.lbliv);
+            this.collapsibleGroupBox5.Controls.Add(this.lblkey);
+            this.collapsibleGroupBox5.Controls.Add(this.label17);
+            this.collapsibleGroupBox5.Controls.Add(this.label14);
+            this.collapsibleGroupBox5.Location = new System.Drawing.Point(36, 894);
+            this.collapsibleGroupBox5.Name = "collapsibleGroupBox5";
+            this.collapsibleGroupBox5.Size = new System.Drawing.Size(463, 221);
+            this.collapsibleGroupBox5.TabIndex = 8;
+            this.collapsibleGroupBox5.TabStop = false;
+            this.collapsibleGroupBox5.Text = "Encryption";
+            this.collapsibleGroupBox5.Enter += new System.EventHandler(this.collapsibleGroupBox4_Enter);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(37, 52);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(32, 25);
+            this.label17.TabIndex = 4;
+            this.label17.Text = "IV:";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(24, 171);
+            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(90, 25);
+            this.label19.TabIndex = 4;
+            this.label19.Text = "Package : ";
+            // 
+            // collapsibleGroupBox1
+            // 
+            this.collapsibleGroupBox1.Controls.Add(this.label23);
+            this.collapsibleGroupBox1.Controls.Add(this.lblReach);
+            this.collapsibleGroupBox1.Controls.Add(this.label24);
+            this.collapsibleGroupBox1.Controls.Add(this.label25);
+            this.collapsibleGroupBox1.Controls.Add(this.label15);
+            this.collapsibleGroupBox1.Controls.Add(this.label13);
+            this.collapsibleGroupBox1.Controls.Add(this.label26);
+            this.collapsibleGroupBox1.Controls.Add(this.lblVersion);
+            this.collapsibleGroupBox1.Location = new System.Drawing.Point(36, 121);
+            this.collapsibleGroupBox1.Name = "collapsibleGroupBox1";
+            this.collapsibleGroupBox1.Size = new System.Drawing.Size(463, 240);
+            this.collapsibleGroupBox1.TabIndex = 8;
+            this.collapsibleGroupBox1.TabStop = false;
+            this.collapsibleGroupBox1.Text = "Application";
+            this.collapsibleGroupBox1.Enter += new System.EventHandler(this.collapsibleGroupBox4_Enter);
+            // 
+            // label23
+            // 
+            this.label23.Location = new System.Drawing.Point(156, 168);
+            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(283, 47);
+            this.label23.TabIndex = 4;
+            this.label23.Text = "n/a";
+            this.label23.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(33, 48);
+            this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(88, 25);
+            this.label24.TabIndex = 4;
+            this.label24.Text = "Security : ";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(33, 87);
+            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(84, 25);
+            this.label25.TabIndex = 4;
+            this.label25.Text = "Version : ";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(156, 48);
+            this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(94, 25);
+            this.label26.TabIndex = 4;
+            this.label26.Text = "Solid Core";
+            // 
+            // collapsibleGroupBox2
+            // 
+            this.collapsibleGroupBox2.Controls.Add(this.label27);
+            this.collapsibleGroupBox2.Controls.Add(this.label28);
+            this.collapsibleGroupBox2.Location = new System.Drawing.Point(36, 382);
+            this.collapsibleGroupBox2.Name = "collapsibleGroupBox2";
+            this.collapsibleGroupBox2.Size = new System.Drawing.Size(463, 230);
+            this.collapsibleGroupBox2.TabIndex = 8;
+            this.collapsibleGroupBox2.TabStop = false;
+            this.collapsibleGroupBox2.Text = "License";
+            this.collapsibleGroupBox2.Enter += new System.EventHandler(this.collapsibleGroupBox4_Enter);
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(24, 51);
+            this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(59, 25);
+            this.label27.TabIndex = 4;
+            this.label27.Text = "Feed :";
+            this.label27.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(24, 91);
+            this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(84, 25);
+            this.label28.TabIndex = 4;
+            this.label28.Text = "Update : ";
             // 
             // Form1
             // 
@@ -1065,10 +1144,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(2252, 1580);
-            this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.collapsibleGroupBox1);
+            this.Controls.Add(this.collapsibleGroupBox5);
+            this.Controls.Add(this.collapsibleGroupBox2);
+            this.Controls.Add(this.collapsibleGroupBox4);
             this.Controls.Add(this.ConsolePanel);
             this.Controls.Add(this.txtDistFolder);
             this.Controls.Add(this.txtMediaFolder);
@@ -1083,6 +1162,7 @@
             this.Controls.Add(this.thumbnailViewer2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.thumbnailViewer1);
+            this.Controls.Add(this.lblError);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(894, 684);
@@ -1098,14 +1178,14 @@
             this.conMenu.ResumeLayout(false);
             this.inTrayCon.ResumeLayout(false);
             this.inTrayCon.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
+            this.collapsibleGroupBox4.ResumeLayout(false);
+            this.collapsibleGroupBox4.PerformLayout();
+            this.collapsibleGroupBox5.ResumeLayout(false);
+            this.collapsibleGroupBox5.PerformLayout();
+            this.collapsibleGroupBox1.ResumeLayout(false);
+            this.collapsibleGroupBox1.PerformLayout();
+            this.collapsibleGroupBox2.ResumeLayout(false);
+            this.collapsibleGroupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1155,7 +1235,6 @@
         private Guna.UI2.WinForms.Guna2Panel ConsolePanel;
         private WindowsFormsAero.TextBox _outputTextBox;
         private Guna.UI2.WinForms.Guna2Button guna2Button6;
-        private Label label12;
         private Guna.UI2.WinForms.Guna2Button guna2Button7;
         private Guna.UI2.WinForms.Guna2ContextMenuStrip conMenu;
         private ToolStripMenuItem conMenuStatus;
@@ -1181,14 +1260,27 @@
         private Label label20;
         private Label lblProductVersion;
         private Label label22;
-        private GroupBox groupBox1;
+        private LABLibary.Forms.CollapsibleGroupBox groupBox1;
         private WindowsFormsAero.Dwm.ThumbnailViewer thumbnailViewer2;
-        private GroupBox groupBox2;
-        private GroupBox groupBox3;
+        private LABLibary.Forms.CollapsibleGroupBox groupBox2;
+        private LABLibary.Forms.CollapsibleGroupBox groupBox3;
         private Label label21;
         private Label lbliv;
         private Label label14;
         private Label lblkey;
-        private GroupBox groupBox4;
+        private LABLibary.Forms.CollapsibleGroupBox groupBox4;
+        private LABLibary.Forms.CollapsibleGroupBox collapsibleGroupBox1;
+        private LABLibary.Forms.CollapsibleGroupBox collapsibleGroupBox2;
+        private LABLibary.Forms.CollapsibleGroupBox collapsibleGroupBox3;
+        private LABLibary.Forms.CollapsibleGroupBox collapsibleGroupBox4;
+        private LABLibary.Forms.CollapsibleGroupBox collapsibleGroupBox5;
+        private Label label19;
+        private Label label17;
+        private Label label23;
+        private Label label24;
+        private Label label25;
+        private Label label26;
+        private Label label27;
+        private Label label28;
     }
 }
