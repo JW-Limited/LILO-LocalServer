@@ -18,6 +18,7 @@
     <ProduceReferenceAssembly>True</ProduceReferenceAssembly>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <DocumentationFile>C:\Users\joeva\Documents\GitHub\LILO-LocalServer\api.xml</DocumentationFile>
+    <Version>1.2</Version>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <Optimize>True</Optimize>
@@ -40,6 +41,7 @@
     <PackageReference Include="Microsoft.ML.FastTree" Version="2.0.0" />
     <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.1619-prerelease" />
     <PackageReference Include="Modern.Forms" Version="0.3.0" />
+    <PackageReference Include="Octokit" Version="5.0.4" />
     <PackageReference Include="Ookii.Dialogs.WinForms" Version="4.0.0" />
     <PackageReference Include="ReactiveUI.Events.Winforms" Version="15.1.1" />
     <PackageReference Include="ReactiveUI.WinForms" Version="18.4.1" />

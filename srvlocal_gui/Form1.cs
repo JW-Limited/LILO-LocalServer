@@ -12,6 +12,8 @@ using System.IO;
 using LABLibary.Assistant;
 using System.ComponentModel;
 using LABLibary.Forms;
+using System.Net.Http.Headers;
+using Octokit;
 
 namespace srvlocal_gui
 {
@@ -22,11 +24,14 @@ namespace srvlocal_gui
             InitializeComponent();
         }
 
-        private const string repoName = "LILO-LocalServer";
         NotifyIcon noty;
 
         public static string filePath = ".\\srvlocal.exe";
-        public static Process consoleHandle;
+        public static Process? consoleHandle;
+        public string owner = "JW-Limited";
+        public string repo = "LILO-LocalServer";
+        public bool UpdateDetected = false;
+
 
         public static string VersionApp()
         {
@@ -94,18 +99,111 @@ namespace srvlocal_gui
             var Proc = Process.Start("explorer.exe", AppDomain.CurrentDomain.BaseDirectory);
         }
 
-        private async void bntUpdate(object sender, EventArgs e)
+        private void bntUpdate(object sender, EventArgs e)
         {
-            var ReleaseChecker = new GitHubReleaseChecker("JW-Limited", repo: repoName, "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");
-
-            richTxtStatus.Text = null;
-            try
+            if (bntCheck.Text == "Install")
             {
-                await ReleaseChecker.CheckForNewRelease();
+                Process.Start("explorer.exe", Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop)));
+                System.Windows.Forms.Application.ExitThread();
             }
-            catch (Exception ex)
+            else
             {
-                richTxtStatus.Text = ex.Message;
+                switch (UpdateDetected)
+                {
+                    case true:
+                        progressbar.Visible = true;
+                        Task.Run(() =>
+                        {
+                            Updater.DownloadLatestRelease(owner, repo, UpdateProgress);
+                            this.Invoke((MethodInvoker)delegate
+                            {
+                                richTxtStatus.ResetText();
+                            });
+
+                        });
+                        break;
+                    default:
+                        if (Updater.HasNewRelease(owner, repo))
+                        {
+                            Console.WriteLine("A new release is available.");
+                            richTxtStatus.Text = $"A new release is available. \nYour Version : {Updater.GetCurrentVersion()}\nLatest Version : {Updater.GetLatestVersion(owner, repo)}";
+                            UpdateDetected = true;
+                            bntCheck.Text = "Download";
+                        }
+                        else
+                        {
+                            Console.WriteLine("No new release available.");
+                        }
+                        break;
+                }
+            }
+
+
+
+        }
+
+        private void UpdateProgress(object sender, DownloadProgressChangedEventArgs e)
+        {
+            this.Invoke((MethodInvoker)delegate
+            {
+                progressbar.Value = e.ProgressPercentage;
+                lblUpdaterPros.Text = $"{e.ProgressPercentage}%";
+
+                if (e.ProgressPercentage == 100)
+                {
+                    richTxtStatus.Text += "\nLatest release downloaded successfully.";
+                    lblUpdaterPros.Text = "Ready";
+                    progressbar.Visible = false;
+                    bntCheck.Text = "Install";
+                }
+            });
+        }
+
+        public class Updater
+        {
+
+            public static bool HasNewRelease(string owner, string repo)
+            {
+                var client = new GitHubClient(new Octokit.ProductHeaderValue("srvlocal_gui"));
+                var releases = client.Repository.Release.GetAll(owner, repo).Result;
+
+                if (releases.Count > 0)
+                {
+                    string latestTag = releases[0].TagName;
+                    if (latestTag != GetCurrentVersion())
+                    {
+                        return true;
+                    }
+                }
+
+                return false;
+            }
+
+            public static string GetLatestVersion(string owner, string repo)
+            {
+                var client = new GitHubClient(new Octokit.ProductHeaderValue("srvlocal_gui"));
+                var releases = client.Repository.Release.GetAll(owner, repo).Result;
+                return releases[0].TagName;
+            }
+
+            public static void DownloadLatestRelease(string owner, string repo, DownloadProgressChangedEventHandler progressHandler)
+            {
+                var client = new WebClient();
+                client.DownloadProgressChanged += progressHandler;
+                string latestUrl = GetLatestReleaseUrl(owner, repo);
+                client.DownloadFileAsync(new Uri(latestUrl), Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "latest_release.zip"));
+            }
+
+            public static string GetLatestReleaseUrl(string owner, string repo)
+            {
+                var client = new GitHubClient(new Octokit.ProductHeaderValue("srvlocal_gui"));
+                var releases = client.Repository.Release.GetAll(owner, repo).Result;
+                return releases[0].Assets[0].BrowserDownloadUrl;
+            }
+
+            public static string GetCurrentVersion()
+            {
+                return System.Windows.Forms.Application.ProductVersion.ToLower();
             }
         }
 
@@ -140,7 +238,7 @@ namespace srvlocal_gui
 
             while (process.HasExited == false)
             {
-                Application.DoEvents();
+                System.Windows.Forms.Application.DoEvents();
                 //process.WaitForExitAsync();
                 PingReply reply = ping.Send("localhost", 8080);
                 reachable = reply.Status == IPStatus.Success;
@@ -188,7 +286,7 @@ namespace srvlocal_gui
                 process.BeginOutputReadLine();
                 while (process.HasExited == false)
                 {
-                    Application.DoEvents();
+                    System.Windows.Forms.Application.DoEvents();
                     //process.WaitForExitAsync();
                     PingReply reply = ping.Send("localhost", 8080);
                     reachable = reply.Status == IPStatus.Success;
@@ -307,7 +405,7 @@ namespace srvlocal_gui
                 process.BeginOutputReadLine();
                 while (process.HasExited == false)
                 {
-                    Application.DoEvents();
+                    System.Windows.Forms.Application.DoEvents();
                     process.WaitForExitAsync();
                 }
 

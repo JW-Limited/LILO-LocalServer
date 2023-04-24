@@ -258,7 +258,7 @@
       }
     },
     "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\srvlocal_gui\\srvlocal_gui.csproj": {
-      "version": "1.0.0",
+      "version": "1.2.0",
       "restore": {
         "projectUniqueName": "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\srvlocal_gui\\srvlocal_gui.csproj",
         "projectName": "srvlocal_gui",
@@ -349,6 +349,10 @@
             "Modern.Forms": {
               "target": "Package",
               "version": "[0.3.0, )"
+            },
+            "Octokit": {
+              "target": "Package",
+              "version": "[5.0.4, )"
             },
             "Ookii.Dialogs.WinForms": {
               "target": "Package",

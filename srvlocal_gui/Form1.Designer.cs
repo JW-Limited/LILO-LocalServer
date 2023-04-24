@@ -111,11 +111,12 @@
             label25 = new Label();
             label26 = new Label();
             collapsibleGroupBox2 = new LABLibary.Forms.CollapsibleGroupBox();
+            progressbar = new MetroFramework.Controls.MetroProgressBar();
             guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
             bntCheck = new Guna.UI2.WinForms.Guna2Button();
             richTxtStatus = new RichTextBox();
             label27 = new Label();
-            label28 = new Label();
+            lblUpdaterPros = new Label();
             tableLayoutPanel1.SuspendLayout();
             guna2Panel1.SuspendLayout();
             guna2Panel3.SuspendLayout();
@@ -1096,11 +1097,12 @@
             // 
             // collapsibleGroupBox2
             // 
+            collapsibleGroupBox2.Controls.Add(progressbar);
             collapsibleGroupBox2.Controls.Add(guna2Button8);
             collapsibleGroupBox2.Controls.Add(bntCheck);
             collapsibleGroupBox2.Controls.Add(richTxtStatus);
             collapsibleGroupBox2.Controls.Add(label27);
-            collapsibleGroupBox2.Controls.Add(label28);
+            collapsibleGroupBox2.Controls.Add(lblUpdaterPros);
             collapsibleGroupBox2.Location = new Point(36, 382);
             collapsibleGroupBox2.Name = "collapsibleGroupBox2";
             collapsibleGroupBox2.Size = new Size(463, 230);
@@ -1108,6 +1110,17 @@
             collapsibleGroupBox2.TabStop = false;
             collapsibleGroupBox2.Text = "Updates";
             collapsibleGroupBox2.Enter += collapsibleGroupBox4_Enter;
+            // 
+            // progressbar
+            // 
+            progressbar.ForeColor = Color.FromArgb(94, 148, 255);
+            progressbar.HideProgressText = false;
+            progressbar.Location = new Point(24, 97);
+            progressbar.Name = "progressbar";
+            progressbar.Size = new Size(415, 33);
+            progressbar.TabIndex = 7;
+            progressbar.Theme = MetroFramework.MetroThemeStyle.Dark;
+            progressbar.Visible = false;
             // 
             // guna2Button8
             // 
@@ -1146,7 +1159,7 @@
             // richTxtStatus
             // 
             richTxtStatus.BorderStyle = BorderStyle.None;
-            richTxtStatus.Location = new Point(24, 140);
+            richTxtStatus.Location = new Point(24, 142);
             richTxtStatus.Name = "richTxtStatus";
             richTxtStatus.Size = new Size(415, 70);
             richTxtStatus.TabIndex = 5;
@@ -1163,15 +1176,15 @@
             label27.Text = "Feed :";
             label27.Click += label2_Click;
             // 
-            // label28
+            // lblUpdaterPros
             // 
-            label28.AutoSize = true;
-            label28.Location = new Point(24, 97);
-            label28.Margin = new Padding(2, 0, 2, 0);
-            label28.Name = "label28";
-            label28.Size = new Size(84, 25);
-            label28.TabIndex = 4;
-            label28.Text = "Update : ";
+            lblUpdaterPros.AutoSize = true;
+            lblUpdaterPros.Location = new Point(24, 97);
+            lblUpdaterPros.Margin = new Padding(2, 0, 2, 0);
+            lblUpdaterPros.Name = "lblUpdaterPros";
+            lblUpdaterPros.Size = new Size(84, 25);
+            lblUpdaterPros.TabIndex = 4;
+            lblUpdaterPros.Text = "Update : ";
             // 
             // Form1
             // 
@@ -1315,9 +1328,10 @@
         private Label label25;
         private Label label26;
         private Label label27;
-        private Label label28;
+        private Label lblUpdaterPros;
         private RichTextBox richTxtStatus;
         private Guna.UI2.WinForms.Guna2Button guna2Button8;
         private Guna.UI2.WinForms.Guna2Button bntCheck;
+        private MetroFramework.Controls.MetroProgressBar progressbar;
     }
 }

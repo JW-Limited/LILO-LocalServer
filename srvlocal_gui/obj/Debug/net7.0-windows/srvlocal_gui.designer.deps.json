@@ -515,6 +515,14 @@
           }
         }
       },
+      "Octokit/5.0.4": {
+        "runtime": {
+          "lib/netstandard2.0/Octokit.dll": {
+            "assemblyVersion": "5.0.4.0",
+            "fileVersion": "5.0.4.0"
+          }
+        }
+      },
       "Ookii.Dialogs.WinForms/4.0.0": {
         "dependencies": {
           "System.Resources.Extensions": "6.0.0"
@@ -2131,6 +2139,13 @@
       "sha512": "sha512-R2pZ3B0UjeyHShm9vG+Tu0EBb2lC8b0dFzV9gVn50ofHXh9Smjk6kTn7A/FdAsC8B5cKib1OnGYOXxRBz5XQDg==",
       "path": "newtonsoft.json/13.0.2",
       "hashPath": "newtonsoft.json.13.0.2.nupkg.sha512"
+    },
+    "Octokit/5.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Voup3PUC6YtiNQIvcOCqQXEA4qB1G2D7oWW1I+tjrBoEf2mHvz/6+IRnA7y6+Pd8sV+j9sr2rXhduIBO8k7guA==",
+      "path": "octokit/5.0.4",
+      "hashPath": "octokit.5.0.4.nupkg.sha512"
     },
     "Ookii.Dialogs.WinForms/4.0.0": {
       "type": "package",
