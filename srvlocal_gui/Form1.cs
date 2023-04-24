@@ -133,6 +133,7 @@ namespace srvlocal_gui
                         else
                         {
                             Console.WriteLine("No new release available.");
+                            richTxtStatus.Text = "No new release available. You are perfect.";
                         }
                         break;
                 }
