@@ -7,53 +7,6 @@ Please be Patient.
 
 ### Finale Release Date : June
 
-# LAB Libary
-***
-## Repo
-
-This project is also included in srvlocal. Its an Libary/Engine for JW Limited Apps.
-
-## How to use it?
-
-Just include this in youre Project and mark it on youre Codefile.
-```CSharp
-using LABLibary;
-```
-
-Example 1 : APICollection
-```CSharp
-if (LABLibary.Interface.ApiCollection.WinRegistry.Keys.GetKeyValue("LILO\\local\\DebuggerMode") == "enabled") advancedDebug = true;
-```
-```CSharp
-public void ConsoleHandler()
-    {
-        Interface.ApiCollection.WinRegistry.Keys keys = new Interface.ApiCollection.WinRegistry.Keys();
-
-        if (keys.GetKeyValue("LILO\\local\\DebuggerMode") == "enabled")
-        {
-            var handle = AllocConsole();
-            ShowWindow(handle, SW_SHOW);
-        }
-        else
-        {
-            openInExtraWindow = false;
-            try
-            {
-                keys.SetKeyValue("DebuggerMode", "disabled");
-            }
-            catch (Exception msg) { Logger.Error(msg); }
-        }
-    }
-```
-Example 2 : Form Collection
-```CSharp
-LABLibary.Forms.InfoDialog.Show(ShowVersion(), "Version");
-
-private static string ShowVersion()
-{
-    return String.Format("AppName Version {0}", AssemblyVersion);
-}
-```
 ## Help
 
 If you want to know how to use LILO LocalServer start it with the _--help_ argument
