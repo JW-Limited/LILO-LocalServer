@@ -22,6 +22,7 @@ namespace srvlocal_gui
             InitializeComponent();
         }
 
+        private const string repoName = "LILO-LocalServer";
         NotifyIcon noty;
 
         public static string filePath = ".\\srvlocal.exe";
@@ -36,16 +37,16 @@ namespace srvlocal_gui
         private void Form1_Load(object sender, EventArgs e)
         {
 
-            lblDomain.Text = AppDomain.CurrentDomain.BaseDirectory;
+            lblDomain_2.Text = AppDomain.CurrentDomain.BaseDirectory;
             lblReach.Text = Program.CheckIfDirIsValid().ToString() as string;
             ToolTip.UseAnimation = true;
             try
             {
                 lblVersion.Text = VersionApp();
-                if(!File.Exists("C:\\LILO" + filePath)) 
+                if (!File.Exists("C:\\LILO" + filePath))
                 {
                     File.Copy(filePath, "C:\\LILO" + filePath);
-                    File.Copy(filePath.Replace(".exe", ".dll"), "C:\\LILO" + filePath.Replace(".exe",".dll"));
+                    File.Copy(filePath.Replace(".exe", ".dll"), "C:\\LILO" + filePath.Replace(".exe", ".dll"));
                 }
 
                 DateTime expireDate;
@@ -95,15 +96,16 @@ namespace srvlocal_gui
 
         private async void bntUpdate(object sender, EventArgs e)
         {
-            var realeaseCheckler = new GitHubReleaseChecker("JW-Limited", "LILO-LocalServer", "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");
-            lblError.Text = null;
+            var ReleaseChecker = new GitHubReleaseChecker("JW-Limited", repo: repoName, "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");
+
+            richTxtStatus.Text = null;
             try
             {
-                await realeaseCheckler.CheckForNewRelease();
+                await ReleaseChecker.CheckForNewRelease();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                lblError.Text = ex.Message;
+                richTxtStatus.Text = ex.Message;
             }
         }
 
@@ -214,18 +216,18 @@ namespace srvlocal_gui
                     var overall = srv.TotalProcessorTime;
                     srv.Kill();
                     //ConsolePanel.Visible = false;
-                    lblError.Text = String.Format("[LocalServer] Closed (TotalOn:{1},Start:{2})",time,overall);
+                    lblError.Text = String.Format("[LocalServer] Closed (TotalOn:{1},Start:{2})", time, overall);
                 }
             }
-            catch 
+            catch
             {
-                
-                
+
+
             }
-            
+
 
             ConsolePanel.Visible = false;
-            
+
             //var status = await GetFromHost(url);
             //ConsolePanel.Visible = false;
             //lblError.Text = status.ToString();
@@ -256,19 +258,19 @@ namespace srvlocal_gui
             var sb = new StringBuilder();
             sb.Append("srvlocal.exe ");
 
-            if(chbChangePort.Checked)
+            if (chbChangePort.Checked)
             {
                 sb.Append(" --port=" + txtPort.Text);
             }
-            if(chbDistFolder.Checked)
+            if (chbDistFolder.Checked)
             {
                 sb.Append(" --folder=" + txtDistFolder.Text);
             }
-            if(chbChangeMediaFolder.Checked)
+            if (chbChangeMediaFolder.Checked)
             {
                 sb.Append(" --media-folder=" + txtMediaFolder.Text);
             }
-            if(chbDisable.Checked)
+            if (chbDisable.Checked)
             {
                 sb.Append(" --disable-logging");
             }
@@ -340,14 +342,14 @@ namespace srvlocal_gui
                 }
             }
             catch { return -1; }
-            
-            
+
+
         }
 
 
         public void NotyFi(bool inTray = false)
         {
-            if(inTray)
+            if (inTray)
             {
 
 
@@ -411,7 +413,7 @@ namespace srvlocal_gui
             try
             {
                 var status = new LILO.JBO.StatusSender();
-                if( await status.SendStatus(this) != "Error" )
+                if (await status.SendStatus(this) != "Error")
                 {
                     var login = new Login()
                     {
@@ -424,14 +426,15 @@ namespace srvlocal_gui
                 {
                     bntStartCon(sender, e);
                 }
-                
+
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
                 MessageBox.Show(ex.Message);
                 bntStartCon(sender, e);
             }
 
-            
+
         }
 
         private void conMenuShowConsole_Click(object sender, EventArgs e)
@@ -479,7 +482,7 @@ namespace srvlocal_gui
 
         private void txtDistFolder_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void ChbChangeMediaFolder_CheckedChanged(object sender, EventArgs e)
