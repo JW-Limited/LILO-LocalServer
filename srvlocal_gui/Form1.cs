@@ -14,6 +14,10 @@ using System.ComponentModel;
 using LABLibary.Forms;
 using System.Net.Http.Headers;
 using Octokit;
+using System.Runtime.InteropServices;
+using Microsoft.VisualBasic.Logging;
+using Markdig;
+using srvlocal_gui.AppManager;
 
 namespace srvlocal_gui
 {
@@ -41,7 +45,6 @@ namespace srvlocal_gui
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
             lblDomain_2.Text = AppDomain.CurrentDomain.BaseDirectory;
             lblReach.Text = Program.CheckIfDirIsValid().ToString() as string;
             ToolTip.UseAnimation = true;
@@ -54,28 +57,74 @@ namespace srvlocal_gui
                     File.Copy(filePath.Replace(".exe", ".dll"), "C:\\LILO" + filePath.Replace(".exe", ".dll"));
                 }
 
-                DateTime expireDate;
-
-                var lic = LABLibary.Assistant.ReadLicense.Read(".\\license.labl");
-                lblCode.Text = lic.Code;
-                if (LicenseGenerator.DecodeLicense(lic.Code, out string productName, out string productVersion, out DateTime expirationDate))
-                {
-                    lblExpires.Text = expirationDate.ToString();
-                }
-                else
-                {
-                    lblExpires.Text = ("Invalid license code.");
-                }
-                lblProduct.Text = lic.Assembly.Name;
-                lblProductVersion.Text = lic.Assembly.Version.ToString();
-                lbliv.Text = LicenseValues.Default.iv;
-                lblkey.Text = LicenseValues.Default.key;
             }
             catch
             {
                 MessageBox.Show("Some Ressources are missing. Please Re-Install the Application.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Program.Browser_();
                 this.Close();
+            }
+
+
+            LicenseEvaluation();
+        }
+
+        delegate void PrintDelegate(string text);
+
+        PrintDelegate PrintToConsole = (string text) =>
+        {
+            var log = new Log();
+            log.WriteEntry(text);
+            Console.WriteLine(text);
+        };
+
+        PrintDelegate WriteToFile = (string text) =>
+        {
+            var log = new Log();
+            log.WriteEntry(text);
+            File.AppendAllText("./logs.txt", text);
+        };
+
+        void LogEvents(PrintDelegate log, string logContent)
+        {
+            log(logContent);
+        }
+
+        private void LicenseEvaluation()
+        {
+            try
+            {
+                DateTime expireDate;
+
+                var lic = LABLibary.Assistant.ReadLicense.Read(".\\license.labl");
+                lblCode.Text = LicenseValues.Default.licCode;
+                if (LicenseGenerator.DecodeLicense(lic.Code, out string productName, out string productVersion, out DateTime expirationDate))
+                {
+                    lblExpires.Text = expirationDate.ToString();
+                }
+                else { lblExpires.Text = ("Invalid license code."); LogEvents(WriteToFile, "Invalid license code."); }
+
+                if (lic.UserRightStatus.Length >= 10)
+                {
+                    string[] splitRights = lic.UserRightStatus.Split('_');
+                    if (splitRights[0] == "admin-rights")
+                    {
+                        if (splitRights[1].EndsWith("lilodev420")) DebugSettings.Default.debug = true;
+                        else DebugSettings.Default.debug = false;
+
+                        LogEvents(WriteToFile, "Set RightsPerUserTo : " + DebugSettings.Default.debug);
+                        DebugSettings.Default.Save();
+                    }
+                }
+                lblProduct.Text = lic.Assembly.Name;
+                lblProductVersion.Text = lic.Assembly.Version.ToString();
+                lbliv.Text = LicenseValues.Default.iv;
+                lblkey.Text = LicenseValues.Default.key;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "License Activation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Enabled = false;
             }
         }
 
@@ -101,6 +150,9 @@ namespace srvlocal_gui
 
         private void bntUpdate(object sender, EventArgs e)
         {
+            var latestVersion = Updater.GetLatestVersion(owner, repo);
+            var latestChanges = Updater.GetLatestChanges(owner, repo);
+
             if (bntCheck.Text == "Install")
             {
                 Process.Start("explorer.exe", Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop)));
@@ -111,103 +163,48 @@ namespace srvlocal_gui
                 switch (UpdateDetected)
                 {
                     case true:
-                        progressbar.Visible = true;
+                        string html = Markdig.Markdown.ToHtml(latestChanges);
+                        var _read = ReadMeDialog.Instance();
+                        _read.htmlCode = html;
+                        _read.name = "Latest Release";
+                        _read.version = latestVersion;
+                        _read.Show();
+                        _read.BringToFront();
+                        break;
+                    default:
+
                         Task.Run(() =>
                         {
-                            Updater.DownloadLatestRelease(owner, repo, UpdateProgress);
                             this.Invoke((MethodInvoker)delegate
                             {
-                                richTxtStatus.ResetText();
+                                if (Updater.HasNewRelease(owner, repo))
+                                {
+                                    Console.WriteLine("A new release is available.");
+                                    richTxtStatus.Text = $"A new release is available. \nYour Version : {Updater.GetCurrentVersion()}\nLatest Version : {latestVersion}";
+                                    UpdateDetected = true;
+                                    bntCheck.Text = "Download";
+
+                                    string html = Markdig.Markdown.ToHtml(latestChanges);
+                                    var _read = ReadMeDialog.Instance();
+                                    _read.htmlCode = html;
+                                    _read.name = "Latest Release";
+                                    _read.version = latestVersion;
+                                    _read.Show();
+
+                                }
+                                else
+                                {
+                                    Console.WriteLine("No new release available.");
+                                    richTxtStatus.Text = "No new release available.\nYou are perfect.";
+                                }
                             });
 
                         });
                         break;
-                    default:
-                        if (Updater.HasNewRelease(owner, repo))
-                        {
-                            Console.WriteLine("A new release is available.");
-                            richTxtStatus.Text = $"A new release is available. \nYour Version : {Updater.GetCurrentVersion()}\nLatest Version : {Updater.GetLatestVersion(owner, repo)}";
-                            UpdateDetected = true;
-                            bntCheck.Text = "Download";
-                        }
-                        else
-                        {
-                            Console.WriteLine("No new release available.");
-                            richTxtStatus.Text = "No new release available. You are perfect.";
-                        }
-                        break;
+
                 }
             }
-
-
-
         }
-
-        private void UpdateProgress(object sender, DownloadProgressChangedEventArgs e)
-        {
-            this.Invoke((MethodInvoker)delegate
-            {
-                progressbar.Value = e.ProgressPercentage;
-                lblUpdaterPros.Text = $"{e.ProgressPercentage}%";
-
-                if (e.ProgressPercentage == 100)
-                {
-                    richTxtStatus.Text += "\nLatest release downloaded successfully.";
-                    lblUpdaterPros.Text = "Ready";
-                    progressbar.Visible = false;
-                    bntCheck.Text = "Install";
-                }
-            });
-        }
-
-        public class Updater
-        {
-
-            public static bool HasNewRelease(string owner, string repo)
-            {
-                var client = new GitHubClient(new Octokit.ProductHeaderValue("srvlocal_gui"));
-                var releases = client.Repository.Release.GetAll(owner, repo).Result;
-
-                if (releases.Count > 0)
-                {
-                    string latestTag = releases[0].TagName;
-                    if (latestTag != GetCurrentVersion())
-                    {
-                        return true;
-                    }
-                }
-
-                return false;
-            }
-
-            public static string GetLatestVersion(string owner, string repo)
-            {
-                var client = new GitHubClient(new Octokit.ProductHeaderValue("srvlocal_gui"));
-                var releases = client.Repository.Release.GetAll(owner, repo).Result;
-                return releases[0].TagName;
-            }
-
-            public static void DownloadLatestRelease(string owner, string repo, DownloadProgressChangedEventHandler progressHandler)
-            {
-                var client = new WebClient();
-                client.DownloadProgressChanged += progressHandler;
-                string latestUrl = GetLatestReleaseUrl(owner, repo);
-                client.DownloadFileAsync(new Uri(latestUrl), Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "latest_release.zip"));
-            }
-
-            public static string GetLatestReleaseUrl(string owner, string repo)
-            {
-                var client = new GitHubClient(new Octokit.ProductHeaderValue("srvlocal_gui"));
-                var releases = client.Repository.Release.GetAll(owner, repo).Result;
-                return releases[0].Assets[0].BrowserDownloadUrl;
-            }
-
-            public static string GetCurrentVersion()
-            {
-                return System.Windows.Forms.Application.ProductVersion.ToLower();
-            }
-        }
-
         private void guna2Button2_Click(object sender, EventArgs e)
         {
             var Proc = Process.Start("explorer.exe", "C:\\LILO\\dist");

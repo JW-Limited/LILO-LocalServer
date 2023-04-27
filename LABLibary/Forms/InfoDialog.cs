@@ -19,6 +19,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Linq;
+using System.Net.Mime;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -28,7 +29,8 @@ namespace LABLibary.Forms
     [Localizable(true)]
     public class InfoDialog
     {
-        public static void Show(string message, string title = "Info")
+
+        public static void Show(string message, string title = "Info", ContentType type = default)
         {
             var info = new System.Windows.Forms.Form()
             {
@@ -47,6 +49,7 @@ namespace LABLibary.Forms
             var txtBox = new TextBox()
             {
                 Text = message,
+                AllowDrop = false,
                 Location = new Point(12, 12),
                 Multiline = true,
                 Dock = DockStyle.Fill,

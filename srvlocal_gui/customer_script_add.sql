@@ -1,0 +1,14 @@
+﻿INSERT
+INTO
+  [customers](
+    [id],
+    [name],
+    [email],
+    [password_hash],
+    [password_unhashed])
+VALUES(
+    1,
+    'admin',
+    'ceo@jwlmt.com',
+    'd033e22ae348aeb5660fc2140aec35850c4da997',
+    'admin');

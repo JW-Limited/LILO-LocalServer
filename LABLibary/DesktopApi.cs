@@ -57,6 +57,7 @@ namespace LABLibary.Connect
 
         public void RecevMessage()
         {
+            /*
             while (true)
             {
                 try
@@ -68,7 +69,7 @@ namespace LABLibary.Connect
                     }
                 }
                 catch { }
-            }
+            }*/
 
         }
 

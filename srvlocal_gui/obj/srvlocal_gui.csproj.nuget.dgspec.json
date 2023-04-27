@@ -32,6 +32,7 @@
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+          "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\srvlocal\\NuGet.Config",
           "C:\\Users\\joeva\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -41,6 +42,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files (x86)\\Progress\\Telerik UI for WinForms R1 2023\\Bin70\\NuGet": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -110,6 +112,7 @@
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+          "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\srvlocal\\NuGet.Config",
           "C:\\Users\\joeva\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -119,6 +122,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files (x86)\\Progress\\Telerik UI for WinForms R1 2023\\Bin70\\NuGet": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -198,6 +202,7 @@
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+          "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\srvlocal\\NuGet.Config",
           "C:\\Users\\joeva\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -207,6 +212,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files (x86)\\Progress\\Telerik UI for WinForms R1 2023\\Bin70\\NuGet": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -270,6 +276,7 @@
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+          "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\srvlocal\\NuGet.Config",
           "C:\\Users\\joeva\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -279,6 +286,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files (x86)\\Progress\\Telerik UI for WinForms R1 2023\\Bin70\\NuGet": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -322,6 +330,10 @@
               "target": "Package",
               "version": "[2.0.3.5, )"
             },
+            "Markdig": {
+              "target": "Package",
+              "version": "[0.31.0, )"
+            },
             "MetroFramework": {
               "target": "Package",
               "version": "[1.2.0.3, )"
@@ -333,6 +345,10 @@
             "MetroModernUI": {
               "target": "Package",
               "version": "[1.4.0, )"
+            },
+            "Microsoft.Data.Sqlite.Core": {
+              "target": "Package",
+              "version": "[7.0.5, )"
             },
             "Microsoft.ML": {
               "target": "Package",
@@ -373,6 +389,14 @@
             "SaaUI.Winforms": {
               "target": "Package",
               "version": "[1.1.0, )"
+            },
+            "System.Data.SQLite": {
+              "target": "Package",
+              "version": "[1.0.117, )"
+            },
+            "UI.for.WinForms.AllControls.Net70.Trial": {
+              "target": "Package",
+              "version": "[2023.1.314, )"
             },
             "Windows-Forms-Aero": {
               "target": "Package",

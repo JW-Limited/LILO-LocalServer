@@ -12,7 +12,7 @@ namespace LABLibary.Assistant {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.5.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.6.0.0")]
     public sealed partial class LicenseValues : global::System.Configuration.ApplicationSettingsBase {
         
         private static LicenseValues defaultInstance = ((LicenseValues)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new LicenseValues())));
@@ -44,6 +44,18 @@ namespace LABLibary.Assistant {
             }
             set {
                 this["key"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string licCode {
+            get {
+                return ((string)(this["licCode"]));
+            }
+            set {
+                this["licCode"] = value;
             }
         }
     }

@@ -72,10 +72,12 @@ namespace LABLibary.Assistant
                 LicenseValues.Default.iv = LABLibary.Converter.StringC.ByteArrayToString(iv);
             }
 
-            LicenseValues.Default.Save();
 
             // create a plaintext license string
             string licenseText = $"{productName}|{productVersion}|{expirationDate.ToString("yyyy-MM-dd")}";
+            LicenseValues.Default.licCode = licenseText;
+
+            LicenseValues.Default.Save();
 
             // encrypt the license string using AES-256 CBC mode
             byte[] encrypted = EncryptStringToBytes_Aes(licenseText, key, iv);
@@ -123,7 +125,6 @@ namespace LABLibary.Assistant
         {
             byte[] encrypted;
 
-            // Create an Aes object with the specified key and IV.
             using (Aes aesAlg = Aes.Create())
             {
                 aesAlg.Key = key;
@@ -184,7 +185,8 @@ namespace LABLibary.Assistant
             {
                 key = LABLibary.Converter.ByteC.StringToByteArray(LicenseValues.Default.key);
                 iv = LABLibary.Converter.ByteC.StringToByteArray(LicenseValues.Default.iv);
-                licenseText = DecryptStringFromBytes_Aes(encrypted, key, iv);
+                //licenseText = DecryptStringFromBytes_Aes(encrypted, key, iv);
+                licenseText = LicenseValues.Default.licCode;
             }
             catch (CryptographicException)
             {
