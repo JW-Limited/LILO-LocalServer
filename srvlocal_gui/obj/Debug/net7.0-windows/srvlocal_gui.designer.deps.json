@@ -253,6 +253,14 @@
           }
         }
       },
+      "MetroSet_UI/2.0.0": {
+        "runtime": {
+          "lib/netcoreapp3.1/MetroSet UI.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        }
+      },
       "Microsoft.CSharp/4.7.0": {},
       "Microsoft.Data.Sqlite.Core/7.0.5": {
         "dependencies": {
@@ -2588,6 +2596,13 @@
       "sha512": "sha512-p2F3w8bF1tb0tpkDceEVO65UYMKnJxdQyNxVyl/OjrFZHighicLYZDppKkiqmvBZ10XUi2mqHiIJUzXBP3GElQ==",
       "path": "metromodernui/1.4.0",
       "hashPath": "metromodernui.1.4.0.nupkg.sha512"
+    },
+    "MetroSet_UI/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7FO1rFTiht/j+xdvyRBQOv3JL8yoKBwQrrBuA/Zbz98sNIhgpNDO977ZumAz6TTfbuIT/4waSHsFBp01cXDDIA==",
+      "path": "metroset_ui/2.0.0",
+      "hashPath": "metroset_ui.2.0.0.nupkg.sha512"
     },
     "Microsoft.CSharp/4.7.0": {
       "type": "package",

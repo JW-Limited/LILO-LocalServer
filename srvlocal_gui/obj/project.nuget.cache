@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "s6BIsnusD0VyL6N7AinK9zLwyWDPrDrSgY7wCan6hggQFi7QPQVrTB7JljklbaZWa8I572hHLPlTf6O21Ca0RA==",
+  "dgSpecHash": "rLD6gc19tl6FjExPJxviZ8PbGCC09nWcY2HciB5pIBxaLi+klDGdXryPaJU16pPJzllCAREZ+vnjGoU6CkTOeQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\srvlocal_gui\\srvlocal_gui.csproj",
   "expectedPackageFiles": [
@@ -24,6 +24,7 @@
     "C:\\Users\\joeva\\.nuget\\packages\\metroframework.fonts\\1.2.0.3\\metroframework.fonts.1.2.0.3.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\metroframework.runtime\\1.2.0.3\\metroframework.runtime.1.2.0.3.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\metromodernui\\1.4.0\\metromodernui.1.4.0.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\metroset_ui\\2.0.0\\metroset_ui.2.0.0.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\microsoft.data.sqlite.core\\7.0.5\\microsoft.data.sqlite.core.7.0.5.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\microsoft.ml\\2.0.0\\microsoft.ml.2.0.0.nupkg.sha512",

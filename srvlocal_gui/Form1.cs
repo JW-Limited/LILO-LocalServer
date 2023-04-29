@@ -150,8 +150,10 @@ namespace srvlocal_gui
 
         private void bntUpdate(object sender, EventArgs e)
         {
-            var latestVersion = Updater.GetLatestVersion(owner, repo);
-            var latestChanges = Updater.GetLatestChanges(owner, repo);
+            var updater = Updater.Instance();
+
+            var latestVersion = updater.GetLatestVersion(owner, repo);
+            var latestChanges = updater.GetLatestChanges(owner, repo);
 
             if (bntCheck.Text == "Install")
             {
@@ -177,10 +179,10 @@ namespace srvlocal_gui
                         {
                             this.Invoke((MethodInvoker)delegate
                             {
-                                if (Updater.HasNewRelease(owner, repo))
+                                if (updater.HasNewRelease(owner, repo))
                                 {
                                     Console.WriteLine("A new release is available.");
-                                    richTxtStatus.Text = $"A new release is available. \nYour Version : {Updater.GetCurrentVersion()}\nLatest Version : {latestVersion}";
+                                    richTxtStatus.Text = $"A new release is available. \nYour Version : {updater.GetCurrentVersion()}\nLatest Version : {latestVersion}";
                                     UpdateDetected = true;
                                     bntCheck.Text = "Download";
 

@@ -323,6 +323,18 @@
           "lib/net/MetroFramework.dll": {}
         }
       },
+      "MetroSet_UI/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/MetroSet UI.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/MetroSet UI.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      },
       "Microsoft.CSharp/4.7.0": {
         "type": "package",
         "compile": {
@@ -3680,6 +3692,21 @@
         "lib/net/MetroFramework.dll",
         "metromodernui.1.4.0.nupkg.sha512",
         "metromodernui.nuspec"
+      ]
+    },
+    "MetroSet_UI/2.0.0": {
+      "sha512": "7FO1rFTiht/j+xdvyRBQOv3JL8yoKBwQrrBuA/Zbz98sNIhgpNDO977ZumAz6TTfbuIT/4waSHsFBp01cXDDIA==",
+      "type": "package",
+      "path": "metroset_ui/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "MetroSet.png",
+        "lib/net45/MetroSet UI.dll",
+        "lib/netcoreapp3.1/MetroSet UI.dll",
+        "metroset_ui.2.0.0.nupkg.sha512",
+        "metroset_ui.nuspec"
       ]
     },
     "Microsoft.CSharp/4.7.0": {
@@ -9115,6 +9142,7 @@
       "MetroFramework >= 1.2.0.3",
       "MetroFramework.Design >= 1.2.0.3",
       "MetroModernUI >= 1.4.0",
+      "MetroSet_UI >= 2.0.0",
       "Microsoft.Data.Sqlite.Core >= 7.0.5",
       "Microsoft.ML >= 2.0.0",
       "Microsoft.ML.FastTree >= 2.0.0",
@@ -9220,6 +9248,10 @@
           "MetroModernUI": {
             "target": "Package",
             "version": "[1.4.0, )"
+          },
+          "MetroSet_UI": {
+            "target": "Package",
+            "version": "[2.0.0, )"
           },
           "Microsoft.Data.Sqlite.Core": {
             "target": "Package",

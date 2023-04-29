@@ -54,6 +54,8 @@ namespace srvlocal_gui.AppManager
 
         private void bntUpdate_Click(object sender, EventArgs e)
         {
+            var updater = Updater.Instance();
+
             try
             {
                 if (downloaded)
@@ -71,7 +73,8 @@ namespace srvlocal_gui.AppManager
 
                     Task.Run(() =>
                     {
-                        Updater.DownloadLatestRelease(owner, repo, UpdateProgress);
+                        
+                        updater.DownloadLatestRelease(owner, repo, UpdateProgress);
                         this.Invoke((MethodInvoker)delegate
                         {
                             this.ControlBox = false;
@@ -116,6 +119,10 @@ namespace srvlocal_gui.AppManager
         private void ReadMeDialog_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (updating) e.Cancel = true;
+            else
+            {
+                _instance = null;
+            }
         }
 
         private void progress_DoWork(object sender, DoWorkEventArgs e)

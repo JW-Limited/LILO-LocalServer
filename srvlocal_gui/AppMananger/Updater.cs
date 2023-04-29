@@ -7,12 +7,35 @@ using System.Threading;
 using System.Net.Http;
 using Octokit;
 using System.IO;
+using srvlocal_gui.AppManager;
 
 namespace srvlocal_gui;
 
-public class Updater
+public sealed class Updater
 {
-    public static string GetLatestChanges(string owner, string repo)
+
+    private static Updater _instance;
+    public static readonly object _lock = new object();
+
+    private Updater()
+    {
+
+    }
+
+    public static Updater Instance()
+    {
+        lock (_lock)
+        {
+            if (_instance == null)
+            {
+                _instance = new Updater();
+            }
+        }
+
+        return _instance;
+    }
+
+    public string GetLatestChanges(string owner, string repo)
     {
         var client = new GitHubClient(new Octokit.ProductHeaderValue("srvlocal_gui"));
         var releases = client.Repository.Release.GetAll(owner, repo).Result;
@@ -21,7 +44,7 @@ public class Updater
     }
 
 
-    public static bool HasNewRelease(string owner, string repo)
+    public bool HasNewRelease(string owner, string repo)
     {
         var client = new GitHubClient(new Octokit.ProductHeaderValue("srvlocal_gui"));
         var releases = client.Repository.Release.GetAll(owner, repo).Result;
@@ -38,14 +61,14 @@ public class Updater
         return false;
     }
 
-    public static string GetLatestVersion(string owner, string repo)
+    public string GetLatestVersion(string owner, string repo)
     {
         var client = new GitHubClient(new Octokit.ProductHeaderValue("srvlocal_gui"));
         var releases = client.Repository.Release.GetAll(owner, repo).Result;
         return releases[0].TagName;
     }
 
-    public static void DownloadLatestRelease(string owner, string repo, DownloadProgressChangedEventHandler progressHandler)
+    public void DownloadLatestRelease(string owner, string repo, DownloadProgressChangedEventHandler progressHandler)
     {
         var client = new WebClient();
         client.DownloadProgressChanged += progressHandler;
@@ -53,14 +76,14 @@ public class Updater
         client.DownloadFileAsync(new Uri(latestUrl), Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "latest_release.zip"));
     }
 
-    public static string GetLatestReleaseUrl(string owner, string repo)
+    public string GetLatestReleaseUrl(string owner, string repo)
     {
         var client = new GitHubClient(new Octokit.ProductHeaderValue("srvlocal_gui"));
         var releases = client.Repository.Release.GetAll(owner, repo).Result;
         return releases[0].Assets[0].BrowserDownloadUrl;
     }
 
-    public static string GetCurrentVersion()
+    public string GetCurrentVersion()
     {
         return System.Windows.Forms.Application.ProductVersion.ToLower();
     }

@@ -1,0 +1,1022 @@
+{
+  "version": 3,
+  "targets": {
+    "net7.0-windows7.0": {
+      "Guna.UI2.WinForms/2.0.3.5": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Guna.UI2.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Guna.UI2.dll": {}
+        }
+      },
+      "MetroModernUI/1.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net/MetroFramework.Design.dll": {},
+          "lib/net/MetroFramework.Fonts.dll": {},
+          "lib/net/MetroFramework.dll": {}
+        },
+        "runtime": {
+          "lib/net/MetroFramework.Design.dll": {},
+          "lib/net/MetroFramework.Fonts.dll": {},
+          "lib/net/MetroFramework.dll": {}
+        }
+      },
+      "Microsoft.NETCore.Platforms/3.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "Microsoft.Win32.Registry/4.7.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Security.AccessControl": "4.7.0",
+          "System.Security.Principal.Windows": "4.7.0"
+        },
+        "compile": {
+          "ref/netstandard2.0/_._": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Win32.Registry.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/netstandard2.0/Microsoft.Win32.Registry.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/netstandard2.0/Microsoft.Win32.Registry.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "System.CodeDom/4.7.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.CodeDom.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.CodeDom.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.ComponentModel.Composition/4.7.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.ComponentModel.Composition.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/System.ComponentModel.Composition.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Management/4.7.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "3.1.0",
+          "Microsoft.Win32.Registry": "4.7.0",
+          "System.CodeDom": "4.7.0"
+        },
+        "compile": {
+          "ref/netstandard2.0/System.Management.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Management.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netcoreapp2.0/System.Management.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "System.Reflection.Emit/4.7.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/_._": {}
+        }
+      },
+      "System.Security.AccessControl/4.7.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "3.1.0",
+          "System.Security.Principal.Windows": "4.7.0"
+        },
+        "compile": {
+          "ref/netstandard2.0/_._": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Security.AccessControl.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netcoreapp2.0/System.Security.AccessControl.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "System.Security.Principal.Windows/4.7.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp3.0/_._": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Security.Principal.Windows.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/netcoreapp2.1/System.Security.Principal.Windows.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/netcoreapp2.1/System.Security.Principal.Windows.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "UI.for.WinForms.AllControls.Net70.Trial/2023.1.314": {
+        "type": "package",
+        "dependencies": {
+          "System.ComponentModel.Composition": "4.7.0",
+          "System.Management": "4.7.0",
+          "System.Reflection.Emit": "4.7.0"
+        },
+        "compile": {
+          "lib/net7.0-windows/MediaFoundation.dll": {},
+          "lib/net7.0-windows/RadControlSpy.dll": {},
+          "lib/net7.0-windows/Telerik.Documents.SpreadsheetStreaming.dll": {
+            "related": ".xml"
+          },
+          "lib/net7.0-windows/Telerik.WinControls.ChartView.dll": {
+            "related": ".xml"
+          },
+          "lib/net7.0-windows/Telerik.WinControls.GridView.dll": {
+            "related": ".xml"
+          },
+          "lib/net7.0-windows/Telerik.WinControls.PdfViewer.dll": {
+            "related": ".xml"
+          },
+          "lib/net7.0-windows/Telerik.WinControls.PivotGrid.dll": {
+            "related": ".xml"
+          },
+          "lib/net7.0-windows/Telerik.WinControls.RadDiagram.dll": {
+            "related": ".xml"
+          },
+          "lib/net7.0-windows/Telerik.WinControls.RadDock.dll": {
+            "related": ".xml"
+          },
+          "lib/net7.0-windows/Telerik.WinControls.RadMap.dll": {
+            "related": ".xml"
+          },
+          "lib/net7.0-windows/Telerik.WinControls.RadMarkupEditor.dll": {
+            "related": ".xml"
+          },
+          "lib/net7.0-windows/Telerik.WinControls.RadSpreadsheet.dll": {
+            "related": ".xml"
+          },
+          "lib/net7.0-windows/Telerik.WinControls.RadWebCam.dll": {
+            "related": ".xml"
+          },
+          "lib/net7.0-windows/Telerik.WinControls.RichTextEditor.dll": {
+            "related": ".xml"
+          },
+          "lib/net7.0-windows/Telerik.WinControls.Scheduler.dll": {
+            "related": ".xml"
+          },
+          "lib/net7.0-windows/Telerik.WinControls.SpellChecker.dll": {
+            "related": ".xml"
+          },
+          "lib/net7.0-windows/Telerik.WinControls.SyntaxEditor.dll": {
+            "related": ".xml"
+          },
+          "lib/net7.0-windows/Telerik.WinControls.Themes.Aqua.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.Themes.Breeze.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.Themes.Crystal.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.Themes.CrystalDark.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.Themes.Desert.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.Themes.Fluent.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.Themes.FluentDark.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.Themes.HighContrastBlack.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.Themes.Material.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.Themes.MaterialBlueGrey.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.Themes.MaterialPink.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.Themes.MaterialTeal.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.Themes.Office2007Black.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.Themes.Office2007Silver.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.Themes.Office2010Black.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.Themes.Office2010Blue.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.Themes.Office2010Silver.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.Themes.Office2013Dark.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.Themes.Office2013Light.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.Themes.Office2019.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.Themes.TelerikMetro.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.Themes.TelerikMetroBlue.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.Themes.TelerikMetroTouch.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.Themes.VisualStudio2012Dark.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.Themes.VisualStudio2012Light.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.Themes.VisualStudio2022.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.Themes.Windows11.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.Themes.Windows7.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.Themes.Windows8.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.UI.dll": {
+            "related": ".XML"
+          },
+          "lib/net7.0-windows/Telerik.WinControls.dll": {
+            "related": ".ChartView.xml;.GridView.xml;.PdfViewer.xml;.PivotGrid.xml;.RadChart.xml;.RadDiagram.xml;.RadDock.xml;.RadMap.xml;.RadMarkupEditor.xml;.RadSpreadsheet.xml;.RadWebCam.xml;.RichTextEditor.xml;.Scheduler.xml;.SpellChecker.xml;.SyntaxEditor.xml;.UI.XML;.xml"
+          },
+          "lib/net7.0-windows/Telerik.Windows.Documents.CMapUtils.dll": {
+            "related": ".xml"
+          },
+          "lib/net7.0-windows/Telerik.Windows.Documents.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net7.0-windows/Telerik.Windows.Documents.DrawingML.dll": {
+            "related": ".xml"
+          },
+          "lib/net7.0-windows/Telerik.Windows.Documents.Fixed.dll": {
+            "related": ".xml"
+          },
+          "lib/net7.0-windows/Telerik.Windows.Documents.Flow.FormatProviders.Doc.dll": {
+            "related": ".xml"
+          },
+          "lib/net7.0-windows/Telerik.Windows.Documents.Flow.FormatProviders.Pdf.dll": {
+            "related": ".xml"
+          },
+          "lib/net7.0-windows/Telerik.Windows.Documents.Flow.dll": {
+            "related": ".FormatProviders.Doc.xml;.FormatProviders.Pdf.xml;.xml"
+          },
+          "lib/net7.0-windows/Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll": {
+            "related": ".xml"
+          },
+          "lib/net7.0-windows/Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.dll": {
+            "related": ".xml"
+          },
+          "lib/net7.0-windows/Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls.dll": {
+            "related": ".xml"
+          },
+          "lib/net7.0-windows/Telerik.Windows.Documents.Spreadsheet.dll": {
+            "related": ".FormatProviders.OpenXml.xml;.FormatProviders.Pdf.xml;.FormatProviders.Xls.xml;.xml"
+          },
+          "lib/net7.0-windows/Telerik.Windows.MediaFoundation.dll": {},
+          "lib/net7.0-windows/Telerik.Windows.Zip.dll": {
+            "related": ".xml"
+          },
+          "lib/net7.0-windows/TelerikCommon.dll": {},
+          "lib/net7.0-windows/TelerikData.dll": {
+            "related": ".xml"
+          },
+          "lib/net7.0-windows/TelerikExport.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-windows/MediaFoundation.dll": {},
+          "lib/net7.0-windows/RadControlSpy.dll": {},
+          "lib/net7.0-windows/Telerik.Documents.SpreadsheetStreaming.dll": {
+            "related": ".xml"
+          },
+          "lib/net7.0-windows/Telerik.WinControls.ChartView.dll": {
+            "related": ".xml"
+          },
+          "lib/net7.0-windows/Telerik.WinControls.GridView.dll": {
+            "related": ".xml"
+          },
+          "lib/net7.0-windows/Telerik.WinControls.PdfViewer.dll": {
+            "related": ".xml"
+          },
+          "lib/net7.0-windows/Telerik.WinControls.PivotGrid.dll": {
+            "related": ".xml"
+          },
+          "lib/net7.0-windows/Telerik.WinControls.RadDiagram.dll": {
+            "related": ".xml"
+          },
+          "lib/net7.0-windows/Telerik.WinControls.RadDock.dll": {
+            "related": ".xml"
+          },
+          "lib/net7.0-windows/Telerik.WinControls.RadMap.dll": {
+            "related": ".xml"
+          },
+          "lib/net7.0-windows/Telerik.WinControls.RadMarkupEditor.dll": {
+            "related": ".xml"
+          },
+          "lib/net7.0-windows/Telerik.WinControls.RadSpreadsheet.dll": {
+            "related": ".xml"
+          },
+          "lib/net7.0-windows/Telerik.WinControls.RadWebCam.dll": {
+            "related": ".xml"
+          },
+          "lib/net7.0-windows/Telerik.WinControls.RichTextEditor.dll": {
+            "related": ".xml"
+          },
+          "lib/net7.0-windows/Telerik.WinControls.Scheduler.dll": {
+            "related": ".xml"
+          },
+          "lib/net7.0-windows/Telerik.WinControls.SpellChecker.dll": {
+            "related": ".xml"
+          },
+          "lib/net7.0-windows/Telerik.WinControls.SyntaxEditor.dll": {
+            "related": ".xml"
+          },
+          "lib/net7.0-windows/Telerik.WinControls.Themes.Aqua.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.Themes.Breeze.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.Themes.Crystal.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.Themes.CrystalDark.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.Themes.Desert.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.Themes.Fluent.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.Themes.FluentDark.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.Themes.HighContrastBlack.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.Themes.Material.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.Themes.MaterialBlueGrey.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.Themes.MaterialPink.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.Themes.MaterialTeal.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.Themes.Office2007Black.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.Themes.Office2007Silver.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.Themes.Office2010Black.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.Themes.Office2010Blue.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.Themes.Office2010Silver.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.Themes.Office2013Dark.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.Themes.Office2013Light.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.Themes.Office2019.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.Themes.TelerikMetro.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.Themes.TelerikMetroBlue.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.Themes.TelerikMetroTouch.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.Themes.VisualStudio2012Dark.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.Themes.VisualStudio2012Light.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.Themes.VisualStudio2022.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.Themes.Windows11.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.Themes.Windows7.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.Themes.Windows8.dll": {},
+          "lib/net7.0-windows/Telerik.WinControls.UI.dll": {
+            "related": ".XML"
+          },
+          "lib/net7.0-windows/Telerik.WinControls.dll": {
+            "related": ".ChartView.xml;.GridView.xml;.PdfViewer.xml;.PivotGrid.xml;.RadChart.xml;.RadDiagram.xml;.RadDock.xml;.RadMap.xml;.RadMarkupEditor.xml;.RadSpreadsheet.xml;.RadWebCam.xml;.RichTextEditor.xml;.Scheduler.xml;.SpellChecker.xml;.SyntaxEditor.xml;.UI.XML;.xml"
+          },
+          "lib/net7.0-windows/Telerik.Windows.Documents.CMapUtils.dll": {
+            "related": ".xml"
+          },
+          "lib/net7.0-windows/Telerik.Windows.Documents.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net7.0-windows/Telerik.Windows.Documents.DrawingML.dll": {
+            "related": ".xml"
+          },
+          "lib/net7.0-windows/Telerik.Windows.Documents.Fixed.dll": {
+            "related": ".xml"
+          },
+          "lib/net7.0-windows/Telerik.Windows.Documents.Flow.FormatProviders.Doc.dll": {
+            "related": ".xml"
+          },
+          "lib/net7.0-windows/Telerik.Windows.Documents.Flow.FormatProviders.Pdf.dll": {
+            "related": ".xml"
+          },
+          "lib/net7.0-windows/Telerik.Windows.Documents.Flow.dll": {
+            "related": ".FormatProviders.Doc.xml;.FormatProviders.Pdf.xml;.xml"
+          },
+          "lib/net7.0-windows/Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll": {
+            "related": ".xml"
+          },
+          "lib/net7.0-windows/Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.dll": {
+            "related": ".xml"
+          },
+          "lib/net7.0-windows/Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls.dll": {
+            "related": ".xml"
+          },
+          "lib/net7.0-windows/Telerik.Windows.Documents.Spreadsheet.dll": {
+            "related": ".FormatProviders.OpenXml.xml;.FormatProviders.Pdf.xml;.FormatProviders.Xls.xml;.xml"
+          },
+          "lib/net7.0-windows/Telerik.Windows.MediaFoundation.dll": {},
+          "lib/net7.0-windows/Telerik.Windows.Zip.dll": {
+            "related": ".xml"
+          },
+          "lib/net7.0-windows/TelerikCommon.dll": {},
+          "lib/net7.0-windows/TelerikData.dll": {
+            "related": ".xml"
+          },
+          "lib/net7.0-windows/TelerikExport.dll": {
+            "related": ".xml"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Guna.UI2.WinForms/2.0.3.5": {
+      "sha512": "nd6IAGX4u+sCx9i6PeBfkb6Y+xoayIsoMhndlJoN1L5kE6QbYjDMSHiF+9/nkFhcKx+eNaXzemyKbCY4W7lBEA==",
+      "type": "package",
+      "path": "guna.ui2.winforms/2.0.3.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "guna.ui2.winforms.2.0.3.5.nupkg.sha512",
+        "guna.ui2.winforms.nuspec",
+        "icon.png",
+        "lib/net40/Guna.UI2.dll"
+      ]
+    },
+    "MetroModernUI/1.4.0": {
+      "sha512": "p2F3w8bF1tb0tpkDceEVO65UYMKnJxdQyNxVyl/OjrFZHighicLYZDppKkiqmvBZ10XUi2mqHiIJUzXBP3GElQ==",
+      "type": "package",
+      "path": "metromodernui/1.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net/MetroFramework.Design.dll",
+        "lib/net/MetroFramework.Fonts.dll",
+        "lib/net/MetroFramework.dll",
+        "metromodernui.1.4.0.nupkg.sha512",
+        "metromodernui.nuspec"
+      ]
+    },
+    "Microsoft.NETCore.Platforms/3.1.0": {
+      "sha512": "z7aeg8oHln2CuNulfhiLYxCVMPEwBl3rzicjvIX+4sUuCwvXw5oXQEtbiU2c0z4qYL5L3Kmx0mMA/+t/SbY67w==",
+      "type": "package",
+      "path": "microsoft.netcore.platforms/3.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netstandard1.0/_._",
+        "microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+        "microsoft.netcore.platforms.nuspec",
+        "runtime.json",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "Microsoft.Win32.Registry/4.7.0": {
+      "sha512": "KSrRMb5vNi0CWSGG1++id2ZOs/1QhRqROt+qgbEAdQuGjGrFcl4AOl4/exGPUYz2wUnU42nvJqon1T3U0kPXLA==",
+      "type": "package",
+      "path": "microsoft.win32.registry/4.7.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net46/Microsoft.Win32.Registry.dll",
+        "lib/net461/Microsoft.Win32.Registry.dll",
+        "lib/net461/Microsoft.Win32.Registry.xml",
+        "lib/netstandard1.3/Microsoft.Win32.Registry.dll",
+        "lib/netstandard2.0/Microsoft.Win32.Registry.dll",
+        "lib/netstandard2.0/Microsoft.Win32.Registry.xml",
+        "microsoft.win32.registry.4.7.0.nupkg.sha512",
+        "microsoft.win32.registry.nuspec",
+        "ref/net46/Microsoft.Win32.Registry.dll",
+        "ref/net461/Microsoft.Win32.Registry.dll",
+        "ref/net461/Microsoft.Win32.Registry.xml",
+        "ref/net472/Microsoft.Win32.Registry.dll",
+        "ref/net472/Microsoft.Win32.Registry.xml",
+        "ref/netstandard1.3/Microsoft.Win32.Registry.dll",
+        "ref/netstandard1.3/Microsoft.Win32.Registry.xml",
+        "ref/netstandard1.3/de/Microsoft.Win32.Registry.xml",
+        "ref/netstandard1.3/es/Microsoft.Win32.Registry.xml",
+        "ref/netstandard1.3/fr/Microsoft.Win32.Registry.xml",
+        "ref/netstandard1.3/it/Microsoft.Win32.Registry.xml",
+        "ref/netstandard1.3/ja/Microsoft.Win32.Registry.xml",
+        "ref/netstandard1.3/ko/Microsoft.Win32.Registry.xml",
+        "ref/netstandard1.3/ru/Microsoft.Win32.Registry.xml",
+        "ref/netstandard1.3/zh-hans/Microsoft.Win32.Registry.xml",
+        "ref/netstandard1.3/zh-hant/Microsoft.Win32.Registry.xml",
+        "ref/netstandard2.0/Microsoft.Win32.Registry.dll",
+        "ref/netstandard2.0/Microsoft.Win32.Registry.xml",
+        "runtimes/unix/lib/netstandard2.0/Microsoft.Win32.Registry.dll",
+        "runtimes/unix/lib/netstandard2.0/Microsoft.Win32.Registry.xml",
+        "runtimes/win/lib/net46/Microsoft.Win32.Registry.dll",
+        "runtimes/win/lib/net461/Microsoft.Win32.Registry.dll",
+        "runtimes/win/lib/net461/Microsoft.Win32.Registry.xml",
+        "runtimes/win/lib/netstandard1.3/Microsoft.Win32.Registry.dll",
+        "runtimes/win/lib/netstandard2.0/Microsoft.Win32.Registry.dll",
+        "runtimes/win/lib/netstandard2.0/Microsoft.Win32.Registry.xml",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.CodeDom/4.7.0": {
+      "sha512": "Hs9pw/kmvH3lXaZ1LFKj3pLQsiGfj2xo3sxSzwiLlRL6UcMZUTeCfoJ9Udalvn3yq5dLlPEZzYegrTQ1/LhPOQ==",
+      "type": "package",
+      "path": "system.codedom/4.7.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.CodeDom.dll",
+        "lib/net461/System.CodeDom.xml",
+        "lib/netstandard2.0/System.CodeDom.dll",
+        "lib/netstandard2.0/System.CodeDom.xml",
+        "ref/net461/System.CodeDom.dll",
+        "ref/net461/System.CodeDom.xml",
+        "ref/netstandard2.0/System.CodeDom.dll",
+        "ref/netstandard2.0/System.CodeDom.xml",
+        "system.codedom.4.7.0.nupkg.sha512",
+        "system.codedom.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.ComponentModel.Composition/4.7.0": {
+      "sha512": "TKOHGbuqp7++lEna7+p19kTR8rKeAeoo2Faab2n2q7spV2CWPevmUkghMG6POKfSdeQhtAJoNZ33FT+01CNe3g==",
+      "type": "package",
+      "path": "system.componentmodel.composition/4.7.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/netcoreapp2.0/System.ComponentModel.Composition.dll",
+        "lib/netcoreapp2.0/System.ComponentModel.Composition.xml",
+        "lib/netstandard2.0/System.ComponentModel.Composition.dll",
+        "lib/netstandard2.0/System.ComponentModel.Composition.xml",
+        "lib/uap10.0.16299/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/netstandard2.0/System.ComponentModel.Composition.dll",
+        "ref/netstandard2.0/System.ComponentModel.Composition.xml",
+        "ref/uap10.0.16299/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.componentmodel.composition.4.7.0.nupkg.sha512",
+        "system.componentmodel.composition.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Management/4.7.0": {
+      "sha512": "IY+uuGhgzWiCg21i8IvQeY/Z7m1tX8VuPF+ludfn7iTCaccTtJo5HkjZbBEL8kbBubKhAKKtNXr7uMtmAc28Pw==",
+      "type": "package",
+      "path": "system.management/4.7.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net45/_._",
+        "lib/netstandard2.0/System.Management.dll",
+        "lib/netstandard2.0/System.Management.xml",
+        "ref/net45/_._",
+        "ref/netstandard2.0/System.Management.dll",
+        "ref/netstandard2.0/System.Management.xml",
+        "runtimes/win/lib/net45/_._",
+        "runtimes/win/lib/netcoreapp2.0/System.Management.dll",
+        "runtimes/win/lib/netcoreapp2.0/System.Management.xml",
+        "system.management.4.7.0.nupkg.sha512",
+        "system.management.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Reflection.Emit/4.7.0": {
+      "sha512": "VR4kk8XLKebQ4MZuKuIni/7oh+QGFmZW3qORd1GvBq/8026OpW501SzT/oypwiQl4TvT8ErnReh/NzY9u+C6wQ==",
+      "type": "package",
+      "path": "system.reflection.emit/4.7.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/netcore50/System.Reflection.Emit.dll",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.1/System.Reflection.Emit.dll",
+        "lib/netstandard1.1/System.Reflection.Emit.xml",
+        "lib/netstandard1.3/System.Reflection.Emit.dll",
+        "lib/netstandard2.0/System.Reflection.Emit.dll",
+        "lib/netstandard2.0/System.Reflection.Emit.xml",
+        "lib/netstandard2.1/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.1/System.Reflection.Emit.dll",
+        "ref/netstandard1.1/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/de/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/es/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/fr/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/it/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/ja/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/ko/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/ru/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/zh-hans/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/zh-hant/System.Reflection.Emit.xml",
+        "ref/netstandard2.0/System.Reflection.Emit.dll",
+        "ref/netstandard2.0/System.Reflection.Emit.xml",
+        "ref/netstandard2.1/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/aot/lib/netcore50/System.Reflection.Emit.dll",
+        "runtimes/aot/lib/netcore50/System.Reflection.Emit.xml",
+        "system.reflection.emit.4.7.0.nupkg.sha512",
+        "system.reflection.emit.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Security.AccessControl/4.7.0": {
+      "sha512": "JECvTt5aFF3WT3gHpfofL2MNNP6v84sxtXxpqhLBCcDRzqsPBmHhQ6shv4DwwN2tRlzsUxtb3G9M3763rbXKDg==",
+      "type": "package",
+      "path": "system.security.accesscontrol/4.7.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net46/System.Security.AccessControl.dll",
+        "lib/net461/System.Security.AccessControl.dll",
+        "lib/net461/System.Security.AccessControl.xml",
+        "lib/netstandard1.3/System.Security.AccessControl.dll",
+        "lib/netstandard2.0/System.Security.AccessControl.dll",
+        "lib/netstandard2.0/System.Security.AccessControl.xml",
+        "lib/uap10.0.16299/_._",
+        "ref/net46/System.Security.AccessControl.dll",
+        "ref/net461/System.Security.AccessControl.dll",
+        "ref/net461/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/System.Security.AccessControl.dll",
+        "ref/netstandard1.3/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/de/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/es/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/fr/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/it/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/ja/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/ko/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/ru/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/zh-hans/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/zh-hant/System.Security.AccessControl.xml",
+        "ref/netstandard2.0/System.Security.AccessControl.dll",
+        "ref/netstandard2.0/System.Security.AccessControl.xml",
+        "ref/uap10.0.16299/_._",
+        "runtimes/win/lib/net46/System.Security.AccessControl.dll",
+        "runtimes/win/lib/net461/System.Security.AccessControl.dll",
+        "runtimes/win/lib/net461/System.Security.AccessControl.xml",
+        "runtimes/win/lib/netcoreapp2.0/System.Security.AccessControl.dll",
+        "runtimes/win/lib/netcoreapp2.0/System.Security.AccessControl.xml",
+        "runtimes/win/lib/netstandard1.3/System.Security.AccessControl.dll",
+        "runtimes/win/lib/uap10.0.16299/_._",
+        "system.security.accesscontrol.4.7.0.nupkg.sha512",
+        "system.security.accesscontrol.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Security.Principal.Windows/4.7.0": {
+      "sha512": "ojD0PX0XhneCsUbAZVKdb7h/70vyYMDYs85lwEI+LngEONe/17A0cFaRFqZU+sOEidcVswYWikYOQ9PPfjlbtQ==",
+      "type": "package",
+      "path": "system.security.principal.windows/4.7.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net46/System.Security.Principal.Windows.dll",
+        "lib/net461/System.Security.Principal.Windows.dll",
+        "lib/net461/System.Security.Principal.Windows.xml",
+        "lib/netstandard1.3/System.Security.Principal.Windows.dll",
+        "lib/netstandard2.0/System.Security.Principal.Windows.dll",
+        "lib/netstandard2.0/System.Security.Principal.Windows.xml",
+        "lib/uap10.0.16299/_._",
+        "ref/net46/System.Security.Principal.Windows.dll",
+        "ref/net461/System.Security.Principal.Windows.dll",
+        "ref/net461/System.Security.Principal.Windows.xml",
+        "ref/netcoreapp3.0/System.Security.Principal.Windows.dll",
+        "ref/netcoreapp3.0/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/System.Security.Principal.Windows.dll",
+        "ref/netstandard1.3/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/de/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/es/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/fr/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/it/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/ja/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/ko/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/ru/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/zh-hans/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/zh-hant/System.Security.Principal.Windows.xml",
+        "ref/netstandard2.0/System.Security.Principal.Windows.dll",
+        "ref/netstandard2.0/System.Security.Principal.Windows.xml",
+        "ref/uap10.0.16299/_._",
+        "runtimes/unix/lib/netcoreapp2.0/System.Security.Principal.Windows.dll",
+        "runtimes/unix/lib/netcoreapp2.0/System.Security.Principal.Windows.xml",
+        "runtimes/unix/lib/netcoreapp2.1/System.Security.Principal.Windows.dll",
+        "runtimes/unix/lib/netcoreapp2.1/System.Security.Principal.Windows.xml",
+        "runtimes/win/lib/net46/System.Security.Principal.Windows.dll",
+        "runtimes/win/lib/net461/System.Security.Principal.Windows.dll",
+        "runtimes/win/lib/net461/System.Security.Principal.Windows.xml",
+        "runtimes/win/lib/netcoreapp2.0/System.Security.Principal.Windows.dll",
+        "runtimes/win/lib/netcoreapp2.0/System.Security.Principal.Windows.xml",
+        "runtimes/win/lib/netcoreapp2.1/System.Security.Principal.Windows.dll",
+        "runtimes/win/lib/netcoreapp2.1/System.Security.Principal.Windows.xml",
+        "runtimes/win/lib/netstandard1.3/System.Security.Principal.Windows.dll",
+        "runtimes/win/lib/uap10.0.16299/_._",
+        "system.security.principal.windows.4.7.0.nupkg.sha512",
+        "system.security.principal.windows.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "UI.for.WinForms.AllControls.Net70.Trial/2023.1.314": {
+      "sha512": "lU3fBolMKjGs1qtklAAO1suISAdxIr9jkaNgjs9rSOCziuO/8O35zzCzxyUyxTVHM3io9u4dT99lj6jvnXVkiA==",
+      "type": "package",
+      "path": "ui.for.winforms.allcontrols.net70.trial/2023.1.314",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LicenseAgreements/EULA.rtf",
+        "LicenseAgreements/EULA.txt",
+        "LicenseAgreements/ThirdParty/NOTICE.txt",
+        "images/wf.png",
+        "lib/net7.0-windows/Design/WinForms/17.0/Server/Telerik.WinForms.Protocol.dll",
+        "lib/net7.0-windows/Design/WinForms/17.0/Server/Telerik.WinForms.Surface.ChartView.dll",
+        "lib/net7.0-windows/Design/WinForms/17.0/Server/Telerik.WinForms.Surface.Common.dll",
+        "lib/net7.0-windows/Design/WinForms/17.0/Server/Telerik.WinForms.Surface.GridView.dll",
+        "lib/net7.0-windows/Design/WinForms/17.0/Server/Telerik.WinForms.Surface.PdfViewer.dll",
+        "lib/net7.0-windows/Design/WinForms/17.0/Server/Telerik.WinForms.Surface.PivotGrid.dll",
+        "lib/net7.0-windows/Design/WinForms/17.0/Server/Telerik.WinForms.Surface.RadDiagram.dll",
+        "lib/net7.0-windows/Design/WinForms/17.0/Server/Telerik.WinForms.Surface.RadDock.dll",
+        "lib/net7.0-windows/Design/WinForms/17.0/Server/Telerik.WinForms.Surface.RadMap.dll",
+        "lib/net7.0-windows/Design/WinForms/17.0/Server/Telerik.WinForms.Surface.RadSpreadsheet.dll",
+        "lib/net7.0-windows/Design/WinForms/17.0/Server/Telerik.WinForms.Surface.RadWebCam.dll",
+        "lib/net7.0-windows/Design/WinForms/17.0/Server/Telerik.WinForms.Surface.RichTextEditor.dll",
+        "lib/net7.0-windows/Design/WinForms/17.0/Server/Telerik.WinForms.Surface.Scheduler.dll",
+        "lib/net7.0-windows/Design/WinForms/17.0/Server/Telerik.WinForms.Surface.SpellChecker.dll",
+        "lib/net7.0-windows/Design/WinForms/17.0/Telerik.WinForms.Protocol.dll",
+        "lib/net7.0-windows/Design/WinForms/17.0/Telerik.WinForms.RemoteClient.dll",
+        "lib/net7.0-windows/Design/WinForms/Server/Telerik.WinForms.Protocol.dll",
+        "lib/net7.0-windows/Design/WinForms/Server/Telerik.WinForms.Surface.ChartView.dll",
+        "lib/net7.0-windows/Design/WinForms/Server/Telerik.WinForms.Surface.Common.dll",
+        "lib/net7.0-windows/Design/WinForms/Server/Telerik.WinForms.Surface.GridView.dll",
+        "lib/net7.0-windows/Design/WinForms/Server/Telerik.WinForms.Surface.PdfViewer.dll",
+        "lib/net7.0-windows/Design/WinForms/Server/Telerik.WinForms.Surface.PivotGrid.dll",
+        "lib/net7.0-windows/Design/WinForms/Server/Telerik.WinForms.Surface.RadDiagram.dll",
+        "lib/net7.0-windows/Design/WinForms/Server/Telerik.WinForms.Surface.RadDock.dll",
+        "lib/net7.0-windows/Design/WinForms/Server/Telerik.WinForms.Surface.RadMap.dll",
+        "lib/net7.0-windows/Design/WinForms/Server/Telerik.WinForms.Surface.RadSpreadsheet.dll",
+        "lib/net7.0-windows/Design/WinForms/Server/Telerik.WinForms.Surface.RadWebCam.dll",
+        "lib/net7.0-windows/Design/WinForms/Server/Telerik.WinForms.Surface.RichTextEditor.dll",
+        "lib/net7.0-windows/Design/WinForms/Server/Telerik.WinForms.Surface.Scheduler.dll",
+        "lib/net7.0-windows/Design/WinForms/Server/Telerik.WinForms.Surface.SpellChecker.dll",
+        "lib/net7.0-windows/Design/WinForms/Telerik.WinForms.Protocol.dll",
+        "lib/net7.0-windows/Design/WinForms/Telerik.WinForms.RemoteClient.dll",
+        "lib/net7.0-windows/MediaFoundation.dll",
+        "lib/net7.0-windows/RadControlSpy.dll",
+        "lib/net7.0-windows/Telerik.Documents.SpreadsheetStreaming.dll",
+        "lib/net7.0-windows/Telerik.Documents.SpreadsheetStreaming.xml",
+        "lib/net7.0-windows/Telerik.WinControls.ChartView.dll",
+        "lib/net7.0-windows/Telerik.WinControls.ChartView.xml",
+        "lib/net7.0-windows/Telerik.WinControls.GridView.dll",
+        "lib/net7.0-windows/Telerik.WinControls.GridView.xml",
+        "lib/net7.0-windows/Telerik.WinControls.PdfViewer.dll",
+        "lib/net7.0-windows/Telerik.WinControls.PdfViewer.xml",
+        "lib/net7.0-windows/Telerik.WinControls.PivotGrid.dll",
+        "lib/net7.0-windows/Telerik.WinControls.PivotGrid.xml",
+        "lib/net7.0-windows/Telerik.WinControls.RadChart.xml",
+        "lib/net7.0-windows/Telerik.WinControls.RadDiagram.dll",
+        "lib/net7.0-windows/Telerik.WinControls.RadDiagram.xml",
+        "lib/net7.0-windows/Telerik.WinControls.RadDock.dll",
+        "lib/net7.0-windows/Telerik.WinControls.RadDock.xml",
+        "lib/net7.0-windows/Telerik.WinControls.RadMap.dll",
+        "lib/net7.0-windows/Telerik.WinControls.RadMap.xml",
+        "lib/net7.0-windows/Telerik.WinControls.RadMarkupEditor.dll",
+        "lib/net7.0-windows/Telerik.WinControls.RadMarkupEditor.xml",
+        "lib/net7.0-windows/Telerik.WinControls.RadSpreadsheet.dll",
+        "lib/net7.0-windows/Telerik.WinControls.RadSpreadsheet.xml",
+        "lib/net7.0-windows/Telerik.WinControls.RadWebCam.dll",
+        "lib/net7.0-windows/Telerik.WinControls.RadWebCam.xml",
+        "lib/net7.0-windows/Telerik.WinControls.RichTextEditor.dll",
+        "lib/net7.0-windows/Telerik.WinControls.RichTextEditor.xml",
+        "lib/net7.0-windows/Telerik.WinControls.Scheduler.dll",
+        "lib/net7.0-windows/Telerik.WinControls.Scheduler.xml",
+        "lib/net7.0-windows/Telerik.WinControls.SpellChecker.dll",
+        "lib/net7.0-windows/Telerik.WinControls.SpellChecker.xml",
+        "lib/net7.0-windows/Telerik.WinControls.SyntaxEditor.dll",
+        "lib/net7.0-windows/Telerik.WinControls.SyntaxEditor.xml",
+        "lib/net7.0-windows/Telerik.WinControls.Themes.Aqua.dll",
+        "lib/net7.0-windows/Telerik.WinControls.Themes.Breeze.dll",
+        "lib/net7.0-windows/Telerik.WinControls.Themes.Crystal.dll",
+        "lib/net7.0-windows/Telerik.WinControls.Themes.CrystalDark.dll",
+        "lib/net7.0-windows/Telerik.WinControls.Themes.Desert.dll",
+        "lib/net7.0-windows/Telerik.WinControls.Themes.Fluent.dll",
+        "lib/net7.0-windows/Telerik.WinControls.Themes.FluentDark.dll",
+        "lib/net7.0-windows/Telerik.WinControls.Themes.HighContrastBlack.dll",
+        "lib/net7.0-windows/Telerik.WinControls.Themes.Material.dll",
+        "lib/net7.0-windows/Telerik.WinControls.Themes.MaterialBlueGrey.dll",
+        "lib/net7.0-windows/Telerik.WinControls.Themes.MaterialPink.dll",
+        "lib/net7.0-windows/Telerik.WinControls.Themes.MaterialTeal.dll",
+        "lib/net7.0-windows/Telerik.WinControls.Themes.Office2007Black.dll",
+        "lib/net7.0-windows/Telerik.WinControls.Themes.Office2007Silver.dll",
+        "lib/net7.0-windows/Telerik.WinControls.Themes.Office2010Black.dll",
+        "lib/net7.0-windows/Telerik.WinControls.Themes.Office2010Blue.dll",
+        "lib/net7.0-windows/Telerik.WinControls.Themes.Office2010Silver.dll",
+        "lib/net7.0-windows/Telerik.WinControls.Themes.Office2013Dark.dll",
+        "lib/net7.0-windows/Telerik.WinControls.Themes.Office2013Light.dll",
+        "lib/net7.0-windows/Telerik.WinControls.Themes.Office2019.dll",
+        "lib/net7.0-windows/Telerik.WinControls.Themes.TelerikMetro.dll",
+        "lib/net7.0-windows/Telerik.WinControls.Themes.TelerikMetroBlue.dll",
+        "lib/net7.0-windows/Telerik.WinControls.Themes.TelerikMetroTouch.dll",
+        "lib/net7.0-windows/Telerik.WinControls.Themes.VisualStudio2012Dark.dll",
+        "lib/net7.0-windows/Telerik.WinControls.Themes.VisualStudio2012Light.dll",
+        "lib/net7.0-windows/Telerik.WinControls.Themes.VisualStudio2022.dll",
+        "lib/net7.0-windows/Telerik.WinControls.Themes.Windows11.dll",
+        "lib/net7.0-windows/Telerik.WinControls.Themes.Windows7.dll",
+        "lib/net7.0-windows/Telerik.WinControls.Themes.Windows8.dll",
+        "lib/net7.0-windows/Telerik.WinControls.UI.XML",
+        "lib/net7.0-windows/Telerik.WinControls.UI.dll",
+        "lib/net7.0-windows/Telerik.WinControls.dll",
+        "lib/net7.0-windows/Telerik.WinControls.xml",
+        "lib/net7.0-windows/Telerik.Windows.Documents.CMapUtils.dll",
+        "lib/net7.0-windows/Telerik.Windows.Documents.CMapUtils.xml",
+        "lib/net7.0-windows/Telerik.Windows.Documents.Core.dll",
+        "lib/net7.0-windows/Telerik.Windows.Documents.Core.xml",
+        "lib/net7.0-windows/Telerik.Windows.Documents.DrawingML.dll",
+        "lib/net7.0-windows/Telerik.Windows.Documents.DrawingML.xml",
+        "lib/net7.0-windows/Telerik.Windows.Documents.Fixed.dll",
+        "lib/net7.0-windows/Telerik.Windows.Documents.Fixed.xml",
+        "lib/net7.0-windows/Telerik.Windows.Documents.Flow.FormatProviders.Doc.dll",
+        "lib/net7.0-windows/Telerik.Windows.Documents.Flow.FormatProviders.Doc.xml",
+        "lib/net7.0-windows/Telerik.Windows.Documents.Flow.FormatProviders.Pdf.dll",
+        "lib/net7.0-windows/Telerik.Windows.Documents.Flow.FormatProviders.Pdf.xml",
+        "lib/net7.0-windows/Telerik.Windows.Documents.Flow.dll",
+        "lib/net7.0-windows/Telerik.Windows.Documents.Flow.xml",
+        "lib/net7.0-windows/Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll",
+        "lib/net7.0-windows/Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.xml",
+        "lib/net7.0-windows/Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.dll",
+        "lib/net7.0-windows/Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.xml",
+        "lib/net7.0-windows/Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls.dll",
+        "lib/net7.0-windows/Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls.xml",
+        "lib/net7.0-windows/Telerik.Windows.Documents.Spreadsheet.dll",
+        "lib/net7.0-windows/Telerik.Windows.Documents.Spreadsheet.xml",
+        "lib/net7.0-windows/Telerik.Windows.MediaFoundation.dll",
+        "lib/net7.0-windows/Telerik.Windows.Zip.dll",
+        "lib/net7.0-windows/Telerik.Windows.Zip.xml",
+        "lib/net7.0-windows/TelerikCommon.dll",
+        "lib/net7.0-windows/TelerikData.dll",
+        "lib/net7.0-windows/TelerikData.xml",
+        "lib/net7.0-windows/TelerikExport.dll",
+        "lib/net7.0-windows/TelerikExport.xml",
+        "tools/VisualStudioToolsManifest.xml",
+        "ui.for.winforms.allcontrols.net70.trial.2023.1.314.nupkg.sha512",
+        "ui.for.winforms.allcontrols.net70.trial.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net7.0-windows7.0": [
+      "UI.for.WinForms.AllControls.Net70.Trial >= 2023.1.314",
+      "guna.ui2.winforms >= 2.0.3.5",
+      "metromodernui >= 1.4.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\joeva\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\LIM\\LIM.csproj",
+      "projectName": "LIM",
+      "projectPath": "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\LIM\\LIM.csproj",
+      "packagesPath": "C:\\Users\\joeva\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\LIM\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\srvlocal\\NuGet.Config",
+        "C:\\Users\\joeva\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net7.0-windows"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files (x86)\\Progress\\Telerik UI for WinForms R1 2023\\Bin70\\NuGet": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net7.0-windows7.0": {
+          "targetAlias": "net7.0-windows",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net7.0-windows7.0": {
+        "targetAlias": "net7.0-windows",
+        "dependencies": {
+          "UI.for.WinForms.AllControls.Net70.Trial": {
+            "target": "Package",
+            "version": "[2023.1.314, )"
+          },
+          "guna.ui2.winforms": {
+            "target": "Package",
+            "version": "[2.0.3.5, )"
+          },
+          "metromodernui": {
+            "target": "Package",
+            "version": "[1.4.0, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WindowsForms": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.300-preview.23179.2\\RuntimeIdentifierGraph.json"
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Das Paket \"Guna.UI2.WinForms 2.0.3.5\" wurde nicht mit dem Projektzielframework \"net7.0-windows7.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
+      "libraryId": "Guna.UI2.WinForms",
+      "targetGraphs": [
+        "net7.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Das Paket \"MetroModernUI 1.4.0\" wurde nicht mit dem Projektzielframework \"net7.0-windows7.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
+      "libraryId": "MetroModernUI",
+      "targetGraphs": [
+        "net7.0-windows7.0"
+      ]
+    }
+  ]
+}
