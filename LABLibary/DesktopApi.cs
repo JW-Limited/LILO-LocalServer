@@ -6,15 +6,18 @@ namespace LABLibary.Connect
 {
     public class DesktopApi
     {
-        private MessageQueue queue;
+        private MessageQueue queue = new MessageQueue(".\\private$\\Commands");
         private Message test;
-        public string ApiKey;
+        public static string ApiKey;
+        private static DesktopApi _instance;
+        public static readonly object _lock = new object();
 
-        public static string Use(string message)
+        public static string Use(string message, string apikey = "liloDev420")
         {
             try
             {
-                var api = new DesktopApi("liloDev420");
+                var api = new DesktopApi();
+                ApiKey = apikey;
                 api.Start();
 
                 var queue = new MessageQueue(".\\private$\\Chat");
@@ -34,19 +37,18 @@ namespace LABLibary.Connect
             
         }
 
-        public DesktopApi(string apikey) 
+        private DesktopApi() {}
+        public static DesktopApi Instance()
         {
-            try
+            lock (_lock)
             {
-                queue = new MessageQueue(".\\private$\\Commands");
-                this.ApiKey = apikey;
-                queue.Authenticate = true;
+                if (_instance == null)
+                {
+                    _instance = new DesktopApi();
+                }
             }
-            catch (Exception ex)
-            {
 
-            }
-            
+            return _instance;
         }
 
         public void Start()
@@ -57,7 +59,7 @@ namespace LABLibary.Connect
 
         public void RecevMessage()
         {
-            /*
+            
             while (true)
             {
                 try
@@ -66,10 +68,11 @@ namespace LABLibary.Connect
                     {
                         Message message = queue.Receive();
                         message = message == null ? null : message;
+                        System.Windows.Forms.MessageBox.Show(message.Body.ToString());
                     }
                 }
-                catch { }
-            }*/
+                catch(Exception ex) { System.Console.WriteLine(ex.Message); }
+            }
 
         }
 

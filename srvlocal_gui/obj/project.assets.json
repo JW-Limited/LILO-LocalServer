@@ -35,6 +35,38 @@
           }
         }
       },
+      "DK.Standard/4.137.4070.201115155": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Bcl.AsyncInterfaces": "1.1.1",
+          "Newtonsoft.Json": "12.0.3",
+          "System.Collections.Immutable": "1.7.1",
+          "System.IO.Compression": "4.3.0",
+          "System.Linq.Async": "4.1.1",
+          "System.Memory": "4.5.4",
+          "System.Runtime.CompilerServices.Unsafe": "4.7.0",
+          "System.Threading.Channels": "4.7.0",
+          "System.Threading.Tasks.Dataflow": "4.11.0"
+        },
+        "compile": {
+          "lib/net5.0/DK.Standard.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/DK.Standard.dll": {}
+        }
+      },
+      "DK.WshRuntime/4.1.3.201115164": {
+        "type": "package",
+        "dependencies": {
+          "DK.Standard": "4.137.4070.201115155"
+        },
+        "compile": {
+          "lib/net5.0/DK.WshRuntime.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/DK.WshRuntime.dll": {}
+        }
+      },
       "DynamicData/7.12.8": {
         "type": "package",
         "dependencies": {
@@ -334,6 +366,17 @@
         "frameworkReferences": [
           "Microsoft.WindowsDesktop.App.WindowsForms"
         ]
+      },
+      "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
+            "related": ".xml"
+          }
+        }
       },
       "Microsoft.CSharp/4.7.0": {
         "type": "package",
@@ -1452,7 +1495,7 @@
           "lib/netstandard1.3/System.Collections.Concurrent.dll": {}
         }
       },
-      "System.Collections.Immutable/1.5.0": {
+      "System.Collections.Immutable/1.7.1": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/System.Collections.Immutable.dll": {
@@ -1868,6 +1911,19 @@
           "lib/netstandard1.6/System.Linq.dll": {}
         }
       },
+      "System.Linq.Async/4.1.1": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp3.0/System.Linq.Async.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/System.Linq.Async.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "System.Linq.Expressions/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -1922,7 +1978,7 @@
           }
         }
       },
-      "System.Memory/4.5.3": {
+      "System.Memory/4.5.4": {
         "type": "package",
         "compile": {
           "ref/netcoreapp2.1/_._": {}
@@ -2669,6 +2725,19 @@
           }
         }
       },
+      "System.Threading.Tasks.Dataflow/4.11.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/System.Threading.Tasks.Dataflow.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Threading.Tasks.Dataflow.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "System.Threading.Tasks.Extensions/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -3258,6 +3327,39 @@
         "license.txt"
       ]
     },
+    "DK.Standard/4.137.4070.201115155": {
+      "sha512": "/2zGS69jgrnspLOwT1OG1GEXCwkr4E/2nqObqShdsoLNn+LDVFi4vJx3H1rnztVB9Hjrb7zL6P6ai19B80lz0w==",
+      "type": "package",
+      "path": "dk.standard/4.137.4070.201115155",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "dk.standard.4.137.4070.201115155.nupkg.sha512",
+        "dk.standard.nuspec",
+        "lib/monoandroid90/DK.Standard.dll",
+        "lib/net471/DK.Standard.dll",
+        "lib/net5.0/DK.Standard.dll",
+        "lib/netcoreapp2.0/DK.Standard.dll",
+        "lib/netcoreapp2.1/DK.Standard.dll",
+        "lib/netcoreapp3.0/DK.Standard.dll",
+        "lib/netstandard2.0/DK.Standard.dll",
+        "lib/netstandard2.1/DK.Standard.dll",
+        "lib/xamarinios10/DK.Standard.dll"
+      ]
+    },
+    "DK.WshRuntime/4.1.3.201115164": {
+      "sha512": "B4uLA0M0GqlFG12qe4b4jIdFzq02oOgv29UCDbMeNlUB+INjKG7i8HoIIMXHiICGJWteDvtMR5Wt02CwXwS7Sw==",
+      "type": "package",
+      "path": "dk.wshruntime/4.1.3.201115164",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "dk.wshruntime.4.1.3.201115164.nupkg.sha512",
+        "dk.wshruntime.nuspec",
+        "lib/net471/DK.WshRuntime.dll",
+        "lib/net5.0/DK.WshRuntime.dll"
+      ]
+    },
     "DynamicData/7.12.8": {
       "sha512": "MIOpDgdFF7GgbuIfu2o70KJxV9dqtTyTMFrdwupdjQ7I0MIkpvbmvdcrsM66T8rCFL0FGye7BmURFYgaDTw7/w==",
       "type": "package",
@@ -3707,6 +3809,31 @@
         "lib/netcoreapp3.1/MetroSet UI.dll",
         "metroset_ui.2.0.0.nupkg.sha512",
         "metroset_ui.nuspec"
+      ]
+    },
+    "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
+      "sha512": "yuvf07qFWFqtK3P/MRkEKLhn5r2UbSpVueRziSqj0yJQIKFwG1pq9mOayK3zE5qZCTs0CbrwL9M6R8VwqyGy2w==",
+      "type": "package",
+      "path": "microsoft.bcl.asyncinterfaces/1.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.Bcl.AsyncInterfaces.dll",
+        "lib/net461/Microsoft.Bcl.AsyncInterfaces.xml",
+        "lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll",
+        "lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.xml",
+        "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll",
+        "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.xml",
+        "microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
+        "microsoft.bcl.asyncinterfaces.nuspec",
+        "ref/net461/Microsoft.Bcl.AsyncInterfaces.dll",
+        "ref/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll",
+        "ref/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "Microsoft.CSharp/4.7.0": {
@@ -5251,15 +5378,18 @@
         "system.collections.concurrent.nuspec"
       ]
     },
-    "System.Collections.Immutable/1.5.0": {
-      "sha512": "EXKiDFsChZW0RjrZ4FYHu9aW6+P4MCgEDCklsVseRfhoO0F+dXeMSsMRAlVXIo06kGJ/zv+2w1a2uc2+kxxSaQ==",
+    "System.Collections.Immutable/1.7.1": {
+      "sha512": "B43Zsz5EfMwyEbnObwRxW5u85fzJma3lrDeGcSAV1qkhSRTNY5uXAByTn9h9ddNdhM+4/YoLc/CI43umjwIl9Q==",
       "type": "package",
-      "path": "system.collections.immutable/1.5.0",
+      "path": "system.collections.immutable/1.7.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Collections.Immutable.dll",
+        "lib/net461/System.Collections.Immutable.xml",
         "lib/netstandard1.0/System.Collections.Immutable.dll",
         "lib/netstandard1.0/System.Collections.Immutable.xml",
         "lib/netstandard1.3/System.Collections.Immutable.dll",
@@ -5268,7 +5398,7 @@
         "lib/netstandard2.0/System.Collections.Immutable.xml",
         "lib/portable-net45+win8+wp8+wpa81/System.Collections.Immutable.dll",
         "lib/portable-net45+win8+wp8+wpa81/System.Collections.Immutable.xml",
-        "system.collections.immutable.1.5.0.nupkg.sha512",
+        "system.collections.immutable.1.7.1.nupkg.sha512",
         "system.collections.immutable.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -6413,6 +6543,33 @@
         "system.linq.nuspec"
       ]
     },
+    "System.Linq.Async/4.1.1": {
+      "sha512": "+MYrr8Jz8ayKhOJrqh+9EH4y2qcKYUehxKXE3j4IG5to4FlXz6HF0CgBUtYqrcbW5uOaCEUoZ+SVnp4dEIAi6Q==",
+      "type": "package",
+      "path": "system.linq.async/4.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/System.Linq.Async.dll",
+        "lib/net461/System.Linq.Async.xml",
+        "lib/netcoreapp3.0/System.Linq.Async.dll",
+        "lib/netcoreapp3.0/System.Linq.Async.xml",
+        "lib/netstandard2.0/System.Linq.Async.dll",
+        "lib/netstandard2.0/System.Linq.Async.xml",
+        "lib/netstandard2.1/System.Linq.Async.dll",
+        "lib/netstandard2.1/System.Linq.Async.xml",
+        "ref/net461/System.Linq.Async.dll",
+        "ref/net461/System.Linq.Async.xml",
+        "ref/netcoreapp3.0/System.Linq.Async.dll",
+        "ref/netcoreapp3.0/System.Linq.Async.xml",
+        "ref/netstandard2.0/System.Linq.Async.dll",
+        "ref/netstandard2.0/System.Linq.Async.xml",
+        "ref/netstandard2.1/System.Linq.Async.dll",
+        "ref/netstandard2.1/System.Linq.Async.xml",
+        "system.linq.async.4.1.1.nupkg.sha512",
+        "system.linq.async.nuspec"
+      ]
+    },
     "System.Linq.Expressions/4.3.0": {
       "sha512": "PGKkrd2khG4CnlyJwxwwaWWiSiWFNBGlgXvJpeO0xCXrZ89ODrQ6tjEWS/kOqZ8GwEOUATtKtzp1eRgmYNfclg==",
       "type": "package",
@@ -6521,22 +6678,24 @@
         "version.txt"
       ]
     },
-    "System.Memory/4.5.3": {
-      "sha512": "3oDzvc/zzetpTKWMShs1AADwZjQ/36HnsufHRPcOjyRAAMLDlu2iD33MBI2opxnezcVUtXyqDXXjoFMOU9c7SA==",
+    "System.Memory/4.5.4": {
+      "sha512": "1MbJTHS1lZ4bS4FmsJjnuGJOu88ZzTT2rLvrhW7Ygic+pC0NWA+3hgAen0HRdsocuQXCkUTdFn9yHJJhsijDXw==",
       "type": "package",
-      "path": "system.memory/4.5.3",
+      "path": "system.memory/4.5.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Memory.dll",
+        "lib/net461/System.Memory.xml",
         "lib/netcoreapp2.1/_._",
         "lib/netstandard1.1/System.Memory.dll",
         "lib/netstandard1.1/System.Memory.xml",
         "lib/netstandard2.0/System.Memory.dll",
         "lib/netstandard2.0/System.Memory.xml",
         "ref/netcoreapp2.1/_._",
-        "system.memory.4.5.3.nupkg.sha512",
+        "system.memory.4.5.4.nupkg.sha512",
         "system.memory.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -8575,6 +8734,29 @@
         "system.threading.tasks.nuspec"
       ]
     },
+    "System.Threading.Tasks.Dataflow/4.11.0": {
+      "sha512": "bMF+efWutZcnXPWyDni1tF4dyn3YpIj7QLdhRPiqwOUNO+Y9NfN0FZH1v2s89VNz5yrxHa6OonIWEA8mOr7ytQ==",
+      "type": "package",
+      "path": "system.threading.tasks.dataflow/4.11.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netstandard1.0/System.Threading.Tasks.Dataflow.dll",
+        "lib/netstandard1.0/System.Threading.Tasks.Dataflow.xml",
+        "lib/netstandard1.1/System.Threading.Tasks.Dataflow.dll",
+        "lib/netstandard1.1/System.Threading.Tasks.Dataflow.xml",
+        "lib/netstandard2.0/System.Threading.Tasks.Dataflow.dll",
+        "lib/netstandard2.0/System.Threading.Tasks.Dataflow.xml",
+        "lib/portable-net45+win8+wpa81/System.Threading.Tasks.Dataflow.dll",
+        "lib/portable-net45+win8+wpa81/System.Threading.Tasks.Dataflow.xml",
+        "system.threading.tasks.dataflow.4.11.0.nupkg.sha512",
+        "system.threading.tasks.dataflow.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "System.Threading.Tasks.Extensions/4.3.0": {
       "sha512": "npvJkVKl5rKXrtl1Kkm6OhOUaYGEiF9wFbppFRWSMoApKzt2PiPHT2Bb8a5sAWxprvdOAtvaARS9QYMznEUtug==",
       "type": "package",
@@ -9132,6 +9314,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0-windows7.0": [
+      "DK.WshRuntime >= 4.1.3.201115164",
       "DarkUI >= 1.0.0",
       "Google.Apis.Auth >= 1.59.0",
       "Google.Apis.Gmail.v1 >= 1.59.0.2944",
@@ -9164,6 +9347,7 @@
   },
   "packageFolders": {
     "C:\\Users\\joeva\\.nuget\\packages\\": {},
+    "C:\\Users\\joeva\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
@@ -9176,11 +9360,12 @@
       "outputPath": "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\srvlocal_gui\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+        "C:\\Users\\joeva\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder",
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\srvlocal\\NuGet.Config",
         "C:\\Users\\joeva\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\joeva\\AppData\\Roaming\\NuGet\\config\\Godot.Offline.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -9189,7 +9374,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files (x86)\\Progress\\Telerik UI for WinForms R1 2023\\Bin70\\NuGet": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -9221,6 +9405,10 @@
       "net7.0-windows7.0": {
         "targetAlias": "net7.0-windows",
         "dependencies": {
+          "DK.WshRuntime": {
+            "target": "Package",
+            "version": "[4.1.3.201115164, )"
+          },
           "Google.Apis.Auth": {
             "target": "Package",
             "version": "[1.59.0, )"

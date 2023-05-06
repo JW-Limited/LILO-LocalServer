@@ -12,7 +12,7 @@ namespace srvlocal_gui {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.5.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.6.0.0")]
     internal sealed partial class DebugSettings : global::System.Configuration.ApplicationSettingsBase {
         
         private static DebugSettings defaultInstance = ((DebugSettings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new DebugSettings())));
@@ -25,7 +25,7 @@ namespace srvlocal_gui {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
         public bool debug {
             get {
                 return ((bool)(this["debug"]));

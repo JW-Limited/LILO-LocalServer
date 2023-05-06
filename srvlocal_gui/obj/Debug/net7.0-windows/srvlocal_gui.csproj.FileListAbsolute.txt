@@ -231,3 +231,11 @@ C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-w
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-windows\runtimes\win\lib\netcoreapp2.0\System.Management.dll
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\obj\Debug\net7.0-windows\srvlocal_gui.AppManager.ReadMeDialog.resources
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\obj\Debug\net7.0-windows\srvlocal_gui.AppManager.Setup.resources
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-windows\MetroSet UI.dll
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\obj\Debug\net7.0-windows\Interop.IWshRuntimeLibrary.dll
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\obj\Debug\net7.0-windows\srvlocal_gui.csproj.ResolveComReference.cache
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-windows\DK.Standard.dll
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-windows\DK.WshRuntime.dll
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-windows\System.Linq.Async.dll
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-windows\Interop.IWshRuntimeLibrary.dll

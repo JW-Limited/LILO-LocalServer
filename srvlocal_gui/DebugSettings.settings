@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="debug" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">False</Value>
+      <Value Profile="(Default)">True</Value>
     </Setting>
     <Setting Name="debugForm" Type="System.String" Scope="User">
       <Value Profile="(Default)">builder_gui</Value>

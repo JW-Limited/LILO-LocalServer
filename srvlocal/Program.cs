@@ -12,6 +12,10 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using srvlocal;
 using LABLibary.Interface;
+using LABLibary.Assistant;
+using System.Web;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using System.Reflection.Metadata;
 
 namespace Local
 {
@@ -28,8 +32,8 @@ namespace Local
         private readonly string _directory;
         public static X509Certificate2 certificate2
         {
-            get; 
-            private set; 
+            get;
+            private set;
         }
         private readonly HttpListener _listener;
         private readonly string logDirectory = "C:\\LILO\\dist\\log";
@@ -42,10 +46,10 @@ namespace Local
 
         public static int _port = 8080;
 
-        public static int[] _extraPorts = 
-        { 
-            8081, 
-            10908 
+        public static int[] _extraPorts =
+        {
+            8081,
+            10908
         };
 
         public static object redirect;
@@ -110,7 +114,7 @@ namespace Local
             if (Process.GetProcessesByName("LILO").Length > 0) menu = false;
 
             if (!menu)
-             {
+            {
                 redirect = new object();
                 var srmng = new StartupManager();
                 srmng.AddApplicationToStartup("srvlocal", AppDomain.CurrentDomain.BaseDirectory + @"\srvlocal.exe");
@@ -176,7 +180,7 @@ namespace Local
                     var externalIP = "";
 
                     try { externalIP = Convert.ToString(GetExternalIPAddress()); }
-                    catch (Exception e) { externalIP = $"Something went wrong! ({e.Message.Replace(" (icanhazip.com:80)","")})"; }
+                    catch (Exception e) { externalIP = $"Something went wrong! ({e.Message.Replace(" (icanhazip.com:80)", "")})"; }
 
                     Console.WriteLine("Directory    :   {0} [{1}]", distDirectory, distDirectory == "C:\\LILO\\dist" ? "DEFAULT" : "CHANGED");
                     Console.WriteLine("Media        :   {0} [{1}]", mediaDirectory, mediaDirectory == "C:\\LILO\\req\\media\\" ? "DEFAULT" : "CHANGED");
@@ -193,7 +197,7 @@ namespace Local
                     Console.WriteLine("|-- External :   {0} ", externalIP);
                     Console.WriteLine("--------------------------------------------------");
                     Console.WriteLine("LILO          ");
-                    Console.WriteLine("|-- Shell    :   {0} ", ci.IsConnected() ? "connected":"error");
+                    Console.WriteLine("|-- Shell    :   {0} ", ci.IsConnected() ? "connected" : "error");
                     Console.WriteLine();
 
                     //ci.IsConnected()
@@ -304,12 +308,12 @@ namespace Local
         public static int CheckPort(int port)
         {
 
-                if (port >= 3000 && port <= 9000)
-                {
-                    return port;
-                }
+            if (port >= 3000 && port <= 9000)
+            {
+                return port;
+            }
 
-                return 0;
+            return 0;
         }
 
         public static void ChangePort(int port)
@@ -326,7 +330,7 @@ namespace Local
             Environment.Exit(0);
         }
 
-         private static void ShowVersion()
+        private static void ShowVersion()
         {
             Console.WriteLine("JW Lmt. LILO™ SrvLocal - [Local Server Application Host] version {0}", AssemblyVersion);
         }
@@ -349,7 +353,7 @@ namespace Local
         {
             try
             {
-                
+
 
                 var mediasvr = new MediaServer();
                 try
@@ -397,17 +401,17 @@ namespace Local
                     try
                     {
                         var responseString = inter.ReceiveFromDefaultBuffer();
-                        if(responseString != null) { LogRequest(null, false, responseString); responseString = null; }
+                        if (responseString != null) { LogRequest(null, false, responseString); responseString = null; }
 
                     }
-                    catch{ }
+                    catch { }
 
                     var context = _listener.GetContext();
                     var request = context.Request;
                     var response = context.Response;
 
 
-                    
+
                     LogRequest(request);
                     SendLog(request);
 
@@ -417,6 +421,14 @@ namespace Local
                         var buffer = Encoding.UTF8.GetBytes(log);
                         response.ContentLength64 = buffer.Length;
                         response.OutputStream.Write(buffer, 0, buffer.Length);
+                    }
+                    if(request.Url.AbsolutePath == "/api/login")
+                    {
+                        var indexHtml = GenerateLoginHtml();
+                        var content = Encoding.UTF8.GetBytes(indexHtml);
+                        response.ContentLength64 = content.Length;
+                        response.OutputStream.Write(content, 0, content.Length);
+                        LogRequest(request, true);
                     }
                     else if (request.Url.AbsolutePath == "/api/data" && request.HttpMethod == "POST")
                     {
@@ -475,7 +487,7 @@ namespace Local
                             var content = File.ReadAllBytes(filePath);
                             response.ContentLength64 = content.Length;
                             response.OutputStream.Write(content, 0, content.Length);
-                            LogRequest(request,true);
+                            LogRequest(request, true);
                         }
                         else if (Directory.Exists(filePath))
                         {
@@ -532,24 +544,24 @@ namespace Local
             catch (Exception ex)
             {
                 SetColor(colors[2]);
-                Console.WriteLine("[{0}] - An Error Accured\n\n{1}\n{2}", DateTime.Now.ToString("HH:mm"),ex.Message,ex.Data.ToString());
+                Console.WriteLine("[{0}] - An Error Accured\n\n{1}\n{2}", DateTime.Now.ToString("HH:mm"), ex.Message, ex.Data.ToString());
                 HandelRequest();
             }
-            
+
         }
 
         private void ProcessData(string data)
         {
             var logEntry = data;
             var logFilePath = Path.Combine(logDirectory, DateTime.Now.ToString("yyyy-MM-dd") + "_API.log");
-            
-            if(data.Contains("password") && data.Contains("username"))
+
+            if (data.Contains("password") && data.Contains("username"))
             {
                 File.AppendAllText(logFilePath, logEntry.ToString());
             }
         }
 
-        public async void HandelError(HttpListenerContext context,HttpListenerRequest request)
+        public async void HandelError(HttpListenerContext context, HttpListenerRequest request)
         {
             lock (redirect)
             {
@@ -557,18 +569,18 @@ namespace Local
 
                 HttpWebRequest redirectRequest = (HttpWebRequest)WebRequest.Create("http://localhost:8080/error/404/");
                 redirectRequest.Method = request.HttpMethod;
-                    var response = context.Response;
+                var response = context.Response;
 
-                    var filePath = "C:\\LILO\\dist\\error\\404\\";
-                    var indexFilePath = Path.Combine(filePath, "index.html");
-                    if (File.Exists(indexFilePath))
-                    {
-                        var content = File.ReadAllBytes(indexFilePath);
-                        response.ContentLength64 = content.Length;
-                        response.OutputStream.Write(content, 0, content.Length);
-                    };
+                var filePath = "C:\\LILO\\dist\\error\\404\\";
+                var indexFilePath = Path.Combine(filePath, "index.html");
+                if (File.Exists(indexFilePath))
+                {
+                    var content = File.ReadAllBytes(indexFilePath);
+                    response.ContentLength64 = content.Length;
+                    response.OutputStream.Write(content, 0, content.Length);
+                };
             }
-            
+
         }
 
 
@@ -577,7 +589,87 @@ namespace Local
             _listener.Stop();
         }
 
-        private string GenerateErrorHtml(HttpStatusCode statusCode,string msg)
+        public string GenerateLoginHtml()
+        {
+            var sb = new StringBuilder();
+            sb.Append("<html>");
+            sb.Append("<head>");
+            sb.Append("<title>Login Page</title>");
+            sb.Append("<link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/favlogo.png\">");
+
+            // Add modern CSS styling
+            sb.Append("<style>");
+            sb.Append("body {");
+            sb.Append("  font-family: 'Roboto', sans-serif;");
+            sb.Append("  background-color: #fafafa;");
+            sb.Append("}");
+            sb.Append(".login-form {");
+            sb.Append("  margin: 0 auto;");
+            sb.Append("  width: 400px;");
+            sb.Append("  margin-top: 5rem;");
+            sb.Append("  padding: 2rem;");
+            sb.Append("  background-color: #fff;");
+            sb.Append("  border-radius: 8px;");
+            sb.Append("  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);");
+            sb.Append("}");
+            sb.Append("h1 {");
+            sb.Append("  font-size: 2rem;");
+            sb.Append("  margin-top: 0;");
+            sb.Append("  margin-bottom: 1rem;");
+            sb.Append("  text-align: center;");
+            sb.Append("}");
+            sb.Append("label {");
+            sb.Append("  display: block;");
+            sb.Append("  font-size: 1.2rem;");
+            sb.Append("  margin-bottom: 0.5rem;");
+            sb.Append("}");
+            sb.Append("input[type=\"text\"], input[type=\"password\"] {");
+            sb.Append("  padding: 8px;");
+            sb.Append("  width: 100%;");
+            sb.Append("  margin-bottom: 1rem;");
+            sb.Append("  font-size: 1.2rem;");
+            sb.Append("  border: 1px solid #ddd;");
+            sb.Append("  border-radius: 4px;");
+            sb.Append("}");
+            sb.Append(".submit-button {");
+            sb.Append("  background-color: #4CAF50;");
+            sb.Append("  border: none;");
+            sb.Append("  color: white;");
+            sb.Append("  padding: 8px 16px;");
+            sb.Append("  text-align: center;");
+            sb.Append("  text-decoration: none;");
+            sb.Append("  display: inline-block;");
+            sb.Append("  font-size: 14px;");
+            sb.Append("  margin-top: 1rem;");
+            sb.Append("  margin-bottom: 0;");
+            sb.Append("  border-radius: 4px;");
+            sb.Append("  cursor: pointer;");
+            sb.Append("}");
+            sb.Append(".submit-button:hover {");
+            sb.Append("  background-color: #3e8e41;");
+            sb.Append("}");
+            sb.Append("</style>");
+            sb.Append("<script>\r\nfunction verifyPassword() {\r\n    var username = document.getElementById('username').value;\r\n    var password = document.getElementById('password').value;\r\n    \r\n    // Check if password is correct\r\n    if (username === 'admin' && password === 'lilodev420') {\r\n        alert('Login successful!');\r\n        window.location.href = '/home';\r\n    } else {\r\n        alert('Invalid username or password.');\r\n    }\r\n}\r\n</script>");
+
+            sb.Append("</head>");
+            sb.Append("<body>");
+            sb.Append("<div class='login-form'>");
+            sb.Append("<h1>API Login</h1>");
+            sb.Append("<form>");
+            sb.Append("<label for='username'>Username:</label>");
+            sb.Append("<input type='text' id='username' name='username' placeholder='Enter your username'>");
+            sb.Append("<label for='password'>Password:</label>");
+            sb.Append("<input type='password' id='password' name='password' placeholder='Enter your password'>");
+            sb.Append("<input type='button' class='submit-button' value='Login' onclick='verifyPassword()'>");
+            sb.Append("</form>");
+            sb.Append("</div>");
+            sb.Append("</body>");
+            sb.Append("</html>");
+            return sb.ToString();
+        }
+
+
+        private string GenerateErrorHtml(HttpStatusCode statusCode, string msg)
         {
             var sb = new StringBuilder();
             sb.Append("<html>");
@@ -601,9 +693,9 @@ namespace Local
             //logger.SendRequestToServer(request);
         }
 
-       private void LogRequest(HttpListenerRequest request = null, bool req = false, string message = null)
-       {
-            if(message != null)
+        private void LogRequest(HttpListenerRequest request = null, bool req = false, string message = null)
+        {
+            if (message != null)
             {
                 Console.WriteLine($"[LILO SERVER - {DateTime.UtcNow}] : {message}");
             }
@@ -621,7 +713,7 @@ namespace Local
                     Console.WriteLine();
                 }
             }
-             
+
         }
         private string GenerateIndexHtml(string reqDirectory)
         {
@@ -630,35 +722,127 @@ namespace Local
             sb.Append("<head>");
             sb.Append("<title>Index of Files</title>");
             sb.Append("<link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/favlogo.png\">");
-            sb.Append("<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css\">");
+
+            // Add modern CSS styling
+            sb.Append("<style>");
+            sb.Append("body {");
+            sb.Append("  font-family: 'Roboto', sans-serif;");
+            sb.Append("  background-color: #fafafa;");
+            sb.Append("}");
+            sb.Append("h1 {");
+            sb.Append("  font-size: 2rem;");
+            sb.Append("  margin-top: 2rem;");
+            sb.Append("  margin-bottom: 1rem;");
+            sb.Append("}");
+            sb.Append("table {");
+            sb.Append("  border-collapse: collapse;");
+            sb.Append("  width: 100%;");
+            sb.Append("}");
+            sb.Append("table th, table td {");
+            sb.Append("  border: 1px solid #ddd;");
+            sb.Append("  padding: 8px;");
+            sb.Append("  text-align: left;");
+            sb.Append("}");
+            sb.Append("table th {");
+            sb.Append("  background-color: #f2f2f2;");
+            sb.Append("}");
+            sb.Append(".download-link {");
+            sb.Append("  background-color: #4CAF50;");
+            sb.Append("  border: none;");
+            sb.Append("  color: white;");
+            sb.Append("  padding: 8px 16px;");
+            sb.Append("  text-align: center;");
+            sb.Append("  text-decoration: none;");
+            sb.Append("  display: inline-block;");
+            sb.Append("  font-size: 14px;");
+            sb.Append("  margin-right: 8px;");
+            sb.Append("  border-radius: 4px;");
+            sb.Append("  cursor: pointer;");
+            sb.Append("}");
+            sb.Append(".download-link:hover {");
+            sb.Append("  background-color: #3e8e41;");
+            sb.Append("}");
+            sb.Append("</style>");
+
             sb.Append("</head>");
             sb.Append("<body>");
-            sb.Append($"<h1>Index of Directory : {reqDirectory.Replace("C:\\LILO\\","")}</h1>");
-            sb.Append("<ul>");
+            sb.Append($"<h1>Index of Directory : {reqDirectory.Replace("C:\\LILO\\", "")}</h1>");
+            sb.Append("<table>");
+            sb.Append("<thead>");
+            sb.Append("<tr>");
+            sb.Append("<th>Name</th>");
+            sb.Append("<th>Size</th>");
+            sb.Append("<th>Last Modified</th>");
+            sb.Append("<th>Download</th>");
+            sb.Append("</tr>");
+            sb.Append("</thead>");
+            sb.Append("<tbody>");
 
             var currentDirectory = new DirectoryInfo(reqDirectory);
             var parentDirectory = currentDirectory.Parent;
 
             if (parentDirectory != null)
             {
-                sb.Append($"<li><a href='../'>../</a></li>");
+                sb.Append("<tr>");
+                sb.Append($"<td><a href='../'>../</a></td>");
+                sb.Append("<td></td>");
+                sb.Append("<td></td>");
+                sb.Append("<td></td>");
+                sb.Append("</tr>");
             }
 
             foreach (var directory in currentDirectory.GetDirectories())
             {
-                sb.Append($"<li><a href='{directory.Name}/'>{directory.Name}/</a></li>");
+                sb.Append("<tr>");
+                sb.Append($"<td><a href='{directory.Name}/'>{directory.Name}/</a></td>");
+                sb.Append("<td></td>");
+                sb.Append($"<td>{directory.LastWriteTime}</td>");
+                sb.Append("<td></td>");
+                sb.Append("</tr>");
             }
 
             foreach (var file in currentDirectory.GetFiles())
             {
-                sb.Append($"<li><a href='{file.Name}'>{file.Name}</a></li>");
+                sb.Append("<tr>");
+                sb.Append($"<td><a href='{file.Name}'>{file.Name}</a></td>");
+                sb.Append($"<td>{GetSizeString(file.Length)}</td>");
+                sb.Append($"<td>{file.LastWriteTime}</td>");
+                sb.Append("<td>");
+                sb.Append($"<a class='download-link' href='{file.Name}' download>Download</a>");
+                sb.Append("</td>");
+                sb.Append("</tr>");
             }
 
-            sb.Append("</ul>");
+            sb.Append("</tbody>");
+            sb.Append("</table>");
             sb.Append("</body>");
             sb.Append("</html>");
             return sb.ToString();
         }
+
+        private string GetSizeString(long size)
+        {
+            string[] sizes = { "B", "KB", "MB", "GB", "TB" };
+            int order = 0;
+            while (size >= 1024 && order < sizes.Length - 1)
+            {
+                order++;
+                size /= 1024;
+            }
+            return $"{size} {sizes[order]}";
+        }
+        private string FormatBytes(long bytes)
+        {
+            string[] suffixes = { "B", "KB", "MB", "GB", "TB" };
+            int suffixIndex = 0;
+            while (bytes >= 1024 && suffixIndex < suffixes.Length - 1)
+            {
+                bytes /= 1024;
+                suffixIndex++;
+            }
+            return $"{bytes} {suffixes[suffixIndex]}";
+        }
+
     }
 
     /// <summary>
@@ -666,7 +850,7 @@ namespace Local
     /// </summary>
 
     public class BatchStarter
-    {
+        {
         private readonly string _batchFile;
         private Thread _thread;
         private Process _process;

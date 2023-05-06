@@ -8,6 +8,9 @@ using System.Net.Http;
 using Octokit;
 using System.IO;
 using srvlocal_gui.AppManager;
+using System.IO.Compression;
+using System.Security.Cryptography;
+using Microsoft.Win32;
 
 namespace srvlocal_gui;
 
@@ -33,6 +36,142 @@ public sealed class Updater
         }
 
         return _instance;
+    }
+
+
+    public void SafeDeleteZipFile(string zipFilePath, Action<int> progressCallback = null, Action<string> errorCallback = null)
+    {
+        try
+        {
+            long fileSize = new FileInfo(zipFilePath).Length;
+            long bytesDeleted = 0;
+
+            File.Delete(zipFilePath);
+
+            bytesDeleted += fileSize;
+            int progressPercentage = (int)((float)bytesDeleted / (float)fileSize * 100);
+            progressCallback?.Invoke(progressPercentage);
+        }
+        catch (Exception ex)
+        {
+            errorCallback?.Invoke($"Failed to clean up Installation: {ex.Message}");
+        }
+    }
+
+    public static void RegisterProduct(string productName, string productVersion, string productLocation)
+    {
+        // Create the registry key for the product
+        using (RegistryKey key = Registry.LocalMachine.CreateSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\" + productName))
+        {
+            // Set the product details
+            key.SetValue("DisplayName", productName);
+            key.SetValue("DisplayVersion", productVersion);
+            key.SetValue("Publisher", "JW Limited");
+            key.SetValue("InstallLocation", Path.GetDirectoryName(productLocation));
+            key.SetValue("UninstallString", "\"" + productLocation + "\" /uninstall");
+            key.SetValue("QuietUninstallString", "\"" + productLocation + "\" /uninstall /quiet");
+            key.SetValue("SystemComponent", 0);
+            key.SetValue("EstimatedSize", new FileInfo(productLocation).Length / 1024);
+
+            // Set the product icon (optional)
+            string iconLocation = productLocation + ",0";
+            if (File.Exists(iconLocation))
+            {
+                key.SetValue("DisplayIcon", iconLocation);
+            }
+        }
+    }
+
+    public void VerifyAndExtractZip(string zipFilePath, string expectedHashValue, string destinationDirectory, Action<int> progressCallback = null, Action<string> errorCallback = null)
+    {
+        const int bufferSize = 8192;
+
+        try
+        {
+            using (var zip = ZipFile.OpenRead(zipFilePath))
+            {
+                if (zip.Entries.Count == 0)
+                {
+                    throw new Exception("Install Package file is empty.");
+                }
+
+                using (var sha256 = SHA256.Create())
+                {
+                    using (var stream = File.OpenRead(zipFilePath))
+                    {
+                        var hash = sha256.ComputeHash(stream);
+                        var actualHashValue = BitConverter.ToString(hash).Replace("-", "").ToLowerInvariant();
+
+                        //TODO : Let the program get the real hashvalue form the server so it can compere
+
+                        if (actualHashValue == actualHashValue)
+                        {
+                            int totalEntries = zip.Entries.Count;
+                            int entriesExtracted = 0;
+
+                            foreach (var entry in zip.Entries)
+                            {
+                                string fullPath = Path.Combine(destinationDirectory, entry.FullName);
+
+                                fullPath = Path.GetFullPath(fullPath);
+
+                                if (entry.FullName.EndsWith("/") || entry.FullName.EndsWith("\\"))
+                                {
+                                    Directory.CreateDirectory(fullPath);
+                                }
+                                else
+                                {
+                                    Directory.CreateDirectory(Path.GetDirectoryName(fullPath));
+
+                                    try
+                                    {
+                                        using (var entryStream = entry.Open())
+                                        {
+                                            using (var output = File.Create(fullPath))
+                                            {
+                                                byte[] buffer = new byte[bufferSize];
+                                                int bytesRead;
+
+                                                while ((bytesRead = entryStream.Read(buffer, 0, buffer.Length)) > 0)
+                                                {
+                                                    output.Write(buffer, 0, bytesRead);
+                                                }
+                                            }
+                                        }
+
+
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        errorCallback?.Invoke($"Failed to decompress the Install Package: {ex.Message}");
+                                    }
+                                }
+
+                                entriesExtracted++;
+                                int progressPercentage = (int)((float)entriesExtracted / (float)totalEntries * 100);
+
+                                progressCallback?.Invoke(progressPercentage);
+                            }
+                        }
+                        else
+                        {
+                            throw new Exception("Hash value verification failed.");
+                        }
+                    }
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            errorCallback?.Invoke($"Failed to verify and decompress the Install Package: {ex.Message}");
+
+            if (ex is InvalidDataException && ex.Message.Contains("End of Central Directory record could not be found"))
+            {
+                {
+                    errorCallback?.Invoke("The Install Package is corrupt or incomplete.");
+                }
+            }
+        }
     }
 
     public string GetLatestChanges(string owner, string repo)
@@ -89,80 +228,4 @@ public sealed class Updater
     }
 }
 
-
-class GitHubReleaseChecker
-{
-    private readonly string _owner;
-    private readonly string _repo;
-    private HttpClient _client;
-    private string _accessToken;
-
-    public GitHubReleaseChecker(string owner, string repo, string accessToken)
-    {
-        _owner = owner;
-        _repo = repo;
-
-        _accessToken = accessToken;
-        _client = new HttpClient();
-        _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Token", _accessToken);
-    }
-
-    public async Task<string> CheckForNewRelease()
-    {
-        var latestReleaseUrl = $"https://api.github.com/repos/{_owner}/{_repo}/releases/latest";
-        var latestReleaseJson = await GetJsonAsync(latestReleaseUrl);
-        var latestRelease = JsonConvert.DeserializeObject<Release>(latestReleaseJson);
-
-        var currentReleaseUrl = $"https://api.github.com/repos/{_owner}/{_repo}/releases";
-        var currentReleaseJson = await GetJsonAsync(currentReleaseUrl);
-        var currentReleases = JsonConvert.DeserializeObject<Release[]>(currentReleaseJson);
-
-
-        if (latestRelease.Name != currentReleases[0].Name)
-        {
-            if(MessageBox.Show("A new release is available: " + latestRelease.Name + "\n\nDownalod now?","New Update",MessageBoxButtons.OKCancel,MessageBoxIcon.Question) == DialogResult.OK)
-            {
-                DownloadRelease(latestRelease);
-            }
-            return "A new release is available: " + latestRelease.Name;
-        }
-        else
-        {
-            return "No new release available.";
-        }
-    }
-
-    private void DownloadRelease(Release release)
-    {
-        var downloadUrl = release.Assets[0].BrowserDownloadUrl;
-        var client = new WebClient();
-        client.DownloadFile(downloadUrl, release.Name + ".zip");
-        Process exp = Process.Start("explorer.exe",release.Name + ".zip");
-        Console.WriteLine("Download complete.");
-    }
-
-    private async Task<string> GetJsonAsync(string url)
-    {
-        var response = await _client.GetAsync(url);
-        if (response.IsSuccessStatusCode)
-        {
-            return await response.Content.ReadAsStringAsync();
-        }
-        else
-        {
-            throw new Exception("Error fetching data from API: " + response.StatusCode);
-        }
-    }
-
-    private class Release
-    {
-        public string Name { get; set; }
-        public Asset[] Assets { get; set; }
-    }
-
-    private class Asset
-    {
-        public string BrowserDownloadUrl { get; set; }
-    }
-}
 

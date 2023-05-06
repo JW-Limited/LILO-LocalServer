@@ -11,6 +11,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using IWshRuntimeLibrary;
 
 namespace srvlocal_gui.AppManager
 {
@@ -25,6 +26,8 @@ namespace srvlocal_gui.AppManager
         public string repo = "LILO-LocalServer";
         public bool updating = false;
         public bool downloaded = false;
+        public string zipPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "latest_release.zip");
+        public Action<bool> isEnabling;
 
         public static ReadMeDialog Instance()
         {
@@ -52,6 +55,31 @@ namespace srvlocal_gui.AppManager
             lblVersion.Text = version;
         }
 
+        public void del(string latestVersion)
+        {
+            var targetFile = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + "//JW Limited//LAB//srvlocal_gui.exe";
+            CreateShortcut("LAB", targetFile);
+            Updater.RegisterProduct("LAB", latestVersion, targetFile);
+            Process.Start(targetFile);
+            Application.ExitThread();
+        }
+
+        public static void CreateShortcut(string shortcutName, string targetFile)
+        {
+            string shortcutPath = Environment.GetFolderPath(Environment.SpecialFolder.StartMenu) + "\\" + shortcutName + ".lnk";
+
+            IWshShell wshShell = new WshShell();
+            IWshShortcut shortcut = (IWshShortcut)wshShell.CreateShortcut(shortcutPath);
+
+            shortcut.TargetPath = targetFile;
+            shortcut.WorkingDirectory = Path.GetDirectoryName(targetFile);
+            shortcut.WindowStyle = 1; // Normal window
+            shortcut.Description = "Shortcut created using LAB Libary by JW Limited."; // Optional
+            shortcut.IconLocation = targetFile + ",0"; // Optional
+
+            shortcut.Save();
+        }
+
         private void bntUpdate_Click(object sender, EventArgs e)
         {
             var updater = Updater.Instance();
@@ -60,20 +88,47 @@ namespace srvlocal_gui.AppManager
             {
                 if (downloaded)
                 {
-                    Process.Start("explorer.exe", Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop)));
-                    System.Windows.Forms.Application.ExitThread();
-                }
-                else
-                {
+                    isEnabling?.Invoke(false);
                     this.ControlBox = false;
                     progessbar.Visible = true;
                     progress.ShowDialog();
                     bntCancel.Enabled = false;
                     updating = true;
+                    Text = "Installing Update...";
 
                     Task.Run(() =>
                     {
-                        
+                        updater.VerifyAndExtractZip(zipPath, "8a3a0cecf50f9e4a7387b23d4a4c4e4b3d2bbd8e91edc5729c15f9f1f10c8aaf", Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86), "JW Limited"), progress =>
+                        {
+                            progessbar.Value = progress;
+                           
+                            if(progress == 100)
+                            {
+                                del(latestVersion: version);
+                            }
+                        },
+                        error =>
+                        {
+                            MessageBox.Show($"Error: {error}", "Install Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        });
+
+
+                    });
+
+                    //MessageBox.Show("Installed Updates","Success",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                }
+                else
+                {
+                    isEnabling?.Invoke(false);
+
+                    this.ControlBox = false;
+                    progessbar.Visible = true;
+                    bntCancel.Enabled = false;
+                    updating = true;
+
+                    Task.Run(() =>
+                    {
+
                         updater.DownloadLatestRelease(owner, repo, UpdateProgress);
                         this.Invoke((MethodInvoker)delegate
                         {
@@ -82,11 +137,11 @@ namespace srvlocal_gui.AppManager
 
                     });
                 }
-                
+
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
-                MessageBox.Show(ex.Message,"Update Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Update Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 progessbar.Visible = false;
                 bntCancel.Enabled = true;
@@ -94,7 +149,7 @@ namespace srvlocal_gui.AppManager
                 downloaded = true;
                 this.ControlBox = true;
             }
-            
+
         }
 
         private void UpdateProgress(object sender, DownloadProgressChangedEventArgs e)
@@ -112,6 +167,7 @@ namespace srvlocal_gui.AppManager
                     updating = false;
                     downloaded = true;
                     this.ControlBox = true;
+                    isEnabling?.Invoke(true);
                 }
             });
         }

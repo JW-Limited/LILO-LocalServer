@@ -72,60 +72,6 @@
             Der Inhalt der Methode darf nicht mit dem Code-Editor geändert werden.
             </summary>
         </member>
-        <member name="T:srvlocal_gui.LAB.Compiler">
-            🔨 Compiles C# code into an assembly
-        </member>
-        <member name="M:srvlocal_gui.LAB.Compiler.CompileFromFile(System.String,System.String)">
-            <summary>
-            Setup the compiler parameters, compile a file and generate an executable
-            </summary>
-            <param name="filepath">Path to the file</param>
-            <param name="appname">Name of application without extension</param>
-            <returns></returns>
-        </member>
-        <member name="M:srvlocal_gui.LAB.Compiler.CompileCode(System.String,System.String)">
-            <summary>
-            Setup the compiler parameters, Compile c# code and generate an exe
-            </summary>
-            <param name="code">C# source code</param>
-            <param name="appname">Name of application without extension</param>
-            <returns></returns>
-        </member>
-        <member name="M:srvlocal_gui.LAB.Compiler.setupParameters(System.String)">
-            <summary>
-            Setup the compiler parameters
-            </summary>
-            <param name="appname">Name of application without extension</param>
-        </member>
-        <member name="M:srvlocal_gui.LAB.Compiler.ReadCodeFromFile(System.String)">
-            <summary>
-            Read the code from the given file path
-            </summary>
-            <param name="filePath">Path to the file</param>
-            <returns></returns>
-        </member>
-        <member name="M:srvlocal_gui.LAB.Compiler.applyCompileCode(System.String,System.String)">
-            <summary>
-            Compile the given code using the set parameters
-            </summary>
-            <param name="code">C# source code</param>
-            <param name="appname">Name of application without extension</param>
-            <returns></returns>
-        </member>
-        <member name="M:srvlocal_gui.LAB.Compiler.Compile(System.String)">
-            <summary>
-            Compile the given code using the set parameters
-            </summary>
-            <param name="code">C# source code</param>
-            <returns></returns>
-        </member>
-        <member name="M:srvlocal_gui.LAB.Compiler.GetCompileErrors(System.CodeDom.Compiler.CompilerResults)">
-            <summary>
-            Get the list of errors during compilation 
-            </summary>
-            <param name="results">compilation results</param>
-            <returns>List of errors</returns>
-        </member>
         <member name="F:srvlocal_gui.LAB.EDITOR.EditorJS.components">
             <summary>
             Required designer variable.

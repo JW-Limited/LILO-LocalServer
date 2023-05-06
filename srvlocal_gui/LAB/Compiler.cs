@@ -9,61 +9,88 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace srvlocal_gui.LAB
-{ 
-    /// 🔨 Compiles C# code into an assembly
+{
     public class Compiler
     {
         private static CompilerParameters _parameters;
-        
-        /// <summary>
-        /// Setup the compiler parameters, compile a file and generate an executable
-        /// </summary>
-        /// <param name="filepath">Path to the file</param>
-        /// <param name="appname">Name of application without extension</param>
-        /// <returns></returns>
+        private static readonly CSharpCodeProvider _provider = new CSharpCodeProvider();
 
         public static Assembly CompileFromFile(string filepath, string appname)
-
         {
-            setupParameters(appname); // Set the compiler parameters
-            return applyCompileCode(ReadCodeFromFile(filepath), appname); // Compile the code
+            SetupParameters(appname);
+            return ApplyCompileCode(ReadCodeFromFile(filepath), appname);
         }
-        
-        /// <summary>
-        /// Setup the compiler parameters, Compile c# code and generate an exe
-        /// </summary>
-        /// <param name="code">C# source code</param>
-        /// <param name="appname">Name of application without extension</param>
-        /// <returns></returns>
+
         public static Assembly CompileCode(string code, string appname)
         {
-            setupParameters(appname); // Set the compiler parameters
-            return applyCompileCode(code, appname); // Compile the code
+            SetupParameters(appname);
+            return ApplyCompileCode(code, appname);
         }
 
-        /// <summary>
-        /// Setup the compiler parameters
-        /// </summary>
-        /// <param name="appname">Name of application without extension</param>
+        public static List<string> GetReferencedAssemblies()
+        {
+            List<string> assemblies = new List<string>();
+            foreach (string assembly in _parameters.ReferencedAssemblies)
+            {
+                assemblies.Add(assembly);
+            }
+            return assemblies;
+        }
 
-        private static void setupParameters(string appname){
-            // 📝 Set compiler parameters
+        public static void AddReferencedAssembly(string assembly)
+        {
+            _parameters.ReferencedAssemblies.Add(assembly);
+        }
 
+        public static void RemoveReferencedAssembly(string assembly)
+        {
+            _parameters.ReferencedAssemblies.Remove(assembly);
+        }
+
+        public static void ClearReferencedAssemblies()
+        {
+            _parameters.ReferencedAssemblies.Clear();
+        }
+
+        public static List<string> GetCompileErrors(CompilerResults results)
+        {
+            var errors = new List<string>();
+            foreach (CompilerError error in results.Errors)
+            {
+                errors.Add(error.ErrorText);
+            }
+            return errors;
+        }
+        public static List<string> GetCompileWarnings(CompilerResults results)
+        {
+            var warnings = new List<string>();
+            foreach (CompilerError warning in results.Errors)
+            {
+                if (warning.IsWarning)
+                {
+                    warnings.Add(warning.ErrorText);
+                }
+            }
+            return warnings;
+        }
+
+        public static Version GetCompilerVersion()
+        {
+            return _provider.GetType().Assembly.GetName().Version;
+        }
+
+
+        private static void SetupParameters(string appname)
+        {
             _parameters = new CompilerParameters();
-            _parameters.GenerateExecutable = true; 
+            _parameters.GenerateExecutable = true;
             _parameters.GenerateInMemory = true;
             _parameters.OutputAssembly = appname + ".exe";
             _parameters.ReferencedAssemblies.Add("System.dll");
         }
-        
-        /// <summary>
-        /// Read the code from the given file path
-        /// </summary>
 
-        /// <param name="filePath">Path to the file</param>
-        /// <returns></returns>
         private static string ReadCodeFromFile(string filePath)
-        {           
+        {
             string code;
             using (StreamReader sr = new StreamReader(filePath))
             {
@@ -71,47 +98,58 @@ namespace srvlocal_gui.LAB
             }
             return code;
         }
-        
-        /// <summary>
-        /// Compile the given code using the set parameters
-        /// </summary>
-        /// <param name="code">C# source code</param>
-        /// <param name="appname">Name of application without extension</param>
-        /// <returns></returns>
-        private static Assembly applyCompileCode(string code, string appname)
+        public static Assembly CompileFromFiles(string[] filePaths, string appname)
         {
-            CompilerResults results = Compile(code);
+            SetupParameters(appname);
+
+            string[] codeFiles = new string[filePaths.Length];
+
+            for (int i = 0; i < filePaths.Length; i++)
+            {
+                codeFiles[i] = ReadCodeFromFile(filePaths[i]);
+            }
+
+            return ApplyCompileCode(string.Join(Environment.NewLine, codeFiles), appname);
+        }
+
+
+        public static Assembly CompileFromDirectory(string directoryPath, string appname, string searchPattern)
+        {
+            string[] filePaths = Directory.GetFiles(directoryPath, searchPattern);
+
+            return CompileFromFiles(filePaths, appname);
+        }
+    
+
+        private static Assembly ApplyCompileCode(string code, string appname)
+        {
+            CSharpCodeProvider provider = new CSharpCodeProvider();
+            CompilerResults results = provider.CompileAssemblyFromSource(_parameters, code);
             if (results.Errors.HasErrors)
             {
                 throw new Exception("Error compiling code: " + results.Errors[0].ErrorText);
             }
             return results.CompiledAssembly;
         }
-        
-        /// <summary>
-        /// Compile the given code using the set parameters
-        /// </summary>
-        /// <param name="code">C# source code</param>
-        /// <returns></returns>
-        private static CompilerResults Compile(string code)
+
+        public static Assembly CompileFromFilesWithReferences(string[] filePaths, string appname, string[] references)
         {
-            CSharpCodeProvider provider = new CSharpCodeProvider();    
-            return provider.CompileAssemblyFromSource(_parameters, code);
-        }
-     
-        /// <summary>
-        /// Get the list of errors during compilation 
-        /// </summary>
-        /// <param name="results">compilation results</param>
-        /// <returns>List of errors</returns>
-        public static List<string> GetCompileErrors(CompilerResults results)
-        {
-            var errors = new List<string>();
-            foreach(CompilerError error in results.Errors) 
+            SetupParameters(appname);
+
+            string[] codeFiles = new string[filePaths.Length];
+
+            for (int i = 0; i < filePaths.Length; i++)
             {
-                errors.Add(error.ErrorText);
-            }  
-            return errors;
+                codeFiles[i] = ReadCodeFromFile(filePaths[i]);
+            }
+
+            foreach (string reference in references)
+            {
+                _parameters.ReferencedAssemblies.Add(reference);
+            }
+
+            return ApplyCompileCode(string.Join(Environment.NewLine, codeFiles), appname);
         }
+
     }
 }

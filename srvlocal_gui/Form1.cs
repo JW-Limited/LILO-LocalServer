@@ -70,7 +70,7 @@ namespace srvlocal_gui
         }
 
         delegate void PrintDelegate(string text);
-
+        /*
         PrintDelegate PrintToConsole = (string text) =>
         {
             var log = new Log();
@@ -83,7 +83,7 @@ namespace srvlocal_gui
             var log = new Log();
             log.WriteEntry(text);
             File.AppendAllText("./logs.txt", text);
-        };
+        };*/
 
         void LogEvents(PrintDelegate log, string logContent)
         {
@@ -102,7 +102,7 @@ namespace srvlocal_gui
                 {
                     lblExpires.Text = expirationDate.ToString();
                 }
-                else { lblExpires.Text = ("Invalid license code."); LogEvents(WriteToFile, "Invalid license code."); }
+                else { lblExpires.Text = ("Invalid license code."); /*LogEvents(WriteToFile, "Invalid license code.");*/ }
 
                 if (lic.UserRightStatus.Length >= 10)
                 {
@@ -112,7 +112,7 @@ namespace srvlocal_gui
                         if (splitRights[1].EndsWith("lilodev420")) DebugSettings.Default.debug = true;
                         else DebugSettings.Default.debug = false;
 
-                        LogEvents(WriteToFile, "Set RightsPerUserTo : " + DebugSettings.Default.debug);
+                        //LogEvents(WriteToFile, "Set RightsPerUserTo : " + DebugSettings.Default.debug);
                         DebugSettings.Default.Save();
                     }
                 }
@@ -192,6 +192,7 @@ namespace srvlocal_gui
                                     _read.name = "Latest Release";
                                     _read.version = latestVersion;
                                     _read.Show();
+
 
                                 }
                                 else

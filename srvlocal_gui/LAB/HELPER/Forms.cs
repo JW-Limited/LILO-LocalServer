@@ -10,19 +10,77 @@ namespace srvlocal_gui.LAB.HELPER
 {
     internal class FormsHandler
     {
-        public string dir = string.Empty;   
+        public string Dir { get; private set; }
 
-        public FormsHandler(string Directory)
+        public FormsHandler(string directory)
         {
-            this.dir = Directory;
+            Dir = directory;
         }
 
-        public void Add(string _formName)
+        public void Add(string formName)
         {
-            var temp = new Templates.Forms(_formName);
+            var formTemplates = new Templates.Forms(formName);
+            File.WriteAllText(Path.Combine(Dir, $"{formName.ToLower()}.cs"), formTemplates.Basic());
+            File.WriteAllText(Path.Combine(Dir, $"{formName.ToLower()}.Designer.cs"), formTemplates.Designer());
+        }
 
-            File.WriteAllText(dir + $"\\{_formName.ToLower()}.cs",temp.Basic());
-            File.WriteAllText(dir + $"\\{_formName.ToLower()}.Designer.cs", temp.Designer());
+        public void Remove(string formName)
+        {
+            File.Delete(Path.Combine(Dir, $"{formName.ToLower()}.cs"));
+            File.Delete(Path.Combine(Dir, $"{formName.ToLower()}.Designer.cs"));
+        }
+
+        public void Rename(string oldFormName, string newFormName)
+        {
+            var oldCsPath = Path.Combine(Dir, $"{oldFormName.ToLower()}.cs");
+            var newCsPath = Path.Combine(Dir, $"{newFormName.ToLower()}.cs");
+            var oldDesignerPath = Path.Combine(Dir, $"{oldFormName.ToLower()}.Designer.cs");
+            var newDesignerPath = Path.Combine(Dir, $"{newFormName.ToLower()}.Designer.cs");
+
+            if (File.Exists(oldCsPath) && File.Exists(oldDesignerPath))
+            {
+                File.Move(oldCsPath, newCsPath);
+                File.Move(oldDesignerPath, newDesignerPath);
+            }
+            else
+            {
+                throw new FileNotFoundException("One or both of the form files does not exist.");
+            }
+        }
+
+        public void Edit(string formName, string formCode, string designerCode)
+        {
+            var formFile = Dir + $"\\{formName.ToLower()}.cs";
+            var designerFile = Dir + $"\\{formName.ToLower()}.Designer.cs";
+
+            if (File.Exists(formFile) && File.Exists(designerFile))
+            {
+                File.WriteAllText(formFile, formCode);
+                File.WriteAllText(designerFile, designerCode);
+            }
+            else
+            {
+                throw new Exception("Unable to find files to edit.");
+            }
+        }   
+
+        public List<string> GetAllFormNames()
+        {
+            var formNames = new List<string>();
+
+            foreach (var file in Directory.GetFiles(Dir, "*.cs"))
+            {
+                var formName = Path.GetFileNameWithoutExtension(file);
+                formNames.Add(formName);
+            }
+
+            return formNames;
+        }
+
+        public bool FormExists(string formName)
+        {
+            return File.Exists(Path.Combine(Dir, $"{formName.ToLower()}.cs")) && File.Exists(Path.Combine(Dir, $"{formName.ToLower()}.Designer.cs"));
         }
     }
+
 }

@@ -1,3 +1,2 @@
-2023/04/26-19:51:27.379 2828 Reusing MANIFEST C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-windows\srvlocal_gui.exe.WebView2\EBWebView\Default\Extension Rules/MANIFEST-000001
-2023/04/26-19:51:27.380 2828 Recovering log #3
-2023/04/26-19:51:27.381 2828 Reusing old log C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-windows\srvlocal_gui.exe.WebView2\EBWebView\Default\Extension Rules/000003.log 
+2023/05/05-21:09:50.727 61f0 Creating DB C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-windows\srvlocal_gui.exe.WebView2\EBWebView\Default\Extension Rules since it was missing.
+2023/05/05-21:09:50.741 61f0 Reusing MANIFEST C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-windows\srvlocal_gui.exe.WebView2\EBWebView\Default\Extension Rules/MANIFEST-000001

@@ -29,11 +29,12 @@
         "outputPath": "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\LABLibary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
+          "C:\\Users\\joeva\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder",
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\srvlocal\\NuGet.Config",
           "C:\\Users\\joeva\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\joeva\\AppData\\Roaming\\NuGet\\config\\Godot.Offline.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -42,7 +43,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files (x86)\\Progress\\Telerik UI for WinForms R1 2023\\Bin70\\NuGet": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -109,11 +109,12 @@
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [
+          "C:\\Users\\joeva\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder",
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\srvlocal\\NuGet.Config",
           "C:\\Users\\joeva\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\joeva\\AppData\\Roaming\\NuGet\\config\\Godot.Offline.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -122,7 +123,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files (x86)\\Progress\\Telerik UI for WinForms R1 2023\\Bin70\\NuGet": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -199,11 +199,12 @@
         "outputPath": "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\srvlocal\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
+          "C:\\Users\\joeva\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder",
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\srvlocal\\NuGet.Config",
           "C:\\Users\\joeva\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\joeva\\AppData\\Roaming\\NuGet\\config\\Godot.Offline.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -212,7 +213,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files (x86)\\Progress\\Telerik UI for WinForms R1 2023\\Bin70\\NuGet": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -273,11 +273,12 @@
         "outputPath": "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\srvlocal_gui\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
+          "C:\\Users\\joeva\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder",
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\srvlocal\\NuGet.Config",
           "C:\\Users\\joeva\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\joeva\\AppData\\Roaming\\NuGet\\config\\Godot.Offline.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -286,7 +287,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files (x86)\\Progress\\Telerik UI for WinForms R1 2023\\Bin70\\NuGet": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -318,6 +318,10 @@
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
           "dependencies": {
+            "DK.WshRuntime": {
+              "target": "Package",
+              "version": "[4.1.3.201115164, )"
+            },
             "Google.Apis.Auth": {
               "target": "Package",
               "version": "[1.59.0, )"

@@ -12,6 +12,7 @@ using LABLibary.Connect;
 using DarkUI;
 using Zeroit.Framework.Metro;
 using LABLibary.Network;
+using System.ComponentModel;
 
 namespace srvlocal_gui
 {
@@ -33,134 +34,159 @@ namespace srvlocal_gui
         [STAThread]
         static void Main(string[] args)
         {
-
             ApplicationConfiguration.Initialize();
 
-            if (!File.Exists(".\\license.labl")) LABLibary.Assistant.WriteLicense.Write(AppDomain.CurrentDomain.BaseDirectory);
-
-            // "--start-nowin"
-            if (args.Length > 0) 
+            if (!File.Exists(".\\license.labl") && !LAB.SETTINGS.config.Default.acceptedLicenseAgrement)
             {
-                for (int i = 0; i < args.Length; i++)
+
+                string message = "Dear User,\r\n\r\nBefore you can use this software, you must read and agree to the terms and conditions of the license agreement below.\r\n\r\nLicense Agreement\r\n\r\nThis software is licensed to you by JW Limited under the terms and conditions of the following license agreement. By using this software, you are agreeing to be bound by the terms and conditions of this agreement.\r\n\r\n1. Ownership and Copyright\r\n\r\nThe developer is the owner of all intellectual property rights in the software. The software is protected by copyright laws and international treaties. You acknowledge that no title to the intellectual property in the software is transferred to you. You further acknowledge that title and full ownership rights to the software will remain the exclusive property of the developer and/or its suppliers.\r\n\r\n2. License Grant\r\n\r\nThe developer grants you a non-exclusive, non-transferable, limited license to use the software, subject to the terms and conditions of this agreement. You may install and use the software on one computer only. You may not distribute, sublicense, or make available copies of the software to third parties.\r\n\r\n3. Restrictions\r\n\r\nYou may not decompile, reverse engineer, disassemble, or otherwise attempt to derive the source code for the software. You may not modify, adapt, translate, or create derivative works based on the software. You may not remove or alter any copyright, trademark, or other proprietary notices from the software.\r\n\r\n4. Disclaimer of Warranties\r\n\r\nTHE SOFTWARE IS PROVIDED \"AS IS\" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE DEVELOPER DOES NOT WARRANT THAT THE SOFTWARE WILL MEET YOUR REQUIREMENTS OR THAT THE OPERATION OF THE SOFTWARE WILL BE UNINTERRUPTED OR ERROR-FREE.\r\n\r\n5. Limitation of Liability\r\n\r\nIN NO EVENT SHALL THE DEVELOPER BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES ARISING OUT OF OR IN CONNECTION WITH THE USE OR INABILITY TO USE THE SOFTWARE (INCLUDING, BUT NOT LIMITED TO, LOSS OF PROFITS, BUSINESS INTERRUPTION, OR LOSS OF INFORMATION), EVEN IF THE DEVELOPER HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. IN ANY EVENT, THE DEVELOPER'S TOTAL LIABILITY TO YOU FOR ALL DAMAGES, LOSSES, AND CAUSES OF ACTION (WHETHER IN CONTRACT, TORT (INCLUDING NEGLIGENCE), OR OTHERWISE) SHALL NOT EXCEED THE AMOUNT PAID BY YOU FOR THE SOFTWARE.\r\n\r\nPlease click \"Agree\" to indicate that you have read and accepted the terms and conditions of this license agreement. If you do not agree to these terms, please click \"Disagree\" and do not use the software.\r\n\r\nThank you for using our software.\r\n\r\nBest regards,\r\nJW Limited.";
+
+
+                var result = MessageBox.Show(message, "License Agreement", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
                 {
-                    if (args[i].StartsWith("--start"))
-                    {
-                        var filePath = ".\\srvlocal.exe";
-
-                        var process = new Process
-                        {
-                            StartInfo = new ProcessStartInfo
-                            {
-                                FileName = filePath,
-                                RedirectStandardOutput = true,
-                                UseShellExecute = false,
-                                CreateNoWindow = true,
-                            }
-                        };
-                        process.Start();
-
-                        var arg = new ArgStart(true);
-                        arg.Show();
-                        Application.Run();
-                    }
-                    else if (args[i].StartsWith("--nowin"))
-                    {
-                        var filePath = ".\\srvlocal.exe";
-
-                        var process = new Process
-                        {
-                            StartInfo = new ProcessStartInfo
-                            {
-                                FileName = filePath,
-                                RedirectStandardOutput = true,
-                                UseShellExecute = false,
-                                CreateNoWindow = true,
-                            }
-                        };
-                        process.Start();
-
-                        var arg = new ArgStart(false);
-                        Application.Run();
-                    }
-                    else if (args[i] == "--help")
-                    {
-                        LABLibary.Forms.InfoDialog.Show(ShowHelp(),"Help - Or visit US");
-   
-                        return;
-                    }
-                    else if (args[i] == "--version")
-                    {
-                        LABLibary.Forms.InfoDialog.Show(ShowVersion(), "Version");
-
-                        return;
-                    }
-                    else 
-                    {
-                        try
-                        {
-                            var desk = new DesktopApi("liloDEV420");
-                            desk.Start();
-                        }
-                        catch (Exception ex)
-                        {
-                            LABLibary.Forms.ErrorDialog.message[0] = ex.Message + "\nSome Features may dont work.";
-                            LABLibary.Forms.ErrorDialog.Show();
-                        }
-
-                        var mdi = new LAB.builder_gui(args[i]);
-                        mdi.Show();
-                        Application.Run();
-                    }
-                }
-            }
-            else
-            {
-                try
-                {
-                    var desk = new DesktopApi("liloDEV420");
-                    desk.Start();
-                }
-                catch (Exception ex)
-                {
-                    LABLibary.Forms.ErrorDialog.message[0] = ex.Message + "\nSome Features may dont work.";
-                    LABLibary.Forms.ErrorDialog.Show();
-                }
-
-                if (!CheckIfDirIsValid())
-                {
-                    var BrwThread = new Thread(Browser_);
-                }
-
-                if (DebugSettings.Default.debug)
-                {
-                    //ApplicationConfiguration.Initialize();
-                    Application.Run(new builder_gui(@"C:\LILO\dist\LILOApp1\LILOApp1.lab"));
+                    LAB.SETTINGS.config.Default.acceptedLicenseAgrement = true;
+                    LAB.SETTINGS.config.Default.Save();
+                    LABLibary.Assistant.WriteLicense.Write(AppDomain.CurrentDomain.BaseDirectory);
                 }
                 else
                 {
-                    Application.Run(new Form1());
+                    Application.ExitThread();
                 }
+
+            }
+            else
+            {
+                LABLibary.Assistant.WriteLicense.Write(AppDomain.CurrentDomain.BaseDirectory);
+            }
+
+            bool startWithNoWindow = false;
+
+            foreach (var arg in args)
+            {
+                if (arg.StartsWith("--start"))
+                {
+                    startWithNoWindow = true;
+                }
+                else if (arg.StartsWith("--nowin"))
+                {
+                    startWithNoWindow = false;
+                }
+                else if (arg == "--help")
+                {
+                    LABLibary.Forms.InfoDialog.Show(ShowHelp(), "Help - Or visit US");
+                    return;
+                }
+                else if (arg == "--version")
+                {
+                    LABLibary.Forms.InfoDialog.Show(ShowVersion(), "Version");
+                    return;
+                }
+                else
+                {
+                    OpenBuilderGui(arg);
+                }
+            }
+
+            if (startWithNoWindow)
+            {
+                StartSrvLocalProcess(true);
+                var arg = new ArgStart(true);
+                arg.Show();
+                Application.Run();
+            }
+            else
+            {
+                //StartSrvLocalProcess(false);
+                OpenBuilderGui("");
+            }
+        }
+
+        private static void OpenBuilderGui(string arg)
+        {
+            if (!CheckIfDirIsValid())
+            {
+                StringBuilder sb = new StringBuilder();
+                foreach (var files in GetMissingFiles())
+                {
+                    sb.AppendLine("+-> " + files);
+                }
+                CreateDirectoryIfNotExists();
+                MessageBox.Show("The Program detected that some Resources maybe Missing or arent in the specified installation directory:\n\n" + sb + "\nPlease contact the support if you run in errors while using the program.", "Missing Files", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Task.Run(() =>
+                {
+                    Browser_();
+                });
+            }
+
+            if (DebugSettings.Default.debug)
+            {
+                Application.Run(new builder_gui(@"C:\LILO\dist\LILOApp1\LILOApp1.lab"));
+            }
+            else
+            {
+                Application.Run(new Form1());
+            }
+        }
+
+        private static void StartSrvLocalProcess(bool noWindow)
+        {
+            var processName = "srvlocal.exe";
+            var isProcessRunning = Process.GetProcessesByName(processName).Length > 0;
+
+            if (!isProcessRunning)
+            {
+                var process = new Process
+                {
+                    StartInfo = new ProcessStartInfo
+                    {
+                        FileName = $".\\{processName}",
+                        RedirectStandardOutput = true,
+                        UseShellExecute = false,
+                        CreateNoWindow = noWindow,
+                    }
+                };
+                process.Start();
             }
         }
 
         public static bool CheckIfDirIsValid()
         {
-            string[] files = { "srvlocal.exe", "srvlocal.dll", "srvlocal.runtimeconfig.json" };
+            string[] requiredFiles = { "srvlocal.exe", "srvlocal.dll", "srvlocal.runtimeconfig.json", "config.xml", "log.txt" };
+            string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
 
-            foreach (var file in files)
-            {
-                if (!File.Exists(AppDomain.CurrentDomain.BaseDirectory + file))
-                {
-                    return false;
-                }
-                else
-                {
-                    continue;
-                }
-            }
-
-            return true;
+            return requiredFiles.All(file => File.Exists(Path.Combine(baseDirectory, file)));
         }
+
+        public static void DeleteFiles()
+        {
+            string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
+
+            foreach (string file in Directory.GetFiles(baseDirectory))
+            {
+                File.Delete(file);
+            }
+        }
+
+        public static void CreateDirectoryIfNotExists()
+        {
+            string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
+
+            if (!Directory.Exists(baseDirectory))
+            {
+                Directory.CreateDirectory(baseDirectory);
+            }
+        }
+
+        public static List<string> GetMissingFiles()
+        {
+            string[] requiredFiles = { "srvlocal.exe", "srvlocal.dll", "srvlocal.runtimeconfig.json", "config.xml", "log.txt" };
+            string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
+
+            return requiredFiles.Where(file => !File.Exists(Path.Combine(baseDirectory, file))).ToList();
+        }
+
 
         private static string ShowVersion()
         {
@@ -186,30 +212,33 @@ namespace srvlocal_gui
 
 
 
-        public static void Browser_()
+        public static void Browser_(string url = "https://github.com/JW-Limited/LILO-LocalServer")
         {
-            var URL = "https://github.com/JW-Limited/LILO-LocalServer";
-
             try
             {
-                Process proc = Process.Start(URL);
+                Process.Start(url);
             }
-            catch
+            catch (Win32Exception)
             {
                 if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
                 {
-                    URL = URL.Replace("&", "^&");
-
-                    Process proc = Process.Start(new ProcessStartInfo("cmd", $"/c start {URL}") { CreateNoWindow = false });
-
+                    url = url.Replace("&", "^&");
+                    Process.Start(new ProcessStartInfo("cmd", $"/c start {url}") { CreateNoWindow = false });
                 }
-                else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+                else
                 {
-                    Process.Start("xdg-open", URL);
+                    throw;
+                }
+            }
+            catch (Exception)
+            {
+                if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+                {
+                    Process.Start("xdg-open", url);
                 }
                 else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
                 {
-                    Process.Start("open", URL);
+                    Process.Start("open", url);
                 }
                 else
                 {

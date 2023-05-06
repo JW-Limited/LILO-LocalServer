@@ -16,3 +16,4 @@ C:\Users\joeva\Documents\GitHub\LILO-LocalServer\LABLibary\obj\Debug\net7.0\refi
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\LABLibary\obj\Debug\net7.0\LABLibary.pdb
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\LABLibary\obj\Debug\net7.0\ref\LABLibary.dll
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\LABLibary\bin\Debug\net7.0\LABLibary.dll.config
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\LABLibary\bin\Debug\net7.0\Interop.IWshRuntimeLibrary.dll
