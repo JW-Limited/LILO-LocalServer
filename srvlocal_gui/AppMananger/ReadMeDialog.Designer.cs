@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReadMeDialog));
             mdText = new MetroFramework.Drawing.Html.HtmlLabel();
             themer = new Telerik.WinControls.RadThemeManager();
             office2019LightTheme1 = new Telerik.WinControls.Themes.Office2019LightTheme();
@@ -38,6 +39,8 @@
             lblVersion = new Label();
             progress = new Ookii.Dialogs.WinForms.ProgressDialog(components);
             progessbar = new Guna.UI2.WinForms.Guna2ProgressBar();
+            taskDialog1 = new Ookii.Dialogs.WinForms.TaskDialog(components);
+            bnCancel_Dialog = new Ookii.Dialogs.WinForms.TaskDialogButton(components);
             SuspendLayout();
             // 
             // mdText
@@ -139,6 +142,29 @@
             progessbar.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             progessbar.Visible = false;
             // 
+            // taskDialog1
+            // 
+            taskDialog1.AllowDialogCancellation = true;
+            taskDialog1.Buttons.Add(bnCancel_Dialog);
+            taskDialog1.CenterParent = true;
+            taskDialog1.CollapsedControlText = "Installing Update";
+            taskDialog1.Content = "Encrypting and Decompressing the Updatepackage";
+            taskDialog1.CustomFooterIcon = (Icon)resources.GetObject("taskDialog1.CustomFooterIcon");
+            taskDialog1.CustomMainIcon = (Icon)resources.GetObject("taskDialog1.CustomMainIcon");
+            taskDialog1.EnableHyperlinks = true;
+            taskDialog1.ExpandedControlText = "Installing Update";
+            taskDialog1.ExpandedInformation = "Encrypting and Decompressing the Updatepackage";
+            taskDialog1.MainInstruction = "taskShower";
+            taskDialog1.MinimizeBox = true;
+            taskDialog1.ProgressBarStyle = Ookii.Dialogs.WinForms.ProgressBarStyle.ProgressBar;
+            taskDialog1.WindowTitle = "Updater Process";
+            // 
+            // bnCancel_Dialog
+            // 
+            bnCancel_Dialog.ButtonType = Ookii.Dialogs.WinForms.ButtonType.Cancel;
+            bnCancel_Dialog.CommandLinkNote = "this.Close();";
+            bnCancel_Dialog.Text = "&Cancel";
+            // 
             // ReadMeDialog
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -174,5 +200,7 @@
         private Label lblVersion;
         private Ookii.Dialogs.WinForms.ProgressDialog progress;
         private Guna.UI2.WinForms.Guna2ProgressBar progessbar;
+        private Ookii.Dialogs.WinForms.TaskDialog taskDialog1;
+        private Ookii.Dialogs.WinForms.TaskDialogButton bnCancel_Dialog;
     }
 }
