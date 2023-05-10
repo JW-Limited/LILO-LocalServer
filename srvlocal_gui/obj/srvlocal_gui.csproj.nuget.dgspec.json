@@ -414,6 +414,10 @@
               "target": "Package",
               "version": "[1.0.0, )"
             },
+            "bunifu.ui.winforms": {
+              "target": "Package",
+              "version": "[6.0.0-beta, )"
+            },
             "xunit": {
               "target": "Package",
               "version": "[2.4.2, )"

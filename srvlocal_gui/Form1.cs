@@ -625,10 +625,7 @@ namespace srvlocal_gui
 
         private void bntAddError_Click(object sender, EventArgs e)
         {
-            errorCount++;
-
-            LABLibary.Forms.ErrorDialog.message[errorCount] = "Example Error";
-            LABLibary.Forms.ErrorDialog.Show();
+            
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)

@@ -13,6 +13,7 @@ using DarkUI;
 using Zeroit.Framework.Metro;
 using LABLibary.Network;
 using System.ComponentModel;
+using Telerik.WinControls.UI.Map.Bing;
 
 namespace srvlocal_gui
 {
@@ -25,8 +26,18 @@ namespace srvlocal_gui
                 return Assembly.GetExecutingAssembly().GetName().Version.ToString();
             }
         }
+        public static List<string> ErrorList = new List<string>();
         public static bool RestartTrue = false;
 
+
+        static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
+        {
+            var ex = e.ToString();
+            ErrorList.Add(ex);
+            LABLibary.Forms.ErrorDialog.ErrorManager.AddError(ex, true, "this.Program");
+            LABLibary.Forms.ErrorDialog.Show();
+
+        }
 
         /// <summary>
         ///  The main entry point for the application.
@@ -35,6 +46,7 @@ namespace srvlocal_gui
         static void Main(string[] args)
         {
             ApplicationConfiguration.Initialize();
+            AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(CurrentDomain_UnhandledException);
 
             if (!File.Exists(".\\license.labl") && !LAB.SETTINGS.config.Default.acceptedLicenseAgrement)
             {

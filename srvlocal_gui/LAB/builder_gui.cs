@@ -18,6 +18,7 @@ using OpenTK.Graphics.OpenGL;
 using static Google.Apis.Requests.BatchRequest;
 using Modern.WindowKit.Controls;
 using RuFramework;
+using Telerik.WinControls.UI.Map.Bing;
 
 namespace srvlocal_gui.LAB
 {
@@ -123,7 +124,7 @@ namespace srvlocal_gui.LAB
             {
                 Application.DoEvents();
                 var response = await pipe.GetDataAsync();
-                LABLibary.Forms.ErrorDialog.message[2] = response;
+                LABLibary.Forms.ErrorDialog.ErrorManager.AddError(response, true, "MessageQueringPipeline");
             }
         }
 
@@ -359,7 +360,7 @@ namespace srvlocal_gui.LAB
                 }
                 catch(Exception ex) 
                 {
-                    LABLibary.Forms.ErrorDialog.message[0] = ex.Message;
+                    LABLibary.Forms.ErrorDialog.ErrorManager.AddError(ex.Message, true, "ProjectManager");
                     LABLibary.Forms.ErrorDialog.Show();
                 }
             }

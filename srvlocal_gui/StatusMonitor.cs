@@ -3,6 +3,7 @@ using System.Collections.Specialized;
 using System.IO;
 using System.Net;
 using System.Text;
+using Telerik.WinControls.UI.Map.Bing;
 
 namespace LILO.JBO
 {
@@ -33,7 +34,7 @@ namespace LILO.JBO
             }
             catch (Exception ex)
             {
-                LABLibary.Forms.ErrorDialog.message[98] = ex.Message;
+                LABLibary.Forms.ErrorDialog.ErrorManager.AddError(ex.Message, true, "LocalServerAPI");
                 return Task.FromResult("Error");
             }
         }

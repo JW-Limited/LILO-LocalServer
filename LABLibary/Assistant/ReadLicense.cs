@@ -19,7 +19,7 @@ namespace LABLibary.Assistant
             }
             catch (Exception e)
             {
-                LABLibary.Forms.ErrorDialog.message[0] = e.Message;
+                LABLibary.Forms.ErrorDialog.ErrorManager.AddError(e.Message);
                 LABLibary.Forms.ErrorDialog.Show();
 
                 var con = new Config();

@@ -111,6 +111,24 @@ namespace LABLibary.Converter
         }
     }
 
+    public class ListC
+    {
+        public static string ListToString(List<string> list)
+        {
+            if(list.Count <= 1)
+            {
+                return "none";
+            }
+            StringBuilder sb = new StringBuilder();
+            foreach (string item in list)
+            {
+                sb.Append(item);
+            }
+
+            return sb.ToString();
+        }
+    }
+
     public class ByteC
     {
         public static byte[] StringToByteArray(string str)
