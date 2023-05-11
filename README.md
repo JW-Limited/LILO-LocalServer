@@ -102,7 +102,7 @@ dotnet LILO-LocalServer.Console.dll
 To launch the GUI overlay, double-click on the LILO-LocalServer.GUI.exe file in the bin directory.
 
 ## Implement in Youre App
-LILO-LocalServer can be easily configured to suit your needs. Configuration options are stored in the config.json file, which is located in the root directory of the project.
+We currently working on the Package but until you can use the WindowsApi Implementation
 
 ```CSharp
 using System;
