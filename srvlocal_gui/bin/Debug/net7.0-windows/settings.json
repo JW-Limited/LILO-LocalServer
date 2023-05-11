@@ -1,0 +1,23 @@
+{
+  "WindowTitle": "LILO-LocalServer",
+  "ProductVersion": 42,
+  "InstalledCorrectly": true,
+  "CustomPortConfig": false,
+  "CustomCDNConfig": false,
+  "Port": 8080,
+  "CDNPath": "C:\\LILO\\dist",
+  "Users": [
+    {
+      "IsActivated": true,
+      "UserName": "admin",
+      "HashedPassword": "zlnKOf5ALuFLfGNLKC8jTQ==|ygAseQUn893vs3Vl8LIEvTFSqXpkB2OV5Uadjyuqzzc=",
+      "CanChangeConfig": true
+    },
+    {
+      "IsActivated": true,
+      "UserName": "guest",
+      "HashedPassword": "jTyVgIFxdHVHP7J21FO6lA==|pcXI0MmqtRA\u002Bm11xjUgqXlrsuR2ECjXsOazpetkNeqU=",
+      "CanChangeConfig": false
+    }
+  ]
+}

@@ -18,6 +18,9 @@ using System.Runtime.InteropServices;
 using Microsoft.VisualBasic.Logging;
 using Markdig;
 using srvlocal_gui.AppManager;
+using srvlocal_gui.AppMananger;
+using Telerik.Pivot.Core;
+using Guna.UI2.WinForms;
 
 namespace srvlocal_gui
 {
@@ -43,11 +46,27 @@ namespace srvlocal_gui
             return versionInfo.ProductVersion;
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private async void Form1_Load(object sender, EventArgs e)
         {
+            /*Ü
+            Settings setting()
+            {
+                return SettingsManager.Instance.LoadSettingsAsync().Result;
+            }
+            ^*/
             lblDomain_2.Text = AppDomain.CurrentDomain.BaseDirectory;
             lblReach.Text = Program.CheckIfDirIsValid().ToString() as string;
             ToolTip.UseAnimation = true;
+
+
+            Text = SettingsManager.Instance.GetSetting(settings => settings.WindowTitle, "LILO Localserver");
+
+            var LoadedSettings = SettingsManager.Instance.LoadSettings();
+            chbChangePort.Checked = LoadedSettings.CustomPortConfig;
+            chbDistFolder.Checked = LoadedSettings.CustomCDNConfig;
+            txtPort.Text = $"{LoadedSettings.Port}";
+            txtDistFolder.Text = LoadedSettings.CDNPath;
+
             try
             {
                 lblVersion.Text = VersionApp();
@@ -586,17 +605,20 @@ namespace srvlocal_gui
 
         private void ChbChangeMediaFolder_CheckedChanged(object sender, EventArgs e)
         {
-            if (chbChangeMediaFolder.Checked)
+
+        }
+
+        public void SetDistInTextbox(TextBox txt, Guna2CheckBox chb)
+        {
+            FolderBrowser_Host.RootFolder = Environment.SpecialFolder.MyDocuments;
+            if (FolderBrowser_Host.ShowDialog() == DialogResult.OK)
             {
-                FolderBorwser_Media.RootFolder = Environment.SpecialFolder.MyDocuments;
-                if (FolderBrowser_Host.ShowDialog() == DialogResult.OK)
-                {
-                    txtMediaFolder.Text = FolderBrowser_Host.SelectedPath;
-                }
-                else
-                {
-                    chbChangeMediaFolder.Checked = false;
-                }
+                chb.Checked = true;
+                txt.Text = FolderBrowser_Host.SelectedPath;
+            }
+            else
+            {
+                chb.Checked = false;
             }
         }
 
@@ -604,15 +626,13 @@ namespace srvlocal_gui
         {
             if (chbDistFolder.Checked)
             {
-                FolderBrowser_Host.RootFolder = Environment.SpecialFolder.MyDocuments;
-                if (FolderBrowser_Host.ShowDialog() == DialogResult.OK)
-                {
-                    txtDistFolder.Text = FolderBrowser_Host.SelectedPath;
-                }
-                else
-                {
-                    chbDistFolder.Checked = false;
-                }
+                SettingsManager.Instance.SetSetting((s, v) => s.CustomCDNConfig = v, chbDistFolder.Checked);
+                SettingsManager.Instance.SetSetting((s, v) => s.CDNPath = v, txtDistFolder.Text);
+            }
+            else
+            {
+                SettingsManager.Instance.SetSetting((s, v) => s.CustomCDNConfig = v, chbDistFolder.Checked);
+                SettingsManager.Instance.SetSetting((s, v) => s.CDNPath = v, "C:\\LILO\\dist");
             }
         }
 
@@ -625,7 +645,7 @@ namespace srvlocal_gui
 
         private void bntAddError_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -636,6 +656,32 @@ namespace srvlocal_gui
         private void collapsibleGroupBox4_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void ChangeRec(object sender, EventArgs e)
+        {
+            SetDistInTextbox(txtMediaFolder, chbChangeMediaFolder);
+        }
+
+        private void ChangeDist(object sender, EventArgs e)
+        {
+            SetDistInTextbox(txtDistFolder, chbDistFolder);
+            SettingsManager.Instance.SetSetting((s, v) => s.CustomCDNConfig = v, chbDistFolder.Checked);
+            SettingsManager.Instance.SetSetting((s, v) => s.CDNPath = v, txtDistFolder.Text);
+        }
+
+        private void chbChangePort_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chbChangePort.Checked)
+            {
+                SettingsManager.Instance.SetSetting((s, v) => s.CustomPortConfig = v, chbChangePort.Checked);
+                SettingsManager.Instance.SetSetting((s, v) => s.Port = v, Convert.ToInt32(txtPort.Text));
+            }
+            else
+            {
+                SettingsManager.Instance.SetSetting((s, v) => s.CustomPortConfig = v, chbChangePort.Checked);
+                SettingsManager.Instance.SetSetting((s, v) => s.Port = v, 8080);
+            }
         }
     }
 }

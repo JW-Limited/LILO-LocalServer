@@ -47,13 +47,13 @@
             // 
             mdText.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             mdText.AutoScroll = true;
-            mdText.AutoScrollMinSize = new Size(86, 30);
+            mdText.AutoScrollMinSize = new Size(98, 34);
             mdText.AutoSize = false;
             mdText.BackColor = SystemColors.Window;
-            mdText.Location = new Point(20, 50);
+            mdText.Location = new Point(25, 62);
             mdText.Margin = new Padding(2);
             mdText.Name = "mdText";
-            mdText.Size = new Size(474, 422);
+            mdText.Size = new Size(592, 528);
             mdText.TabIndex = 0;
             mdText.Text = "htmlLabel1";
             // 
@@ -68,10 +68,10 @@
             bntCancel.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             bntCancel.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             bntCancel.ForeColor = Color.White;
-            bntCancel.Location = new Point(356, 488);
+            bntCancel.Location = new Point(445, 610);
             bntCancel.Margin = new Padding(2);
             bntCancel.Name = "bntCancel";
-            bntCancel.Size = new Size(138, 34);
+            bntCancel.Size = new Size(172, 42);
             bntCancel.TabIndex = 3;
             bntCancel.Text = "Cancel";
             bntCancel.Click += bntCancel_Click;
@@ -87,10 +87,10 @@
             bntUpdate.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             bntUpdate.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             bntUpdate.ForeColor = Color.White;
-            bntUpdate.Location = new Point(154, 488);
+            bntUpdate.Location = new Point(192, 610);
             bntUpdate.Margin = new Padding(2);
             bntUpdate.Name = "bntUpdate";
-            bntUpdate.Size = new Size(187, 34);
+            bntUpdate.Size = new Size(234, 42);
             bntUpdate.TabIndex = 3;
             bntUpdate.Text = "Update Now!";
             bntUpdate.Click += bntUpdate_Click;
@@ -98,20 +98,20 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(20, 16);
+            label1.Location = new Point(25, 20);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(117, 20);
+            label1.Size = new Size(142, 25);
             label1.TabIndex = 4;
             label1.Text = "Newest Version :";
             // 
             // lblVersion
             // 
             lblVersion.AutoSize = true;
-            lblVersion.Location = new Point(138, 16);
+            lblVersion.Location = new Point(172, 20);
             lblVersion.Margin = new Padding(2, 0, 2, 0);
             lblVersion.Name = "lblVersion";
-            lblVersion.Size = new Size(50, 20);
+            lblVersion.Size = new Size(59, 25);
             lblVersion.TabIndex = 4;
             lblVersion.Text = "label1";
             // 
@@ -130,13 +130,13 @@
             progessbar.BorderColor = SystemColors.ButtonShadow;
             progessbar.BorderRadius = 15;
             progessbar.BorderThickness = 2;
-            progessbar.Location = new Point(20, 486);
+            progessbar.Location = new Point(25, 608);
             progessbar.Margin = new Padding(2);
             progessbar.Name = "progessbar";
             progessbar.ProgressColor = Color.FromArgb(192, 255, 192);
             progessbar.ProgressColor2 = Color.FromArgb(0, 192, 0);
             progessbar.ShowText = true;
-            progessbar.Size = new Size(474, 36);
+            progessbar.Size = new Size(592, 45);
             progessbar.TabIndex = 5;
             progessbar.Text = "guna2ProgressBar1";
             progessbar.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
@@ -167,10 +167,10 @@
             // 
             // ReadMeDialog
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonFace;
-            ClientSize = new Size(511, 538);
+            ClientSize = new Size(639, 672);
             Controls.Add(progessbar);
             Controls.Add(lblVersion);
             Controls.Add(label1);
@@ -179,7 +179,7 @@
             Controls.Add(mdText);
             FormBorderStyle = FormBorderStyle.SizableToolWindow;
             Margin = new Padding(2);
-            MinimumSize = new Size(457, 309);
+            MinimumSize = new Size(566, 372);
             Name = "ReadMeDialog";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ReadMeDialog";

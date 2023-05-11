@@ -14,6 +14,8 @@ using Zeroit.Framework.Metro;
 using LABLibary.Network;
 using System.ComponentModel;
 using Telerik.WinControls.UI.Map.Bing;
+using Google.Apis.Gmail.v1.Data;
+using srvlocal_gui.AppMananger;
 
 namespace srvlocal_gui
 {
@@ -30,10 +32,12 @@ namespace srvlocal_gui
         public static bool RestartTrue = false;
 
 
+        private const string SettingsFileName = "settings.json";
         static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
         {
             var ex = e.ToString();
             ErrorList.Add(ex);
+            Logger.Instance.Log(ex, logLevel: Logger.LogLevel.Warning);
             LABLibary.Forms.ErrorDialog.ErrorManager.AddError(ex, true, "this.Program");
             LABLibary.Forms.ErrorDialog.Show();
 
@@ -45,6 +49,45 @@ namespace srvlocal_gui
         [STAThread]
         static void Main(string[] args)
         {
+            //string mySetting1Value = SettingsManager.Instance.GetSetting(settings => settings.MySetting1, "default value");
+            // SettingsManager.Instance.SetSetting((settings, value) => settings.MySetting2 = value, 42);
+            Logger.Instance.LogConsoleOutput();
+            Logger.Instance.Log($"Started GUI...");
+
+            if (!File.Exists(SettingsFileName))
+            {
+                Logger.Instance.Log($"Settingsfile was not found. Settingsmanger Init and generate it.");
+
+                var admin = new User("admin", "admin")
+                { 
+                    CanChangeConfig = true,
+                };
+                var guest = new User("guest", "none")
+                {
+                    CanChangeConfig = false,
+                };
+
+                List<User> listUser = new List<User>
+                {
+                    admin,
+                    guest
+                };
+
+                SettingsManager.Instance.UpdateSettings(new Settings
+                {
+                    WindowTitle = "LILO-LocalServer",
+                    ProductVersion = 1,
+                    InstalledCorrectly = true,
+                    CustomPortConfig = false,
+                    CustomCDNConfig = false,
+                    Port = 8080,
+                    CDNPath = "C:\\LILO\\dist",
+                    Users = listUser
+                });
+            }
+
+            Console.WriteLine(SettingsManager.Instance.GetSetting(settings => settings.WindowTitle, "default value"));
+
             ApplicationConfiguration.Initialize();
             AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(CurrentDomain_UnhandledException);
 
