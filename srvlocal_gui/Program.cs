@@ -171,7 +171,7 @@ namespace srvlocal_gui
                 MessageBox.Show("The Program detected that some Resources maybe Missing or arent in the specified installation directory:\n\n" + sb + "\nPlease contact the support if you run in errors while using the program.", "Missing Files", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 Task.Run(() =>
                 {
-                    Browser_();
+                    //Browser_();
                 });
             }
 

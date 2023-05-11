@@ -260,7 +260,7 @@ namespace srvlocal_gui
             {
                 System.Windows.Forms.Application.DoEvents();
                 //process.WaitForExitAsync();
-                PingReply reply = ping.Send("localhost", 8080);
+                PingReply reply = ping.Send("http://localhost", 8080);
                 reachable = reply.Status == IPStatus.Success;
                 lblReach.Text = reachable.ToString() as string;
             }
@@ -271,7 +271,7 @@ namespace srvlocal_gui
         {
             string filePath = ".\\srvlocal.exe";
             ConsolePanel.Visible = true;
-
+            Program.Browser_("http://localhost:8080");
             try
             {
                 if (Process.GetProcessesByName("srvlocal").Length > 0)
@@ -308,7 +308,7 @@ namespace srvlocal_gui
                 {
                     System.Windows.Forms.Application.DoEvents();
                     //process.WaitForExitAsync();
-                    PingReply reply = ping.Send("localhost", 8080);
+                    PingReply reply = ping.Send("http://localhost", 8080);
                     reachable = reply.Status == IPStatus.Success;
                     lblReach.Text = reachable.ToString() as string;
                 }
@@ -428,7 +428,7 @@ namespace srvlocal_gui
                     System.Windows.Forms.Application.DoEvents();
                     process.WaitForExitAsync();
                 }
-
+                Program.Browser_("http://localhost:" + txtPort.Text);
                 ConsolePanel.Visible = true;
             }
             catch (Exception ey)
@@ -475,7 +475,7 @@ namespace srvlocal_gui
                 {
 
                 };
-                var pingResu = ping.SendPingAsync("http://localhost:8080").Status;
+                var pingResu = "";//ping.SendPingAsync("http://localhost:8080").Status;
 
                 noty = new NotifyIcon()
                 {
@@ -502,7 +502,7 @@ namespace srvlocal_gui
                 {
 
                 };
-                var pingResu = ping.SendPingAsync("http://localhost:8080").Status;
+                var pingResu = "";// ping.SendPingAsync("http://localhost:8080").Status;
 
                 noty = new NotifyIcon()
                 {
@@ -592,8 +592,16 @@ namespace srvlocal_gui
 
         private void bntMEtro(object sender, EventArgs e)
         {
-            var setup = new Setup();
-            setup.Show();
+            if (true)
+            {
+                MessageBox.Show("You downloaded youre Version from Github thats why the LAB is not activated.","Activation Error",MessageBoxButtons.OK,MessageBoxIcon.Hand);
+            }
+            else
+            {
+                var setup = new Setup();
+                setup.Show();
+            }
+            
 
             this.WindowState = FormWindowState.Minimized;
         }
