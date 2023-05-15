@@ -49,7 +49,7 @@
             label2 = new Label();
             lblVersion = new Label();
             label4 = new Label();
-            label6 = new Label();
+            lblGreeting = new Label();
             lblDomain = new Label();
             label13 = new Label();
             lblReach = new Label();
@@ -116,9 +116,14 @@
             label27 = new Label();
             lblUpdaterPros = new Label();
             panel1 = new Panel();
-            panel2 = new Panel();
+            pnlControls = new Panel();
             button2 = new Button();
             button1 = new Button();
+            lblquote = new Label();
+            guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            lblInformationAboutUser = new Label();
+            passwordDialog = new Ookii.Dialogs.WinForms.InputDialog(components);
+            guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             tableLayoutPanel1.SuspendLayout();
             guna2Panel1.SuspendLayout();
             guna2Panel3.SuspendLayout();
@@ -131,7 +136,7 @@
             collapsibleGroupBox1.SuspendLayout();
             collapsibleGroupBox2.SuspendLayout();
             panel1.SuspendLayout();
-            panel2.SuspendLayout();
+            pnlControls.SuspendLayout();
             SuspendLayout();
             // 
             // thumbnailViewer1
@@ -155,12 +160,12 @@
             tableLayoutPanel1.Controls.Add(guna2Panel1, 0, 0);
             tableLayoutPanel1.Controls.Add(guna2Panel3, 1, 0);
             tableLayoutPanel1.Controls.Add(guna2Panel2, 2, 0);
-            tableLayoutPanel1.Location = new Point(34, 1107);
+            tableLayoutPanel1.Location = new Point(34, 849);
             tableLayoutPanel1.Margin = new Padding(2);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Size = new Size(1801, 232);
+            tableLayoutPanel1.Size = new Size(1774, 232);
             tableLayoutPanel1.TabIndex = 3;
             // 
             // guna2Panel1
@@ -176,7 +181,7 @@
             guna2Panel1.Location = new Point(2, 2);
             guna2Panel1.Margin = new Padding(2);
             guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.Size = new Size(596, 228);
+            guna2Panel1.Size = new Size(587, 228);
             guna2Panel1.TabIndex = 2;
             // 
             // bntOpen
@@ -190,9 +195,10 @@
             bntOpen.DisabledState.CustomBorderColor = Color.DarkGray;
             bntOpen.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             bntOpen.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            bntOpen.FocusedColor = Color.FromArgb(100, 170, 209);
             bntOpen.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             bntOpen.ForeColor = Color.White;
-            bntOpen.Location = new Point(214, 145);
+            bntOpen.Location = new Point(209, 145);
             bntOpen.Margin = new Padding(2);
             bntOpen.Name = "bntOpen";
             bntOpen.Size = new Size(154, 48);
@@ -204,7 +210,7 @@
             // 
             label7.Anchor = AnchorStyles.None;
             label7.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Location = new Point(214, 12);
+            label7.Location = new Point(209, 12);
             label7.Margin = new Padding(2, 0, 2, 0);
             label7.Name = "label7";
             label7.Size = new Size(154, 49);
@@ -216,7 +222,7 @@
             // label9
             // 
             label9.Anchor = AnchorStyles.None;
-            label9.Location = new Point(202, 62);
+            label9.Location = new Point(198, 62);
             label9.Margin = new Padding(2, 0, 2, 0);
             label9.Name = "label9";
             label9.Size = new Size(189, 66);
@@ -235,10 +241,10 @@
             guna2Panel3.Controls.Add(label5);
             guna2Panel3.Controls.Add(label11);
             guna2Panel3.Dock = DockStyle.Fill;
-            guna2Panel3.Location = new Point(602, 2);
+            guna2Panel3.Location = new Point(593, 2);
             guna2Panel3.Margin = new Padding(2);
             guna2Panel3.Name = "guna2Panel3";
-            guna2Panel3.Size = new Size(596, 228);
+            guna2Panel3.Size = new Size(587, 228);
             guna2Panel3.TabIndex = 2;
             // 
             // guna2Button1
@@ -252,9 +258,10 @@
             guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button1.FocusedColor = Color.FromArgb(100, 170, 209);
             guna2Button1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(218, 145);
+            guna2Button1.Location = new Point(212, 145);
             guna2Button1.Margin = new Padding(2);
             guna2Button1.Name = "guna2Button1";
             guna2Button1.Size = new Size(154, 48);
@@ -266,7 +273,7 @@
             // 
             label5.Anchor = AnchorStyles.None;
             label5.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(218, 12);
+            label5.Location = new Point(212, 12);
             label5.Margin = new Padding(2, 0, 2, 0);
             label5.Name = "label5";
             label5.Size = new Size(154, 49);
@@ -278,7 +285,7 @@
             // label11
             // 
             label11.Anchor = AnchorStyles.None;
-            label11.Location = new Point(205, 62);
+            label11.Location = new Point(200, 62);
             label11.Margin = new Padding(2, 0, 2, 0);
             label11.Name = "label11";
             label11.Size = new Size(189, 66);
@@ -297,10 +304,10 @@
             guna2Panel2.Controls.Add(label8);
             guna2Panel2.Controls.Add(label10);
             guna2Panel2.Dock = DockStyle.Fill;
-            guna2Panel2.Location = new Point(1202, 2);
+            guna2Panel2.Location = new Point(1184, 2);
             guna2Panel2.Margin = new Padding(2);
             guna2Panel2.Name = "guna2Panel2";
-            guna2Panel2.Size = new Size(597, 228);
+            guna2Panel2.Size = new Size(588, 228);
             guna2Panel2.TabIndex = 2;
             // 
             // guna2Button2
@@ -314,9 +321,10 @@
             guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             guna2Button2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button2.FocusedColor = Color.FromArgb(100, 170, 209);
             guna2Button2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             guna2Button2.ForeColor = Color.White;
-            guna2Button2.Location = new Point(218, 145);
+            guna2Button2.Location = new Point(212, 145);
             guna2Button2.Margin = new Padding(2);
             guna2Button2.Name = "guna2Button2";
             guna2Button2.Size = new Size(154, 48);
@@ -328,7 +336,7 @@
             // 
             label8.Anchor = AnchorStyles.None;
             label8.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.Location = new Point(218, 12);
+            label8.Location = new Point(212, 12);
             label8.Margin = new Padding(2, 0, 2, 0);
             label8.Name = "label8";
             label8.Size = new Size(154, 49);
@@ -340,7 +348,7 @@
             // label10
             // 
             label10.Anchor = AnchorStyles.None;
-            label10.Location = new Point(203, 62);
+            label10.Location = new Point(197, 62);
             label10.Margin = new Padding(2, 0, 2, 0);
             label10.Name = "label10";
             label10.Size = new Size(189, 66);
@@ -392,16 +400,16 @@
             label4.TabIndex = 4;
             label4.Text = "Version : ";
             // 
-            // label6
+            // lblGreeting
             // 
-            label6.Font = new Font("Nirmala UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(36, 26);
-            label6.Margin = new Padding(2, 0, 2, 0);
-            label6.Name = "label6";
-            label6.Size = new Size(462, 49);
-            label6.TabIndex = 4;
-            label6.Text = "LILO Framework Host";
-            label6.Click += label2_Click;
+            lblGreeting.Font = new Font("Nirmala UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            lblGreeting.Location = new Point(36, 26);
+            lblGreeting.Margin = new Padding(2, 0, 2, 0);
+            lblGreeting.Name = "lblGreeting";
+            lblGreeting.Size = new Size(462, 49);
+            lblGreeting.TabIndex = 4;
+            lblGreeting.Text = "LILO Framework Host";
+            lblGreeting.Click += label2_Click;
             // 
             // lblDomain
             // 
@@ -490,7 +498,7 @@
             chbChangePort.CheckedState.BorderRadius = 0;
             chbChangePort.CheckedState.BorderThickness = 0;
             chbChangePort.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
-            chbChangePort.Location = new Point(252, 387);
+            chbChangePort.Location = new Point(239, 288);
             chbChangePort.Margin = new Padding(2);
             chbChangePort.Name = "chbChangePort";
             chbChangePort.Size = new Size(135, 29);
@@ -511,7 +519,7 @@
             chbChangeMediaFolder.CheckedState.BorderRadius = 0;
             chbChangeMediaFolder.CheckedState.BorderThickness = 0;
             chbChangeMediaFolder.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
-            chbChangeMediaFolder.Location = new Point(252, 422);
+            chbChangeMediaFolder.Location = new Point(239, 322);
             chbChangeMediaFolder.Margin = new Padding(2);
             chbChangeMediaFolder.Name = "chbChangeMediaFolder";
             chbChangeMediaFolder.Size = new Size(176, 29);
@@ -531,7 +539,7 @@
             chbDistFolder.CheckedState.BorderRadius = 0;
             chbDistFolder.CheckedState.BorderThickness = 0;
             chbDistFolder.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
-            chbDistFolder.Location = new Point(252, 457);
+            chbDistFolder.Location = new Point(239, 358);
             chbDistFolder.Margin = new Padding(2);
             chbDistFolder.Name = "chbDistFolder";
             chbDistFolder.Size = new Size(182, 29);
@@ -552,7 +560,7 @@
             chbDisable.CheckedState.BorderRadius = 0;
             chbDisable.CheckedState.BorderThickness = 0;
             chbDisable.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
-            chbDisable.Location = new Point(252, 492);
+            chbDisable.Location = new Point(239, 392);
             chbDisable.Margin = new Padding(2);
             chbDisable.Name = "chbDisable";
             chbDisable.Size = new Size(167, 29);
@@ -566,7 +574,7 @@
             // txtPort
             // 
             txtPort.Anchor = AnchorStyles.None;
-            txtPort.Location = new Point(512, 384);
+            txtPort.Location = new Point(499, 284);
             txtPort.Margin = new Padding(2);
             txtPort.Name = "txtPort";
             txtPort.PlaceholderText = "From 8080 - 12000";
@@ -577,7 +585,7 @@
             // txtMediaFolder
             // 
             txtMediaFolder.Anchor = AnchorStyles.None;
-            txtMediaFolder.Location = new Point(512, 422);
+            txtMediaFolder.Location = new Point(499, 322);
             txtMediaFolder.Margin = new Padding(2);
             txtMediaFolder.Name = "txtMediaFolder";
             txtMediaFolder.PlaceholderText = "A Valid Folder";
@@ -597,7 +605,7 @@
             guna2Button4.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             guna2Button4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             guna2Button4.ForeColor = Color.White;
-            guna2Button4.Location = new Point(802, 382);
+            guna2Button4.Location = new Point(789, 282);
             guna2Button4.Margin = new Padding(2);
             guna2Button4.Name = "guna2Button4";
             guna2Button4.Size = new Size(104, 140);
@@ -618,7 +626,7 @@
             guna2Button5.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             guna2Button5.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             guna2Button5.ForeColor = Color.White;
-            guna2Button5.Location = new Point(918, 382);
+            guna2Button5.Location = new Point(904, 282);
             guna2Button5.Margin = new Padding(2);
             guna2Button5.Name = "guna2Button5";
             guna2Button5.Size = new Size(101, 140);
@@ -629,7 +637,7 @@
             // txtDistFolder
             // 
             txtDistFolder.Anchor = AnchorStyles.None;
-            txtDistFolder.Location = new Point(512, 458);
+            txtDistFolder.Location = new Point(499, 358);
             txtDistFolder.Margin = new Padding(2);
             txtDistFolder.Name = "txtDistFolder";
             txtDistFolder.PlaceholderText = "A Valid Folder";
@@ -664,10 +672,10 @@
             ConsolePanel.Controls.Add(_outputTextBox);
             ConsolePanel.Controls.Add(guna2Button6);
             ConsolePanel.CustomBorderColor = Color.Gray;
-            ConsolePanel.Location = new Point(602, 112);
+            ConsolePanel.Location = new Point(600, 112);
             ConsolePanel.Margin = new Padding(2);
             ConsolePanel.Name = "ConsolePanel";
-            ConsolePanel.Size = new Size(1231, 910);
+            ConsolePanel.Size = new Size(1206, 710);
             ConsolePanel.TabIndex = 7;
             ConsolePanel.Visible = false;
             // 
@@ -683,7 +691,7 @@
             _outputTextBox.PlaceholderText = "Mhh really quite, to quite";
             _outputTextBox.ReadOnly = true;
             _outputTextBox.ScrollBars = ScrollBars.Vertical;
-            _outputTextBox.Size = new Size(1231, 878);
+            _outputTextBox.Size = new Size(1206, 678);
             _outputTextBox.TabIndex = 1;
             _outputTextBox.WordWrap = false;
             // 
@@ -700,7 +708,7 @@
             guna2Button6.Location = new Point(0, 0);
             guna2Button6.Margin = new Padding(2);
             guna2Button6.Name = "guna2Button6";
-            guna2Button6.Size = new Size(1231, 32);
+            guna2Button6.Size = new Size(1206, 32);
             guna2Button6.TabIndex = 0;
             guna2Button6.Text = "Close";
             guna2Button6.Click += guna2Button6_Click;
@@ -1118,11 +1126,14 @@
             // guna2Button8
             // 
             guna2Button8.Animated = true;
+            guna2Button8.BorderColor = Color.Gainsboro;
             guna2Button8.BorderRadius = 15;
+            guna2Button8.BorderThickness = 2;
             guna2Button8.DisabledState.BorderColor = Color.DarkGray;
             guna2Button8.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2Button8.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             guna2Button8.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button8.FocusedColor = Color.FromArgb(100, 170, 209);
             guna2Button8.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             guna2Button8.ForeColor = Color.White;
             guna2Button8.Location = new Point(154, 62);
@@ -1136,11 +1147,14 @@
             // bntCheck
             // 
             bntCheck.Animated = true;
+            bntCheck.BorderColor = Color.Gainsboro;
             bntCheck.BorderRadius = 15;
+            bntCheck.BorderThickness = 2;
             bntCheck.DisabledState.BorderColor = Color.DarkGray;
             bntCheck.DisabledState.CustomBorderColor = Color.DarkGray;
             bntCheck.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             bntCheck.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            bntCheck.FocusedColor = Color.FromArgb(100, 170, 209);
             bntCheck.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             bntCheck.ForeColor = Color.White;
             bntCheck.Location = new Point(154, 115);
@@ -1193,34 +1207,36 @@
             panel1.Location = new Point(18, 139);
             panel1.Margin = new Padding(2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(556, 884);
+            panel1.Size = new Size(556, 684);
             panel1.TabIndex = 9;
             // 
-            // panel2
+            // pnlControls
             // 
-            panel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            panel2.Controls.Add(button2);
-            panel2.Controls.Add(button1);
-            panel2.Controls.Add(chbDisable);
-            panel2.Controls.Add(guna2Button4);
-            panel2.Controls.Add(guna2Button5);
-            panel2.Controls.Add(chbChangePort);
-            panel2.Controls.Add(txtDistFolder);
-            panel2.Controls.Add(chbChangeMediaFolder);
-            panel2.Controls.Add(txtMediaFolder);
-            panel2.Controls.Add(chbDistFolder);
-            panel2.Controls.Add(txtPort);
-            panel2.Location = new Point(600, 139);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(1230, 884);
-            panel2.TabIndex = 10;
+            pnlControls.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            pnlControls.Controls.Add(button2);
+            pnlControls.Controls.Add(button1);
+            pnlControls.Controls.Add(chbDisable);
+            pnlControls.Controls.Add(guna2Button4);
+            pnlControls.Controls.Add(guna2Button5);
+            pnlControls.Controls.Add(chbChangePort);
+            pnlControls.Controls.Add(txtDistFolder);
+            pnlControls.Controls.Add(chbChangeMediaFolder);
+            pnlControls.Controls.Add(txtMediaFolder);
+            pnlControls.Controls.Add(chbDistFolder);
+            pnlControls.Controls.Add(txtPort);
+            pnlControls.Location = new Point(600, 139);
+            pnlControls.Margin = new Padding(2);
+            pnlControls.Name = "pnlControls";
+            pnlControls.Size = new Size(1202, 684);
+            pnlControls.TabIndex = 10;
             // 
             // button2
             // 
             button2.Anchor = AnchorStyles.None;
             button2.BackgroundImage = Properties.Resources.icons8_file_folder_32;
             button2.BackgroundImageLayout = ImageLayout.Zoom;
-            button2.Location = new Point(709, 423);
+            button2.Location = new Point(695, 322);
+            button2.Margin = new Padding(2);
             button2.Name = "button2";
             button2.Size = new Size(45, 29);
             button2.TabIndex = 7;
@@ -1232,29 +1248,111 @@
             button1.Anchor = AnchorStyles.None;
             button1.BackgroundImage = Properties.Resources.icons8_file_folder_32;
             button1.BackgroundImageLayout = ImageLayout.Zoom;
-            button1.Location = new Point(709, 462);
+            button1.Location = new Point(695, 362);
+            button1.Margin = new Padding(2);
             button1.Name = "button1";
             button1.Size = new Size(45, 29);
             button1.TabIndex = 7;
             button1.UseVisualStyleBackColor = true;
             button1.Click += ChangeDist;
             // 
+            // lblquote
+            // 
+            lblquote.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            lblquote.AutoEllipsis = true;
+            lblquote.Font = new Font("Nirmala UI", 8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblquote.ImageAlign = ContentAlignment.TopLeft;
+            lblquote.Location = new Point(41, 75);
+            lblquote.Margin = new Padding(2, 0, 2, 0);
+            lblquote.Name = "lblquote";
+            lblquote.Size = new Size(1767, 35);
+            lblquote.TabIndex = 4;
+            lblquote.Text = "LILO Framework Host";
+            lblquote.TextAlign = ContentAlignment.MiddleLeft;
+            lblquote.Click += label2_Click;
+            // 
+            // guna2ComboBox1
+            // 
+            guna2ComboBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            guna2ComboBox1.BackColor = Color.Transparent;
+            guna2ComboBox1.DrawMode = DrawMode.OwnerDrawFixed;
+            guna2ComboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            guna2ComboBox1.FocusedColor = Color.FromArgb(94, 148, 255);
+            guna2ComboBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            guna2ComboBox1.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            guna2ComboBox1.ForeColor = Color.FromArgb(68, 88, 112);
+            guna2ComboBox1.ItemHeight = 30;
+            guna2ComboBox1.Location = new Point(1573, 30);
+            guna2ComboBox1.Margin = new Padding(4);
+            guna2ComboBox1.Name = "guna2ComboBox1";
+            guna2ComboBox1.Size = new Size(181, 36);
+            guna2ComboBox1.TabIndex = 11;
+            guna2ComboBox1.SelectedValueChanged += guna2ComboBox1_SelectedValueChanged;
+            // 
+            // lblInformationAboutUser
+            // 
+            lblInformationAboutUser.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblInformationAboutUser.AutoEllipsis = true;
+            lblInformationAboutUser.Location = new Point(1375, 33);
+            lblInformationAboutUser.Margin = new Padding(4, 0, 4, 0);
+            lblInformationAboutUser.Name = "lblInformationAboutUser";
+            lblInformationAboutUser.RightToLeft = RightToLeft.Yes;
+            lblInformationAboutUser.Size = new Size(190, 31);
+            lblInformationAboutUser.TabIndex = 12;
+            lblInformationAboutUser.Text = "n/a";
+            lblInformationAboutUser.TextAlign = ContentAlignment.MiddleCenter;
+            lblInformationAboutUser.Visible = false;
+            // 
+            // passwordDialog
+            // 
+            passwordDialog.Content = "Please provide youre Password for the Accountauthentication";
+            passwordDialog.MainInstruction = "User Login";
+            passwordDialog.UsePasswordMasking = true;
+            passwordDialog.WindowTitle = "Login";
+            // 
+            // guna2CircleButton1
+            // 
+            guna2CircleButton1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            guna2CircleButton1.Animated = true;
+            guna2CircleButton1.BorderColor = Color.Gainsboro;
+            guna2CircleButton1.BorderThickness = 2;
+            guna2CircleButton1.DisabledState.BorderColor = Color.DarkGray;
+            guna2CircleButton1.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2CircleButton1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2CircleButton1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2CircleButton1.FocusedColor = Color.FromArgb(100, 170, 209);
+            guna2CircleButton1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            guna2CircleButton1.ForeColor = Color.White;
+            guna2CircleButton1.Image = Properties.Resources.icons8_settings_32;
+            guna2CircleButton1.IndicateFocus = true;
+            guna2CircleButton1.Location = new Point(1768, 27);
+            guna2CircleButton1.Name = "guna2CircleButton1";
+            guna2CircleButton1.PressedColor = Color.FromArgb(100, 170, 209);
+            guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            guna2CircleButton1.Size = new Size(40, 39);
+            guna2CircleButton1.TabIndex = 13;
+            guna2CircleButton1.Click += guna2CircleButton1_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1874, 1379);
+            ClientSize = new Size(1846, 1121);
+            Controls.Add(guna2CircleButton1);
+            Controls.Add(lblInformationAboutUser);
+            Controls.Add(guna2ComboBox1);
             Controls.Add(panel1);
             Controls.Add(ConsolePanel);
-            Controls.Add(label6);
+            Controls.Add(lblquote);
+            Controls.Add(lblGreeting);
             Controls.Add(thumbnailViewer2);
             Controls.Add(tableLayoutPanel1);
             Controls.Add(thumbnailViewer1);
-            Controls.Add(panel2);
+            Controls.Add(pnlControls);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(2);
-            MinimumSize = new Size(892, 680);
+            MinimumSize = new Size(891, 677);
             Name = "Form1";
             Text = "srvlocal_gui";
             Load += Form1_Load;
@@ -1276,8 +1374,8 @@
             collapsibleGroupBox2.ResumeLayout(false);
             collapsibleGroupBox2.PerformLayout();
             panel1.ResumeLayout(false);
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
+            pnlControls.ResumeLayout(false);
+            pnlControls.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -1294,7 +1392,7 @@
         private Label label2;
         private Label lblVersion;
         private Label label4;
-        private Label label6;
+        private Label lblGreeting;
         private Guna.UI2.WinForms.Guna2Button bntOpen;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
@@ -1377,8 +1475,13 @@
         private Guna.UI2.WinForms.Guna2Button bntCheck;
         private Panel panel1;
         private Telerik.WinControls.UI.RadApplicationMenu radApplicationMenu1;
-        private Panel panel2;
+        private Panel pnlControls;
         private Button button2;
         private Button button1;
+        private Label lblquote;
+        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Label lblInformationAboutUser;
+        private Ookii.Dialogs.WinForms.InputDialog passwordDialog;
+        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
     }
 }

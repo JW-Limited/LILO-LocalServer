@@ -55,13 +55,12 @@ namespace srvlocal_gui.AppManager
             lblVersion.Text = version;
         }
 
-        public void del(string latestVersion)
+        public async void del(string latestVersion)
         {
             var targetFile = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + "//JW Limited//LAB//srvlocal_gui.exe";
             CreateShortcut("LAB", targetFile);
             Updater.RegisterProduct("LAB", latestVersion, targetFile);
             Process.Start(targetFile);
-            Application.ExitThread();
         }
 
         public static void CreateShortcut(string shortcutName, string targetFile)
@@ -80,7 +79,7 @@ namespace srvlocal_gui.AppManager
             shortcut.Save();
         }
 
-        private void bntUpdate_Click(object sender, EventArgs e)
+        private async void bntUpdate_Click(object sender, EventArgs e)
         {
             var updater = Updater.Instance();
 
@@ -96,27 +95,37 @@ namespace srvlocal_gui.AppManager
                     updating = true;
                     Text = "Installing Update...";
 
-                    Task.Run(() =>
+                    await Task.Run(() =>
                     {
-                        //taskDialog1.ShowDialog();
-                        updater.VerifyAndExtractZip(zipPath, "8a3a0cecf50f9e4a7387b23d4a4c4e4b3d2bbd8e91edc5729c15f9f1f10c8aaf", Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86), "JW Limited"), progress =>
+                        try
                         {
-                            progessbar.Value = progress;
-                            taskDialog1.ProgressBarValue = progress;
-                            if (progress == 100)
+                            // Call the API to verify and extract the ZIP file
+                            updater.VerifyAndExtractZip(zipPath, "8a3a0cecf50f9e4a7387b23d4a4c4e4b3d2bbd8e91edc5729c15f9f1f10c8aaf", Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86), "JW Limited"), 
+                            progress =>
                             {
-                                del(latestVersion: version);
-                            }
-                        },
-                        error =>
+                                progessbar.Value = progress;
+                                taskDialog1.ProgressBarValue = progress;
+                                if (progress == 100)
+                                {
+                                    Task.Run(() => { del(latestVersion: version);
+                                        Application.ExitThread();
+                                    });
+
+                                    Application.ExitThread();
+                                }
+                            },
+                            error =>
+                            {
+                                MessageBox.Show($"Error: {error}", "Install Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            });
+                        }
+                        catch (Exception ex)
                         {
-                            MessageBox.Show($"Error: {error}", "Install Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        });
-
-
+                            MessageBox.Show($"Error: {ex.Message}", "Install Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     });
 
-                    //MessageBox.Show("Installed Updates","Success",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    MessageBox.Show("Installed Updates", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
@@ -127,7 +136,7 @@ namespace srvlocal_gui.AppManager
                     bntCancel.Enabled = false;
                     updating = true;
 
-                    Task.Run(() =>
+                    await Task.Run(() =>
                     {
 
                         updater.DownloadLatestRelease(owner, repo, UpdateProgress);
@@ -150,6 +159,7 @@ namespace srvlocal_gui.AppManager
                 downloaded = true;
                 this.ControlBox = true;
             }
+
 
         }
 

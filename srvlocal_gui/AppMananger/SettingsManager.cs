@@ -47,7 +47,6 @@ namespace srvlocal_gui.AppMananger
 
         public T GetSetting<T>(Func<Settings, T> settingSelector, T defaultValue = default)
         {
-            _settings = LoadSettings();
 
             T value = settingSelector(_settings);
             if (value != null)

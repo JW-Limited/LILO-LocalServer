@@ -312,3 +312,4 @@ C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-w
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-windows\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-windows\runtimes\win\lib\net6.0\System.ServiceProcess.ServiceController.dll
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-windows\runtimes\win\lib\net6.0\System.Speech.dll
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\obj\Debug\net7.0-windows\srvlocal_gui.AppMananger.srvlocal_gui_settings.resources

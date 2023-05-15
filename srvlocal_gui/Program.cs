@@ -58,13 +58,16 @@ namespace srvlocal_gui
             {
                 Logger.Instance.Log($"Settingsfile was not found. Settingsmanger Init and generate it.");
 
-                var admin = new User("admin", "admin")
+                var admin = new User("Joey West", "admin" )
                 { 
                     CanChangeConfig = true,
+                    Email = "ceo@jwlmt.com",
+                    
                 };
                 var guest = new User("guest", "none")
                 {
                     CanChangeConfig = false,
+                    Email = "guest@jwlmt.com",
                 };
 
                 List<User> listUser = new List<User>
