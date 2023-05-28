@@ -69,7 +69,7 @@ namespace srvlocal_gui
             credentialDialog1.ShowDialog();
             if(credentialDialog1.Password == "password" && credentialDialog1.UserName == "admin")
             {
-                var coon = new ConsoleEmu();
+                var coon = ConsoleEmu.Instance();
                 coon.Show();
             }
         }

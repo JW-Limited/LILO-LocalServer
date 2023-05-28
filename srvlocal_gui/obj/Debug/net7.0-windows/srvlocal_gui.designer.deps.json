@@ -6,6 +6,36 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v7.0": {
+      "AForge/2.2.5": {
+        "runtime": {
+          "lib/AForge.dll": {
+            "assemblyVersion": "2.2.5.0",
+            "fileVersion": "2.2.5.0"
+          }
+        }
+      },
+      "AForge.Video/2.2.5": {
+        "dependencies": {
+          "AForge": "2.2.5"
+        },
+        "runtime": {
+          "lib/AForge.Video.dll": {
+            "assemblyVersion": "2.2.5.0",
+            "fileVersion": "2.2.5.0"
+          }
+        }
+      },
+      "AForge.Video.DirectShow/2.2.5": {
+        "dependencies": {
+          "AForge.Video": "2.2.5"
+        },
+        "runtime": {
+          "lib/AForge.Video.DirectShow.dll": {
+            "assemblyVersion": "2.2.5.0",
+            "fileVersion": "2.2.5.0"
+          }
+        }
+      },
       "aqua-core/5.2.0": {
         "dependencies": {
           "System.Reflection.Emit": "4.7.0"
@@ -76,6 +106,17 @@
           "lib/net6.0-windows7.0/Bunifu.UI.WinForms.1.5.3.dll": {
             "assemblyVersion": "1.5.3.0",
             "fileVersion": "1.5.3.0"
+          }
+        }
+      },
+      "ConsoleTables/2.4.2": {
+        "dependencies": {
+          "System.Reflection.TypeExtensions": "4.3.0"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/ConsoleTables.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.4.2.0"
           }
         }
       },
@@ -3350,6 +3391,27 @@
     }
   },
   "libraries": {
+    "AForge/2.2.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-clkumhM9DggqIzEXAHgVLeWO4arG5YfoPr7J4jfjJx35AoeEIJSSm49J25bwp/9mXQYLwi7y1Wunc8qgYJsGxg==",
+      "path": "aforge/2.2.5",
+      "hashPath": "aforge.2.2.5.nupkg.sha512"
+    },
+    "AForge.Video/2.2.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XqzcOXtBUagEPRqg/00oayxlCPmxP4284SdM62mVotsNoD03fs19BrzdMBfhUOOYPyd0B/IXH7tEWnSDmc2gxA==",
+      "path": "aforge.video/2.2.5",
+      "hashPath": "aforge.video.2.2.5.nupkg.sha512"
+    },
+    "AForge.Video.DirectShow/2.2.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pEch6felU/RGAbl0A7yjaQjsGxwiRFU9R+qBqR92wQo++XhzPLeQaZHnAPIBYaG7MfoqtjgCDkK4z3Tra4VQ3w==",
+      "path": "aforge.video.directshow/2.2.5",
+      "hashPath": "aforge.video.directshow.2.2.5.nupkg.sha512"
+    },
     "aqua-core/5.2.0": {
       "type": "package",
       "serviceable": true,
@@ -3384,6 +3446,13 @@
       "sha512": "sha512-u1uDSAP5bIZOEGQ5JVmfx4/XpSULk7+vb3t5CLhQNmF7I2asR0qievx/FYWyt0nGlke+9knm8rwod7L+Fqcw/Q==",
       "path": "bunifu.ui.winforms.1.5.3/1.0.0",
       "hashPath": "bunifu.ui.winforms.1.5.3.1.0.0.nupkg.sha512"
+    },
+    "ConsoleTables/2.4.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0SRFOWYCgFQ0RfAMof2DsGEJHI2YKquCA4X26kKyuG+MG+/2R3NRgRVEqXDMU7eVP69MGDzb1eg4i3/APlIfQg==",
+      "path": "consoletables/2.4.2",
+      "hashPath": "consoletables.2.4.2.nupkg.sha512"
     },
     "Costura.Fody/3.3.3": {
       "type": "package",

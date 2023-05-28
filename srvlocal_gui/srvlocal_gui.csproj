@@ -46,6 +46,8 @@
     <Content Include="AQADtccxG4C3oUt-.ico" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="AForge.Video" Version="2.2.5" />
+    <PackageReference Include="AForge.Video.DirectShow" Version="2.2.5" />
     <PackageReference Include="bunifu.ui.winforms" Version="6.0.0-beta" />
     <PackageReference Include="DK.WshRuntime" Version="4.1.3.201115164" />
     <PackageReference Include="Google.Apis.Auth" Version="1.59.0" />

@@ -16,3 +16,4 @@ C:\Users\joeva\Documents\GitHub\LILO-LocalServer\LABLibary\bin\Release\net7.0\Sy
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\LABLibary\bin\Release\net7.0\System.Runtime.Serialization.Formatters.Soap.dll
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\LABLibary\obj\Release\net7.0\LABLibary.csproj.CopyComplete
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\LABLibary\bin\Release\net7.0\LABLibary.dll.config
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\LABLibary\bin\Release\net7.0\Interop.IWshRuntimeLibrary.dll

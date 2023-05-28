@@ -29,81 +29,80 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsoleEmu));
-            this.guna2WinProgressIndicator1 = new Guna.UI2.WinForms.Guna2WinProgressIndicator();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
-            this.consoleColorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.statusStrip1.SuspendLayout();
-            this.SuspendLayout();
+            guna2WinProgressIndicator1 = new Guna.UI2.WinForms.Guna2WinProgressIndicator();
+            txtConsole = new TextBox();
+            statusStrip1 = new StatusStrip();
+            toolStripSplitButton1 = new ToolStripSplitButton();
+            consoleColorToolStripMenuItem = new ToolStripMenuItem();
+            statusStrip1.SuspendLayout();
+            SuspendLayout();
             // 
             // guna2WinProgressIndicator1
             // 
-            this.guna2WinProgressIndicator1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2WinProgressIndicator1.AutoStart = true;
-            this.guna2WinProgressIndicator1.Location = new System.Drawing.Point(336, 196);
-            this.guna2WinProgressIndicator1.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2WinProgressIndicator1.Name = "guna2WinProgressIndicator1";
-            this.guna2WinProgressIndicator1.Size = new System.Drawing.Size(135, 135);
-            this.guna2WinProgressIndicator1.TabIndex = 0;
+            guna2WinProgressIndicator1.Anchor = AnchorStyles.None;
+            guna2WinProgressIndicator1.AutoStart = true;
+            guna2WinProgressIndicator1.Location = new Point(336, 196);
+            guna2WinProgressIndicator1.Margin = new Padding(2);
+            guna2WinProgressIndicator1.Name = "guna2WinProgressIndicator1";
+            guna2WinProgressIndicator1.Size = new Size(135, 135);
+            guna2WinProgressIndicator1.TabIndex = 0;
             // 
-            // textBox1
+            // txtConsole
             // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Location = new System.Drawing.Point(0, 0);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(837, 535);
-            this.textBox1.TabIndex = 1;
+            txtConsole.Dock = DockStyle.Fill;
+            txtConsole.Location = new Point(0, 0);
+            txtConsole.Margin = new Padding(4);
+            txtConsole.Multiline = true;
+            txtConsole.Name = "txtConsole";
+            txtConsole.ScrollBars = ScrollBars.Vertical;
+            txtConsole.Size = new Size(837, 535);
+            txtConsole.TabIndex = 1;
             // 
             // statusStrip1
             // 
-            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripSplitButton1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 508);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 18, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(837, 27);
-            this.statusStrip1.TabIndex = 2;
-            this.statusStrip1.Text = "statusStrip1";
+            statusStrip1.ImageScalingSize = new Size(20, 20);
+            statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripSplitButton1 });
+            statusStrip1.Location = new Point(0, 508);
+            statusStrip1.Name = "statusStrip1";
+            statusStrip1.Padding = new Padding(1, 0, 18, 0);
+            statusStrip1.Size = new Size(837, 27);
+            statusStrip1.TabIndex = 2;
+            statusStrip1.Text = "statusStrip1";
             // 
             // toolStripSplitButton1
             // 
-            this.toolStripSplitButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripSplitButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.consoleColorToolStripMenuItem});
-            this.toolStripSplitButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton1.Image")));
-            this.toolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripSplitButton1.Name = "toolStripSplitButton1";
-            this.toolStripSplitButton1.Size = new System.Drawing.Size(41, 24);
-            this.toolStripSplitButton1.Text = "toolStripSplitButton1";
+            toolStripSplitButton1.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            toolStripSplitButton1.DropDownItems.AddRange(new ToolStripItem[] { consoleColorToolStripMenuItem });
+            toolStripSplitButton1.Image = (Image)resources.GetObject("toolStripSplitButton1.Image");
+            toolStripSplitButton1.ImageTransparentColor = Color.Magenta;
+            toolStripSplitButton1.Name = "toolStripSplitButton1";
+            toolStripSplitButton1.Size = new Size(41, 24);
+            toolStripSplitButton1.Text = "toolStripSplitButton1";
             // 
             // consoleColorToolStripMenuItem
             // 
-            this.consoleColorToolStripMenuItem.Name = "consoleColorToolStripMenuItem";
-            this.consoleColorToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.consoleColorToolStripMenuItem.Text = "Console Color";
+            consoleColorToolStripMenuItem.Name = "consoleColorToolStripMenuItem";
+            consoleColorToolStripMenuItem.Size = new Size(226, 34);
+            consoleColorToolStripMenuItem.Text = "Console Color";
             // 
             // ConsoleEmu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(837, 535);
-            this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.guna2WinProgressIndicator1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "ConsoleEmu";
-            this.Text = "Console Output";
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(837, 535);
+            Controls.Add(statusStrip1);
+            Controls.Add(txtConsole);
+            Controls.Add(guna2WinProgressIndicator1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(2);
+            Name = "ConsoleEmu";
+            Text = "Console Output";
+            Load += ConsoleEmu_Load;
+            Shown += ConsoleEmu_Shown;
+            statusStrip1.ResumeLayout(false);
+            statusStrip1.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -113,5 +112,6 @@
         private StatusStrip statusStrip1;
         private ToolStripSplitButton toolStripSplitButton1;
         private ToolStripMenuItem consoleColorToolStripMenuItem;
+        public TextBox txtConsole;
     }
 }

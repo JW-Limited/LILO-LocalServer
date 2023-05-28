@@ -45,3 +45,4 @@ C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal\bin\Debug\net7.0-windo
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal\bin\Debug\net7.0-windows\runtimes\win\lib\net7.0\System.Diagnostics.EventLog.dll
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal\bin\Debug\net7.0-windows\LABLibary.dll.config
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal\bin\Debug\net7.0-windows\Interop.IWshRuntimeLibrary.dll
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal\bin\Debug\net7.0-windows\ConsoleTables.dll

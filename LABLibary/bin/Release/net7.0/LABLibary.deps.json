@@ -12,6 +12,7 @@
           "Newtonsoft.Json": "13.0.2",
           "System.Configuration.ConfigurationManager": "8.0.0-preview.3.23174.8",
           "System.Drawing.Common": "6.0.0",
+          "Interop.IWshRuntimeLibrary": "1.0.0.0",
           "System.Windows.Forms": "4.0.0.0"
         },
         "runtime": {
@@ -117,6 +118,14 @@
           }
         }
       },
+      "Interop.IWshRuntimeLibrary/1.0.0.0": {
+        "runtime": {
+          "Interop.IWshRuntimeLibrary.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "System.Windows.Forms/4.0.0.0": {
         "runtime": {
           "System.Windows.Forms.dll": {
@@ -205,6 +214,11 @@
       "sha512": "sha512-RpFC2Vb5bCUOJP1IXBdqvFiW/drXP8YwuC/VGDZaG9sgnkvuhDJ2OkU9iLK5DOkdIIgvUx/lYQtMDApnFxXv1w==",
       "path": "system.security.cryptography.protecteddata/8.0.0-preview.3.23174.8",
       "hashPath": "system.security.cryptography.protecteddata.8.0.0-preview.3.23174.8.nupkg.sha512"
+    },
+    "Interop.IWshRuntimeLibrary/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
     },
     "System.Windows.Forms/4.0.0.0": {
       "type": "reference",

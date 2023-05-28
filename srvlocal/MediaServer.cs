@@ -40,7 +40,7 @@ public class MediaServer
         Console.WriteLine("Media server stopped.");
     }
 
-    class GenerateMediaSearchPage
+    public class GenerateMediaSearchPage
     {
         private readonly string _mediaFolder;
 
@@ -60,13 +60,108 @@ public class MediaServer
                 writer.WriteLine("<html>");
                 writer.WriteLine("<head>");
                 writer.WriteLine("<title>Media Search</title>");
-                writer.WriteLine("<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'><link rel=\"stylesheet\" href=\"./style.css\">");
+                writer.WriteLine("<style>");
+                writer.WriteLine("body {");
+                writer.WriteLine("    background: linear-gradient(to right, #667eea, #764ba2);");
+                writer.WriteLine("    font-family: Arial, sans-serif;");
+                writer.WriteLine("    margin: 0;");
+                writer.WriteLine("    padding: 0;");
+                writer.WriteLine("}");
+                writer.WriteLine("header {");
+                writer.WriteLine("    text-align: center;");
+                writer.WriteLine("    padding: 20px 0;");
+                writer.WriteLine("}");
+                writer.WriteLine("h1 {");
+                writer.WriteLine("    color: #fff;");
+                writer.WriteLine("}");
+                writer.WriteLine("main {");
+                writer.WriteLine("    max-width: 600px;");
+                writer.WriteLine("    margin: 0 auto;");
+                writer.WriteLine("    padding: 20px;");
+                writer.WriteLine("}");
+                writer.WriteLine("form {");
+                writer.WriteLine("    display: flex;");
+                writer.WriteLine("}");
+                writer.WriteLine("label {");
+                writer.WriteLine("    color: #fff;");
+                writer.WriteLine("    font-size: 18px;");
+                writer.WriteLine("    margin-right: 10px;");
+                writer.WriteLine("}");
+                writer.WriteLine("input[type='text'] {");
+                writer.WriteLine("    flex: 1;");
+                writer.WriteLine("    padding: 8px;");
+                writer.WriteLine("    font-size: 16px;");
+                writer.WriteLine("    border: none;");
+                writer.WriteLine("    border-radius: 4px;");
+                writer.WriteLine("}");
+                writer.WriteLine("button {");
+                writer.WriteLine("    padding: 8px 16px;");
+                writer.WriteLine("    font-size: 16px;");
+                writer.WriteLine("    background-color: #4CAF50;");
+                writer.WriteLine("    color: #fff;");
+                writer.WriteLine("    border: none;");
+                writer.WriteLine("    border-radius: 4px;");
+                writer.WriteLine("    cursor: pointer;");
+                writer.WriteLine("}");
+                writer.WriteLine("ul {");
+                writer.WriteLine("    list-style-type: none;");
+                writer.WriteLine("    padding: 0;");
+                writer.WriteLine("}");
+                writer.WriteLine("li {");
+                writer.WriteLine("    margin: 10px 0;");
+                writer.WriteLine("    transition: transform 0.3s ease-in-out;");
+                writer.WriteLine("}");
+                writer.WriteLine("li:hover {");
+                writer.WriteLine("    transform: scale(1.1);");
+                writer.WriteLine("}");
+                writer.WriteLine("a {");
+                writer.WriteLine("    color: #fff;");
+                writer.WriteLine("    text-decoration: none;");
+                writer.WriteLine("}");
+                writer.WriteLine("footer {");
+                writer.WriteLine("    text-align: center;");
+                writer.WriteLine("    padding: 20px 0;");
+                writer.WriteLine("    color: #fff;");
+                writer.WriteLine("}");
+                writer.WriteLine("</style>");
+                writer.WriteLine("<script>");
+                writer.WriteLine("document.addEventListener('DOMContentLoaded', function() {");
+                writer.WriteLine("    var form = document.querySelector('.form');");
+                writer.WriteLine("    var searchInput = document.getElementById('search');");
+                writer.WriteLine("    var fileList = document.querySelector('ul');");
+                writer.WriteLine("    var files = Array.from(fileList.getElementsByTagName('li'));");
+                writer.WriteLine("    ");
+                writer.WriteLine("    form.addEventListener('submit', function(event) {");
+                writer.WriteLine("        event.preventDefault();");
+                writer.WriteLine("        var searchTerm = searchInput.value.toLowerCase();");
+                writer.WriteLine("        files.forEach(function(file) {");
+                writer.WriteLine("            var fileName = file.textContent.toLowerCase();");
+                writer.WriteLine("            if (fileName.includes(searchTerm)) {");
+                writer.WriteLine("                file.style.display = 'block';");
+                writer.WriteLine("            } else {");
+                writer.WriteLine("                file.style.display = 'none';");
+                writer.WriteLine("            }");
+                writer.WriteLine("        });");
+                writer.WriteLine("    });");
+                writer.WriteLine("    ");
+                writer.WriteLine("    files.forEach(function(file) {");
+                writer.WriteLine("        file.addEventListener('click', function() {");
+                writer.WriteLine("            var fileUrl = file.querySelector('a').getAttribute('href');");
+                writer.WriteLine("            window.open(fileUrl, '_blank');");
+                writer.WriteLine("        });");
+                writer.WriteLine("    });");
+                writer.WriteLine("});");
+                writer.WriteLine("</script>");
                 writer.WriteLine("</head>");
                 writer.WriteLine("<body>");
-                writer.WriteLine("<form class=\"form\">");
+                writer.WriteLine("<header>");
+                writer.WriteLine("<h1>Media Search</h1>");
+                writer.WriteLine("</header>");
+                writer.WriteLine("<main>");
+                writer.WriteLine("<form class='form'>");
                 writer.WriteLine("<label for='search'>Search:</label>");
-                writer.WriteLine("<input type='text' id='search' name='search'/>");
-                writer.WriteLine("<input type='submit' value='Search'/>");
+                writer.WriteLine("<input type='text' id='search' name='search' placeholder='Enter search keyword'/>");
+                writer.WriteLine("<button type='submit'>Search</button>");
                 writer.WriteLine("</form>");
                 writer.WriteLine("<ul>");
 
@@ -79,9 +174,11 @@ public class MediaServer
                 }
 
                 writer.WriteLine("</ul>");
+                writer.WriteLine("</main>");
+                writer.WriteLine("<footer>");
+                writer.WriteLine("<p>Created with LOVE by <a target='_blank' href='https://jwlmt.com'>JW Lmt.</a> - &copy; 2023</p>");
+                writer.WriteLine("</footer>");
                 writer.WriteLine("</body>");
-                writer.WriteLine("<footer>\r\n\t<p><font style=\"vertical-align: inherit;\">Created with </font><i class=\"fa fa-heart\"></i><font style=\"vertical-align: inherit;\"> by \r\n\t\t </font><a target=\"_blank\" href=\"https://florin-pop.com\"><font style=\"vertical-align: inherit;\"> JW Lmt. </font></a><font style=\"vertical-align: inherit;\">\r\n\t\t  - CopyRight© 2023</font><a target=\"_blank\" href=\"https://www.florin-pop.com/blog/2019/03/double-slider-sign-in-up-form/\">\r\n\t </font></p>\r\n</footer>");
-                writer.WriteLine("<script  src=\"./script.js\"></script>");
                 writer.WriteLine("</html>");
             }
         }
@@ -190,9 +287,16 @@ public class MediaServer
                     }
                     else
                     {
-                        byte[] buffer = File.ReadAllBytes(_mediaFolder + filename);
-                        response.ContentLength64 = buffer.Length;
-                        response.OutputStream.Write(buffer, 0, buffer.Length);
+                        try
+                        {
+                            byte[] buffer = File.ReadAllBytes(_mediaFolder + filename);
+                            response.ContentLength64 = buffer.Length;
+                            response.OutputStream.Write(buffer, 0, buffer.Length);
+                        }
+                        catch(Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
                     }
                 }
                 else

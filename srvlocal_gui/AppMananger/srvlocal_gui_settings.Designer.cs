@@ -37,7 +37,7 @@
             saaLabel2 = new SaaUI.SaaLabel();
             guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
-            guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
+            cmbDevices = new Guna.UI2.WinForms.Guna2ComboBox();
             guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             saaLine1 = new SaaUI.SaaLine();
             saaLabel1 = new SaaUI.SaaLabel();
@@ -48,7 +48,7 @@
             saaLabel4 = new SaaUI.SaaLabel();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             lblUsername = new Label();
-            guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            videoPanel = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             tbServer = new TabPage();
             guna2TabControl1.SuspendLayout();
             tbUser.SuspendLayout();
@@ -56,7 +56,7 @@
             guna2Panel3.SuspendLayout();
             guna2Panel4.SuspendLayout();
             guna2Panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)videoPanel).BeginInit();
             SuspendLayout();
             // 
             // guna2TabControl1
@@ -97,7 +97,7 @@
             tbUser.Controls.Add(guna2Panel1);
             tbUser.Controls.Add(guna2Button1);
             tbUser.Controls.Add(lblUsername);
-            tbUser.Controls.Add(guna2CirclePictureBox1);
+            tbUser.Controls.Add(videoPanel);
             tbUser.Location = new Point(164, 4);
             tbUser.Name = "tbUser";
             tbUser.Padding = new Padding(3);
@@ -178,11 +178,12 @@
             guna2Button3.Size = new Size(96, 35);
             guna2Button3.TabIndex = 2;
             guna2Button3.Text = "Change";
+            guna2Button3.Click += guna2Button3_Click;
             // 
             // guna2Panel4
             // 
             guna2Panel4.BorderRadius = 15;
-            guna2Panel4.Controls.Add(guna2ComboBox2);
+            guna2Panel4.Controls.Add(cmbDevices);
             guna2Panel4.Controls.Add(guna2ComboBox1);
             guna2Panel4.Controls.Add(saaLine1);
             guna2Panel4.Controls.Add(saaLabel1);
@@ -194,21 +195,20 @@
             guna2Panel4.Size = new Size(348, 283);
             guna2Panel4.TabIndex = 3;
             // 
-            // guna2ComboBox2
+            // cmbDevices
             // 
-            guna2ComboBox2.BackColor = Color.Transparent;
-            guna2ComboBox2.DrawMode = DrawMode.OwnerDrawFixed;
-            guna2ComboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
-            guna2ComboBox2.FocusedColor = Color.FromArgb(94, 148, 255);
-            guna2ComboBox2.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2ComboBox2.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2ComboBox2.ForeColor = Color.FromArgb(68, 88, 112);
-            guna2ComboBox2.ItemHeight = 30;
-            guna2ComboBox2.Items.AddRange(new object[] { "Male", "Female" });
-            guna2ComboBox2.Location = new Point(167, 71);
-            guna2ComboBox2.Name = "guna2ComboBox2";
-            guna2ComboBox2.Size = new Size(163, 36);
-            guna2ComboBox2.TabIndex = 5;
+            cmbDevices.BackColor = Color.Transparent;
+            cmbDevices.DrawMode = DrawMode.OwnerDrawFixed;
+            cmbDevices.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbDevices.FocusedColor = Color.FromArgb(94, 148, 255);
+            cmbDevices.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            cmbDevices.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            cmbDevices.ForeColor = Color.FromArgb(68, 88, 112);
+            cmbDevices.ItemHeight = 30;
+            cmbDevices.Location = new Point(167, 71);
+            cmbDevices.Name = "cmbDevices";
+            cmbDevices.Size = new Size(163, 36);
+            cmbDevices.TabIndex = 5;
             // 
             // guna2ComboBox1
             // 
@@ -338,15 +338,15 @@
             lblUsername.Text = "label1";
             lblUsername.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // guna2CirclePictureBox1
+            // videoPanel
             // 
-            guna2CirclePictureBox1.ImageRotate = 0F;
-            guna2CirclePictureBox1.Location = new Point(38, 46);
-            guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            guna2CirclePictureBox1.Size = new Size(139, 134);
-            guna2CirclePictureBox1.TabIndex = 0;
-            guna2CirclePictureBox1.TabStop = false;
+            videoPanel.ImageRotate = 0F;
+            videoPanel.Location = new Point(38, 46);
+            videoPanel.Name = "videoPanel";
+            videoPanel.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            videoPanel.Size = new Size(139, 134);
+            videoPanel.TabIndex = 0;
+            videoPanel.TabStop = false;
             // 
             // tbServer
             // 
@@ -378,7 +378,7 @@
             guna2Panel3.ResumeLayout(false);
             guna2Panel4.ResumeLayout(false);
             guna2Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)videoPanel).EndInit();
             ResumeLayout(false);
         }
 
@@ -388,7 +388,7 @@
         private TabPage tbUser;
         private TabPage tbServer;
         private Label lblUsername;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox videoPanel;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private LinkLabel linkAccountOnline;
@@ -403,7 +403,7 @@
         private SaaUI.SaaLine saaLine1;
         private SaaUI.SaaLabel saaLabel4;
         private SaaUI.SaaLabel saaLabel5;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox2;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbDevices;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
         private SaaUI.SaaLabel saaLabel1;
     }

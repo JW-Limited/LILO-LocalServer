@@ -1,14 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "GUJdlvBlh+W9eHXMGv/IwNNPVxTOZ1yzO+HpALG3lx0SYeIepqiiakJozStBkz0LLnEOdkXXJj/QZANfVrkiQQ==",
+  "dgSpecHash": "tvT2me5JwTatIx6kvWZpdyLF+Wy1Ffi4APT/E9ZUxrZ/Xmndel8wdNHFldEK9SlFid4JOFSs+ktt0IvfzMgQCg==",
   "success": true,
   "projectFilePath": "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\srvlocal_gui\\srvlocal_gui.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\joeva\\.nuget\\packages\\aforge\\2.2.5\\aforge.2.2.5.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\aforge.video\\2.2.5\\aforge.video.2.2.5.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\aforge.video.directshow\\2.2.5\\aforge.video.directshow.2.2.5.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\aqua-core\\5.2.0\\aqua-core.5.2.0.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\aqua-core-newtonsoft-json\\5.2.0\\aqua-core-newtonsoft-json.5.2.0.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\bunifu.licensing\\5.0.0\\bunifu.licensing.5.0.0.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\bunifu.ui.winforms\\6.0.0-beta\\bunifu.ui.winforms.6.0.0-beta.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\bunifu.ui.winforms.1.5.3\\1.0.0\\bunifu.ui.winforms.1.5.3.1.0.0.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\consoletables\\2.4.2\\consoletables.2.4.2.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\costura.fody\\3.3.3\\costura.fody.3.3.3.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\dk.standard\\4.137.4070.201115155\\dk.standard.4.137.4070.201115155.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\dk.wshruntime\\4.1.3.201115164\\dk.wshruntime.4.1.3.201115164.nupkg.sha512",
@@ -227,6 +231,36 @@
     "C:\\Users\\joeva\\.nuget\\packages\\zeroit.framework.metro\\1.0.0\\zeroit.framework.metro.1.0.0.nupkg.sha512"
   ],
   "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Das Paket \"AForge 2.2.5\" wurde nicht mit dem Projektzielframework \"net7.0-windows7.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
+      "libraryId": "AForge",
+      "targetGraphs": [
+        "net7.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Das Paket \"AForge.Video 2.2.5\" wurde nicht mit dem Projektzielframework \"net7.0-windows7.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
+      "libraryId": "AForge.Video",
+      "targetGraphs": [
+        "net7.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Das Paket \"AForge.Video.DirectShow 2.2.5\" wurde nicht mit dem Projektzielframework \"net7.0-windows7.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
+      "libraryId": "AForge.Video.DirectShow",
+      "targetGraphs": [
+        "net7.0-windows7.0"
+      ]
+    },
     {
       "code": "NU1701",
       "level": "Warning",

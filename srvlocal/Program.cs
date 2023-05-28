@@ -16,6 +16,7 @@ using LABLibary.Assistant;
 using System.Web;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using System.Reflection.Metadata;
+using ConsoleTables;
 
 namespace Local
 {
@@ -53,7 +54,6 @@ namespace Local
         };
 
         public static object redirect;
-
         public static bool isLoggingEnabled = true;
         public static string mediaDirectory = "C:\\LILO\\req\\media\\";
         public static bool advancedDebugg = false;
@@ -87,15 +87,15 @@ namespace Local
 
         public static bool menu = true;
 
-
         public static void SetColor(ConsoleColor fore, ConsoleColor back = ConsoleColor.Black)
         {
+            /*
             Color screenTextColor = Color.Orange;
             Color screenBackgroundColor = Color.Black;
             int irc = SetScreenColorsApp.SetScreenColors(screenTextColor, screenBackgroundColor);
             Debug.Assert(irc == 0, "SetScreenColors failed, Win32Error code = " + irc + " = 0x" + irc.ToString("x"));
             Console.BackgroundColor = back;
-            Console.ForegroundColor = fore;
+            Console.ForegroundColor = fore;*/
         }
 
         /// <summary>
@@ -182,23 +182,23 @@ namespace Local
                     try { externalIP = Convert.ToString(GetExternalIPAddress()); }
                     catch (Exception e) { externalIP = $"Something went wrong! ({e.Message.Replace(" (icanhazip.com:80)", "")})"; }
 
-                    Console.WriteLine("Directory    :   {0} [{1}]", distDirectory, distDirectory == "C:\\LILO\\dist" ? "DEFAULT" : "CHANGED");
-                    Console.WriteLine("Media        :   {0} [{1}]", mediaDirectory, mediaDirectory == "C:\\LILO\\req\\media\\" ? "DEFAULT" : "CHANGED");
-                    Console.WriteLine("Port         :   {0} [{1}]", _port, _port == 8080 ? "DEFAULT" : "CHANGED");
-                    Console.WriteLine("Logging      :   {0} [{1}]", isLoggingEnabled ? "enabled" : "disabled", isLoggingEnabled ? "DEFAULT" : "CHANGED");
-                    Console.WriteLine("Debugger     :   {0} [{1}]", advancedDebugg ? "enabled" : "disabled", advancedDebugg == false ? "DEFAULT" : "CHANGED");
-                    Console.WriteLine("--------------------------------------------------");
-                    Console.WriteLine("API          :   {0} ", recevieCommands.apiListening ? "enabled" : "disabled");
-                    Console.WriteLine("|-- OAuth2   :   {0} ", recevieCommands.OAuth2 ? "authenticated" : "no access");
-                    Console.WriteLine("|-- X509Cert :   {0} ", recevieCommands.certAcepted ? "valid" : "error");
-                    Console.WriteLine("--------------------------------------------------");
-                    Console.WriteLine("IPs          ");
-                    Console.WriteLine("|-- Internal :   {0} ", GetInternalIPAddress());
-                    Console.WriteLine("|-- External :   {0} ", externalIP);
-                    Console.WriteLine("--------------------------------------------------");
-                    Console.WriteLine("LILO          ");
-                    Console.WriteLine("|-- Shell    :   {0} ", ci.IsConnected() ? "connected" : "error");
-                    Console.WriteLine();
+                    var table = new ConsoleTable("Parameter", "Status");
+
+                    table.AddRow("Directory", $"{distDirectory} [{(distDirectory == "C:\\LILO\\dist" ? "DEFAULT" : "CHANGED")}]");
+                    table.AddRow("Media", $"{mediaDirectory} [{(mediaDirectory == "C:\\LILO\\req\\media\\" ? "DEFAULT" : "CHANGED")}]");
+                    table.AddRow("Port", $"{_port} [{(_port == 8080 ? "DEFAULT" : "CHANGED")}]");
+                    table.AddRow("Logging", $"{(isLoggingEnabled ? "enabled" : "disabled")} [{(isLoggingEnabled ? "DEFAULT" : "CHANGED")}]");
+                    table.AddRow("Debugger", $"{(advancedDebugg ? "enabled" : "disabled")} [{(advancedDebugg == false ? "DEFAULT" : "CHANGED")}]");
+                    table.AddRow("API", $"{(recevieCommands.apiListening ? "enabled" : "disabled")}");
+                    table.AddRow("OAuth2", $"{(recevieCommands.OAuth2 ? "authenticated" : "no access")}");
+                    table.AddRow("X509Cert", $"{(recevieCommands.certAcepted ? "valid" : "error")}");
+
+                    table.AddRow("Internal IP", GetInternalIPAddress());
+                    table.AddRow("External IP", externalIP);
+
+                    table.AddRow("LILO Shell", $"{(ci.IsConnected() ? "connected" : "error")}");
+
+                    Console.WriteLine(table);
 
                     //ci.IsConnected()
 

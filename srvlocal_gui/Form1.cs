@@ -15,7 +15,7 @@ namespace srvlocal_gui
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        public Form1(string args = null)
         {
             InitializeComponent();
         }
@@ -660,7 +660,7 @@ namespace srvlocal_gui
 
         private void conMenuShowConsole_Click(object sender, EventArgs e)
         {
-            var conEmu = new ConsoleEmu();
+            var conEmu = ConsoleEmu.Instance();
             conEmu.Show();
         }
 

@@ -165,7 +165,7 @@ namespace srvlocal_gui.AppMananger
         public static string ComputeHash(string input)
         {
 
-            Logger.Instance.Log(input);
+            //Logger.Instance.Log(input);
 
             if (!IsSHA256Hash(input))
             {

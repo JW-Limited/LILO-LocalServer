@@ -35,6 +35,22 @@
           }
         }
       },
+      "ConsoleTables/2.4.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Reflection.TypeExtensions": "4.3.0"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/ConsoleTables.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/ConsoleTables.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
       "Experimental.System.Messaging/1.1.0": {
         "type": "package",
         "compile": {
@@ -421,7 +437,7 @@
           "System.Runtime": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.5/_._": {
+          "ref/netstandard1.5/System.Reflection.TypeExtensions.dll": {
             "related": ".xml"
           }
         },
@@ -600,6 +616,23 @@
         "lib/netstandard2.0/Aqua.Newtonsoft.Json.dll",
         "lib/netstandard2.0/Aqua.Newtonsoft.Json.xml",
         "license.txt"
+      ]
+    },
+    "ConsoleTables/2.4.2": {
+      "sha512": "0SRFOWYCgFQ0RfAMof2DsGEJHI2YKquCA4X26kKyuG+MG+/2R3NRgRVEqXDMU7eVP69MGDzb1eg4i3/APlIfQg==",
+      "type": "package",
+      "path": "consoletables/2.4.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "consoletables.2.4.2.nupkg.sha512",
+        "consoletables.nuspec",
+        "lib/net40/ConsoleTables.dll",
+        "lib/net40/ConsoleTables.pdb",
+        "lib/netcoreapp3.1/ConsoleTables.dll",
+        "lib/netcoreapp3.1/ConsoleTables.pdb",
+        "lib/netstandard1.3/ConsoleTables.dll",
+        "lib/netstandard1.3/ConsoleTables.pdb"
       ]
     },
     "Experimental.System.Messaging/1.1.0": {
@@ -2240,6 +2273,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0-windows7.0": [
+      "ConsoleTables >= 2.4.2",
       "LABLibary >= 1.0.0",
       "Remote.Linq.Newtonsoft.Json >= 7.1.0",
       "Server >= 1.0.0"
@@ -2299,6 +2333,10 @@
       "net7.0-windows7.0": {
         "targetAlias": "net7.0-windows",
         "dependencies": {
+          "ConsoleTables": {
+            "target": "Package",
+            "version": "[2.4.2, )"
+          },
           "Remote.Linq.Newtonsoft.Json": {
             "target": "Package",
             "version": "[7.1.0, )"
@@ -2320,7 +2358,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.300-preview.23179.2\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400-preview.23225.8\\RuntimeIdentifierGraph.json"
       }
     }
   }

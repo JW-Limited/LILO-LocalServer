@@ -5,6 +5,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
 using System.Security.Cryptography;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
@@ -13,6 +14,92 @@ namespace srvlocal_gui.AppMananger
 {
     public class Helper
     {
+        private static void TrackPerformance(string operation, Action action)
+        {
+            var stopwatch = Stopwatch.StartNew();
+
+            action();
+
+            stopwatch.Stop();
+            var elapsedMilliseconds = stopwatch.ElapsedMilliseconds;
+
+            Logger.Instance.Log($"Operation: {operation}, Elapsed Time: {elapsedMilliseconds}ms", logLevel: Logger.LogLevel.Info);
+            Console.WriteLine($"Operation: {operation}, Elapsed Time: {elapsedMilliseconds}ms");
+        }
+
+
+        public class User
+        {
+            public enum _UserRights
+            {
+                Admin,
+                PowerUser,
+                Guest,
+                Normal
+            }
+
+            public static string CheckUserPermissions()
+            {
+                WindowsPrincipal principal = new WindowsPrincipal(WindowsIdentity.GetCurrent());
+
+                bool isAdmin = principal.IsInRole(WindowsBuiltInRole.Administrator);
+
+                if (isAdmin)
+                {
+                    Logger.Instance.Log("You are an administrator.");
+                    return "Admin";
+                }
+                else
+                {
+                    WindowsIdentity identity = WindowsIdentity.GetCurrent();
+                    IdentityReferenceCollection groups = identity.Groups;
+
+                    bool isPowerUser = CheckLocalGroupMembership(groups, "Power Users");
+                    bool isGuest = CheckLocalGroupMembership(groups, "Guests");
+
+                    if (isPowerUser)
+                    {
+                        Logger.Instance.Log("You are a Power User.");
+                        return "PowerUser";
+                    }
+                    else if (isGuest)
+                    {
+                        Logger.Instance.Log("You are a Guest User.");
+                        return "Guest";
+                    }
+                    else
+                    {
+                        Logger.Instance.Log("You have a standard user role.");
+                        return "Normal";
+                    }
+                }
+            }
+
+            private static bool CheckLocalGroupMembership(IdentityReferenceCollection groups, string groupName)
+            {
+                foreach (IdentityReference group in groups)
+                {
+                    try
+                    {
+                        IntPtr token = WindowsIdentity.GetCurrent().Token;
+                        WindowsIdentity identity = new WindowsIdentity(token);
+                        WindowsPrincipal principal = new WindowsPrincipal(identity);
+
+                        if (principal.IsInRole(groupName))
+                        {
+                            return true;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Logger.Instance.Log(ex.Message, Logger.LogLevel.Error);
+                    }
+                }
+
+                return false;
+            }
+        }
+
         public static async Task<bool> VerifyEmailAsync(string email)
         {
             const string apiKey = "YOUR_RAPIDAPI_KEY_HERE";

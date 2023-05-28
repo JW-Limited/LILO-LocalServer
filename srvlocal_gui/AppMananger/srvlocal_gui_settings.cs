@@ -9,11 +9,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Xunit.Sdk;
+using AForge.Video;
+using AForge.Video.DirectShow;
 
 namespace srvlocal_gui.AppMananger
 {
     public partial class srvlocal_gui_settings : Form
     {
+        private FilterInfoCollection videoDevices;
+        private VideoCaptureDevice videoSource;
         private static srvlocal_gui_settings _instance;
         public static readonly object _lock = new object();
         public Settings _settings;
@@ -35,6 +39,25 @@ namespace srvlocal_gui.AppMananger
 
             }
 
+        }
+
+        private void PopulateVideoDevices()
+        {
+            videoDevices = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+            foreach (FilterInfo device in videoDevices)
+            {
+                cmbDevices.Items.Add(device.Name);
+            }
+        }
+
+        private void videoSource_NewFrame(object sender, NewFrameEventArgs eventArgs)
+        {
+            Bitmap frame = (Bitmap)eventArgs.Frame.Clone();
+            videoPanel.Invoke((MethodInvoker)(() =>
+            {
+                videoPanel.FillColor = TransparencyKey;
+                videoPanel.BackgroundImage = frame;
+            }));
         }
 
         private srvlocal_gui_settings()
@@ -63,6 +86,7 @@ namespace srvlocal_gui.AppMananger
             {
                 lblUsername.Text = _loggedInUser.UserName;
                 lblEmail.Text = _loggedInUser.Email;
+                PopulateVideoDevices();
 
                 return true;
             }
@@ -78,7 +102,29 @@ namespace srvlocal_gui.AppMananger
             if (e.CloseReason == CloseReason.UserClosing)
             {
                 _instance = null;
+                if (videoSource != null && videoSource.IsRunning)
+                {
+                    videoSource.SignalToStop();
+                    videoSource = null;
+                }
             }
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            if (videoSource != null && videoSource.IsRunning)
+            {
+                videoSource.SignalToStop();
+                videoSource = null;
+            }
+
+            if (cmbDevices.SelectedIndex >= 0)
+            {
+                videoSource = new VideoCaptureDevice(videoDevices[cmbDevices.SelectedIndex].MonikerString);
+                videoSource.NewFrame += new NewFrameEventHandler(videoSource_NewFrame);
+                videoSource.Start();
+            }
+
         }
     }
 }

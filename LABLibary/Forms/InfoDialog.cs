@@ -23,53 +23,56 @@ using System.Net.Mime;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Form = System.Windows.Forms.Form;
 
 namespace LABLibary.Forms
 {
-    [Localizable(true)]
     public class InfoDialog
     {
-
         public static void Show(string message, string title = "Info", ContentType type = default)
         {
+            var ownerForm = Application.OpenForms.Count > 0 ? Application.OpenForms[0] : null;
+
             var info = new System.Windows.Forms.Form()
             {
                 Size = new Size(600, 500),
                 Text = title,
-                StartPosition = FormStartPosition.CenterScreen,
-                TopMost = true,
+                StartPosition = FormStartPosition.CenterParent,
                 ShowIcon = true,
-                ShowInTaskbar = false,
-                Name = title,
                 ControlBox = false,
                 HelpButton = true,
-                FormBorderStyle = FormBorderStyle.FixedDialog
+                FormBorderStyle = FormBorderStyle.FixedDialog,
+                Owner = ownerForm
             };
 
             var txtBox = new TextBox()
             {
                 Text = message,
-                AllowDrop = false,
                 Location = new Point(12, 12),
                 Multiline = true,
                 Dock = DockStyle.Fill,
-                Enabled = false,
+                ReadOnly = true,
+                BorderStyle = BorderStyle.None,
+                Font = SystemFonts.MessageBoxFont,
+                ScrollBars = ScrollBars.Vertical,
+                TextAlign = HorizontalAlignment.Left,
+                WordWrap = true
             };
 
             var bntClose = new Button()
             {
                 Text = "OK",
                 Dock = DockStyle.Bottom,
-                Enabled = true,
-                Size = new Size(100, 50)
+                Size = new Size(100, 30),
+                DialogResult = DialogResult.OK
             };
 
             info.Controls.Add(bntClose);
             info.Controls.Add(txtBox);
 
-            bntClose.Click += (sender, e) => info.Close();
+            info.AcceptButton = bntClose;
 
-            info.ShowDialog();
+            info.ShowDialog(ownerForm);
         }
     }
 }

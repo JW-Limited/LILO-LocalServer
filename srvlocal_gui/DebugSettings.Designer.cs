@@ -37,7 +37,7 @@ namespace srvlocal_gui {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("builder_gui")]
+        [global::System.Configuration.DefaultSettingValueAttribute("builder")]
         public string debugForm {
             get {
                 return ((string)(this["debugForm"]));
