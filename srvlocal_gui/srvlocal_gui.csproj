@@ -49,6 +49,7 @@
     <PackageReference Include="AForge.Video" Version="2.2.5" />
     <PackageReference Include="AForge.Video.DirectShow" Version="2.2.5" />
     <PackageReference Include="bunifu.ui.winforms" Version="6.0.0-beta" />
+    <PackageReference Include="bunifu.utils" Version="1.0.6" />
     <PackageReference Include="DK.WshRuntime" Version="4.1.3.201115164" />
     <PackageReference Include="Google.Apis.Auth" Version="1.59.0" />
     <PackageReference Include="Google.Apis.Gmail.v1" Version="1.59.0.2944" />
@@ -69,6 +70,7 @@
     <PackageReference Include="ReactiveUI.WinForms" Version="18.4.1" />
     <PackageReference Include="ReactorUI.Skia.WinForms" Version="0.0.41-beta" />
     <PackageReference Include="SaaUI.Winforms" Version="1.1.0" />
+    <PackageReference Include="sipaaframework" Version="1.1.0" />
     <PackageReference Include="System.Data.SQLite" Version="1.0.117" />
     <PackageReference Include="Windows-Forms-Aero" Version="3.1.1" />
     <PackageReference Include="xunit" Version="2.4.2" />
@@ -85,6 +87,11 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <AutoGen>True</AutoGen>
       <DependentUpon>DebugSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Update="LAB\SETTINGS\CompilerOptions.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>CompilerOptions.settings</DependentUpon>
     </Compile>
     <Compile Update="LAB\SETTINGS\config.Designer.cs">
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
@@ -107,6 +114,10 @@
     <None Update="DebugSettings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>DebugSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="LAB\SETTINGS\CompilerOptions.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>CompilerOptions.Designer.cs</LastGenOutput>
     </None>
     <None Update="LAB\SETTINGS\config.settings">
       <Generator>PublicSettingsSingleFileGenerator</Generator>

@@ -99,7 +99,6 @@ C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-w
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-windows\Server.exe.config
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-windows\Ookii.Dialogs.WinForms.dll
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\obj\Debug\net7.0-windows\srvlocal_gui.LAB.builder_gui.resources
-C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\obj\Debug\net7.0-windows\srvlocal_gui.LAB.PROJEKT.Info.resources
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\obj\Debug\net7.0-windows\srvlocal_gui.LAB.TOOLS.Bag.resources
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\obj\Debug\net7.0-windows\srvlocal_gui.LAB.TOOLS.ProjectExplorer.resources
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-windows\Client.exe
@@ -317,3 +316,5 @@ C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-w
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-windows\AForge.Video.dll
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-windows\AForge.Video.DirectShow.dll
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-windows\ConsoleTables.dll
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-windows\Bunifu.Utils.dll
+C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-windows\SipaaFramework.dll

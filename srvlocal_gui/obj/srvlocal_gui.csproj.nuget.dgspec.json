@@ -430,6 +430,14 @@
               "target": "Package",
               "version": "[6.0.0-beta, )"
             },
+            "bunifu.utils": {
+              "target": "Package",
+              "version": "[1.0.6, )"
+            },
+            "sipaaframework": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
             "xunit": {
               "target": "Package",
               "version": "[2.4.2, )"

@@ -28,35 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.webView21 = new Microsoft.Web.WebView2.WinForms.WebView2();
-            ((System.ComponentModel.ISupportInitialize)(this.webView21)).BeginInit();
-            this.SuspendLayout();
+            webView21 = new Microsoft.Web.WebView2.WinForms.WebView2();
+            ((System.ComponentModel.ISupportInitialize)webView21).BeginInit();
+            SuspendLayout();
             // 
             // webView21
             // 
-            this.webView21.AllowExternalDrop = true;
-            this.webView21.CreationProperties = null;
-            this.webView21.DefaultBackgroundColor = System.Drawing.Color.White;
-            this.webView21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webView21.Location = new System.Drawing.Point(0, 0);
-            this.webView21.Name = "webView21";
-            this.webView21.Size = new System.Drawing.Size(1164, 691);
-            this.webView21.Source = new System.Uri("http://localhost:8080/codeEditor/", System.UriKind.Absolute);
-            this.webView21.TabIndex = 0;
-            this.webView21.ZoomFactor = 1D;
+            webView21.AllowExternalDrop = true;
+            webView21.CreationProperties = null;
+            webView21.DefaultBackgroundColor = Color.White;
+            webView21.Dock = DockStyle.Fill;
+            webView21.Location = new Point(0, 0);
+            webView21.Margin = new Padding(2, 2, 2, 2);
+            webView21.Name = "webView21";
+            webView21.Size = new Size(931, 553);
+            webView21.Source = new Uri("http://localhost:8080/codeEditor/", UriKind.Absolute);
+            webView21.TabIndex = 0;
+            webView21.ZoomFactor = 1D;
+            webView21.Click += webView21_Click;
             // 
             // EditorJS
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1164, 691);
-            this.Controls.Add(this.webView21);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "EditorJS";
-            this.Text = "EditorJS";
-            ((System.ComponentModel.ISupportInitialize)(this.webView21)).EndInit();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(931, 553);
+            Controls.Add(webView21);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(2, 2, 2, 2);
+            Name = "EditorJS";
+            Text = "EditorJS";
+            ((System.ComponentModel.ISupportInitialize)webView21).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion

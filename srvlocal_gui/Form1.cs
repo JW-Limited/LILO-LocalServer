@@ -432,6 +432,22 @@ namespace srvlocal_gui
                 }
 
                 ConsolePanel.Visible = true;
+
+                try
+                {
+                    string url = $"http://localhost:{txtPort.Text}/api/com?command=status&key=liloDev-420";
+                    string response = MakeGetRequest(url);
+
+                    if (response != null)
+                    {
+                        lblquote.Text = ("API Endpoint : " + response);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Logger.Instance.Log(ex.Message, logLevel: Logger.LogLevel.Error);
+
+                }
             }
             catch (Exception ex)
             {
@@ -440,6 +456,21 @@ namespace srvlocal_gui
             }
         }
 
+        public static string MakeGetRequest(string url)
+        {
+            try
+            {
+                using (var client = new WebClient())
+                {
+                    string response = client.DownloadString(url);
+                    return response;
+                }
+            }
+            catch (Exception ex)
+            {
+                return $"Error occurred while making the GET request: {ex.Message}";
+            }
+        }
 
         private async void guna2Button6_Click(object sender, EventArgs e)
         {
@@ -447,14 +478,12 @@ namespace srvlocal_gui
 
             try
             {
-                var url = $"http://localhost:{txtPort.Text}/api/com?command=close";
-                foreach (var srv in Process.GetProcessesByName("srvlocal"))
+                string url = $"http://localhost:{txtPort.Text}/api/com?command=close&key=liloDev-420";
+                string response = MakeGetRequest(url);
+
+                if (response != null)
                 {
-                    var time = srv.StartTime;
-                    var overall = srv.TotalProcessorTime;
-                    srv.Kill();
-                    //ConsolePanel.Visible = false;
-                    lblError.Text = String.Format("[LocalServer] Closed (TotalOn:{1},Start:{2})", time, overall);
+                    lblquote.Text = ("API Endpoint : " + response);
                 }
             }
             catch (Exception ex)
@@ -465,31 +494,7 @@ namespace srvlocal_gui
 
 
             ConsolePanel.Visible = false;
-
-            //var status = await GetFromHost(url);
-            //ConsolePanel.Visible = false;
-            //lblError.Text = status.ToString();
         }
-        /*
-
-        public static async Task<string> GetFromHost(string url)
-        {
-            using (var client = new HttpClient())
-            {
-                try
-                {
-                    var response = await client.GetAsync(url);
-
-                    response.EnsureSuccessStatusCode();
-
-                    var responseContent = await response.Content.ReadAsStringAsync();
-                    client.CancelPendingRequests();
-                    return responseContent;
-                }
-                catch { return "Error while closing the Stream"; };
-            }
-        }
-        */
 
         private void bntStartWithArguments(object sender, EventArgs e)
         {
@@ -550,6 +555,22 @@ namespace srvlocal_gui
                 }
                 Program.Browser_("http://localhost:" + txtPort.Text);
                 ConsolePanel.Visible = true;
+
+                try
+                {
+                    string url = $"http://localhost:{txtPort.Text}/api/com?command=status&key=liloDev-420";
+                    string response = MakeGetRequest(url);
+
+                    if (response != null)
+                    {
+                        lblquote.Text = ("API Endpoint : " + response);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Logger.Instance.Log(ex.Message, logLevel: Logger.LogLevel.Error);
+
+                }
             }
             catch (Exception ey)
             {
@@ -845,7 +866,6 @@ namespace srvlocal_gui
                     {
                         if (Helper.ComputeHash(passwordDialog.Input) == selectedUser.HashedPassword)
                         {
-                            lblInformationAboutUser.Text = $"Email: {selectedUser.Email}";
 
                             if (pnlControls.Enabled != selectedUser.CanChangeConfig)
                             {
@@ -883,6 +903,22 @@ namespace srvlocal_gui
             {
                 MessageBox.Show(ex.Message, "Settings", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void bntServerStatusClick(object sender, EventArgs e)
+        {
+            string url = $"http://localhost:{txtPort.Text}/api/com?command=info&key=liloDev-420";
+            string response = MakeGetRequest(url);
+
+            if (response != null)
+            {
+                LABLibary.Forms.AsyncMessageBox.Show("API Endpoint : \n\n" + response, "ServerResponse");
+            }
+        }
+
+        private void _outputTextBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

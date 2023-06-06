@@ -16,5 +16,10 @@ namespace srvlocal_gui.LAB.EDITOR
         {
             InitializeComponent();
         }
+
+        private void webView21_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

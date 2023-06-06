@@ -13,7 +13,7 @@ namespace srvlocal_gui.LAB.HELPER.SQL
     {
         public Handler(string dataBase,string connectionSTR = "") 
         {
-            if(connectionSTR != "") connectionString = connectionSTR;
+            if(!(connectionSTR is not null)) connectionString = connectionSTR;
 
             if (!File.Exists(dataBase))
             {

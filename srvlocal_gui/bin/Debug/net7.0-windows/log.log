@@ -258,3 +258,432 @@ Line: 0
 2023-05-28 14:13:59 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
 2023-05-28 14:13:59 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
 2023-05-28 14:13:59 [INFO] - Starting license evaluation.
+2023-05-28 19:00:57 [INFO] - Started GUI...
+2023-05-28 19:00:57 [INFO] - You are an administrator.
+2023-05-28 19:00:58 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 19:00:58 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 19:01:00 [WARNING] - Missing resources : config.xml, log.txt,
+2023-05-28 19:01:02 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 19:01:02 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 19:01:06 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-05-28 19:01:06 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 19:01:06 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 19:01:06 [INFO] - Starting license evaluation.
+2023-05-28 19:11:19 [INFO] - Started GUI...
+2023-05-28 19:11:19 [INFO] - You are an administrator.
+2023-05-28 19:11:19 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 19:11:19 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 19:11:24 [WARNING] - Missing resources : config.xml, log.txt,
+2023-05-28 19:11:26 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 19:11:26 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 19:11:31 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-05-28 19:11:31 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 19:11:31 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 19:11:31 [INFO] - Starting license evaluation.
+2023-05-28 19:13:53 [INFO] - Started GUI...
+2023-05-28 19:13:53 [INFO] - You are an administrator.
+2023-05-28 19:13:55 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 19:13:55 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 19:13:59 [WARNING] - Missing resources : config.xml, log.txt,
+2023-05-28 19:14:01 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 19:14:01 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 19:14:05 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-05-28 19:14:05 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 19:14:05 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 19:14:05 [INFO] - Starting license evaluation.
+2023-05-28 19:15:50 [INFO] - Started GUI...
+2023-05-28 19:15:50 [INFO] - You are an administrator.
+2023-05-28 19:15:52 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 19:15:52 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 19:15:56 [WARNING] - Missing resources : config.xml, log.txt,
+2023-05-28 19:15:58 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 19:15:58 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 19:16:03 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-05-28 19:16:03 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 19:16:03 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 19:16:03 [INFO] - Starting license evaluation.
+2023-05-28 19:17:26 [INFO] - Started GUI...
+2023-05-28 19:17:26 [INFO] - You are an administrator.
+2023-05-28 19:17:26 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 19:17:26 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 19:17:38 [WARNING] - Missing resources : config.xml, log.txt,
+2023-05-28 19:17:40 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 19:17:40 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 19:17:44 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-05-28 19:17:44 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 19:17:44 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 19:17:44 [INFO] - Starting license evaluation.
+2023-05-28 19:18:57 [INFO] - Started GUI...
+2023-05-28 19:18:58 [INFO] - You are an administrator.
+2023-05-28 19:18:58 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 19:18:58 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 19:19:02 [WARNING] - Missing resources : config.xml, log.txt,
+2023-05-28 19:19:06 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 19:19:06 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 19:19:21 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 19:19:21 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 19:19:25 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-05-28 19:19:25 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 19:19:25 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 19:19:25 [INFO] - Starting license evaluation.
+2023-05-28 19:32:12 [INFO] - Started GUI...
+2023-05-28 19:32:12 [INFO] - You are an administrator.
+2023-05-28 19:32:12 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 19:32:12 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 19:32:14 [WARNING] - Missing resources : config.xml, log.txt,
+2023-05-28 19:32:16 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 19:32:16 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 19:32:21 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-05-28 19:32:21 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 19:32:21 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 19:32:21 [INFO] - Starting license evaluation.
+2023-05-28 19:33:16 [INFO] - Started GUI...
+2023-05-28 19:33:16 [INFO] - You are an administrator.
+2023-05-28 19:33:16 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 19:33:16 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 19:33:19 [WARNING] - Missing resources : config.xml, log.txt,
+2023-05-28 19:33:25 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 19:33:25 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 19:33:29 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-05-28 19:33:29 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 19:33:29 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 19:33:29 [INFO] - Starting license evaluation.
+2023-05-28 19:37:51 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 19:37:51 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 19:37:51 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 19:37:52 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 19:42:37 [INFO] - Started GUI...
+2023-05-28 19:42:37 [INFO] - You are an administrator.
+2023-05-28 19:42:38 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 19:42:38 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 19:42:40 [WARNING] - Missing resources : config.xml, log.txt,
+2023-05-28 19:42:45 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 19:42:45 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 19:42:52 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-05-28 19:42:52 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 19:42:52 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 19:42:52 [INFO] - Starting license evaluation.
+2023-05-28 19:43:52 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 19:43:52 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 19:43:54 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 19:43:54 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 19:44:05 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 19:44:05 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 19:47:27 [INFO] - Started GUI...
+2023-05-28 19:47:27 [INFO] - You are an administrator.
+2023-05-28 19:47:28 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 19:47:28 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 19:47:31 [WARNING] - Missing resources : config.xml, log.txt,
+2023-05-28 19:47:32 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 19:47:32 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 19:47:36 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 19:47:36 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 19:47:39 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-05-28 19:47:39 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 19:47:39 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 19:47:39 [INFO] - Starting license evaluation.
+2023-05-28 19:49:18 [INFO] - Started GUI...
+2023-05-28 19:49:18 [INFO] - You are an administrator.
+2023-05-28 19:49:18 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 19:49:18 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 19:49:20 [WARNING] - Missing resources : config.xml, log.txt,
+2023-05-28 19:49:21 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 19:49:21 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 19:49:24 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-05-28 19:49:24 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 19:49:24 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 19:49:24 [INFO] - Starting license evaluation.
+2023-05-28 19:51:33 [INFO] - Started GUI...
+2023-05-28 19:51:33 [INFO] - You are an administrator.
+2023-05-28 19:51:34 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 19:51:34 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 19:51:36 [WARNING] - Missing resources : config.xml, log.txt,
+2023-05-28 19:51:38 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 19:51:38 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 19:51:45 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-05-28 19:51:45 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 19:51:45 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 19:51:46 [INFO] - Starting license evaluation.
+2023-05-28 19:53:25 [INFO] - Started GUI...
+2023-05-28 19:53:25 [INFO] - You are an administrator.
+2023-05-28 19:53:25 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 19:53:25 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 19:53:27 [WARNING] - Missing resources : config.xml, log.txt,
+2023-05-28 19:53:29 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 19:53:29 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 19:53:32 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-05-28 19:53:32 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 19:53:32 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 19:53:32 [INFO] - Starting license evaluation.
+2023-05-28 21:32:49 [INFO] - Started GUI...
+2023-05-28 21:32:49 [INFO] - You are an administrator.
+2023-05-28 21:32:50 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 21:32:50 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 21:32:52 [WARNING] - Missing resources : config.xml, log.txt,
+2023-05-28 21:32:54 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 21:32:54 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 21:32:58 [ERROR] - Der angegebene Host ist unbekannt. (quotes15.p.rapidapi.com:443)
+2023-05-28 21:33:01 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 21:33:01 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 21:33:01 [INFO] - Starting license evaluation.
+2023-05-28 21:33:10 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 21:33:10 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 21:42:43 [INFO] - Started GUI...
+2023-05-28 21:42:43 [INFO] - You are an administrator.
+2023-05-28 21:42:43 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 21:42:43 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 21:42:45 [WARNING] - Missing resources : config.xml, log.txt,
+2023-05-28 21:42:47 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 21:42:47 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 21:42:50 [ERROR] - Der angegebene Host ist unbekannt. (quotes15.p.rapidapi.com:443)
+2023-05-28 21:42:51 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 21:42:51 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 21:42:51 [INFO] - Starting license evaluation.
+2023-05-28 21:48:10 [INFO] - Started GUI...
+2023-05-28 21:48:10 [INFO] - You are an administrator.
+2023-05-28 21:48:10 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 21:48:10 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 21:48:13 [WARNING] - Missing resources : config.xml, log.txt,
+2023-05-28 21:48:14 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 21:48:14 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 21:48:17 [ERROR] - Der angegebene Host ist unbekannt. (quotes15.p.rapidapi.com:443)
+2023-05-28 21:48:18 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 21:48:18 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 21:48:18 [INFO] - Starting license evaluation.
+2023-05-28 21:53:59 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 21:53:59 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 21:59:01 [INFO] - Started GUI...
+2023-05-28 21:59:01 [INFO] - You are an administrator.
+2023-05-28 21:59:01 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 21:59:01 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 21:59:03 [WARNING] - Missing resources : config.xml, log.txt,
+2023-05-28 21:59:05 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 21:59:05 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 21:59:08 [ERROR] - Der angegebene Host ist unbekannt. (quotes15.p.rapidapi.com:443)
+2023-05-28 21:59:10 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 21:59:10 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 21:59:10 [INFO] - Starting license evaluation.
+2023-05-28 22:05:38 [INFO] - Started GUI...
+2023-05-28 22:05:38 [INFO] - You are an administrator.
+2023-05-28 22:05:39 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 22:05:39 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 22:05:41 [WARNING] - Missing resources : config.xml, log.txt,
+2023-05-28 22:05:45 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 22:05:45 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 22:05:48 [ERROR] - Der angegebene Host ist unbekannt. (quotes15.p.rapidapi.com:443)
+2023-05-28 22:05:51 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 22:05:51 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 22:05:51 [INFO] - Starting license evaluation.
+2023-05-28 22:08:20 [INFO] - Started GUI...
+2023-05-28 22:08:20 [INFO] - You are an administrator.
+2023-05-28 22:08:21 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 22:08:21 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 22:08:24 [WARNING] - Missing resources : config.xml, log.txt,
+2023-05-28 22:08:27 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 22:08:27 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 22:08:32 [ERROR] - Der angegebene Host ist unbekannt. (quotes15.p.rapidapi.com:443)
+2023-05-28 22:08:34 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 22:08:34 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-05-28 22:08:34 [INFO] - Starting license evaluation.
+2023-05-28 22:09:56 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-05-28 22:09:56 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 00:00:33 [INFO] - Started GUI...
+2023-06-06 00:00:33 [INFO] - You are an administrator.
+2023-06-06 00:00:33 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 00:00:33 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 00:00:36 [WARNING] - Missing resources : config.xml, log.txt,
+2023-06-06 00:00:37 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 00:00:37 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 00:00:41 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-06-06 00:00:41 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 00:00:41 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 00:00:41 [INFO] - Starting license evaluation.
+2023-06-06 00:00:57 [INFO] - Started Updater (mode: MANUALY)
+2023-06-06 00:00:58 [INFO] - Updater found a new Version. Latest Version: 1.3, Current Version: 1.2.
+2023-06-06 00:01:27 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 00:01:27 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 00:01:27 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 00:01:27 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 00:01:30 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 00:01:30 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 00:01:30 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 00:01:30 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 00:01:31 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 00:01:31 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 00:01:31 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 00:01:31 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 00:04:38 [INFO] - Started GUI...
+2023-06-06 00:04:38 [INFO] - You are an administrator.
+2023-06-06 00:04:39 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 00:04:39 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 00:04:40 [WARNING] - Missing resources : config.xml, log.txt,
+2023-06-06 00:04:42 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 00:04:42 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 00:04:45 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-06-06 00:04:45 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 00:04:45 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 00:04:45 [INFO] - Starting license evaluation.
+2023-06-06 00:05:28 [INFO] - Started GUI...
+2023-06-06 00:05:28 [INFO] - You are an administrator.
+2023-06-06 00:05:28 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 00:05:28 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 00:05:30 [WARNING] - Missing resources : config.xml, log.txt,
+2023-06-06 00:05:30 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 00:05:30 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 00:05:39 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-06-06 00:05:39 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 00:05:39 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 00:05:39 [INFO] - Starting license evaluation.
+2023-06-06 00:07:28 [INFO] - Started GUI...
+2023-06-06 00:07:28 [INFO] - You are an administrator.
+2023-06-06 00:07:28 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 00:07:28 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 00:07:31 [WARNING] - Missing resources : config.xml, log.txt,
+2023-06-06 00:07:31 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 00:07:31 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 00:07:35 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-06-06 00:07:35 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 00:07:35 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 00:07:35 [INFO] - Starting license evaluation.
+2023-06-06 00:09:26 [INFO] - Started GUI...
+2023-06-06 00:09:26 [INFO] - You are an administrator.
+2023-06-06 00:09:26 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 00:09:26 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 00:10:20 [INFO] - Started GUI...
+2023-06-06 00:10:20 [INFO] - You are an administrator.
+2023-06-06 00:10:20 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 00:10:20 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 00:10:22 [WARNING] - Missing resources : config.xml, log.txt,
+2023-06-06 00:10:23 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 00:10:23 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 00:10:27 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-06-06 00:10:27 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 00:10:27 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 00:10:27 [INFO] - Starting license evaluation.
+2023-06-06 00:11:20 [INFO] - Started GUI...
+2023-06-06 00:11:20 [INFO] - You are an administrator.
+2023-06-06 00:11:20 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 00:11:20 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 00:11:40 [WARNING] - Missing resources : config.xml, log.txt,
+2023-06-06 00:11:40 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 00:11:40 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 00:11:44 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-06-06 00:11:44 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 00:11:44 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 00:11:44 [INFO] - Starting license evaluation.
+2023-06-06 00:11:54 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 00:11:54 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 00:17:08 [INFO] - Started GUI...
+2023-06-06 00:17:08 [INFO] - You are an administrator.
+2023-06-06 00:17:08 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 00:17:08 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 00:17:10 [WARNING] - Missing resources : config.xml, log.txt,
+2023-06-06 00:17:12 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 00:17:12 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 00:17:15 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-06-06 00:17:15 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 00:17:15 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 00:17:15 [INFO] - Starting license evaluation.
+2023-06-06 00:22:07 [INFO] - Started GUI...
+2023-06-06 00:22:07 [INFO] - You are an administrator.
+2023-06-06 00:22:07 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 00:22:07 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 00:22:09 [WARNING] - Missing resources : config.xml, log.txt,
+2023-06-06 00:22:11 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 00:22:11 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 00:22:16 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-06-06 00:22:16 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 00:22:16 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 00:22:16 [INFO] - Starting license evaluation.
+2023-06-06 00:27:07 [INFO] - Started GUI...
+2023-06-06 00:27:07 [INFO] - You are an administrator.
+2023-06-06 00:27:07 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 00:27:07 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 00:27:11 [WARNING] - Missing resources : config.xml, log.txt,
+2023-06-06 00:27:12 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 00:27:12 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 00:27:16 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-06-06 00:27:16 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 00:27:16 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 00:27:16 [INFO] - Starting license evaluation.
+2023-06-06 00:28:47 [INFO] - Started GUI...
+2023-06-06 00:28:47 [INFO] - You are an administrator.
+2023-06-06 00:28:47 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 00:28:47 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 00:28:49 [WARNING] - Missing resources : config.xml, log.txt,
+2023-06-06 00:28:50 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 00:28:50 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 00:28:51 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 00:28:51 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 00:28:57 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-06-06 00:28:57 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 00:28:57 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 00:28:57 [INFO] - Starting license evaluation.
+2023-06-06 00:39:12 [INFO] - Started GUI...
+2023-06-06 00:39:13 [INFO] - You are an administrator.
+2023-06-06 00:39:13 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 00:39:13 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 00:39:15 [WARNING] - Missing resources : config.xml, log.txt,
+2023-06-06 00:39:16 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 00:39:16 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 00:39:21 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-06-06 00:39:21 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 00:39:21 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 00:39:21 [INFO] - Starting license evaluation.
+2023-06-06 00:40:09 [INFO] - Started Updater (mode: MANUALY)
+2023-06-06 00:40:09 [INFO] - Updater found a new Version. Latest Version: 1.3, Current Version: 1.2.
+2023-06-06 00:44:54 [INFO] - Started GUI...
+2023-06-06 00:44:54 [INFO] - You are an administrator.
+2023-06-06 00:44:54 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 00:44:54 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 00:44:56 [WARNING] - Missing resources : config.xml, log.txt,
+2023-06-06 00:44:57 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 00:44:57 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 00:45:02 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-06-06 00:45:02 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 00:45:02 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 00:45:02 [INFO] - Starting license evaluation.
+2023-06-06 00:47:04 [INFO] - Started GUI...
+2023-06-06 00:47:04 [INFO] - You are an administrator.
+2023-06-06 00:47:04 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 00:47:04 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 00:47:09 [WARNING] - Missing resources : config.xml, log.txt,
+2023-06-06 00:47:09 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 00:47:09 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 00:47:14 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-06-06 00:47:14 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 00:47:14 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 00:47:14 [INFO] - Starting license evaluation.
+2023-06-06 00:49:45 [INFO] - Started GUI...
+2023-06-06 00:49:45 [INFO] - You are an administrator.
+2023-06-06 00:49:45 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 00:49:45 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 00:49:47 [WARNING] - Missing resources : config.xml, log.txt,
+2023-06-06 00:49:48 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 00:49:48 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 00:49:52 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-06-06 00:49:52 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 00:49:52 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 00:49:52 [INFO] - Starting license evaluation.
+2023-06-06 03:20:04 [INFO] - Started GUI...
+2023-06-06 03:20:05 [INFO] - You are an administrator.
+2023-06-06 03:20:05 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 03:20:05 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 03:20:08 [WARNING] - Missing resources : config.xml, log.txt,
+2023-06-06 03:20:11 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 03:20:11 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 03:20:14 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-06-06 03:20:14 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 03:20:14 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 03:20:14 [INFO] - Starting license evaluation.
+2023-06-06 03:35:26 [INFO] - Started GUI...
+2023-06-06 03:35:27 [INFO] - You are an administrator.
+2023-06-06 03:35:27 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 03:35:27 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 03:35:31 [WARNING] - Missing resources : config.xml, log.txt,
+2023-06-06 03:35:32 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 03:35:32 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 03:35:37 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-06-06 03:35:37 [INFO] - String "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" is already hashed.
+2023-06-06 03:35:37 [INFO] - String "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe" is already hashed.
+2023-06-06 03:35:37 [INFO] - Starting license evaluation.

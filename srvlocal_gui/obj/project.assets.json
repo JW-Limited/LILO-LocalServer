@@ -130,6 +130,18 @@
           "Microsoft.WindowsDesktop.App.WindowsForms"
         ]
       },
+      "Bunifu.Utils/1.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Bunifu.UI.WinForms": "5.0.1"
+        },
+        "compile": {
+          "lib/net/Bunifu.Utils.dll": {}
+        },
+        "runtime": {
+          "lib/net/Bunifu.Utils.dll": {}
+        }
+      },
       "ConsoleTables/2.4.2": {
         "type": "package",
         "dependencies": {
@@ -1538,6 +1550,15 @@
           "lib/net35/SaaUI.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "SipaaFramework/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net46/SipaaFramework.dll": {}
+        },
+        "runtime": {
+          "lib/net46/SipaaFramework.dll": {}
         }
       },
       "SkiaSharp/2.88.2": {
@@ -4529,6 +4550,19 @@
         "lib/net6.0-windows7.0/Bunifu.UI.WinForms.1.5.3.xml"
       ]
     },
+    "Bunifu.Utils/1.0.6": {
+      "sha512": "9sad8WB8h1GdJd0ZD1CBn+i8D156FbtNvDiLciEopU48nB74xwvhJbvK3On/kEjNMS0HZ/961owDYCW3NC3sAA==",
+      "type": "package",
+      "path": "bunifu.utils/1.0.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "bunifu.utils.1.0.6.nupkg.sha512",
+        "bunifu.utils.nuspec",
+        "lib/Assets/icon.png",
+        "lib/net/Bunifu.Utils.dll"
+      ]
+    },
     "ConsoleTables/2.4.2": {
       "sha512": "0SRFOWYCgFQ0RfAMof2DsGEJHI2YKquCA4X26kKyuG+MG+/2R3NRgRVEqXDMU7eVP69MGDzb1eg4i3/APlIfQg==",
       "type": "package",
@@ -6361,6 +6395,18 @@
         "lib/net35/SaaUI.xml",
         "saaui.winforms.1.1.0.nupkg.sha512",
         "saaui.winforms.nuspec"
+      ]
+    },
+    "SipaaFramework/1.1.0": {
+      "sha512": "acX8Hz5lbto9JTGZq3VnXvsFnt3uy9Tgvyj3tqhCnpNqICvVWXenTHxH3wmyV3jUWC8dlpnb68qdbno3IbXqZA==",
+      "type": "package",
+      "path": "sipaaframework/1.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net46/SipaaFramework.dll",
+        "sipaaframework.1.1.0.nupkg.sha512",
+        "sipaaframework.nuspec"
       ]
     },
     "SkiaSharp/2.88.2": {
@@ -12021,6 +12067,8 @@
       "Windows-Forms-Aero >= 3.1.1",
       "Zeroit.Framework.Metro >= 1.0.0",
       "bunifu.ui.winforms >= 6.0.0-beta",
+      "bunifu.utils >= 1.0.6",
+      "sipaaframework >= 1.1.0",
       "srvlocal >= 1.0.0",
       "xunit >= 2.4.2"
     ]
@@ -12193,6 +12241,14 @@
             "target": "Package",
             "version": "[6.0.0-beta, )"
           },
+          "bunifu.utils": {
+            "target": "Package",
+            "version": "[1.0.6, )"
+          },
+          "sipaaframework": {
+            "target": "Package",
+            "version": "[1.1.0, )"
+          },
           "xunit": {
             "target": "Package",
             "version": "[2.4.2, )"
@@ -12248,6 +12304,16 @@
       "warningLevel": 1,
       "message": "Das Paket \"AForge.Video.DirectShow 2.2.5\" wurde nicht mit dem Projektzielframework \"net7.0-windows7.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
       "libraryId": "AForge.Video.DirectShow",
+      "targetGraphs": [
+        "net7.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Das Paket \"Bunifu.Utils 1.0.6\" wurde nicht mit dem Projektzielframework \"net7.0-windows7.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
+      "libraryId": "Bunifu.Utils",
       "targetGraphs": [
         "net7.0-windows7.0"
       ]
@@ -12348,6 +12414,16 @@
       "warningLevel": 1,
       "message": "Das Paket \"SaaUI.Winforms 1.1.0\" wurde nicht mit dem Projektzielframework \"net7.0-windows7.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
       "libraryId": "SaaUI.Winforms",
+      "targetGraphs": [
+        "net7.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Das Paket \"SipaaFramework 1.1.0\" wurde nicht mit dem Projektzielframework \"net7.0-windows7.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
+      "libraryId": "SipaaFramework",
       "targetGraphs": [
         "net7.0-windows7.0"
       ]

@@ -12,7 +12,7 @@ namespace srvlocal_gui.LAB.SETTINGS {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.6.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.7.0.0")]
     public sealed partial class config : global::System.Configuration.ApplicationSettingsBase {
         
         private static config defaultInstance = ((config)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new config())));
@@ -32,6 +32,18 @@ namespace srvlocal_gui.LAB.SETTINGS {
             }
             set {
                 this["acceptedLicenseAgrement"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("admin")]
+        public string lastLoggedInUser {
+            get {
+                return ((string)(this["lastLoggedInUser"]));
+            }
+            set {
+                this["lastLoggedInUser"] = value;
             }
         }
     }

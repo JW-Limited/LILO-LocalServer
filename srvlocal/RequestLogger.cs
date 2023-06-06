@@ -23,8 +23,16 @@ namespace Local
                 File.AppendAllText(_connectionString, _error);
             }
         }
+        //var logger = new RequestLogger("logDirectory", "serverUrl");
+        //logger.LogRequestIf(request, req => req.HttpMethod == "GET");
 
-
+        public void LogRequestIf(HttpListenerRequest request, Func<HttpListenerRequest, bool> predicate)
+        {
+            if (predicate(request))
+            {
+                LogRequest(request);
+            }
+        }
         private readonly string _logDirectory;
         private readonly string _serverUrl;
 

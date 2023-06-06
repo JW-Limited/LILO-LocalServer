@@ -38,6 +38,8 @@
           "Windows-Forms-Aero": "3.1.1",
           "Zeroit.Framework.Metro": "1.0.0",
           "Bunifu.UI.WinForms": "6.0.0-Beta",
+          "Bunifu.Utils": "1.0.6",
+          "SipaaFramework": "1.1.0",
           "srvlocal": "1.0.0",
           "xunit": "2.4.2",
           "ICSharpCode.TextEditor": "1.2.0.0"
@@ -146,6 +148,17 @@
           "lib/net6.0-windows7.0/Bunifu.UI.WinForms.1.5.3.dll": {
             "assemblyVersion": "1.5.3.0",
             "fileVersion": "1.5.3.0"
+          }
+        }
+      },
+      "Bunifu.Utils/1.0.6": {
+        "dependencies": {
+          "Bunifu.UI.WinForms": "6.0.0-Beta"
+        },
+        "runtime": {
+          "lib/net/Bunifu.Utils.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
           }
         }
       },
@@ -1041,6 +1054,14 @@
           "lib/net35/SaaUI.dll": {
             "assemblyVersion": "1.1.0.0",
             "fileVersion": "1.0.0.1"
+          }
+        }
+      },
+      "SipaaFramework/1.1.0": {
+        "runtime": {
+          "lib/net46/SipaaFramework.dll": {
+            "assemblyVersion": "1.1.0.0",
+            "fileVersion": "1.1.0.0"
           }
         }
       },
@@ -2859,6 +2880,13 @@
       "path": "bunifu.ui.winforms.1.5.3/1.0.0",
       "hashPath": "bunifu.ui.winforms.1.5.3.1.0.0.nupkg.sha512"
     },
+    "Bunifu.Utils/1.0.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9sad8WB8h1GdJd0ZD1CBn+i8D156FbtNvDiLciEopU48nB74xwvhJbvK3On/kEjNMS0HZ/961owDYCW3NC3sAA==",
+      "path": "bunifu.utils/1.0.6",
+      "hashPath": "bunifu.utils.1.0.6.nupkg.sha512"
+    },
     "ConsoleTables/2.4.2": {
       "type": "package",
       "serviceable": true,
@@ -3460,6 +3488,13 @@
       "sha512": "sha512-tITFOL8Zuie5h7YgfZw/SNee3buVN3Z1s1PhNuH+bGUKn7i7612wIIO+YMOkhoL5MNRnbnQkY2J1qyfYbZfYag==",
       "path": "saaui.winforms/1.1.0",
       "hashPath": "saaui.winforms.1.1.0.nupkg.sha512"
+    },
+    "SipaaFramework/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-acX8Hz5lbto9JTGZq3VnXvsFnt3uy9Tgvyj3tqhCnpNqICvVWXenTHxH3wmyV3jUWC8dlpnb68qdbno3IbXqZA==",
+      "path": "sipaaframework/1.1.0",
+      "hashPath": "sipaaframework.1.1.0.nupkg.sha512"
     },
     "SkiaSharp/2.88.2": {
       "type": "package",

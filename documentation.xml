@@ -51,10 +51,5 @@
             </summary>
              b
         </member>
-        <member name="T:Local.BatchStarter">
-            <summary>
-            <see href="Api"/>
-            </summary>
-        </member>
     </members>
 </doc>

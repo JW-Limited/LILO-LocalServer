@@ -15,27 +15,33 @@ LILO LocalServer is a lightweight local server that allows you to run a web appl
 ## Installation
 #### With Installer
 To install LILO LocalServer, simply download the latest release from the releases page and run the installer.
-#### With Source Code
+#### With Command-Line
 To install LILO-LocalServer, you need to build it with a .NET compiler. Here are the steps to follow:
+
 Clone the repository:
-```Bash
+```bash
 git clone https://github.com/JW-Limited/LILO-LocalServer.git
 cd LILO-LocalServer
 ```
 
 Build the project with a .NET compiler:
 
-```
+```bash
 dotnet build
 ```
 This will build the project and create the necessary binaries.
 
 ## Usage
-To start the server, navigate to the bin directory and run the following command:
+To start the server, navigate to the bin directory and run the following command to recieve Commands:
+```bash
+srvlocal.exe --help
 ```
-dotnet LILO-LocalServer.dll
+or Start it with 
+```bash
+srvlocal.exe --port=8080 --path=<youre_path> --enable-logging=false
 ```
 This will start the server on the default port 8080. You can then access your web application by navigating to http://localhost:8080 in your web browser.
+
 ## Config
 You can easily configure the Application through the SettingsGUI or trough the JSON File
 
@@ -96,7 +102,7 @@ Here's an example config.json file:
 
 LILO-LocalServer also includes a console and GUI overlay for easy management. To launch the console overlay, run the following command:
 
-```
+```bash
 dotnet LILO-LocalServer.Console.dll
 ```
 To launch the GUI overlay, double-click on the LILO-LocalServer.GUI.exe file in the bin directory.
@@ -104,7 +110,7 @@ To launch the GUI overlay, double-click on the LILO-LocalServer.GUI.exe file in 
 ## Implement in Youre App
 We currently working on the Package but until you can use the WindowsApi Implementation
 
-```CSharp
+```c#
 using System;
 using System.Diagnostics;
 using System.IO;
