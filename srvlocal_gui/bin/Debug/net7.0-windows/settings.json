@@ -15,26 +15,26 @@
       "HashedPassword": "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918",
       "CanChangeConfig": true,
       "FavouriteColor": {
-        "R": 0,
-        "G": 0,
-        "B": 0,
-        "A": 0,
-        "IsKnownColor": false,
-        "IsEmpty": true,
-        "IsNamedColor": false,
+        "R": 240,
+        "G": 248,
+        "B": 255,
+        "A": 255,
+        "IsKnownColor": true,
+        "IsEmpty": false,
+        "IsNamedColor": true,
         "IsSystemColor": false,
-        "Name": "0"
+        "Name": "AliceBlue"
       },
       "ButtonColor": {
-        "R": 0,
-        "G": 0,
-        "B": 0,
-        "A": 0,
+        "R": 94,
+        "G": 148,
+        "B": 255,
+        "A": 255,
         "IsKnownColor": false,
-        "IsEmpty": true,
+        "IsEmpty": false,
         "IsNamedColor": false,
         "IsSystemColor": false,
-        "Name": "0"
+        "Name": "ff5e94ff"
       }
     },
     {
@@ -45,26 +45,26 @@
       "HashedPassword": "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe",
       "CanChangeConfig": false,
       "FavouriteColor": {
-        "R": 0,
-        "G": 0,
-        "B": 0,
-        "A": 0,
-        "IsKnownColor": false,
-        "IsEmpty": true,
-        "IsNamedColor": false,
+        "R": 240,
+        "G": 255,
+        "B": 255,
+        "A": 255,
+        "IsKnownColor": true,
+        "IsEmpty": false,
+        "IsNamedColor": true,
         "IsSystemColor": false,
-        "Name": "0"
+        "Name": "Azure"
       },
       "ButtonColor": {
-        "R": 0,
-        "G": 0,
-        "B": 0,
-        "A": 0,
+        "R": 94,
+        "G": 148,
+        "B": 255,
+        "A": 255,
         "IsKnownColor": false,
-        "IsEmpty": true,
+        "IsEmpty": false,
         "IsNamedColor": false,
         "IsSystemColor": false,
-        "Name": "0"
+        "Name": "ff5e94ff"
       }
     }
   ]

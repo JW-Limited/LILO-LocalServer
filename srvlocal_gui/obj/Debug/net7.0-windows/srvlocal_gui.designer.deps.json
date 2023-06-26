@@ -3116,6 +3116,14 @@
           }
         }
       },
+      "ToastNotifications/2.5.1": {
+        "runtime": {
+          "lib/net40/ToastNotifications.dll": {
+            "assemblyVersion": "2.5.1.0",
+            "fileVersion": "2.5.1.0"
+          }
+        }
+      },
       "Topten.RichTextKit/0.4.151": {
         "dependencies": {
           "SkiaSharp": "2.88.2",
@@ -5048,6 +5056,13 @@
       "sha512": "sha512-5zJ0XDxAIg8iy+t4aMnQAu0MqVbqyvfoUVl1yDV61xdo3Vth45oA2FoY4pPkxYAH5f8ixpmTqXeEIya95x0aCQ==",
       "path": "system.xml.xdocument/4.3.0",
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
+    },
+    "ToastNotifications/2.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0ZBWG0FCPafwbIzNhjWgC0GEOyk51GF3rYWrh5QJ61ZxDEoLgdDsEUt8HMxYN7lRLVt/mWhtgdbe4OmhXfwtkA==",
+      "path": "toastnotifications/2.5.1",
+      "hashPath": "toastnotifications.2.5.1.nupkg.sha512"
     },
     "Topten.RichTextKit/0.4.151": {
       "type": "package",

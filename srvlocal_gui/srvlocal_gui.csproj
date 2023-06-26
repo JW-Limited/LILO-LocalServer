@@ -19,7 +19,7 @@
     <ProduceReferenceAssembly>True</ProduceReferenceAssembly>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <DocumentationFile>C:\Users\joeva\Documents\GitHub\LILO-LocalServer\api.xml</DocumentationFile>
-    <Version>1.3</Version>
+    <Version>1.3.1</Version>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <SignAssembly>False</SignAssembly>
     <AssemblyOriginatorKeyFile>JW_Limited.crt</AssemblyOriginatorKeyFile>
@@ -85,6 +85,7 @@
     <PackageReference Include="SaaUI.Winforms" Version="1.1.0" />
     <PackageReference Include="sipaaframework" Version="1.1.0" />
     <PackageReference Include="System.Data.SQLite" Version="1.0.117" />
+    <PackageReference Include="ToastNotifications" Version="2.5.1" />
     <PackageReference Include="Windows-Forms-Aero" Version="3.1.1" />
     <PackageReference Include="Winform.Metroframework.Design" Version="1.4.0" />
     <PackageReference Include="xunit" Version="2.4.2" />

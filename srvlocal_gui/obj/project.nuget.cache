@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "6pGIj3sC6ljo02ZSL7F/Et3WUXH82U4QvRzAY/TjFWU0lJt/RXA9+2n8J0YxOhYXkpOOU6RIWAmvMVexGzP3yg==",
+  "dgSpecHash": "pklrnjngNO2vWgLW7upRFs3XvHtr6Fv5UGqBB8ZbHxr53Cd9YDw8H7gmQK717ohCKfi8Kafjn92ghXeZbyn3RQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\srvlocal_gui\\srvlocal_gui.csproj",
   "expectedPackageFiles": [
@@ -227,6 +227,7 @@
     "C:\\Users\\joeva\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\joeva\\.nuget\\packages\\toastnotifications\\2.5.1\\toastnotifications.2.5.1.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\topten.richtextkit\\0.4.151\\topten.richtextkit.0.4.151.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\ui.for.winforms.allcontrols.net70.trial\\2023.1.314\\ui.for.winforms.allcontrols.net70.trial.2023.1.314.nupkg.sha512",
     "C:\\Users\\joeva\\.nuget\\packages\\windows-forms-aero\\3.1.1\\windows-forms-aero.3.1.1.nupkg.sha512",
@@ -418,6 +419,16 @@
       "warningLevel": 1,
       "message": "Das Paket \"SkiaSharp.Views 1.68.1.1\" wurde nicht mit dem Projektzielframework \"net7.0-windows7.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
       "libraryId": "SkiaSharp.Views",
+      "targetGraphs": [
+        "net7.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Das Paket \"ToastNotifications 2.5.1\" wurde nicht mit dem Projektzielframework \"net7.0-windows7.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
+      "libraryId": "ToastNotifications",
       "targetGraphs": [
         "net7.0-windows7.0"
       ]

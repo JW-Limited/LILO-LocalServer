@@ -1,0 +1,11 @@
+2023-06-26 23:41:16 [INFO] - Started GUI...
+2023-06-26 23:41:16 [INFO] - Directory allready satisfied.
+2023-06-26 23:41:16 [INFO] - Directory allready satisfied.
+2023-06-26 23:41:16 [INFO] - Directory allready satisfied.
+2023-06-26 23:41:16 [INFO] - Settings file was not found. Initializing SettingsManager and generating it.
+2023-06-26 23:41:16 [INFO] - You are an administrator.
+2023-06-26 23:41:25 [WARNING] - Missing resources : config.xml, log.txt,
+2023-06-26 23:41:29 [INFO] - Started Updater (mode: MANUALY)
+2023-06-26 23:41:29 [INFO] - Starting license evaluation.
+2023-06-26 23:41:30 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-06-26 23:41:31 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).

@@ -10,6 +10,8 @@ using srvlocal_gui.AppMananger;
 using Guna.UI2.WinForms;
 using User = srvlocal_gui.AppMananger.User;
 using System.Security.Cryptography;
+using ToastNotifications;
+using ToastNotifications.Core;
 
 namespace srvlocal_gui
 {
@@ -163,7 +165,7 @@ namespace srvlocal_gui
 
             try
             {
-
+                CheckForUpdates();
                 LicenseEvaluation();
 
                 var quote = await Helper.GetQuoteOfTheDayAsync();
@@ -295,6 +297,78 @@ namespace srvlocal_gui
             }
         }
 
+        public Task CheckForUpdates()
+        {
+            try
+            {
+                var updater = Updater.Instance();
+
+                var latestVersion = updater.GetLatestVersion(owner, repo);
+                var latestChanges = updater.GetLatestChanges(owner, repo);
+                var currentVersion = System.Windows.Forms.Application.ProductVersion;
+
+                switch (UpdateDetected)
+                {
+                    case true:
+                        string html = Markdig.Markdown.ToHtml(latestChanges);
+                        var _read = ReadMeDialog.Instance();
+                        _read.htmlCode = html;
+                        _read.name = "Latest Release";
+                        _read.version = latestVersion;
+                        _read.Show();
+                        _read.BringToFront();
+                        break;
+                    default:
+
+                        Logger.Instance.Log("Started Updater (mode: MANUALY)", Logger.LogLevel.Info);
+
+                        Task.Run(() =>
+                        {
+                            this.Invoke((MethodInvoker)delegate
+                            {
+                                if (updater.HasNewRelease(owner, repo))
+                                {
+                                    Logger.Instance.Log($"Updater found a new Version. Latest Version: {latestVersion}, Current Version: {currentVersion}.", Logger.LogLevel.Info);
+
+
+                                    Console.WriteLine("A new release is available.");
+
+                                    NotyFi(false, $"A new release is available. \nYour Version : {currentVersion}\nLatest Version : {latestVersion}", "Updater");
+
+                                    UpdateDetected = true;
+                                    bntCheck.Text = "Download";
+
+                                    string html = Markdig.Markdown.ToHtml(latestChanges);
+                                    var _read = ReadMeDialog.Instance();
+                                    _read.htmlCode = html;
+                                    _read.name = "Latest Release";
+                                    _read.version = latestVersion;
+                                    _read.Show();
+
+
+                                }
+                                else
+                                {
+                                    Logger.Instance.Log($"Youre Up to date. Current Version: {currentVersion}.", Logger.LogLevel.Info);
+                                    Console.WriteLine("No new release available.");
+                                    richTxtStatus.Text = "";
+
+                                    NotyFi(false, $"No new release available.\nYou are perfect.", "Updater");
+                                }
+                            });
+
+                        });
+                        break;
+                }
+
+                return Task.CompletedTask;
+            }
+            catch (Exception ex)
+            {
+                Logger.Instance.Log(ex.Message, Logger.LogLevel.Error);
+                return Task.CompletedTask;
+            }
+        }
 
         private void label1_Click(object sender, EventArgs e)
         {
