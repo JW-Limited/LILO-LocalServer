@@ -26,7 +26,7 @@ cd LILO-LocalServer
 
 Build the project with a .NET compiler:
 
-```bash
+```Bash
 dotnet build
 ```
 This will build the project and create the necessary binaries.
@@ -37,9 +37,13 @@ To start the server, navigate to the bin directory and run the following command
 srvlocal.exe --help
 ```
 or Start it with 
-```bash
+```Bash
 srvlocal.exe --port=8080 --path=<youre_path> --enable-logging=false
 ```
+or use the GUI
+ 
+<img width="512" alt="image" src="https://github.com/JW-Limited/LILO-LocalServer/assets/120219149/7c08f71d-c189-4b4c-abee-461aa5434c81">
+
 This will start the server on the default port 8080. You can then access your web application by navigating to http://localhost:8080 in your web browser.
 
 ## Config
@@ -110,7 +114,7 @@ To launch the GUI overlay, double-click on the LILO-LocalServer.GUI.exe file in 
 ## Implement in Youre App
 We currently working on the Package but until you can use the WindowsApi Implementation
 
-```c#
+```CSharp
 using System;
 using System.Diagnostics;
 using System.IO;
