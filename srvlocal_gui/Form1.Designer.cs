@@ -69,7 +69,7 @@
             messageBoxForm1 = new Modern.Forms.MessageBoxForm();
             ConsolePanel = new Guna.UI2.WinForms.Guna2Panel();
             tableLayoutPanel3 = new TableLayoutPanel();
-            _outputTextBox = new WindowsFormsAero.TextBox();
+            _outputTextbox = new TextBox();
             tableLayoutPanel2 = new TableLayoutPanel();
             guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
             bntServerStatus = new Guna.UI2.WinForms.Guna2Button();
@@ -113,11 +113,11 @@
             label25 = new Label();
             label26 = new Label();
             collapsibleGroupBox2 = new LABLibary.Forms.CollapsibleGroupBox();
+            richTxtStatus = new RichTextBox();
             guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
             bntCheck = new Guna.UI2.WinForms.Guna2Button();
-            richTxtStatus = new RichTextBox();
+            label6 = new Label();
             label27 = new Label();
-            lblUpdaterPros = new Label();
             panel1 = new Panel();
             pnlControls = new Panel();
             button2 = new Button();
@@ -126,8 +126,9 @@
             guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             passwordDialog = new Ookii.Dialogs.WinForms.InputDialog(components);
             guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
-            guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
-            guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
+            headerLeft = new Guna.UI2.WinForms.Guna2Panel();
+            headerRight = new Guna.UI2.WinForms.Guna2Panel();
+            guna2CircleButton2 = new Guna.UI2.WinForms.Guna2CircleButton();
             dragControl = new Bunifu.Framework.UI.BunifuDragControl(components);
             tableLayoutPanel4 = new TableLayoutPanel();
             tableLayoutPanel1.SuspendLayout();
@@ -145,18 +146,18 @@
             collapsibleGroupBox2.SuspendLayout();
             panel1.SuspendLayout();
             pnlControls.SuspendLayout();
-            guna2Panel4.SuspendLayout();
-            guna2Panel5.SuspendLayout();
+            headerLeft.SuspendLayout();
+            headerRight.SuspendLayout();
             tableLayoutPanel4.SuspendLayout();
             SuspendLayout();
             // 
             // thumbnailViewer1
             // 
-            thumbnailViewer1.Location = new Point(331, 283);
+            thumbnailViewer1.Location = new Point(265, 236);
             thumbnailViewer1.Margin = new Padding(2);
             thumbnailViewer1.Name = "thumbnailViewer1";
             thumbnailViewer1.ScaleSmallerThumbnails = true;
-            thumbnailViewer1.Size = new Size(10, 10);
+            thumbnailViewer1.Size = new Size(8, 8);
             thumbnailViewer1.TabIndex = 0;
             thumbnailViewer1.Text = "thumbnailViewer1";
             thumbnailViewer1.ThumbnailAlignment = ContentAlignment.MiddleCenter;
@@ -171,12 +172,12 @@
             tableLayoutPanel1.Controls.Add(guna2Panel1, 0, 0);
             tableLayoutPanel1.Controls.Add(guna2Panel3, 1, 0);
             tableLayoutPanel1.Controls.Add(guna2Panel2, 2, 0);
-            tableLayoutPanel1.Location = new Point(34, 754);
+            tableLayoutPanel1.Location = new Point(27, 628);
             tableLayoutPanel1.Margin = new Padding(2);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Size = new Size(1444, 223);
+            tableLayoutPanel1.Size = new Size(1155, 186);
             tableLayoutPanel1.TabIndex = 3;
             // 
             // guna2Panel1
@@ -192,7 +193,7 @@
             guna2Panel1.Location = new Point(2, 2);
             guna2Panel1.Margin = new Padding(2);
             guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.Size = new Size(477, 219);
+            guna2Panel1.Size = new Size(380, 182);
             guna2Panel1.TabIndex = 2;
             // 
             // bntOpen
@@ -209,10 +210,10 @@
             bntOpen.FocusedColor = Color.FromArgb(100, 170, 209);
             bntOpen.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             bntOpen.ForeColor = Color.White;
-            bntOpen.Location = new Point(153, 139);
+            bntOpen.Location = new Point(121, 116);
             bntOpen.Margin = new Padding(2);
             bntOpen.Name = "bntOpen";
-            bntOpen.Size = new Size(154, 46);
+            bntOpen.Size = new Size(123, 38);
             bntOpen.TabIndex = 0;
             bntOpen.Text = "View";
             bntOpen.Click += bntOpen_Click;
@@ -221,10 +222,10 @@
             // 
             label7.Anchor = AnchorStyles.None;
             label7.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Location = new Point(153, 12);
+            label7.Location = new Point(121, 10);
             label7.Margin = new Padding(2, 0, 2, 0);
             label7.Name = "label7";
-            label7.Size = new Size(154, 47);
+            label7.Size = new Size(123, 39);
             label7.TabIndex = 4;
             label7.Text = "REPO";
             label7.TextAlign = ContentAlignment.MiddleCenter;
@@ -233,10 +234,10 @@
             // label9
             // 
             label9.Anchor = AnchorStyles.None;
-            label9.Location = new Point(141, 60);
+            label9.Location = new Point(112, 50);
             label9.Margin = new Padding(2, 0, 2, 0);
             label9.Name = "label9";
-            label9.Size = new Size(189, 63);
+            label9.Size = new Size(151, 53);
             label9.TabIndex = 4;
             label9.Text = "View the LILO Repo for the latest Updates";
             label9.TextAlign = ContentAlignment.MiddleCenter;
@@ -252,10 +253,10 @@
             guna2Panel3.Controls.Add(label5);
             guna2Panel3.Controls.Add(label11);
             guna2Panel3.Dock = DockStyle.Fill;
-            guna2Panel3.Location = new Point(483, 2);
+            guna2Panel3.Location = new Point(386, 2);
             guna2Panel3.Margin = new Padding(2);
             guna2Panel3.Name = "guna2Panel3";
-            guna2Panel3.Size = new Size(477, 219);
+            guna2Panel3.Size = new Size(380, 182);
             guna2Panel3.TabIndex = 2;
             // 
             // guna2Button1
@@ -272,10 +273,10 @@
             guna2Button1.FocusedColor = Color.FromArgb(100, 170, 209);
             guna2Button1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(156, 139);
+            guna2Button1.Location = new Point(124, 116);
             guna2Button1.Margin = new Padding(2);
             guna2Button1.Name = "guna2Button1";
-            guna2Button1.Size = new Size(154, 46);
+            guna2Button1.Size = new Size(123, 38);
             guna2Button1.TabIndex = 0;
             guna2Button1.Text = "Create";
             guna2Button1.Click += bntMEtro;
@@ -284,10 +285,10 @@
             // 
             label5.Anchor = AnchorStyles.None;
             label5.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(156, 12);
+            label5.Location = new Point(124, 10);
             label5.Margin = new Padding(2, 0, 2, 0);
             label5.Name = "label5";
-            label5.Size = new Size(154, 47);
+            label5.Size = new Size(123, 39);
             label5.TabIndex = 4;
             label5.Text = "DEV";
             label5.TextAlign = ContentAlignment.MiddleCenter;
@@ -296,10 +297,10 @@
             // label11
             // 
             label11.Anchor = AnchorStyles.None;
-            label11.Location = new Point(144, 60);
+            label11.Location = new Point(114, 50);
             label11.Margin = new Padding(2, 0, 2, 0);
             label11.Name = "label11";
-            label11.Size = new Size(189, 63);
+            label11.Size = new Size(151, 53);
             label11.TabIndex = 4;
             label11.Text = "Create youre Own App with LILO";
             label11.TextAlign = ContentAlignment.MiddleCenter;
@@ -315,10 +316,10 @@
             guna2Panel2.Controls.Add(label8);
             guna2Panel2.Controls.Add(label10);
             guna2Panel2.Dock = DockStyle.Fill;
-            guna2Panel2.Location = new Point(964, 2);
+            guna2Panel2.Location = new Point(770, 2);
             guna2Panel2.Margin = new Padding(2);
             guna2Panel2.Name = "guna2Panel2";
-            guna2Panel2.Size = new Size(478, 219);
+            guna2Panel2.Size = new Size(383, 182);
             guna2Panel2.TabIndex = 2;
             // 
             // guna2Button2
@@ -335,10 +336,10 @@
             guna2Button2.FocusedColor = Color.FromArgb(100, 170, 209);
             guna2Button2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             guna2Button2.ForeColor = Color.White;
-            guna2Button2.Location = new Point(157, 139);
+            guna2Button2.Location = new Point(126, 116);
             guna2Button2.Margin = new Padding(2);
             guna2Button2.Name = "guna2Button2";
-            guna2Button2.Size = new Size(154, 46);
+            guna2Button2.Size = new Size(123, 38);
             guna2Button2.TabIndex = 0;
             guna2Button2.Text = "Open";
             guna2Button2.Click += guna2Button2_Click;
@@ -347,10 +348,10 @@
             // 
             label8.Anchor = AnchorStyles.None;
             label8.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.Location = new Point(157, 12);
+            label8.Location = new Point(126, 10);
             label8.Margin = new Padding(2, 0, 2, 0);
             label8.Name = "label8";
-            label8.Size = new Size(154, 47);
+            label8.Size = new Size(123, 39);
             label8.TabIndex = 4;
             label8.Text = "DIST";
             label8.TextAlign = ContentAlignment.MiddleCenter;
@@ -359,10 +360,10 @@
             // label10
             // 
             label10.Anchor = AnchorStyles.None;
-            label10.Location = new Point(142, 60);
+            label10.Location = new Point(114, 50);
             label10.Margin = new Padding(2, 0, 2, 0);
             label10.Name = "label10";
-            label10.Size = new Size(189, 63);
+            label10.Size = new Size(151, 53);
             label10.TabIndex = 4;
             label10.Text = "Open youre latest Projects";
             label10.TextAlign = ContentAlignment.MiddleCenter;
@@ -393,10 +394,10 @@
             // lblVersion
             // 
             lblVersion.AutoSize = true;
-            lblVersion.Location = new Point(224, 97);
+            lblVersion.Location = new Point(179, 81);
             lblVersion.Margin = new Padding(2, 0, 2, 0);
             lblVersion.Name = "lblVersion";
-            lblVersion.Size = new Size(36, 24);
+            lblVersion.Size = new Size(31, 20);
             lblVersion.TabIndex = 4;
             lblVersion.Text = "n/a";
             ToolTip.SetToolTip(lblVersion, "Shows the Version");
@@ -415,10 +416,10 @@
             // 
             lblGreeting.BackColor = Color.Transparent;
             lblGreeting.Font = new Font("Nirmala UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            lblGreeting.Location = new Point(22, 24);
+            lblGreeting.Location = new Point(18, 20);
             lblGreeting.Margin = new Padding(2, 0, 2, 0);
             lblGreeting.Name = "lblGreeting";
-            lblGreeting.Size = new Size(462, 47);
+            lblGreeting.Size = new Size(370, 39);
             lblGreeting.TabIndex = 4;
             lblGreeting.Text = "LILO Framework Host";
             lblGreeting.Click += label2_Click;
@@ -438,20 +439,20 @@
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(38, 188);
+            label13.Location = new Point(30, 157);
             label13.Margin = new Padding(2, 0, 2, 0);
             label13.Name = "label13";
-            label13.Size = new Size(87, 24);
+            label13.Size = new Size(73, 20);
             label13.TabIndex = 4;
             label13.Text = "Domain : ";
             // 
             // lblReach
             // 
             lblReach.AutoSize = true;
-            lblReach.Location = new Point(224, 144);
+            lblReach.Location = new Point(179, 120);
             lblReach.Margin = new Padding(2, 0, 2, 0);
             lblReach.Name = "lblReach";
-            lblReach.Size = new Size(36, 24);
+            lblReach.Size = new Size(31, 20);
             lblReach.TabIndex = 4;
             lblReach.Text = "n/a";
             ToolTip.SetToolTip(lblReach, "Shows if all Resources Are ready");
@@ -459,10 +460,10 @@
             // label15
             // 
             label15.AutoSize = true;
-            label15.Location = new Point(38, 144);
+            label15.Location = new Point(30, 120);
             label15.Margin = new Padding(2, 0, 2, 0);
             label15.Name = "label15";
-            label15.Size = new Size(103, 24);
+            label15.Size = new Size(89, 20);
             label15.TabIndex = 4;
             label15.Text = "Reachabel : ";
             // 
@@ -510,10 +511,10 @@
             chbChangePort.CheckedState.BorderRadius = 0;
             chbChangePort.CheckedState.BorderThickness = 0;
             chbChangePort.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
-            chbChangePort.Location = new Point(82, 229);
+            chbChangePort.Location = new Point(66, 192);
             chbChangePort.Margin = new Padding(2);
             chbChangePort.Name = "chbChangePort";
-            chbChangePort.Size = new Size(133, 28);
+            chbChangePort.Size = new Size(111, 24);
             chbChangePort.TabIndex = 5;
             chbChangePort.Text = "Change Port";
             chbChangePort.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
@@ -531,10 +532,10 @@
             chbChangeMediaFolder.CheckedState.BorderRadius = 0;
             chbChangeMediaFolder.CheckedState.BorderThickness = 0;
             chbChangeMediaFolder.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
-            chbChangeMediaFolder.Location = new Point(82, 263);
+            chbChangeMediaFolder.Location = new Point(66, 220);
             chbChangeMediaFolder.Margin = new Padding(2);
             chbChangeMediaFolder.Name = "chbChangeMediaFolder";
-            chbChangeMediaFolder.Size = new Size(174, 28);
+            chbChangeMediaFolder.Size = new Size(147, 24);
             chbChangeMediaFolder.TabIndex = 5;
             chbChangeMediaFolder.Text = "Change recFolder";
             chbChangeMediaFolder.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
@@ -551,10 +552,10 @@
             chbDistFolder.CheckedState.BorderRadius = 0;
             chbDistFolder.CheckedState.BorderThickness = 0;
             chbDistFolder.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
-            chbDistFolder.Location = new Point(82, 296);
+            chbDistFolder.Location = new Point(66, 247);
             chbDistFolder.Margin = new Padding(2);
             chbDistFolder.Name = "chbDistFolder";
-            chbDistFolder.Size = new Size(180, 28);
+            chbDistFolder.Size = new Size(151, 24);
             chbDistFolder.TabIndex = 5;
             chbDistFolder.Text = "Change distFolder";
             chbDistFolder.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
@@ -572,10 +573,10 @@
             chbDisable.CheckedState.BorderRadius = 0;
             chbDisable.CheckedState.BorderThickness = 0;
             chbDisable.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
-            chbDisable.Location = new Point(82, 330);
+            chbDisable.Location = new Point(66, 276);
             chbDisable.Margin = new Padding(2);
             chbDisable.Name = "chbDisable";
-            chbDisable.Size = new Size(165, 28);
+            chbDisable.Size = new Size(140, 24);
             chbDisable.TabIndex = 5;
             chbDisable.Text = "Disable Logging";
             chbDisable.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
@@ -586,22 +587,22 @@
             // txtPort
             // 
             txtPort.Anchor = AnchorStyles.None;
-            txtPort.Location = new Point(342, 225);
+            txtPort.Location = new Point(274, 188);
             txtPort.Margin = new Padding(2);
             txtPort.Name = "txtPort";
             txtPort.PlaceholderText = "From 8080 - 12000";
-            txtPort.Size = new Size(182, 31);
+            txtPort.Size = new Size(146, 27);
             txtPort.TabIndex = 6;
             txtPort.Text = "8080";
             // 
             // txtMediaFolder
             // 
             txtMediaFolder.Anchor = AnchorStyles.None;
-            txtMediaFolder.Location = new Point(342, 263);
+            txtMediaFolder.Location = new Point(274, 220);
             txtMediaFolder.Margin = new Padding(2);
             txtMediaFolder.Name = "txtMediaFolder";
             txtMediaFolder.PlaceholderText = "A Valid Folder";
-            txtMediaFolder.Size = new Size(182, 31);
+            txtMediaFolder.Size = new Size(146, 27);
             txtMediaFolder.TabIndex = 6;
             // 
             // guna2Button4
@@ -617,10 +618,10 @@
             guna2Button4.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             guna2Button4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             guna2Button4.ForeColor = Color.White;
-            guna2Button4.Location = new Point(632, 224);
+            guna2Button4.Location = new Point(506, 187);
             guna2Button4.Margin = new Padding(2);
             guna2Button4.Name = "guna2Button4";
-            guna2Button4.Size = new Size(104, 134);
+            guna2Button4.Size = new Size(83, 112);
             guna2Button4.TabIndex = 0;
             guna2Button4.Text = "Start Arg";
             guna2Button4.Click += bntStartWithArguments;
@@ -638,10 +639,10 @@
             guna2Button5.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             guna2Button5.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             guna2Button5.ForeColor = Color.White;
-            guna2Button5.Location = new Point(747, 224);
+            guna2Button5.Location = new Point(598, 187);
             guna2Button5.Margin = new Padding(2);
             guna2Button5.Name = "guna2Button5";
-            guna2Button5.Size = new Size(101, 134);
+            guna2Button5.Size = new Size(81, 112);
             guna2Button5.TabIndex = 0;
             guna2Button5.Text = "Start";
             guna2Button5.Click += bntStartCon;
@@ -649,11 +650,11 @@
             // txtDistFolder
             // 
             txtDistFolder.Anchor = AnchorStyles.None;
-            txtDistFolder.Location = new Point(342, 296);
+            txtDistFolder.Location = new Point(274, 247);
             txtDistFolder.Margin = new Padding(2);
             txtDistFolder.Name = "txtDistFolder";
             txtDistFolder.PlaceholderText = "A Valid Folder";
-            txtDistFolder.Size = new Size(182, 31);
+            txtDistFolder.Size = new Size(146, 27);
             txtDistFolder.TabIndex = 6;
             txtDistFolder.TextChanged += txtDistFolder_TextChanged;
             // 
@@ -686,7 +687,7 @@
             ConsolePanel.Location = new Point(2, 2);
             ConsolePanel.Margin = new Padding(2);
             ConsolePanel.Name = "ConsolePanel";
-            ConsolePanel.Size = new Size(885, 556);
+            ConsolePanel.Size = new Size(707, 463);
             ConsolePanel.TabIndex = 7;
             ConsolePanel.Visible = false;
             // 
@@ -694,33 +695,29 @@
             // 
             tableLayoutPanel3.ColumnCount = 1;
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel3.Controls.Add(_outputTextBox, 0, 1);
+            tableLayoutPanel3.Controls.Add(_outputTextbox, 0, 1);
             tableLayoutPanel3.Controls.Add(tableLayoutPanel2, 0, 0);
             tableLayoutPanel3.Dock = DockStyle.Fill;
             tableLayoutPanel3.Location = new Point(0, 0);
+            tableLayoutPanel3.Margin = new Padding(2);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
             tableLayoutPanel3.RowCount = 2;
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 44F));
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 37F));
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel3.Size = new Size(885, 556);
+            tableLayoutPanel3.Size = new Size(707, 463);
             tableLayoutPanel3.TabIndex = 0;
+            tableLayoutPanel3.Paint += tableLayoutPanel3_Paint;
             // 
-            // _outputTextBox
+            // _outputTextbox
             // 
-            _outputTextBox.AcceptsTab = true;
-            _outputTextBox.CueBannerText = "Console";
-            _outputTextBox.Dock = DockStyle.Fill;
-            _outputTextBox.Location = new Point(2, 46);
-            _outputTextBox.Margin = new Padding(2);
-            _outputTextBox.Multiline = true;
-            _outputTextBox.Name = "_outputTextBox";
-            _outputTextBox.PlaceholderText = "Mhh really quite, to quite";
-            _outputTextBox.ReadOnly = true;
-            _outputTextBox.ScrollBars = ScrollBars.Vertical;
-            _outputTextBox.Size = new Size(881, 508);
-            _outputTextBox.TabIndex = 1;
-            _outputTextBox.WordWrap = false;
-            _outputTextBox.TextChanged += _outputTextBox_TextChanged;
+            _outputTextbox.Dock = DockStyle.Fill;
+            _outputTextbox.Location = new Point(2, 39);
+            _outputTextbox.Margin = new Padding(2);
+            _outputTextbox.Multiline = true;
+            _outputTextbox.Name = "_outputTextbox";
+            _outputTextbox.ReadOnly = true;
+            _outputTextbox.Size = new Size(703, 422);
+            _outputTextbox.TabIndex = 5;
             // 
             // tableLayoutPanel2
             // 
@@ -730,11 +727,12 @@
             tableLayoutPanel2.Controls.Add(guna2Button6, 0, 0);
             tableLayoutPanel2.Controls.Add(bntServerStatus, 1, 0);
             tableLayoutPanel2.Dock = DockStyle.Fill;
-            tableLayoutPanel2.Location = new Point(3, 3);
+            tableLayoutPanel2.Location = new Point(2, 2);
+            tableLayoutPanel2.Margin = new Padding(2);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 1;
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel2.Size = new Size(879, 38);
+            tableLayoutPanel2.Size = new Size(703, 33);
             tableLayoutPanel2.TabIndex = 2;
             // 
             // guna2Button6
@@ -751,7 +749,7 @@
             guna2Button6.Location = new Point(2, 2);
             guna2Button6.Margin = new Padding(2);
             guna2Button6.Name = "guna2Button6";
-            guna2Button6.Size = new Size(435, 34);
+            guna2Button6.Size = new Size(347, 29);
             guna2Button6.TabIndex = 0;
             guna2Button6.Text = "Close";
             guna2Button6.Click += guna2Button6_Click;
@@ -767,10 +765,10 @@
             bntServerStatus.FillColor = Color.White;
             bntServerStatus.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             bntServerStatus.ForeColor = Color.Black;
-            bntServerStatus.Location = new Point(441, 2);
+            bntServerStatus.Location = new Point(353, 2);
             bntServerStatus.Margin = new Padding(2);
             bntServerStatus.Name = "bntServerStatus";
-            bntServerStatus.Size = new Size(436, 34);
+            bntServerStatus.Size = new Size(348, 29);
             bntServerStatus.TabIndex = 0;
             bntServerStatus.Text = "Status";
             bntServerStatus.Click += bntServerStatusClick;
@@ -809,7 +807,7 @@
             conMenu.RenderStyle.SelectionForeColor = Color.White;
             conMenu.RenderStyle.SeparatorColor = Color.Gainsboro;
             conMenu.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            conMenu.Size = new Size(194, 196);
+            conMenu.Size = new Size(172, 160);
             conMenu.Text = "&Close Stream";
             // 
             // conMenuStatus
@@ -817,25 +815,25 @@
             conMenuStatus.Enabled = false;
             conMenuStatus.ForeColor = SystemColors.AppWorkspace;
             conMenuStatus.Name = "conMenuStatus";
-            conMenuStatus.Size = new Size(193, 30);
+            conMenuStatus.Size = new Size(171, 24);
             conMenuStatus.Text = "Server : n/a";
             // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(190, 6);
+            toolStripSeparator1.Size = new Size(168, 6);
             // 
             // toolStripMenuItem1
             // 
             toolStripMenuItem1.Name = "toolStripMenuItem1";
-            toolStripMenuItem1.Size = new Size(193, 30);
+            toolStripMenuItem1.Size = new Size(171, 24);
             toolStripMenuItem1.Text = "Bibliothek";
             toolStripMenuItem1.Click += toolStripMenuItem1_Click;
             // 
             // conMenuShowConsole
             // 
             conMenuShowConsole.Name = "conMenuShowConsole";
-            conMenuShowConsole.Size = new Size(193, 30);
+            conMenuShowConsole.Size = new Size(171, 24);
             conMenuShowConsole.Text = "Show Console";
             conMenuShowConsole.Click += conMenuShowConsole_Click;
             // 
@@ -843,19 +841,19 @@
             // 
             conMenuCloseStream.AutoToolTip = true;
             conMenuCloseStream.Name = "conMenuCloseStream";
-            conMenuCloseStream.Size = new Size(193, 30);
+            conMenuCloseStream.Size = new Size(171, 24);
             conMenuCloseStream.Text = "Close Stream";
             conMenuCloseStream.Click += conMenuCloseStream_Click;
             // 
             // toolStripSeparator2
             // 
             toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(190, 6);
+            toolStripSeparator2.Size = new Size(168, 6);
             // 
             // aboutToolStripMenuItem
             // 
             aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            aboutToolStripMenuItem.Size = new Size(193, 30);
+            aboutToolStripMenuItem.Size = new Size(171, 24);
             aboutToolStripMenuItem.Text = "About";
             aboutToolStripMenuItem.Click += aboutToolStripMenuItem_Click;
             // 
@@ -864,7 +862,7 @@
             conMenuVersion.Enabled = false;
             conMenuVersion.ForeColor = SystemColors.AppWorkspace;
             conMenuVersion.Name = "conMenuVersion";
-            conMenuVersion.Size = new Size(193, 30);
+            conMenuVersion.Size = new Size(171, 24);
             conMenuVersion.Text = "Version : n/a";
             // 
             // FolderBrowser_Host
@@ -891,7 +889,7 @@
             inTrayCon.RenderStyle.SelectionForeColor = Color.White;
             inTrayCon.RenderStyle.SeparatorColor = Color.Gainsboro;
             inTrayCon.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            inTrayCon.Size = new Size(184, 101);
+            inTrayCon.Size = new Size(166, 87);
             // 
             // toolStripTextBox1
             // 
@@ -904,28 +902,28 @@
             // toolStripSeparator3
             // 
             toolStripSeparator3.Name = "toolStripSeparator3";
-            toolStripSeparator3.Size = new Size(180, 6);
+            toolStripSeparator3.Size = new Size(162, 6);
             // 
             // toolStripMenuItem2
             // 
             toolStripMenuItem2.Name = "toolStripMenuItem2";
-            toolStripMenuItem2.Size = new Size(183, 30);
+            toolStripMenuItem2.Size = new Size(165, 24);
             toolStripMenuItem2.Text = "Close Stream";
             toolStripMenuItem2.Click += toolStripMenuItem2_Click;
             // 
             // toolStripMenuItem3
             // 
             toolStripMenuItem3.Name = "toolStripMenuItem3";
-            toolStripMenuItem3.Size = new Size(183, 30);
+            toolStripMenuItem3.Size = new Size(165, 24);
             toolStripMenuItem3.Text = "About";
             // 
             // lblCode
             // 
             lblCode.AutoSize = true;
-            lblCode.Location = new Point(234, 56);
+            lblCode.Location = new Point(187, 46);
             lblCode.Margin = new Padding(2, 0, 2, 0);
             lblCode.Name = "lblCode";
-            lblCode.Size = new Size(36, 24);
+            lblCode.Size = new Size(31, 20);
             lblCode.TabIndex = 4;
             lblCode.Text = "n/a";
             lblCode.Click += label1_Click;
@@ -933,10 +931,10 @@
             // label16
             // 
             label16.AutoSize = true;
-            label16.Location = new Point(36, 56);
+            label16.Location = new Point(29, 46);
             label16.Margin = new Padding(2, 0, 2, 0);
             label16.Name = "label16";
-            label16.Size = new Size(61, 24);
+            label16.Size = new Size(51, 20);
             label16.TabIndex = 4;
             label16.Text = "Code :";
             label16.Click += label2_Click;
@@ -944,29 +942,29 @@
             // lblProduct
             // 
             lblProduct.AutoSize = true;
-            lblProduct.Location = new Point(238, 146);
+            lblProduct.Location = new Point(190, 122);
             lblProduct.Margin = new Padding(2, 0, 2, 0);
             lblProduct.Name = "lblProduct";
-            lblProduct.Size = new Size(36, 24);
+            lblProduct.Size = new Size(31, 20);
             lblProduct.TabIndex = 4;
             lblProduct.Text = "n/a";
             // 
             // label18
             // 
             label18.AutoSize = true;
-            label18.Location = new Point(36, 146);
+            label18.Location = new Point(29, 122);
             label18.Margin = new Padding(2, 0, 2, 0);
             label18.Name = "label18";
-            label18.Size = new Size(86, 24);
+            label18.Size = new Size(71, 20);
             label18.TabIndex = 4;
             label18.Text = "Product : ";
             // 
             // lblExpires
             // 
-            lblExpires.Location = new Point(234, 100);
+            lblExpires.Location = new Point(187, 83);
             lblExpires.Margin = new Padding(2, 0, 2, 0);
             lblExpires.Name = "lblExpires";
-            lblExpires.Size = new Size(218, 36);
+            lblExpires.Size = new Size(174, 30);
             lblExpires.TabIndex = 4;
             lblExpires.Text = "n/a";
             lblExpires.Click += lblDomain_Click;
@@ -974,20 +972,20 @@
             // label20
             // 
             label20.AutoSize = true;
-            label20.Location = new Point(36, 100);
+            label20.Location = new Point(29, 83);
             label20.Margin = new Padding(2, 0, 2, 0);
             label20.Name = "label20";
-            label20.Size = new Size(79, 24);
+            label20.Size = new Size(67, 20);
             label20.TabIndex = 4;
             label20.Text = "Expires : ";
             // 
             // lblProductVersion
             // 
             lblProductVersion.AutoSize = true;
-            lblProductVersion.Location = new Point(236, 190);
+            lblProductVersion.Location = new Point(189, 158);
             lblProductVersion.Margin = new Padding(2, 0, 2, 0);
             lblProductVersion.Name = "lblProductVersion";
-            lblProductVersion.Size = new Size(36, 24);
+            lblProductVersion.Size = new Size(31, 20);
             lblProductVersion.TabIndex = 4;
             lblProductVersion.Text = "n/a";
             // 
@@ -1003,11 +1001,11 @@
             // 
             // thumbnailViewer2
             // 
-            thumbnailViewer2.Location = new Point(312, 300);
+            thumbnailViewer2.Location = new Point(250, 250);
             thumbnailViewer2.Margin = new Padding(2);
             thumbnailViewer2.Name = "thumbnailViewer2";
             thumbnailViewer2.ScaleSmallerThumbnails = true;
-            thumbnailViewer2.Size = new Size(10, 10);
+            thumbnailViewer2.Size = new Size(8, 8);
             thumbnailViewer2.TabIndex = 0;
             thumbnailViewer2.Text = "thumbnailViewer1";
             thumbnailViewer2.ThumbnailAlignment = ContentAlignment.MiddleCenter;
@@ -1025,10 +1023,10 @@
             // 
             // lbliv
             // 
-            lbliv.Location = new Point(135, 65);
+            lbliv.Location = new Point(108, 54);
             lbliv.Margin = new Padding(2, 0, 2, 0);
             lbliv.Name = "lbliv";
-            lbliv.Size = new Size(305, 48);
+            lbliv.Size = new Size(244, 40);
             lbliv.TabIndex = 4;
             lbliv.Text = "n/a";
             lbliv.Click += label1_Click;
@@ -1036,19 +1034,19 @@
             // label14
             // 
             label14.AutoSize = true;
-            label14.Location = new Point(58, 129);
+            label14.Location = new Point(46, 107);
             label14.Margin = new Padding(2, 0, 2, 0);
             label14.Name = "label14";
-            label14.Size = new Size(48, 24);
+            label14.Size = new Size(41, 20);
             label14.TabIndex = 4;
             label14.Text = "KEY: ";
             // 
             // lblkey
             // 
-            lblkey.Location = new Point(136, 129);
+            lblkey.Location = new Point(109, 107);
             lblkey.Margin = new Padding(2, 0, 2, 0);
             lblkey.Name = "lblkey";
-            lblkey.Size = new Size(304, 91);
+            lblkey.Size = new Size(243, 76);
             lblkey.TabIndex = 4;
             lblkey.Text = "n/a";
             // 
@@ -1062,11 +1060,11 @@
             collapsibleGroupBox4.Controls.Add(lblCode);
             collapsibleGroupBox4.Controls.Add(lblProductVersion);
             collapsibleGroupBox4.Controls.Add(lblProduct);
-            collapsibleGroupBox4.Location = new Point(24, 578);
+            collapsibleGroupBox4.Location = new Point(19, 482);
             collapsibleGroupBox4.Margin = new Padding(2);
             collapsibleGroupBox4.Name = "collapsibleGroupBox4";
             collapsibleGroupBox4.Padding = new Padding(2);
-            collapsibleGroupBox4.Size = new Size(470, 242);
+            collapsibleGroupBox4.Size = new Size(376, 202);
             collapsibleGroupBox4.TabIndex = 8;
             collapsibleGroupBox4.TabStop = false;
             collapsibleGroupBox4.Text = "License";
@@ -1075,10 +1073,10 @@
             // label19
             // 
             label19.AutoSize = true;
-            label19.Location = new Point(38, 190);
+            label19.Location = new Point(30, 158);
             label19.Margin = new Padding(2, 0, 2, 0);
             label19.Name = "label19";
-            label19.Size = new Size(88, 24);
+            label19.Size = new Size(74, 20);
             label19.TabIndex = 4;
             label19.Text = "Package : ";
             // 
@@ -1088,11 +1086,11 @@
             collapsibleGroupBox5.Controls.Add(lblkey);
             collapsibleGroupBox5.Controls.Add(label17);
             collapsibleGroupBox5.Controls.Add(label14);
-            collapsibleGroupBox5.Location = new Point(24, 856);
+            collapsibleGroupBox5.Location = new Point(19, 714);
             collapsibleGroupBox5.Margin = new Padding(2);
             collapsibleGroupBox5.Name = "collapsibleGroupBox5";
             collapsibleGroupBox5.Padding = new Padding(2);
-            collapsibleGroupBox5.Size = new Size(470, 244);
+            collapsibleGroupBox5.Size = new Size(376, 203);
             collapsibleGroupBox5.TabIndex = 8;
             collapsibleGroupBox5.TabStop = false;
             collapsibleGroupBox5.Text = "Encryption";
@@ -1101,10 +1099,10 @@
             // label17
             // 
             label17.AutoSize = true;
-            label17.Location = new Point(58, 65);
+            label17.Location = new Point(46, 54);
             label17.Margin = new Padding(2, 0, 2, 0);
             label17.Name = "label17";
-            label17.Size = new Size(30, 24);
+            label17.Size = new Size(25, 20);
             label17.TabIndex = 4;
             label17.Text = "IV:";
             // 
@@ -1118,11 +1116,11 @@
             collapsibleGroupBox1.Controls.Add(label13);
             collapsibleGroupBox1.Controls.Add(label26);
             collapsibleGroupBox1.Controls.Add(lblVersion);
-            collapsibleGroupBox1.Location = new Point(24, 16);
+            collapsibleGroupBox1.Location = new Point(19, 14);
             collapsibleGroupBox1.Margin = new Padding(2);
             collapsibleGroupBox1.Name = "collapsibleGroupBox1";
             collapsibleGroupBox1.Padding = new Padding(2);
-            collapsibleGroupBox1.Size = new Size(470, 235);
+            collapsibleGroupBox1.Size = new Size(376, 196);
             collapsibleGroupBox1.TabIndex = 8;
             collapsibleGroupBox1.TabStop = false;
             collapsibleGroupBox1.Text = "Application";
@@ -1130,10 +1128,10 @@
             // 
             // lblDomain_2
             // 
-            lblDomain_2.Location = new Point(224, 188);
+            lblDomain_2.Location = new Point(179, 157);
             lblDomain_2.Margin = new Padding(2, 0, 2, 0);
             lblDomain_2.Name = "lblDomain_2";
-            lblDomain_2.Size = new Size(228, 35);
+            lblDomain_2.Size = new Size(182, 29);
             lblDomain_2.TabIndex = 4;
             lblDomain_2.Text = "n/a";
             lblDomain_2.Click += lblDomain_Click;
@@ -1141,49 +1139,59 @@
             // label24
             // 
             label24.AutoSize = true;
-            label24.Location = new Point(38, 53);
+            label24.Location = new Point(30, 44);
             label24.Margin = new Padding(2, 0, 2, 0);
             label24.Name = "label24";
-            label24.Size = new Size(86, 24);
+            label24.Size = new Size(72, 20);
             label24.TabIndex = 4;
             label24.Text = "Security : ";
             // 
             // label25
             // 
             label25.AutoSize = true;
-            label25.Location = new Point(38, 97);
+            label25.Location = new Point(30, 81);
             label25.Margin = new Padding(2, 0, 2, 0);
             label25.Name = "label25";
-            label25.Size = new Size(82, 24);
+            label25.Size = new Size(68, 20);
             label25.TabIndex = 4;
             label25.Text = "Version : ";
             // 
             // label26
             // 
             label26.AutoSize = true;
-            label26.Location = new Point(224, 53);
+            label26.Location = new Point(179, 44);
             label26.Margin = new Padding(2, 0, 2, 0);
             label26.Name = "label26";
-            label26.Size = new Size(92, 24);
+            label26.Size = new Size(78, 20);
             label26.TabIndex = 4;
             label26.Text = "Solid Core";
             // 
             // collapsibleGroupBox2
             // 
+            collapsibleGroupBox2.Controls.Add(richTxtStatus);
             collapsibleGroupBox2.Controls.Add(guna2Button8);
             collapsibleGroupBox2.Controls.Add(bntCheck);
-            collapsibleGroupBox2.Controls.Add(richTxtStatus);
+            collapsibleGroupBox2.Controls.Add(label6);
             collapsibleGroupBox2.Controls.Add(label27);
-            collapsibleGroupBox2.Controls.Add(lblUpdaterPros);
-            collapsibleGroupBox2.Location = new Point(24, 275);
+            collapsibleGroupBox2.Location = new Point(19, 229);
             collapsibleGroupBox2.Margin = new Padding(2);
             collapsibleGroupBox2.Name = "collapsibleGroupBox2";
             collapsibleGroupBox2.Padding = new Padding(2);
-            collapsibleGroupBox2.Size = new Size(470, 268);
+            collapsibleGroupBox2.Size = new Size(376, 223);
             collapsibleGroupBox2.TabIndex = 8;
             collapsibleGroupBox2.TabStop = false;
             collapsibleGroupBox2.Text = "Updates";
             collapsibleGroupBox2.Enter += collapsibleGroupBox4_Enter;
+            // 
+            // richTxtStatus
+            // 
+            richTxtStatus.BorderStyle = BorderStyle.None;
+            richTxtStatus.Location = new Point(29, 123);
+            richTxtStatus.Margin = new Padding(2);
+            richTxtStatus.Name = "richTxtStatus";
+            richTxtStatus.Size = new Size(323, 96);
+            richTxtStatus.TabIndex = 7;
+            richTxtStatus.Text = "";
             // 
             // guna2Button8
             // 
@@ -1198,10 +1206,10 @@
             guna2Button8.FocusedColor = Color.FromArgb(100, 170, 209);
             guna2Button8.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             guna2Button8.ForeColor = Color.White;
-            guna2Button8.Location = new Point(154, 60);
+            guna2Button8.Location = new Point(123, 50);
             guna2Button8.Margin = new Padding(2);
             guna2Button8.Name = "guna2Button8";
-            guna2Button8.Size = new Size(288, 33);
+            guna2Button8.Size = new Size(230, 27);
             guna2Button8.TabIndex = 6;
             guna2Button8.Text = "Open Feed";
             guna2Button8.Click += bntUFeed;
@@ -1219,44 +1227,35 @@
             bntCheck.FocusedColor = Color.FromArgb(100, 170, 209);
             bntCheck.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             bntCheck.ForeColor = Color.White;
-            bntCheck.Location = new Point(154, 110);
+            bntCheck.Location = new Point(123, 92);
             bntCheck.Margin = new Padding(2);
             bntCheck.Name = "bntCheck";
-            bntCheck.Size = new Size(288, 33);
+            bntCheck.Size = new Size(230, 27);
             bntCheck.TabIndex = 6;
             bntCheck.Text = "Check";
             bntCheck.Click += bntUpdate;
             // 
-            // richTxtStatus
+            // label6
             // 
-            richTxtStatus.BorderStyle = BorderStyle.None;
-            richTxtStatus.Location = new Point(36, 164);
-            richTxtStatus.Margin = new Padding(2);
-            richTxtStatus.Name = "richTxtStatus";
-            richTxtStatus.Size = new Size(406, 85);
-            richTxtStatus.TabIndex = 5;
-            richTxtStatus.Text = "";
+            label6.AutoSize = true;
+            label6.Location = new Point(30, 93);
+            label6.Margin = new Padding(2, 0, 2, 0);
+            label6.Name = "label6";
+            label6.Size = new Size(65, 20);
+            label6.TabIndex = 4;
+            label6.Text = "Update :";
+            label6.Click += label2_Click;
             // 
             // label27
             // 
             label27.AutoSize = true;
-            label27.Location = new Point(36, 60);
+            label27.Location = new Point(29, 50);
             label27.Margin = new Padding(2, 0, 2, 0);
             label27.Name = "label27";
-            label27.Size = new Size(57, 24);
+            label27.Size = new Size(48, 20);
             label27.TabIndex = 4;
             label27.Text = "Feed :";
             label27.Click += label2_Click;
-            // 
-            // lblUpdaterPros
-            // 
-            lblUpdaterPros.AutoSize = true;
-            lblUpdaterPros.Location = new Point(36, 110);
-            lblUpdaterPros.Margin = new Padding(2, 0, 2, 0);
-            lblUpdaterPros.Name = "lblUpdaterPros";
-            lblUpdaterPros.Size = new Size(82, 24);
-            lblUpdaterPros.TabIndex = 4;
-            lblUpdaterPros.Text = "Update : ";
             // 
             // panel1
             // 
@@ -1269,7 +1268,7 @@
             panel1.Location = new Point(2, 2);
             panel1.Margin = new Padding(2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(543, 560);
+            panel1.Size = new Size(434, 466);
             panel1.TabIndex = 9;
             // 
             // pnlControls
@@ -1287,10 +1286,10 @@
             pnlControls.Controls.Add(txtMediaFolder);
             pnlControls.Controls.Add(chbDistFolder);
             pnlControls.Controls.Add(txtPort);
-            pnlControls.Location = new Point(569, 2);
+            pnlControls.Location = new Point(456, 2);
             pnlControls.Margin = new Padding(2);
             pnlControls.Name = "pnlControls";
-            pnlControls.Size = new Size(889, 560);
+            pnlControls.Size = new Size(710, 466);
             pnlControls.TabIndex = 10;
             // 
             // button2
@@ -1298,10 +1297,10 @@
             button2.Anchor = AnchorStyles.None;
             button2.BackgroundImage = Properties.Resources.icons8_file_folder_32;
             button2.BackgroundImageLayout = ImageLayout.Zoom;
-            button2.Location = new Point(538, 263);
+            button2.Location = new Point(430, 220);
             button2.Margin = new Padding(2);
             button2.Name = "button2";
-            button2.Size = new Size(45, 28);
+            button2.Size = new Size(36, 23);
             button2.TabIndex = 7;
             button2.UseVisualStyleBackColor = true;
             button2.Click += ChangeRec;
@@ -1311,10 +1310,10 @@
             button1.Anchor = AnchorStyles.None;
             button1.BackgroundImage = Properties.Resources.icons8_file_folder_32;
             button1.BackgroundImageLayout = ImageLayout.Zoom;
-            button1.Location = new Point(538, 301);
+            button1.Location = new Point(430, 252);
             button1.Margin = new Padding(2);
             button1.Name = "button1";
-            button1.Size = new Size(45, 28);
+            button1.Size = new Size(36, 23);
             button1.TabIndex = 7;
             button1.UseVisualStyleBackColor = true;
             button1.Click += ChangeDist;
@@ -1326,10 +1325,10 @@
             lblquote.BackColor = Color.Transparent;
             lblquote.Font = new Font("Nirmala UI", 8F, FontStyle.Regular, GraphicsUnit.Point);
             lblquote.ImageAlign = ContentAlignment.TopLeft;
-            lblquote.Location = new Point(28, 71);
+            lblquote.Location = new Point(21, 57);
             lblquote.Margin = new Padding(2, 0, 2, 0);
             lblquote.Name = "lblquote";
-            lblquote.Size = new Size(902, 46);
+            lblquote.Size = new Size(705, 38);
             lblquote.TabIndex = 4;
             lblquote.Text = "LILO Framework Host";
             lblquote.Click += label2_Click;
@@ -1346,10 +1345,9 @@
             guna2ComboBox1.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             guna2ComboBox1.ForeColor = Color.FromArgb(68, 88, 112);
             guna2ComboBox1.ItemHeight = 30;
-            guna2ComboBox1.Location = new Point(42, 46);
-            guna2ComboBox1.Margin = new Padding(4);
+            guna2ComboBox1.Location = new Point(26, 38);
             guna2ComboBox1.Name = "guna2ComboBox1";
-            guna2ComboBox1.Size = new Size(245, 36);
+            guna2ComboBox1.Size = new Size(170, 36);
             guna2ComboBox1.TabIndex = 11;
             guna2ComboBox1.SelectedValueChanged += guna2ComboBox1_SelectedValueChanged;
             // 
@@ -1375,79 +1373,107 @@
             guna2CircleButton1.ForeColor = Color.White;
             guna2CircleButton1.Image = Properties.Resources.icons8_settings_32;
             guna2CircleButton1.IndicateFocus = true;
-            guna2CircleButton1.Location = new Point(296, 45);
+            guna2CircleButton1.Location = new Point(240, 37);
             guna2CircleButton1.Margin = new Padding(2);
             guna2CircleButton1.Name = "guna2CircleButton1";
             guna2CircleButton1.PressedColor = Color.FromArgb(100, 170, 209);
             guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            guna2CircleButton1.Size = new Size(37, 37);
+            guna2CircleButton1.Size = new Size(31, 31);
             guna2CircleButton1.TabIndex = 13;
             guna2CircleButton1.Click += guna2CircleButton1_Click;
             // 
-            // guna2Panel4
+            // headerLeft
             // 
-            guna2Panel4.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            guna2Panel4.BackColor = Color.Transparent;
-            guna2Panel4.BorderRadius = 30;
-            guna2Panel4.Controls.Add(lblquote);
-            guna2Panel4.Controls.Add(lblGreeting);
-            guna2Panel4.FillColor = Color.Azure;
-            guna2Panel4.Location = new Point(34, 26);
-            guna2Panel4.Name = "guna2Panel4";
-            guna2Panel4.Size = new Size(1061, 124);
-            guna2Panel4.TabIndex = 14;
+            headerLeft.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            headerLeft.BackColor = Color.Transparent;
+            headerLeft.BorderRadius = 30;
+            headerLeft.Controls.Add(lblquote);
+            headerLeft.Controls.Add(lblGreeting);
+            headerLeft.FillColor = Color.Azure;
+            headerLeft.Location = new Point(27, 22);
+            headerLeft.Margin = new Padding(2);
+            headerLeft.Name = "headerLeft";
+            headerLeft.Size = new Size(849, 103);
+            headerLeft.TabIndex = 14;
             // 
-            // guna2Panel5
+            // headerRight
             // 
-            guna2Panel5.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            guna2Panel5.BackColor = Color.Transparent;
-            guna2Panel5.BorderRadius = 30;
-            guna2Panel5.Controls.Add(guna2ComboBox1);
-            guna2Panel5.Controls.Add(guna2CircleButton1);
-            guna2Panel5.FillColor = Color.Azure;
-            guna2Panel5.Location = new Point(1113, 26);
-            guna2Panel5.Name = "guna2Panel5";
-            guna2Panel5.Size = new Size(365, 124);
-            guna2Panel5.TabIndex = 15;
+            headerRight.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            headerRight.BackColor = Color.Transparent;
+            headerRight.BorderRadius = 30;
+            headerRight.Controls.Add(guna2ComboBox1);
+            headerRight.Controls.Add(guna2CircleButton2);
+            headerRight.Controls.Add(guna2CircleButton1);
+            headerRight.FillColor = Color.Azure;
+            headerRight.Location = new Point(890, 22);
+            headerRight.Margin = new Padding(2);
+            headerRight.Name = "headerRight";
+            headerRight.Size = new Size(292, 103);
+            headerRight.TabIndex = 15;
+            // 
+            // guna2CircleButton2
+            // 
+            guna2CircleButton2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            guna2CircleButton2.Animated = true;
+            guna2CircleButton2.BorderColor = Color.Gainsboro;
+            guna2CircleButton2.BorderThickness = 2;
+            guna2CircleButton2.DisabledState.BorderColor = Color.DarkGray;
+            guna2CircleButton2.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2CircleButton2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2CircleButton2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2CircleButton2.FocusedColor = Color.FromArgb(100, 170, 209);
+            guna2CircleButton2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            guna2CircleButton2.ForeColor = Color.White;
+            guna2CircleButton2.Image = Properties.Resources.icons8_plus_math_32;
+            guna2CircleButton2.IndicateFocus = true;
+            guna2CircleButton2.Location = new Point(204, 38);
+            guna2CircleButton2.Margin = new Padding(2);
+            guna2CircleButton2.Name = "guna2CircleButton2";
+            guna2CircleButton2.PressedColor = Color.FromArgb(100, 170, 209);
+            guna2CircleButton2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            guna2CircleButton2.Size = new Size(31, 30);
+            guna2CircleButton2.TabIndex = 13;
+            guna2CircleButton2.Click += bntAddUSer;
             // 
             // dragControl
             // 
             dragControl.Fixed = true;
             dragControl.Horizontal = true;
-            dragControl.TargetControl = _outputTextBox;
+            dragControl.TargetControl = null;
             dragControl.Vertical = true;
             // 
             // tableLayoutPanel4
             // 
             tableLayoutPanel4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             tableLayoutPanel4.ColumnCount = 3;
-            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 547F));
-            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 438F));
+            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 16F));
             tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel4.Controls.Add(pnlControls, 2, 0);
             tableLayoutPanel4.Controls.Add(panel1, 0, 0);
-            tableLayoutPanel4.Location = new Point(18, 166);
+            tableLayoutPanel4.Location = new Point(14, 138);
+            tableLayoutPanel4.Margin = new Padding(2);
             tableLayoutPanel4.Name = "tableLayoutPanel4";
             tableLayoutPanel4.RowCount = 1;
             tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel4.Size = new Size(1460, 564);
+            tableLayoutPanel4.Size = new Size(1168, 470);
             tableLayoutPanel4.TabIndex = 16;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(10F, 24F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1516, 1016);
-            Controls.Add(guna2Panel4);
+            ClientSize = new Size(1214, 842);
+            Controls.Add(headerLeft);
             Controls.Add(thumbnailViewer2);
             Controls.Add(tableLayoutPanel1);
             Controls.Add(thumbnailViewer1);
-            Controls.Add(guna2Panel5);
+            Controls.Add(headerRight);
             Controls.Add(tableLayoutPanel4);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(2);
-            MinimumSize = new Size(1540, 1074);
+            MinimumSize = new Size(1236, 873);
             Name = "Form1";
             Text = "srvlocal_gui";
             Load += Form1_Load;
@@ -1473,8 +1499,8 @@
             panel1.ResumeLayout(false);
             pnlControls.ResumeLayout(false);
             pnlControls.PerformLayout();
-            guna2Panel4.ResumeLayout(false);
-            guna2Panel5.ResumeLayout(false);
+            headerLeft.ResumeLayout(false);
+            headerRight.ResumeLayout(false);
             tableLayoutPanel4.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -1569,8 +1595,6 @@
         private Label label25;
         private Label label26;
         private Label label27;
-        private Label lblUpdaterPros;
-        private RichTextBox richTxtStatus;
         private Guna.UI2.WinForms.Guna2Button guna2Button8;
         private Guna.UI2.WinForms.Guna2Button bntCheck;
         private Panel panel1;
@@ -1583,12 +1607,16 @@
         private Ookii.Dialogs.WinForms.InputDialog passwordDialog;
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
         private Guna.UI2.WinForms.Guna2Button bntServerStatus;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
         private TableLayoutPanel tableLayoutPanel2;
         private TableLayoutPanel tableLayoutPanel3;
         private Bunifu.Framework.UI.BunifuDragControl dragControl;
         private TableLayoutPanel tableLayoutPanel4;
         private System.CodeDom.CodeTypeReference sToggleButton1;
+        private RichTextBox richTxtStatus;
+        private TextBox _outputTextbox;
+        private Label label6;
+        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton2;
+        public Guna.UI2.WinForms.Guna2Panel headerLeft;
+        public Guna.UI2.WinForms.Guna2Panel headerRight;
     }
 }

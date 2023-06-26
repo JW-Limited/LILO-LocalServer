@@ -21,7 +21,7 @@ namespace srvlocal_gui
 
             this.visible = visible;
 
-            var noti = new Form1();
+            var noti = Form1.Instance /*(arg)*/;
             noti.NotyFi(true);
 
             this.Visible = visible;

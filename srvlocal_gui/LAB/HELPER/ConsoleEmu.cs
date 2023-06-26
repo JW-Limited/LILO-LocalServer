@@ -15,24 +15,22 @@ namespace srvlocal_gui
     {
         private static object _lock = new object();
         private static ConsoleEmu _instance;
-        private static Process ConsoleHandle = new Process();
 
 
-        public static ConsoleEmu Instance(Process proc = null)
+        public static ConsoleEmu Instance()
         {
-            //lock (_lock)
+            lock (_lock)
             {
                 if (_instance == null)
                 {
-                    return new ConsoleEmu(proc);
+                    return new ConsoleEmu();
                 }
                 return _instance;
             }
         }
 
-        private ConsoleEmu(Process proc)
+        public ConsoleEmu()
         {
-            ConsoleHandle = proc;
             InitializeComponent();
         }
 
@@ -43,7 +41,7 @@ namespace srvlocal_gui
 
         private void ConsoleEmu_Shown(object sender, EventArgs e)
         {
-           
+
         }
     }
 }

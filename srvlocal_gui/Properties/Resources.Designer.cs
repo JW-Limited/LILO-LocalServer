@@ -221,6 +221,16 @@ namespace srvlocal_gui.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_plus_math_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_plus_math_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Icon ähnlich wie (Symbol).
         /// </summary>
         internal static System.Drawing.Icon icons8_print {
@@ -386,6 +396,16 @@ namespace srvlocal_gui.Properties {
         internal static System.Drawing.Bitmap icons8_time_machine_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8_time_machine_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap kl {
+            get {
+                object obj = ResourceManager.GetObject("kl", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

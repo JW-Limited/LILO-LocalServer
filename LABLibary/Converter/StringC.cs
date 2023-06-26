@@ -70,7 +70,21 @@ namespace LABLibary.Converter
                 sb.Append(b.ToString("X2"));
             }
             return sb.ToString();
-        }  
+        }
+
+        public static byte[] ConvertToByteArray(string nonBase64String)
+        {
+            // Convert the non-Base64 string to bytes
+            byte[] bytes = Encoding.UTF8.GetBytes(nonBase64String);
+
+            // Convert the bytes to a Base64 encoded string
+            string base64String = Convert.ToBase64String(bytes);
+
+            // Convert the Base64 encoded string to a byte array
+            byte[] byteArray = Convert.FromBase64String(base64String);
+
+            return byteArray;
+        }
 
 
     }
@@ -150,6 +164,8 @@ namespace LABLibary.Converter
         {
             return BitConverter.GetBytes(value);
         }
+
+        
     }
     public class EnumC
     {

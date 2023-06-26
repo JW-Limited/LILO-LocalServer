@@ -19,6 +19,7 @@ using System.Reflection.Metadata;
 using ConsoleTables;
 using System.Windows.Forms;
 using srvlocal.Api;
+using srvlocal.error_handling;
 
 namespace Local
 {
@@ -207,8 +208,10 @@ namespace Local
                     Console.Title = "LILO™ LocalServer";
                     var server = new Server(distDirectory, _port);
 
-                    var threadMain = new Thread(server.Start);
-                    threadMain.Start();
+                    Task.Run(async () =>
+                    {
+                        await server.Start();
+                    });
                 }
                 catch (HttpListenerException httpEx)
                 {
@@ -351,28 +354,14 @@ namespace Local
 
         }
 
-        public void Start()
+        public async Task Start()
         {
             try
             {
-
-
                 var mediasvr = new MediaServer();
-                try
-                {
-                    mediasvr.Start();
+                mediasvr.Start();
 
-                    if (!mediasvr._isRunning)
-                    {
-                        var error = new Errorhandling();
-                        error.ThrowError("The MediaServer is not reachable!");
-                    }
-
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine($"{DateTime.Now} : {ex.Message}");
-                }
+                await WaitForMediaServerRunning(mediasvr);
 
                 _listener.Start();
                 if (_listener.IsListening)
@@ -381,14 +370,29 @@ namespace Local
                     Console.WriteLine();
                     Console.WriteLine("Listening for requests...");
 
-                    var thread = new Thread(HandelRequest);
-                    thread.Start();
-                    thread.Join();
+                    HandelRequest();
                 }
             }
             catch (Exception ex)
             {
                 ChangePort(_port);
+            }
+        }
+
+        private async Task WaitForMediaServerRunning(MediaServer mediasvr)
+        {
+            var timeout = TimeSpan.FromSeconds(10);
+            var stopwatch = Stopwatch.StartNew();
+
+            while (!mediasvr._isRunning)
+            {
+                if (stopwatch.Elapsed > timeout)
+                {
+                    var error = new Errorhandling();
+                    error.ThrowError("The MediaServer is not reachable!");
+                }
+
+                await Task.Delay(500);
             }
         }
 
@@ -398,24 +402,26 @@ namespace Local
             {
                 var inter = new LABLibary.Interface.CommunicationInterface();
 
+                try
+                {
+                    var responseString = inter.ReceiveFromDefaultBuffer();
+                    if (responseString is not null)
+                    {
+                        LogRequest(null, false, responseString); responseString = null;
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    //Handler.HandleError(context, request);
+                    Console.WriteLine("Error Accoured : " + ex.Message);
+                }
+
                 while (true)
                 {
-                    try
-                    {
-                        var responseString = inter.ReceiveFromDefaultBuffer();
-                        if (responseString != null) { LogRequest(null, false, responseString); responseString = null; }
-
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine("Error Accoured : " + ex.Message);
-                    }
-
                     var context = _listener.GetContext();
                     var request = context.Request;
                     var response = context.Response;
-
-
 
                     LogRequest(request);
                     SendLog(request);

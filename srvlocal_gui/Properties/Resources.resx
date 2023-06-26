@@ -124,20 +124,14 @@
   <data name="icons8_opened_folder_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_opened_folder_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8_file_folder_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_file_folder_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="qrcode_github.com" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\qrcode_github.com.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Ocean-backgrounds-wallpapers-HD" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Ocean-backgrounds-wallpapers-HD.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="_new" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_save_as_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_save_as_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="google_icon_131222" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\google_icon_131222.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_server_windows_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_server_windows_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,8 +139,11 @@
   <data name="icons8_save" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_save.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8_save_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_save_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8_time_machine_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_time_machine_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_time_machine_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_time_machine_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="new_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,8 +160,8 @@
   <data name="icons8_google_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_google_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8_time_machine_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_time_machine_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Ocean-backgrounds-wallpapers-HD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ocean-backgrounds-wallpapers-HD.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="dropbox_512px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dropbox_512px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -178,11 +175,8 @@
   <data name="icons8_open_file_folder_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_open_file_folder_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_new" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\new.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_time_machine_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_time_machine_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8_file_folder_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_file_folder_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_save_all_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_save_all_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,11 +190,17 @@
   <data name="icons8_close" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_close.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8_opened_folder_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_opened_folder_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8_save_all_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_save_all_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_open_file_folder_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_open_file_folder_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_save_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_save_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_file_folder_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_file_folder_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -214,8 +214,8 @@
   <data name="icons8_close_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_close_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8_opened_folder_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_opened_folder_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="google_icon_131222" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\google_icon_131222.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_save_as" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_save_as.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -228,5 +228,11 @@
   </data>
   <data name="icons8_settings_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_settings_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_plus_math_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_plus_math_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kl" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kl.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

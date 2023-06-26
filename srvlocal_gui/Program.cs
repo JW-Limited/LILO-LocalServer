@@ -17,18 +17,18 @@ using Telerik.WinControls.UI.Map.Bing;
 using Google.Apis.Gmail.v1.Data;
 using srvlocal_gui.AppMananger;
 using LABLibary.Forms;
+using System.Net;
 
 namespace srvlocal_gui
 {
     internal static class Program
     {
-        public static string AssemblyVersion
-        {
-            get
-            {
-                return Assembly.GetExecutingAssembly().GetName().Version.ToString();
-            }
-        }
+
+        /// <summary>
+        ///  The main debug ErrorManager.
+        /// </summary>
+        #region ErrorManager
+
         public static List<string> ErrorList = new List<string>();
         public static bool RestartTrue = false;
 
@@ -175,12 +175,13 @@ namespace srvlocal_gui
             LABLibary.Forms.ErrorDialog.ErrorManager.AddError(errorMessage, true, "this.Program");
         }
 
+        [MTAThread]
         private static void ShowErrorDialog()
         {
             LABLibary.Forms.ErrorDialog.Show();
         }
- 
 
+        #endregion
 
         /// <summary>
         ///  The main entry point for the application.
@@ -191,103 +192,14 @@ namespace srvlocal_gui
             Logger.Instance.LogConsoleOutput();
             Logger.Instance.Log("Started GUI...");
 
-            if (!File.Exists(SettingsFileName))
-            {
-                Logger.Instance.Log("Settings file was not found. Initializing SettingsManager and generating it.");
-
-                var admin = new User("Joey West", "admin")
-                {
-                    CanChangeConfig = true,
-                    Email = "ceo@jwlmt.com"
-                };
-
-                var guest = new User("guest", "none")
-                {
-                    CanChangeConfig = false,
-                    Email = "guest@jwlmt.com"
-                };
-
-                List<User> listUser = new List<User>
-                {
-                    admin,
-                    guest
-                };
-
-                SettingsManager.Instance.UpdateSettings(new Settings
-                {
-                    WindowTitle = "LILO-LocalServer",
-                    ProductVersion = 1,
-                    InstalledCorrectly = true,
-                    CustomPortConfig = false,
-                    CustomCDNConfig = false,
-                    Port = 8080,
-                    CDNPath = "C:\\LILO\\dist",
-                    Users = listUser
-                });
-            }
+            Prerequisite();
 
             if (Enum.TryParse(Helper.User.CheckUserPermissions(), out Helper.User._UserRights userRights))
             {
                 Console.WriteLine(SettingsManager.Instance.GetSetting(settings => settings.WindowTitle, "default value"));
-
                 ApplicationConfiguration.Initialize();
                 AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(CurrentDomain_UnhandledException);
-
-                if (!File.Exists(".\\license.labl") && !LAB.SETTINGS.config.Default.acceptedLicenseAgrement)
-                {
-                    string message = @" Dear User,
-
-                                        Before you can use this software, you must read and agree to the terms and conditions of the license agreement below.
-
-                                        License Agreement
-
-                                        This software is licensed to you by JW Limited under the terms and conditions of the following license agreement. By using this software, you are agreeing to be bound by the terms and conditions of this agreement.
-
-                                        1. Ownership and Copyright
-
-                                        The developer is the owner of all intellectual property rights in the software. The software is protected by copyright laws and international treaties. You acknowledge that no title to the intellectual property in the software is transferred to you. You further acknowledge that title and full ownership rights to the software will remain the exclusive property of the developer and/or its suppliers.
-
-                                        2. License Grant
-
-                                        The developer grants you a non-exclusive, non-transferable, limited license to use the software, subject to the terms and conditions of this agreement. You may install and use the software on one computer only. You may not distribute, sublicense, or make available copies of the software to third parties.
-
-                                        3. Restrictions
-
-                                        You may not decompile, reverse engineer, disassemble, or otherwise attempt to derive the source code for the software. You may not modify, adapt, translate, or create derivative works based on the software. You may not remove or alter any copyright, trademark, or other proprietary notices from the software.
-
-                                        4. Disclaimer of Warranties
-
-                                        THE SOFTWARE IS PROVIDED 'AS IS' WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE DEVELOPER DOES NOT WARRANT THAT THE SOFTWARE WILL MEET YOUR REQUIREMENTS OR THAT THE OPERATION OF THE SOFTWARE WILL BE UNINTERRUPTED OR ERROR-FREE.
-
-                                        5. Limitation of Liability
-
-                                        IN NO EVENT SHALL THE DEVELOPER BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES ARISING OUT OF OR IN CONNECTION WITH THE USE OR INABILITY TO USE THE SOFTWARE (INCLUDING, BUT NOT LIMITED TO, LOSS OF PROFITS, BUSINESS INTERRUPTION, OR LOSS OF INFORMATION), EVEN IF THE DEVELOPER HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. IN ANY EVENT, THE DEVELOPER'S TOTAL LIABILITY TO YOU FOR ALL DAMAGES, LOSSES, AND CAUSES OF ACTION (WHETHER IN CONTRACT, TORT (INCLUDING NEGLIGENCE), OR OTHERWISE) SHALL NOT EXCEED THE AMOUNT PAID BY YOU FOR THE SOFTWARE.
-
-                                        Please click 'Agree' to indicate that you have read and accepted the terms and conditions of this license agreement. If you do not agree to these terms, please click 'Disagree' and do not use the software.
-
-                                        Thank you for using our software.
-
-                                        Best regards,
-                                        JW Limited.";
-
-                    var result = MessageBox.Show(message, "License Agreement", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                    if (result == DialogResult.Yes)
-                    {
-                        LAB.SETTINGS.config.Default.acceptedLicenseAgrement = true;
-                        LAB.SETTINGS.config.Default.Save();
-                        LABLibary.Assistant.WriteLicense.Write(AppDomain.CurrentDomain.BaseDirectory);
-                    }
-                    else
-                    {
-                        Application.ExitThread();
-                    }
-                }
-                else
-                {
-                    LABLibary.Assistant.WriteLicense.Write(AppDomain.CurrentDomain.BaseDirectory);
-                }
-
+                AutoGenerators.ShowReadMeDialog();
                 bool startWithNoWindow = false;
 
                 foreach (var arg in args)
@@ -301,10 +213,10 @@ namespace srvlocal_gui
                             startWithNoWindow = false;
                             break;
                         case "--help":
-                            InfoDialog.Show(ShowHelp(), "Help - Or visit US");
+                            InfoDialog.Show(AutoGenerators.ShowHelp(), "Help - Or visit US");
                             return;
                         case "--version":
-                            InfoDialog.Show(ShowVersion(), "Version");
+                            InfoDialog.Show(AutoGenerators.ShowVersion(), "Version");
                             return;
                         default:
                             OpenBuilderGui(arg);
@@ -326,6 +238,52 @@ namespace srvlocal_gui
             }
         }
 
+        internal static void Prerequisite()
+        {
+            GenerateDirectoryContents("C:\\LILO\\dist");
+            GenerateDirectoryContents("C:\\LILO\\req");
+            GenerateDirectoryContents("C:\\LILO\\host");
+
+            if (!File.Exists(SettingsFileName))
+            {
+                Logger.Instance.Log("Settings file was not found. Initializing SettingsManager and generating it.");
+
+                var admin = new User(Environment.UserName, "admin")
+                {
+                    CanChangeConfig = true,
+                    Email = "ceo@jwlmt.com",
+                    FavouriteColor = Color.AliceBlue,
+                    ButtonColor = Color.FromArgb(94, 148, 255)
+                };
+
+                var guest = new User("guest", "none")
+                {
+                    CanChangeConfig = false,
+                    Email = "guest@jwlmt.com",
+                    FavouriteColor = Color.Azure,
+                    ButtonColor = Color.FromArgb(94, 148, 255)
+                };
+
+                List<User> listUser = new List<User>
+                {
+                    admin,
+                    guest
+                };
+
+                SettingsManager.Instance.UpdateSettings(new Settings
+                {
+                    WindowTitle = "LILO-LocalServer",
+                    ProductVersion = 1,
+                    InstalledCorrectly = true,
+                    CustomPortConfig = false,
+                    CustomCDNConfig = false,
+                    Port = 8080,
+                    CDNPath = "C:\\LILO\\dist",
+                    Users = listUser
+                });
+            }
+        }
+
         private static void OpenBuilderGui(string arg)
         {
             if (!CheckIfDirIsValid())
@@ -342,10 +300,10 @@ namespace srvlocal_gui
                     StringBuilder sb3 = new StringBuilder();
                     foreach (var files in GetMissingFiles())
                     {
-                        sb3.Append(" " + files+ ",");
+                        sb3.Append(" " + files + ",");
                     }
 
-                    Logger.Instance.Log("Missing resources :" + sb3.ToString(),Logger.LogLevel.Warning);
+                    Logger.Instance.Log("Missing resources :" + sb3.ToString(), Logger.LogLevel.Warning);
                     //Browser_();
                 });
             }
@@ -356,7 +314,7 @@ namespace srvlocal_gui
                 switch (DebugSettings.Default.debugForm)
                 {
                     default:
-                        startedForm = new Form1(arg);
+                        startedForm = Form1.Instance /*(arg)*/;
                         break;
                     case "builder":
                         new builder_gui(@"C:\LILO\dist\LILOApp1\LILOApp1.lab");
@@ -365,7 +323,7 @@ namespace srvlocal_gui
             }
             else
             {
-                startedForm = new Form1(arg);
+                startedForm = Form1.Instance /*(arg)*/;
             }
 
             Application.Run(startedForm);
@@ -389,6 +347,78 @@ namespace srvlocal_gui
                     }
                 };
                 process.Start();
+            }
+        }
+
+        public static void SaveRestart()
+        {
+            try
+            {
+                var settings = SettingsManager.Instance.LoadSettings();
+
+                string url = $"http://localhost:{settings.Port}/api/com?command=close&key=liloDev-420";
+                string response = MakeGetRequest(url);
+
+                if (response != null)
+                {
+                    Logger.Instance.Log(response);
+
+                    var proc = new Process();
+                    proc.StartInfo = new ProcessStartInfo()
+                    {
+                        FileName = ".\\srvlocal_gui.exe"
+                    };
+
+                    proc.Start();
+                    Application.ExitThread();
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.Instance.Log(ex.Message, logLevel: Logger.LogLevel.Error);
+            }
+        }
+
+        public static void GenerateDirectoryContents(string directoryPath)
+        {
+            if (Directory.Exists(directoryPath))
+            {
+                Logger.Instance.Log("Directory allready satisfied.");
+                return;
+            }
+
+            string[] directories = directoryPath.Split(Path.DirectorySeparatorChar);
+
+            string currentPath = "";
+            foreach (string directory in directories)
+            {
+                currentPath = Path.Combine(currentPath, directory);
+                if (!Directory.Exists(currentPath))
+                {
+                    Logger.Instance.Log("Generated directory: " + currentPath);
+                    Directory.CreateDirectory(currentPath);
+                }
+            }
+        }
+
+        private static object _lockRequest = new object();
+
+        public static string MakeGetRequest(string url)
+        {
+            lock (_lockRequest)
+            {
+                try
+                {
+                    using (var client = new WebClient())
+                    {
+                        string response = client.DownloadString(url);
+                        return response;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    return $"Error occurred while making the GET request: {ex.Message}";
+                }
             }
         }
 
@@ -429,64 +459,6 @@ namespace srvlocal_gui
         }
 
 
-        private static string ShowVersion()
-        {
-            return String.Format("JW Lmt. LILO� SrvLocal - [Local Server Application Host] version {0}", AssemblyVersion);
-        }
-
-        private static string ShowHelp()
-        {
-            var sb = new StringBuilder();
-
-            sb.AppendLine("Usage: srvlocal.exe [OPTIONS]");
-            sb.AppendLine();
-            sb.AppendLine("Options:");
-            sb.AppendLine("  --port=<port>");
-            sb.AppendLine("      Specify the port to listen on (default is 8080)");
-            sb.AppendLine();
-            sb.AppendLine("  --media-folder=<folder>");
-            sb.AppendLine("      Specify the folder to serve media data from (default is req/media)");
-            sb.AppendLine();
-            sb.AppendLine("  --folder=<folder>");
-            sb.AppendLine("      Specify the folder to serve data from (default is dist/)");
-            sb.AppendLine();
-            sb.AppendLine("  --disable-logging");
-            sb.AppendLine("      Disable request logging (default is enabled)");
-            sb.AppendLine();
-            sb.AppendLine("  --logfile=<file>");
-            sb.AppendLine("      Specify the file to log requests to (default is access.log)");
-            sb.AppendLine();
-            sb.AppendLine("  --auth");
-            sb.AppendLine("      Enable authentication for accessing the server");
-            sb.AppendLine();
-            sb.AppendLine("  --username=<username>");
-            sb.AppendLine("      Specify the username for authentication");
-            sb.AppendLine();
-            sb.AppendLine("  --password=<password>");
-            sb.AppendLine("      Specify the password for authentication");
-            sb.AppendLine();
-            sb.AppendLine("  --version");
-            sb.AppendLine("      Show the current version");
-            sb.AppendLine();
-            sb.AppendLine("  --help");
-            sb.AppendLine("      Show this help message");
-            sb.AppendLine();
-            sb.AppendLine("Examples:");
-            sb.AppendLine("  srvlocal.exe --port=8000 --folder=public");
-            sb.AppendLine("      Start the server on port 8000 and serve data from the 'public' folder");
-            sb.AppendLine();
-            sb.AppendLine("  srvlocal.exe --media-folder=data --disable-logging");
-            sb.AppendLine("      Start the server and serve media data from the 'data' folder without logging");
-            sb.AppendLine();
-            sb.AppendLine("  srvlocal.exe --auth --username=admin --password=123456");
-            sb.AppendLine("      Enable authentication with the username 'admin' and password '123456'");
-
-            return sb.ToString();
-        }
-
-
-
-
 
         public static void Browser_(string url = "https://github.com/JW-Limited/LILO-LocalServer")
         {
@@ -499,7 +471,12 @@ namespace srvlocal_gui
                 if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
                 {
                     url = url.Replace("&", "^&");
-                    Process.Start(new ProcessStartInfo("cmd", $"/c start {url}") { CreateNoWindow = false });
+                    Process.Start(new ProcessStartInfo("cmd", $"/c start {url}") 
+                    { 
+                        CreateNoWindow = true,
+                        UseShellExecute = false,
+                        ErrorDialog = false
+                    });
                 }
                 else
                 {
@@ -518,12 +495,11 @@ namespace srvlocal_gui
                 }
                 else
                 {
-                    throw;
+                    throw new NotSupportedException();
                 }
             }
         }
-    
+
     }
 }
 
-    

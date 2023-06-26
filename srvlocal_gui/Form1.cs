@@ -15,7 +15,25 @@ namespace srvlocal_gui
 {
     public partial class Form1 : Form
     {
-        public Form1(string args = null)
+        private static Form1 _instance;
+        public static object _lock = new object();
+        public static Form1 Instance
+        {
+            get
+            {
+                lock (_lock)
+                {
+                    if (_instance == null)
+                    {
+                        _instance = new Form1();
+                    }
+
+                    return _instance;
+                }
+            }
+        }
+
+        private Form1(string args = null)
         {
             InitializeComponent();
         }
@@ -29,29 +47,55 @@ namespace srvlocal_gui
         public bool UpdateDetected = false;
         public User logedInUser;
 
-        public static void GreetUser(System.Windows.Forms.Label lbl)
+        // Information from LicenseFile
+
+        public string BuildChannel = null;
+        public string LicenseScheme = null;
+        public bool DeveloperMode = false;
+        public string UserRight = null;
+
+        public static void GreetUser(System.Windows.Forms.Label lbl, User user)
         {
+            var username = user.UserName;
             DateTime currentTime = DateTime.Now;
             int currentHour = currentTime.Hour;
+            //Form1.Instance.headerLeft.FillColor = user.FavouriteColor;
+            //Form1.Instance.headerRight.FillColor = user.FavouriteColor;
+
+            Guna2Button[] allbuttons = new Guna2Button[]
+            {
+                Instance.bntCheck,
+                Instance.bntOpen,
+                Instance.bntServerStatus,
+            };
+
+            //ColorAllButtons(allbuttons, user);
 
             if (currentHour >= 5 && currentHour < 12)
             {
-                lbl.Text = ($"Guten morgen, {Environment.UserName}!");
+                lbl.Text = ($"Guten morgen, {username}!");
             }
             else if (currentHour >= 12 && currentHour < 18)
             {
-                lbl.Text = ($"Guten Tag, {Environment.UserName}!");
+                lbl.Text = ($"Guten Tag, {username}!");
             }
             else if (currentHour >= 18 && currentHour < 22)
             {
-                lbl.Text = ($"Guten Abend, {Environment.UserName}!");
+                lbl.Text = ($"Guten Abend, {username}!");
             }
             else
             {
-                lbl.Text = ($"Gute Nacht, {Environment.UserName}!");
+                lbl.Text = ($"Gute Nacht, {username}!");
             }
         }
 
+        public static void ColorAllButtons(Guna2Button[] allbuttons, User user)
+        {
+            foreach(var button in allbuttons)
+            {
+                button.BackColor = user.ButtonColor;
+            }
+        }
 
         public static string VersionApp()
         {
@@ -62,7 +106,8 @@ namespace srvlocal_gui
         private async void Form1_Load(object sender, EventArgs e)
         {
             List<User> users = SettingsManager.Instance.GetSetting(settings => settings.Users);
-            GreetUser(lblGreeting);
+            GreetUser(lblGreeting, users.FirstOrDefault());
+
             try
             {
                 foreach (var item in users)
@@ -77,32 +122,13 @@ namespace srvlocal_gui
                 Logger.Instance.Log(ex.Message, Logger.LogLevel.Error);
             }
 
-            try
-            {
-                var quote = await Helper.GetQuoteOfTheDayAsync();
-
-                try
-                {
-                    lblquote.Text = await Helper.TranslateTextAsync(quote, "de");
-                }
-                catch (Exception ex)
-                {
-                    Logger.Instance.Log(ex.Message, logLevel: Logger.LogLevel.Error);
-                    lblquote.Text = quote;
-                }
-            }
-            catch (Exception ex)
-            {
-                Logger.Instance.Log(ex.Message, logLevel: Logger.LogLevel.Error);
-                MessageBox.Show("The Server is not reachable or refused the connection.", "Server Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-            /*Ü
+            /*
             Settings setting()
             {
                 return SettingsManager.Instance.LoadSettingsAsync().Result;
             }
-            ^*/
+            */
+
             lblDomain_2.Text = AppDomain.CurrentDomain.BaseDirectory;
             lblReach.Text = Program.CheckIfDirIsValid().ToString() as string;
             ToolTip.UseAnimation = true;
@@ -135,8 +161,53 @@ namespace srvlocal_gui
             }
 
 
-            LicenseEvaluation();
+            try
+            {
+
+                LicenseEvaluation();
+
+                var quote = await Helper.GetQuoteOfTheDayAsync();
+
+                try
+                {
+                    lblquote.Text = await Helper.TranslateTextAsync(quote, "de");
+                }
+                catch (Exception ex)
+                {
+                    Logger.Instance.Log(ex.Message, logLevel: Logger.LogLevel.Error);
+                    lblquote.Text = quote;
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.Instance.Log(ex.Message, logLevel: Logger.LogLevel.Error);
+                MessageBox.Show("The Server is not reachable or refused the connection.", "Server Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
+
+        public void RefreshUserList()
+        {
+            List<User> users = SettingsManager.Instance.GetSetting(settings => settings.Users);
+            GreetUser(lblGreeting, users.FirstOrDefault());
+
+            try
+            {
+                guna2ComboBox1.Items.Clear();
+
+                foreach (var item in users)
+                {
+                    guna2ComboBox1.Items.Add(item.UserName);
+                }
+
+                guna2ComboBox1.Text = logedInUser.UserName;
+            }
+            catch (Exception ex)
+            {
+                Logger.Instance.Log(ex.Message, Logger.LogLevel.Error);
+            }
+        }
+
         private void LicenseEvaluation()
         {
             try
@@ -145,31 +216,29 @@ namespace srvlocal_gui
 
                 var license = LABLibary.Assistant.ReadLicense.Read(".\\license.labl");
                 lblCode.Text = LicenseValues.Default.licCode;
+                var decoderesult = LicenseGenerator.DecodeLicense(license.Code, out string productName, out string productVersion, out DateTime expirationDate);
 
-                if (LicenseGenerator.DecodeLicense(license.Code, out string productName, out string productVersion, out DateTime expirationDate))
+
+                if (decoderesult.SuccessFull)
                 {
                     lblExpires.Text = expirationDate.ToString();
 
                     if (expirationDate < DateTime.Now)
                     {
                         lblExpires.ForeColor = Color.Red;
-                        MessageBox.Show("Your license has expired.", "License Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+                        if (LABLibary.Interface.ApiCollection.WinRegistry.Keys.GetKeyValue("DebuggerMode") != "enabled")
+                        {
+                            this.Enabled = false;
+                            MessageBox.Show("Your license has expired.", "License Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+
                         lblProduct.Text = license.Assembly.Name;
                         lblProductVersion.Text = license.Assembly.Version.ToString();
                         lbliv.Text = LicenseValues.Default.iv;
                         lblkey.Text = LicenseValues.Default.key;
 
-                        if (LABLibary.Interface.ApiCollection.WinRegistry.Keys.GetKeyValue("DebuggerMode") != "enabled")
-                        {
-                            this.Enabled = false;
-                        }
-                        else
-                        {
-                            lblProduct.Text = license.Assembly.Name;
-                            lblProductVersion.Text = license.Assembly.Version.ToString();
-                            lbliv.Text = LicenseValues.Default.iv;
-                            lblkey.Text = LicenseValues.Default.key;
-                        }
                         return;
                     }
                 }
@@ -177,9 +246,9 @@ namespace srvlocal_gui
                 {
                     lblExpires.Text = "Invalid license code.";
                     lblExpires.ForeColor = Color.Red;
-                    MessageBox.Show("Your license code is invalid.", "License Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     if (LABLibary.Interface.ApiCollection.WinRegistry.Keys.GetKeyValue("DebuggerMode") != "enabled")
                     {
+                        MessageBox.Show(decoderesult.Info +  decoderesult.Message + decoderesult.ErrorMessage, "License Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         this.Enabled = false;
                     }
                     else
@@ -331,6 +400,10 @@ namespace srvlocal_gui
         public void RunConsoleApplication(string filePath)
         {
             var process = new Process();
+            var webClient = new WebClient();
+            int attempts = 0;
+            bool reachable = false;
+
             try
             {
                 process.StartInfo.FileName = filePath;
@@ -338,14 +411,15 @@ namespace srvlocal_gui
                 process.StartInfo.UseShellExecute = false;
                 process.StartInfo.CreateNoWindow = true;
                 process.EnableRaisingEvents = true;
-                process.OutputDataReceived += (sender, args) => _outputTextBox.Invoke(new Action(() => _outputTextBox.AppendText(args.Data + Environment.NewLine)));
+                process.OutputDataReceived += (sender, args) =>
+                {
+                    _outputTextBox.Invoke(new Action(() => _outputTextBox.AppendText(args.Data + Environment.NewLine)));
+                };
                 process.Exited += (sender, args) => NotyFi();
                 process.Start();
                 process.BeginOutputReadLine();
                 NotyFi();
-                var webClient = new WebClient();
-                int attempts = 0;
-                bool reachable = false;
+
                 while (!process.HasExited)
                 {
                     try
@@ -354,16 +428,19 @@ namespace srvlocal_gui
                         reachable = true;
                         break;
                     }
-                    catch (Exception)
+                    catch (Exception ex)
                     {
                         if (++attempts > 10)
                         {
+                            _outputTextBox.Text += "Error : " + ex.Message;
+
                             reachable = false;
                             break;
                         }
                         Thread.Sleep(5000);
                     }
                 }
+
                 lblReach.Invoke(new Action(() => lblReach.Text = reachable.ToString()));
             }
             catch (Exception ex)
@@ -403,7 +480,7 @@ namespace srvlocal_gui
                     }
                 };
 
-                process.OutputDataReceived += (sender, args) => _outputTextBox.Invoke(new Action(() => _outputTextBox.AppendText(args.Data + Environment.NewLine)));
+                process.OutputDataReceived += (sender, args) => _outputTextbox.Invoke(new Action(() => _outputTextbox.AppendText(args.Data + Environment.NewLine)));
                 process.Start();
                 process.BeginOutputReadLine();
 
@@ -456,23 +533,30 @@ namespace srvlocal_gui
             }
         }
 
-        public static string MakeGetRequest(string url)
+        
+
+        private static object _lockRequest = new object();
+
+        public string MakeGetRequest(string url)
         {
-            try
+            lock(_lockRequest)
             {
-                using (var client = new WebClient())
+                try
                 {
-                    string response = client.DownloadString(url);
-                    return response;
+                    using (var client = new WebClient())
+                    {
+                        string response = client.DownloadString(url);
+                        return response;
+                    }
                 }
-            }
-            catch (Exception ex)
-            {
-                return $"Error occurred while making the GET request: {ex.Message}";
+                catch (Exception ex)
+                {
+                    return $"Error occurred while making the GET request: {ex.Message}";
+                }
             }
         }
 
-        private async void guna2Button6_Click(object sender, EventArgs e)
+        public async void guna2Button6_Click(object sender, EventArgs e)
         {
             ConsolePanel.Visible = false;
 
@@ -545,7 +629,7 @@ namespace srvlocal_gui
                     }
                 };
 
-                process.OutputDataReceived += (sender, args) => _outputTextBox.Invoke(new Action(() => _outputTextBox.AppendText(args.Data + Environment.NewLine)));
+                process.OutputDataReceived += (sender, args) => _outputTextbox.Invoke(new Action(() => _outputTextbox.AppendText(args.Data + Environment.NewLine)));
                 process.Start();
                 process.BeginOutputReadLine();
                 while (process.HasExited == false)
@@ -716,15 +800,8 @@ namespace srvlocal_gui
 
         private void bntMEtro(object sender, EventArgs e)
         {
-            if (true)
-            {
-                MessageBox.Show("You downloaded youre Version from Github thats why the LAB is not activated.", "Activation Error", MessageBoxButtons.OK, MessageBoxIcon.Hand);
-            }
-            else
-            {
-                var setup = new Setup();
-                setup.Show();
-            }
+            var setup = new Setup();
+            setup.Show();
 
 
             this.WindowState = FormWindowState.Minimized;
@@ -853,13 +930,16 @@ namespace srvlocal_gui
 
             if (selectedUser != null)
             {
-                if (!selectedUser.IsActivated)
+                if (!selectedUser.IsActivated) throw new Exception("The user isnt activated right now.");
+
+                if (selectedUser.HashedPassword == User.ComputeHash("none"))
                 {
-                    throw new Exception("The user isnt activated right now.");
+                    pnlControls.Enabled = selectedUser.CanChangeConfig;
+                    loggedIn = selectedUser;
                 }
+
                 else
                 {
-                    //passwordDialog.UsePasswordMasking = false;
                     passwordDialog.WindowTitle = $"Login: {selectedUser.UserName}";
 
                     if (passwordDialog.ShowDialog() == DialogResult.OK)
@@ -867,21 +947,31 @@ namespace srvlocal_gui
                         if (Helper.ComputeHash(passwordDialog.Input) == selectedUser.HashedPassword)
                         {
 
-                            if (pnlControls.Enabled != selectedUser.CanChangeConfig)
-                            {
-                                pnlControls.Enabled = selectedUser.CanChangeConfig;
-                            }
-
+                            pnlControls.Enabled = selectedUser.CanChangeConfig;
                             loggedIn = selectedUser;
+
+                            RefreshUserGreeting(loggedIn);
                         }
                         else
                         {
+                            try
+                            {
+                                guna2ComboBox1.Text = loggedIn.UserName;
+                            }
+                            catch { }
                             throw new Exception($"Password for {selectedUser.UserName} is false. Please provide another password.");
                         }
                     }
                     else
                     {
-                        guna2ComboBox1.Text = "none";
+                        try
+                        {
+                            guna2ComboBox1.Text = loggedIn.UserName + "none";
+                        }
+                        catch
+                        {
+                            Application.ExitThread();
+                        }
                     }
 
                 }
@@ -905,6 +995,25 @@ namespace srvlocal_gui
             }
         }
 
+        private void bntAddUSer(object sender, EventArgs e)
+        {
+            try
+            {
+                var addUserHost = AddUser.Instance(logedInUser);
+                addUserHost.Show();
+                addUserHost.BringToFront();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Settings", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void RefreshUserGreeting(User newUser)
+        {
+            GreetUser(lblGreeting, newUser);
+        }
+
         private void bntServerStatusClick(object sender, EventArgs e)
         {
             string url = $"http://localhost:{txtPort.Text}/api/com?command=info&key=liloDev-420";
@@ -920,6 +1029,13 @@ namespace srvlocal_gui
         {
 
         }
+
+        private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+
     }
 }
 

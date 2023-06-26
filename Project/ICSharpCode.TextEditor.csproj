@@ -16,6 +16,7 @@
         <Authors>Stef Heyenrath, SharpDevelop, Qwertie and MysticBoy</Authors>
         <RootNamespace>ICSharpCode.TextEditor</RootNamespace>
         <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+        <Platforms>AnyCPU;x64</Platforms>
     </PropertyGroup>
 
     <PropertyGroup Condition="'$(Configuration)' == 'Release'">

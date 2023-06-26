@@ -22,6 +22,8 @@ namespace srvlocal_gui.AppMananger
         private bool _canChangeConfig;
         private string _LastLogin;
         private string _email;
+        private Color _colorButton;
+        private Color _color;
 
         public string LastLogin
         {
@@ -44,6 +46,11 @@ namespace srvlocal_gui.AppMananger
                 if (string.IsNullOrWhiteSpace(value))
                 {
                     throw new ArgumentException("Email cannot be null or empty");
+                }
+
+                if(!Helper.IsValidEmail(value))
+                {
+                    throw new ArgumentException("The Email that you provided isn´t in a valid Format");
                 }
                 _email = value;
             }
@@ -101,9 +108,33 @@ namespace srvlocal_gui.AppMananger
             }
         }
 
+        public Color FavouriteColor
+        {
+            get => _color;
+            set
+            {
+                _color = value;
+
+            }
+        }
+
+        public Color ButtonColor
+        {
+            get => _colorButton;
+            set
+            {
+                _colorButton = value;
+
+            }
+        }
 
         public User(string username, string password)
         {
+            if(password is null or "")
+            {
+                throw new ArgumentException("Password cannot be null or empty");
+            }
+
             IsActivated = true;
             UserName = username;
             HashedPassword = ComputeHash(password);
@@ -179,14 +210,14 @@ namespace srvlocal_gui.AppMananger
                     {
                         builder.Append(bytes[i].ToString("x2"));
                     }
-                    Logger.Instance.Log(input + " - " + builder.ToString());
+                    //Logger.Instance.Log(input + " - " + builder.ToString());
 
                     return builder.ToString();
                 }
             }
             else
             {
-                Logger.Instance.Log($"String \"{input}\" is already hashed.");
+                //Logger.Instance.Log($"String \"{input}\" is already hashed.");
 
                 return input;
             }

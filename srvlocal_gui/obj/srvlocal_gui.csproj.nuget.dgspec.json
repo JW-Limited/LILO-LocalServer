@@ -94,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400-preview.23225.8\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400-preview.23274.1\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -166,7 +166,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400-preview.23225.8\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400-preview.23274.1\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -263,12 +263,12 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400-preview.23225.8\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400-preview.23274.1\\RuntimeIdentifierGraph.json"
         }
       }
     },
     "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\srvlocal_gui\\srvlocal_gui.csproj": {
-      "version": "1.2.0",
+      "version": "1.3.0",
       "restore": {
         "projectUniqueName": "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\srvlocal_gui\\srvlocal_gui.csproj",
         "projectName": "srvlocal_gui",
@@ -346,6 +346,10 @@
               "target": "Package",
               "version": "[2.0.3.5, )"
             },
+            "Hamekoz.UI.WinForm": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
             "Markdig": {
               "target": "Package",
               "version": "[0.31.0, )"
@@ -382,6 +386,10 @@
               "target": "Package",
               "version": "[1.0.1619-prerelease, )"
             },
+            "Microsoft.WindowsAppSDK.WinUI": {
+              "target": "Package",
+              "version": "[1.0.0-experimental1, )"
+            },
             "Modern.Forms": {
               "target": "Package",
               "version": "[0.3.0, )"
@@ -393,6 +401,10 @@
             "Ookii.Dialogs.WinForms": {
               "target": "Package",
               "version": "[4.0.0, )"
+            },
+            "OpenMRU.WinForm": {
+              "target": "Package",
+              "version": "[1.3.0, )"
             },
             "ReactiveUI.Events.Winforms": {
               "target": "Package",
@@ -422,6 +434,10 @@
               "target": "Package",
               "version": "[3.1.1, )"
             },
+            "Winform.Metroframework.Design": {
+              "target": "Package",
+              "version": "[1.4.0, )"
+            },
             "Zeroit.Framework.Metro": {
               "target": "Package",
               "version": "[1.0.0, )"
@@ -433,6 +449,10 @@
             "bunifu.utils": {
               "target": "Package",
               "version": "[1.0.6, )"
+            },
+            "naudio.winforms": {
+              "target": "Package",
+              "version": "[2.1.0, )"
             },
             "sipaaframework": {
               "target": "Package",
@@ -462,7 +482,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400-preview.23225.8\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400-preview.23274.1\\RuntimeIdentifierGraph.json"
         }
       }
     },

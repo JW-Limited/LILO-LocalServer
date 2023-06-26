@@ -341,6 +341,15 @@
           "lib/net40/Guna.UI2.dll": {}
         }
       },
+      "Hamekoz.UI.WinForm/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net48/Hamekoz.UI.WinForm.dll": {}
+        },
+        "runtime": {
+          "lib/net48/Hamekoz.UI.WinForm.dll": {}
+        }
+      },
       "HarfBuzzSharp/2.8.2.1": {
         "type": "package",
         "dependencies": {
@@ -829,7 +838,7 @@
           "System.Security.Principal.Windows": "4.7.0"
         },
         "compile": {
-          "ref/netstandard2.0/_._": {
+          "ref/netstandard2.0/Microsoft.Win32.Registry.dll": {
             "related": ".xml"
           }
         },
@@ -940,6 +949,13 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
+      "Microsoft.WindowsAppSDK.WinUI/1.0.0-experimental1": {
+        "type": "package",
+        "build": {
+          "buildTransitive/Microsoft.WindowsAppSDK.WinUI.props": {},
+          "buildTransitive/Microsoft.WindowsAppSDK.WinUI.targets": {}
+        }
+      },
       "Modern.Forms/0.3.0": {
         "type": "package",
         "dependencies": {
@@ -991,6 +1007,43 @@
             "assetType": "native",
             "rid": "osx"
           }
+        }
+      },
+      "NAudio.Core/2.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/NAudio.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/NAudio.Core.dll": {}
+        }
+      },
+      "NAudio.WinForms/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "NAudio.WinMM": "2.1.0"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/NAudio.WinForms.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/NAudio.WinForms.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      },
+      "NAudio.WinMM/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.Registry": "4.7.0",
+          "NAudio.Core": "2.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/NAudio.WinMM.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/NAudio.WinMM.dll": {}
         }
       },
       "NETStandard.Library/1.6.1": {
@@ -1086,6 +1139,31 @@
         "frameworkReferences": [
           "Microsoft.WindowsDesktop.App.WindowsForms"
         ]
+      },
+      "OpenMRU.Core/1.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/OpenMRU.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/OpenMRU.Core.dll": {}
+        }
+      },
+      "OpenMRU.WinForm/1.3.0": {
+        "type": "package",
+        "dependencies": {
+          "OpenMRU.Core": "1.2.0"
+        },
+        "compile": {
+          "lib/net471/OpenMRU.WinForm.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net471/OpenMRU.WinForm.dll": {
+            "related": ".xml"
+          }
+        }
       },
       "OpenTK/3.1.0": {
         "type": "package",
@@ -4249,6 +4327,27 @@
           }
         }
       },
+      "Winform.Metroframework/1.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net20/MetroFramework.dll": {}
+        },
+        "runtime": {
+          "lib/net20/MetroFramework.dll": {}
+        }
+      },
+      "Winform.Metroframework.Design/1.4.0": {
+        "type": "package",
+        "dependencies": {
+          "Winform.Metroframework": "1.4.0"
+        },
+        "compile": {
+          "lib/net20/MetroFramework.Design.dll": {}
+        },
+        "runtime": {
+          "lib/net20/MetroFramework.Design.dll": {}
+        }
+      },
       "xunit/2.4.2": {
         "type": "package",
         "dependencies": {
@@ -4870,6 +4969,19 @@
         "guna.ui2.winforms.nuspec",
         "icon.png",
         "lib/net40/Guna.UI2.dll"
+      ]
+    },
+    "Hamekoz.UI.WinForm/1.1.0": {
+      "sha512": "Giq16IZfyyRLK3bINr+oLTSQY+5UzE5NbtSAtnRU7LTw0ggn4AtNtpWdpCVcdcPnlCHPfVNIe//dnHTuEpocdQ==",
+      "type": "package",
+      "path": "hamekoz.ui.winform/1.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Hamekoz.png",
+        "hamekoz.ui.winform.1.1.0.nupkg.sha512",
+        "hamekoz.ui.winform.nuspec",
+        "lib/net48/Hamekoz.UI.WinForm.dll"
       ]
     },
     "HarfBuzzSharp/2.8.2.1": {
@@ -5635,6 +5747,176 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "Microsoft.WindowsAppSDK.WinUI/1.0.0-experimental1": {
+      "sha512": "0IKpmhXQJ3nSyAhu5Td8CWqmbqgLr53KxRJTbIGvXcX10rlw0gFr2bL9kjkVD5KsOioOWLMESEtnHKlQcHXkVA==",
+      "type": "package",
+      "path": "microsoft.windowsappsdk.winui/1.0.0-experimental1",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "AppxManifest.xml",
+        "build/AppDevPackageScripts/Add-AppDevPackage.ps1",
+        "build/AppDevPackageScripts/Add-AppDevPackage.resources/Add-AppDevPackage.psd1",
+        "build/AppDevPackageScripts/Add-AppDevPackage.resources/cs-CZ/Add-AppDevPackage.psd1",
+        "build/AppDevPackageScripts/Add-AppDevPackage.resources/de-DE/Add-AppDevPackage.psd1",
+        "build/AppDevPackageScripts/Add-AppDevPackage.resources/en-US/Add-AppDevPackage.psd1",
+        "build/AppDevPackageScripts/Add-AppDevPackage.resources/es-ES/Add-AppDevPackage.psd1",
+        "build/AppDevPackageScripts/Add-AppDevPackage.resources/fr-FR/Add-AppDevPackage.psd1",
+        "build/AppDevPackageScripts/Add-AppDevPackage.resources/it-IT/Add-AppDevPackage.psd1",
+        "build/AppDevPackageScripts/Add-AppDevPackage.resources/ja-JP/Add-AppDevPackage.psd1",
+        "build/AppDevPackageScripts/Add-AppDevPackage.resources/ko-KR/Add-AppDevPackage.psd1",
+        "build/AppDevPackageScripts/Add-AppDevPackage.resources/pl-PL/Add-AppDevPackage.psd1",
+        "build/AppDevPackageScripts/Add-AppDevPackage.resources/pt-BR/Add-AppDevPackage.psd1",
+        "build/AppDevPackageScripts/Add-AppDevPackage.resources/ru-RU/Add-AppDevPackage.psd1",
+        "build/AppDevPackageScripts/Add-AppDevPackage.resources/tr-TR/Add-AppDevPackage.psd1",
+        "build/AppDevPackageScripts/Add-AppDevPackage.resources/zh-CN/Add-AppDevPackage.psd1",
+        "build/AppDevPackageScripts/Add-AppDevPackage.resources/zh-TW/Add-AppDevPackage.psd1",
+        "build/AppDevPackageScripts/Install.ps1",
+        "build/AppDevPackageScripts/LogSideloadingTelemetry.ps1",
+        "build/DefaultWin32Manifests/default.manifest",
+        "build/DefaultWin32Manifests/dpiaware-permonv2.manifest",
+        "build/DefaultWin32Manifests/dpiaware-system.manifest",
+        "build/Microsoft.Build.Msix.Common.props",
+        "build/Microsoft.Build.Msix.Cpp.props",
+        "build/Microsoft.Build.Msix.Cpp.targets",
+        "build/Microsoft.Build.Msix.DesignTime.targets",
+        "build/Microsoft.Build.Msix.Packaging.targets",
+        "build/Microsoft.Build.Msix.Pri.targets",
+        "build/Microsoft.Build.Msix.ReunionManifest.targets",
+        "build/Microsoft.Build.Msix.props",
+        "build/Microsoft.Build.Msix.targets",
+        "build/Microsoft.ProjectReunion.Foundation.targets",
+        "build/Microsoft.ProjectReunion.WinUI.Build.props",
+        "build/Microsoft.ProjectReunion.WinUI.TransportPackage.props",
+        "build/Microsoft.ProjectReunion.WinUI.TransportPackage.targets",
+        "build/Microsoft.ProjectReunion.WinUI.props",
+        "build/Microsoft.ProjectReunion.WinUI.targets",
+        "build/Microsoft.UI.Xaml.Markup.Compiler.interop.targets",
+        "build/Microsoft.UI.Xaml.Markup.Compiler.props",
+        "build/Microsoft.UI.Xaml.Markup.Compiler.targets",
+        "build/Microsoft.WinUI.AppX.targets",
+        "build/Microsoft.WinUI.NET.Markup.Compiler.targets",
+        "build/Microsoft.WinUI.ProjectCapabilities.props",
+        "build/Microsoft.WinUI.References.targets",
+        "build/Microsoft.WinUI.props",
+        "build/Microsoft.WinUI.targets",
+        "build/Microsoft.WindowsAppSDK.Package.props",
+        "build/Microsoft.WindowsAppSDK.WinUI.props",
+        "build/Microsoft.WindowsAppSDK.WinUI.targets",
+        "build/native/LiftedWinRTClassRegistrations.xml",
+        "build/native/LiftedWinRTClassRegistrationsUnpackaged.xml",
+        "build/native/Microsoft.ProjectReunion.WinUI.TransportPackage.props",
+        "build/native/Microsoft.ProjectReunion.WinUI.TransportPackage.targets",
+        "build/native/Microsoft.ProjectReunion.WinUI.props",
+        "build/native/Microsoft.ProjectReunion.WinUI.targets",
+        "build/native/Microsoft.WinUI.References.targets",
+        "build/native/Microsoft.WinUI.props",
+        "build/native/Microsoft.WinUI.targets",
+        "build/native/Microsoft.WindowsAppSDK.WinUI.props",
+        "build/native/Microsoft.WindowsAppSDK.WinUI.targets",
+        "buildTransitive/AppDevPackageScripts/Add-AppDevPackage.ps1",
+        "buildTransitive/AppDevPackageScripts/Add-AppDevPackage.resources/Add-AppDevPackage.psd1",
+        "buildTransitive/AppDevPackageScripts/Add-AppDevPackage.resources/cs-CZ/Add-AppDevPackage.psd1",
+        "buildTransitive/AppDevPackageScripts/Add-AppDevPackage.resources/de-DE/Add-AppDevPackage.psd1",
+        "buildTransitive/AppDevPackageScripts/Add-AppDevPackage.resources/en-US/Add-AppDevPackage.psd1",
+        "buildTransitive/AppDevPackageScripts/Add-AppDevPackage.resources/es-ES/Add-AppDevPackage.psd1",
+        "buildTransitive/AppDevPackageScripts/Add-AppDevPackage.resources/fr-FR/Add-AppDevPackage.psd1",
+        "buildTransitive/AppDevPackageScripts/Add-AppDevPackage.resources/it-IT/Add-AppDevPackage.psd1",
+        "buildTransitive/AppDevPackageScripts/Add-AppDevPackage.resources/ja-JP/Add-AppDevPackage.psd1",
+        "buildTransitive/AppDevPackageScripts/Add-AppDevPackage.resources/ko-KR/Add-AppDevPackage.psd1",
+        "buildTransitive/AppDevPackageScripts/Add-AppDevPackage.resources/pl-PL/Add-AppDevPackage.psd1",
+        "buildTransitive/AppDevPackageScripts/Add-AppDevPackage.resources/pt-BR/Add-AppDevPackage.psd1",
+        "buildTransitive/AppDevPackageScripts/Add-AppDevPackage.resources/ru-RU/Add-AppDevPackage.psd1",
+        "buildTransitive/AppDevPackageScripts/Add-AppDevPackage.resources/tr-TR/Add-AppDevPackage.psd1",
+        "buildTransitive/AppDevPackageScripts/Add-AppDevPackage.resources/zh-CN/Add-AppDevPackage.psd1",
+        "buildTransitive/AppDevPackageScripts/Add-AppDevPackage.resources/zh-TW/Add-AppDevPackage.psd1",
+        "buildTransitive/AppDevPackageScripts/Install.ps1",
+        "buildTransitive/AppDevPackageScripts/LogSideloadingTelemetry.ps1",
+        "buildTransitive/DefaultWin32Manifests/default.manifest",
+        "buildTransitive/DefaultWin32Manifests/dpiaware-permonv2.manifest",
+        "buildTransitive/DefaultWin32Manifests/dpiaware-system.manifest",
+        "buildTransitive/Microsoft.Build.Msix.Common.props",
+        "buildTransitive/Microsoft.Build.Msix.Cpp.props",
+        "buildTransitive/Microsoft.Build.Msix.Cpp.targets",
+        "buildTransitive/Microsoft.Build.Msix.DesignTime.targets",
+        "buildTransitive/Microsoft.Build.Msix.Packaging.targets",
+        "buildTransitive/Microsoft.Build.Msix.Pri.targets",
+        "buildTransitive/Microsoft.Build.Msix.ReunionManifest.targets",
+        "buildTransitive/Microsoft.Build.Msix.props",
+        "buildTransitive/Microsoft.Build.Msix.targets",
+        "buildTransitive/Microsoft.ProjectReunion.Foundation.targets",
+        "buildTransitive/Microsoft.ProjectReunion.WinUI.Build.props",
+        "buildTransitive/Microsoft.ProjectReunion.WinUI.TransportPackage.props",
+        "buildTransitive/Microsoft.ProjectReunion.WinUI.TransportPackage.targets",
+        "buildTransitive/Microsoft.ProjectReunion.WinUI.props",
+        "buildTransitive/Microsoft.ProjectReunion.WinUI.targets",
+        "buildTransitive/Microsoft.UI.Xaml.Markup.Compiler.interop.targets",
+        "buildTransitive/Microsoft.UI.Xaml.Markup.Compiler.props",
+        "buildTransitive/Microsoft.UI.Xaml.Markup.Compiler.targets",
+        "buildTransitive/Microsoft.WinUI.AppX.targets",
+        "buildTransitive/Microsoft.WinUI.NET.Markup.Compiler.targets",
+        "buildTransitive/Microsoft.WinUI.ProjectCapabilities.props",
+        "buildTransitive/Microsoft.WinUI.References.targets",
+        "buildTransitive/Microsoft.WinUI.props",
+        "buildTransitive/Microsoft.WinUI.targets",
+        "buildTransitive/Microsoft.WindowsAppSDK.Package.props",
+        "buildTransitive/Microsoft.WindowsAppSDK.WinUI.props",
+        "buildTransitive/Microsoft.WindowsAppSDK.WinUI.targets",
+        "buildTransitive/native/LiftedWinRTClassRegistrations.xml",
+        "buildTransitive/native/LiftedWinRTClassRegistrationsUnpackaged.xml",
+        "buildTransitive/native/Microsoft.ProjectReunion.WinUI.TransportPackage.props",
+        "buildTransitive/native/Microsoft.ProjectReunion.WinUI.TransportPackage.targets",
+        "buildTransitive/native/Microsoft.ProjectReunion.WinUI.props",
+        "buildTransitive/native/Microsoft.ProjectReunion.WinUI.targets",
+        "buildTransitive/native/Microsoft.WinUI.References.targets",
+        "buildTransitive/native/Microsoft.WinUI.props",
+        "buildTransitive/native/Microsoft.WinUI.targets",
+        "buildTransitive/native/Microsoft.WindowsAppSDK.WinUI.props",
+        "buildTransitive/native/Microsoft.WindowsAppSDK.WinUI.targets",
+        "include/WebView2.h",
+        "include/WebView2.idl",
+        "include/microsoft.ui.xaml.hosting.desktopwindowxamlsource.h",
+        "include/microsoft.ui.xaml.hosting.desktopwindowxamlsource.idl",
+        "include/microsoft.ui.xaml.hosting.referencetracker.h",
+        "include/microsoft.ui.xaml.hosting.referencetracker.idl",
+        "include/microsoft.ui.xaml.media.dxinterop.h",
+        "include/microsoft.ui.xaml.media.dxinterop.idl",
+        "include/microsoft.ui.xaml.window.h",
+        "include/microsoft.ui.xaml.window.idl",
+        "include/microsoft.ui.xaml.xamlroot.h",
+        "include/microsoft.ui.xaml.xamlroot.idl",
+        "include/winrtdirect3d11.h",
+        "include/winrtdirectxcommon.h",
+        "include/xamlom.h",
+        "include/xamlom.idl",
+        "lib/net5.0-windows10.0.18362.0/Microsoft.WinUI.dll",
+        "lib/net5.0-windows10.0.18362.0/Microsoft.WinUI.xml",
+        "lib/net5.0-windows10.0.18362.0/Microsoft.WinUI/Themes/generic.xaml",
+        "lib/uap10.0/Microsoft.UI.Text.winmd",
+        "lib/uap10.0/Microsoft.UI.Text.xml",
+        "lib/uap10.0/Microsoft.UI.Xaml.winmd",
+        "lib/uap10.0/Microsoft.UI.Xaml.xml",
+        "lib/uap10.0/Microsoft.UI/Themes/generic.xaml",
+        "lib/uap10.0/Microsoft.Web.WebView2.Core.winmd",
+        "license.txt",
+        "microsoft.windowsappsdk.winui.1.0.0-experimental1.nupkg.sha512",
+        "microsoft.windowsappsdk.winui.nuspec",
+        "tools/Microsoft.Build.Framework.dll",
+        "tools/Microsoft.Build.Msix.dll",
+        "tools/Microsoft.Build.Utilities.Core.dll",
+        "tools/Microsoft.Diagnostics.Tracing.EventSource.dll",
+        "tools/Microsoft.UI.Xaml.Markup.Compiler.MSBuildInterop.dll",
+        "tools/Microsoft.UI.Xaml.Markup.Compiler.dll",
+        "tools/Microsoft.VisualStudio.RemoteControl.dll",
+        "tools/Microsoft.VisualStudio.Setup.Configuration.Interop.dll",
+        "tools/Microsoft.VisualStudio.Telemetry.dll",
+        "tools/Microsoft.VisualStudio.Utilities.Internal.dll",
+        "tools/arm64/GenXbf.dll",
+        "tools/x64/GenXbf.dll",
+        "tools/x86/GenXbf.dll"
+      ]
+    },
     "Modern.Forms/0.3.0": {
       "sha512": "pqxkkFaUBoCiejdac3vlHpojW3K6APaPdx53C2es2NAmeDTjj3TdusUJ2ntcD9QgTXY9ukJrer5syReoIMA06A==",
       "type": "package",
@@ -5673,6 +5955,46 @@
         "modern.windowkit.backend.mac.0.1.2.nupkg.sha512",
         "modern.windowkit.backend.mac.nuspec",
         "runtimes/osx/native/libAvaloniaNative.dylib"
+      ]
+    },
+    "NAudio.Core/2.1.0": {
+      "sha512": "0iowfmolibU4KxjaC/s7lox/BeDg76UVvXtCuCzRiNpylVndqsxXxp+bVWFrpv0KzQDIKLxZrnDmYENlAI0u9g==",
+      "type": "package",
+      "path": "naudio.core/2.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/NAudio.Core.dll",
+        "naudio-icon.png",
+        "naudio.core.2.1.0.nupkg.sha512",
+        "naudio.core.nuspec"
+      ]
+    },
+    "NAudio.WinForms/2.1.0": {
+      "sha512": "yoGCLidMVQmg66dNuEYusY1bttZJ5gxvufxRYFgxIw444dw4C70YsDgLeDugPd0rdwkSCQq5CtrVw6DSmxTxPA==",
+      "type": "package",
+      "path": "naudio.winforms/2.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net472/NAudio.WinForms.dll",
+        "lib/netcoreapp3.1/NAudio.WinForms.dll",
+        "naudio-icon.png",
+        "naudio.winforms.2.1.0.nupkg.sha512",
+        "naudio.winforms.nuspec"
+      ]
+    },
+    "NAudio.WinMM/2.1.0": {
+      "sha512": "lUU5C+XNzKhFUIEafA/nJpbtjksFtbUd033fs27KeHlOM0r6rQFF3l75dqxg+rWkGu81MfkBbYrNpH9p8qmtBA==",
+      "type": "package",
+      "path": "naudio.winmm/2.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/NAudio.WinMM.dll",
+        "naudio-icon.png",
+        "naudio.winmm.2.1.0.nupkg.sha512",
+        "naudio.winmm.nuspec"
       ]
     },
     "NETStandard.Library/1.6.1": {
@@ -5750,6 +6072,37 @@
         "lib/netcoreapp3.1/Ookii.Dialogs.WinForms.pdb",
         "ookii.dialogs.winforms.4.0.0.nupkg.sha512",
         "ookii.dialogs.winforms.nuspec"
+      ]
+    },
+    "OpenMRU.Core/1.2.0": {
+      "sha512": "kmE3X5+jqaLZ8AVoU/0HOB8f01zlW4TN7hOoX+lFxRr1b+AduSIbOjtq2Dhg86QbD+S5u20Asw77U+U9TxJE4Q==",
+      "type": "package",
+      "path": "openmru.core/1.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/OpenMRU.Core.dll",
+        "license.txt",
+        "mru-core-logo.jpg",
+        "openmru.core.1.2.0.nupkg.sha512",
+        "openmru.core.nuspec"
+      ]
+    },
+    "OpenMRU.WinForm/1.3.0": {
+      "sha512": "Wc8A/9a6SqouLCX06UmRop1jJh1FzrUNcbaB7o+cEOkFXHTrJNZ37S2CxNkNQz9gFkCT+ocnzTxLIXGnnnnj+A==",
+      "type": "package",
+      "path": "openmru.winform/1.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/MediaLocations.txt",
+        "content/license.txt",
+        "lib/net471/OpenMRU.WinForm.dll",
+        "lib/net471/OpenMRU.WinForm.xml",
+        "license.txt",
+        "mru-win-form.jpg",
+        "openmru.winform.1.3.0.nupkg.sha512",
+        "openmru.winform.nuspec"
       ]
     },
     "OpenTK/3.1.0": {
@@ -11880,6 +12233,30 @@
         "windows-forms-aero.nuspec"
       ]
     },
+    "Winform.Metroframework/1.4.0": {
+      "sha512": "AE0+76L9/xZU65tWFR27zWTLqT2nytMMOK2nhNCc7K3ksykeJLWSsdhEnx2Xh2I54Fe4vReyRqz2dc5XQ/6oFQ==",
+      "type": "package",
+      "path": "winform.metroframework/1.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net20/MetroFramework.dll",
+        "winform.metroframework.1.4.0.nupkg.sha512",
+        "winform.metroframework.nuspec"
+      ]
+    },
+    "Winform.Metroframework.Design/1.4.0": {
+      "sha512": "zsTf8YTxG351uB4KB5ya4364g7IOqwuC3vA9vHlyQzqJPKtyDreT52ZsdbOK15kQwpgBDaslMT2pV1P2RJvyWA==",
+      "type": "package",
+      "path": "winform.metroframework.design/1.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net20/MetroFramework.Design.dll",
+        "winform.metroframework.design.1.4.0.nupkg.sha512",
+        "winform.metroframework.design.nuspec"
+      ]
+    },
     "xunit/2.4.2": {
       "sha512": "6Mj73Ont3zj2CJuoykVJfE0ZmRwn7C+pTuRP8c4bnaaTFjwNG6tGe0prJ1yIbMe9AHrpDys63ctWacSsFJWK/w==",
       "type": "package",
@@ -12044,6 +12421,7 @@
       "Google.Apis.Auth >= 1.59.0",
       "Google.Apis.Gmail.v1 >= 1.59.0.2944",
       "Guna.UI2.WinForms >= 2.0.3.5",
+      "Hamekoz.UI.WinForm >= 1.1.0",
       "ICSharpCode.TextEditorEx >= 1.2.0",
       "LABLibary >= 1.0.0",
       "Markdig >= 0.31.0",
@@ -12055,9 +12433,11 @@
       "Microsoft.ML >= 2.0.0",
       "Microsoft.ML.FastTree >= 2.0.0",
       "Microsoft.Web.WebView2 >= 1.0.1619-prerelease",
+      "Microsoft.WindowsAppSDK.WinUI >= 1.0.0-experimental1",
       "Modern.Forms >= 0.3.0",
       "Octokit >= 5.0.4",
       "Ookii.Dialogs.WinForms >= 4.0.0",
+      "OpenMRU.WinForm >= 1.3.0",
       "ReactiveUI.Events.Winforms >= 15.1.1",
       "ReactiveUI.WinForms >= 18.4.1",
       "ReactorUI.Skia.WinForms >= 0.0.41-beta",
@@ -12065,9 +12445,11 @@
       "System.Data.SQLite >= 1.0.117",
       "UI.for.WinForms.AllControls.Net70.Trial >= 2023.1.314",
       "Windows-Forms-Aero >= 3.1.1",
+      "Winform.Metroframework.Design >= 1.4.0",
       "Zeroit.Framework.Metro >= 1.0.0",
       "bunifu.ui.winforms >= 6.0.0-beta",
       "bunifu.utils >= 1.0.6",
+      "naudio.winforms >= 2.1.0",
       "sipaaframework >= 1.1.0",
       "srvlocal >= 1.0.0",
       "xunit >= 2.4.2"
@@ -12079,7 +12461,7 @@
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
-    "version": "1.2.0",
+    "version": "1.3.0",
     "restore": {
       "projectUniqueName": "C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\srvlocal_gui\\srvlocal_gui.csproj",
       "projectName": "srvlocal_gui",
@@ -12157,6 +12539,10 @@
             "target": "Package",
             "version": "[2.0.3.5, )"
           },
+          "Hamekoz.UI.WinForm": {
+            "target": "Package",
+            "version": "[1.1.0, )"
+          },
           "Markdig": {
             "target": "Package",
             "version": "[0.31.0, )"
@@ -12193,6 +12579,10 @@
             "target": "Package",
             "version": "[1.0.1619-prerelease, )"
           },
+          "Microsoft.WindowsAppSDK.WinUI": {
+            "target": "Package",
+            "version": "[1.0.0-experimental1, )"
+          },
           "Modern.Forms": {
             "target": "Package",
             "version": "[0.3.0, )"
@@ -12204,6 +12594,10 @@
           "Ookii.Dialogs.WinForms": {
             "target": "Package",
             "version": "[4.0.0, )"
+          },
+          "OpenMRU.WinForm": {
+            "target": "Package",
+            "version": "[1.3.0, )"
           },
           "ReactiveUI.Events.Winforms": {
             "target": "Package",
@@ -12233,6 +12627,10 @@
             "target": "Package",
             "version": "[3.1.1, )"
           },
+          "Winform.Metroframework.Design": {
+            "target": "Package",
+            "version": "[1.4.0, )"
+          },
           "Zeroit.Framework.Metro": {
             "target": "Package",
             "version": "[1.0.0, )"
@@ -12244,6 +12642,10 @@
           "bunifu.utils": {
             "target": "Package",
             "version": "[1.0.6, )"
+          },
+          "naudio.winforms": {
+            "target": "Package",
+            "version": "[2.1.0, )"
           },
           "sipaaframework": {
             "target": "Package",
@@ -12273,7 +12675,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400-preview.23225.8\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400-preview.23274.1\\RuntimeIdentifierGraph.json"
       }
     }
   },
@@ -12332,6 +12734,16 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
+      "message": "Das Paket \"Hamekoz.UI.WinForm 1.1.0\" wurde nicht mit dem Projektzielframework \"net7.0-windows7.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
+      "libraryId": "Hamekoz.UI.WinForm",
+      "targetGraphs": [
+        "net7.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
       "message": "Das Paket \"MetroFramework.Design 1.2.0.3\" wurde nicht mit dem Projektzielframework \"net7.0-windows7.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
       "libraryId": "MetroFramework.Design",
       "targetGraphs": [
@@ -12364,6 +12776,16 @@
       "warningLevel": 1,
       "message": "Das Paket \"MetroModernUI 1.4.0\" wurde nicht mit dem Projektzielframework \"net7.0-windows7.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
       "libraryId": "MetroModernUI",
+      "targetGraphs": [
+        "net7.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Das Paket \"OpenMRU.WinForm 1.3.0\" wurde nicht mit dem Projektzielframework \"net7.0-windows7.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
+      "libraryId": "OpenMRU.WinForm",
       "targetGraphs": [
         "net7.0-windows7.0"
       ]
@@ -12444,6 +12866,26 @@
       "warningLevel": 1,
       "message": "Das Paket \"Windows-Forms-Aero 3.1.1\" wurde nicht mit dem Projektzielframework \"net7.0-windows7.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
       "libraryId": "Windows-Forms-Aero",
+      "targetGraphs": [
+        "net7.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Das Paket \"Winform.Metroframework 1.4.0\" wurde nicht mit dem Projektzielframework \"net7.0-windows7.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
+      "libraryId": "Winform.Metroframework",
+      "targetGraphs": [
+        "net7.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Das Paket \"Winform.Metroframework.Design 1.4.0\" wurde nicht mit dem Projektzielframework \"net7.0-windows7.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
+      "libraryId": "Winform.Metroframework.Design",
       "targetGraphs": [
         "net7.0-windows7.0"
       ]

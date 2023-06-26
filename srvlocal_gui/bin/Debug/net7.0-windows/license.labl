@@ -1,11 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <LICENSEENGINE>
+    <version>2</version>
+    <scheme>LAB-LICENSE-SCHEME-23</scheme>
+  </LICENSEENGINE>
   <STARTUPBOST>true</STARTUPBOST>
   <STARTSOUND>true</STARTSOUND>
   <USERID>32956</USERID>
   <BACKGROUND>default</BACKGROUND>
   <USERRIGHTSTATUS>default</USERRIGHTSTATUS>
-  <CODE>U7DYm3i2h-ZDs0=5</CODE>
+  <CODE>8IO3mAn2s-1JgA=U</CODE>
   <installagnt>true</installagnt>
   <assembly>
     <name>LILO App Builder (LAB)</name>
@@ -13,7 +17,7 @@
     <buildchannel>
       <channel>dev_preview</channel>
       <devtools>true</devtools>
-      <devinsight>false</devinsight>
+      <devinsight>true</devinsight>
     </buildchannel>
   </assembly>
   <PROPERTIES>

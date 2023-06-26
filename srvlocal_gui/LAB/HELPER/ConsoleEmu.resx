@@ -124,16 +124,16 @@
   <data name="toolStripSplitButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAIgSURBVFhH7Zc/LwRRFMU3QYuKZCuNP41oFDQ0iG5DovAV
-        NBKJRIGEEB+A0p+WrXUSX0CipNHriNLu2vG7b89M2DG7M7NjIzjJzXtz7z33nX3vzds3uX/48Dyvo1qt
-        jtMuxTFyC7QDorcGinVXKpUbCiZCqVR6Azsqkx4I2FTNxEAE9OqgSqUDv+Jc9QwzcQzOLq0DAhZVKh2o
-        UayV8jy5moJU2ws+luROBwr8PAFMa1+5XL6X29b6lWk/VrgtAmblCoCIJ4UtPi+37YE5udOBGiEBdDv5
-        xQe0FivSv2CgBYWDOLZPv0PuSJDTBX+M1jZxr9w14Ei8BxqBMj0MNo2tIvCUM+bWlrA2gpvJZ2KjSm9N
-        AIXy2AK2LJe91mcqFwlyjpT+tQC6/hRfyS5tIIUd8J3aQWQ8i8sdSwAoKv1rAQzWbBNOyu3wHQLsNXyQ
-        2x25FI56DbMX0Ayk/lIBwAqHjCUpYP2i2BJN4DeebxsKWWylLhYyctaUHhIQCfbEnSjZgtqxBBhEyRbU
-        TSyAKZxirf0zwmxPIYut18VCRs6W0hsL4PV7hHBNW7ZnUYxjeyMAOZltwk9A6bDl0G7bsyMAum0TMGQ5
-        NmX27AiAbnsERC0BgrI7iiF8vJQ2hCgO8E7siDZ/SwL4NbGv5aIEgJv27/hQ6a5IrA8TuyOK0hCkNruQ
-        vNCMKL0GHP6nWegbwDfiwVGcFPCDKxltXu4/j1zuHS9llsrbjtfCAAAAAElFTkSuQmCC
+        YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAIfSURBVFhH7Zc/LwRRFMU3QYuKRKXxpxGNgoYG0W1WovAV
+        NBKJRIGEEB+A0p+WrXUSX0CipNHriHKza8bvvj0zwZjdmdmxEZzk5r299577zrz35u2bwj8C+L7f4Xne
+        BO1SEiO3SDsoemugWHetVruhYCpUKpVXsKMy2YGATdVMDURA94ZUKht4inPVM8wmMTi7tA4IWFSpbKBG
+        uV7K9+VqClJtLwRYkjsbKPDzBDCtfdVq9V5uW2vbcccKt0XAnFwh0PCksMUX5LY9MC93NlAjIoBuJ098
+        QGuxMv0LBiopHMaxffodcseCnC7447S2iXvlrgNH6j3QCJTpYbAZbBWBp5wxt7aE9RHcTD4TG1N6awIo
+        NICVsGW57LU+U7lYkHOk9K8F0A2m+Ep2aQMp7IDvlKfxjGdxuRMJAGWlfy2AwZptwim5Hb5DgL2GD3K7
+        I5fCca9h/gKagdRfKgBY4YixJEWsXxRbokn8xgtsQyGLrXyKRYycNaVHBMSCPXEnSr6gdiIBBlHyBXVT
+        C2AKp1nr4Iww21PIYuufYhEjZ0vpjQXw+j1CuKat2m9RjGN7IwQ5uW3CD0DpiOXQbttvRwB02yZg2HJs
+        yuy3IwC67REQtwQIyu8ohvD+UtoQojjAO7Ej2vwtCeBpEl/LRQkBN+vf8aHSXZFEHyZ2RxSlIUhtdiF5
+        oRlVeh04gk+zyDdAYMTDozgt4IdXMtoBuf88CoU3xIOWmlQmdHAAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

@@ -12,6 +12,8 @@ namespace LABLibary
     {
         public class Config
         {
+            [XmlElement("LICENSEENGINE")]
+            public LicenseEngine License_Engine { get; set; }
             [XmlElement("STARTUPBOST")]
             public bool StartUpBoost { get; set; }
             [XmlElement("STARTSOUND")]
@@ -31,7 +33,10 @@ namespace LABLibary
             [XmlElement("PROPERTIES")]
             public Properties Properties { get; set; }
 
-            public Config() { }
+            public Config() 
+            {
+
+            }
 
             public void WriteToXmlFile(string filename)
             {
@@ -53,6 +58,14 @@ namespace LABLibary
                     return (Config)serializer.Deserialize(reader);
                 }
             }
+        }
+
+        public class LicenseEngine
+        {
+            [XmlElement("version")]
+            public int Version { get; set; }
+            [XmlElement("scheme")]
+            public string Scheme { get; set; }
         }
 
         public class Assembly

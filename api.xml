@@ -4,6 +4,57 @@
         <name>srvlocal_gui</name>
     </assembly>
     <members>
+        <member name="F:srvlocal_gui.AppMananger.AddUser.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:srvlocal_gui.AppMananger.AddUser.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:srvlocal_gui.AppMananger.AddUser.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:srvlocal_gui.AppMananger.ChangeColor.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:srvlocal_gui.AppMananger.ChangeColor.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:srvlocal_gui.AppMananger.ChangeColor.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:srvlocal_gui.AppMananger.ChangePassword.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:srvlocal_gui.AppMananger.ChangePassword.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:srvlocal_gui.AppMananger.ChangePassword.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
         <member name="F:srvlocal_gui.AppMananger.srvlocal_gui_settings.components">
             <summary>
             Required designer variable.
@@ -50,6 +101,23 @@
             <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         </member>
         <member name="M:srvlocal_gui.AppManager.Setup.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:srvlocal_gui.FileViewForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:srvlocal_gui.FileViewForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:srvlocal_gui.FileViewForm.InitializeComponent">
             <summary>
             Required method for Designer support - do not modify
             the contents of this method with the code editor.
@@ -309,6 +377,11 @@
             the contents of this method with the code editor.
             </summary>
         </member>
+        <member name="F:srvlocal_gui.Program.ErrorList">
+            <summary>
+             The main debug ErrorManager.
+            </summary>
+        </member>
         <member name="M:srvlocal_gui.Program.Main(System.String[])">
             <summary>
              The main entry point for the application.
@@ -410,6 +483,11 @@
               Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
+        <member name="P:srvlocal_gui.Properties.Resources.icons8_plus_math_32">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
         <member name="P:srvlocal_gui.Properties.Resources.icons8_print">
             <summary>
               Sucht eine lokalisierte Ressource vom Typ System.Drawing.Icon ähnlich wie (Symbol).
@@ -491,6 +569,11 @@
             </summary>
         </member>
         <member name="P:srvlocal_gui.Properties.Resources.icons8_time_machine_32">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:srvlocal_gui.Properties.Resources.kl">
             <summary>
               Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>

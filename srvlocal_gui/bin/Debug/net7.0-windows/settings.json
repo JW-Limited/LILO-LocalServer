@@ -11,9 +11,31 @@
       "LastLogin": null,
       "Email": "ceo@jwlmt.com",
       "IsActivated": true,
-      "UserName": "Joey West",
+      "UserName": "joeva",
       "HashedPassword": "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918",
-      "CanChangeConfig": true
+      "CanChangeConfig": true,
+      "FavouriteColor": {
+        "R": 0,
+        "G": 0,
+        "B": 0,
+        "A": 0,
+        "IsKnownColor": false,
+        "IsEmpty": true,
+        "IsNamedColor": false,
+        "IsSystemColor": false,
+        "Name": "0"
+      },
+      "ButtonColor": {
+        "R": 0,
+        "G": 0,
+        "B": 0,
+        "A": 0,
+        "IsKnownColor": false,
+        "IsEmpty": true,
+        "IsNamedColor": false,
+        "IsSystemColor": false,
+        "Name": "0"
+      }
     },
     {
       "LastLogin": null,
@@ -21,7 +43,29 @@
       "IsActivated": true,
       "UserName": "guest",
       "HashedPassword": "140bedbf9c3f6d56a9846d2ba7088798683f4da0c248231336e6a05679e4fdfe",
-      "CanChangeConfig": false
+      "CanChangeConfig": false,
+      "FavouriteColor": {
+        "R": 0,
+        "G": 0,
+        "B": 0,
+        "A": 0,
+        "IsKnownColor": false,
+        "IsEmpty": true,
+        "IsNamedColor": false,
+        "IsSystemColor": false,
+        "Name": "0"
+      },
+      "ButtonColor": {
+        "R": 0,
+        "G": 0,
+        "B": 0,
+        "A": 0,
+        "IsKnownColor": false,
+        "IsEmpty": true,
+        "IsNamedColor": false,
+        "IsSystemColor": false,
+        "Name": "0"
+      }
     }
   ]
 }

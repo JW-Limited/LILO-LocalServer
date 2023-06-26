@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v7.0": {
-      "srvlocal_gui/1.2": {
+      "srvlocal_gui/1.3": {
         "dependencies": {
           "AForge.Video": "2.2.5",
           "AForge.Video.DirectShow": "2.2.5",
@@ -15,6 +15,7 @@
           "Google.Apis.Auth": "1.59.0",
           "Google.Apis.Gmail.v1": "1.59.0.2944",
           "Guna.UI2.WinForms": "2.0.3.5",
+          "Hamekoz.UI.WinForm": "1.1.0",
           "ICSharpCode.TextEditorEx": "1.2.0",
           "LABLibary": "1.0.0",
           "Markdig": "0.31.0",
@@ -26,9 +27,11 @@
           "Microsoft.ML": "2.0.0",
           "Microsoft.ML.FastTree": "2.0.0",
           "Microsoft.Web.WebView2": "1.0.1619-prerelease",
+          "Microsoft.WindowsAppSDK.WinUI": "1.0.0-experimental1",
           "Modern.Forms": "0.3.0",
           "Octokit": "5.0.4",
           "Ookii.Dialogs.WinForms": "4.0.0",
+          "OpenMRU.WinForm": "1.3.0",
           "ReactiveUI.Events.Winforms": "15.1.1",
           "ReactiveUI.WinForms": "18.4.1",
           "ReactorUI.Skia.WinForms": "0.0.41-beta",
@@ -36,9 +39,11 @@
           "System.Data.SQLite": "1.0.117",
           "UI.for.WinForms.AllControls.Net70.Trial": "2023.1.314",
           "Windows-Forms-Aero": "3.1.1",
+          "Winform.Metroframework.Design": "1.4.0",
           "Zeroit.Framework.Metro": "1.0.0",
           "Bunifu.UI.WinForms": "6.0.0-Beta",
           "Bunifu.Utils": "1.0.6",
+          "NAudio.WinForms": "2.1.0",
           "SipaaFramework": "1.1.0",
           "srvlocal": "1.0.0",
           "xunit": "2.4.2",
@@ -302,6 +307,14 @@
           "lib/net40/Guna.UI2.dll": {
             "assemblyVersion": "2.0.3.5",
             "fileVersion": "2.0.3.5"
+          }
+        }
+      },
+      "Hamekoz.UI.WinForm/1.1.0": {
+        "runtime": {
+          "lib/net48/Hamekoz.UI.WinForm.dll": {
+            "assemblyVersion": "1.1.0.0",
+            "fileVersion": "1.1.0.0"
           }
         }
       },
@@ -676,6 +689,7 @@
           "System.Web.Services.Description": "4.9.0"
         }
       },
+      "Microsoft.WindowsAppSDK.WinUI/1.0.0-experimental1": {},
       "Modern.Forms/0.3.0": {
         "dependencies": {
           "HarfBuzzSharp": "2.8.2.1",
@@ -716,6 +730,37 @@
             "rid": "osx",
             "assetType": "native",
             "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "NAudio.Core/2.1.0": {
+        "runtime": {
+          "lib/netstandard2.0/NAudio.Core.dll": {
+            "assemblyVersion": "2.1.0.0",
+            "fileVersion": "2.1.0.0"
+          }
+        }
+      },
+      "NAudio.WinForms/2.1.0": {
+        "dependencies": {
+          "NAudio.WinMM": "2.1.0"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/NAudio.WinForms.dll": {
+            "assemblyVersion": "2.1.0.0",
+            "fileVersion": "2.1.0.0"
+          }
+        }
+      },
+      "NAudio.WinMM/2.1.0": {
+        "dependencies": {
+          "Microsoft.Win32.Registry": "4.7.0",
+          "NAudio.Core": "2.1.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/NAudio.WinMM.dll": {
+            "assemblyVersion": "2.1.0.0",
+            "fileVersion": "2.1.0.0"
           }
         }
       },
@@ -791,6 +836,25 @@
           "lib/net6.0-windows7.0/Ookii.Dialogs.WinForms.dll": {
             "assemblyVersion": "4.0.0.0",
             "fileVersion": "4.0.0.0"
+          }
+        }
+      },
+      "OpenMRU.Core/1.2.0": {
+        "runtime": {
+          "lib/netstandard2.0/OpenMRU.Core.dll": {
+            "assemblyVersion": "1.2.0.0",
+            "fileVersion": "1.2.0.0"
+          }
+        }
+      },
+      "OpenMRU.WinForm/1.3.0": {
+        "dependencies": {
+          "OpenMRU.Core": "1.2.0"
+        },
+        "runtime": {
+          "lib/net471/OpenMRU.WinForm.dll": {
+            "assemblyVersion": "1.2.0.0",
+            "fileVersion": "1.2.0.0"
           }
         }
       },
@@ -2690,6 +2754,12 @@
           }
         }
       },
+      "Winform.Metroframework/1.4.0": {},
+      "Winform.Metroframework.Design/1.4.0": {
+        "dependencies": {
+          "Winform.Metroframework": "1.4.0"
+        }
+      },
       "xunit/2.4.2": {
         "dependencies": {
           "xunit.analyzers": "1.0.0",
@@ -2819,7 +2889,7 @@
     }
   },
   "libraries": {
-    "srvlocal_gui/1.2": {
+    "srvlocal_gui/1.3": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -2977,6 +3047,13 @@
       "sha512": "sha512-nd6IAGX4u+sCx9i6PeBfkb6Y+xoayIsoMhndlJoN1L5kE6QbYjDMSHiF+9/nkFhcKx+eNaXzemyKbCY4W7lBEA==",
       "path": "guna.ui2.winforms/2.0.3.5",
       "hashPath": "guna.ui2.winforms.2.0.3.5.nupkg.sha512"
+    },
+    "Hamekoz.UI.WinForm/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Giq16IZfyyRLK3bINr+oLTSQY+5UzE5NbtSAtnRU7LTw0ggn4AtNtpWdpCVcdcPnlCHPfVNIe//dnHTuEpocdQ==",
+      "path": "hamekoz.ui.winform/1.1.0",
+      "hashPath": "hamekoz.ui.winform.1.1.0.nupkg.sha512"
     },
     "HarfBuzzSharp/2.8.2.1": {
       "type": "package",
@@ -3167,6 +3244,13 @@
       "path": "microsoft.windows.compatibility/6.0.0",
       "hashPath": "microsoft.windows.compatibility.6.0.0.nupkg.sha512"
     },
+    "Microsoft.WindowsAppSDK.WinUI/1.0.0-experimental1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0IKpmhXQJ3nSyAhu5Td8CWqmbqgLr53KxRJTbIGvXcX10rlw0gFr2bL9kjkVD5KsOioOWLMESEtnHKlQcHXkVA==",
+      "path": "microsoft.windowsappsdk.winui/1.0.0-experimental1",
+      "hashPath": "microsoft.windowsappsdk.winui.1.0.0-experimental1.nupkg.sha512"
+    },
     "Modern.Forms/0.3.0": {
       "type": "package",
       "serviceable": true,
@@ -3187,6 +3271,27 @@
       "sha512": "sha512-Oci9FicwdSbR0xtIANzrYT3L5WYsjKac4zxm3Isek8Dq5HVxeSVNo47Po9ntTgJTnlZvNET7DlAyQ63Rn8txlA==",
       "path": "modern.windowkit.backend.mac/0.1.2",
       "hashPath": "modern.windowkit.backend.mac.0.1.2.nupkg.sha512"
+    },
+    "NAudio.Core/2.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0iowfmolibU4KxjaC/s7lox/BeDg76UVvXtCuCzRiNpylVndqsxXxp+bVWFrpv0KzQDIKLxZrnDmYENlAI0u9g==",
+      "path": "naudio.core/2.1.0",
+      "hashPath": "naudio.core.2.1.0.nupkg.sha512"
+    },
+    "NAudio.WinForms/2.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yoGCLidMVQmg66dNuEYusY1bttZJ5gxvufxRYFgxIw444dw4C70YsDgLeDugPd0rdwkSCQq5CtrVw6DSmxTxPA==",
+      "path": "naudio.winforms/2.1.0",
+      "hashPath": "naudio.winforms.2.1.0.nupkg.sha512"
+    },
+    "NAudio.WinMM/2.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lUU5C+XNzKhFUIEafA/nJpbtjksFtbUd033fs27KeHlOM0r6rQFF3l75dqxg+rWkGu81MfkBbYrNpH9p8qmtBA==",
+      "path": "naudio.winmm/2.1.0",
+      "hashPath": "naudio.winmm.2.1.0.nupkg.sha512"
     },
     "NETStandard.Library/1.6.1": {
       "type": "package",
@@ -3215,6 +3320,20 @@
       "sha512": "sha512-iBWCO5C3vc8uxDzCrZs4dtCK/MQOFG4qrcJxBRO+hHQ39SqnNhMWE/kxhCLa/D5Pxud9t+2bkC6kIanPn57VGA==",
       "path": "ookii.dialogs.winforms/4.0.0",
       "hashPath": "ookii.dialogs.winforms.4.0.0.nupkg.sha512"
+    },
+    "OpenMRU.Core/1.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kmE3X5+jqaLZ8AVoU/0HOB8f01zlW4TN7hOoX+lFxRr1b+AduSIbOjtq2Dhg86QbD+S5u20Asw77U+U9TxJE4Q==",
+      "path": "openmru.core/1.2.0",
+      "hashPath": "openmru.core.1.2.0.nupkg.sha512"
+    },
+    "OpenMRU.WinForm/1.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Wc8A/9a6SqouLCX06UmRop1jJh1FzrUNcbaB7o+cEOkFXHTrJNZ37S2CxNkNQz9gFkCT+ocnzTxLIXGnnnnj+A==",
+      "path": "openmru.winform/1.3.0",
+      "hashPath": "openmru.winform.1.3.0.nupkg.sha512"
     },
     "OpenTK/3.1.0": {
       "type": "package",
@@ -4356,6 +4475,20 @@
       "sha512": "sha512-WoZzpg62kDB/sONdA6Z0ZGLvyb3wO6oQS66c7+83+YgDaLk5iZw+YEz4kFjGkrZUhgtb7LQC0ofLOEvfDl+b2w==",
       "path": "windows-forms-aero/3.1.1",
       "hashPath": "windows-forms-aero.3.1.1.nupkg.sha512"
+    },
+    "Winform.Metroframework/1.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-AE0+76L9/xZU65tWFR27zWTLqT2nytMMOK2nhNCc7K3ksykeJLWSsdhEnx2Xh2I54Fe4vReyRqz2dc5XQ/6oFQ==",
+      "path": "winform.metroframework/1.4.0",
+      "hashPath": "winform.metroframework.1.4.0.nupkg.sha512"
+    },
+    "Winform.Metroframework.Design/1.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zsTf8YTxG351uB4KB5ya4364g7IOqwuC3vA9vHlyQzqJPKtyDreT52ZsdbOK15kQwpgBDaslMT2pV1P2RJvyWA==",
+      "path": "winform.metroframework.design/1.4.0",
+      "hashPath": "winform.metroframework.design.1.4.0.nupkg.sha512"
     },
     "xunit/2.4.2": {
       "type": "package",

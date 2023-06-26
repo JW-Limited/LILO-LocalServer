@@ -7,6 +7,7 @@ using System.Net.Http;
 using System.Security.Cryptography;
 using System.Security.Principal;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Web;
 
@@ -14,6 +15,19 @@ namespace srvlocal_gui.AppMananger
 {
     public class Helper
     {
+        public static bool IsValidEmail(string email)
+            {
+                // The regular expression to check for a valid email address.
+                const string emailRegex =
+                    @"^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,})$";
+
+                // Create a Regex object to use to validate the email address.
+                Regex regex = new Regex(emailRegex);
+
+                // Check if the email address matches the regular expression.
+                return regex.IsMatch(email);
+            }
+
         private static void TrackPerformance(string operation, Action action)
         {
             var stopwatch = Stopwatch.StartNew();
@@ -37,6 +51,7 @@ namespace srvlocal_gui.AppMananger
                 Guest,
                 Normal
             }
+            
 
             public static string CheckUserPermissions()
             {
@@ -127,6 +142,21 @@ namespace srvlocal_gui.AppMananger
             }
         }
 
+        public static bool IsInEmailFormat(string email)
+        {
+            if (!string.IsNullOrEmpty(email))
+            {
+                if (email.Contains("@") && email.Contains("."))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+
+
         public static async Task<string> TranslateTextAsync(string text, string targetLanguage)
         {
             // Set up the request URL and parameters
@@ -179,27 +209,22 @@ namespace srvlocal_gui.AppMananger
 
         public static async Task<string> GetQuoteOfTheDayAsync()
         {
-            // Create an HttpClient with the required headers
             HttpClient client = new HttpClient();
             client.DefaultRequestHeaders.Add("x-rapidapi-host", "quotes15.p.rapidapi.com");
             client.DefaultRequestHeaders.Add("x-rapidapi-key", "7facbca935msh0800aea598dca8ap19cf02jsn17a04c128f7c");
 
-            // Make a GET request to the Quotes Free API
             HttpResponseMessage response = await client.GetAsync("https://quotes15.p.rapidapi.com/quotes/random/");
             if (response.IsSuccessStatusCode)
             {
-                // Parse the JSON response and extract the quote of the day
                 string json = await response.Content.ReadAsStringAsync();
                 dynamic result = JsonConvert.DeserializeObject(json);
                 string quote = result.content;
                 string author = result.originator.name;
 
-                // Return the quote of the day
                 return $"{quote} - {author}";
             }
             else
             {
-                // Return an error message if the request failed
                 return "Failed to get quote of the day";
             }
         }
@@ -207,10 +232,8 @@ namespace srvlocal_gui.AppMananger
         {
             using (SHA256 sha256Hash = SHA256.Create())
             {
-                // Compute hash from the input string
                 byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(input));
 
-                // Convert the byte array to a string
                 StringBuilder builder = new StringBuilder();
                 for (int i = 0; i < bytes.Length; i++)
                 {
@@ -220,23 +243,6 @@ namespace srvlocal_gui.AppMananger
             }
         }
 
-    }
-
-    public class EmailVerificationResult
-    {
-        public string Email { get; set; }
-        public string Status { get; set; }
-        public string Reason { get; set; }
-        public string Role { get; set; }
-        public string Disposable { get; set; }
-        public string Free { get; set; }
-        public string AcceptAll { get; set; }
-        public string VerifiedAt { get; set; }
-        public string Source { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Gender { get; set; }
-        public string Location { get; set; }
     }
 
 }

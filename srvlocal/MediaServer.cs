@@ -283,7 +283,14 @@ public class MediaServer
 
                     if (request.Url.LocalPath.EndsWith(".mp3") || request.Url.LocalPath.EndsWith(".wav") || request.Url.LocalPath.EndsWith(".ogg"))
                     {
-                        StreamAudio(request, response);
+                        try
+                        {
+                            StreamAudio(request, response);
+                        }
+                        catch(Exception ex)
+                        {
+                            GenerateErrorHtml(HttpStatusCode.InternalServerError, ex.Message) ;
+                        }
                     }
                     else
                     {

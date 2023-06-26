@@ -93,8 +93,11 @@
             Controls.Add(statusStrip1);
             Controls.Add(txtConsole);
             Controls.Add(guna2WinProgressIndicator1);
+            HelpButton = true;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(2);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "ConsoleEmu";
             Text = "Console Output";
             Load += ConsoleEmu_Load;

@@ -44,10 +44,11 @@ namespace srvlocal_gui.AppMananger
         private void PopulateVideoDevices()
         {
             videoDevices = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+            /*
             foreach (FilterInfo device in videoDevices)
             {
                 cmbDevices.Items.Add(device.Name);
-            }
+            }*/
         }
 
         private void videoSource_NewFrame(object sender, NewFrameEventArgs eventArgs)
@@ -78,6 +79,11 @@ namespace srvlocal_gui.AppMananger
 
             var loaded = await LoadDataInMask();
 
+            if (!loaded)
+            {
+                throw new Exception("Could not load the availabel data in the mask.");
+            }
+
         }
 
         public async Task<bool> LoadDataInMask()
@@ -87,6 +93,12 @@ namespace srvlocal_gui.AppMananger
                 lblUsername.Text = _loggedInUser.UserName;
                 lblEmail.Text = _loggedInUser.Email;
                 PopulateVideoDevices();
+
+                if (!_loggedInUser.CanChangeConfig)
+                {
+                    tbGUI.Hide();
+                    tbServer.Hide();    
+                }
 
                 return true;
             }
@@ -118,13 +130,69 @@ namespace srvlocal_gui.AppMananger
                 videoSource = null;
             }
 
-            if (cmbDevices.SelectedIndex >= 0)
+            /*if (cmbDevices.SelectedIndex >= 0)
             {
                 videoSource = new VideoCaptureDevice(videoDevices[cmbDevices.SelectedIndex].MonikerString);
                 videoSource.NewFrame += new NewFrameEventHandler(videoSource_NewFrame);
                 videoSource.Start();
+            }*/
+
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string url = $"http://localhost:{_settings.Port}/api/com?command=close&key=liloDev-420";
+                string response = Form1.Instance.MakeGetRequest(url);
+
+                if (response != null)
+                {
+                    Logger.Instance.Log(response, logLevel: Logger.LogLevel.Info);
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.Instance.Log(ex.Message, logLevel: Logger.LogLevel.Error);
+
             }
 
+            Application.Restart();
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            ChangePassword changePassword = ChangePassword.Instance(_loggedInUser);
+            changePassword.Show();
+            changePassword.BringToFront();
+        }
+
+        private void bntChangeFavouriteColor(object sender, EventArgs e)
+        {
+            colorChooser.AllowFullOpen = true;
+            colorChooser.Color = _loggedInUser.FavouriteColor;
+            colorChooser.SolidColorOnly = true;
+
+            if (colorChooser.ShowDialog() == DialogResult.OK)
+            {
+                var settings = SettingsManager.Instance.LoadSettings();
+
+                foreach (var user in settings.Users)
+                {
+                    if (user.UserName == _loggedInUser.UserName)
+                    {
+                        user.FavouriteColor = colorChooser.Color;
+                    }
+                }
+
+                SettingsManager.Instance.SetSetting((s, v) => s.Users = v, settings.Users);
+
+            }
+        }
+
+        private void bntChangeEmail_Click(object sender, EventArgs e)
+        {
+            Program.Browser_("www.jw-lmt.com/account");
         }
     }
 }

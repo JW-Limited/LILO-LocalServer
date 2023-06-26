@@ -100,14 +100,16 @@ namespace srvlocal_gui.AppManager
                         try
                         {
                             // Call the API to verify and extract the ZIP file
-                            updater.VerifyAndExtractZip(zipPath, "8a3a0cecf50f9e4a7387b23d4a4c4e4b3d2bbd8e91edc5729c15f9f1f10c8aaf", Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86), "JW Limited"), 
+                            updater.VerifyAndExtractZip(zipPath, "8a3a0cecf50f9e4a7387b23d4a4c4e4b3d2bbd8e91edc5729c15f9f1f10c8aaf", Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86), "JW Limited"),
                             progress =>
                             {
                                 progessbar.Value = progress;
                                 taskDialog1.ProgressBarValue = progress;
                                 if (progress == 100)
                                 {
-                                    Task.Run(() => { del(latestVersion: version);
+                                    Task.Run(() =>
+                                    {
+                                        del(latestVersion: version);
                                         Application.ExitThread();
                                     });
 

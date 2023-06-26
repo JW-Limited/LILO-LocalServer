@@ -17,6 +17,7 @@
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <Import Project="$(NuGetPackageRoot)xunit.core\2.4.2\build\xunit.core.props" Condition="Exists('$(NuGetPackageRoot)xunit.core\2.4.2\build\xunit.core.props')" />
     <Import Project="$(NuGetPackageRoot)entityframework\6.4.4\buildTransitive\netcoreapp3.0\EntityFramework.props" Condition="Exists('$(NuGetPackageRoot)entityframework\6.4.4\buildTransitive\netcoreapp3.0\EntityFramework.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.windowsappsdk.winui\1.0.0-experimental1\buildTransitive\Microsoft.WindowsAppSDK.WinUI.props" Condition="Exists('$(NuGetPackageRoot)microsoft.windowsappsdk.winui\1.0.0-experimental1\buildTransitive\Microsoft.WindowsAppSDK.WinUI.props')" />
     <Import Project="$(NuGetPackageRoot)microsoft.ml\2.0.0\build\netstandard2.0\Microsoft.ML.props" Condition="Exists('$(NuGetPackageRoot)microsoft.ml\2.0.0\build\netstandard2.0\Microsoft.ML.props')" />
     <Import Project="$(NuGetPackageRoot)microsoft.ml.fasttree\2.0.0\build\netstandard2.0\Microsoft.ML.FastTree.props" Condition="Exists('$(NuGetPackageRoot)microsoft.ml.fasttree\2.0.0\build\netstandard2.0\Microsoft.ML.FastTree.props')" />
   </ImportGroup>
@@ -25,6 +26,7 @@
     <PkgUI_for_WinForms_AllControls_Net70_Trial Condition=" '$(PkgUI_for_WinForms_AllControls_Net70_Trial)' == '' ">C:\Users\joeva\.nuget\packages\ui.for.winforms.allcontrols.net70.trial\2023.1.314</PkgUI_for_WinForms_AllControls_Net70_Trial>
     <PkgEntityFramework Condition=" '$(PkgEntityFramework)' == '' ">C:\Users\joeva\.nuget\packages\entityframework\6.4.4</PkgEntityFramework>
     <PkgSystem_Data_SQLite_EF6 Condition=" '$(PkgSystem_Data_SQLite_EF6)' == '' ">C:\Users\joeva\.nuget\packages\system.data.sqlite.ef6\1.0.117</PkgSystem_Data_SQLite_EF6>
+    <PkgMicrosoft_WindowsAppSDK_WinUI Condition=" '$(PkgMicrosoft_WindowsAppSDK_WinUI)' == '' ">C:\Users\joeva\.nuget\packages\microsoft.windowsappsdk.winui\1.0.0-experimental1</PkgMicrosoft_WindowsAppSDK_WinUI>
     <PkgMicrosoft_Web_WebView2 Condition=" '$(PkgMicrosoft_Web_WebView2)' == '' ">C:\Users\joeva\.nuget\packages\microsoft.web.webview2\1.0.1619-prerelease</PkgMicrosoft_Web_WebView2>
     <PkgMetroFramework_Design Condition=" '$(PkgMetroFramework_Design)' == '' ">C:\Users\joeva\.nuget\packages\metroframework.design\1.2.0.3</PkgMetroFramework_Design>
   </PropertyGroup>

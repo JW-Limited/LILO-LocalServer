@@ -8,15 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Client {
-    public partial class ChatWindow : Form {
+namespace Client
+{
+    public partial class ChatWindow : Form
+    {
         private string username;
         private string sessionkey;
         private NetworkWatcher networkWatcher;
         private static object onlineUserBoxLocker;
         private static object messageBoxLocker;
 
-        public ChatWindow(string username, string sessionkey, NetworkWatcher networkWatcher) {
+        public ChatWindow(string username, string sessionkey, NetworkWatcher networkWatcher)
+        {
             InitializeComponent();
             this.FormClosing += this.CleanClosing;
 
@@ -34,36 +37,47 @@ namespace Client {
             this.networkWatcher.Send(ProtocolCreator.SessionKeyReceived(this.username, this.sessionkey));
         }
 
-        private void CleanClosing(object sender, FormClosingEventArgs args) {
+        private void CleanClosing(object sender, FormClosingEventArgs args)
+        {
             DialogResult askIfLogout = MessageBox.Show("Do you want to logout?", "Chat", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
 
-            if (askIfLogout == DialogResult.No) {
+            if (askIfLogout == DialogResult.No)
+            {
                 args.Cancel = true;
             }
-            else if (askIfLogout == DialogResult.Yes) {
+            else if (askIfLogout == DialogResult.Yes)
+            {
                 this.networkWatcher.Send(ProtocolCreator.LogOut(this.username, this.sessionkey));
                 this.networkWatcher.Stop();
             }
         }
 
-        private void DataReceived(object sender, DataReceivedEventArgs args) {
-            if (args.Protocol.Type.SequenceEqual(ProtocolType.AddUser)) {
+        private void DataReceived(object sender, DataReceivedEventArgs args)
+        {
+            if (args.Protocol.Type.SequenceEqual(ProtocolType.AddUser))
+            {
                 this.AddUserToOnlineBox(Encoding.UTF8.GetString(args.Protocol.Content));
             }
-            else if (args.Protocol.Type.SequenceEqual(ProtocolType.RemoveUser)) {
+            else if (args.Protocol.Type.SequenceEqual(ProtocolType.RemoveUser))
+            {
                 this.RemoveUserFromOnlineBox(Encoding.UTF8.GetString(args.Protocol.Content));
             }
-            else if (args.Protocol.Type.SequenceEqual(ProtocolType.NewMessage)) {
+            else if (args.Protocol.Type.SequenceEqual(ProtocolType.NewMessage))
+            {
                 this.AddMessageToChat(Encoding.UTF8.GetString(args.Protocol.Content));
             }
         }
 
-        private void AddUserToOnlineBox(string username) {
-            lock (onlineUserBoxLocker) {
-                MethodInvoker methodInvokerDelegate = delegate () {
+        private void AddUserToOnlineBox(string username)
+        {
+            lock (onlineUserBoxLocker)
+            {
+                MethodInvoker methodInvokerDelegate = delegate ()
+                {
                     string[] newOnlineUserBox = new string[this.onlineUserRichTextBox.Lines.Length + 1];
 
-                    for (int i = 0; i < this.onlineUserRichTextBox.Lines.Length; i++) {
+                    for (int i = 0; i < this.onlineUserRichTextBox.Lines.Length; i++)
+                    {
                         newOnlineUserBox[i] = this.onlineUserRichTextBox.Lines[i];
                     }
 
@@ -72,25 +86,33 @@ namespace Client {
                     this.onlineUserRichTextBox.Lines = newOnlineUserBox;
                 };
 
-                if (this.InvokeRequired) {
+                if (this.InvokeRequired)
+                {
                     this.Invoke(methodInvokerDelegate);
                 }
-                else {
+                else
+                {
                     methodInvokerDelegate();
                 }
             }
         }
 
-        private void RemoveUserFromOnlineBox(string username) {
-            lock (onlineUserBoxLocker) {
-                MethodInvoker methodInvokerDelegate = delegate () {
+        private void RemoveUserFromOnlineBox(string username)
+        {
+            lock (onlineUserBoxLocker)
+            {
+                MethodInvoker methodInvokerDelegate = delegate ()
+                {
                     string[] newOnlineUserBox = new string[this.onlineUserRichTextBox.Lines.Length - 1];
 
-                    for (int i = 0, j = 0; i < this.onlineUserRichTextBox.Lines.Length; i++, j++) {
-                        if (this.onlineUserRichTextBox.Lines[i] != username) {
+                    for (int i = 0, j = 0; i < this.onlineUserRichTextBox.Lines.Length; i++, j++)
+                    {
+                        if (this.onlineUserRichTextBox.Lines[i] != username)
+                        {
                             newOnlineUserBox[j] = this.onlineUserRichTextBox.Lines[i];
                         }
-                        else {
+                        else
+                        {
                             j--;
                         }
                     }
@@ -98,21 +120,27 @@ namespace Client {
                     this.onlineUserRichTextBox.Lines = newOnlineUserBox;
                 };
 
-                if (this.InvokeRequired) {
+                if (this.InvokeRequired)
+                {
                     this.Invoke(methodInvokerDelegate);
                 }
-                else {
+                else
+                {
                     methodInvokerDelegate();
                 }
             }
         }
 
-        private void AddMessageToChat(string message) {
-            lock (messageBoxLocker) {
-                MethodInvoker methodInvokerDelegate = delegate () {
+        private void AddMessageToChat(string message)
+        {
+            lock (messageBoxLocker)
+            {
+                MethodInvoker methodInvokerDelegate = delegate ()
+                {
                     string[] newMessageBox = new string[this.messageRichTextBox.Lines.Length + 1];
 
-                    for (int i = 0; i < this.messageRichTextBox.Lines.Length; i++) {
+                    for (int i = 0; i < this.messageRichTextBox.Lines.Length; i++)
+                    {
                         newMessageBox[i] = this.messageRichTextBox.Lines[i];
                     }
 
@@ -124,53 +152,66 @@ namespace Client {
                     this.messageRichTextBox.ScrollToCaret();
                 };
 
-                if (this.InvokeRequired) {
+                if (this.InvokeRequired)
+                {
                     this.Invoke(methodInvokerDelegate);
                 }
-                else {
+                else
+                {
                     methodInvokerDelegate();
                 }
             }
         }
 
-        private void ConnectionLost(object sender, EventArgs args) {
+        private void ConnectionLost(object sender, EventArgs args)
+        {
             this.FormClosing -= this.CleanClosing;
             this.networkWatcher.Stop();
             MessageBox.Show("You lost the Connection to the Server! Press \"OK\" to close the window.", "Chat", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
 
-            MethodInvoker methodInvokerDelegate = delegate () {
+            MethodInvoker methodInvokerDelegate = delegate ()
+            {
                 this.Close();
             };
 
-            if (this.InvokeRequired) {
+            if (this.InvokeRequired)
+            {
                 this.Invoke(methodInvokerDelegate);
             }
-            else {
+            else
+            {
                 methodInvokerDelegate();
             }
         }
 
-        private void SendButton_Click(object sender, EventArgs e) {
-            MethodInvoker methodInvokerDelegate = delegate () {
-                if (this.sendMessageTextBox.Text.Length >= 1) {
+        private void SendButton_Click(object sender, EventArgs e)
+        {
+            MethodInvoker methodInvokerDelegate = delegate ()
+            {
+                if (this.sendMessageTextBox.Text.Length >= 1)
+                {
                     this.networkWatcher.Send(ProtocolCreator.Message(this.username, this.sendMessageTextBox.Text, this.sessionkey));
                     this.sendMessageTextBox.Text = string.Empty;
 
-                    if (this.sendMessageTextBox.Focused == false) {
+                    if (this.sendMessageTextBox.Focused == false)
+                    {
                         this.sendMessageTextBox.Focus();
                     }
                 }
             };
 
-            if (this.InvokeRequired) {
+            if (this.InvokeRequired)
+            {
                 this.Invoke(methodInvokerDelegate);
             }
-            else {
+            else
+            {
                 methodInvokerDelegate();
             }
         }
 
-        private void LogOffButton_Click(object sender, EventArgs e) {
+        private void LogOffButton_Click(object sender, EventArgs e)
+        {
             Application.Restart();
         }
 
@@ -178,5 +219,22 @@ namespace Client {
         {
 
         }
+
+        public bool isCollapsed = false;
+
+        private void usernameLabel_Click(object sender, EventArgs e)
+        {
+            if (isCollapsed)
+            {
+                this.Size = new Size(Width, Height - (int)(Height * 0.405));
+            }
+            else
+            {
+                this.Size = new Size(Width, Height + (int)(Height * 0.69));
+            }
+
+            isCollapsed = !isCollapsed;
+        }
     }
 }
+    

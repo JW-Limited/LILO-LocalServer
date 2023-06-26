@@ -60,6 +60,8 @@ namespace srvlocal_gui.AppMananger
             set => Set(nameof(Users), value);
         }
 
+        
+
         private T Get<T>(string key)
         {
             return _settings.TryGetValue(key, out object value) ? (T)value : default(T);

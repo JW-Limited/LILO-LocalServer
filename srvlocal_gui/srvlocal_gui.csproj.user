@@ -4,6 +4,15 @@
     <_LastSelectedProfileId>C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\Properties\PublishProfiles\ClickOnceProfile.pubxml</_LastSelectedProfileId>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Update="AppMananger\AddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="AppMananger\ChangeColor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="AppMananger\ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="AppMananger\ReadMeDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -11,6 +20,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="AppMananger\srvlocal_gui_settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FileViewForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Form1.cs">

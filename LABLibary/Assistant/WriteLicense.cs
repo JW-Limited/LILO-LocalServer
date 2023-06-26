@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Globalization;
 using System.Linq;
 using System.Security.Cryptography;
@@ -15,6 +16,11 @@ namespace LABLibary.Assistant
         {
             Config config = new Config()
             {
+                License_Engine = new LicenseEngine()
+                {
+                    Version = 2,
+                    Scheme = "LAB-LICENSE-SCHEME-23"
+                },
                 StartUpBoost = true,
                 StartSound = true,
                 UserId = 32956,
@@ -30,7 +36,7 @@ namespace LABLibary.Assistant
                     {
                         Channel = "dev_preview",
                         DevTools = true,
-                        DevInsight = false
+                        DevInsight = true
                     }
                 },
                 Properties = new Properties()
@@ -50,9 +56,9 @@ namespace LABLibary.Assistant
 
     public class LicenseGenerator
     {
-        private const int CODE_LENGTH = 16; // length of generated code
-        private const int KEY_LENGTH = 32; // length of encryption key
-        private const string CODE_CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"; // characters used in generated code
+        private const int CODE_LENGTH = 16; 
+        private const int KEY_LENGTH = 32; 
+        private const string CODE_CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"; 
 
         public static string GenerateCode(string productName, string productVersion, DateTime expirationDate)
         {
@@ -150,83 +156,105 @@ namespace LABLibary.Assistant
              return encrypted;
         }
 
-        public static bool DecodeLicense(string licenseCode, out string productName, out string productVersion, out DateTime expirationDate)
+        public class DecodeProcessInformation
         {
-            // remove dashes from the code
-            string base64 = licenseCode.Replace("-", "");
+            public bool SuccessFull { get; set; }
+            public string ErrorMessage { get; set; }
+            public string Message { get; set; } 
+            public string Info { get; set; }
+        }
 
-            // decode the base64-encoded data
+        public static DecodeProcessInformation DecodeLicense(string licenseCode, out string productName, out string productVersion, out DateTime expirationDate)
+        {
+            var returnInfo = new DecodeProcessInformation();
+            returnInfo.SuccessFull = true;
+
+            licenseCode = licenseCode.Replace("-", "");
+            licenseCode = licenseCode.Replace("=", "");
+
             byte[] data = null;
             try
             {
-                data = Convert.FromBase64String(base64);
+                //data = Convert.FromBase64String(base64);
+
+                data = LABLibary.Converter.StringC.ConvertToByteArray(licenseCode);
+
+                // extract the encryption key and initialization vector from the data
+                byte[] key = new byte[KEY_LENGTH];
+                byte[] iv = new byte[16];
+                Buffer.BlockCopy(data, 0, key, 0, KEY_LENGTH);
+                Buffer.BlockCopy(data, KEY_LENGTH, iv, 0, 16);
+
+                // extract the encrypted license string from the data
+                byte[] encrypted = new byte[data.Length - KEY_LENGTH - 16];
+                Buffer.BlockCopy(data, KEY_LENGTH + 16, encrypted, 0, encrypted.Length);
+
+                string licenseText = null;
+                try
+                {
+                    key = LABLibary.Converter.ByteC.StringToByteArray(LicenseValues.Default.key);
+                    iv = LABLibary.Converter.ByteC.StringToByteArray(LicenseValues.Default.iv);
+                    licenseText = DecryptStringFromBytes_Aes(encrypted, key, iv);
+                    //licenseText = LicenseValues.Default.licCode;
+                }
+                catch (CryptographicException ce)
+                {
+                    productName = null;
+                    productVersion = null;
+                    expirationDate = default(DateTime);
+
+                    returnInfo.ErrorMessage += ce.Message;
+                    returnInfo.SuccessFull = false;
+                }
+
+                // extract the product name, version, and expiration date from the license string
+                string[] parts = licenseText.Split('|');
+                if (parts.Length != 3 || string.IsNullOrEmpty(parts[0]) || string.IsNullOrEmpty(parts[1]))
+                {
+                    productName = null;
+                    productVersion = null;
+                    expirationDate = default(DateTime);
+
+                    returnInfo.ErrorMessage += "\nLicenseparts missing.";
+                    returnInfo.SuccessFull = false;
+                }
+
+                productName = parts[0];
+                productVersion = parts[1];
+                if (!DateTime.TryParseExact(parts[2], "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out expirationDate))
+                {
+                    productName = null;
+                    productVersion = null;
+                    expirationDate = default(DateTime);
+
+                    returnInfo.ErrorMessage += "\nDate parsing Error";
+                    returnInfo.SuccessFull = false;
+                }
+
+                // check if the license has expired
+                if (expirationDate < DateTime.Today)
+                {
+                    productName = null;
+                    productVersion = null;
+                    expirationDate = default(DateTime);
+
+                    returnInfo.Message += "\nLicense Expired.";
+                    returnInfo.SuccessFull = false;
+                }
+
+                return returnInfo;
             }
-            catch (FormatException)
+            catch (Exception ce)
             {
                 productName = null;
                 productVersion = null;
                 expirationDate = default(DateTime);
-                return false;
+
+                returnInfo.ErrorMessage += ce.Message + licenseCode;
+                returnInfo.SuccessFull = false;
+                return returnInfo;
             }
-
-            // extract the encryption key and initialization vector from the data
-            byte[] key = new byte[KEY_LENGTH];
-            byte[] iv = new byte[16];
-            Buffer.BlockCopy(data, 0, key, 0, KEY_LENGTH);
-            Buffer.BlockCopy(data, KEY_LENGTH, iv, 0, 16);
-
-            // extract the encrypted license string from the data
-            byte[] encrypted = new byte[data.Length - KEY_LENGTH - 16];
-            Buffer.BlockCopy(data, KEY_LENGTH + 16, encrypted, 0, encrypted.Length);
-
-            // decrypt the license string using AES-256 CBC mode
-            string licenseText = null;
-            try
-            {
-                key = LABLibary.Converter.ByteC.StringToByteArray(LicenseValues.Default.key);
-                iv = LABLibary.Converter.ByteC.StringToByteArray(LicenseValues.Default.iv);
-                //licenseText = DecryptStringFromBytes_Aes(encrypted, key, iv);
-                licenseText = LicenseValues.Default.licCode;
-            }
-            catch (CryptographicException)
-            {
-                productName = null;
-                productVersion = null;
-                expirationDate = default(DateTime);
-                return false;
-            }
-
-            // extract the product name, version, and expiration date from the license string
-            string[] parts = licenseText.Split('|');
-            if (parts.Length != 3 || string.IsNullOrEmpty(parts[0]) || string.IsNullOrEmpty(parts[1]))
-            {
-                productName = null;
-                productVersion = null;
-                expirationDate = default(DateTime);
-                return false;
-            }
-
-            productName = parts[0];
-            productVersion = parts[1];
-            if (!DateTime.TryParseExact(parts[2], "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out expirationDate))
-            {
-                productName = null;
-                productVersion = null;
-                expirationDate = default(DateTime);
-                return false;
-            }
-
-            // check if the license has expired
-            if (expirationDate < DateTime.Today)
-            {
-                productName = null;
-                productVersion = null;
-                expirationDate = default(DateTime);
-                return false;
-            }
-
-            // license is valid
-            return true;
+            
         }
 
         private static string DecryptStringFromBytes_Aes(byte[] cipherText, byte[] key, byte[] iv)
@@ -259,6 +287,5 @@ namespace LABLibary.Assistant
 
             return plaintext;
         }
-
     }
 }
