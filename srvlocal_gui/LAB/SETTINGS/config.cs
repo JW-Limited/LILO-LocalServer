@@ -11,18 +11,20 @@
         public config() {
             // // Heben Sie die Auskommentierung der unten angezeigten Zeilen auf, um Ereignishandler zum Speichern und Ändern von Einstellungen hinzuzufügen:
             //
-            // this.SettingChanging += this.SettingChangingEventHandler;
+            this.SettingChanging += this.SettingChangingEventHandler;
             //
-            // this.SettingsSaving += this.SettingsSavingEventHandler;
+            this.SettingsSaving += this.SettingsSavingEventHandler;
             //
         }
         
-        private void SettingChangingEventHandler(object sender, System.Configuration.SettingChangingEventArgs e) {
-            // Fügen Sie hier Code zum Behandeln des SettingChangingEvent-Ereignisses hinzu.
+        private void SettingChangingEventHandler(object sender, System.Configuration.SettingChangingEventArgs e) 
+        {
+            
         }
         
-        private void SettingsSavingEventHandler(object sender, System.ComponentModel.CancelEventArgs e) {
-            // Fügen Sie hier Code zum Behandeln des SettingsSaving-Ereignisses hinzu.
+        private void SettingsSavingEventHandler(object sender, System.ComponentModel.CancelEventArgs e) 
+        {
+            MessageBox.Show("Settings successfully changed!","Settingsmanager",MessageBoxButtons.OK,MessageBoxIcon.Information);
         }
     }
 }

@@ -3,9 +3,9 @@
    "roots": {
       "bookmark_bar": {
          "children": [ {
-            "date_added": "13327787390775644",
+            "date_added": "13332505779305758",
             "date_last_used": "0",
-            "guid": "d3b9b2a1-3c51-43cf-9e15-d7d3b6b4e9bb",
+            "guid": "303a4ff0-2a20-47f4-947d-4e5c362a5811",
             "id": "8",
             "name": "ASUS Software Portal - Exclusive technology",
             "show_icon": false,
@@ -13,9 +13,9 @@
             "type": "url",
             "url": "https://www.asus.com/Software-and-Innovations-Portal/"
          }, {
-            "date_added": "13327787390775115",
+            "date_added": "13332505779305531",
             "date_last_used": "0",
-            "guid": "e515b499-a272-4ae8-b177-526988fd64ec",
+            "guid": "b37d9a0f-9971-43a7-9a72-2f51661b5c3d",
             "id": "7",
             "name": "MyASUS Software - Get the best from ASUS PC",
             "show_icon": false,
@@ -23,9 +23,9 @@
             "type": "url",
             "url": "https://www.asus.com/ASUS-Software/"
          }, {
-            "date_added": "13327787390773842",
+            "date_added": "13332505779304833",
             "date_last_used": "0",
-            "guid": "085f75f5-d3d2-4d27-b1ce-79dedde60b9e",
+            "guid": "3db12fc1-4e8e-434e-9cc6-22312094a931",
             "id": "6",
             "name": "McAfee LiveSafe",
             "show_icon": false,
@@ -33,9 +33,9 @@
             "type": "url",
             "url": "https://home.mcafee.com/root/campaign.aspx?cid=246824"
          } ],
-         "date_added": "13327787390687940",
+         "date_added": "13332505779220877",
          "date_last_used": "0",
-         "date_modified": "13327787390775644",
+         "date_modified": "13332505779305758",
          "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
          "id": "1",
          "name": "Favoritenleiste",
@@ -44,7 +44,7 @@
       },
       "other": {
          "children": [  ],
-         "date_added": "13327787390687947",
+         "date_added": "13332505779220880",
          "date_last_used": "0",
          "date_modified": "0",
          "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
@@ -55,7 +55,7 @@
       },
       "synced": {
          "children": [  ],
-         "date_added": "13327787390687948",
+         "date_added": "13332505779220883",
          "date_last_used": "0",
          "date_modified": "0",
          "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",

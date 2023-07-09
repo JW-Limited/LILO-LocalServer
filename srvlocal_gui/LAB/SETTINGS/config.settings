@@ -8,5 +8,8 @@
     <Setting Name="lastLoggedInUser" Type="System.String" Scope="User">
       <Value Profile="(Default)">admin</Value>
     </Setting>
+    <Setting Name="srvlocal_path" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-windows\srvlocal.exe</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

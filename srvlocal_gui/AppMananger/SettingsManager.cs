@@ -34,7 +34,7 @@ namespace srvlocal_gui.AppMananger
             }
         }
 
-        private const string SettingsFileName = "settings.json";
+        private const string SettingsFileName = "C:\\LILO\\host\\settings.json";
 
         private Settings _settings;
 

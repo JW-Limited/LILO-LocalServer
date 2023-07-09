@@ -89,7 +89,7 @@ namespace srvlocal.auto_generators
             sb.Append("  background-color: #3e8e41;");
             sb.Append("}");
             sb.Append("</style>");
-            sb.Append("<script>\r\nfunction verifyPassword() {\r\n    var username = document.getElementById('username').value;\r\n    var password = document.getElementById('password').value;\r\n    \r\n    // Check if password is correct\r\n    if (username === 'admin' && password === 'lilodev420') {\r\n        alert('Login successful!');\r\n        window.location.href = '/api/home';\r\n    } else {\r\n        alert('Invalid username or password.');\r\n    }\r\n}\r\n</script>");
+            sb.Append("<script>\r\nfunction verifyPassword() {\r\n    var username = document.getElementById('username').value;\r\n    var password = document.getElementById('password').value;\r\n    \r\n    // Check if password is correct\r\n    if (username === 'admin' && password === 'lilodev420') {\r\n        \r\n        window.location.href = '/api/home';\r\n    } else {\r\n        alert('Invalid username or password.');\r\n    }\r\n}\r\n</script>");
 
             sb.Append("</head>");
             sb.Append("<body>");

@@ -1,4 +1,6 @@
-﻿using Modern.WindowKit.Controls;
+﻿using LABLibary.Assistant;
+using Modern.WindowKit.Controls;
+using srvlocal_gui.AppMananger;
 using srvlocal_gui.LAB.HELPER;
 using System;
 using System.Collections.Generic;
@@ -18,16 +20,42 @@ namespace srvlocal_gui
 {
     public partial class Setup : Form
     {
-        public Setup()
+        private Setup(User user)
         {
             InitializeComponent();
 
+            _loggedInUser = user;
+
             mainApp = AppTypeSelector.TextHeadline;
 
-            txtOrt.TextChanged += (sender, e) => txtOrtProj.Text = txtOrt.Text;
-            txtOrt.TextChanged += (sender , e) => saaGlowing1.Visible = false;
+            txtOrt.TextChanged += (sender, e) =>
+            {
+                txtOrtProj.Text = txtOrt.Text;
+                saaGlowing1.Visible = false;
+            };
+
+            txtAppName.TextChanged += (sender, e) =>
+            {
+                txtNameMappe.Text = txtAppName.Text;
+            };
         }
 
+        public static Setup Instance(User user)
+        {
+            lock (_instanceLock)
+            {
+                if (_Instance == null)
+                {
+                    _Instance = new Setup(user);
+                }
+
+                return _Instance;
+            }
+        }
+
+        private static Setup _Instance;
+        private static object _instanceLock = new object();
+        private User? _loggedInUser = null;
         public string mainApp;
         public int iTab = 1;
         private bool _dragging;
@@ -60,42 +88,24 @@ namespace srvlocal_gui
                 ShowNewFolderButton = true,
             };
 
-            if(ofd.ShowDialog() != DialogResult.Cancel)
+            if (ofd.ShowDialog() != DialogResult.Cancel)
             {
-                if(ofd.SelectedPath == null || ofd.SelectedPath.Length == 0) { return; }
+                if (ofd.SelectedPath == null || ofd.SelectedPath.Length == 0) { return; }
                 txtOrt.Text = ofd.SelectedPath;
                 txtOrtProj.Text = ofd.SelectedPath;
             }
-            
+
         }
 
         private void zeroitMetroNavigationButton1_Click(object sender, EventArgs e)
         {
-            TabChanger(iTab++);
+
         }
 
         private void zeroitMetroNavigationButton2_Click(object sender, EventArgs e)
         {
-            iTab--;
-            TabChanger(iTab);
         }
 
-        public void TabChanger(int Tab)
-        {
-            switch(Tab) 
-            {
-                case 1:
-                    tabControl.SelectTab(1); 
-                    break;
-                case 2:
-                    tabControl.SelectTab(2); 
-                    break;
-                case 3:
-                    tabControl.SelectTab(3); 
-                    break;
-
-            }
-        }
 
         private void Setup_Load(object sender, EventArgs e)
         {
@@ -121,13 +131,13 @@ namespace srvlocal_gui
                 tmr.Interval = rm.Next(200, 1500);
                 tmr.Tick += (sender, e) => tmr.Stop();
                 tmr.Tick += Tmr_Tick;
-                
+
             }
         }
 
         private void Tmr_Tick(object? sender, EventArgs e)
         {
-            
+
             preLoad.Visible = false;
             MessageBox.Show("File dropped: " + _droppedFileName);
         }
@@ -169,12 +179,12 @@ namespace srvlocal_gui
             }
         }
 
-       
+
 
         private void AdjustForm()
         {
             switch (this.WindowState)
-            { 
+            {
                 case FormWindowState.Maximized: //Maximized form (After)
                     this.Padding = new Padding(8, 8, 8, 0);
                     break;
@@ -187,29 +197,38 @@ namespace srvlocal_gui
 
         private readonly int borderSize = 10;
         private Size formSize;
-        //Drag Form
+        /*Drag Form
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);*/
 
-        private void zeroitMetroButton1_Click(object sender, EventArgs e)
+        private async void zeroitMetroButton1_Click(object sender, EventArgs e)
         {
             var dir = txtOrt.Text + "\\" + txtAppName.Text;
+            RedirectProjectCreation(process =>
+            {
+                guna2Button1.Text = "In Process : " + process;
+            });
+        }
+
+        public void RedirectProjectCreation(Action<string> processCallback)
+        {
+
             var rnd = new Random();
 
-            var myProject = new Project
+            var myProject = new Project()
             {
                 Name = txtAppName.Text,
                 Id = rnd.Next(10000, 99999),
                 Target = RuntimeInformation.RuntimeIdentifier,
                 ApplicationType = mainApp,
-                CloudSave = tglCloud.Checked,
-                Author = "Joey West",
+                CloudSave = false,
+                Author = _loggedInUser.UserName,
                 Company = "My Company",
                 Framework = cmbFramework.Text,
                 Language = "en",
-                CreationDate = DateTime.Now ,
+                CreationDate = DateTime.Now,
                 LastModifiedDate = DateTime.Now,
                 Description = "This is my project.",
                 Version = "1.0.0",
@@ -218,36 +237,47 @@ namespace srvlocal_gui
                 ServerIP = "127.0.0.1",
                 ApplicationName = txtAppName.Text.ToLower() + ".exe",
                 ApplicationDescription = "A LILO Application build with the LAB App.",
-                Files = new List<string> 
-                { 
-                    "desktop.ini",
-                    "Folder.ico" 
-                },
-                References = new List<string> 
+                Files = new List<string>
                 {
-                    "Form1.cs", 
-                    "Form1.Designer.cs", 
-                    "Form1.Resx.cs", 
-                    "Programm.cs" 
+                    "desktop.ini",
+                    "Folder.ico"
+                },
+                References = new List<string>
+                {
+                    "Form1.cs",
+                    "Form1.Designer.cs",
+                    "Form1.Resx.cs",
+                    "Programm.cs"
                 }
             };
 
+            processCallback?.Invoke("20%");
 
-            CreateProject(myProject);
+            try
+            {
+                var dir = txtOrt.Text + "\\" + txtAppName.Text;
 
-            var gui = new LAB.builder_gui(dir + "\\" + txtNameMappe.Text + ".lab");
-            gui.Show();
+                processCallback?.Invoke("30%");
 
-            this.Close();
+                CreateProject(myProject);
+
+                processCallback?.Invoke("100%");
+
+                var gui = LAB.builder_gui.Instance(dir + "\\" + txtNameMappe.Text + ".lab");
+                gui.Show();
+
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something went wrong while creating youre Project:\n\n" + ex.Message, "ProjectManager", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
 
         public void CreateProject(Project values)
         {
             var dir = txtOrt.Text + "\\" + txtAppName.Text;
-            var sb = new StringBuilder();
-
-            sb.AppendLine("[.ShellClassInfo]");
-            sb.AppendLine("IconFile=lab\\Folder.ico");
 
             do
             {
@@ -256,13 +286,17 @@ namespace srvlocal_gui
             }
             while (!Directory.Exists(dir + "\\lab"));
             File.Copy(".\\Folder.ico", dir + "\\lab\\Folder.ico", true);
-            File.WriteAllText(dir + "\\desktop.ini", sb.ToString());
+            string iconFilePath = dir + "\\lab\\Folder.ico";
+            int iconIndex = 0;
+
+            LABLibary.Assistant.DirectoryIconSetter.SetDirectoryIcon(dir, iconFilePath, iconIndex);
+
             values.SaveToFile(dir + "\\" + txtNameMappe.Text + ".lab");
             var form = new LAB.HELPER.FormsHandler(dir);
             form.Add(txtAppName.Text);
         }
 
-        
+
 
         private void saaToggle1_CheckChanged(object sender, EventArgs e)
         {
@@ -278,8 +312,8 @@ namespace srvlocal_gui
         public Form recentForm = null;
         private void Setup_MouseDown(object sender, MouseEventArgs e)
         {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
+            /*ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);*/
         }
 
         private void Setup_ResizeBegin(object sender, EventArgs e)
@@ -292,8 +326,21 @@ namespace srvlocal_gui
             _draggedControl = sender as Control;
             _dragImage = new Bitmap(_draggedControl.Width, _draggedControl.Height);
             _draggedControl.DrawToBitmap(_dragImage, new Rectangle(0, 0, _dragImage.Width, _dragImage.Height));
-
             _draggedControl.DoDragDrop(_dragImage, DragDropEffects.Move);
+        }
+
+        private void zeroitMetroChecker1_CheckedChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void metroSetTabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

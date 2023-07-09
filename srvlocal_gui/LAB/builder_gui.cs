@@ -19,23 +19,43 @@ using static Google.Apis.Requests.BatchRequest;
 using Modern.WindowKit.Controls;
 using RuFramework;
 using Telerik.WinControls.UI.Map.Bing;
+using srvlocal_gui.LAB.SETTINGS;
 
 namespace srvlocal_gui.LAB
 {
     public partial class builder_gui : Form
     {
-        private int childFormNumber = 0;
+        public static builder_gui Instance(string project)
+        {
+            lock (_instanceLock)
+            {
+                if(_instance is null)
+                {
+                    _instance = new builder_gui(project);
+                }
+
+                return _instance;
+            }
+        }
+
         public string projectFile = string.Empty;
         public static Form bagHandle;
         public static Form prjExpHandle;
+        private static builder_gui _instance;
         private ICSharpCode.TextEditor.TextEditorControlEx textEditorControl1;
+        private static object _instanceLock = new object();
+        private Project _loadedProject = new Project();
 
-
-        public builder_gui(string projectName)
+        private builder_gui(string projectName)
         {
 
             InitializeComponent();
             this.projectFile = projectName;
+
+            this.FormClosing += (sender, e) =>
+            {
+                Application.ExitThread();
+            };
 
             try
             {
@@ -45,8 +65,8 @@ namespace srvlocal_gui.LAB
 
                 try
                 {
-                    //menuStrip.Renderer = new LABLibary.Form.MenuStrip.MyRenderer(true, Color.FromArgb(21, 21, 21));
-                    //dateiDrop.Renderer = new LABLibary.Form.MenuStrip.MyRenderer(true, Color.FromArgb(21, 21, 21));
+                    menuStrip.Renderer = new LABLibary.Form.MenuStrip.MyRenderer(true, Color.FromArgb(21, 21, 21));
+                    dateiDrop.Renderer = new LABLibary.Form.MenuStrip.MyRenderer(true, Color.FromArgb(21, 21, 21));
                     //toolStrip.Renderer = new LABLibary.Form.MenuStrip.MyRenderer(false, Color.FromArgb(24, 24, 24));
                 }
                 catch (Exception ex)
@@ -71,7 +91,7 @@ namespace srvlocal_gui.LAB
         private void UpdateAndCheckFoldings()
         {
             textEditorControl1.Document.FoldingManager.UpdateFoldings(null, null);
-            textBox1.Text = string.Join("\r\n", textEditorControl1.GetFoldingErrors());
+            //textBox1.Text = string.Join("\r\n", textEditorControl1.GetFoldingErrors());
         }
 
         private async void builder_gui_Load(object sender, EventArgs e)
@@ -96,16 +116,16 @@ namespace srvlocal_gui.LAB
             textEditorControl1.HideVScrollBarIfPossible = true;
             this.textEditorControl1.TabIndex = 1;
             this.textEditorControl1.VRulerRow = 999;
-            this.textEditorControl1.TextChanged += (sender, e) => 
-            { 
-                Task task = new Task(() => 
-                { 
-                    UpdateAndCheckFoldings(); 
-                });  
-                
-                Thread t1 = new Thread(task.Start); 
-                t1.Start(); 
-                t1.Join(); 
+            this.textEditorControl1.TextChanged += (sender, e) =>
+            {
+                Task task = new Task(() =>
+                {
+                    UpdateAndCheckFoldings();
+                });
+
+                Thread t1 = new Thread(task.Start);
+                t1.Start();
+                t1.Join();
             };
 
             var explorer = new LAB.TOOLS.ProjectExplorer(projectFile);
@@ -135,25 +155,31 @@ namespace srvlocal_gui.LAB
 
         public void NewProject(object sender, EventArgs e)
         {
-            var setup = new Setup();
+            var setup = Setup.Instance(null);
             setup.Show();
         }
 
         public void LoadProject(string FILE = null)
         {
-            if(FILE != null)
+            if (FILE != null)
             {
                 ProjectExplorer.chnFile = FILE;
 
                 var loadedProject = Project.LoadFromFile(FILE);
-                this.Text = loadedProject.Name + $" - LAB";
-                projectFile = FILE;
-                if (loadedProject.Target != RuntimeInformation.RuntimeIdentifier)
+                if (loadedProject is not null)
                 {
-                    status.Text = "You are Developing a Programm for another OperatingSystem. You cant test or Debug";
+
+                    this.Text = loadedProject.Name + $" - LAB";
+                    projectFile = FILE;
+
+                    if (loadedProject.Target != RuntimeInformation.RuntimeIdentifier)
+                    {
+                        status.Text = "You are Developing a Programm for another OperatingSystem. You cant test or Debug";
+                    }
                 }
+               
             }
-            
+
         }
 
         private void ShowNewForm(object sender, EventArgs e)
@@ -172,7 +198,7 @@ namespace srvlocal_gui.LAB
             Form childForm = new EDITOR.EditorJS();
             childForm.MdiParent = this;
             childForm.Dock = DockStyle.Fill;
-            childForm.FormBorderStyle = FormBorderStyle.None;   
+            childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Text = "LAB Code";
             childForm.Show();
         }
@@ -204,20 +230,15 @@ namespace srvlocal_gui.LAB
         {
             try
             {
-                // Init RuProgressBar with message text in RuProgressBar
                 RuProgressBar ruProgressBar = new RuProgressBar(Text = $"Loading Solution \"{filename}\"");
-                // Just one example of an MyObject handed over (Dummy)
                 object MyObject = null;
-                // Handed down dummy object, number of passes and step(divisor)
                 MyFunctionality myFunctionality = new MyFunctionality(MyObject, 1000000, 10);
-                // Run application with RuProgressBar
-                // In the example, a whole object containing the function is passed
                 System.Threading.ThreadPool.QueueUserWorkItem(new System.Threading.WaitCallback(myFunctionality.LoadingProject), ruProgressBar);
                 ruProgressBar.ShowDialog();
             }
             catch (Exception e)
             {
-                Console.WriteLine("An error occurred: '{0}'", e);
+                MessageBox.Show(String.Format("An error occurred: \n\n'{0}'", e.Message), "Projektmanager", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -283,27 +304,28 @@ namespace srvlocal_gui.LAB
 
         private void builder_gui_Shown(object sender, EventArgs e)
         {
-            this.Enabled = false;
-
-            var filePath = ".\\srvlocal.exe";
-            var process = new Process
+            try
             {
-                StartInfo = new ProcessStartInfo
+                var process = new Process();
+                process.StartInfo = new ProcessStartInfo
                 {
-                    FileName = filePath,
+                    FileName = config.Default.srvlocal_path,
                     RedirectStandardOutput = true,
                     UseShellExecute = false,
                     CreateNoWindow = true,
-                }
-            };
-            process.Start();
+                };
+                process.Start();
 
-            while (!process.Responding)
+                while (!process.Responding)
+                {
+                    status.Text = "Waiting for the DesingServer...";
+                }
+            }
+            catch (Exception ex)
             {
-                
+                MessageBox.Show(ex.Message, "Server Internal Error");
             }
 
-            this.Enabled = true;  
         }
 
         private void UpdateText(string selectedItem)
@@ -351,14 +373,14 @@ namespace srvlocal_gui.LAB
 
         private void projektProjektmappeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(addFile.ShowDialog() == DialogResult.OK)
+            if (addFile.ShowDialog() == DialogResult.OK)
             {
                 try
                 {
                     Run_RuProgressBar(LABLibary.Converter.FileC.GetFileName(addFile.FileName));
                     LoadProject(addFile.FileName);
                 }
-                catch(Exception ex) 
+                catch (Exception ex)
                 {
                     LABLibary.Forms.ErrorDialog.ErrorManager.AddError(ex.Message, true, "ProjectManager");
                     LABLibary.Forms.ErrorDialog.Show();
@@ -376,7 +398,7 @@ namespace srvlocal_gui.LAB
     public class MyFunctionality
     {
         private int max = 0;
-        private int divisor = 1;
+        private int divisor = 2;
         public MyFunctionality(object MyObject = null, int Max = 0, int Divisor = 10)
         {
             object myObject = MyObject;
@@ -384,8 +406,8 @@ namespace srvlocal_gui.LAB
             divisor = Divisor;
         }
         public void LoadingProject(object status)
-        { 
-            divisor = 60;
+        {
+            divisor = 210;
 
             try
             {

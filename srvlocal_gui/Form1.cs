@@ -131,7 +131,9 @@ namespace srvlocal_gui
             }
             */
 
-            lblDomain_2.Text = AppDomain.CurrentDomain.BaseDirectory;
+            Worker.AppDomainWorker.Instance.PerformWorkInAppDomain(out string domain);
+
+            lblDomain_2.Text = domain;
             lblReach.Text = Program.CheckIfDirIsValid().ToString() as string;
             ToolTip.UseAnimation = true;
 
@@ -158,14 +160,14 @@ namespace srvlocal_gui
             {
                 Logger.Instance.Log(ex.Message, logLevel: Logger.LogLevel.Error);
                 MessageBox.Show("Some Ressources are missing. Please Re-Install the Application.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Program.Browser_();
+                Program.Browser_(startInLocalBrowser:true);
                 this.Close();
             }
 
 
             try
             {
-                CheckForUpdates();
+                await CheckForUpdates(UpdateMode.Automatic);
                 LicenseEvaluation();
 
                 var quote = await Helper.GetQuoteOfTheDayAsync();
@@ -297,7 +299,7 @@ namespace srvlocal_gui
             }
         }
 
-        public Task CheckForUpdates()
+        public Task CheckForUpdates(UpdateMode mode = UpdateMode.Manual)
         {
             try
             {
@@ -320,7 +322,7 @@ namespace srvlocal_gui
                         break;
                     default:
 
-                        Logger.Instance.Log("Started Updater (mode: MANUALY)", Logger.LogLevel.Info);
+                        Logger.Instance.Log($"Started Updater (mode: {mode.ToString()})", Logger.LogLevel.Info);
 
                         Task.Run(() =>
                         {
@@ -382,7 +384,7 @@ namespace srvlocal_gui
 
         private void bntOpen_Click(object sender, EventArgs e)
         {
-            Program.Browser_();
+            Program.Browser_(startInLocalBrowser: true);
         }
 
         private void lblDomain_Click(object sender, EventArgs e)
@@ -532,7 +534,6 @@ namespace srvlocal_gui
         {
             string filePath = ".\\srvlocal.exe";
             ConsolePanel.Visible = true;
-            Program.Browser_("http://localhost:8080");
 
             try
             {
@@ -559,6 +560,8 @@ namespace srvlocal_gui
                 process.BeginOutputReadLine();
 
                 NotyFi(icon: ToolTipIcon.Info, onClose: (sender, e) => { Console.WriteLine("Notification closed!"); });
+
+                Program.Browser_("http://localhost:8080/api/login", false);
 
                 using (var httpClient = new HttpClient())
                 {
@@ -711,7 +714,7 @@ namespace srvlocal_gui
                     System.Windows.Forms.Application.DoEvents();
                     process.WaitForExitAsync();
                 }
-                Program.Browser_("http://localhost:" + txtPort.Text);
+                Program.Browser_("http://localhost:" + txtPort.Text + "/api/login",false);
                 ConsolePanel.Visible = true;
 
                 try
@@ -874,7 +877,7 @@ namespace srvlocal_gui
 
         private void bntMEtro(object sender, EventArgs e)
         {
-            var setup = new Setup();
+            var setup = Setup.Instance(logedInUser);
             setup.Show();
 
 
@@ -1095,7 +1098,7 @@ namespace srvlocal_gui
 
             if (response != null)
             {
-                LABLibary.Forms.AsyncMessageBox.Show("API Endpoint : \n\n" + response, "ServerResponse");
+                LABLibary.Forms.AsyncMessageBox.Show("API Endpoint: \n\n" + response, "ServerResponse");
             }
         }
 
@@ -1109,6 +1112,57 @@ namespace srvlocal_gui
 
         }
 
+        public bool loggedInApi = false;
+
+        public void APILoginHandler(bool LoggedInSuccessfully)
+        {
+            if(LoggedInSuccessfully)
+            {
+                var appin = FileViewForm.Instance(null);
+                appin.Close();
+                loggedInApi = !loggedInApi;
+            }
+            else
+            {
+                MessageBox.Show("Wrong API Credentials.");
+            }
+        }
+
+        public void APILoginHandler_Closing(bool LoggedInSuccessfully)
+        {
+            if (LoggedInSuccessfully)
+            {
+                var appin = FileViewForm.Instance(null);
+                appin.Close();
+                loggedInApi = !loggedInApi;
+                lblquote.Text = "API Endpoint: Unlocked Enviroment.";
+            }
+            else
+            {
+                MessageBox.Show("Wrong API Credentials.");
+
+                ConsolePanel.Visible = false;
+
+                try
+                {
+                    string url = $"http://localhost:{txtPort.Text}/api/com?command=close&key=liloDev-420";
+                    string response = MakeGetRequest(url);
+
+                    if (response != null)
+                    {
+                        lblquote.Text = ("API Endpoint : " + response);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Logger.Instance.Log(ex.Message, logLevel: Logger.LogLevel.Error);
+
+                }
+
+
+                ConsolePanel.Visible = false;
+            }
+        }
 
     }
 }

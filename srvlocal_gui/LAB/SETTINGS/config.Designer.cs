@@ -46,5 +46,18 @@ namespace srvlocal_gui.LAB.SETTINGS {
                 this["lastLoggedInUser"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\joeva\\Documents\\GitHub\\LILO-LocalServer\\srvlocal_gui\\bin\\Debug\\net7.0-wi" +
+            "ndows\\srvlocal.exe")]
+        public string srvlocal_path {
+            get {
+                return ((string)(this["srvlocal_path"]));
+            }
+            set {
+                this["srvlocal_path"] = value;
+            }
+        }
     }
 }

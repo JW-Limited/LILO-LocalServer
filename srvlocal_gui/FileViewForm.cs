@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ReactiveUI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,8 @@ namespace srvlocal_gui
         private static FileViewForm _instance;
         private static object _instanceLock = new object();
         private string? sourceURL;
+        private string changedSource;
+        private bool Success = false;
 
         public static FileViewForm Instance(string source)
         {
@@ -61,6 +64,29 @@ namespace srvlocal_gui
             settings.IsStatusBarEnabled = false;
             settings.IsWebMessageEnabled = false;
             settings.IsZoomControlEnabled = false;
+        }
+
+        private void FileView_NavigationStarting(object sender, Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs e)
+        {
+            changedSource = e.Uri;
+        }
+
+        private void FileView_NavigationCompleted(object sender, Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs e)
+        {
+            if (e.IsSuccess)
+            {
+                if (changedSource.EndsWith("api/home"))
+                {
+                    Success = true;
+                    Form1.Instance.APILoginHandler(true);
+                }
+            }
+        }
+
+        private void FileViewForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Form1.Instance.APILoginHandler_Closing(Success);
+            _instance = null;
         }
     }
 }

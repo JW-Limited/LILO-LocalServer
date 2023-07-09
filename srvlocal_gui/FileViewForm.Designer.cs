@@ -42,19 +42,22 @@
             FileView.Dock = DockStyle.Fill;
             FileView.Location = new Point(0, 0);
             FileView.Name = "FileView";
-            FileView.Size = new Size(790, 526);
+            FileView.Size = new Size(1086, 842);
             FileView.TabIndex = 0;
             FileView.ZoomFactor = 1D;
+            FileView.NavigationStarting += FileView_NavigationStarting;
+            FileView.NavigationCompleted += FileView_NavigationCompleted;
             // 
             // FileViewForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(790, 526);
+            ClientSize = new Size(1086, 842);
             Controls.Add(FileView);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FileViewForm";
             Text = "FVF";
+            FormClosing += FileViewForm_FormClosing;
             Load += FileViewForm_Load;
             ((System.ComponentModel.ISupportInitialize)FileView).EndInit();
             ResumeLayout(false);

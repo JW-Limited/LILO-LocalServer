@@ -13,11 +13,10 @@ using DarkUI;
 using Zeroit.Framework.Metro;
 using LABLibary.Network;
 using System.ComponentModel;
-using Telerik.WinControls.UI.Map.Bing;
-using Google.Apis.Gmail.v1.Data;
 using srvlocal_gui.AppMananger;
 using LABLibary.Forms;
 using System.Net;
+using srvlocal_gui.LAB.SETTINGS;
 
 namespace srvlocal_gui
 {
@@ -199,6 +198,7 @@ namespace srvlocal_gui
                 Console.WriteLine(SettingsManager.Instance.GetSetting(settings => settings.WindowTitle, "default value"));
                 ApplicationConfiguration.Initialize();
                 AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(CurrentDomain_UnhandledException);
+                
                 AutoGenerators.ShowReadMeDialog();
                 bool startWithNoWindow = false;
 
@@ -244,7 +244,7 @@ namespace srvlocal_gui
             GenerateDirectoryContents("C:\\LILO\\req");
             GenerateDirectoryContents("C:\\LILO\\host");
 
-            if (!File.Exists(SettingsFileName))
+            if (!File.Exists(Path.Combine("C:\\LILO\\host",SettingsFileName)))
             {
                 Logger.Instance.Log("Settings file was not found. Initializing SettingsManager and generating it.");
 
@@ -317,13 +317,20 @@ namespace srvlocal_gui
                         startedForm = Form1.Instance /*(arg)*/;
                         break;
                     case "builder":
-                        new builder_gui(@"C:\LILO\dist\LILOApp1\LILOApp1.lab");
+                        builder_gui.Instance(arg);
                         break;
                 }
             }
             else
             {
-                startedForm = Form1.Instance /*(arg)*/;
+                if(File.Exists(arg))
+                {
+                    startedForm = builder_gui.Instance(arg);
+                }
+                else
+                {
+                    startedForm = Form1.Instance /*(arg)*/;
+                }
             }
 
             Application.Run(startedForm);
@@ -331,7 +338,7 @@ namespace srvlocal_gui
 
         private static void StartSrvLocalProcess(bool noWindow)
         {
-            var processName = "srvlocal.exe";
+            var processName = config.Default.srvlocal_path;
             var isProcessRunning = Process.GetProcessesByName(processName).Length > 0;
 
             if (!isProcessRunning)
@@ -340,7 +347,7 @@ namespace srvlocal_gui
                 {
                     StartInfo = new ProcessStartInfo
                     {
-                        FileName = $".\\{processName}",
+                        FileName = config.Default.srvlocal_path,
                         RedirectStandardOutput = true,
                         UseShellExecute = false,
                         CreateNoWindow = noWindow,
@@ -424,7 +431,7 @@ namespace srvlocal_gui
 
         public static bool CheckIfDirIsValid()
         {
-            string[] requiredFiles = { "srvlocal.exe", "srvlocal.dll", "srvlocal.runtimeconfig.json", "config.xml", "log.txt" };
+            string[] requiredFiles = { "srvlocal.exe", "srvlocal.dll", "srvlocal.runtimeconfig.json"};
             string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
 
             return requiredFiles.All(file => File.Exists(Path.Combine(baseDirectory, file)));
@@ -452,51 +459,58 @@ namespace srvlocal_gui
 
         public static List<string> GetMissingFiles()
         {
-            string[] requiredFiles = { "srvlocal.exe", "srvlocal.dll", "srvlocal.runtimeconfig.json", "config.xml", "log.txt" };
+            string[] requiredFiles = { "srvlocal.exe", "srvlocal.dll", "srvlocal.runtimeconfig.json" };
             string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
 
             return requiredFiles.Where(file => !File.Exists(Path.Combine(baseDirectory, file))).ToList();
         }
 
+        
 
-
-        public static void Browser_(string url = "https://github.com/JW-Limited/LILO-LocalServer")
+        public static void Browser_(string url = "https://github.com/JW-Limited/LILO-LocalServer", bool startInLocalBrowser = true)
         {
-            try
-            {
-                Process.Start(url);
+            if(startInLocalBrowser) {
+                try
+                {
+                    Process.Start(url);
+                }
+                catch (Win32Exception)
+                {
+                    if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+                    {
+                        url = url.Replace("&", "^&");
+                        Process.Start(new ProcessStartInfo("cmd", $"/c start {url}")
+                        {
+                            CreateNoWindow = true,
+                            UseShellExecute = false,
+                            ErrorDialog = false
+                        });
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                catch (Exception)
+                {
+                    if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+                    {
+                        Process.Start("xdg-open", url);
+                    }
+                    else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
+                    {
+                        Process.Start("open", url);
+                    }
+                    else
+                    {
+                        throw new NotSupportedException();
+                    }
+                }
             }
-            catch (Win32Exception)
+            else
             {
-                if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
-                {
-                    url = url.Replace("&", "^&");
-                    Process.Start(new ProcessStartInfo("cmd", $"/c start {url}") 
-                    { 
-                        CreateNoWindow = true,
-                        UseShellExecute = false,
-                        ErrorDialog = false
-                    });
-                }
-                else
-                {
-                    throw;
-                }
-            }
-            catch (Exception)
-            {
-                if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
-                {
-                    Process.Start("xdg-open", url);
-                }
-                else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
-                {
-                    Process.Start("open", url);
-                }
-                else
-                {
-                    throw new NotSupportedException();
-                }
+                var inapp = FileViewForm.Instance(url);
+                inapp.ShowDialog();
             }
         }
 

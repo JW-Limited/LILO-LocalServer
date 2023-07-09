@@ -1,11 +1,691 @@
-2023-06-26 23:41:16 [INFO] - Started GUI...
-2023-06-26 23:41:16 [INFO] - Directory allready satisfied.
-2023-06-26 23:41:16 [INFO] - Directory allready satisfied.
-2023-06-26 23:41:16 [INFO] - Directory allready satisfied.
-2023-06-26 23:41:16 [INFO] - Settings file was not found. Initializing SettingsManager and generating it.
-2023-06-26 23:41:16 [INFO] - You are an administrator.
-2023-06-26 23:41:25 [WARNING] - Missing resources : config.xml, log.txt,
-2023-06-26 23:41:29 [INFO] - Started Updater (mode: MANUALY)
-2023-06-26 23:41:29 [INFO] - Starting license evaluation.
-2023-06-26 23:41:30 [INFO] - Youre Up to date. Current Version: 1.3.1.
-2023-06-26 23:41:31 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-06-29 08:13:19 [INFO] - Started GUI...
+2023-06-29 08:13:19 [INFO] - Directory allready satisfied.
+2023-06-29 08:13:19 [INFO] - Directory allready satisfied.
+2023-06-29 08:13:19 [INFO] - Directory allready satisfied.
+2023-06-29 08:13:19 [INFO] - Settings file was not found. Initializing SettingsManager and generating it.
+2023-06-29 08:13:20 [INFO] - You are an administrator.
+2023-06-29 08:13:42 [WARNING] - Missing resources : config.xml, log.txt,
+2023-06-29 08:14:02 [INFO] - Started Updater (mode: MANUALY)
+2023-06-29 08:14:02 [INFO] - Starting license evaluation.
+2023-06-29 08:14:03 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-06-29 08:14:04 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-06-29 10:36:56 [INFO] - Started GUI...
+2023-06-29 10:36:56 [INFO] - Directory allready satisfied.
+2023-06-29 10:36:56 [INFO] - Directory allready satisfied.
+2023-06-29 10:36:56 [INFO] - Directory allready satisfied.
+2023-06-29 10:36:56 [INFO] - Settings file was not found. Initializing SettingsManager and generating it.
+2023-06-29 10:36:57 [INFO] - You are an administrator.
+2023-06-29 10:37:03 [WARNING] - Missing resources : config.xml, log.txt,
+2023-06-29 10:37:13 [INFO] - Started Updater (mode: MANUALY)
+2023-06-29 10:37:13 [INFO] - Starting license evaluation.
+2023-06-29 10:37:15 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-06-29 10:37:16 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-06-29 11:45:17 [INFO] - Started GUI...
+2023-06-29 11:45:17 [INFO] - Directory allready satisfied.
+2023-06-29 11:45:17 [INFO] - Directory allready satisfied.
+2023-06-29 11:45:17 [INFO] - Directory allready satisfied.
+2023-06-29 11:45:17 [INFO] - You are an administrator.
+2023-06-29 12:08:25 [INFO] - Started GUI...
+2023-06-29 12:08:25 [INFO] - Directory allready satisfied.
+2023-06-29 12:08:25 [INFO] - Directory allready satisfied.
+2023-06-29 12:08:25 [INFO] - Directory allready satisfied.
+2023-06-29 12:08:25 [INFO] - You are an administrator.
+2023-06-29 12:08:27 [WARNING] - Missing resources : config.xml, log.txt,
+2023-06-29 12:08:33 [INFO] - Started Updater (mode: MANUALY)
+2023-06-29 12:08:33 [INFO] - Starting license evaluation.
+2023-06-29 12:08:34 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-06-29 12:08:35 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-06-29 12:08:43 [INFO] - Started Updater (mode: MANUALY)
+2023-06-29 12:08:43 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-06-29 12:08:45 [INFO] - Started Updater (mode: MANUALY)
+2023-06-29 12:08:45 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-06-29 12:08:57 [ERROR] - Password cannot be null or empty
+2023-06-29 12:08:59 [ERROR] - Password cannot be null or empty
+2023-06-29 12:09:32 [INFO] - Started Updater (mode: MANUALY)
+2023-06-29 12:09:32 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-06-29 12:12:11 [INFO] - guestjoeva
+2023-06-29 12:12:17 [INFO] - Error occurred while making the GET request: Es konnte keine Verbindung hergestellt werden, da der Zielcomputer die Verbindung verweigerte. [::ffff:127.0.0.1]:8080 (localhost:8080)
+2023-06-29 12:12:18 [INFO] - Started GUI...
+2023-06-29 12:12:18 [INFO] - Directory allready satisfied.
+2023-06-29 12:12:18 [INFO] - Directory allready satisfied.
+2023-06-29 12:12:18 [INFO] - Directory allready satisfied.
+2023-06-29 12:12:18 [INFO] - You are an administrator.
+2023-06-29 12:12:19 [WARNING] - Missing resources : config.xml, log.txt,
+2023-06-29 12:12:30 [INFO] - Started Updater (mode: MANUALY)
+2023-06-29 12:12:30 [INFO] - Starting license evaluation.
+2023-06-29 12:12:33 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-06-29 12:12:38 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-04 10:52:31 [INFO] - Started GUI...
+2023-07-04 10:52:31 [INFO] - Directory allready satisfied.
+2023-07-04 10:52:31 [INFO] - Directory allready satisfied.
+2023-07-04 10:52:31 [INFO] - Directory allready satisfied.
+2023-07-04 10:52:31 [INFO] - You are an administrator.
+2023-07-04 10:52:33 [WARNING] - Missing resources : config.xml, log.txt,
+2023-07-04 10:52:50 [INFO] - Started Updater (mode: MANUALY)
+2023-07-04 10:52:50 [INFO] - Starting license evaluation.
+2023-07-04 10:53:55 [INFO] - Started GUI...
+2023-07-04 10:53:55 [INFO] - Directory allready satisfied.
+2023-07-04 10:53:55 [INFO] - Directory allready satisfied.
+2023-07-04 10:53:55 [INFO] - Directory allready satisfied.
+2023-07-04 10:53:55 [INFO] - Settings file was not found. Initializing SettingsManager and generating it.
+2023-07-04 10:53:56 [INFO] - You are an administrator.
+2023-07-04 10:53:57 [WARNING] - Missing resources : config.xml, log.txt,
+2023-07-04 10:54:00 [INFO] - Started Updater (mode: MANUALY)
+2023-07-04 10:54:00 [INFO] - Starting license evaluation.
+2023-07-04 10:54:01 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-07-04 10:54:04 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-04 11:03:26 [INFO] - Started GUI...
+2023-07-04 11:03:26 [INFO] - Directory allready satisfied.
+2023-07-04 11:03:26 [INFO] - Directory allready satisfied.
+2023-07-04 11:03:26 [INFO] - Directory allready satisfied.
+2023-07-04 11:03:26 [INFO] - You are an administrator.
+2023-07-04 11:03:27 [WARNING] - Missing resources : config.xml, log.txt,
+2023-07-04 11:03:38 [INFO] - Started Updater (mode: MANUALY)
+2023-07-04 11:03:38 [INFO] - Starting license evaluation.
+2023-07-04 11:03:41 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-07-04 11:03:42 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-04 11:04:57 [INFO] - Started Updater (mode: MANUALY)
+2023-07-04 11:04:58 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-07-04 11:08:23 [INFO] - Started GUI...
+2023-07-04 11:08:23 [INFO] - Directory allready satisfied.
+2023-07-04 11:08:23 [INFO] - Directory allready satisfied.
+2023-07-04 11:08:23 [INFO] - Directory allready satisfied.
+2023-07-04 11:08:23 [INFO] - You are an administrator.
+2023-07-04 11:08:28 [WARNING] - Missing resources : config.xml, log.txt,
+2023-07-04 11:08:36 [INFO] - Started Updater (mode: MANUALY)
+2023-07-04 11:08:36 [INFO] - Starting license evaluation.
+2023-07-04 11:08:37 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-07-04 11:08:38 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-04 11:08:55 [INFO] - Started GUI...
+2023-07-04 11:08:55 [INFO] - Directory allready satisfied.
+2023-07-04 11:08:55 [INFO] - Directory allready satisfied.
+2023-07-04 11:08:55 [INFO] - Directory allready satisfied.
+2023-07-04 11:08:55 [INFO] - You are an administrator.
+2023-07-04 11:08:57 [WARNING] - Missing resources : config.xml, log.txt,
+2023-07-04 11:09:03 [ERROR] - One or more errors occurred. (Der angegebene Host ist unbekannt. (api.github.com:443))
+2023-07-04 11:09:03 [INFO] - Starting license evaluation.
+2023-07-04 11:09:03 [ERROR] - Der angegebene Host ist unbekannt. (quotes15.p.rapidapi.com:443)
+2023-07-04 11:10:17 [INFO] - Started GUI...
+2023-07-04 11:10:17 [INFO] - Directory allready satisfied.
+2023-07-04 11:10:17 [INFO] - Directory allready satisfied.
+2023-07-04 11:10:17 [INFO] - Directory allready satisfied.
+2023-07-04 11:10:17 [INFO] - You are an administrator.
+2023-07-04 11:10:19 [WARNING] - Missing resources : config.xml, log.txt,
+2023-07-04 11:10:26 [ERROR] - One or more errors occurred. (Der angegebene Host ist unbekannt. (api.github.com:443))
+2023-07-04 11:10:26 [INFO] - Starting license evaluation.
+2023-07-04 11:10:26 [ERROR] - Der angegebene Host ist unbekannt. (quotes15.p.rapidapi.com:443)
+2023-07-04 11:14:48 [INFO] - Started GUI...
+2023-07-04 11:14:48 [INFO] - Directory allready satisfied.
+2023-07-04 11:14:48 [INFO] - Directory allready satisfied.
+2023-07-04 11:14:48 [INFO] - Directory allready satisfied.
+2023-07-04 11:14:48 [INFO] - You are an administrator.
+2023-07-04 11:14:50 [WARNING] - Missing resources : config.xml, log.txt,
+2023-07-04 11:14:58 [ERROR] - One or more errors occurred. (Der angegebene Host ist unbekannt. (api.github.com:443))
+2023-07-04 11:14:58 [INFO] - Starting license evaluation.
+2023-07-04 11:14:58 [ERROR] - Der angegebene Host ist unbekannt. (quotes15.p.rapidapi.com:443)
+2023-07-08 20:17:51 [INFO] - Started GUI...
+2023-07-08 20:17:51 [INFO] - Directory allready satisfied.
+2023-07-08 20:17:51 [INFO] - Directory allready satisfied.
+2023-07-08 20:17:51 [INFO] - Directory allready satisfied.
+2023-07-08 20:17:51 [INFO] - You are an administrator.
+2023-07-08 20:17:53 [WARNING] - Missing resources : config.xml, log.txt,
+2023-07-08 20:18:01 [INFO] - Started Updater (mode: MANUALY)
+2023-07-08 20:18:01 [INFO] - Starting license evaluation.
+2023-07-08 20:18:01 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-07-08 20:18:02 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-08 20:21:16 [INFO] - Started GUI...
+2023-07-08 20:21:16 [INFO] - Directory allready satisfied.
+2023-07-08 20:21:16 [INFO] - Directory allready satisfied.
+2023-07-08 20:21:16 [INFO] - Directory allready satisfied.
+2023-07-08 20:21:16 [INFO] - You are an administrator.
+2023-07-08 20:21:21 [WARNING] - Missing resources : config.xml, log.txt,
+2023-07-08 20:21:24 [INFO] - Started Updater (mode: MANUALY)
+2023-07-08 20:21:24 [INFO] - Starting license evaluation.
+2023-07-08 20:21:44 [INFO] - Started GUI...
+2023-07-08 20:21:44 [INFO] - Directory allready satisfied.
+2023-07-08 20:21:44 [INFO] - Directory allready satisfied.
+2023-07-08 20:21:44 [INFO] - Directory allready satisfied.
+2023-07-08 20:21:44 [INFO] - You are an administrator.
+2023-07-08 20:21:46 [WARNING] - Missing resources : config.xml, log.txt,
+2023-07-08 20:21:49 [INFO] - Started Updater (mode: MANUALY)
+2023-07-08 20:21:49 [INFO] - Starting license evaluation.
+2023-07-08 20:21:49 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-07-08 20:21:50 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-08 20:23:16 [INFO] - Started GUI...
+2023-07-08 20:23:16 [INFO] - Directory allready satisfied.
+2023-07-08 20:23:16 [INFO] - Directory allready satisfied.
+2023-07-08 20:23:16 [INFO] - Directory allready satisfied.
+2023-07-08 20:23:16 [INFO] - You are an administrator.
+2023-07-08 20:23:18 [WARNING] - Missing resources : config.xml, log.txt,
+2023-07-08 20:23:21 [INFO] - Started Updater (mode: MANUALY)
+2023-07-08 20:23:21 [INFO] - Starting license evaluation.
+2023-07-08 20:23:21 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-07-08 20:23:22 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-08 20:28:01 [INFO] - Started GUI...
+2023-07-08 20:28:01 [INFO] - Directory allready satisfied.
+2023-07-08 20:28:01 [INFO] - Directory allready satisfied.
+2023-07-08 20:28:01 [INFO] - Directory allready satisfied.
+2023-07-08 20:28:01 [INFO] - You are an administrator.
+2023-07-08 20:28:02 [WARNING] - Missing resources : config.xml, log.txt,
+2023-07-08 20:28:06 [INFO] - Started Updater (mode: MANUALY)
+2023-07-08 20:28:06 [INFO] - Starting license evaluation.
+2023-07-08 20:28:06 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-07-08 20:28:08 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-08 20:31:11 [INFO] - Started GUI...
+2023-07-08 20:31:11 [INFO] - Directory allready satisfied.
+2023-07-08 20:31:11 [INFO] - Directory allready satisfied.
+2023-07-08 20:31:11 [INFO] - Directory allready satisfied.
+2023-07-08 20:31:11 [INFO] - You are an administrator.
+2023-07-08 20:31:12 [WARNING] - Missing resources : config.xml, log.txt,
+2023-07-08 20:31:16 [INFO] - Started Updater (mode: MANUALY)
+2023-07-08 20:31:16 [INFO] - Starting license evaluation.
+2023-07-08 20:31:17 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-07-08 20:31:18 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-08 20:59:41 [INFO] - Started GUI...
+2023-07-08 20:59:41 [INFO] - Directory allready satisfied.
+2023-07-08 20:59:41 [INFO] - Directory allready satisfied.
+2023-07-08 20:59:41 [INFO] - Directory allready satisfied.
+2023-07-08 20:59:41 [INFO] - You are an administrator.
+2023-07-08 20:59:47 [WARNING] - Missing resources : config.xml, log.txt,
+2023-07-08 20:59:54 [INFO] - Started Updater (mode: MANUALY)
+2023-07-08 20:59:54 [INFO] - Starting license evaluation.
+2023-07-08 20:59:55 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-07-08 20:59:55 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-08 21:04:56 [INFO] - Started GUI...
+2023-07-08 21:04:56 [INFO] - Directory allready satisfied.
+2023-07-08 21:04:56 [INFO] - Directory allready satisfied.
+2023-07-08 21:04:56 [INFO] - Directory allready satisfied.
+2023-07-08 21:04:56 [INFO] - You are an administrator.
+2023-07-08 21:05:00 [WARNING] - Missing resources : config.xml, log.txt,
+2023-07-08 21:05:04 [INFO] - Started Updater (mode: MANUALY)
+2023-07-08 21:05:04 [INFO] - Starting license evaluation.
+2023-07-08 21:05:05 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-07-08 21:05:05 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-08 21:06:12 [INFO] - Started GUI...
+2023-07-08 21:06:12 [INFO] - Directory allready satisfied.
+2023-07-08 21:06:12 [INFO] - Directory allready satisfied.
+2023-07-08 21:06:12 [INFO] - Directory allready satisfied.
+2023-07-08 21:06:12 [INFO] - You are an administrator.
+2023-07-08 21:06:14 [WARNING] - Missing resources : config.xml, log.txt,
+2023-07-08 21:06:18 [INFO] - Started Updater (mode: MANUALY)
+2023-07-08 21:06:18 [INFO] - Starting license evaluation.
+2023-07-08 21:06:18 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-07-08 21:06:20 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-08 21:08:33 [INFO] - Started GUI...
+2023-07-08 21:08:33 [INFO] - Directory allready satisfied.
+2023-07-08 21:08:33 [INFO] - Directory allready satisfied.
+2023-07-08 21:08:33 [INFO] - Directory allready satisfied.
+2023-07-08 21:08:33 [INFO] - You are an administrator.
+2023-07-08 21:08:35 [WARNING] - Missing resources : config.xml, log.txt,
+2023-07-08 21:08:42 [INFO] - Started Updater (mode: MANUALY)
+2023-07-08 21:08:42 [INFO] - Starting license evaluation.
+2023-07-08 21:08:42 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-07-08 21:08:43 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-08 21:10:03 [INFO] - Started GUI...
+2023-07-08 21:10:03 [INFO] - Directory allready satisfied.
+2023-07-08 21:10:03 [INFO] - Directory allready satisfied.
+2023-07-08 21:10:03 [INFO] - Directory allready satisfied.
+2023-07-08 21:10:03 [INFO] - You are an administrator.
+2023-07-08 21:10:04 [WARNING] - Missing resources : config.xml, log.txt,
+2023-07-08 21:10:10 [INFO] - Started Updater (mode: MANUALY)
+2023-07-08 21:10:10 [INFO] - Starting license evaluation.
+2023-07-08 21:10:11 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-07-08 21:10:12 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-08 21:11:37 [INFO] - Started GUI...
+2023-07-08 21:11:37 [INFO] - Directory allready satisfied.
+2023-07-08 21:11:37 [INFO] - Directory allready satisfied.
+2023-07-08 21:11:37 [INFO] - Directory allready satisfied.
+2023-07-08 21:11:37 [INFO] - You are an administrator.
+2023-07-08 21:11:39 [WARNING] - Missing resources : config.xml, log.txt,
+2023-07-08 21:11:44 [INFO] - Started Updater (mode: MANUALY)
+2023-07-08 21:11:44 [INFO] - Starting license evaluation.
+2023-07-08 21:11:45 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-07-08 21:11:45 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-08 21:16:39 [INFO] - Started GUI...
+2023-07-08 21:16:39 [INFO] - Directory allready satisfied.
+2023-07-08 21:16:39 [INFO] - Directory allready satisfied.
+2023-07-08 21:16:39 [INFO] - Directory allready satisfied.
+2023-07-08 21:16:39 [INFO] - You are an administrator.
+2023-07-08 21:16:41 [WARNING] - Missing resources : config.xml, log.txt,
+2023-07-08 21:16:44 [INFO] - Started Updater (mode: MANUALY)
+2023-07-08 21:16:44 [INFO] - Starting license evaluation.
+2023-07-08 21:16:44 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-07-08 21:16:46 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-08 21:49:14 [INFO] - Started GUI...
+2023-07-08 21:49:14 [INFO] - Directory allready satisfied.
+2023-07-08 21:49:14 [INFO] - Directory allready satisfied.
+2023-07-08 21:49:14 [INFO] - Directory allready satisfied.
+2023-07-08 21:49:14 [INFO] - You are an administrator.
+2023-07-08 21:49:16 [WARNING] - Missing resources : config.xml, log.txt,
+2023-07-08 21:49:25 [INFO] - Started Updater (mode: MANUALY)
+2023-07-08 21:49:25 [INFO] - Starting license evaluation.
+2023-07-08 21:49:26 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-07-08 21:49:40 [INFO] - Started GUI...
+2023-07-08 21:49:40 [INFO] - Directory allready satisfied.
+2023-07-08 21:49:40 [INFO] - Directory allready satisfied.
+2023-07-08 21:49:40 [INFO] - Directory allready satisfied.
+2023-07-08 21:49:40 [INFO] - You are an administrator.
+2023-07-08 21:49:42 [WARNING] - Missing resources : config.xml, log.txt,
+2023-07-08 21:49:48 [INFO] - Started Updater (mode: MANUALY)
+2023-07-08 21:49:48 [INFO] - Starting license evaluation.
+2023-07-08 21:49:48 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-07-08 21:49:49 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-09 16:27:26 [INFO] - Started GUI...
+2023-07-09 16:27:26 [INFO] - Directory allready satisfied.
+2023-07-09 16:27:26 [INFO] - Directory allready satisfied.
+2023-07-09 16:27:26 [INFO] - Directory allready satisfied.
+2023-07-09 16:27:26 [INFO] - You are an administrator.
+2023-07-09 16:27:28 [WARNING] - Missing resources : config.xml, log.txt,
+2023-07-09 16:27:34 [INFO] - Started Updater (mode: MANUALY)
+2023-07-09 16:27:34 [INFO] - Starting license evaluation.
+2023-07-09 16:27:35 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-07-09 16:27:36 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-09 16:52:51 [INFO] - Started GUI...
+2023-07-09 16:52:51 [INFO] - Directory allready satisfied.
+2023-07-09 16:52:51 [INFO] - Directory allready satisfied.
+2023-07-09 16:52:51 [INFO] - Directory allready satisfied.
+2023-07-09 16:52:51 [INFO] - You are an administrator.
+2023-07-09 16:52:54 [WARNING] - Missing resources : config.xml, log.txt,
+2023-07-09 16:53:00 [INFO] - Started Updater (mode: Automatic)
+2023-07-09 16:53:00 [INFO] - Starting license evaluation.
+2023-07-09 16:53:00 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-07-09 16:53:01 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-09 16:54:21 [INFO] - Started Updater (mode: MANUALY)
+2023-07-09 16:54:22 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-07-09 16:55:15 [INFO] - Started GUI...
+2023-07-09 16:55:15 [INFO] - Directory allready satisfied.
+2023-07-09 16:55:15 [INFO] - Directory allready satisfied.
+2023-07-09 16:55:15 [INFO] - Directory allready satisfied.
+2023-07-09 16:55:15 [INFO] - You are an administrator.
+2023-07-09 16:55:47 [INFO] - Started GUI...
+2023-07-09 16:55:47 [INFO] - Directory allready satisfied.
+2023-07-09 16:55:47 [INFO] - Directory allready satisfied.
+2023-07-09 16:55:47 [INFO] - Directory allready satisfied.
+2023-07-09 16:55:47 [INFO] - You are an administrator.
+2023-07-09 16:55:53 [INFO] - Started Updater (mode: Automatic)
+2023-07-09 16:55:53 [INFO] - Starting license evaluation.
+2023-07-09 16:55:53 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-07-09 16:55:54 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-09 17:50:23 [INFO] - Started GUI...
+2023-07-09 17:50:23 [INFO] - Directory allready satisfied.
+2023-07-09 17:50:23 [INFO] - Directory allready satisfied.
+2023-07-09 17:50:23 [INFO] - Directory allready satisfied.
+2023-07-09 17:50:24 [INFO] - You are an administrator.
+2023-07-09 17:50:34 [WARNING] - An unhandled exception occurred:
+Exception Type: TargetInvocationException
+Message: Exception has been thrown by the target of an invocation.
+Stack Trace:
+   at System.Reflection.MethodInvoker.Invoke(Object obj, IntPtr* args, BindingFlags invokeAttr)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Delegate.DynamicInvokeImpl(Object[] args)
+   at System.Windows.Forms.Control.InvokeMarshaledCallbackDo(ThreadMethodEntry tme)
+   at System.Windows.Forms.Control.InvokeMarshaledCallbackHelper(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Windows.Forms.Control.InvokeMarshaledCallbacks()
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, WM msg, IntPtr wparam, IntPtr lparam)
+   at Interop.User32.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.Interop.Mso.IMsoComponentManager.FPushMessageLoop(UIntPtr dwComponentID, msoloop uReason, Void* pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(msoloop reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(msoloop reason, ApplicationContext context)
+   at srvlocal_gui.Program.OpenBuilderGui(String arg) in C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\Program.cs:line 336
+   at srvlocal_gui.Program.Main(String[] args) in C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\Program.cs:line 236
+Additional Details:
+Target Site: Invoke (System.Private.CoreLib.dll)
+Source: System.Private.CoreLib
+Stack Trace Details:
+Method: Invoke (System.Private.CoreLib.dll)
+Line: 0
+Method: Invoke (System.Private.CoreLib.dll)
+Line: 0
+Method: DynamicInvokeImpl (System.Private.CoreLib.dll)
+Line: 0
+Method: InvokeMarshaledCallbackDo (System.Windows.Forms.dll)
+Line: 0
+Method: InvokeMarshaledCallbackHelper (System.Windows.Forms.dll)
+Line: 0
+Method: RunInternal (System.Private.CoreLib.dll)
+Line: 0
+Method: Throw (System.Private.CoreLib.dll)
+Line: 0
+Method: RunInternal (System.Private.CoreLib.dll)
+Line: 0
+Method: InvokeMarshaledCallbacks (System.Windows.Forms.dll)
+Line: 0
+Method: WndProc (System.Windows.Forms.dll)
+Line: 0
+Method: WndProc (System.Windows.Forms.dll)
+Line: 0
+Method: Callback (System.Windows.Forms.dll)
+Line: 0
+Method: DispatchMessageW (System.Windows.Forms.Primitives.dll)
+Line: 0
+Method: Interop.Mso.IMsoComponentManager.FPushMessageLoop (System.Windows.Forms.dll)
+Line: 0
+Method: RunMessageLoopInner (System.Windows.Forms.dll)
+Line: 0
+Method: RunMessageLoop (System.Windows.Forms.dll)
+Line: 0
+Method: OpenBuilderGui (srvlocal_gui.dll)
+Line: 336
+Method: Main (srvlocal_gui.dll)
+Line: 236
+Inner Exception:
+Exception Type: PlatformNotSupportedException
+Message: Secondary AppDomains are not supported on this platform.
+Stack Trace:
+   at System.AppDomain.CreateDomain(String friendlyName)
+   at srvlocal_gui.AppMananger.Worker.AppDomainWorker.PerformWorkInAppDomain(String& domainName) in C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\AppMananger\AppDomainWorker.cs:line 35
+   at srvlocal_gui.Form1.Form1_Load(Object sender, EventArgs e) in C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\Form1.cs:line 134
+   at System.Threading.Tasks.Task.<>c.<ThrowAsync>b__128_0(Object state)
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodInvoker.Invoke(Object obj, IntPtr* args, BindingFlags invokeAttr)
+Inner Exception Details:
+Inner Exception Target Site: CreateDomain (System.Private.CoreLib.dll)
+Inner Exception Source: System.Private.CoreLib
+Inner Exception Stack Trace Details:
+Method: CreateDomain (System.Private.CoreLib.dll)
+Line: 0
+Method: PerformWorkInAppDomain (srvlocal_gui.dll)
+Line: 35
+Method: MoveNext (srvlocal_gui.dll)
+Line: 134
+Method: Throw (System.Private.CoreLib.dll)
+Line: 0
+Method: <ThrowAsync>b__128_0 (System.Private.CoreLib.dll)
+Line: 0
+Method: InvokeMethod (System.Private.CoreLib.dll)
+Line: 0
+Method: Invoke (System.Private.CoreLib.dll)
+Line: 0
+
+2023-07-09 17:52:35 [INFO] - Started GUI...
+2023-07-09 17:52:35 [INFO] - Directory allready satisfied.
+2023-07-09 17:52:35 [INFO] - Directory allready satisfied.
+2023-07-09 17:52:35 [INFO] - Directory allready satisfied.
+2023-07-09 17:52:35 [INFO] - You are an administrator.
+2023-07-09 17:52:39 [WARNING] - An unhandled exception occurred:
+Exception Type: TargetInvocationException
+Message: Exception has been thrown by the target of an invocation.
+Stack Trace:
+   at System.Reflection.MethodInvoker.Invoke(Object obj, IntPtr* args, BindingFlags invokeAttr)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Delegate.DynamicInvokeImpl(Object[] args)
+   at System.Windows.Forms.Control.InvokeMarshaledCallbackDo(ThreadMethodEntry tme)
+   at System.Windows.Forms.Control.InvokeMarshaledCallbackHelper(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Windows.Forms.Control.InvokeMarshaledCallbacks()
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, WM msg, IntPtr wparam, IntPtr lparam)
+   at Interop.User32.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.Interop.Mso.IMsoComponentManager.FPushMessageLoop(UIntPtr dwComponentID, msoloop uReason, Void* pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(msoloop reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(msoloop reason, ApplicationContext context)
+   at srvlocal_gui.Program.OpenBuilderGui(String arg) in C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\Program.cs:line 336
+   at srvlocal_gui.Program.Main(String[] args) in C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\Program.cs:line 236
+Additional Details:
+Target Site: Invoke (System.Private.CoreLib.dll)
+Source: System.Private.CoreLib
+Stack Trace Details:
+Method: Invoke (System.Private.CoreLib.dll)
+Line: 0
+Method: Invoke (System.Private.CoreLib.dll)
+Line: 0
+Method: DynamicInvokeImpl (System.Private.CoreLib.dll)
+Line: 0
+Method: InvokeMarshaledCallbackDo (System.Windows.Forms.dll)
+Line: 0
+Method: InvokeMarshaledCallbackHelper (System.Windows.Forms.dll)
+Line: 0
+Method: RunInternal (System.Private.CoreLib.dll)
+Line: 0
+Method: Throw (System.Private.CoreLib.dll)
+Line: 0
+Method: RunInternal (System.Private.CoreLib.dll)
+Line: 0
+Method: InvokeMarshaledCallbacks (System.Windows.Forms.dll)
+Line: 0
+Method: WndProc (System.Windows.Forms.dll)
+Line: 0
+Method: WndProc (System.Windows.Forms.dll)
+Line: 0
+Method: Callback (System.Windows.Forms.dll)
+Line: 0
+Method: DispatchMessageW (System.Windows.Forms.Primitives.dll)
+Line: 0
+Method: Interop.Mso.IMsoComponentManager.FPushMessageLoop (System.Windows.Forms.dll)
+Line: 0
+Method: RunMessageLoopInner (System.Windows.Forms.dll)
+Line: 0
+Method: RunMessageLoop (System.Windows.Forms.dll)
+Line: 0
+Method: OpenBuilderGui (srvlocal_gui.dll)
+Line: 336
+Method: Main (srvlocal_gui.dll)
+Line: 236
+Inner Exception:
+Exception Type: PlatformNotSupportedException
+Message: Secondary AppDomains are not supported on this platform.
+Stack Trace:
+   at System.AppDomain.CreateDomain(String friendlyName)
+   at srvlocal_gui.AppMananger.Worker.AppDomainWorker.PerformWorkInAppDomain(String& domainName) in C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\AppMananger\AppDomainWorker.cs:line 35
+   at srvlocal_gui.Form1.Form1_Load(Object sender, EventArgs e) in C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\Form1.cs:line 134
+   at System.Threading.Tasks.Task.<>c.<ThrowAsync>b__128_0(Object state)
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodInvoker.Invoke(Object obj, IntPtr* args, BindingFlags invokeAttr)
+Inner Exception Details:
+Inner Exception Target Site: CreateDomain (System.Private.CoreLib.dll)
+Inner Exception Source: System.Private.CoreLib
+Inner Exception Stack Trace Details:
+Method: CreateDomain (System.Private.CoreLib.dll)
+Line: 0
+Method: PerformWorkInAppDomain (srvlocal_gui.dll)
+Line: 35
+Method: MoveNext (srvlocal_gui.dll)
+Line: 134
+Method: Throw (System.Private.CoreLib.dll)
+Line: 0
+Method: <ThrowAsync>b__128_0 (System.Private.CoreLib.dll)
+Line: 0
+Method: InvokeMethod (System.Private.CoreLib.dll)
+Line: 0
+Method: Invoke (System.Private.CoreLib.dll)
+Line: 0
+
+2023-07-09 17:55:43 [INFO] - Started GUI...
+2023-07-09 17:55:43 [INFO] - Directory allready satisfied.
+2023-07-09 17:55:43 [INFO] - Directory allready satisfied.
+2023-07-09 17:55:43 [INFO] - Directory allready satisfied.
+2023-07-09 17:55:43 [INFO] - You are an administrator.
+2023-07-09 17:55:47 [INFO] - Performing work in the AppDomain...
+2023-07-09 17:55:47 [WARNING] - An unhandled exception occurred:
+Exception Type: TargetInvocationException
+Message: Exception has been thrown by the target of an invocation.
+Stack Trace:
+   at System.Reflection.MethodInvoker.Invoke(Object obj, IntPtr* args, BindingFlags invokeAttr)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Delegate.DynamicInvokeImpl(Object[] args)
+   at System.Windows.Forms.Control.InvokeMarshaledCallbackDo(ThreadMethodEntry tme)
+   at System.Windows.Forms.Control.InvokeMarshaledCallbackHelper(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Windows.Forms.Control.InvokeMarshaledCallbacks()
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, WM msg, IntPtr wparam, IntPtr lparam)
+   at Interop.User32.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.Interop.Mso.IMsoComponentManager.FPushMessageLoop(UIntPtr dwComponentID, msoloop uReason, Void* pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(msoloop reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(msoloop reason, ApplicationContext context)
+   at srvlocal_gui.Program.OpenBuilderGui(String arg) in C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\Program.cs:line 336
+   at srvlocal_gui.Program.Main(String[] args) in C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\Program.cs:line 236
+Additional Details:
+Target Site: Invoke (System.Private.CoreLib.dll)
+Source: System.Private.CoreLib
+Stack Trace Details:
+Method: Invoke (System.Private.CoreLib.dll)
+Line: 0
+Method: Invoke (System.Private.CoreLib.dll)
+Line: 0
+Method: DynamicInvokeImpl (System.Private.CoreLib.dll)
+Line: 0
+Method: InvokeMarshaledCallbackDo (System.Windows.Forms.dll)
+Line: 0
+Method: InvokeMarshaledCallbackHelper (System.Windows.Forms.dll)
+Line: 0
+Method: RunInternal (System.Private.CoreLib.dll)
+Line: 0
+Method: Throw (System.Private.CoreLib.dll)
+Line: 0
+Method: RunInternal (System.Private.CoreLib.dll)
+Line: 0
+Method: InvokeMarshaledCallbacks (System.Windows.Forms.dll)
+Line: 0
+Method: WndProc (System.Windows.Forms.dll)
+Line: 0
+Method: WndProc (System.Windows.Forms.dll)
+Line: 0
+Method: Callback (System.Windows.Forms.dll)
+Line: 0
+Method: DispatchMessageW (System.Windows.Forms.Primitives.dll)
+Line: 0
+Method: Interop.Mso.IMsoComponentManager.FPushMessageLoop (System.Windows.Forms.dll)
+Line: 0
+Method: RunMessageLoopInner (System.Windows.Forms.dll)
+Line: 0
+Method: RunMessageLoop (System.Windows.Forms.dll)
+Line: 0
+Method: OpenBuilderGui (srvlocal_gui.dll)
+Line: 336
+Method: Main (srvlocal_gui.dll)
+Line: 236
+Inner Exception:
+Exception Type: CannotUnloadAppDomainException
+Message: Operation is not supported on this platform.
+Stack Trace:
+   at System.AppDomain.Unload(AppDomain domain)
+   at srvlocal_gui.AppMananger.Worker.AppDomainWorker.PerformWorkInAppDomain(String& domainName) in C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\AppMananger\AppDomainWorker.cs:line 49
+   at srvlocal_gui.Form1.Form1_Load(Object sender, EventArgs e) in C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\Form1.cs:line 134
+   at System.Threading.Tasks.Task.<>c.<ThrowAsync>b__128_0(Object state)
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodInvoker.Invoke(Object obj, IntPtr* args, BindingFlags invokeAttr)
+Inner Exception Details:
+Inner Exception Target Site: Unload (System.Private.CoreLib.dll)
+Inner Exception Source: System.Private.CoreLib
+Inner Exception Stack Trace Details:
+Method: Unload (System.Private.CoreLib.dll)
+Line: 0
+Method: PerformWorkInAppDomain (srvlocal_gui.dll)
+Line: 49
+Method: MoveNext (srvlocal_gui.dll)
+Line: 134
+Method: Throw (System.Private.CoreLib.dll)
+Line: 0
+Method: <ThrowAsync>b__128_0 (System.Private.CoreLib.dll)
+Line: 0
+Method: InvokeMethod (System.Private.CoreLib.dll)
+Line: 0
+Method: Invoke (System.Private.CoreLib.dll)
+Line: 0
+
+2023-07-09 17:56:52 [INFO] - Started GUI...
+2023-07-09 17:56:52 [INFO] - Directory allready satisfied.
+2023-07-09 17:56:52 [INFO] - Directory allready satisfied.
+2023-07-09 17:56:52 [INFO] - Directory allready satisfied.
+2023-07-09 17:56:52 [INFO] - You are an administrator.
+2023-07-09 17:56:57 [INFO] - Performing work in the AppDomain...
+2023-07-09 17:56:59 [INFO] - Started Updater (mode: Automatic)
+2023-07-09 17:56:59 [INFO] - Starting license evaluation.
+2023-07-09 17:56:59 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-07-09 17:57:00 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-09 18:01:56 [INFO] - Started GUI...
+2023-07-09 18:01:56 [INFO] - Directory allready satisfied.
+2023-07-09 18:01:56 [INFO] - Directory allready satisfied.
+2023-07-09 18:01:56 [INFO] - Directory allready satisfied.
+2023-07-09 18:01:56 [INFO] - You are an administrator.
+2023-07-09 18:02:01 [INFO] - [SECOND DOMAIN] - Created a SubAppDomain...
+2023-07-09 18:02:01 [INFO] - [SECOND DOMAIN] - Try to start Messaging Service...
+2023-07-09 18:02:03 [INFO] - Started Updater (mode: Automatic)
+2023-07-09 18:02:03 [INFO] - Starting license evaluation.
+2023-07-09 18:02:03 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-07-09 18:02:04 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-09 18:06:01 [INFO] - Started GUI...
+2023-07-09 18:06:01 [INFO] - Directory allready satisfied.
+2023-07-09 18:06:01 [INFO] - Directory allready satisfied.
+2023-07-09 18:06:01 [INFO] - Directory allready satisfied.
+2023-07-09 18:06:01 [INFO] - You are an administrator.
+2023-07-09 18:06:05 [INFO] - [SECOND DOMAIN] - Created a SubAppDomain...
+2023-07-09 18:06:05 [INFO] - [SECOND DOMAIN] - Try to start Messaging Service...
+2023-07-09 18:06:05 [INFO] - An exception occurred in the AppDomain: The Process object must have the UseShellExecute property set to false in order to redirect IO streams.
+2023-07-09 18:06:06 [INFO] - Started Updater (mode: Automatic)
+2023-07-09 18:06:06 [INFO] - Starting license evaluation.
+2023-07-09 18:06:07 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-07-09 18:06:07 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-09 18:06:34 [INFO] - Started GUI...
+2023-07-09 18:06:34 [INFO] - Directory allready satisfied.
+2023-07-09 18:06:34 [INFO] - Directory allready satisfied.
+2023-07-09 18:06:34 [INFO] - Directory allready satisfied.
+2023-07-09 18:06:34 [INFO] - You are an administrator.
+2023-07-09 18:06:40 [INFO] - [SECOND DOMAIN] - Created a SubAppDomain...
+2023-07-09 18:06:40 [INFO] - [SECOND DOMAIN] - Try to start Messaging Service...
+2023-07-09 18:06:40 [INFO] - An exception occurred in the AppDomain: The Process object must have the UseShellExecute property set to false in order to redirect IO streams.
+2023-07-09 18:06:41 [INFO] - Started Updater (mode: Automatic)
+2023-07-09 18:06:41 [INFO] - Starting license evaluation.
+2023-07-09 18:06:42 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-07-09 18:06:42 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-09 18:08:06 [INFO] - Started GUI...
+2023-07-09 18:08:06 [INFO] - Directory allready satisfied.
+2023-07-09 18:08:06 [INFO] - Directory allready satisfied.
+2023-07-09 18:08:06 [INFO] - Directory allready satisfied.
+2023-07-09 18:08:06 [INFO] - You are an administrator.
+2023-07-09 18:08:20 [INFO] - [SECOND DOMAIN] - Created a SubAppDomain...
+2023-07-09 18:08:20 [INFO] - [SECOND DOMAIN] - Try to start Messaging Service...
+2023-07-09 18:08:21 [INFO] - Started Updater (mode: Automatic)
+2023-07-09 18:08:21 [INFO] - Starting license evaluation.
+2023-07-09 18:08:21 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-07-09 18:08:22 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-09 18:08:48 [INFO] - Started GUI...
+2023-07-09 18:08:48 [INFO] - Directory allready satisfied.
+2023-07-09 18:08:48 [INFO] - Directory allready satisfied.
+2023-07-09 18:08:48 [INFO] - Directory allready satisfied.
+2023-07-09 18:08:48 [INFO] - You are an administrator.
+2023-07-09 18:08:55 [INFO] - [SECOND DOMAIN] - Created a SubAppDomain...
+2023-07-09 18:08:55 [INFO] - [SECOND DOMAIN] - Try to start Messaging Service...
+2023-07-09 18:08:56 [INFO] - Started Updater (mode: Automatic)
+2023-07-09 18:08:56 [INFO] - Starting license evaluation.
+2023-07-09 18:08:57 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-07-09 18:08:58 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-09 18:18:26 [INFO] - Started GUI...
+2023-07-09 18:18:26 [INFO] - Directory allready satisfied.
+2023-07-09 18:18:26 [INFO] - Directory allready satisfied.
+2023-07-09 18:18:26 [INFO] - Directory allready satisfied.
+2023-07-09 18:18:26 [INFO] - You are an administrator.
+2023-07-09 18:18:37 [INFO] - Started GUI...
+2023-07-09 18:18:37 [INFO] - Directory allready satisfied.
+2023-07-09 18:18:37 [INFO] - Directory allready satisfied.
+2023-07-09 18:18:37 [INFO] - Directory allready satisfied.
+2023-07-09 18:18:37 [INFO] - You are an administrator.
+2023-07-09 18:18:40 [INFO] - [SECOND DOMAIN] - Created a SubAppDomain...
+2023-07-09 18:18:40 [INFO] - [SECOND DOMAIN] - Try to start Messaging Service...
+2023-07-09 18:18:42 [INFO] - Started Updater (mode: Automatic)
+2023-07-09 18:18:42 [INFO] - Starting license evaluation.
+2023-07-09 18:18:42 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-07-09 18:18:43 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-09 18:32:00 [INFO] - Started GUI...
+2023-07-09 18:32:00 [INFO] - Directory allready satisfied.
+2023-07-09 18:32:00 [INFO] - Directory allready satisfied.
+2023-07-09 18:32:00 [INFO] - Directory allready satisfied.
+2023-07-09 18:32:00 [INFO] - You are an administrator.
+2023-07-09 18:32:04 [INFO] - [SECOND DOMAIN] - Created a SubAppDomain...
+2023-07-09 18:32:04 [INFO] - [SECOND DOMAIN] - Try to start Messaging Service...
+2023-07-09 18:32:06 [INFO] - Started Updater (mode: Automatic)
+2023-07-09 18:32:06 [INFO] - Starting license evaluation.
+2023-07-09 18:32:07 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-07-09 18:32:08 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
