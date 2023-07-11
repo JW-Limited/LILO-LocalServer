@@ -34,54 +34,46 @@ namespace srvlocal.auto_generators
             var sb = new StringBuilder();
             sb.Append("<html>");
             sb.Append("<head>");
+            sb.Append("<meta charset=\"UTF-8\">");
             sb.Append("<title>Index of Files</title>");
-            sb.Append("<link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/favlogo.png\">");
-
-            // Add modern CSS styling
-            sb.Append("<style>");
-            sb.Append("body {");
-            sb.Append("  font-family: 'Roboto', sans-serif;");
-            sb.Append("  background-color: #fafafa;");
-            sb.Append("}");
-            sb.Append("h1 {");
-            sb.Append("  font-size: 2rem;");
-            sb.Append("  margin-top: 2rem;");
-            sb.Append("  margin-bottom: 1rem;");
-            sb.Append("}");
-            sb.Append("table {");
-            sb.Append("  border-collapse: collapse;");
-            sb.Append("  width: 100%;");
-            sb.Append("}");
-            sb.Append("table th, table td {");
-            sb.Append("  border: 1px solid #ddd;");
-            sb.Append("  padding: 8px;");
-            sb.Append("  text-align: left;");
-            sb.Append("}");
-            sb.Append("table th {");
-            sb.Append("  background-color: #f2f2f2;");
-            sb.Append("}");
-            sb.Append(".download-link {");
-            sb.Append("  background-color: #4CAF50;");
-            sb.Append("  border: none;");
-            sb.Append("  color: white;");
-            sb.Append("  padding: 8px 16px;");
-            sb.Append("  text-align: center;");
-            sb.Append("  text-decoration: none;");
-            sb.Append("  display: inline-block;");
-            sb.Append("  font-size: 14px;");
-            sb.Append("  margin-right: 8px;");
-            sb.Append("  border-radius: 4px;");
-            sb.Append("  cursor: pointer;");
-            sb.Append("}");
-            sb.Append(".download-link:hover {");
-            sb.Append("  background-color: #3e8e41;");
-            sb.Append("}");
-            sb.Append("</style>");
-
+            sb.Append("<link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/images/favlogo.png\">");
+            sb.Append("<link rel=\"stylesheet\" href=\"/css/styles.css\">");
+            sb.Append("<link rel=\"stylesheet\" href=\"/css/winui-style.css\">");
+            sb.Append("<link href=\"https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css\" rel=\"stylesheet\">");
             sb.Append("</head>");
             sb.Append("<body>");
-            sb.Append($"<h1>Index of Directory : {reqDirectory.Replace("C:\\LILO\\", "")}</h1>");
-            sb.Append("<table>");
+            sb.Append($"<header class=\"header\">\r\n  " +
+                    $"<h1>srvlocal index  " +
+                    $"  <small class=\"app-name-subtitle\"> ({reqDirectory.Replace("C:\\LILO\\", "")})\r\n        " +
+                    $"  </small>" +
+                    $"</h1>\r\n <div class=\"header-right\">\r\n    <div class=\"search-bar\">\r\n      <input type=\"text\" id=\"searchInput\" placeholder=\"Search files...\">\r\n      <button id=\"searchButton\"><i class=\"bi bi-search\"></i></button>\r\n    </div> " +
+                    $"<div>\r\n    " +
+                    $"  <button class=\"button secondary\" id=\"addFileButton\"><i class=\"bi bi-plus\"></i></button>\r\n    <button class=\"button secondary\"><i class=\"bi bi-three-dots-vertical\"></i></button>\r\n" +
+                    
+                    $"</div> " +
+                $"</header>");
+            sb.Append("<div class=\"content\">");
+            sb.Append("<nav>");
+            sb.Append("<ul class=\"breadcrumb\">");
+            sb.Append("<li><a href=\"/\">Home</a></li>");
+
+            var currentDirectory = new DirectoryInfo(reqDirectory);
+            var directories = currentDirectory.FullName.Split(Path.DirectorySeparatorChar);
+
+            string path = string.Empty;
+            foreach (var directory in directories)
+            {
+                if (!string.IsNullOrEmpty(directory))
+                {
+                    path += directory + Path.DirectorySeparatorChar;
+                    sb.Append($"<li><a href=\"/{path}\">{directory}</a></li>");
+                }
+            }
+
+            sb.Append("</ul>");
+            sb.Append("</nav>");
+
+            sb.Append("<table class=\"table\">");
             sb.Append("<thead>");
             sb.Append("<tr>");
             sb.Append("<th>Name</th>");
@@ -92,13 +84,12 @@ namespace srvlocal.auto_generators
             sb.Append("</thead>");
             sb.Append("<tbody>");
 
-            var currentDirectory = new DirectoryInfo(reqDirectory);
             var parentDirectory = currentDirectory.Parent;
 
             if (parentDirectory != null)
             {
                 sb.Append("<tr>");
-                sb.Append($"<td><a href='../'>../</a></td>");
+                sb.Append($"<td><a href=\"../\"><i class=\"bi bi-arrow-up\"></i> Parent Directory</a></td>");
                 sb.Append("<td></td>");
                 sb.Append("<td></td>");
                 sb.Append("<td></td>");
@@ -108,7 +99,7 @@ namespace srvlocal.auto_generators
             foreach (var directory in currentDirectory.GetDirectories())
             {
                 sb.Append("<tr>");
-                sb.Append($"<td><a href='{directory.Name}/'>{directory.Name}/</a></td>");
+                sb.Append($"<td><a href=\"{directory.Name}/\"><i class=\"bi bi-folder\"></i> {directory.Name}/</a></td>");
                 sb.Append("<td></td>");
                 sb.Append($"<td>{directory.LastWriteTime}</td>");
                 sb.Append("<td></td>");
@@ -118,18 +109,20 @@ namespace srvlocal.auto_generators
             foreach (var file in currentDirectory.GetFiles())
             {
                 sb.Append("<tr>");
-                sb.Append($"<td><a href='{file.Name}'>{file.Name}</a></td>");
+                sb.Append($"<td><a href=\"{file.Name}\"><i class=\"bi bi-file-binary-fill\"></i> {file.Name}</a></td>");
                 sb.Append($"<td>{GetSizeString(file.Length)}</td>");
                 sb.Append($"<td>{file.LastWriteTime}</td>");
                 sb.Append("<td>");
-                sb.Append($"<a class='download-link' href='{file.Name}' download>Download</a>");
+                sb.Append($"<a class=\"download-link\" href=\"{file.Name}\" download><i class=\"bi bi-download\"></i> Download</a>");
                 sb.Append("</td>");
                 sb.Append("</tr>");
             }
 
             sb.Append("</tbody>");
             sb.Append("</table>");
+            sb.Append("</div>");
             sb.Append("</body>");
+            sb.Append("<script src=\"/js/index-action.js\"  nonce=\"random-nonce\"></script>");
             sb.Append("</html>");
             return sb.ToString();
         }
@@ -145,6 +138,7 @@ namespace srvlocal.auto_generators
             }
             return $"{size} {sizes[order]}";
         }
-    
+
+
     }
 }

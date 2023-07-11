@@ -18,20 +18,21 @@ namespace srvlocal_gui
         private string? sourceURL;
         private string changedSource;
         private bool Success = false;
+        private bool _startInProtectedMode = true;
 
-        public static FileViewForm Instance(string source)
+        public static FileViewForm Instance(string source, bool startInProtectedMode = true)
         {
             {
                 if (_instance == null)
                 {
-                    _instance = new FileViewForm(source);
+                    _instance = new FileViewForm(source, startInProtectedMode);
                 }
 
                 return _instance;
             }
         }
 
-        private FileViewForm(string source)
+        private FileViewForm(string source, bool startInProtectedMode)
         {
             InitializeComponent();
             if (source is not null)
@@ -77,15 +78,22 @@ namespace srvlocal_gui
             {
                 if (changedSource.EndsWith("api/home"))
                 {
-                    Success = true;
-                    Form1.Instance.APILoginHandler(true);
+                    if (_startInProtectedMode)
+                    {
+                        Success = true;
+                        Form1.Instance.APILoginHandler(true);
+                    }
                 }
             }
         }
 
         private void FileViewForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Form1.Instance.APILoginHandler_Closing(Success);
+            if(_startInProtectedMode)
+            {
+                Form1.Instance.APILoginHandler_Closing(Success);
+            }
+
             _instance = null;
         }
     }

@@ -1,0 +1,45 @@
+/* Add your WinUI-specific styles here */
+body {
+    background-color: #333333;
+  }
+  
+  h1 {
+    color: #ffffff;
+  }
+  
+  table th,
+  table td {
+    border-color: #ffffff;
+    color: #ffffff;
+  }
+  
+  table th {
+    background-color: #222222;
+  }
+  
+  .download-link {
+    background-color: #0078D7;
+  }
+  
+  .download-link:hover {
+    background-color: #005A9E;
+  }
+  
+  .header {
+    background-color: #0078D7;
+    color: #ffffff;
+  }
+  
+  .header h1 {
+    font-size: 24px;
+  }
+  
+  .header p {
+    font-size: 16px;
+    text-align: right;
+  }
+  
+  .content {
+    padding: 20px;
+  }
+  

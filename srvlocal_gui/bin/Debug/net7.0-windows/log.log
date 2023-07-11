@@ -689,3 +689,319 @@ Line: 0
 2023-07-09 18:32:06 [INFO] - Starting license evaluation.
 2023-07-09 18:32:07 [INFO] - Youre Up to date. Current Version: 1.3.1.
 2023-07-09 18:32:08 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-11 16:51:00 [INFO] - Started GUI...
+2023-07-11 16:51:00 [INFO] - Directory allready satisfied.
+2023-07-11 16:51:00 [INFO] - Directory allready satisfied.
+2023-07-11 16:51:00 [INFO] - Directory allready satisfied.
+2023-07-11 16:51:00 [INFO] - You are an administrator.
+2023-07-11 16:51:10 [INFO] - [SECOND DOMAIN] - Created a SubAppDomain...
+2023-07-11 16:51:10 [INFO] - [SECOND DOMAIN] - Try to start Messaging Service...
+2023-07-11 16:51:12 [INFO] - Started Updater (mode: Automatic)
+2023-07-11 16:51:12 [INFO] - Starting license evaluation.
+2023-07-11 16:51:13 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-07-11 16:51:13 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-11 17:02:58 [INFO] - Started GUI...
+2023-07-11 17:02:58 [INFO] - Directory allready satisfied.
+2023-07-11 17:02:58 [INFO] - Directory allready satisfied.
+2023-07-11 17:02:58 [INFO] - Directory allready satisfied.
+2023-07-11 17:02:58 [INFO] - You are an administrator.
+2023-07-11 17:03:14 [INFO] - [SECOND DOMAIN] - Created a SubAppDomain...
+2023-07-11 17:03:14 [INFO] - [SECOND DOMAIN] - Try to start Messaging Service...
+2023-07-11 17:03:16 [INFO] - Started Updater (mode: Automatic)
+2023-07-11 17:03:16 [INFO] - Starting license evaluation.
+2023-07-11 17:03:17 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-07-11 17:03:17 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-11 17:08:07 [ERROR] - Password cannot be null or empty
+2023-07-11 17:16:00 [INFO] - Started GUI...
+2023-07-11 17:16:00 [INFO] - Directory allready satisfied.
+2023-07-11 17:16:00 [INFO] - Directory allready satisfied.
+2023-07-11 17:16:00 [INFO] - Directory allready satisfied.
+2023-07-11 17:16:00 [INFO] - You are an administrator.
+2023-07-11 17:16:05 [INFO] - [SECOND DOMAIN] - Created a SubAppDomain...
+2023-07-11 17:16:05 [INFO] - [SECOND DOMAIN] - Try to start Messaging Service...
+2023-07-11 17:16:09 [INFO] - Started Updater (mode: Automatic)
+2023-07-11 17:16:09 [INFO] - Starting license evaluation.
+2023-07-11 17:16:10 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-07-11 17:16:11 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-11 17:29:59 [INFO] - Started GUI...
+2023-07-11 17:29:59 [INFO] - Directory allready satisfied.
+2023-07-11 17:29:59 [INFO] - Directory allready satisfied.
+2023-07-11 17:29:59 [INFO] - Directory allready satisfied.
+2023-07-11 17:29:59 [INFO] - You are an administrator.
+2023-07-11 17:30:08 [INFO] - [SECOND DOMAIN] - Created a SubAppDomain...
+2023-07-11 17:30:08 [INFO] - [SECOND DOMAIN] - Try to start Messaging Service...
+2023-07-11 17:30:10 [INFO] - Started Updater (mode: Automatic)
+2023-07-11 17:30:10 [INFO] - Starting license evaluation.
+2023-07-11 17:30:11 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-07-11 17:30:11 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-11 17:31:37 [INFO] - Started GUI...
+2023-07-11 17:31:37 [INFO] - Directory allready satisfied.
+2023-07-11 17:31:37 [INFO] - Directory allready satisfied.
+2023-07-11 17:31:37 [INFO] - Directory allready satisfied.
+2023-07-11 17:31:37 [INFO] - You are an administrator.
+2023-07-11 17:31:43 [INFO] - [SECOND DOMAIN] - Created a SubAppDomain...
+2023-07-11 17:31:43 [INFO] - [SECOND DOMAIN] - Try to start Messaging Service...
+2023-07-11 17:31:45 [INFO] - Started Updater (mode: Automatic)
+2023-07-11 17:31:45 [INFO] - Starting license evaluation.
+2023-07-11 17:31:46 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-07-11 17:31:46 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-11 17:38:19 [INFO] - Started GUI...
+2023-07-11 17:38:19 [INFO] - Directory allready satisfied.
+2023-07-11 17:38:19 [INFO] - Directory allready satisfied.
+2023-07-11 17:38:19 [INFO] - Directory allready satisfied.
+2023-07-11 17:38:20 [INFO] - You are an administrator.
+2023-07-11 17:38:26 [INFO] - [SECOND DOMAIN] - Created a SubAppDomain...
+2023-07-11 17:38:26 [INFO] - [SECOND DOMAIN] - Try to start Messaging Service...
+2023-07-11 17:38:27 [INFO] - Started Updater (mode: Automatic)
+2023-07-11 17:38:27 [INFO] - Starting license evaluation.
+2023-07-11 17:38:28 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-07-11 17:38:28 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-11 17:55:16 [INFO] - Started GUI...
+2023-07-11 17:55:16 [INFO] - Directory allready satisfied.
+2023-07-11 17:55:16 [INFO] - Directory allready satisfied.
+2023-07-11 17:55:16 [INFO] - Directory allready satisfied.
+2023-07-11 17:55:16 [INFO] - You are an administrator.
+2023-07-11 17:55:36 [INFO] - [SECOND DOMAIN] - Created a SubAppDomain...
+2023-07-11 17:55:36 [INFO] - [SECOND DOMAIN] - Try to start Messaging Service...
+2023-07-11 17:55:39 [INFO] - Started Updater (mode: Automatic)
+2023-07-11 17:55:39 [INFO] - Starting license evaluation.
+2023-07-11 17:55:40 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-07-11 17:55:40 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-11 18:07:05 [INFO] - Started GUI...
+2023-07-11 18:07:05 [INFO] - Directory allready satisfied.
+2023-07-11 18:07:05 [INFO] - Directory allready satisfied.
+2023-07-11 18:07:05 [INFO] - Directory allready satisfied.
+2023-07-11 18:07:05 [INFO] - You are an administrator.
+2023-07-11 18:07:10 [INFO] - [SECOND DOMAIN] - Created a SubAppDomain...
+2023-07-11 18:07:10 [INFO] - [SECOND DOMAIN] - Try to start Messaging Service...
+2023-07-11 18:07:11 [INFO] - Started Updater (mode: Automatic)
+2023-07-11 18:07:11 [INFO] - Starting license evaluation.
+2023-07-11 18:07:12 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-07-11 18:07:13 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-11 18:12:00 [INFO] - Started GUI...
+2023-07-11 18:12:00 [INFO] - Directory allready satisfied.
+2023-07-11 18:12:00 [INFO] - Directory allready satisfied.
+2023-07-11 18:12:00 [INFO] - Directory allready satisfied.
+2023-07-11 18:12:00 [INFO] - You are an administrator.
+2023-07-11 18:12:05 [INFO] - [SECOND DOMAIN] - Created a SubAppDomain...
+2023-07-11 18:12:05 [INFO] - [SECOND DOMAIN] - Try to start Messaging Service...
+2023-07-11 18:12:09 [INFO] - Started Updater (mode: Automatic)
+2023-07-11 18:12:09 [INFO] - Starting license evaluation.
+2023-07-11 18:12:09 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-07-11 18:12:11 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-11 18:21:29 [INFO] - Started GUI...
+2023-07-11 18:21:29 [INFO] - Directory allready satisfied.
+2023-07-11 18:21:29 [INFO] - Directory allready satisfied.
+2023-07-11 18:21:29 [INFO] - Directory allready satisfied.
+2023-07-11 18:21:29 [INFO] - You are an administrator.
+2023-07-11 18:21:35 [INFO] - [SECOND DOMAIN] - Created a SubAppDomain...
+2023-07-11 18:21:35 [INFO] - [SECOND DOMAIN] - Try to start Messaging Service...
+2023-07-11 18:21:39 [INFO] - Started Updater (mode: Automatic)
+2023-07-11 18:21:39 [INFO] - Starting license evaluation.
+2023-07-11 18:21:40 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-07-11 18:21:41 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-11 18:29:12 [INFO] - Started GUI...
+2023-07-11 18:29:12 [INFO] - Directory allready satisfied.
+2023-07-11 18:29:12 [INFO] - Directory allready satisfied.
+2023-07-11 18:29:12 [INFO] - Directory allready satisfied.
+2023-07-11 18:29:12 [INFO] - You are an administrator.
+2023-07-11 18:29:29 [INFO] - [SECOND DOMAIN] - Created a SubAppDomain...
+2023-07-11 18:29:29 [INFO] - [SECOND DOMAIN] - Try to start Messaging Service...
+2023-07-11 18:29:32 [INFO] - Started Updater (mode: Automatic)
+2023-07-11 18:29:32 [INFO] - Starting license evaluation.
+2023-07-11 18:29:33 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-07-11 18:29:34 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-11 18:32:37 [INFO] - Started GUI...
+2023-07-11 18:32:37 [INFO] - Directory allready satisfied.
+2023-07-11 18:32:37 [INFO] - Directory allready satisfied.
+2023-07-11 18:32:37 [INFO] - Directory allready satisfied.
+2023-07-11 18:32:37 [INFO] - You are an administrator.
+2023-07-11 18:32:42 [INFO] - [SECOND DOMAIN] - Created a SubAppDomain...
+2023-07-11 18:32:42 [INFO] - [SECOND DOMAIN] - Try to start Messaging Service...
+2023-07-11 18:32:44 [INFO] - Started Updater (mode: Automatic)
+2023-07-11 18:32:44 [INFO] - Starting license evaluation.
+2023-07-11 18:32:45 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-07-11 18:32:46 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-11 18:38:16 [INFO] - Started GUI...
+2023-07-11 18:38:16 [INFO] - Directory allready satisfied.
+2023-07-11 18:38:16 [INFO] - Directory allready satisfied.
+2023-07-11 18:38:16 [INFO] - Directory allready satisfied.
+2023-07-11 18:38:16 [INFO] - You are an administrator.
+2023-07-11 18:38:21 [INFO] - [SECOND DOMAIN] - Created a SubAppDomain...
+2023-07-11 18:38:21 [INFO] - [SECOND DOMAIN] - Try to start Messaging Service...
+2023-07-11 18:38:25 [INFO] - Started Updater (mode: Automatic)
+2023-07-11 18:38:25 [INFO] - Starting license evaluation.
+2023-07-11 18:38:25 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-07-11 18:38:26 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-11 18:39:12 [INFO] - Started GUI...
+2023-07-11 18:39:12 [INFO] - Directory allready satisfied.
+2023-07-11 18:39:12 [INFO] - Directory allready satisfied.
+2023-07-11 18:39:12 [INFO] - Directory allready satisfied.
+2023-07-11 18:39:12 [INFO] - You are an administrator.
+2023-07-11 18:39:25 [INFO] - [SECOND DOMAIN] - Created a SubAppDomain...
+2023-07-11 18:39:25 [INFO] - [SECOND DOMAIN] - Try to start Messaging Service...
+2023-07-11 18:39:27 [INFO] - Started Updater (mode: Automatic)
+2023-07-11 18:39:27 [INFO] - Starting license evaluation.
+2023-07-11 18:39:28 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-07-11 18:39:28 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-11 18:54:59 [INFO] - Started GUI...
+2023-07-11 18:54:59 [INFO] - Directory allready satisfied.
+2023-07-11 18:54:59 [INFO] - Directory allready satisfied.
+2023-07-11 18:54:59 [INFO] - Directory allready satisfied.
+2023-07-11 18:54:59 [INFO] - You are an administrator.
+2023-07-11 18:56:13 [INFO] - [SECOND DOMAIN] - Created a SubAppDomain...
+2023-07-11 18:56:13 [INFO] - [SECOND DOMAIN] - Try to start Messaging Service...
+2023-07-11 18:56:16 [INFO] - Started Updater (mode: Automatic)
+2023-07-11 18:56:16 [INFO] - Starting license evaluation.
+2023-07-11 18:56:18 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-07-11 18:56:18 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-11 19:20:41 [INFO] - Started GUI...
+2023-07-11 19:20:41 [INFO] - Directory allready satisfied.
+2023-07-11 19:20:41 [INFO] - Directory allready satisfied.
+2023-07-11 19:20:41 [INFO] - Directory allready satisfied.
+2023-07-11 19:20:41 [INFO] - You are an administrator.
+2023-07-11 19:20:48 [INFO] - [SECOND DOMAIN] - Created a SubAppDomain...
+2023-07-11 19:20:48 [INFO] - [SECOND DOMAIN] - Try to start Messaging Service...
+2023-07-11 19:20:53 [INFO] - Started Updater (mode: Automatic)
+2023-07-11 19:20:53 [INFO] - Starting license evaluation.
+2023-07-11 19:20:54 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-07-11 19:20:55 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-11 19:24:26 [INFO] - Started GUI...
+2023-07-11 19:24:26 [INFO] - Directory allready satisfied.
+2023-07-11 19:24:26 [INFO] - Directory allready satisfied.
+2023-07-11 19:24:26 [INFO] - Directory allready satisfied.
+2023-07-11 19:24:26 [INFO] - You are an administrator.
+2023-07-11 19:24:31 [INFO] - [SECOND DOMAIN] - Created a SubAppDomain...
+2023-07-11 19:24:31 [INFO] - [SECOND DOMAIN] - Try to start Messaging Service...
+2023-07-11 19:24:35 [INFO] - Started Updater (mode: Automatic)
+2023-07-11 19:24:35 [INFO] - Starting license evaluation.
+2023-07-11 19:24:35 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-07-11 19:24:36 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-11 19:34:48 [INFO] - Started GUI...
+2023-07-11 19:34:48 [INFO] - Directory allready satisfied.
+2023-07-11 19:34:48 [INFO] - Directory allready satisfied.
+2023-07-11 19:34:48 [INFO] - Directory allready satisfied.
+2023-07-11 19:34:48 [INFO] - You are an administrator.
+2023-07-11 19:34:53 [INFO] - [SECOND DOMAIN] - Created a SubAppDomain...
+2023-07-11 19:34:53 [INFO] - [SECOND DOMAIN] - Try to start Messaging Service...
+2023-07-11 19:34:57 [INFO] - Started Updater (mode: Automatic)
+2023-07-11 19:34:57 [INFO] - Starting license evaluation.
+2023-07-11 19:34:58 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-07-11 19:34:59 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-11 19:36:20 [INFO] - Started GUI...
+2023-07-11 19:36:20 [INFO] - Directory allready satisfied.
+2023-07-11 19:36:20 [INFO] - Directory allready satisfied.
+2023-07-11 19:36:20 [INFO] - Directory allready satisfied.
+2023-07-11 19:36:20 [INFO] - You are an administrator.
+2023-07-11 19:36:24 [INFO] - [SECOND DOMAIN] - Created a SubAppDomain...
+2023-07-11 19:36:24 [INFO] - [SECOND DOMAIN] - Try to start Messaging Service...
+2023-07-11 19:36:28 [INFO] - Started Updater (mode: Automatic)
+2023-07-11 19:36:28 [INFO] - Starting license evaluation.
+2023-07-11 19:36:28 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-07-11 19:36:30 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-11 21:29:46 [INFO] - Started GUI...
+2023-07-11 21:29:46 [INFO] - Directory allready satisfied.
+2023-07-11 21:29:46 [INFO] - Directory allready satisfied.
+2023-07-11 21:29:46 [INFO] - Directory allready satisfied.
+2023-07-11 21:29:46 [INFO] - You are an administrator.
+2023-07-11 21:29:54 [INFO] - [SECOND DOMAIN] - Created a SubAppDomain...
+2023-07-11 21:29:54 [INFO] - [SECOND DOMAIN] - Try to start Messaging Service...
+2023-07-11 21:29:57 [INFO] - Started Updater (mode: Automatic)
+2023-07-11 21:29:57 [INFO] - Starting license evaluation.
+2023-07-11 21:29:58 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-07-11 21:30:01 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-11 21:30:16 [WARNING] - An unhandled exception occurred:
+Exception Type: Win32Exception
+Message: Fehler beim Erstellen des Fensterhandles.
+Stack Trace:
+   at System.Windows.Forms.NativeWindow.CreateHandle(CreateParams cp)
+   at System.Windows.Forms.Control.CreateHandle()
+   at System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   at System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   at System.Windows.Forms.Control.CreateControl()
+   at System.Windows.Forms.Control.WmShowWindow(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at System.Windows.Forms.Form.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, WM msg, IntPtr wparam, IntPtr lparam)
+Additional Details:
+Target Site: CreateHandle (System.Windows.Forms.dll)
+Source: System.Windows.Forms
+Stack Trace Details:
+Method: CreateHandle (System.Windows.Forms.dll)
+Line: 0
+Method: CreateHandle (System.Windows.Forms.dll)
+Line: 0
+Method: CreateControl (System.Windows.Forms.dll)
+Line: 0
+Method: CreateControl (System.Windows.Forms.dll)
+Line: 0
+Method: CreateControl (System.Windows.Forms.dll)
+Line: 0
+Method: WmShowWindow (System.Windows.Forms.dll)
+Line: 0
+Method: WndProc (System.Windows.Forms.dll)
+Line: 0
+Method: WndProc (System.Windows.Forms.dll)
+Line: 0
+Method: WndProc (System.Windows.Forms.dll)
+Line: 0
+Method: WndProc (System.Windows.Forms.dll)
+Line: 0
+Method: Callback (System.Windows.Forms.dll)
+Line: 0
+
+2023-07-11 21:31:53 [INFO] - Started GUI...
+2023-07-11 21:31:53 [INFO] - Directory allready satisfied.
+2023-07-11 21:31:53 [INFO] - Directory allready satisfied.
+2023-07-11 21:31:53 [INFO] - Directory allready satisfied.
+2023-07-11 21:31:53 [INFO] - You are an administrator.
+2023-07-11 21:32:08 [INFO] - [SECOND DOMAIN] - Created a SubAppDomain...
+2023-07-11 21:32:08 [INFO] - [SECOND DOMAIN] - Try to start Messaging Service...
+2023-07-11 21:32:11 [INFO] - Started Updater (mode: Automatic)
+2023-07-11 21:32:11 [INFO] - Starting license evaluation.
+2023-07-11 21:32:11 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-07-11 21:32:12 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-11 21:33:35 [INFO] - Started GUI...
+2023-07-11 21:33:35 [INFO] - Directory allready satisfied.
+2023-07-11 21:33:35 [INFO] - Directory allready satisfied.
+2023-07-11 21:33:35 [INFO] - Directory allready satisfied.
+2023-07-11 21:33:35 [INFO] - You are an administrator.
+2023-07-11 21:33:43 [INFO] - [SECOND DOMAIN] - Created a SubAppDomain...
+2023-07-11 21:33:43 [INFO] - [SECOND DOMAIN] - Try to start Messaging Service...
+2023-07-11 21:33:46 [INFO] - Started Updater (mode: Automatic)
+2023-07-11 21:33:46 [INFO] - Starting license evaluation.
+2023-07-11 21:33:47 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-07-11 21:33:48 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-11 21:36:38 [INFO] - Started GUI...
+2023-07-11 21:36:38 [INFO] - Directory allready satisfied.
+2023-07-11 21:36:38 [INFO] - Directory allready satisfied.
+2023-07-11 21:36:38 [INFO] - Directory allready satisfied.
+2023-07-11 21:36:38 [INFO] - You are an administrator.
+2023-07-11 21:37:07 [INFO] - [SECOND DOMAIN] - Created a SubAppDomain...
+2023-07-11 21:37:07 [INFO] - [SECOND DOMAIN] - Try to start Messaging Service...
+2023-07-11 21:39:54 [INFO] - Started GUI...
+2023-07-11 21:39:54 [INFO] - Directory allready satisfied.
+2023-07-11 21:39:54 [INFO] - Directory allready satisfied.
+2023-07-11 21:39:54 [INFO] - Directory allready satisfied.
+2023-07-11 21:39:54 [INFO] - You are an administrator.
+2023-07-11 21:40:00 [INFO] - [SECOND DOMAIN] - Created a SubAppDomain...
+2023-07-11 21:40:00 [INFO] - [SECOND DOMAIN] - Try to start Messaging Service...
+2023-07-11 21:40:06 [INFO] - Started Updater (mode: Automatic)
+2023-07-11 21:40:06 [INFO] - Starting license evaluation.
+2023-07-11 21:40:07 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-07-11 21:40:07 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-12 00:13:23 [INFO] - Started GUI...
+2023-07-12 00:13:24 [INFO] - Directory allready satisfied.
+2023-07-12 00:13:24 [INFO] - Directory allready satisfied.
+2023-07-12 00:13:24 [INFO] - Directory allready satisfied.
+2023-07-12 00:13:24 [INFO] - You are an administrator.
+2023-07-12 00:13:28 [INFO] - [SECOND DOMAIN] - Created a SubAppDomain...
+2023-07-12 00:13:28 [INFO] - [SECOND DOMAIN] - Try to start Messaging Service...
+2023-07-12 00:13:30 [INFO] - Started Updater (mode: Automatic)
+2023-07-12 00:13:30 [INFO] - Starting license evaluation.
+2023-07-12 00:13:30 [INFO] - Youre Up to date. Current Version: 1.3.1.
+2023-07-12 00:13:31 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-12 00:58:54 [INFO] - Started Updater (mode: MANUALY)
+2023-07-12 00:58:54 [INFO] - Youre Up to date. Current Version: 1.3.1.

@@ -20,6 +20,7 @@ using ConsoleTables;
 using System.Windows.Forms;
 using srvlocal.Api;
 using srvlocal.error_handling;
+using srvlocal.data_handling;
 
 namespace Local
 {
@@ -432,6 +433,14 @@ namespace Local
                         var buffer = Encoding.UTF8.GetBytes(log);
                         response.ContentLength64 = buffer.Length;
                         response.OutputStream.Write(buffer, 0, buffer.Length);
+                    }
+                    if (request.Url.AbsolutePath == "/api/resources/data")
+                    {
+                        AddFiles.JSONDATAHANDLER.ProcessRequest(context);
+                    }
+                    if (request.Url.AbsolutePath == "/api/subdirectories")
+                    {
+                        srvlocal.data_handling.DirectoryController.GetSubdirectories(context);
                     }
                     if (request.Url.AbsolutePath == "/api/login")
                     {

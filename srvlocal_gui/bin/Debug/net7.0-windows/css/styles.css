@@ -1,0 +1,67 @@
+/* Add your global styles here */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fafafa;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  table th,
+  table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  table th {
+    background-color: #f2f2f2;
+  }
+  
+  .download-link {
+    background-color: #0078D7;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin-right: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .download-link:hover {
+    background-color: #005A9E;
+  }
+  
+  .header {
+    background-color: #333;
+    padding: 20px;
+    color: white;
+  }
+  
+  .header h1 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .header p {
+    font-size: 16px;
+    margin: 0;
+    text-align: right;
+  }
+  
+  .content {
+    padding: 20px;
+  }
+  

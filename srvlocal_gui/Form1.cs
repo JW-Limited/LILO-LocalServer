@@ -12,6 +12,8 @@ using User = srvlocal_gui.AppMananger.User;
 using System.Security.Cryptography;
 using ToastNotifications;
 using ToastNotifications.Core;
+using System.Runtime.CompilerServices;
+using System;
 
 namespace srvlocal_gui
 {
@@ -470,7 +472,9 @@ namespace srvlocal_gui
         }
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            var Proc = Process.Start("explorer.exe", "C:\\LILO\\dist");
+
+            var project = FileViewForm.Instance($"http://localhost:{txtPort.Text}", false);
+            project.Show();
         }
 
         public void RunConsoleApplication(string filePath)
@@ -563,27 +567,7 @@ namespace srvlocal_gui
 
                 Program.Browser_("http://localhost:8080/api/login", false);
 
-                using (var httpClient = new HttpClient())
-                {
-                    while (process.HasExited == false)
-                    {
-                        await Task.Delay(1000);
-
-                        try
-                        {
-                            HttpResponseMessage response = await httpClient.GetAsync("http://localhost:8080");
-                            if (response.IsSuccessStatusCode)
-                            {
-                                lblReach.Text = "True";
-                                break;
-                            }
-                        }
-                        catch (HttpRequestException)
-                        {
-                            lblReach.Text = "False";
-                        }
-                    }
-                }
+                var connected = await TestConnectionToLocalServer(process);
 
                 ConsolePanel.Visible = true;
 
@@ -610,6 +594,36 @@ namespace srvlocal_gui
             }
         }
 
+        private async Task<bool> TestConnectionToLocalServer(Process process)
+        {
+            bool isReachabel = false;
+
+            using (var httpClient = new HttpClient())
+            {
+                while (process.HasExited == false)
+                {
+                    await Task.Delay(1000);
+
+                    try
+                    {
+                        HttpResponseMessage response = await httpClient.GetAsync("http://localhost:8080");
+                        if (response.IsSuccessStatusCode)
+                        {
+                            lblReach.Text = "True";
+                            isReachabel = true;
+                            break;
+                        }
+                    }
+                    catch (HttpRequestException)
+                    {
+                        lblReach.Text = "False";
+                        isReachabel = false;
+                    }
+                }
+
+                return isReachabel;
+            }
+        }
         
 
         private static object _lockRequest = new object();
@@ -657,7 +671,7 @@ namespace srvlocal_gui
             ConsolePanel.Visible = false;
         }
 
-        private void bntStartWithArguments(object sender, EventArgs e)
+        private async void bntStartWithArguments(object sender, EventArgs e)
         {
             var sb = new StringBuilder();
             sb.Append("srvlocal.exe ");
@@ -709,12 +723,16 @@ namespace srvlocal_gui
                 process.OutputDataReceived += (sender, args) => _outputTextbox.Invoke(new Action(() => _outputTextbox.AppendText(args.Data + Environment.NewLine)));
                 process.Start();
                 process.BeginOutputReadLine();
+
+                Program.Browser_($"http://localhost:{txtPort.Text}/api/login", false);
+
+                var connected = await TestConnectionToLocalServer(process);
+
                 while (process.HasExited == false)
                 {
                     System.Windows.Forms.Application.DoEvents();
                     process.WaitForExitAsync();
                 }
-                Program.Browser_("http://localhost:" + txtPort.Text + "/api/login",false);
                 ConsolePanel.Visible = true;
 
                 try
@@ -1120,7 +1138,7 @@ namespace srvlocal_gui
             {
                 var appin = FileViewForm.Instance(null);
                 appin.Close();
-                loggedInApi = !loggedInApi;
+                loggedInApi = true;
             }
             else
             {
@@ -1132,9 +1150,7 @@ namespace srvlocal_gui
         {
             if (LoggedInSuccessfully)
             {
-                var appin = FileViewForm.Instance(null);
-                appin.Close();
-                loggedInApi = !loggedInApi;
+                loggedInApi = true;
                 lblquote.Text = "API Endpoint: Unlocked Enviroment.";
             }
             else

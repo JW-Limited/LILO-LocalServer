@@ -1,0 +1,1825 @@
+GET http://localhost:8080/
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+GET http://localhost:8080/api/com?command=status&key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+GET http://localhost:8080/
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/style.css
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/script.js
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/script.js
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/api/com?command=info&key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+GET http://localhost:8080/api/com?command=close&key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+GET http://localhost:8080/
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+GET http://localhost:8080/api/com?command=status&key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+GET http://localhost:8080/script.js
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/style.css
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/script.js
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/style.css
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/script.js
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+GET http://localhost:8080/api/com?command=status&key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+GET http://localhost:8080/script.js
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/api/com?command=info&key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+GET http://localhost:8080/api/com?command=info&key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+GET http://localhost:8080/api/com?command=info&key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+GET http://localhost:8080/api/com?command=close&key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+GET http://localhost:8080/
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/style.css
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/script.js
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+GET http://localhost:8080/api/com?command=status&key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+GET http://localhost:8080/script.js
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/api/com?command=close&key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+GET http://localhost:8080/
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/style.css
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/script.js
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+GET http://localhost:8080/api/com?command=status&key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+GET http://localhost:8080/script.js
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/api/com?command=info&key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+GET http://localhost:8080/api/com?command=info&key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+GET http://localhost:8080/feed/
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Edg/114.0.1823.37
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,de-DE;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+
+GET http://localhost:8080/feed/script.js
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Edg/114.0.1823.37
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,de-DE;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+
+GET http://localhost:8080/feed/style.css
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Edg/114.0.1823.37
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,de-DE;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+
+GET http://localhost:8080/favicon.ico
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Edg/114.0.1823.37
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,de-DE;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+
+GET http://localhost:8080/api/com?command=info&key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+GET http://localhost:8080/api/com?command=info&key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+GET http://localhost:8080/api/com?command=info&key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+GET http://localhost:8080/api/com?command=info&key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+GET http://localhost:8080/api/com?command=info&key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+GET http://localhost:8080/api/com?command=info&key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+GET http://localhost:8080/api/com?command=info&key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+GET http://localhost:8080/api/com?command=close&key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+GET http://localhost:8080/
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/script.js
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/style.css
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+GET http://localhost:8080/api/com?command=status&key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+GET http://localhost:8080/script.js
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/api/com?command=close&key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+GET http://localhost:8080/
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/style.css
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/script.js
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+GET http://localhost:8080/script.js
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/api/com?command=status&key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/api/com?command=close&key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+GET http://localhost:8080/
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+GET http://localhost:8080/api/com?command=status&key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+GET http://localhost:8080/api/com?command=info&key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+GET http://localhost:8080/
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/api/com?command=info&key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+GET http://localhost:8080/api/com?command=info&key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+GET http://localhost:8080/api/com?command=info&key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+GET http://localhost:8080/api/com?command=close&key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+GET http://localhost:8080/
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+GET http://localhost:8080/api/com?command=status&key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+GET http://localhost:8080/api/com?command=info&key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+GET http://localhost:8080/api/com?command=info&key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+GET http://localhost:8080/
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/api/com?command=info&key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+GET http://localhost:8080/
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/style.css
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/script.js
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/script.js
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/lilo
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/gestures/
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/gestures/style.css
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/apps/
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/apps/style.css
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/apps/
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/apps/style.css
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/dashboard.html
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/style.css
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/lilo/apps/
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/lilo/
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/lilo/apps/
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/lilo/apps/hackAny/
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/lilo/apps/hackAny/style.css
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/lilo/apps/hackAny/script.js
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/login
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/style.css
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/style_menu.css
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/login.js
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/login/v3
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/login/style.css
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/login/v3/
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/login/v3/style.css
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/login/v2/
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/login/v2/style.css
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/login/prop/
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/login/prop/style.css
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/login/pro/
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/login/pro/style.css
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/login/prot/
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/login/prot/style.css
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/login/prot/script.js
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/login/backup/
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/login/backup/style.css
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/login/backup/style_menu.css
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/login/backup/login.js
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/login/backup/style.css
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/login/backup/style_menu.css
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/login/backup/
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/login/backup/style.css
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/login/backup/style_menu.css
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/login/backup/login.js
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/login/backup/login.js
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favicon.ico
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/lilo/dashboard.html
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/lilo/style_dash.css
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/lilo/dashboard.html
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/lilo/style_dash.css
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/lilo/
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/lilo/v2/
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/lilo/v2/style.css
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/lilo/dashboard.html
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/lilo/style_dash.css
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/lilo/apps/
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/lilo/apps/health/
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/lilo/apps/health/dashboard/
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/lilo/apps/health/dashboard/style.css
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/lilo/apps/health/dashboard/script.js
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/lilo/apps/health/healthnoteChat/
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/lilo/apps/health/healthnoteChat/css/style.css
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/lilo/apps/health/healthnoteChat/js/jquery.min.js
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/lilo/apps/health/healthnoteChat/js/colorChange.js
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/lilo/apps/health/healthnoteChat/js/notes.js
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/lilo/apps/health/healthnoteChat/js/dynamic.js
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/lilo/apps/health/healthnoteChat/js/particle.js
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/lilo/apps/health/healthnoteChat/img/city.svg
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/lilo/apps/health/healthnoteChat/img/logo.svg
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/lilo/apps/health/healthnoteChat/img/qrcode.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/lilo/apps/health/healthnoteChat/img/avatar_male/white/guy_b.svg
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/lilo/apps/health/healthnoteChat/img/message_bubble_tail.svg
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/lilo/apps/health/healthnoteChat/img/avatar_female/asian/girl_a.svg
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/lilo/apps/health/care/
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/lilo/apps/health/care/style.css
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/lilo/apps/health/care/script.js
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/lilo/apps/health/care/
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/lilo/apps/health/care/style.css
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/lilo/apps/health/care/script.js
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de-DE,de
+
+GET http://localhost:8080/
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/style.css
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/script.js
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/script.js
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/style.css
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/style.css
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/style.css
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/script.js
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/script.js
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/style.css
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/script.js
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/script.js
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/style.css
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/script.js
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/script.js
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/favlogo.png
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/style.css
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/script.js
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/script.js
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/style.css
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/script.js
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/script.js
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/style.css
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/script.js
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/script.js
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/style.css
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/script.js
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/script.js
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/style.css
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/script.js
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+GET http://localhost:8080/script.js
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0
+Accept-Encoding: gzip, deflate, br
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
+POST http://localhost:8080/api/data?key=liloDev-420
+User-Agent: 
+Accept-Encoding: 
+Accept-Language: 
+
