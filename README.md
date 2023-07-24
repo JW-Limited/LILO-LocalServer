@@ -41,8 +41,9 @@ or Start it with
 srvlocal.exe --port=8080 --path=<youre_path> --enable-logging=false
 ```
 or use the GUI
- 
-<img width="512" alt="image" src="https://github.com/JW-Limited/LILO-LocalServer/assets/120219149/7c08f71d-c189-4b4c-abee-461aa5434c81">
+
+<img width="1037" alt="image" src="https://github.com/JW-Limited/LILO-LocalServer/assets/120219149/8d288ecf-5ec2-4da1-8d23-c00c9be0499c">
+
 
 This will start the server on the default port 8080. You can then access your web application by navigating to http://localhost:8080 in your web browser.
 
