@@ -38,6 +38,11 @@ namespace srvlocal_gui
             {
                 txtNameMappe.Text = txtAppName.Text;
             };
+
+            this.FormClosing += (sender, e) =>
+            {
+                _Instance = null;
+            };
         }
 
         public static Setup Instance(User user)
@@ -65,16 +70,42 @@ namespace srvlocal_gui
         private string _droppedFileName;
         private Point _dragImagePoint;
 
-        private void zeroitMetroPanelSelection1_Click(object sender, EventArgs e)
+        private async void zeroitMetroPanelSelection1_Click(object sender, EventArgs e)
         {
-            var slc = new AppSelector()
-            {
-                StartPosition = FormStartPosition.CenterScreen,
-            };
-            slc.ShowDialog();
+            var slc = AppSelector.Instance;
+            slc.StartPosition = FormStartPosition.CenterScreen;
 
-            AppTypeSelector.TextSubline = slc.mainDescription;
-            mainApp = slc.mainAppName;
+            IsLoadingStateSetter(true, "Configuration in progress...");
+
+            if (!slc.Created)
+            {
+
+                slc.Show();
+            }
+
+            slc.BringToFront();
+
+            slc.FormClosing += (sender, e) =>
+            {
+                AppTypeSelector.TextSubline = slc.mainDescription;
+                mainApp = slc.mainAppName;
+
+                IsLoadingStateSetter(false, null);
+            };
+        }
+
+        private void IsLoadingStateSetter(bool isLoading, string loadingActivity)
+        {
+            if (isLoading)
+            {
+                loadingPanel.Visible = isLoading;
+                if (loadingActivity is not null) lblLoadingText.Text = loadingActivity;
+            }
+            else
+            {
+                loadingPanel.Visible = false;
+            }
+
         }
 
         private void bntOFD_Click(object sender, EventArgs e)
@@ -110,6 +141,11 @@ namespace srvlocal_gui
         private void Setup_Load(object sender, EventArgs e)
         {
             txtOrt.Text = "C:\\LILO\\dist";
+
+            if (!_loggedInUser.CanChangeConfig)
+            {
+                throw new AccessViolationException("This user isnt able to do such actions.");
+            }
         }
 
         private void panel1_DragEnter(object sender, DragEventArgs e)
@@ -139,7 +175,7 @@ namespace srvlocal_gui
         {
 
             preLoad.Visible = false;
-            MessageBox.Show("File dropped: " + _droppedFileName);
+            lblHeader.Text = "Setup - Analyzing File: " + _droppedFileName;
         }
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
@@ -205,6 +241,8 @@ namespace srvlocal_gui
 
         private async void zeroitMetroButton1_Click(object sender, EventArgs e)
         {
+            IsLoadingStateSetter(true, "Building youre App...");
+
             var dir = txtOrt.Text + "\\" + txtAppName.Text;
             RedirectProjectCreation(process =>
             {
@@ -263,7 +301,7 @@ namespace srvlocal_gui
 
                 processCallback?.Invoke("100%");
 
-                var gui = LAB.builder_gui.Instance(dir + "\\" + txtNameMappe.Text + ".lab");
+                var gui = LAB.builder_gui.Instance(dir + "\\" + txtNameMappe.Text + ".lab",LAB.builder_gui.StartMode.Setup);
                 gui.Show();
 
                 this.Close();
@@ -275,6 +313,9 @@ namespace srvlocal_gui
             }
         }
 
+        public bool projectCreated { get; private set; }
+
+
         public void CreateProject(Project values)
         {
             var dir = txtOrt.Text + "\\" + txtAppName.Text;
@@ -285,15 +326,17 @@ namespace srvlocal_gui
                 Directory.CreateDirectory(dir + "\\lab");
             }
             while (!Directory.Exists(dir + "\\lab"));
+
             File.Copy(".\\Folder.ico", dir + "\\lab\\Folder.ico", true);
             string iconFilePath = dir + "\\lab\\Folder.ico";
             int iconIndex = 0;
-
             LABLibary.Assistant.DirectoryIconSetter.SetDirectoryIcon(dir, iconFilePath, iconIndex);
 
             values.SaveToFile(dir + "\\" + txtNameMappe.Text + ".lab");
             var form = new LAB.HELPER.FormsHandler(dir);
             form.Add(txtAppName.Text);
+
+            projectCreated = true;
         }
 
 

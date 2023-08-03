@@ -346,6 +346,14 @@
           }
         }
       },
+      "MDIWindowManager/2.1.0": {
+        "runtime": {
+          "lib/MDIWindowManager.dll": {
+            "assemblyVersion": "2.1.2521.32075",
+            "fileVersion": "2.1.2521.32075"
+          }
+        }
+      },
       "MetroFramework/1.2.0.3": {
         "dependencies": {
           "MetroFramework.Design": "1.2.0.3",
@@ -3691,6 +3699,13 @@
       "sha512": "sha512-CEdZ3KyFfz5IPMrofhCOSrc4O2KNvSXSMXt3fv0W5AFCsk6a/JhKZuTBxGSadNt8n4zyyd/xXfoUMvr4ZbZ4Fw==",
       "path": "markdig/0.31.0",
       "hashPath": "markdig.0.31.0.nupkg.sha512"
+    },
+    "MDIWindowManager/2.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WvJhbFgUAwRw8Q6Th/AYzZqOq68rxjdnNje2uZHXTPI12+CrCp5RvP9mhyRZDaJdIIQ+Yt0jSrT0XUHS5LyJdg==",
+      "path": "mdiwindowmanager/2.1.0",
+      "hashPath": "mdiwindowmanager.2.1.0.nupkg.sha512"
     },
     "MetroFramework/1.2.0.3": {
       "type": "package",

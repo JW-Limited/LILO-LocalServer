@@ -13,13 +13,25 @@
     <Compile Update="AppMananger\ChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="AppMananger\DialogBigText.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="AppMananger\ReadMeDialog.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="AppMananger\Setup.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="AppMananger\SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="AppMananger\srvlocal_gui_settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="AppMananger\StartWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="AppMananger\SupportChat.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FileViewForm.cs">
@@ -35,6 +47,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="LAB\HELPER\AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="LAB\HELPER\AboutProject.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="LAB\HELPER\AppSelector.cs">

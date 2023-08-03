@@ -38,15 +38,15 @@
             // radTitleBar1
             // 
             radTitleBar1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            radTitleBar1.Location = new Point(3, 3);
-            radTitleBar1.Margin = new Padding(6, 6, 6, 6);
+            radTitleBar1.Location = new Point(4, 4);
+            radTitleBar1.Margin = new Padding(9, 9, 9, 9);
             radTitleBar1.Name = "radTitleBar1";
             // 
             // 
             // 
             radTitleBar1.RootElement.ApplyShapeToControl = true;
             radTitleBar1.RootElement.Shape = roundRectShapeTitle;
-            radTitleBar1.Size = new Size(1550, 51);
+            radTitleBar1.Size = new Size(596, 76);
             radTitleBar1.TabIndex = 0;
             radTitleBar1.TabStop = false;
             radTitleBar1.Text = "Setuopo";

@@ -66,14 +66,22 @@
             saaToast1 = new SaaUI.SaaToast();
             guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
             Tabber = new MetroSet_UI.Controls.MetroSetTabControl();
-            tabReady = new TabPage();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             tabProject = new TabPage();
             tabFramework = new TabPage();
+            tabReady = new TabPage();
+            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            dragPanel = new Guna.UI2.WinForms.Guna2Panel();
+            lblHeader = new Label();
+            dragControl = new Guna.UI2.WinForms.Guna2DragControl(components);
+            saaPreloader1 = new SaaUI.SaaPreloader();
+            loadingPanel = new Guna.UI2.WinForms.Guna2Panel();
+            lblLoadingText = new Label();
             Tabber.SuspendLayout();
-            tabReady.SuspendLayout();
             tabProject.SuspendLayout();
             tabFramework.SuspendLayout();
+            tabReady.SuspendLayout();
+            dragPanel.SuspendLayout();
+            loadingPanel.SuspendLayout();
             SuspendLayout();
             // 
             // zeroitMetroNavigationButton2
@@ -95,7 +103,7 @@
             zeroitMetroNavigationButton2.ForeColor = Color.FromArgb(153, 153, 153);
             zeroitMetroNavigationButton2.HoverColor = Color.FromArgb(63, 63, 63);
             zeroitMetroNavigationButton2.Location = new Point(1252, 926);
-            zeroitMetroNavigationButton2.Margin = new Padding(4);
+            zeroitMetroNavigationButton2.Margin = new Padding(4, 4, 4, 4);
             zeroitMetroNavigationButton2.Name = "zeroitMetroNavigationButton2";
             zeroitMetroNavigationButton2.PressedColor = Color.FromArgb(0, 122, 204);
             zeroitMetroNavigationButton2.Size = new Size(38, 38);
@@ -124,7 +132,7 @@
             zeroitMetroNavigationButton1.ForeColor = Color.FromArgb(153, 153, 153);
             zeroitMetroNavigationButton1.HoverColor = Color.FromArgb(63, 63, 63);
             zeroitMetroNavigationButton1.Location = new Point(1298, 926);
-            zeroitMetroNavigationButton1.Margin = new Padding(4);
+            zeroitMetroNavigationButton1.Margin = new Padding(4, 4, 4, 4);
             zeroitMetroNavigationButton1.Name = "zeroitMetroNavigationButton1";
             zeroitMetroNavigationButton1.PressedColor = Color.FromArgb(0, 122, 204);
             zeroitMetroNavigationButton1.Size = new Size(38, 38);
@@ -137,7 +145,8 @@
             // 
             saaLabel15.BackColor = Color.Transparent;
             saaLabel15.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            saaLabel15.Location = new Point(257, 374);
+            saaLabel15.Location = new Point(258, 374);
+            saaLabel15.Margin = new Padding(2, 0, 2, 0);
             saaLabel15.Name = "saaLabel15";
             saaLabel15.Size = new Size(338, 34);
             saaLabel15.TabIndex = 5;
@@ -148,6 +157,7 @@
             saaLabel14.BackColor = Color.Transparent;
             saaLabel14.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point);
             saaLabel14.Location = new Point(265, 265);
+            saaLabel14.Margin = new Padding(2, 0, 2, 0);
             saaLabel14.Name = "saaLabel14";
             saaLabel14.Size = new Size(338, 34);
             saaLabel14.TabIndex = 5;
@@ -158,6 +168,7 @@
             saaLabel13.BackColor = Color.Transparent;
             saaLabel13.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point);
             saaLabel13.Location = new Point(136, 152);
+            saaLabel13.Margin = new Padding(2, 0, 2, 0);
             saaLabel13.Name = "saaLabel13";
             saaLabel13.Size = new Size(338, 34);
             saaLabel13.TabIndex = 5;
@@ -167,7 +178,8 @@
             // 
             saaLabel12.BackColor = Color.Transparent;
             saaLabel12.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            saaLabel12.Location = new Point(176, 53);
+            saaLabel12.Location = new Point(176, 52);
+            saaLabel12.Margin = new Padding(2, 0, 2, 0);
             saaLabel12.Name = "saaLabel12";
             saaLabel12.Size = new Size(338, 34);
             saaLabel12.TabIndex = 5;
@@ -177,9 +189,10 @@
             // 
             saaLabel8.BackColor = Color.Transparent;
             saaLabel8.ForeColor = Color.Black;
-            saaLabel8.Location = new Point(57, 371);
+            saaLabel8.Location = new Point(58, 371);
+            saaLabel8.Margin = new Padding(2, 0, 2, 0);
             saaLabel8.Name = "saaLabel8";
-            saaLabel8.Size = new Size(223, 34);
+            saaLabel8.Size = new Size(222, 34);
             saaLabel8.TabIndex = 5;
             saaLabel8.Text = "Projektmappen Name";
             // 
@@ -187,7 +200,8 @@
             // 
             saaLabel7.BackColor = Color.Transparent;
             saaLabel7.ForeColor = Color.Black;
-            saaLabel7.Location = new Point(57, 262);
+            saaLabel7.Location = new Point(58, 262);
+            saaLabel7.Margin = new Padding(2, 0, 2, 0);
             saaLabel7.Name = "saaLabel7";
             saaLabel7.Size = new Size(204, 34);
             saaLabel7.TabIndex = 5;
@@ -197,7 +211,8 @@
             // 
             saaLabel6.BackColor = Color.Transparent;
             saaLabel6.ForeColor = Color.Black;
-            saaLabel6.Location = new Point(57, 149);
+            saaLabel6.Location = new Point(58, 149);
+            saaLabel6.Margin = new Padding(2, 0, 2, 0);
             saaLabel6.Name = "saaLabel6";
             saaLabel6.Size = new Size(166, 34);
             saaLabel6.TabIndex = 5;
@@ -207,7 +222,8 @@
             // 
             saaLabel5.BackColor = Color.Transparent;
             saaLabel5.ForeColor = Color.Black;
-            saaLabel5.Location = new Point(57, 51);
+            saaLabel5.Location = new Point(58, 51);
+            saaLabel5.Margin = new Padding(2, 0, 2, 0);
             saaLabel5.Name = "saaLabel5";
             saaLabel5.Size = new Size(166, 34);
             saaLabel5.TabIndex = 5;
@@ -220,7 +236,7 @@
             saaGlowing1.ForceTransparence = true;
             saaGlowing1.GrowingSpeed = 5;
             saaGlowing1.Location = new Point(612, 192);
-            saaGlowing1.Margin = new Padding(4);
+            saaGlowing1.Margin = new Padding(4, 4, 4, 4);
             saaGlowing1.Name = "saaGlowing1";
             saaGlowing1.Size = new Size(36, 36);
             saaGlowing1.Stop = false;
@@ -240,7 +256,7 @@
             bntOFD.HoverColor = Color.SteelBlue;
             bntOFD.IsRound = true;
             bntOFD.Location = new Point(678, 195);
-            bntOFD.Margin = new Padding(4);
+            bntOFD.Margin = new Padding(4, 4, 4, 4);
             bntOFD.Name = "bntOFD";
             bntOFD.PressedColor = Color.FromArgb(0, 122, 204);
             bntOFD.RoundingArc = 34;
@@ -255,8 +271,8 @@
             txtNameMappe.BackColor = Color.White;
             txtNameMappe.BorderStyle = BorderStyle.FixedSingle;
             txtNameMappe.ForeColor = Color.FromArgb(40, 40, 40);
-            txtNameMappe.Location = new Point(57, 414);
-            txtNameMappe.Margin = new Padding(4);
+            txtNameMappe.Location = new Point(58, 414);
+            txtNameMappe.Margin = new Padding(4, 4, 4, 4);
             txtNameMappe.Name = "txtNameMappe";
             txtNameMappe.Size = new Size(591, 31);
             txtNameMappe.TabIndex = 0;
@@ -268,8 +284,8 @@
             txtOrtProj.BorderStyle = BorderStyle.FixedSingle;
             txtOrtProj.Enabled = false;
             txtOrtProj.ForeColor = Color.FromArgb(40, 40, 40);
-            txtOrtProj.Location = new Point(57, 306);
-            txtOrtProj.Margin = new Padding(4);
+            txtOrtProj.Location = new Point(58, 306);
+            txtOrtProj.Margin = new Padding(4, 4, 4, 4);
             txtOrtProj.Name = "txtOrtProj";
             txtOrtProj.Size = new Size(591, 31);
             txtOrtProj.TabIndex = 0;
@@ -280,8 +296,8 @@
             txtOrt.BackColor = Color.White;
             txtOrt.BorderStyle = BorderStyle.FixedSingle;
             txtOrt.ForeColor = Color.FromArgb(40, 40, 40);
-            txtOrt.Location = new Point(57, 195);
-            txtOrt.Margin = new Padding(4);
+            txtOrt.Location = new Point(58, 195);
+            txtOrt.Margin = new Padding(4, 4, 4, 4);
             txtOrt.Name = "txtOrt";
             txtOrt.Size = new Size(591, 31);
             txtOrt.TabIndex = 0;
@@ -292,8 +308,8 @@
             txtAppName.BackColor = Color.White;
             txtAppName.BorderStyle = BorderStyle.FixedSingle;
             txtAppName.ForeColor = Color.FromArgb(40, 40, 40);
-            txtAppName.Location = new Point(57, 96);
-            txtAppName.Margin = new Padding(4);
+            txtAppName.Location = new Point(58, 96);
+            txtAppName.Margin = new Padding(4, 4, 4, 4);
             txtAppName.Name = "txtAppName";
             txtAppName.Size = new Size(591, 31);
             txtAppName.TabIndex = 0;
@@ -303,7 +319,8 @@
             // 
             saaLabel17.BackColor = Color.Transparent;
             saaLabel17.ForeColor = Color.Black;
-            saaLabel17.Location = new Point(727, 115);
+            saaLabel17.Location = new Point(728, 115);
+            saaLabel17.Margin = new Padding(2, 0, 2, 0);
             saaLabel17.Name = "saaLabel17";
             saaLabel17.Size = new Size(465, 112);
             saaLabel17.TabIndex = 8;
@@ -314,6 +331,7 @@
             saaLabel11.BackColor = Color.Transparent;
             saaLabel11.ForeColor = Color.Black;
             saaLabel11.Location = new Point(75, 265);
+            saaLabel11.Margin = new Padding(2, 0, 2, 0);
             saaLabel11.Name = "saaLabel11";
             saaLabel11.Size = new Size(456, 230);
             saaLabel11.TabIndex = 8;
@@ -324,7 +342,8 @@
             saaLabel16.BackColor = Color.Transparent;
             saaLabel16.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             saaLabel16.ForeColor = Color.Black;
-            saaLabel16.Location = new Point(727, 64);
+            saaLabel16.Location = new Point(728, 64);
+            saaLabel16.Margin = new Padding(2, 0, 2, 0);
             saaLabel16.Name = "saaLabel16";
             saaLabel16.Size = new Size(456, 41);
             saaLabel16.TabIndex = 8;
@@ -335,7 +354,8 @@
             saaLabel10.BackColor = Color.Transparent;
             saaLabel10.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point);
             saaLabel10.ForeColor = Color.Black;
-            saaLabel10.Location = new Point(49, 217);
+            saaLabel10.Location = new Point(49, 218);
+            saaLabel10.Margin = new Padding(2, 0, 2, 0);
             saaLabel10.Name = "saaLabel10";
             saaLabel10.Size = new Size(456, 41);
             saaLabel10.TabIndex = 8;
@@ -347,6 +367,7 @@
             saaLabel9.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             saaLabel9.ForeColor = Color.Black;
             saaLabel9.Location = new Point(49, 61);
+            saaLabel9.Margin = new Padding(2, 0, 2, 0);
             saaLabel9.Name = "saaLabel9";
             saaLabel9.Size = new Size(166, 34);
             saaLabel9.TabIndex = 8;
@@ -363,7 +384,7 @@
             metroLabel9.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             metroLabel9.ForeColor = Color.Black;
             metroLabel9.LiveSetting = System.Windows.Forms.Automation.AutomationLiveSetting.Polite;
-            metroLabel9.Location = new Point(923, 300);
+            metroLabel9.Location = new Point(922, 300);
             metroLabel9.Margin = new Padding(4, 0, 4, 0);
             metroLabel9.Name = "metroLabel9";
             metroLabel9.Size = new Size(93, 25);
@@ -383,7 +404,7 @@
             guna2Panel1.BackgroundImage = Properties.Resources.dropbox_512px;
             guna2Panel1.BackgroundImageLayout = ImageLayout.Stretch;
             guna2Panel1.Location = new Point(901, 391);
-            guna2Panel1.Margin = new Padding(4);
+            guna2Panel1.Margin = new Padding(4, 4, 4, 4);
             guna2Panel1.Name = "guna2Panel1";
             guna2Panel1.Size = new Size(131, 104);
             guna2Panel1.TabIndex = 6;
@@ -433,13 +454,13 @@
             panel1.ForeColor = Color.FromArgb(153, 153, 153);
             panel1.GradientColor = Color.White;
             panel1.GradientPointA = new Point(0, 0);
-            panel1.GradientPointB = new Point(487, 295);
+            panel1.GradientPointB = new Point(488, 295);
             panel1.LineGradientColor = Color.FromArgb(0, 98, 163);
             panel1.LineOrientation = Orientation.Horizontal;
-            panel1.Location = new Point(727, 250);
-            panel1.Margin = new Padding(4);
+            panel1.Location = new Point(728, 250);
+            panel1.Margin = new Padding(4, 4, 4, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(487, 295);
+            panel1.Size = new Size(488, 295);
             panel1.Style = Zeroit.Framework.Metro.Design.Style.Custom;
             panel1.TabIndex = 5;
             panel1.Click += panel1_Click;
@@ -457,7 +478,7 @@
             mainColorScheme1.Color2 = Color.White;
             zeroitMetroSeparator1.ColorScheme = mainColorScheme1;
             zeroitMetroSeparator1.Location = new Point(605, 61);
-            zeroitMetroSeparator1.Margin = new Padding(4);
+            zeroitMetroSeparator1.Margin = new Padding(4, 4, 4, 4);
             zeroitMetroSeparator1.Name = "zeroitMetroSeparator1";
             zeroitMetroSeparator1.Orientation = Zeroit.Framework.Metro.Design.Orientation.Vertical;
             zeroitMetroSeparator1.Size = new Size(2, 456);
@@ -475,7 +496,7 @@
             cmbFramework.ItemHeight = 29;
             cmbFramework.Items.AddRange(new object[] { "LAB Core (Best)", ".NET 7.0 (Well Supportet)", ".NET 6.0" });
             cmbFramework.Location = new Point(49, 115);
-            cmbFramework.Margin = new Padding(4);
+            cmbFramework.Margin = new Padding(4, 4, 4, 4);
             cmbFramework.Name = "cmbFramework";
             cmbFramework.PromptText = "Choose one...";
             cmbFramework.Size = new Size(456, 35);
@@ -525,8 +546,8 @@
             AppTypeSelector.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             AppTypeSelector.ForeColor = SystemColors.ButtonHighlight;
             AppTypeSelector.HeadlineFont = new Font("Segoe UI Variable Display Semib", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            AppTypeSelector.Location = new Point(46, 62);
-            AppTypeSelector.Margin = new Padding(4);
+            AppTypeSelector.Location = new Point(46, 65);
+            AppTypeSelector.Margin = new Padding(4, 4, 4, 4);
             AppTypeSelector.Name = "AppTypeSelector";
             AppTypeSelector.Size = new Size(1289, 86);
             AppTypeSelector.Style = Zeroit.Framework.Metro.Design.Style.Custom;
@@ -539,14 +560,17 @@
             // guna2ControlBox1
             // 
             guna2ControlBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            guna2ControlBox1.Animated = true;
             guna2ControlBox1.BackColor = SystemColors.Control;
             guna2ControlBox1.FillColor = SystemColors.Control;
+            guna2ControlBox1.HoverState.FillColor = Color.Red;
+            guna2ControlBox1.HoverState.IconColor = Color.White;
             guna2ControlBox1.IconColor = Color.Black;
-            guna2ControlBox1.Location = new Point(1303, -1);
-            guna2ControlBox1.Margin = new Padding(4);
+            guna2ControlBox1.Location = new Point(1284, -1);
+            guna2ControlBox1.Margin = new Padding(4, 4, 4, 4);
             guna2ControlBox1.Name = "guna2ControlBox1";
             guna2ControlBox1.PressedColor = Color.Red;
-            guna2ControlBox1.Size = new Size(70, 35);
+            guna2ControlBox1.Size = new Size(91, 41);
             guna2ControlBox1.TabIndex = 3;
             // 
             // saaToast1
@@ -604,10 +628,13 @@
             // 
             // guna2BorderlessForm1
             // 
-            guna2BorderlessForm1.BorderRadius = 20;
+            guna2BorderlessForm1.BorderRadius = 15;
             guna2BorderlessForm1.ContainerControl = this;
             guna2BorderlessForm1.DockForm = false;
             guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            guna2BorderlessForm1.DragForm = false;
+            guna2BorderlessForm1.DragStartTransparencyValue = 1D;
+            guna2BorderlessForm1.ResizeForm = false;
             guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
             // Tabber
@@ -622,6 +649,7 @@
             Tabber.IsDerivedStyle = true;
             Tabber.ItemSize = new Size(180, 50);
             Tabber.Location = new Point(46, 172);
+            Tabber.Margin = new Padding(2);
             Tabber.Multiline = true;
             Tabber.Name = "Tabber";
             Tabber.SelectedIndex = 0;
@@ -638,37 +666,6 @@
             Tabber.UnselectedTextColor = Color.Gray;
             Tabber.UseAnimation = false;
             Tabber.SelectedIndexChanged += metroSetTabControl1_SelectedIndexChanged;
-            // 
-            // tabReady
-            // 
-            tabReady.Controls.Add(guna2Button1);
-            tabReady.Controls.Add(saaLabel2);
-            tabReady.Controls.Add(saaLabel1);
-            tabReady.Location = new Point(4, 54);
-            tabReady.Name = "tabReady";
-            tabReady.Size = new Size(1281, 620);
-            tabReady.TabIndex = 2;
-            tabReady.Text = "Create";
-            // 
-            // guna2Button1
-            // 
-            guna2Button1.Animated = true;
-            guna2Button1.BorderColor = Color.DimGray;
-            guna2Button1.BorderRadius = 30;
-            guna2Button1.BorderThickness = 1;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.FillColor = Color.White;
-            guna2Button1.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2Button1.ForeColor = Color.Black;
-            guna2Button1.Location = new Point(55, 515);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.Size = new Size(1181, 63);
-            guna2Button1.TabIndex = 3;
-            guna2Button1.Text = "Build the Project";
-            guna2Button1.Click += zeroitMetroButton1_Click;
             // 
             // tabProject
             // 
@@ -687,6 +684,7 @@
             tabProject.Controls.Add(bntOFD);
             tabProject.Controls.Add(saaGlowing1);
             tabProject.Location = new Point(4, 54);
+            tabProject.Margin = new Padding(2);
             tabProject.Name = "tabProject";
             tabProject.Size = new Size(1281, 620);
             tabProject.TabIndex = 0;
@@ -706,10 +704,120 @@
             tabFramework.Controls.Add(saaLabel9);
             tabFramework.Controls.Add(panel1);
             tabFramework.Location = new Point(4, 54);
+            tabFramework.Margin = new Padding(2);
             tabFramework.Name = "tabFramework";
             tabFramework.Size = new Size(1281, 620);
             tabFramework.TabIndex = 1;
             tabFramework.Text = "Framework";
+            // 
+            // tabReady
+            // 
+            tabReady.Controls.Add(guna2Button1);
+            tabReady.Controls.Add(saaLabel2);
+            tabReady.Controls.Add(saaLabel1);
+            tabReady.Location = new Point(4, 54);
+            tabReady.Margin = new Padding(2);
+            tabReady.Name = "tabReady";
+            tabReady.Size = new Size(1281, 620);
+            tabReady.TabIndex = 2;
+            tabReady.Text = "Create";
+            // 
+            // guna2Button1
+            // 
+            guna2Button1.Animated = true;
+            guna2Button1.BorderColor = Color.DimGray;
+            guna2Button1.BorderRadius = 30;
+            guna2Button1.BorderThickness = 1;
+            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button1.FillColor = Color.White;
+            guna2Button1.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            guna2Button1.ForeColor = Color.Black;
+            guna2Button1.Location = new Point(55, 515);
+            guna2Button1.Margin = new Padding(2);
+            guna2Button1.Name = "guna2Button1";
+            guna2Button1.Size = new Size(1181, 62);
+            guna2Button1.TabIndex = 3;
+            guna2Button1.Text = "Build the Project";
+            guna2Button1.Click += zeroitMetroButton1_Click;
+            // 
+            // dragPanel
+            // 
+            dragPanel.BackColor = SystemColors.Control;
+            dragPanel.Controls.Add(lblHeader);
+            dragPanel.Location = new Point(0, -1);
+            dragPanel.Margin = new Padding(4, 4, 4, 4);
+            dragPanel.Name = "dragPanel";
+            dragPanel.Size = new Size(1290, 41);
+            dragPanel.TabIndex = 7;
+            // 
+            // lblHeader
+            // 
+            lblHeader.AutoSize = true;
+            lblHeader.BackColor = SystemColors.Control;
+            lblHeader.ForeColor = SystemColors.ControlDarkDark;
+            lblHeader.Location = new Point(31, 8);
+            lblHeader.Margin = new Padding(4, 0, 4, 0);
+            lblHeader.Name = "lblHeader";
+            lblHeader.Size = new Size(109, 25);
+            lblHeader.TabIndex = 0;
+            lblHeader.Text = "Setup - Beta";
+            // 
+            // dragControl
+            // 
+            dragControl.DockIndicatorTransparencyValue = 0.6D;
+            dragControl.DragStartTransparencyValue = 1D;
+            dragControl.TargetControl = dragPanel;
+            dragControl.UseTransparentDrag = true;
+            // 
+            // saaPreloader1
+            // 
+            saaPreloader1.Anchor = AnchorStyles.None;
+            saaPreloader1.BackColor = Color.White;
+            saaPreloader1.DashCap = System.Drawing.Drawing2D.DashCap.Round;
+            saaPreloader1.DashOffset = 0F;
+            saaPreloader1.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            saaPreloader1.LineEnd = System.Drawing.Drawing2D.LineCap.Round;
+            saaPreloader1.LineStart = System.Drawing.Drawing2D.LineCap.Round;
+            saaPreloader1.LoaderColor = Color.FromArgb(127, 170, 255);
+            saaPreloader1.LoaderWidth = 5;
+            saaPreloader1.Location = new Point(498, 195);
+            saaPreloader1.Margin = new Padding(5, 6, 5, 6);
+            saaPreloader1.MaxAngle = 360;
+            saaPreloader1.MinAngle = 0;
+            saaPreloader1.Name = "saaPreloader1";
+            saaPreloader1.Reverse = false;
+            saaPreloader1.Size = new Size(381, 381);
+            saaPreloader1.SpeedInMilliSeconds = 20;
+            saaPreloader1.Start = true;
+            saaPreloader1.StepDown = 4;
+            saaPreloader1.StepUp = 4;
+            saaPreloader1.TabIndex = 8;
+            // 
+            // loadingPanel
+            // 
+            loadingPanel.Controls.Add(lblLoadingText);
+            loadingPanel.Controls.Add(saaPreloader1);
+            loadingPanel.Location = new Point(0, 40);
+            loadingPanel.Margin = new Padding(4, 4, 4, 4);
+            loadingPanel.Name = "loadingPanel";
+            loadingPanel.Size = new Size(1375, 865);
+            loadingPanel.TabIndex = 9;
+            loadingPanel.Visible = false;
+            // 
+            // lblLoadingText
+            // 
+            lblLoadingText.Anchor = AnchorStyles.None;
+            lblLoadingText.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            lblLoadingText.Location = new Point(498, 568);
+            lblLoadingText.Margin = new Padding(4, 0, 4, 0);
+            lblLoadingText.Name = "lblLoadingText";
+            lblLoadingText.Size = new Size(381, 31);
+            lblLoadingText.TabIndex = 9;
+            lblLoadingText.Text = "Something is happening...";
+            lblLoadingText.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // Setup
             // 
@@ -717,14 +825,16 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1376, 900);
-            Controls.Add(Tabber);
+            Controls.Add(loadingPanel);
             Controls.Add(guna2ControlBox1);
+            Controls.Add(dragPanel);
+            Controls.Add(Tabber);
             Controls.Add(AppTypeSelector);
             Controls.Add(zeroitMetroNavigationButton2);
             Controls.Add(zeroitMetroNavigationButton1);
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(4);
+            Margin = new Padding(4, 4, 4, 4);
             MinimumSize = new Size(1376, 900);
             Name = "Setup";
             ShowIcon = false;
@@ -734,11 +844,14 @@
             ResizeBegin += Setup_ResizeBegin;
             MouseDown += Setup_MouseDown;
             Tabber.ResumeLayout(false);
-            tabReady.ResumeLayout(false);
             tabProject.ResumeLayout(false);
             tabProject.PerformLayout();
             tabFramework.ResumeLayout(false);
             tabFramework.PerformLayout();
+            tabReady.ResumeLayout(false);
+            dragPanel.ResumeLayout(false);
+            dragPanel.PerformLayout();
+            loadingPanel.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -788,5 +901,11 @@
         private TabPage tabFramework;
         private TabPage tabReady;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Panel dragPanel;
+        private Label lblHeader;
+        private Guna.UI2.WinForms.Guna2DragControl dragControl;
+        private Guna.UI2.WinForms.Guna2Panel loadingPanel;
+        private SaaUI.SaaPreloader saaPreloader1;
+        private Label lblLoadingText;
     }
 }

@@ -55,6 +55,40 @@
             the contents of this method with the code editor.
             </summary>
         </member>
+        <member name="F:srvlocal_gui.AppMananger.DialogBigText.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:srvlocal_gui.AppMananger.DialogBigText.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:srvlocal_gui.AppMananger.DialogBigText.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:srvlocal_gui.AppMananger.SplashScreen.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:srvlocal_gui.AppMananger.SplashScreen.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:srvlocal_gui.AppMananger.SplashScreen.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
         <member name="F:srvlocal_gui.AppMananger.srvlocal_gui_settings.components">
             <summary>
             Required designer variable.
@@ -67,6 +101,40 @@
             <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         </member>
         <member name="M:srvlocal_gui.AppMananger.srvlocal_gui_settings.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:srvlocal_gui.AppMananger.StartWindow.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:srvlocal_gui.AppMananger.StartWindow.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:srvlocal_gui.AppMananger.StartWindow.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:srvlocal_gui.AppMananger.SupportChat.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:srvlocal_gui.AppMananger.SupportChat.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:srvlocal_gui.AppMananger.SupportChat.InitializeComponent">
             <summary>
             Required method for Designer support - do not modify
             the contents of this method with the code editor.
@@ -123,6 +191,69 @@
             the contents of this method with the code editor.
             </summary>
         </member>
+        <member name="P:srvlocal_gui.Form1.Instance">
+            <summary>
+            Gives back the current Instance
+            </summary>
+        </member>
+        <member name="M:srvlocal_gui.Form1.#ctor(System.String)">
+            <summary>
+            A private Form builder
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="T:srvlocal_gui.Form1.ChildrenUse">
+            <summary>
+            The Modes for the OpenInApp Method
+            </summary>
+        </member>
+        <member name="M:srvlocal_gui.Form1.OpenInApp(System.Windows.Forms.Form,System.String,srvlocal_gui.Form1.ChildrenUse)">
+            <summary>
+            This Method accpets a WinForm object and 
+            displays it over all controls with help of
+            a Panel
+            </summary>
+            <param name="children">
+            The Form Object
+            </param>
+            <param name="FormName">
+            The displayed Formname
+            </param>
+            <param name="usage">
+            The Mode and Accessability clarifier
+            </param>
+        </member>
+        <member name="M:srvlocal_gui.Form1.RunConsoleApplication(System.String)">
+            <summary>
+            Runs a CLI Application in background and gives back the output
+            </summary>
+            <param name="filePath"></param>
+        </member>
+        <member name="M:srvlocal_gui.Form1.MakeGetRequest(System.String)">
+            <summary>
+            Makes a get request to a Server
+            </summary>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="M:srvlocal_gui.Form1.NotyFi(System.Boolean,System.String,System.String,System.Windows.Forms.ToolTipIcon,System.EventHandler,System.EventHandler)">
+            <summary>
+            Displays a Notify Icon on the Taskbar
+            </summary>
+            <param name="inTray"></param>
+            <param name="message"></param>
+            <param name="title"></param>
+            <param name="icon"></param>
+            <param name="onClick"></param>
+            <param name="onClose"></param>
+        </member>
+        <member name="M:srvlocal_gui.Form1.HandleUserChange(srvlocal_gui.AppMananger.User@)">
+            <summary>
+            Handles the User login change
+            </summary>
+            <param name="loggedIn"></param>
+            <exception cref="T:System.Exception"></exception>
+        </member>
         <member name="F:srvlocal_gui.Form1.components">
             <summary>
              Required designer variable.
@@ -169,6 +300,23 @@
             <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         </member>
         <member name="M:srvlocal_gui.LAB.EDITOR.EditorJS.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:srvlocal_gui.LAB.HELPER.AboutProject.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:srvlocal_gui.LAB.HELPER.AboutProject.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:srvlocal_gui.LAB.HELPER.AboutProject.InitializeComponent">
             <summary>
             Required method for Designer support - do not modify
             the contents of this method with the code editor.
@@ -382,10 +530,21 @@
              The main debug ErrorManager.
             </summary>
         </member>
+        <member name="T:srvlocal_gui.Program.SettingsTemplate">
+            <summary>
+             Hardcoded Data for Debugging.
+            </summary>
+        </member>
+        <member name="F:srvlocal_gui.Program.requiredFiles">
+            <summary>
+             Required Files and Variabels.
+            </summary>
+        </member>
         <member name="M:srvlocal_gui.Program.Main(System.String[])">
             <summary>
              The main entry point for the application.
             </summary>
+            
         </member>
         <member name="T:srvlocal_gui.Properties.Resources">
             <summary>
@@ -406,6 +565,21 @@
         <member name="P:srvlocal_gui.Properties.Resources._new">
             <summary>
               Sucht eine lokalisierte Ressource vom Typ System.Drawing.Icon ähnlich wie (Symbol).
+            </summary>
+        </member>
+        <member name="P:srvlocal_gui.Properties.Resources.AQADtccxG4C3oUt_">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:srvlocal_gui.Properties.Resources.Aqua_Marine">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:srvlocal_gui.Properties.Resources.Document">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:srvlocal_gui.Properties.Resources.dropbox_512px">
@@ -578,6 +752,11 @@
               Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
+        <member name="P:srvlocal_gui.Properties.Resources.Moonlit_Asteroid">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
         <member name="P:srvlocal_gui.Properties.Resources.new_16">
             <summary>
               Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
@@ -588,12 +767,32 @@
               Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
+        <member name="P:srvlocal_gui.Properties.Resources.Nimvelo">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
         <member name="P:srvlocal_gui.Properties.Resources.Ocean_backgrounds_wallpapers_HD">
             <summary>
               Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
+        <member name="P:srvlocal_gui.Properties.Resources.openedFoler">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:srvlocal_gui.Properties.Resources.Plus">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
         <member name="P:srvlocal_gui.Properties.Resources.qrcode_github_com">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:srvlocal_gui.Properties.Resources.Royal_Blue">
             <summary>
               Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>

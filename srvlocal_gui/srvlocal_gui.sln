@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "srvlocal_gui", "srvlocal_gui.csproj", "{BB0D7762-729A-4127-8C97-509D838F01B5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BB0D7762-729A-4127-8C97-509D838F01B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB0D7762-729A-4127-8C97-509D838F01B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB0D7762-729A-4127-8C97-509D838F01B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB0D7762-729A-4127-8C97-509D838F01B5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8AB44AE3-A19A-4215-9042-9D1CB94A346E}
+	EndGlobalSection
+EndGlobal

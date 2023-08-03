@@ -1,0 +1,950 @@
+2023-07-24 03:50:56 [INFO] - Started GUI...
+2023-07-24 03:50:56 [INFO] - Directory allready satisfied.
+2023-07-24 03:50:56 [INFO] - Directory allready satisfied.
+2023-07-24 03:50:56 [INFO] - Directory allready satisfied.
+2023-07-24 03:50:56 [INFO] - Application Domain is satisfied.
+2023-07-24 03:50:56 [INFO] - You are an administrator.
+2023-07-24 03:54:16 [INFO] - Started GUI...
+2023-07-24 03:54:16 [INFO] - Directory allready satisfied.
+2023-07-24 03:54:16 [INFO] - Directory allready satisfied.
+2023-07-24 03:54:16 [INFO] - Directory allready satisfied.
+2023-07-24 03:54:16 [INFO] - Application Domain is satisfied.
+2023-07-24 03:54:16 [INFO] - You are an administrator.
+2023-07-24 03:54:22 [INFO] - [SECOND DOMAIN] - Created a SubAppDomain...
+2023-07-24 03:54:22 [INFO] - [SECOND DOMAIN] - Try to start Messaging Service...
+2023-07-24 03:54:24 [INFO] - Started Updater (mode: Automatic)
+2023-07-24 03:54:24 [INFO] - Starting license evaluation.
+2023-07-24 03:54:24 [ERROR] - Invalid base64 license code - IsValidMetod
+
+Length must be a multiple of 4BBYJ8UJYzEYo5BW
+2023-07-24 03:54:24 [INFO] - License evaluation successful.
+2023-07-24 03:54:24 [INFO] - Youre Up to date. Current Version: 1.4.1.
+2023-07-24 03:54:24 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-24 03:54:32 [INFO] - Started Updater (mode: MANUALY)
+2023-07-24 03:54:32 [INFO] - Youre Up to date. Current Version: 1.4.1.
+2023-07-24 03:54:34 [INFO] - Started Updater (mode: MANUALY)
+2023-07-24 03:54:34 [INFO] - Youre Up to date. Current Version: 1.4.1.
+2023-07-24 03:54:34 [INFO] - Started Updater (mode: MANUALY)
+2023-07-24 03:54:35 [INFO] - Youre Up to date. Current Version: 1.4.1.
+2023-07-24 03:54:35 [INFO] - Started Updater (mode: MANUALY)
+2023-07-24 03:54:35 [INFO] - Youre Up to date. Current Version: 1.4.1.
+2023-07-24 03:54:36 [INFO] - Started Updater (mode: MANUALY)
+2023-07-24 03:54:37 [INFO] - Youre Up to date. Current Version: 1.4.1.
+2023-07-24 03:54:39 [INFO] - Started Updater (mode: MANUALY)
+2023-07-24 03:54:39 [INFO] - Youre Up to date. Current Version: 1.4.1.
+2023-07-24 03:55:40 [INFO] - Started GUI...
+2023-07-24 03:55:40 [INFO] - Directory allready satisfied.
+2023-07-24 03:55:40 [INFO] - Directory allready satisfied.
+2023-07-24 03:55:40 [INFO] - Directory allready satisfied.
+2023-07-24 03:55:40 [INFO] - Application Domain is satisfied.
+2023-07-24 03:55:40 [INFO] - You are an administrator.
+2023-07-24 03:58:48 [INFO] - Started GUI...
+2023-07-24 03:58:48 [INFO] - Directory allready satisfied.
+2023-07-24 03:58:48 [INFO] - Directory allready satisfied.
+2023-07-24 03:58:48 [INFO] - Directory allready satisfied.
+2023-07-24 03:58:48 [INFO] - Application Domain is satisfied.
+2023-07-24 03:58:48 [INFO] - You are an administrator.
+2023-07-24 03:58:57 [INFO] - [SECOND DOMAIN] - Created a SubAppDomain...
+2023-07-24 03:58:57 [INFO] - [SECOND DOMAIN] - Try to start Messaging Service...
+2023-07-24 03:58:58 [INFO] - Started Updater (mode: Automatic)
+2023-07-24 03:58:58 [INFO] - Starting license evaluation.
+2023-07-24 03:58:58 [ERROR] - Invalid base64 license code - IsValidMetod
+
+Length must be a multiple of 4BBYJ8UJYzEYo5BW
+2023-07-24 03:58:58 [INFO] - License evaluation successful.
+2023-07-24 03:58:58 [INFO] - Youre Up to date. Current Version: 1.4.1.
+2023-07-24 03:58:59 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-24 04:07:04 [INFO] - Started GUI...
+2023-07-24 04:07:04 [INFO] - Directory allready satisfied.
+2023-07-24 04:07:04 [INFO] - Directory allready satisfied.
+2023-07-24 04:07:04 [INFO] - Directory allready satisfied.
+2023-07-24 04:07:04 [INFO] - Application Domain is satisfied.
+2023-07-24 04:07:04 [INFO] - You are an administrator.
+2023-07-24 04:07:08 [INFO] - [SECOND DOMAIN] - Created a SubAppDomain...
+2023-07-24 04:07:08 [INFO] - [SECOND DOMAIN] - Try to start Messaging Service...
+2023-07-24 04:07:10 [INFO] - Started Updater (mode: Automatic)
+2023-07-24 04:07:10 [INFO] - Starting license evaluation.
+2023-07-24 04:07:10 [ERROR] - Invalid base64 license code - IsValidMetod
+
+Length must be a multiple of 4BBYJ8UJYzEYo5BW
+2023-07-24 04:07:10 [INFO] - License evaluation successful.
+2023-07-24 04:07:11 [INFO] - Youre Up to date. Current Version: 1.4.1.
+2023-07-24 04:07:12 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-24 04:08:29 [INFO] - guestjoeva
+2023-07-24 04:08:29 [INFO] - adamjoeva
+2023-07-24 04:08:36 [INFO] - Error occurred while making the GET request: Es konnte keine Verbindung hergestellt werden, da der Zielcomputer die Verbindung verweigerte. [::ffff:127.0.0.1]:8080 (localhost:8080)
+2023-07-24 04:08:36 [INFO] - Started GUI...
+2023-07-24 04:08:36 [INFO] - Directory allready satisfied.
+2023-07-24 04:08:36 [INFO] - Directory allready satisfied.
+2023-07-24 04:08:36 [INFO] - Directory allready satisfied.
+2023-07-24 04:08:36 [INFO] - Application Domain is satisfied.
+2023-07-24 04:08:36 [INFO] - You are an administrator.
+2023-07-24 04:08:39 [INFO] - [SECOND DOMAIN] - Created a SubAppDomain...
+2023-07-24 04:08:39 [INFO] - [SECOND DOMAIN] - Try to start Messaging Service...
+2023-07-24 04:08:40 [INFO] - Started Updater (mode: Automatic)
+2023-07-24 04:08:40 [INFO] - Starting license evaluation.
+2023-07-24 04:08:40 [ERROR] - Invalid base64 license code - IsValidMetod
+
+Length must be a multiple of 4BBYJ8UJYzEYo5BW
+2023-07-24 04:08:40 [INFO] - License evaluation successful.
+2023-07-24 04:08:41 [INFO] - Youre Up to date. Current Version: 1.4.1.
+2023-07-24 04:08:41 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-24 04:08:59 [INFO] - guestjoeva
+2023-07-24 04:08:59 [INFO] - adamjoeva
+2023-07-24 04:09:05 [INFO] - Error occurred while making the GET request: Es konnte keine Verbindung hergestellt werden, da der Zielcomputer die Verbindung verweigerte. [::ffff:127.0.0.1]:8080 (localhost:8080)
+2023-07-24 04:09:06 [INFO] - Started GUI...
+2023-07-24 04:09:06 [INFO] - Directory allready satisfied.
+2023-07-24 04:09:06 [INFO] - Directory allready satisfied.
+2023-07-24 04:09:06 [INFO] - Directory allready satisfied.
+2023-07-24 04:09:06 [INFO] - Application Domain is satisfied.
+2023-07-24 04:09:06 [INFO] - You are an administrator.
+2023-07-24 04:09:10 [INFO] - [SECOND DOMAIN] - Created a SubAppDomain...
+2023-07-24 04:09:10 [INFO] - [SECOND DOMAIN] - Try to start Messaging Service...
+2023-07-24 04:09:11 [INFO] - Started Updater (mode: Automatic)
+2023-07-24 04:09:11 [INFO] - Starting license evaluation.
+2023-07-24 04:09:11 [ERROR] - Invalid base64 license code - IsValidMetod
+
+Length must be a multiple of 4BBYJ8UJYzEYo5BW
+2023-07-24 04:09:11 [INFO] - License evaluation successful.
+2023-07-24 04:09:11 [INFO] - Youre Up to date. Current Version: 1.4.1.
+2023-07-24 04:09:12 [ERROR] - Response status code does not indicate success: 429 (Too Many Requests).
+2023-07-24 04:10:29 [INFO] - Started GUI...
+2023-07-24 04:10:29 [INFO] - Directory allready satisfied.
+2023-07-24 04:10:29 [INFO] - Directory allready satisfied.
+2023-07-24 04:10:29 [INFO] - Directory allready satisfied.
+2023-07-24 04:10:29 [INFO] - Application Domain is satisfied.
+2023-07-24 04:10:29 [INFO] - You are an administrator.
+2023-07-24 22:17:55 [INFO] - Started GUI...
+2023-07-24 22:17:55 [INFO] - Directory allready satisfied.
+2023-07-24 22:17:55 [INFO] - Directory allready satisfied.
+2023-07-24 22:17:55 [INFO] - Directory allready satisfied.
+2023-07-24 22:17:55 [INFO] - Application Domain is satisfied.
+2023-07-24 22:17:55 [INFO] - You are an administrator.
+2023-07-24 22:19:55 [INFO] - Started GUI...
+2023-07-24 22:19:55 [INFO] - Directory allready satisfied.
+2023-07-24 22:19:55 [INFO] - Directory allready satisfied.
+2023-07-24 22:19:55 [INFO] - Directory allready satisfied.
+2023-07-24 22:19:55 [INFO] - Application Domain is satisfied.
+2023-07-24 22:19:55 [INFO] - You are an administrator.
+2023-07-24 22:24:28 [INFO] - Started GUI...
+2023-07-24 22:24:28 [INFO] - Directory allready satisfied.
+2023-07-24 22:24:28 [INFO] - Directory allready satisfied.
+2023-07-24 22:24:28 [INFO] - Directory allready satisfied.
+2023-07-24 22:24:28 [INFO] - Application Domain is satisfied.
+2023-07-24 22:24:28 [INFO] - You are an administrator.
+2023-07-24 22:33:36 [INFO] - Started GUI...
+2023-07-24 22:33:36 [INFO] - Directory allready satisfied.
+2023-07-24 22:33:36 [INFO] - Directory allready satisfied.
+2023-07-24 22:33:36 [INFO] - Directory allready satisfied.
+2023-07-24 22:33:36 [INFO] - Application Domain is satisfied.
+2023-07-24 22:33:36 [INFO] - You are an administrator.
+2023-07-24 22:34:05 [WARNING] - An unhandled exception occurred:
+Exception Type: ArgumentNullException
+Message: The Author property has to be set to a valid instance when AutoAddUserMessages is set to true. (Parameter 'Author')
+Stack Trace:
+   at Telerik.WinControls.UI.RadChatElement.SubmitUserMessage()
+   at Telerik.WinControls.UI.RadChatElement.OnInputTextBoxKeyDown(Object sender, KeyEventArgs e)
+   at Telerik.WinControls.RadItem.OnKeyDown(KeyEventArgs e)
+   at Telerik.WinControls.UI.RadTextBoxElement.textBoxItem_KeyDown(Object sender, KeyEventArgs e)
+   at Telerik.WinControls.RadItem.OnKeyDown(KeyEventArgs e)
+   at Telerik.WinControls.UI.RadTextBoxItem.TextBoxControl_KeyDown(Object sender, KeyEventArgs e)
+   at System.Windows.Forms.Control.ProcessKeyEventArgs(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.TextBoxBase.WndProc(Message& m)
+   at System.Windows.Forms.TextBox.WndProc(Message& m)
+   at Telerik.WinControls.UI.HostedTextBoxBase.WndProc(Message& message)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, WM msg, IntPtr wparam, IntPtr lparam)
+   at Interop.User32.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.Interop.Mso.IMsoComponentManager.FPushMessageLoop(UIntPtr dwComponentID, msoloop uReason, Void* pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(msoloop reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(msoloop reason, ApplicationContext context)
+   at srvlocal_gui.Program.OpenBuilderGui(String arg) in C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\Program.cs:line 419
+   at srvlocal_gui.Program.Main(String[] args) in C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\Program.cs:line 351
+Additional Details:
+Target Site: SubmitUserMessage (Telerik.WinControls.UI.dll)
+Source: Telerik.WinControls.UI
+Stack Trace Details:
+Method: SubmitUserMessage (Telerik.WinControls.UI.dll)
+Line: 0
+Method: OnInputTextBoxKeyDown (Telerik.WinControls.UI.dll)
+Line: 0
+Method: OnKeyDown (Telerik.WinControls.dll)
+Line: 0
+Method: textBoxItem_KeyDown (Telerik.WinControls.UI.dll)
+Line: 0
+Method: OnKeyDown (Telerik.WinControls.dll)
+Line: 0
+Method: TextBoxControl_KeyDown (Telerik.WinControls.UI.dll)
+Line: 0
+Method: ProcessKeyEventArgs (System.Windows.Forms.dll)
+Line: 0
+Method: WndProc (System.Windows.Forms.dll)
+Line: 0
+Method: WndProc (System.Windows.Forms.dll)
+Line: 0
+Method: WndProc (System.Windows.Forms.dll)
+Line: 0
+Method: WndProc (Telerik.WinControls.UI.dll)
+Line: 0
+Method: WndProc (System.Windows.Forms.dll)
+Line: 0
+Method: Callback (System.Windows.Forms.dll)
+Line: 0
+Method: DispatchMessageW (System.Windows.Forms.Primitives.dll)
+Line: 0
+Method: Interop.Mso.IMsoComponentManager.FPushMessageLoop (System.Windows.Forms.dll)
+Line: 0
+Method: RunMessageLoopInner (System.Windows.Forms.dll)
+Line: 0
+Method: RunMessageLoop (System.Windows.Forms.dll)
+Line: 0
+Method: OpenBuilderGui (srvlocal_gui.dll)
+Line: 419
+Method: Main (srvlocal_gui.dll)
+Line: 351
+
+2023-07-24 22:37:20 [INFO] - Started GUI...
+2023-07-24 22:37:20 [INFO] - Directory allready satisfied.
+2023-07-24 22:37:20 [INFO] - Directory allready satisfied.
+2023-07-24 22:37:20 [INFO] - Directory allready satisfied.
+2023-07-24 22:37:20 [INFO] - Application Domain is satisfied.
+2023-07-24 22:37:20 [INFO] - You are an administrator.
+2023-07-24 22:43:04 [INFO] - Started GUI...
+2023-07-24 22:43:04 [INFO] - Directory allready satisfied.
+2023-07-24 22:43:04 [INFO] - Directory allready satisfied.
+2023-07-24 22:43:04 [INFO] - Directory allready satisfied.
+2023-07-24 22:43:04 [INFO] - Application Domain is satisfied.
+2023-07-24 22:43:04 [INFO] - You are an administrator.
+2023-07-24 22:47:56 [INFO] - Started GUI...
+2023-07-24 22:47:56 [INFO] - Directory allready satisfied.
+2023-07-24 22:47:56 [INFO] - Directory allready satisfied.
+2023-07-24 22:47:56 [INFO] - Directory allready satisfied.
+2023-07-24 22:47:56 [INFO] - Application Domain is satisfied.
+2023-07-24 22:47:56 [INFO] - You are an administrator.
+2023-07-24 22:50:12 [WARNING] - An unhandled exception occurred:
+Exception Type: FileNotFoundException
+Message: C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Release\net7.0-windows\images\donesmall.png
+Stack Trace:
+   at System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   at LABLibary.Form.MenuStrip.MyRenderer.OnRenderItemCheck(ToolStripItemImageRenderEventArgs e) in C:\Users\joeva\Documents\GitHub\LILO-LocalServer\LABLibary\Forms\MenuStripRenderer.cs:line 180
+   at System.Windows.Forms.ToolStripRenderer.DrawItemCheck(ToolStripItemImageRenderEventArgs e)
+   at System.Windows.Forms.ToolStripMenuItem.OnPaint(PaintEventArgs e)
+   at System.Windows.Forms.ToolStripItem.HandlePaint(PaintEventArgs e)
+   at System.Windows.Forms.ToolStrip.OnPaint(PaintEventArgs e)
+   at System.Windows.Forms.Control.PaintWithErrorHandling(PaintEventArgs e, Int16 layer)
+   at System.Windows.Forms.Control.WmPaint(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at System.Windows.Forms.ToolStrip.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, WM msg, IntPtr wparam, IntPtr lparam)
+Additional Details:
+Target Site: FromFile (System.Drawing.Common.dll)
+Source: System.Drawing.Common
+Stack Trace Details:
+Method: FromFile (System.Drawing.Common.dll)
+Line: 0
+Method: OnRenderItemCheck (LABLibary.dll)
+Line: 180
+Method: DrawItemCheck (System.Windows.Forms.dll)
+Line: 0
+Method: OnPaint (System.Windows.Forms.dll)
+Line: 0
+Method: HandlePaint (System.Windows.Forms.dll)
+Line: 0
+Method: OnPaint (System.Windows.Forms.dll)
+Line: 0
+Method: PaintWithErrorHandling (System.Windows.Forms.dll)
+Line: 0
+Method: WmPaint (System.Windows.Forms.dll)
+Line: 0
+Method: WndProc (System.Windows.Forms.dll)
+Line: 0
+Method: WndProc (System.Windows.Forms.dll)
+Line: 0
+Method: WndProc (System.Windows.Forms.dll)
+Line: 0
+Method: WndProc (System.Windows.Forms.dll)
+Line: 0
+Method: Callback (System.Windows.Forms.dll)
+Line: 0
+
+2023-07-24 22:55:58 [INFO] - Started GUI...
+2023-07-24 22:55:58 [INFO] - Directory allready satisfied.
+2023-07-24 22:55:58 [INFO] - Directory allready satisfied.
+2023-07-24 22:55:58 [INFO] - Directory allready satisfied.
+2023-07-24 22:55:58 [INFO] - Application Domain is satisfied.
+2023-07-24 22:55:58 [INFO] - You are an administrator.
+2023-07-25 13:22:42 [INFO] - Started GUI...
+2023-07-25 13:22:42 [INFO] - Directory allready satisfied.
+2023-07-25 13:22:42 [INFO] - Directory allready satisfied.
+2023-07-25 13:22:42 [INFO] - Directory allready satisfied.
+2023-07-25 13:22:42 [INFO] - Application Domain is satisfied.
+2023-07-25 13:22:42 [INFO] - You are an administrator.
+2023-07-27 19:22:34 [INFO] - Started GUI...
+2023-07-27 19:22:35 [INFO] - Directory allready satisfied.
+2023-07-27 19:22:35 [INFO] - Directory allready satisfied.
+2023-07-27 19:22:35 [INFO] - Directory allready satisfied.
+2023-07-27 19:22:35 [INFO] - Application Domain is satisfied.
+2023-07-27 19:22:35 [INFO] - You are an administrator.
+2023-07-27 19:23:02 [INFO] - Started GUI...
+2023-07-27 19:23:02 [INFO] - Directory allready satisfied.
+2023-07-27 19:23:02 [INFO] - Directory allready satisfied.
+2023-07-27 19:23:02 [INFO] - Directory allready satisfied.
+2023-07-27 19:23:02 [INFO] - Application Domain is satisfied.
+2023-07-27 19:23:02 [INFO] - You are an administrator.
+2023-07-27 19:25:14 [INFO] - Started GUI...
+2023-07-27 19:25:14 [INFO] - Directory allready satisfied.
+2023-07-27 19:25:14 [INFO] - Directory allready satisfied.
+2023-07-27 19:25:14 [INFO] - Directory allready satisfied.
+2023-07-27 19:25:14 [INFO] - Application Domain is satisfied.
+2023-07-27 19:25:14 [INFO] - You are an administrator.
+2023-07-27 19:25:46 [INFO] - Started GUI...
+2023-07-27 19:25:46 [INFO] - Directory allready satisfied.
+2023-07-27 19:25:46 [INFO] - Directory allready satisfied.
+2023-07-27 19:25:46 [INFO] - Directory allready satisfied.
+2023-07-27 19:25:46 [INFO] - Application Domain is satisfied.
+2023-07-27 19:25:46 [INFO] - You are an administrator.
+2023-07-27 19:28:56 [INFO] - Started GUI...
+2023-07-27 19:28:56 [INFO] - Directory allready satisfied.
+2023-07-27 19:28:56 [INFO] - Directory allready satisfied.
+2023-07-27 19:28:56 [INFO] - Directory allready satisfied.
+2023-07-27 19:28:56 [INFO] - Application Domain is satisfied.
+2023-07-27 19:28:56 [INFO] - You are an administrator.
+2023-07-27 19:30:08 [INFO] - Started GUI...
+2023-07-27 19:30:08 [INFO] - Directory allready satisfied.
+2023-07-27 19:30:08 [INFO] - Directory allready satisfied.
+2023-07-27 19:30:08 [INFO] - Directory allready satisfied.
+2023-07-27 19:30:08 [INFO] - Application Domain is satisfied.
+2023-07-27 19:30:09 [INFO] - You are an administrator.
+2023-07-27 19:34:22 [INFO] - Started GUI...
+2023-07-27 19:34:22 [INFO] - Directory allready satisfied.
+2023-07-27 19:34:22 [INFO] - Directory allready satisfied.
+2023-07-27 19:34:22 [INFO] - Directory allready satisfied.
+2023-07-27 19:34:22 [INFO] - Application Domain is satisfied.
+2023-07-27 19:34:22 [INFO] - You are an administrator.
+2023-07-27 19:37:46 [INFO] - Started GUI...
+2023-07-27 19:37:46 [INFO] - Directory allready satisfied.
+2023-07-27 19:37:46 [INFO] - Directory allready satisfied.
+2023-07-27 19:37:46 [INFO] - Directory allready satisfied.
+2023-07-27 19:37:46 [INFO] - Application Domain is satisfied.
+2023-07-27 19:37:46 [INFO] - You are an administrator.
+2023-07-27 19:58:06 [INFO] - Started GUI...
+2023-07-27 19:58:06 [INFO] - Directory allready satisfied.
+2023-07-27 19:58:06 [INFO] - Directory allready satisfied.
+2023-07-27 19:58:06 [INFO] - Directory allready satisfied.
+2023-07-27 19:58:06 [INFO] - Application Domain is satisfied.
+2023-07-27 19:58:06 [INFO] - You are an administrator.
+2023-07-27 19:58:28 [INFO] - Started GUI...
+2023-07-27 19:58:28 [INFO] - Directory allready satisfied.
+2023-07-27 19:58:28 [INFO] - Directory allready satisfied.
+2023-07-27 19:58:28 [INFO] - Directory allready satisfied.
+2023-07-27 19:58:28 [INFO] - Application Domain is satisfied.
+2023-07-27 19:58:28 [INFO] - You are an administrator.
+2023-07-27 20:31:40 [INFO] - Started GUI...
+2023-07-27 20:31:40 [INFO] - Directory allready satisfied.
+2023-07-27 20:31:40 [INFO] - Directory allready satisfied.
+2023-07-27 20:31:40 [INFO] - Directory allready satisfied.
+2023-07-27 20:31:40 [INFO] - Application Domain is satisfied.
+2023-07-27 20:31:40 [INFO] - You are an administrator.
+2023-07-27 20:34:08 [INFO] - Started GUI...
+2023-07-27 20:34:08 [INFO] - Directory allready satisfied.
+2023-07-27 20:34:08 [INFO] - Directory allready satisfied.
+2023-07-27 20:34:08 [INFO] - Directory allready satisfied.
+2023-07-27 20:34:08 [INFO] - Application Domain is satisfied.
+2023-07-27 20:34:08 [INFO] - You are an administrator.
+2023-07-27 20:34:30 [INFO] - Started GUI...
+2023-07-27 20:34:30 [INFO] - Directory allready satisfied.
+2023-07-27 20:34:30 [INFO] - Directory allready satisfied.
+2023-07-27 20:34:30 [INFO] - Directory allready satisfied.
+2023-07-27 20:34:30 [INFO] - Application Domain is satisfied.
+2023-07-27 20:34:30 [INFO] - You are an administrator.
+2023-07-27 20:35:12 [INFO] - Started GUI...
+2023-07-27 20:35:13 [INFO] - Directory allready satisfied.
+2023-07-27 20:35:13 [INFO] - Directory allready satisfied.
+2023-07-27 20:35:13 [INFO] - Directory allready satisfied.
+2023-07-27 20:35:13 [INFO] - Application Domain is satisfied.
+2023-07-27 20:35:13 [INFO] - You are an administrator.
+2023-07-27 20:35:48 [INFO] - Started GUI...
+2023-07-27 20:35:48 [INFO] - Directory allready satisfied.
+2023-07-27 20:35:48 [INFO] - Directory allready satisfied.
+2023-07-27 20:35:48 [INFO] - Directory allready satisfied.
+2023-07-27 20:35:48 [INFO] - Application Domain is satisfied.
+2023-07-27 20:35:48 [INFO] - You are an administrator.
+2023-07-27 20:38:07 [INFO] - Started GUI...
+2023-07-27 20:38:07 [INFO] - Directory allready satisfied.
+2023-07-27 20:38:07 [INFO] - Directory allready satisfied.
+2023-07-27 20:38:07 [INFO] - Directory allready satisfied.
+2023-07-27 20:38:07 [INFO] - Application Domain is satisfied.
+2023-07-27 20:38:07 [INFO] - You are an administrator.
+2023-07-27 20:40:34 [INFO] - Started GUI...
+2023-07-27 20:40:35 [INFO] - Directory allready satisfied.
+2023-07-27 20:40:35 [INFO] - Directory allready satisfied.
+2023-07-27 20:40:35 [INFO] - Directory allready satisfied.
+2023-07-27 20:40:35 [INFO] - Application Domain is satisfied.
+2023-07-27 20:40:35 [INFO] - You are an administrator.
+2023-07-27 20:40:39 [WARNING] - An unhandled exception occurred:
+Exception Type: InvalidOperationException
+Message: Ungültiger threadübergreifender Vorgang: Der Zugriff auf das Steuerelement  erfolgte von einem anderen Thread als dem Thread, für den es erstellt wurde.
+Stack Trace:
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.SetBoundsCore(Int32 x, Int32 y, Int32 width, Int32 height, BoundsSpecified specified)
+   at System.Windows.Forms.MdiClient.SetBoundsCore(Int32 x, Int32 y, Int32 width, Int32 height, BoundsSpecified specified)
+   at System.Windows.Forms.Control.System.Windows.Forms.Layout.IArrangedElement.SetBounds(Rectangle bounds, BoundsSpecified specified)
+   at System.Windows.Forms.Layout.DefaultLayout.ApplyCachedBounds(IArrangedElement container)
+   at System.Windows.Forms.Layout.DefaultLayout.TryCalculatePreferredSize(IArrangedElement container, Boolean measureOnly, Size& preferredSize)
+   at System.Windows.Forms.Layout.DefaultLayout.LayoutCore(IArrangedElement container, LayoutEventArgs args)
+   at System.Windows.Forms.Control.OnLayout(LayoutEventArgs levent)
+   at System.Windows.Forms.Form.OnLayout(LayoutEventArgs levent)
+   at System.Windows.Forms.Control.PerformLayout(LayoutEventArgs args)
+   at System.Windows.Forms.Control.PerformLayout(LayoutEventArgs args)
+   at System.Windows.Forms.ToolStripItem.InvalidateItemLayout(String affectedProperty)
+   at System.Windows.Forms.ToolStripItem.OnTextChanged(EventArgs e)
+   at System.Windows.Forms.ToolStripStatusLabel.OnTextChanged(EventArgs e)
+   at srvlocal_gui.LAB.builder_gui.StartWithSplashScreen() in C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\LAB\builder_gui.cs:line 176
+   at System.Threading.Tasks.Task.<>c.<ThrowAsync>b__128_1(Object state)
+   at System.Threading.QueueUserWorkItemCallback.Execute()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading.PortableThreadPool.WorkerThread.WorkerThreadStart()
+Additional Details:
+Target Site: get_Handle (System.Windows.Forms.dll)
+Source: System.Windows.Forms
+Stack Trace Details:
+Method: get_Handle (System.Windows.Forms.dll)
+Line: 0
+Method: SetBoundsCore (System.Windows.Forms.dll)
+Line: 0
+Method: SetBoundsCore (System.Windows.Forms.dll)
+Line: 0
+Method: System.Windows.Forms.Layout.IArrangedElement.SetBounds (System.Windows.Forms.dll)
+Line: 0
+Method: ApplyCachedBounds (System.Windows.Forms.dll)
+Line: 0
+Method: TryCalculatePreferredSize (System.Windows.Forms.dll)
+Line: 0
+Method: LayoutCore (System.Windows.Forms.dll)
+Line: 0
+Method: OnLayout (System.Windows.Forms.dll)
+Line: 0
+Method: OnLayout (System.Windows.Forms.dll)
+Line: 0
+Method: PerformLayout (System.Windows.Forms.dll)
+Line: 0
+Method: PerformLayout (System.Windows.Forms.dll)
+Line: 0
+Method: InvalidateItemLayout (System.Windows.Forms.dll)
+Line: 0
+Method: OnTextChanged (System.Windows.Forms.dll)
+Line: 0
+Method: OnTextChanged (System.Windows.Forms.dll)
+Line: 0
+Method: MoveNext (srvlocal_gui.dll)
+Line: 176
+Method: Throw (System.Private.CoreLib.dll)
+Line: 0
+Method: <ThrowAsync>b__128_1 (System.Private.CoreLib.dll)
+Line: 0
+Method: Execute (System.Private.CoreLib.dll)
+Line: 0
+Method: Dispatch (System.Private.CoreLib.dll)
+Line: 0
+Method: WorkerThreadStart (System.Private.CoreLib.dll)
+Line: 0
+
+2023-07-27 20:41:06 [INFO] - Started GUI...
+2023-07-27 20:41:06 [INFO] - Directory allready satisfied.
+2023-07-27 20:41:06 [INFO] - Directory allready satisfied.
+2023-07-27 20:41:06 [INFO] - Directory allready satisfied.
+2023-07-27 20:41:06 [INFO] - Application Domain is satisfied.
+2023-07-27 20:41:06 [INFO] - You are an administrator.
+2023-07-27 20:42:37 [INFO] - Started GUI...
+2023-07-27 20:42:38 [INFO] - Directory allready satisfied.
+2023-07-27 20:42:38 [INFO] - Directory allready satisfied.
+2023-07-27 20:42:38 [INFO] - Directory allready satisfied.
+2023-07-27 20:42:38 [INFO] - Application Domain is satisfied.
+2023-07-27 20:42:38 [INFO] - You are an administrator.
+2023-07-27 20:43:08 [WARNING] - An unhandled exception occurred:
+Exception Type: FileNotFoundException
+Message: C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Release\net7.0-windows\images\donesmall.png
+Stack Trace:
+   at System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   at LABLibary.Form.MenuStrip.MyRenderer.OnRenderItemCheck(ToolStripItemImageRenderEventArgs e) in C:\Users\joeva\Documents\GitHub\LILO-LocalServer\LABLibary\Forms\MenuStripRenderer.cs:line 180
+   at System.Windows.Forms.ToolStripRenderer.DrawItemCheck(ToolStripItemImageRenderEventArgs e)
+   at System.Windows.Forms.ToolStripMenuItem.OnPaint(PaintEventArgs e)
+   at System.Windows.Forms.ToolStripItem.HandlePaint(PaintEventArgs e)
+   at System.Windows.Forms.ToolStrip.OnPaint(PaintEventArgs e)
+   at System.Windows.Forms.Control.PaintWithErrorHandling(PaintEventArgs e, Int16 layer)
+   at System.Windows.Forms.Control.WmPaint(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at System.Windows.Forms.ToolStrip.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, WM msg, IntPtr wparam, IntPtr lparam)
+Additional Details:
+Target Site: FromFile (System.Drawing.Common.dll)
+Source: System.Drawing.Common
+Stack Trace Details:
+Method: FromFile (System.Drawing.Common.dll)
+Line: 0
+Method: OnRenderItemCheck (LABLibary.dll)
+Line: 180
+Method: DrawItemCheck (System.Windows.Forms.dll)
+Line: 0
+Method: OnPaint (System.Windows.Forms.dll)
+Line: 0
+Method: HandlePaint (System.Windows.Forms.dll)
+Line: 0
+Method: OnPaint (System.Windows.Forms.dll)
+Line: 0
+Method: PaintWithErrorHandling (System.Windows.Forms.dll)
+Line: 0
+Method: WmPaint (System.Windows.Forms.dll)
+Line: 0
+Method: WndProc (System.Windows.Forms.dll)
+Line: 0
+Method: WndProc (System.Windows.Forms.dll)
+Line: 0
+Method: WndProc (System.Windows.Forms.dll)
+Line: 0
+Method: WndProc (System.Windows.Forms.dll)
+Line: 0
+Method: Callback (System.Windows.Forms.dll)
+Line: 0
+
+2023-07-27 20:43:39 [INFO] - Started GUI...
+2023-07-27 20:43:39 [INFO] - Directory allready satisfied.
+2023-07-27 20:43:39 [INFO] - Directory allready satisfied.
+2023-07-27 20:43:39 [INFO] - Directory allready satisfied.
+2023-07-27 20:43:39 [INFO] - Application Domain is satisfied.
+2023-07-27 20:43:39 [INFO] - You are an administrator.
+2023-07-27 20:44:33 [INFO] - Started GUI...
+2023-07-27 20:44:33 [INFO] - Directory allready satisfied.
+2023-07-27 20:44:33 [INFO] - Directory allready satisfied.
+2023-07-27 20:44:33 [INFO] - Directory allready satisfied.
+2023-07-27 20:44:33 [INFO] - Application Domain is satisfied.
+2023-07-27 20:44:33 [INFO] - You are an administrator.
+2023-07-27 20:44:38 [WARNING] - An unhandled exception occurred:
+Exception Type: InvalidOperationException
+Message: Ungültiger threadübergreifender Vorgang: Der Zugriff auf das Steuerelement  erfolgte von einem anderen Thread als dem Thread, für den es erstellt wurde.
+Stack Trace:
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.SetBoundsCore(Int32 x, Int32 y, Int32 width, Int32 height, BoundsSpecified specified)
+   at System.Windows.Forms.MdiClient.SetBoundsCore(Int32 x, Int32 y, Int32 width, Int32 height, BoundsSpecified specified)
+   at System.Windows.Forms.Control.System.Windows.Forms.Layout.IArrangedElement.SetBounds(Rectangle bounds, BoundsSpecified specified)
+   at System.Windows.Forms.Layout.DefaultLayout.ApplyCachedBounds(IArrangedElement container)
+   at System.Windows.Forms.Layout.DefaultLayout.TryCalculatePreferredSize(IArrangedElement container, Boolean measureOnly, Size& preferredSize)
+   at System.Windows.Forms.Layout.DefaultLayout.LayoutCore(IArrangedElement container, LayoutEventArgs args)
+   at System.Windows.Forms.Control.OnLayout(LayoutEventArgs levent)
+   at System.Windows.Forms.Form.OnLayout(LayoutEventArgs levent)
+   at System.Windows.Forms.Control.PerformLayout(LayoutEventArgs args)
+   at System.Windows.Forms.Control.PerformLayout(LayoutEventArgs args)
+   at System.Windows.Forms.ToolStripItem.InvalidateItemLayout(String affectedProperty)
+   at System.Windows.Forms.ToolStripItem.OnTextChanged(EventArgs e)
+   at System.Windows.Forms.ToolStripStatusLabel.OnTextChanged(EventArgs e)
+   at srvlocal_gui.LAB.builder_gui.StartWithSplashScreen() in C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\LAB\builder_gui.cs:line 176
+   at System.Threading.Tasks.Task.<>c.<ThrowAsync>b__128_1(Object state)
+   at System.Threading.QueueUserWorkItemCallback.Execute()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading.PortableThreadPool.WorkerThread.WorkerThreadStart()
+Additional Details:
+Target Site: get_Handle (System.Windows.Forms.dll)
+Source: System.Windows.Forms
+Stack Trace Details:
+Method: get_Handle (System.Windows.Forms.dll)
+Line: 0
+Method: SetBoundsCore (System.Windows.Forms.dll)
+Line: 0
+Method: SetBoundsCore (System.Windows.Forms.dll)
+Line: 0
+Method: System.Windows.Forms.Layout.IArrangedElement.SetBounds (System.Windows.Forms.dll)
+Line: 0
+Method: ApplyCachedBounds (System.Windows.Forms.dll)
+Line: 0
+Method: TryCalculatePreferredSize (System.Windows.Forms.dll)
+Line: 0
+Method: LayoutCore (System.Windows.Forms.dll)
+Line: 0
+Method: OnLayout (System.Windows.Forms.dll)
+Line: 0
+Method: OnLayout (System.Windows.Forms.dll)
+Line: 0
+Method: PerformLayout (System.Windows.Forms.dll)
+Line: 0
+Method: PerformLayout (System.Windows.Forms.dll)
+Line: 0
+Method: InvalidateItemLayout (System.Windows.Forms.dll)
+Line: 0
+Method: OnTextChanged (System.Windows.Forms.dll)
+Line: 0
+Method: OnTextChanged (System.Windows.Forms.dll)
+Line: 0
+Method: MoveNext (srvlocal_gui.dll)
+Line: 176
+Method: Throw (System.Private.CoreLib.dll)
+Line: 0
+Method: <ThrowAsync>b__128_1 (System.Private.CoreLib.dll)
+Line: 0
+Method: Execute (System.Private.CoreLib.dll)
+Line: 0
+Method: Dispatch (System.Private.CoreLib.dll)
+Line: 0
+Method: WorkerThreadStart (System.Private.CoreLib.dll)
+Line: 0
+
+2023-07-27 20:44:49 [INFO] - Started GUI...
+2023-07-27 20:44:49 [INFO] - Directory allready satisfied.
+2023-07-27 20:44:49 [INFO] - Directory allready satisfied.
+2023-07-27 20:44:49 [INFO] - Directory allready satisfied.
+2023-07-27 20:44:49 [INFO] - Application Domain is satisfied.
+2023-07-27 20:44:49 [INFO] - You are an administrator.
+2023-07-27 20:46:46 [INFO] - Started GUI...
+2023-07-27 20:46:46 [INFO] - Directory allready satisfied.
+2023-07-27 20:46:46 [INFO] - Directory allready satisfied.
+2023-07-27 20:46:46 [INFO] - Directory allready satisfied.
+2023-07-27 20:46:46 [INFO] - Application Domain is satisfied.
+2023-07-27 20:46:46 [INFO] - You are an administrator.
+2023-07-27 20:46:50 [WARNING] - An unhandled exception occurred:
+Exception Type: InvalidOperationException
+Message: Ungültiger threadübergreifender Vorgang: Der Zugriff auf das Steuerelement  erfolgte von einem anderen Thread als dem Thread, für den es erstellt wurde.
+Stack Trace:
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.SetBoundsCore(Int32 x, Int32 y, Int32 width, Int32 height, BoundsSpecified specified)
+   at System.Windows.Forms.MdiClient.SetBoundsCore(Int32 x, Int32 y, Int32 width, Int32 height, BoundsSpecified specified)
+   at System.Windows.Forms.Control.System.Windows.Forms.Layout.IArrangedElement.SetBounds(Rectangle bounds, BoundsSpecified specified)
+   at System.Windows.Forms.Layout.DefaultLayout.ApplyCachedBounds(IArrangedElement container)
+   at System.Windows.Forms.Layout.DefaultLayout.TryCalculatePreferredSize(IArrangedElement container, Boolean measureOnly, Size& preferredSize)
+   at System.Windows.Forms.Layout.DefaultLayout.LayoutCore(IArrangedElement container, LayoutEventArgs args)
+   at System.Windows.Forms.Control.OnLayout(LayoutEventArgs levent)
+   at System.Windows.Forms.Form.OnLayout(LayoutEventArgs levent)
+   at System.Windows.Forms.Control.PerformLayout(LayoutEventArgs args)
+   at System.Windows.Forms.Control.PerformLayout(LayoutEventArgs args)
+   at System.Windows.Forms.ToolStripItem.InvalidateItemLayout(String affectedProperty)
+   at System.Windows.Forms.ToolStripItem.OnTextChanged(EventArgs e)
+   at System.Windows.Forms.ToolStripStatusLabel.OnTextChanged(EventArgs e)
+   at srvlocal_gui.LAB.builder_gui.StartWithSplashScreen() in C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\LAB\builder_gui.cs:line 176
+   at System.Threading.Tasks.Task.<>c.<ThrowAsync>b__128_1(Object state)
+   at System.Threading.QueueUserWorkItemCallback.Execute()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading.PortableThreadPool.WorkerThread.WorkerThreadStart()
+Additional Details:
+Target Site: get_Handle (System.Windows.Forms.dll)
+Source: System.Windows.Forms
+Stack Trace Details:
+Method: get_Handle (System.Windows.Forms.dll)
+Line: 0
+Method: SetBoundsCore (System.Windows.Forms.dll)
+Line: 0
+Method: SetBoundsCore (System.Windows.Forms.dll)
+Line: 0
+Method: System.Windows.Forms.Layout.IArrangedElement.SetBounds (System.Windows.Forms.dll)
+Line: 0
+Method: ApplyCachedBounds (System.Windows.Forms.dll)
+Line: 0
+Method: TryCalculatePreferredSize (System.Windows.Forms.dll)
+Line: 0
+Method: LayoutCore (System.Windows.Forms.dll)
+Line: 0
+Method: OnLayout (System.Windows.Forms.dll)
+Line: 0
+Method: OnLayout (System.Windows.Forms.dll)
+Line: 0
+Method: PerformLayout (System.Windows.Forms.dll)
+Line: 0
+Method: PerformLayout (System.Windows.Forms.dll)
+Line: 0
+Method: InvalidateItemLayout (System.Windows.Forms.dll)
+Line: 0
+Method: OnTextChanged (System.Windows.Forms.dll)
+Line: 0
+Method: OnTextChanged (System.Windows.Forms.dll)
+Line: 0
+Method: MoveNext (srvlocal_gui.dll)
+Line: 176
+Method: Throw (System.Private.CoreLib.dll)
+Line: 0
+Method: <ThrowAsync>b__128_1 (System.Private.CoreLib.dll)
+Line: 0
+Method: Execute (System.Private.CoreLib.dll)
+Line: 0
+Method: Dispatch (System.Private.CoreLib.dll)
+Line: 0
+Method: WorkerThreadStart (System.Private.CoreLib.dll)
+Line: 0
+
+2023-07-27 20:46:59 [INFO] - Started GUI...
+2023-07-27 20:46:59 [INFO] - Directory allready satisfied.
+2023-07-27 20:46:59 [INFO] - Directory allready satisfied.
+2023-07-27 20:46:59 [INFO] - Directory allready satisfied.
+2023-07-27 20:46:59 [INFO] - Application Domain is satisfied.
+2023-07-27 20:46:59 [INFO] - You are an administrator.
+2023-07-27 20:48:59 [INFO] - Started GUI...
+2023-07-27 20:48:59 [INFO] - Directory allready satisfied.
+2023-07-27 20:48:59 [INFO] - Directory allready satisfied.
+2023-07-27 20:48:59 [INFO] - Directory allready satisfied.
+2023-07-27 20:48:59 [INFO] - Application Domain is satisfied.
+2023-07-27 20:48:59 [INFO] - You are an administrator.
+2023-07-27 20:49:03 [WARNING] - An unhandled exception occurred:
+Exception Type: InvalidOperationException
+Message: Ungültiger threadübergreifender Vorgang: Der Zugriff auf das Steuerelement  erfolgte von einem anderen Thread als dem Thread, für den es erstellt wurde.
+Stack Trace:
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.SetBoundsCore(Int32 x, Int32 y, Int32 width, Int32 height, BoundsSpecified specified)
+   at System.Windows.Forms.MdiClient.SetBoundsCore(Int32 x, Int32 y, Int32 width, Int32 height, BoundsSpecified specified)
+   at System.Windows.Forms.Control.System.Windows.Forms.Layout.IArrangedElement.SetBounds(Rectangle bounds, BoundsSpecified specified)
+   at System.Windows.Forms.Layout.DefaultLayout.ApplyCachedBounds(IArrangedElement container)
+   at System.Windows.Forms.Layout.DefaultLayout.TryCalculatePreferredSize(IArrangedElement container, Boolean measureOnly, Size& preferredSize)
+   at System.Windows.Forms.Layout.DefaultLayout.LayoutCore(IArrangedElement container, LayoutEventArgs args)
+   at System.Windows.Forms.Control.OnLayout(LayoutEventArgs levent)
+   at System.Windows.Forms.Form.OnLayout(LayoutEventArgs levent)
+   at System.Windows.Forms.Control.PerformLayout(LayoutEventArgs args)
+   at System.Windows.Forms.Control.PerformLayout(LayoutEventArgs args)
+   at System.Windows.Forms.ToolStripItem.InvalidateItemLayout(String affectedProperty)
+   at System.Windows.Forms.ToolStripItem.OnTextChanged(EventArgs e)
+   at System.Windows.Forms.ToolStripStatusLabel.OnTextChanged(EventArgs e)
+   at srvlocal_gui.LAB.builder_gui.StartWithSplashScreen() in C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\LAB\builder_gui.cs:line 176
+   at System.Threading.Tasks.Task.<>c.<ThrowAsync>b__128_1(Object state)
+   at System.Threading.QueueUserWorkItemCallback.Execute()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading.PortableThreadPool.WorkerThread.WorkerThreadStart()
+Additional Details:
+Target Site: get_Handle (System.Windows.Forms.dll)
+Source: System.Windows.Forms
+Stack Trace Details:
+Method: get_Handle (System.Windows.Forms.dll)
+Line: 0
+Method: SetBoundsCore (System.Windows.Forms.dll)
+Line: 0
+Method: SetBoundsCore (System.Windows.Forms.dll)
+Line: 0
+Method: System.Windows.Forms.Layout.IArrangedElement.SetBounds (System.Windows.Forms.dll)
+Line: 0
+Method: ApplyCachedBounds (System.Windows.Forms.dll)
+Line: 0
+Method: TryCalculatePreferredSize (System.Windows.Forms.dll)
+Line: 0
+Method: LayoutCore (System.Windows.Forms.dll)
+Line: 0
+Method: OnLayout (System.Windows.Forms.dll)
+Line: 0
+Method: OnLayout (System.Windows.Forms.dll)
+Line: 0
+Method: PerformLayout (System.Windows.Forms.dll)
+Line: 0
+Method: PerformLayout (System.Windows.Forms.dll)
+Line: 0
+Method: InvalidateItemLayout (System.Windows.Forms.dll)
+Line: 0
+Method: OnTextChanged (System.Windows.Forms.dll)
+Line: 0
+Method: OnTextChanged (System.Windows.Forms.dll)
+Line: 0
+Method: MoveNext (srvlocal_gui.dll)
+Line: 176
+Method: Throw (System.Private.CoreLib.dll)
+Line: 0
+Method: <ThrowAsync>b__128_1 (System.Private.CoreLib.dll)
+Line: 0
+Method: Execute (System.Private.CoreLib.dll)
+Line: 0
+Method: Dispatch (System.Private.CoreLib.dll)
+Line: 0
+Method: WorkerThreadStart (System.Private.CoreLib.dll)
+Line: 0
+
+2023-07-27 20:50:16 [INFO] - Started GUI...
+2023-07-27 20:50:16 [INFO] - Directory allready satisfied.
+2023-07-27 20:50:16 [INFO] - Directory allready satisfied.
+2023-07-27 20:50:16 [INFO] - Directory allready satisfied.
+2023-07-27 20:50:16 [INFO] - Application Domain is satisfied.
+2023-07-27 20:50:16 [INFO] - You are an administrator.
+2023-07-27 20:50:21 [WARNING] - An unhandled exception occurred:
+Exception Type: InvalidOperationException
+Message: Ungültiger threadübergreifender Vorgang: Der Zugriff auf das Steuerelement  erfolgte von einem anderen Thread als dem Thread, für den es erstellt wurde.
+Stack Trace:
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.SetBoundsCore(Int32 x, Int32 y, Int32 width, Int32 height, BoundsSpecified specified)
+   at System.Windows.Forms.MdiClient.SetBoundsCore(Int32 x, Int32 y, Int32 width, Int32 height, BoundsSpecified specified)
+   at System.Windows.Forms.Control.System.Windows.Forms.Layout.IArrangedElement.SetBounds(Rectangle bounds, BoundsSpecified specified)
+   at System.Windows.Forms.Layout.DefaultLayout.ApplyCachedBounds(IArrangedElement container)
+   at System.Windows.Forms.Layout.DefaultLayout.TryCalculatePreferredSize(IArrangedElement container, Boolean measureOnly, Size& preferredSize)
+   at System.Windows.Forms.Layout.DefaultLayout.LayoutCore(IArrangedElement container, LayoutEventArgs args)
+   at System.Windows.Forms.Control.OnLayout(LayoutEventArgs levent)
+   at System.Windows.Forms.Form.OnLayout(LayoutEventArgs levent)
+   at System.Windows.Forms.Control.PerformLayout(LayoutEventArgs args)
+   at System.Windows.Forms.Control.PerformLayout(LayoutEventArgs args)
+   at System.Windows.Forms.ToolStripItem.InvalidateItemLayout(String affectedProperty)
+   at System.Windows.Forms.ToolStripItem.OnTextChanged(EventArgs e)
+   at System.Windows.Forms.ToolStripStatusLabel.OnTextChanged(EventArgs e)
+   at srvlocal_gui.LAB.builder_gui.StartWithSplashScreen() in C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\LAB\builder_gui.cs:line 157
+   at System.Threading.Tasks.Task.<>c.<ThrowAsync>b__128_1(Object state)
+   at System.Threading.QueueUserWorkItemCallback.Execute()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading.PortableThreadPool.WorkerThread.WorkerThreadStart()
+Additional Details:
+Target Site: get_Handle (System.Windows.Forms.dll)
+Source: System.Windows.Forms
+Stack Trace Details:
+Method: get_Handle (System.Windows.Forms.dll)
+Line: 0
+Method: SetBoundsCore (System.Windows.Forms.dll)
+Line: 0
+Method: SetBoundsCore (System.Windows.Forms.dll)
+Line: 0
+Method: System.Windows.Forms.Layout.IArrangedElement.SetBounds (System.Windows.Forms.dll)
+Line: 0
+Method: ApplyCachedBounds (System.Windows.Forms.dll)
+Line: 0
+Method: TryCalculatePreferredSize (System.Windows.Forms.dll)
+Line: 0
+Method: LayoutCore (System.Windows.Forms.dll)
+Line: 0
+Method: OnLayout (System.Windows.Forms.dll)
+Line: 0
+Method: OnLayout (System.Windows.Forms.dll)
+Line: 0
+Method: PerformLayout (System.Windows.Forms.dll)
+Line: 0
+Method: PerformLayout (System.Windows.Forms.dll)
+Line: 0
+Method: InvalidateItemLayout (System.Windows.Forms.dll)
+Line: 0
+Method: OnTextChanged (System.Windows.Forms.dll)
+Line: 0
+Method: OnTextChanged (System.Windows.Forms.dll)
+Line: 0
+Method: MoveNext (srvlocal_gui.dll)
+Line: 157
+Method: Throw (System.Private.CoreLib.dll)
+Line: 0
+Method: <ThrowAsync>b__128_1 (System.Private.CoreLib.dll)
+Line: 0
+Method: Execute (System.Private.CoreLib.dll)
+Line: 0
+Method: Dispatch (System.Private.CoreLib.dll)
+Line: 0
+Method: WorkerThreadStart (System.Private.CoreLib.dll)
+Line: 0
+
+2023-07-27 20:50:29 [INFO] - Started GUI...
+2023-07-27 20:50:29 [INFO] - Directory allready satisfied.
+2023-07-27 20:50:29 [INFO] - Directory allready satisfied.
+2023-07-27 20:50:29 [INFO] - Directory allready satisfied.
+2023-07-27 20:50:29 [INFO] - Application Domain is satisfied.
+2023-07-27 20:50:29 [INFO] - You are an administrator.
+2023-07-27 20:51:52 [INFO] - Started GUI...
+2023-07-27 20:51:52 [INFO] - Directory allready satisfied.
+2023-07-27 20:51:52 [INFO] - Directory allready satisfied.
+2023-07-27 20:51:52 [INFO] - Directory allready satisfied.
+2023-07-27 20:51:52 [INFO] - Application Domain is satisfied.
+2023-07-27 20:51:52 [INFO] - You are an administrator.
+2023-07-27 20:51:56 [WARNING] - An unhandled exception occurred:
+Exception Type: InvalidOperationException
+Message: Ungültiger threadübergreifender Vorgang: Der Zugriff auf das Steuerelement  erfolgte von einem anderen Thread als dem Thread, für den es erstellt wurde.
+Stack Trace:
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.SetBoundsCore(Int32 x, Int32 y, Int32 width, Int32 height, BoundsSpecified specified)
+   at System.Windows.Forms.MdiClient.SetBoundsCore(Int32 x, Int32 y, Int32 width, Int32 height, BoundsSpecified specified)
+   at System.Windows.Forms.Control.System.Windows.Forms.Layout.IArrangedElement.SetBounds(Rectangle bounds, BoundsSpecified specified)
+   at System.Windows.Forms.Layout.DefaultLayout.ApplyCachedBounds(IArrangedElement container)
+   at System.Windows.Forms.Layout.DefaultLayout.TryCalculatePreferredSize(IArrangedElement container, Boolean measureOnly, Size& preferredSize)
+   at System.Windows.Forms.Layout.DefaultLayout.LayoutCore(IArrangedElement container, LayoutEventArgs args)
+   at System.Windows.Forms.Control.OnLayout(LayoutEventArgs levent)
+   at System.Windows.Forms.Form.OnLayout(LayoutEventArgs levent)
+   at System.Windows.Forms.Control.PerformLayout(LayoutEventArgs args)
+   at System.Windows.Forms.Control.PerformLayout(LayoutEventArgs args)
+   at System.Windows.Forms.ToolStripItem.InvalidateItemLayout(String affectedProperty)
+   at System.Windows.Forms.ToolStripItem.OnTextChanged(EventArgs e)
+   at System.Windows.Forms.ToolStripStatusLabel.OnTextChanged(EventArgs e)
+   at srvlocal_gui.LAB.builder_gui.StartWithSplashScreen() in C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\LAB\builder_gui.cs:line 153
+   at System.Threading.Tasks.Task.<>c.<ThrowAsync>b__128_1(Object state)
+   at System.Threading.QueueUserWorkItemCallback.Execute()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading.PortableThreadPool.WorkerThread.WorkerThreadStart()
+Additional Details:
+Target Site: get_Handle (System.Windows.Forms.dll)
+Source: System.Windows.Forms
+Stack Trace Details:
+Method: get_Handle (System.Windows.Forms.dll)
+Line: 0
+Method: SetBoundsCore (System.Windows.Forms.dll)
+Line: 0
+Method: SetBoundsCore (System.Windows.Forms.dll)
+Line: 0
+Method: System.Windows.Forms.Layout.IArrangedElement.SetBounds (System.Windows.Forms.dll)
+Line: 0
+Method: ApplyCachedBounds (System.Windows.Forms.dll)
+Line: 0
+Method: TryCalculatePreferredSize (System.Windows.Forms.dll)
+Line: 0
+Method: LayoutCore (System.Windows.Forms.dll)
+Line: 0
+Method: OnLayout (System.Windows.Forms.dll)
+Line: 0
+Method: OnLayout (System.Windows.Forms.dll)
+Line: 0
+Method: PerformLayout (System.Windows.Forms.dll)
+Line: 0
+Method: PerformLayout (System.Windows.Forms.dll)
+Line: 0
+Method: InvalidateItemLayout (System.Windows.Forms.dll)
+Line: 0
+Method: OnTextChanged (System.Windows.Forms.dll)
+Line: 0
+Method: OnTextChanged (System.Windows.Forms.dll)
+Line: 0
+Method: MoveNext (srvlocal_gui.dll)
+Line: 153
+Method: Throw (System.Private.CoreLib.dll)
+Line: 0
+Method: <ThrowAsync>b__128_1 (System.Private.CoreLib.dll)
+Line: 0
+Method: Execute (System.Private.CoreLib.dll)
+Line: 0
+Method: Dispatch (System.Private.CoreLib.dll)
+Line: 0
+Method: WorkerThreadStart (System.Private.CoreLib.dll)
+Line: 0
+
+2023-07-27 20:52:23 [INFO] - Started GUI...
+2023-07-27 20:52:23 [INFO] - Directory allready satisfied.
+2023-07-27 20:52:23 [INFO] - Directory allready satisfied.
+2023-07-27 20:52:23 [INFO] - Directory allready satisfied.
+2023-07-27 20:52:23 [INFO] - Application Domain is satisfied.
+2023-07-27 20:52:23 [INFO] - You are an administrator.
+2023-07-27 20:53:03 [INFO] - Started GUI...
+2023-07-27 20:53:03 [INFO] - Directory allready satisfied.
+2023-07-27 20:53:03 [INFO] - Directory allready satisfied.
+2023-07-27 20:53:03 [INFO] - Directory allready satisfied.
+2023-07-27 20:53:03 [INFO] - Application Domain is satisfied.
+2023-07-27 20:53:03 [INFO] - You are an administrator.
+2023-07-27 21:00:34 [INFO] - Started GUI...
+2023-07-27 21:00:34 [INFO] - Directory allready satisfied.
+2023-07-27 21:00:34 [INFO] - Directory allready satisfied.
+2023-07-27 21:00:34 [INFO] - Directory allready satisfied.
+2023-07-27 21:00:34 [INFO] - Application Domain is satisfied.
+2023-07-27 21:00:34 [INFO] - You are an administrator.
+2023-07-27 22:24:51 [INFO] - Started GUI...
+2023-07-27 22:24:51 [INFO] - Directory allready satisfied.
+2023-07-27 22:24:51 [INFO] - Directory allready satisfied.
+2023-07-27 22:24:51 [INFO] - Directory allready satisfied.
+2023-07-27 22:24:51 [INFO] - Application Domain is satisfied.
+2023-07-27 22:24:51 [INFO] - You are an administrator.
+2023-07-27 22:25:59 [INFO] - Started GUI...
+2023-07-27 22:25:59 [INFO] - Directory allready satisfied.
+2023-07-27 22:25:59 [INFO] - Directory allready satisfied.
+2023-07-27 22:25:59 [INFO] - Directory allready satisfied.
+2023-07-27 22:25:59 [INFO] - Application Domain is satisfied.
+2023-07-27 22:25:59 [INFO] - You are an administrator.
+2023-07-27 22:26:27 [INFO] - Started GUI...
+2023-07-27 22:26:27 [INFO] - Directory allready satisfied.
+2023-07-27 22:26:27 [INFO] - Directory allready satisfied.
+2023-07-27 22:26:27 [INFO] - Directory allready satisfied.
+2023-07-27 22:26:27 [INFO] - Application Domain is satisfied.
+2023-07-27 22:26:27 [INFO] - You are an administrator.
+2023-07-27 22:29:05 [INFO] - Started GUI...
+2023-07-27 22:29:05 [INFO] - Directory allready satisfied.
+2023-07-27 22:29:05 [INFO] - Directory allready satisfied.
+2023-07-27 22:29:05 [INFO] - Directory allready satisfied.
+2023-07-27 22:29:05 [INFO] - Application Domain is satisfied.
+2023-07-27 22:29:05 [INFO] - You are an administrator.

@@ -12,6 +12,9 @@ namespace LABLibary
     {
         public class Config
         {
+
+//          <-- XML Structure -->
+
             [XmlElement("LICENSEENGINE")]
             public LicenseEngine License_Engine { get; set; }
             [XmlElement("STARTUPBOST")]
@@ -38,6 +41,8 @@ namespace LABLibary
 
             }
 
+//          <-- De and Serializer -->
+
             public void WriteToXmlFile(string filename)
             {
                 XmlSerializer serializer = new XmlSerializer(typeof(Config));
@@ -59,6 +64,8 @@ namespace LABLibary
                 }
             }
         }
+
+//          <-- XML Classes -->
 
         public class LicenseEngine
         {

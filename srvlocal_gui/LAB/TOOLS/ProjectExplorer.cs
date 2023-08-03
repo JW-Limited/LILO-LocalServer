@@ -12,20 +12,45 @@ using System.Windows.Forms.VisualStyles;
 using DarkUI;
 using MetroFramework.Properties;
 using srvlocal_gui.Properties;
+using System.Windows.Media.TextFormatting;
 
 namespace srvlocal_gui.LAB.TOOLS
 {
     public partial class ProjectExplorer : Form
     {
-        private string prjFile;
-        public static string chnFile = string.Empty;
 
-        public ProjectExplorer(string Projectfile)
+        private static ProjectExplorer _instance;
+        private static object _instanceLock = new object();
+
+        public static ProjectExplorer Instance(string Projectfile)
+        {
+            lock (_instanceLock)
+            {
+                if (_instance == null)
+                {
+                    _instance = new ProjectExplorer(Projectfile);
+                }
+
+                return _instance;
+            }
+        }
+
+
+        private ProjectExplorer(string Projectfile)
         {
             InitializeComponent();
 
+            this.FormClosing += (sender, e) =>
+            {
+                _instance = null;
+            };
+
             this.prjFile = Projectfile;
         }
+
+
+        private string prjFile;
+        public static string chnFile = string.Empty;
 
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
@@ -70,7 +95,7 @@ namespace srvlocal_gui.LAB.TOOLS
 
         private void ProjectExplorer_Load(object sender, EventArgs e)
         {
-            
+
             try
             {
                 var loadedProject = ProjectFile.Project.LoadFromFile(prjFile);
@@ -117,7 +142,8 @@ namespace srvlocal_gui.LAB.TOOLS
 
         private void guna2Panel1_MouseDown(object sender, MouseEventArgs e)
         {
-            if(builder_gui.prjExpHandle.Dock == DockStyle.Right){
+            if (builder_gui.prjExpHandle.Dock == DockStyle.Right)
+            {
                 builder_gui.prjExpHandle.Dock = DockStyle.None;
                 builder_gui.prjExpHandle.Location = new Point(e.Location.X, e.Location.Y);
             }
@@ -125,7 +151,7 @@ namespace srvlocal_gui.LAB.TOOLS
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if(chnFile != string.Empty)
+            if (chnFile != string.Empty)
             {
                 Reload(chnFile);
                 chnFile = string.Empty;

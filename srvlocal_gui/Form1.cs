@@ -14,6 +14,11 @@ using ToastNotifications;
 using ToastNotifications.Core;
 using System.Runtime.CompilerServices;
 using System;
+using Octokit;
+using System.Globalization;
+using srvlocal_gui.LAB.SETTINGS;
+using Telerik.Windows.Documents.Spreadsheet.Model.ConditionalFormattings;
+using static srvlocal_gui.ProjectFile;
 
 namespace srvlocal_gui
 {
@@ -21,6 +26,11 @@ namespace srvlocal_gui
     {
         private static Form1 _instance;
         public static object _lock = new object();
+
+        /// <summary>
+        /// Gives back the current Instance
+        /// </summary>
+
         public static Form1 Instance
         {
             get
@@ -37,19 +47,27 @@ namespace srvlocal_gui
             }
         }
 
+        #region Variables
+
+        /// <summary>
+        /// A private Form builder
+        /// </summary>
+        /// <param name="args"></param>
+
         private Form1(string args = null)
         {
             InitializeComponent();
         }
 
         NotifyIcon noty;
-
+        private static object _lockRequest = new object();
         public static string filePath = ".\\srvlocal.exe";
         public static Process? consoleHandle;
         public string owner = "JW-Limited";
         public string repo = "LILO-LocalServer";
         public bool UpdateDetected = false;
         public User logedInUser;
+        public bool loggedInApi = false;
 
         // Information from LicenseFile
 
@@ -57,6 +75,64 @@ namespace srvlocal_gui
         public string LicenseScheme = null;
         public bool DeveloperMode = false;
         public string UserRight = null;
+
+        #endregion
+
+        #region API Handler
+
+
+        public void APILoginHandler(bool LoggedInSuccessfully)
+        {
+            if (LoggedInSuccessfully)
+            {
+                var appin = FileViewForm.Instance(null, WebViewFormMode.ProtectedLoginMode);
+                appin.Close();
+                loggedInApi = true;
+            }
+            else
+            {
+                MessageBox.Show("Wrong API Credentials.");
+            }
+        }
+
+        public void APILoginHandler_Closing(bool LoggedInSuccessfully)
+        {
+            if (LoggedInSuccessfully)
+            {
+                loggedInApi = true;
+                lblquote.Text = "API Endpoint: Unlocked Enviroment.";
+                guna2Button2.Enabled = true;
+            }
+            else
+            {
+                MessageBox.Show("Wrong Login Credentials.\n\n After you close the dialog the Server will shut down and decline youre requests.", "Authorization Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                ConsolePanel.Visible = false;
+
+                try
+                {
+                    string url = $"http://localhost:{txtPort.Text}/api/com?command=close&key=liloDev-420";
+                    string response = MakeGetRequest(url);
+
+                    if (response != null)
+                    {
+                        lblquote.Text = ("API Endpoint : " + response);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Logger.Instance.Log(ex.Message, logLevel: Logger.LogLevel.Error);
+
+                }
+
+
+                ConsolePanel.Visible = false;
+            }
+        }
+
+        #endregion
+
+        #region Startup Oprerations
 
         public static void GreetUser(System.Windows.Forms.Label lbl, User user)
         {
@@ -95,7 +171,7 @@ namespace srvlocal_gui
 
         public static void ColorAllButtons(Guna2Button[] allbuttons, User user)
         {
-            foreach(var button in allbuttons)
+            foreach (var button in allbuttons)
             {
                 button.BackColor = user.ButtonColor;
             }
@@ -162,7 +238,7 @@ namespace srvlocal_gui
             {
                 Logger.Instance.Log(ex.Message, logLevel: Logger.LogLevel.Error);
                 MessageBox.Show("Some Ressources are missing. Please Re-Install the Application.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Program.Browser_(startInLocalBrowser:true);
+                Program.Browser_(startInLocalBrowser: true);
                 this.Close();
             }
 
@@ -214,6 +290,10 @@ namespace srvlocal_gui
             }
         }
 
+        #endregion
+
+        #region License Evaluation
+
         private void LicenseEvaluation()
         {
             try
@@ -221,7 +301,7 @@ namespace srvlocal_gui
                 Logger.Instance.Log("Starting license evaluation.");
 
                 var license = LABLibary.Assistant.ReadLicense.Read(".\\license.labl");
-                lblCode.Text = LicenseValues.Default.licCode;
+                lblCode.Text = "Encrypted";
                 var decoderesult = LicenseGenerator.DecodeLicense(license.Code, out string productName, out string productVersion, out DateTime expirationDate);
 
 
@@ -254,8 +334,10 @@ namespace srvlocal_gui
                     lblExpires.ForeColor = Color.Red;
                     if (LABLibary.Interface.ApiCollection.WinRegistry.Keys.GetKeyValue("DebuggerMode") != "enabled")
                     {
-                        MessageBox.Show(decoderesult.Info +  decoderesult.Message + decoderesult.ErrorMessage, "License Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        this.Enabled = false;
+                        Logger.Instance.Log(decoderesult.Info + decoderesult.Message + decoderesult.ErrorMessage, Logger.LogLevel.Error);
+                        //this.Enabled = false;
+                        RetryWithSavedValues();
+
                     }
                     else
                     {
@@ -292,14 +374,128 @@ namespace srvlocal_gui
             {
                 Logger.Instance.Log(ex.Message, logLevel: Logger.LogLevel.Error);
                 MessageBox.Show(ex.Message, "License Activation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                 if (LABLibary.Interface.ApiCollection.WinRegistry.Keys.GetKeyValue("DebuggerMode") != "enabled")
                 {
-                    this.Enabled = false;
+                    try
+                    {
+
+                        var license = LABLibary.Assistant.ReadLicense.Read(".\\license.labl");
+
+                        string[] parts = LicenseValues.Default.licCode.Split('|');
+
+                        var productName = parts[0];
+                        var productVersion = parts[1];
+                        var expirationDate = DateTime.Now;
+                        DateTime.TryParseExact(parts[2], "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out expirationDate);
+                        lblExpires.Text = expirationDate.ToString();
+
+                        if (expirationDate < DateTime.Now)
+                        {
+                            lblExpires.ForeColor = Color.Red;
+
+
+                            if (LABLibary.Interface.ApiCollection.WinRegistry.Keys.GetKeyValue("DebuggerMode") != "enabled")
+                            {
+                                this.Enabled = false;
+                                MessageBox.Show("Your license has expired.", "License Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+
+                            lblProduct.Text = license.Assembly.Name;
+                            lblProductVersion.Text = license.Assembly.Version.ToString();
+                            lbliv.Text = LicenseValues.Default.iv;
+                            lblkey.Text = LicenseValues.Default.key;
+
+                            return;
+                        }
+
+                        lblExpires.ForeColor = Color.Green;
+
+                        lblProduct.Text = license.Assembly.Name;
+                        lblProductVersion.Text = license.Assembly.Version.ToString();
+                        lbliv.Text = LicenseValues.Default.iv;
+                        lblkey.Text = LicenseValues.Default.key;
+
+                        Logger.Instance.Log("License evaluation successful.");
+                    }
+                    catch (Exception ewx)
+                    {
+                        Logger.Instance.Log(ewx.Message, logLevel: Logger.LogLevel.Error);
+                        MessageBox.Show(ewx.Message);
+                    }
                 }
 
                 return;
             }
         }
+
+        private void RetryWithSavedValues()
+        {
+            try
+            {
+
+                if (LABLibary.Interface.ApiCollection.WinRegistry.Keys.GetKeyValue("DebuggerMode") != "enabled")
+                {
+                    try
+                    {
+
+                        var license = LABLibary.Assistant.ReadLicense.Read(".\\license.labl");
+
+                        string[] parts = LicenseValues.Default.licCode.Split('|');
+
+                        var productName = parts[0];
+                        var productVersion = parts[1];
+                        var expirationDate = DateTime.Now;
+                        DateTime.TryParseExact(parts[2], "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out expirationDate);
+                        lblExpires.Text = expirationDate.ToString();
+
+                        if (expirationDate < DateTime.Now)
+                        {
+                            lblExpires.ForeColor = Color.Red;
+
+
+                            if (LABLibary.Interface.ApiCollection.WinRegistry.Keys.GetKeyValue("DebuggerMode") != "enabled")
+                            {
+                                this.Enabled = false;
+                                MessageBox.Show("Your license has expired.", "License Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+
+                            lblProduct.Text = license.Assembly.Name;
+                            lblProductVersion.Text = license.Assembly.Version.ToString();
+                            lbliv.Text = LicenseValues.Default.iv;
+                            lblkey.Text = LicenseValues.Default.key;
+
+                            return;
+                        }
+
+                        lblExpires.ForeColor = Color.Green;
+
+                        lblProduct.Text = license.Assembly.Name;
+                        lblProductVersion.Text = license.Assembly.Version.ToString();
+                        lbliv.Text = LicenseValues.Default.iv;
+                        lblkey.Text = LicenseValues.Default.key;
+
+                        Logger.Instance.Log("License evaluation successful.");
+                    }
+                    catch (Exception ewx)
+                    {
+                        Logger.Instance.Log(ewx.Message, logLevel: Logger.LogLevel.Error);
+                        MessageBox.Show(ewx.Message);
+                    }
+                }
+
+                return;
+            }
+            catch (Exception ewx)
+            {
+                Logger.Instance.Log(ewx.Message, logLevel: Logger.LogLevel.Error);
+                MessageBox.Show(ewx.Message);
+            }
+        }
+
+        #endregion
+
+        #region Updates
 
         public Task CheckForUpdates(UpdateMode mode = UpdateMode.Manual)
         {
@@ -470,12 +666,133 @@ namespace srvlocal_gui
             }
 
         }
-        private void guna2Button2_Click(object sender, EventArgs e)
+
+        #endregion
+
+        /// <summary>
+        /// The Modes for the OpenInApp Method
+        /// </summary>
+
+        public enum ChildrenUse
+        {
+            Auth,
+            WebView,
+            NormalForm
+        }
+
+
+
+        private Form currentOpenedApp;
+
+        /// <summary>
+        /// This Method accpets a WinForm object and 
+        /// displays it over all controls with help of
+        /// a Panel
+        /// </summary>
+        /// <param name="children">
+        /// The Form Object
+        /// </param>
+        /// <param name="FormName">
+        /// The displayed Formname
+        /// </param>
+        /// <param name="usage">
+        /// The Mode and Accessability clarifier
+        /// </param>
+
+        public void OpenInApp(Form children, string FormName = null, ChildrenUse usage = ChildrenUse.WebView)
         {
 
-            var project = FileViewForm.Instance($"http://localhost:{txtPort.Text}", false);
-            project.Show();
+            if (children == currentOpenedApp) return;
+
+            if (currentOpenedApp is not null)
+            {
+                currentOpenedApp.Close();
+            }
+
+
+            this.IsMdiContainer = true;
+            this.BackColor = Color.White;
+
+            children.MdiParent = this;
+            pnlChild.Controls.Add(children);
+            pnlChild.Dock = DockStyle.Fill;
+            pnlChild.BringToFront();
+
+            if (usage == ChildrenUse.Auth)
+            {
+                children.MaximizeBox = false;
+                children.MinimizeBox = false;
+                children.ControlBox = false; 
+                children.FormBorderStyle = FormBorderStyle.None;
+            }
+            else if(usage == ChildrenUse.WebView)
+            {
+                children.FormBorderStyle = FormBorderStyle.Sizable;
+                children.MaximizeBox = false;
+                children.MinimizeBox = false;
+            }
+            else if (usage == ChildrenUse.NormalForm)
+            {
+                children.FormBorderStyle = FormBorderStyle.Sizable;
+                children.MaximizeBox = false;
+                children.MinimizeBox = false;
+                this.Size = children.Size;
+            }
+
+            children.Dock = DockStyle.Fill;
+
+            if (FormName is not null or "") children.Text = FormName;
+
+            Text = SettingsManager.Instance.GetSetting(settings => settings.WindowTitle, "LILO Localserver") + " - " + children.Text;
+
+            children.Show();
+
+            currentOpenedApp = children;
+
+            currentOpenedApp.FormClosing += (sender, e) =>
+            {
+                this.IsMdiContainer = false;
+                this.BackColor = Color.White;
+                pnlChild.Dock = DockStyle.None;
+                Text = SettingsManager.Instance.GetSetting(settings => settings.WindowTitle, "LILO Localserver");
+                pnlChild.Size = new Size(1, 1);
+            };
         }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            if (config.Default.useNewUI)
+            {
+                var project = FileViewForm.Instance($"http://localhost:{txtPort.Text}", WebViewFormMode.AuthorizedProjectManagment);
+
+                try
+                {
+                    OpenInApp(project, "Explorer");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, ex.GetType().ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                var project = FileViewForm.Instance($"http://localhost:{txtPort.Text}", WebViewFormMode.AuthorizedProjectManagment);
+
+                try
+                {
+                    project.Show();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, ex.GetType().ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Runs a CLI Application in background and gives back the output
+        /// </summary>
+        /// <param name="filePath"></param>
 
         public void RunConsoleApplication(string filePath)
         {
@@ -624,13 +941,16 @@ namespace srvlocal_gui
                 return isReachabel;
             }
         }
-        
 
-        private static object _lockRequest = new object();
+        /// <summary>
+        /// Makes a get request to a Server
+        /// </summary>
+        /// <param name="url"></param>
+        /// <returns></returns>
 
         public string MakeGetRequest(string url)
         {
-            lock(_lockRequest)
+            lock (_lockRequest)
             {
                 try
                 {
@@ -769,6 +1089,15 @@ namespace srvlocal_gui
             return 1;
         }
 
+        /// <summary>
+        /// Displays a Notify Icon on the Taskbar
+        /// </summary>
+        /// <param name="inTray"></param>
+        /// <param name="message"></param>
+        /// <param name="title"></param>
+        /// <param name="icon"></param>
+        /// <param name="onClick"></param>
+        /// <param name="onClose"></param>
 
         public void NotyFi(bool inTray = false, string message = null, string title = null, ToolTipIcon icon = ToolTipIcon.None, EventHandler onClick = null, EventHandler onClose = null)
         {
@@ -895,11 +1224,34 @@ namespace srvlocal_gui
 
         private void bntMEtro(object sender, EventArgs e)
         {
+
             var setup = Setup.Instance(logedInUser);
-            setup.Show();
 
 
-            this.WindowState = FormWindowState.Minimized;
+            try
+            {
+                setup.Show();
+
+                setup.FormClosing += (sender, e) =>
+                {
+                    if (setup.projectCreated)
+                    {
+                        this.ShowInTaskbar = false;
+                        this.ShowIcon = false;
+                    }
+                    else
+                    {
+                        this.WindowState = FormWindowState.Normal;
+                    }
+                };
+
+                this.WindowState = FormWindowState.Minimized;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, ex.GetType().ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
         private void txtDistFolder_TextChanged(object sender, EventArgs e)
@@ -930,12 +1282,12 @@ namespace srvlocal_gui
         {
             if (chbDistFolder.Checked)
             {
-                SettingsManager.Instance.SetSetting((s, v) => s.CustomCDNConfig = v, chbDistFolder.Checked);
+                SettingsManager.Instance.SetSetting((s, v) => s.CustomCDNConfig = v, true);
                 SettingsManager.Instance.SetSetting((s, v) => s.CDNPath = v, txtDistFolder.Text);
             }
             else
             {
-                SettingsManager.Instance.SetSetting((s, v) => s.CustomCDNConfig = v, chbDistFolder.Checked);
+                SettingsManager.Instance.SetSetting((s, v) => s.CustomCDNConfig = v, false);
                 SettingsManager.Instance.SetSetting((s, v) => s.CDNPath = v, "C:\\LILO\\dist");
             }
         }
@@ -1016,7 +1368,11 @@ namespace srvlocal_gui
             return users.FirstOrDefault(u => u.UserName == selectedUsername);
         }
 
-
+        /// <summary>
+        /// Handles the User login change
+        /// </summary>
+        /// <param name="loggedIn"></param>
+        /// <exception cref="Exception"></exception>
 
         public void HandleUserChange(ref User loggedIn)
         {
@@ -1065,7 +1421,7 @@ namespace srvlocal_gui
                         }
                         catch
                         {
-                            Application.ExitThread();
+                            System.Windows.Forms.Application.ExitThread();
                         }
                     }
 
@@ -1130,55 +1486,7 @@ namespace srvlocal_gui
 
         }
 
-        public bool loggedInApi = false;
 
-        public void APILoginHandler(bool LoggedInSuccessfully)
-        {
-            if(LoggedInSuccessfully)
-            {
-                var appin = FileViewForm.Instance(null);
-                appin.Close();
-                loggedInApi = true;
-            }
-            else
-            {
-                MessageBox.Show("Wrong API Credentials.");
-            }
-        }
-
-        public void APILoginHandler_Closing(bool LoggedInSuccessfully)
-        {
-            if (LoggedInSuccessfully)
-            {
-                loggedInApi = true;
-                lblquote.Text = "API Endpoint: Unlocked Enviroment.";
-            }
-            else
-            {
-                MessageBox.Show("Wrong API Credentials.");
-
-                ConsolePanel.Visible = false;
-
-                try
-                {
-                    string url = $"http://localhost:{txtPort.Text}/api/com?command=close&key=liloDev-420";
-                    string response = MakeGetRequest(url);
-
-                    if (response != null)
-                    {
-                        lblquote.Text = ("API Endpoint : " + response);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Logger.Instance.Log(ex.Message, logLevel: Logger.LogLevel.Error);
-
-                }
-
-
-                ConsolePanel.Visible = false;
-            }
-        }
 
     }
 }

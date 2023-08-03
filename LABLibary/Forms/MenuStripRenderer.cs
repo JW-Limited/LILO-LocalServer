@@ -177,7 +177,7 @@ namespace LABLibary.Form
 
                 if (e.Item.ImageIndex == -1 && String.IsNullOrEmpty(e.Item.ImageKey) && e.Item.Image == null)
                 {
-                    g.DrawImage(Image.FromFile(".\\donesmall.png"), new Point(e.ImageRectangle.Left, e.ImageRectangle.Top));
+                    g.DrawImage(Image.FromFile(".\\images\\donesmall.png"), new Point(e.ImageRectangle.Left, e.ImageRectangle.Top));
                 }
             }
 

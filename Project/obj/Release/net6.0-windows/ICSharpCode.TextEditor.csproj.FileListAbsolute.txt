@@ -1,7 +1,6 @@
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Project\bin\Release\net6.0-windows\ICSharpCode.TextEditor.deps.json
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Project\bin\Release\net6.0-windows\ICSharpCode.TextEditor.dll
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Project\bin\Release\net6.0-windows\ICSharpCode.TextEditor.pdb
-C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Project\obj\Release\net6.0-windows\ICSharpCode.TextEditor.csproj.AssemblyReference.cache
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Project\obj\Release\net6.0-windows\ICSharpCode.TextEditor.Properties.Resources.resources
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Project\obj\Release\net6.0-windows\ICSharpCode.TextEditor.UserControls.FindAndReplaceForm.resources
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Project\obj\Release\net6.0-windows\ICSharpCode.TextEditor.UserControls.FormatCodeHtml.resources

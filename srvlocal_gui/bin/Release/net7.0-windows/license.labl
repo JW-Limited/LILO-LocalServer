@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <LICENSEENGINE>
+    <version>2</version>
+    <scheme>LAB-LICENSE-SCHEME-23</scheme>
+  </LICENSEENGINE>
+  <STARTUPBOST>true</STARTUPBOST>
+  <STARTSOUND>true</STARTSOUND>
+  <USERID>32956</USERID>
+  <BACKGROUND>default</BACKGROUND>
+  <USERRIGHTSTATUS>default</USERRIGHTSTATUS>
+  <CODE>BBYJ8UJYz-EYo5BW</CODE>
+  <installagnt>true</installagnt>
+  <assembly>
+    <name>LILO App Builder (LAB)</name>
+    <version>Suite</version>
+    <buildchannel>
+      <channel>dev_preview</channel>
+      <devtools>true</devtools>
+      <devinsight>true</devinsight>
+    </buildchannel>
+  </assembly>
+  <PROPERTIES>
+    <VALUE name="KeyClass" val="7" />
+    <VALUE name="KeyType" val="1" />
+    <VALUE name="ReferencePitch" val="440.1941223144531" />
+  </PROPERTIES>
+</Config>

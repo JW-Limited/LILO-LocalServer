@@ -116,6 +116,7 @@ namespace Local
 
             if (Process.GetProcessesByName("srvlocal_gui").Length > 0) menu = false;
             if (Process.GetProcessesByName("LILO").Length > 0) menu = false;
+            if (Process.GetProcessesByName("crypterv2").Length > 0) menu = false;
 
             if (!menu)
             {
@@ -362,8 +363,8 @@ namespace Local
                 var mediasvr = new MediaServer();
                 mediasvr.Start();
 
+                //InitializeInterfaceConnection();
                 await WaitForMediaServerRunning(mediasvr);
-
                 _listener.Start();
                 if (_listener.IsListening)
                 {
@@ -397,27 +398,33 @@ namespace Local
             }
         }
 
+        private void InitializeInterfaceConnection()
+        {
+            var inter = new LABLibary.Interface.CommunicationInterface();
+
+            try
+            {
+                Console.WriteLine(inter.ToString());
+
+                var responseString = inter.ReceiveFromDefaultBuffer();
+                if (responseString is not null)
+                {
+                    LogRequest(null, false, responseString);
+                    responseString = null;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error Accoured : {ex.Message}\n\n");
+            }
+
+        }
+
         public void HandelRequest()
         {
             try
             {
-                var inter = new LABLibary.Interface.CommunicationInterface();
-
-                try
-                {
-                    var responseString = inter.ReceiveFromDefaultBuffer();
-                    if (responseString is not null)
-                    {
-                        LogRequest(null, false, responseString); responseString = null;
-                    }
-
-                }
-                catch (Exception ex)
-                {
-                    //Handler.HandleError(context, request);
-                    Console.WriteLine("Error Accoured : " + ex.Message);
-                }
-
                 while (true)
                 {
                     var context = _listener.GetContext();
@@ -427,21 +434,8 @@ namespace Local
                     LogRequest(request);
                     SendLog(request);
 
-                    if (request.Url.AbsolutePath == "/api/logs")
-                    {
-                        var log = System.IO.File.ReadAllText(_logFile);
-                        var buffer = Encoding.UTF8.GetBytes(log);
-                        response.ContentLength64 = buffer.Length;
-                        response.OutputStream.Write(buffer, 0, buffer.Length);
-                    }
-                    if (request.Url.AbsolutePath == "/api/resources/data")
-                    {
-                        AddFiles.JSONDATAHANDLER.ProcessRequest(context);
-                    }
-                    if (request.Url.AbsolutePath == "/api/subdirectories")
-                    {
-                        srvlocal.data_handling.DirectoryController.GetSubdirectories(context);
-                    }
+                    // <----- API GET METHODS ----->
+
                     if (request.Url.AbsolutePath == "/api/login")
                     {
                         var indexHtml = srvlocal.auto_generators.GenerateLoginHtml.Instance().v1();
@@ -450,6 +444,17 @@ namespace Local
                         response.OutputStream.Write(content, 0, content.Length);
                         LogRequest(request, true);
                     }
+                    if (request.Url.AbsolutePath == "/api/home")
+                    {
+                        var indexHtml = srvlocal.auto_generators.GenerateLoginHtml.Instance().v1();
+                        var content = Encoding.UTF8.GetBytes(indexHtml);
+                        response.ContentLength64 = content.Length;
+                        response.OutputStream.Write(content, 0, content.Length);
+                        LogRequest(request, true);
+                    }
+
+                    // <----- API POST METHODS ----->
+
                     else if (request.Url.AbsolutePath == "/api/data" && request.HttpMethod == "POST")
                     {
                         var key = request.QueryString["key"];
@@ -481,15 +486,42 @@ namespace Local
                         PublicApi.Instance().CommandHandling(command, commands, request, response);
                     }
 
+                    if (request.Url.AbsolutePath == "/api/resources/data")
+                    {
+                        AddFiles.JSONDATAHANDLER.ProcessRequest(context);
+                    }
+                    if (request.Url.AbsolutePath == "/api/projects/data")
+                    {
+                        AddProject.JSONDATAHANDLER.ProcessRequest(context);
+                    }
+                    if (request.Url.AbsolutePath == "/api/subdirectories")
+                    {
+                        srvlocal.data_handling.DirectoryController.GetSubdirectories(context);
+                    }
+
+                    // <----- SERVER FILE OPERATIONS ----->
+
                     else
                     {
                         var filePath = Path.Combine(_directory, request.Url.LocalPath.TrimStart('/'));
                         if (File.Exists(filePath))
                         {
-                            var content = File.ReadAllBytes(filePath);
-                            response.ContentLength64 = content.Length;
-                            response.OutputStream.Write(content, 0, content.Length);
-                            LogRequest(request, true);
+                            var info = new FileInfo(filePath);
+                            if(info.Extension is ".txt" or ".log" or ".lrc" or "" or ".ini" or ".dll")
+                            {
+                                var wrapperIndex = srvlocal.auto_generators.GenerateIndexHtml.Instance().MicrosoftWordWrapper(filePath);
+                                var content = Encoding.UTF8.GetBytes(wrapperIndex);
+                                response.ContentLength64 = content.Length;
+                                response.OutputStream.Write(content, 0, content.Length);
+                                LogRequest(request, true);
+                            }
+                            else
+                            {
+                                var content = File.ReadAllBytes(filePath);
+                                response.ContentLength64 = content.Length;
+                                response.OutputStream.Write(content, 0, content.Length);
+                                LogRequest(request, true);
+                            }
                         }
                         else if (Directory.Exists(filePath))
                         {
@@ -536,7 +568,6 @@ namespace Local
                         }
                     }
 
-
                     response.Close();
                 }
             }
@@ -557,8 +588,19 @@ namespace Local
         private void SendLog(HttpListenerRequest request)
         {
             var logger = new RequestLogger(logDirectory, serverUrl);
-            logger.LogRequest(request);
-            //logger.SendRequestToServer(request);
+
+            if(request is not null)
+            {
+                if (LABLibary.Interface.ApiCollection.WinRegistry.Keys.GetKeyValue("DebuggerMode") == "enabled")
+                {
+                    logger.LogRequest(request);
+                    //logger.SendRequestToServer(request);
+                }
+                else 
+                { 
+                    
+                }
+            }
         }
 
         private void LogRequest(HttpListenerRequest request = null, bool req = false, string message = null)

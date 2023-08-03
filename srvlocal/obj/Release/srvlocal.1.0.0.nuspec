@@ -19,6 +19,7 @@
       <group targetFramework="net7.0-windows7.0">
         <dependency id="LABLibary" version="1.0.0" exclude="Build,Analyzers" />
         <dependency id="Server" version="1.0.0" exclude="Build,Analyzers" />
+        <dependency id="ConsoleTables" version="2.4.2" exclude="Build,Analyzers" />
         <dependency id="Remote.Linq.Newtonsoft.Json" version="7.1.0" exclude="Build,Analyzers" />
       </group>
     </dependencies>

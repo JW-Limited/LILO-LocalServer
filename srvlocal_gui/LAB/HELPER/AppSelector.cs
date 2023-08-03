@@ -13,9 +13,34 @@ namespace srvlocal_gui
 {
     public partial class AppSelector : Form
     {
-        public AppSelector()
+        private static AppSelector i_appSelector;
+        private static object _lock = new object();
+
+        public static AppSelector Instance
+        {
+            get
+            {
+                lock (_lock)
+                {
+                    if (i_appSelector == null)
+                    {
+                        i_appSelector = new AppSelector();
+                    }
+
+                    return i_appSelector;
+                }
+            }
+        }
+
+
+        private AppSelector()
         {
             InitializeComponent();
+
+            this.FormClosing += (sender, e) =>
+            {
+                i_appSelector = null;
+            };
         }
 
         public string mainAppName = "LILO App";
@@ -27,14 +52,14 @@ namespace srvlocal_gui
 
             var timer = new System.Windows.Forms.Timer()
             {
-                Interval = rm.Next(500,2000),
+                Interval = rm.Next(500, 2000),
                 Enabled = true
             };
             timer.Tick += (sender, e) => saaPreloader1.Visible = false;
             timer.Start();
         }
 
-        public void StringSetter(ZeroitMetroPanelSelection selection )
+        public void StringSetter(ZeroitMetroPanelSelection selection)
         {
             mainAppName = selection.TextHeadline;
             mainDescription = selection.TextSubline;
@@ -62,9 +87,5 @@ namespace srvlocal_gui
             StringSetter(zeroitMetroPanelSelection4);
         }
 
-        private void zeroitMetroPanelSelection5_Click(object sender, EventArgs e)
-        {
-            StringSetter(zeroitMetroPanelSelection5);
-        }
     }
 }

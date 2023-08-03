@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -8,7 +9,8 @@ using System.Threading.Tasks;
 
 namespace srvlocal_gui.AppMananger
 {
-    public class AutoGenerators
+    [DebuggerDisplay($"{{{nameof(GetDebuggerDisplay)}(),nq}}")]
+    public sealed class AutoGenerators
     {
         public static void ShowReadMeDialog()
         {
@@ -49,20 +51,24 @@ namespace srvlocal_gui.AppMananger
                                         Best regards,
                                         JW Limited.";
 
-                var result = MessageBox.Show(message, "License Agreement", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                if (result == DialogResult.Yes)
+                var dialogHandel = DialogBigText.Instance("License Agrement", message, "Accept", "Decline", DialogAction =>
                 {
-                    LAB.SETTINGS.config.Default.acceptedLicenseAgrement = true;
-                    LAB.SETTINGS.config.Default.Save();
-                    LABLibary.Assistant.WriteLicense.Write(AppDomain.CurrentDomain.BaseDirectory);
-                }
-                else
-                {
-                    Application.ExitThread();
-                }
+                    if (DialogAction == DialogResult.OK)
+                    {
+                        LAB.SETTINGS.config.Default.acceptedLicenseAgrement = true;
+                        LAB.SETTINGS.config.Default.Save();
+                        LABLibary.Assistant.WriteLicense.Write(AppDomain.CurrentDomain.BaseDirectory);
+                    }
+                    else if ( DialogAction == DialogResult.Cancel)
+                    {
+                        Application.ExitThread();
+                    }
+                });
+
+                dialogHandel.ShowDialog();
             }
-            else
+            else if(!File.Exists(".\\license.labl"))
             {
                 LABLibary.Assistant.WriteLicense.Write(AppDomain.CurrentDomain.BaseDirectory);
             }
@@ -70,7 +76,7 @@ namespace srvlocal_gui.AppMananger
 
         public static string ShowVersion()
         {
-            return String.Format("JW Lmt. LILO� SrvLocal - [Local Server Application Host] version {0}", AssemblyVersion);
+            return String.Format("JW LIMITED - [Local Server Application Host] version {0}", AssemblyVersion);
         }
 
         public static string AssemblyVersion
@@ -129,6 +135,11 @@ namespace srvlocal_gui.AppMananger
             sb.AppendLine("      Enable authentication with the username 'admin' and password '123456'");
 
             return sb.ToString();
+        }
+
+        private string GetDebuggerDisplay()
+        {
+            return Debugger.Launch().ToString();
         }
     }
 }

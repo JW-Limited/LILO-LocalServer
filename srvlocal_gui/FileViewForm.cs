@@ -1,4 +1,5 @@
 ﻿using ReactiveUI;
+using srvlocal_gui.AppMananger;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,34 +14,33 @@ namespace srvlocal_gui
 {
     public partial class FileViewForm : Form
     {
-        private static FileViewForm _instance;
+        private static FileViewForm? _instance;
         private static object _instanceLock = new object();
         private string? sourceURL;
         private string changedSource;
         private bool Success = false;
-        private bool _startInProtectedMode = true;
+        private WebViewFormMode FormMode;
 
-        public static FileViewForm Instance(string source, bool startInProtectedMode = true)
+        public static FileViewForm Instance(string source, WebViewFormMode formMode)
         {
             {
                 if (_instance == null)
                 {
-                    _instance = new FileViewForm(source, startInProtectedMode);
+                    _instance = new FileViewForm(source, formMode);
                 }
 
                 return _instance;
             }
         }
 
-        private FileViewForm(string source, bool startInProtectedMode)
+        private FileViewForm(string source, WebViewFormMode formMode)
         {
             InitializeComponent();
-            if (source is not null)
-            {
-                sourceURL = source;
-            }
 
+            if (source is not null) sourceURL = source;
+            //else throw new ArgumentNullException("source");
 
+            FormMode = formMode;
         }
 
         private void FileViewForm_Load(object sender, EventArgs e)
@@ -78,7 +78,7 @@ namespace srvlocal_gui
             {
                 if (changedSource.EndsWith("api/home"))
                 {
-                    if (_startInProtectedMode)
+                    if (FormMode == WebViewFormMode.ProtectedLoginMode)
                     {
                         Success = true;
                         Form1.Instance.APILoginHandler(true);
@@ -89,7 +89,7 @@ namespace srvlocal_gui
 
         private void FileViewForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if(_startInProtectedMode)
+            if(FormMode == WebViewFormMode.ProtectedLoginMode)
             {
                 Form1.Instance.APILoginHandler_Closing(Success);
             }

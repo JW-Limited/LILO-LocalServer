@@ -97,7 +97,7 @@ namespace srvlocal_gui.AppMananger
                 if (!_loggedInUser.CanChangeConfig)
                 {
                     tbGUI.Hide();
-                    tbServer.Hide();    
+                    tbServer.Hide();
                 }
 
                 return true;

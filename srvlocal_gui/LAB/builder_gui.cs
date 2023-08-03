@@ -13,31 +13,38 @@ using System.Windows.Forms;
 using System.Windows.Media.TextFormatting;
 using static srvlocal_gui.ProjectFile;
 using LABLibary;
-using DarkUI.Forms;
-using OpenTK.Graphics.OpenGL;
-using static Google.Apis.Requests.BatchRequest;
-using Modern.WindowKit.Controls;
 using RuFramework;
-using Telerik.WinControls.UI.Map.Bing;
 using srvlocal_gui.LAB.SETTINGS;
+using srvlocal_gui.LAB.HELPER;
+using srvlocal_gui.AppMananger;
+using System.IO;
 
 namespace srvlocal_gui.LAB
 {
     public partial class builder_gui : Form
     {
-        public static builder_gui Instance(string project)
+        public static builder_gui Instance(string project, StartMode mode)
         {
             lock (_instanceLock)
             {
-                if(_instance is null)
+                if (_instance is null)
                 {
-                    _instance = new builder_gui(project);
+                    _instance = new builder_gui(project, mode);
                 }
 
                 return _instance;
             }
         }
 
+        public enum StartMode
+        {
+            ProjectFile,
+            StartWindow,
+            Setup,
+            Debug
+        }
+
+        public StartMode _mode;
         public string projectFile = string.Empty;
         public static Form bagHandle;
         public static Form prjExpHandle;
@@ -46,28 +53,25 @@ namespace srvlocal_gui.LAB
         private static object _instanceLock = new object();
         private Project _loadedProject = new Project();
 
-        private builder_gui(string projectName)
+        private builder_gui(string projectName, StartMode mode)
         {
-
-            InitializeComponent();
-            this.projectFile = projectName;
-
-            this.FormClosing += (sender, e) =>
-            {
-                Application.ExitThread();
-            };
-
             try
             {
-                LoadProject();
-                Thread.Sleep(300);
-                status.Text = "Projekt Bereit";
+                InitializeComponent();
+                this.projectFile = projectName;
+
+                this.FormClosing += (sender, e) =>
+                {
+                    Application.ExitThread();
+                    Application.Exit();
+                };
+
+                _mode = mode;
 
                 try
                 {
                     menuStrip.Renderer = new LABLibary.Form.MenuStrip.MyRenderer(true, Color.FromArgb(21, 21, 21));
                     dateiDrop.Renderer = new LABLibary.Form.MenuStrip.MyRenderer(true, Color.FromArgb(21, 21, 21));
-                    //toolStrip.Renderer = new LABLibary.Form.MenuStrip.MyRenderer(false, Color.FromArgb(24, 24, 24));
                 }
                 catch (Exception ex)
                 {
@@ -76,76 +80,137 @@ namespace srvlocal_gui.LAB
             }
             catch (Exception ey)
             {
-                if (!DebugSettings.Default.debug)
-                {
-                    MessageBox.Show(ey.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                MessageBox.Show(ey.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void textEditorControl1_TextChanged(object sender, System.EventArgs e)
+        public async Task<string> HandleStartMode(builder_gui.StartMode mode)
         {
-            UpdateAndCheckFoldings();
+            try
+            {
+                switch (mode)
+                {
+                    case StartMode.ProjectFile or StartMode.Debug:
+                        return "splash";
+                }
+            }
+            catch (Exception ey)
+            {
+                MessageBox.Show(ey.Message);
+
+                return "error";
+            }
+
+            return "error";
         }
 
-        private void UpdateAndCheckFoldings()
+        public async void StartWithSplashScreen()
         {
-            textEditorControl1.Document.FoldingManager.UpdateFoldings(null, null);
-            //textBox1.Text = string.Join("\r\n", textEditorControl1.GetFoldingErrors());
+            try
+            {
+                var splash = SplashScreen.Instance();
+                FileInfo file = new FileInfo(projectFile);
+
+                this.WindowState = FormWindowState.Minimized;
+                this.ShowIcon = false;
+
+                splash.ProvideProcessInformation($"Loading Project \"{file.Name}\"...", 700);
+                var loadedProject = await LoadProject(projectFile);
+
+                if (loadedProject)
+                {
+                    status.Text = "Projekt Bereit";
+                    splash.ProvideProcessInformation("Projekt Bereit", 500);
+                }
+                else
+                {
+                    status.Text = "Error while Loading.";
+                    splash.ProvideProcessInformation("Error while Loading.", 500);
+                }
+
+                splash.ProvideProcessInformation($"Starting DesingToolServer...", 1000);
+                await StartDesingToolServer();
+
+                this.WindowState = FormWindowState.Maximized;
+                this.ShowIcon = false;
+
+                splash.Close();
+            }
+            catch (Exception ey)
+            {
+                status.Text = ey.Message;
+            }
         }
 
         private async void builder_gui_Load(object sender, EventArgs e)
         {
-            var api = new Thread(StartPipe);
-            api.Start();
 
-            this.textEditorControl1 = new ICSharpCode.TextEditor.TextEditorControlEx();
-            this.textEditorControl1.ContextMenuEnabled = true;
-            this.textEditorControl1.AutoScaleMode = AutoScaleMode.Dpi;
-            this.textEditorControl1.ContextMenuShowDefaultIcons = true;
-            this.textEditorControl1.ContextMenuShowShortCutKeys = true;
-            this.textEditorControl1.FoldingStrategy = "C#";
-            this.textEditorControl1.Font = new System.Drawing.Font("Courier New", 8.25F);
-            this.textEditorControl1.HideVScrollBarIfPossible = false;
-            mainView.Panel2.Controls.Add(this.textEditorControl1);
-            textEditorControl1.Dock = DockStyle.Fill;
-            this.textEditorControl1.Name = "codeEdit";
-            this.textEditorControl1.ShowVRuler = true;
-            this.textEditorControl1.Size = new System.Drawing.Size(596, 353);
-            this.textEditorControl1.SyntaxHighlighting = "C#";
-            textEditorControl1.HideVScrollBarIfPossible = true;
-            this.textEditorControl1.TabIndex = 1;
-            this.textEditorControl1.VRulerRow = 999;
-            this.textEditorControl1.TextChanged += (sender, e) =>
+            if (_mode is StartMode.ProjectFile)
             {
-                Task task = new Task(() =>
+                this.WindowState = FormWindowState.Minimized;
+                this.ShowIcon = false;
+                var explorer = LAB.TOOLS.ProjectExplorer.Instance(projectFile);
+
+                prjExpHandle = explorer;
+
+                this.codeEditor.TextChanged += (sender, e) =>
                 {
-                    UpdateAndCheckFoldings();
-                });
+                    Task CodeCorrectionTask = new Task(() =>
+                    {
+                        codeEditor.Document.FoldingManager.UpdateFoldings(null, null);
+                    });
 
-                Thread t1 = new Thread(task.Start);
-                t1.Start();
-                t1.Join();
-            };
+                    CodeCorrectionTask.Start();
+                };
 
-            var explorer = new LAB.TOOLS.ProjectExplorer(projectFile);
-            explorer.Show();
-            prjExpHandle = explorer;
-            explorer.MdiParent = this;
-            mainView.Panel1.Controls.Add(explorer);
-            explorer.Dock = DockStyle.Fill;
-        }
+                explorer.Show();
+                explorer.MdiParent = this;
+                mainView.Panel1.Controls.Add(explorer);
+                explorer.Dock = DockStyle.Fill;
 
-        public async void StartPipe()
-        {
-            var pipe = new LABLibary.Network.DataPipe("service/worker", "liloDev420");
-
-            while (true)
-            {
-                Application.DoEvents();
-                var response = await pipe.GetDataAsync();
-                LABLibary.Forms.ErrorDialog.ErrorManager.AddError(response, true, "MessageQueringPipeline");
+                cmbLanguage.Text = "C#";
             }
+            else
+            {
+                var explorer = LAB.TOOLS.ProjectExplorer.Instance(projectFile);
+                prjExpHandle = explorer;
+                var loadedProject = await LoadProject(projectFile);
+                Thread.Sleep(300);
+
+                await StartDesingToolServer();
+
+                if (loadedProject)
+                {
+                    status.Text = "Projekt Bereit";
+                }
+                else
+                {
+                    status.Text = "Error while Loading.";
+                }
+
+
+
+                this.codeEditor.TextChanged += (sender, e) =>
+                {
+                    Task CodeCorrectionTask = new Task(() =>
+                    {
+                        codeEditor.Document.FoldingManager.UpdateFoldings(null, null);
+                    });
+
+                    CodeCorrectionTask.Start();
+                };
+                explorer.Show();
+
+
+
+                explorer.MdiParent = this;
+                mainView.Panel1.Controls.Add(explorer);
+                explorer.Dock = DockStyle.Fill;
+
+                cmbLanguage.Text = "C#";
+            }
+
+
         }
 
         public void OpenProject(object sender, EventArgs e)
@@ -155,55 +220,82 @@ namespace srvlocal_gui.LAB
 
         public void NewProject(object sender, EventArgs e)
         {
-            var setup = Setup.Instance(null);
+            User user = new User(_loadedProject.Author, "none")
+            {
+                CanChangeConfig = true,
+                Email = "no@email.com",
+                IsActivated = true,
+            };
+
+
+            var setup = Setup.Instance(user);
             setup.Show();
         }
 
-        public void LoadProject(string FILE = null)
+        private Task StartDesingToolServer()
+        {
+            try
+            {
+                var process = new Process();
+                process.StartInfo = new ProcessStartInfo
+                {
+                    FileName = config.Default.srvlocal_path,
+                    RedirectStandardOutput = true,
+                    UseShellExecute = false,
+                    CreateNoWindow = true,
+                };
+                process.Start();
+
+                while (!process.Responding)
+                {
+                    status.Text = "Waiting for the DesingServer...";
+                }
+
+                return Task.CompletedTask;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Server Internal Error");
+
+                return Task.CompletedTask;
+            }
+        }
+
+        public async Task<bool> LoadProject(string FILE = null)
         {
             if (FILE != null)
             {
-                ProjectExplorer.chnFile = FILE;
-
                 var loadedProject = Project.LoadFromFile(FILE);
+
                 if (loadedProject is not null)
                 {
 
                     this.Text = loadedProject.Name + $" - LAB";
                     projectFile = FILE;
+                    _loadedProject = loadedProject;
+
 
                     if (loadedProject.Target != RuntimeInformation.RuntimeIdentifier)
                     {
-                        status.Text = "You are Developing a Programm for another OperatingSystem. You cant test or Debug";
+                        status.Text = "You are Developing a Programm for another OperatingSystem. You cant Test or Debug youre Applicatíon without third party Emulators.";
                     }
+
+                    return true;
                 }
-               
+
+                return false;
             }
+
+            throw new System.NullReferenceException();
 
         }
 
         private void ShowNewForm(object sender, EventArgs e)
         {
-            Process proc = new Process();
-            proc.StartInfo.FileName = AppDomain.CurrentDomain.BaseDirectory + "\\srvlocal_gui.exe";
-            proc.StartInfo.Arguments = "--nowin";
-            proc.StartInfo.UseShellExecute = false;
-            proc.StartInfo.CreateNoWindow = true;
-            proc.StartInfo.RedirectStandardInput = true;
-            proc.StartInfo.RedirectStandardOutput = true;
-            proc.StartInfo.RedirectStandardError = true;
-            proc.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
-            proc.Start();
 
-            Form childForm = new EDITOR.EditorJS();
-            childForm.MdiParent = this;
-            childForm.Dock = DockStyle.Fill;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Text = "LAB Code";
-            childForm.Show();
         }
 
-        private void OpenFile(object sender, EventArgs e)
+        private async void OpenFile(object sender, EventArgs e)
         {
             System.Windows.Forms.OpenFileDialog openFileDialog = new System.Windows.Forms.OpenFileDialog();
             openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
@@ -211,7 +303,17 @@ namespace srvlocal_gui.LAB
             if (openFileDialog.ShowDialog(this) == DialogResult.OK)
             {
                 string FileName = openFileDialog.FileName;
-                LoadProject(FileName);
+                ProjectExplorer.Instance(FileName).Reload(FileName);
+                var loaded = await LoadProject(FileName);
+
+                if (loaded)
+                {
+                    status.Text = "Projekt Bereit";
+                }
+                else
+                {
+                    status.Text = "Error while Loading.";
+                }
             }
         }
 
@@ -304,36 +406,39 @@ namespace srvlocal_gui.LAB
 
         private void builder_gui_Shown(object sender, EventArgs e)
         {
-            try
+            if (_mode is StartMode.ProjectFile)
             {
-                var process = new Process();
-                process.StartInfo = new ProcessStartInfo
-                {
-                    FileName = config.Default.srvlocal_path,
-                    RedirectStandardOutput = true,
-                    UseShellExecute = false,
-                    CreateNoWindow = true,
-                };
-                process.Start();
+                var splash = SplashScreen.Instance();
+                splash.Show();
+                splash.BringToFront();
 
-                while (!process.Responding)
+                var timer = new System.Timers.Timer();
+                timer.Interval = 900;
+
+                timer.Elapsed += (sender, e) =>
                 {
-                    status.Text = "Waiting for the DesingServer...";
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Server Internal Error");
+                    timer.Stop();
+
+                    StartWithSplashScreen();
+                };
+
+                timer.Start();
+
             }
 
         }
 
         private void UpdateText(string selectedItem)
         {
-            textEditorControl1.SetHighlighting(selectedItem);
-            textEditorControl1.SetFoldingStrategy(selectedItem);
-
-            UpdateAndCheckFoldings();
+            try
+            {
+                codeEditor.SetHighlighting(selectedItem);
+                codeEditor.SetFoldingStrategy(selectedItem);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Wrong FoldingStrategy");
+            }
         }
 
         private void fileMenu_Click(object sender, EventArgs e)
@@ -371,14 +476,33 @@ namespace srvlocal_gui.LAB
 
         }
 
-        private void projektProjektmappeToolStripMenuItem_Click(object sender, EventArgs e)
+        private async void projektProjektmappeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (addFile.ShowDialog() == DialogResult.OK)
             {
+                prjExpHandle.Close();
+
                 try
                 {
                     Run_RuProgressBar(LABLibary.Converter.FileC.GetFileName(addFile.FileName));
-                    LoadProject(addFile.FileName);
+                    var loaded = await LoadProject(addFile.FileName);
+
+                    prjExpHandle = ProjectExplorer.Instance(addFile.FileName) as ProjectExplorer;
+                    prjExpHandle.Show();
+                    prjExpHandle.BringToFront();
+                    prjExpHandle.MdiParent = this;
+                    mainView.Panel1.Controls.Add(prjExpHandle);
+                    prjExpHandle.Dock = DockStyle.Fill;
+
+                    if (loaded)
+                    {
+                        status.Text = "Projekt Bereit";
+                    }
+                    else
+                    {
+                        status.Text = "Error while Loading.";
+                    }
+
                 }
                 catch (Exception ex)
                 {
@@ -388,17 +512,183 @@ namespace srvlocal_gui.LAB
             }
         }
 
-        private void ordnerToolStripMenuItem_Click(object sender, EventArgs e)
+        private async void ordnerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            OpenFolderDialog ofd = new OpenFolderDialog();
-            ofd.Title = "Open Solution directory";
+            FolderBrowserDialog fbd = new FolderBrowserDialog()
+            {
+                OkRequiresInteraction = true,
+                AutoUpgradeEnabled = true,
+                UseDescriptionForTitle = true,
+                ShowHiddenFiles = true,
+                RootFolder = Environment.SpecialFolder.MyDocuments
+            };
+
+            if (fbd.ShowDialog() == DialogResult.OK)
+            {
+                var loaded = false;
+
+                foreach (var file in Directory.GetFiles(fbd.SelectedPath))
+                {
+                    FileInfo fi = new FileInfo(file);
+                    if (fi.Extension == ".lab")
+                    {
+                        try
+                        {
+                            prjExpHandle.Close();
+
+                            Run_RuProgressBar(file);
+                            loaded = await LoadProject(file);
+
+                            prjExpHandle = ProjectExplorer.Instance(file) as ProjectExplorer;
+                            prjExpHandle.Show();
+                            prjExpHandle.BringToFront();
+                            prjExpHandle.MdiParent = this;
+                            mainView.Panel1.Controls.Add(prjExpHandle);
+                            prjExpHandle.Dock = DockStyle.Fill;
+
+                            if (loaded)
+                            {
+                                break;
+                            }
+                        }
+                        catch { }
+
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                }
+            }
+        }
+
+        private void cmbLanguage_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                UpdateText(cmbLanguage.SelectedItem.ToString());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Can´t change Language.");
+            }
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var abp = AboutProject.Instance(_loadedProject);
+            abp.ShowDialog();
+        }
+
+        private void toolStripTextBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolboxToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (prjExpHandle.IsAccessible || !prjExpHandle.IsDisposed)
+            {
+                if (!prjExpHandle.IsMdiChild)
+                {
+                    prjExpHandle.BringToFront();
+                }
+                else
+                {
+                    prjExpHandle.MdiParent = this;
+                    mainView.Panel1.Controls.Add(prjExpHandle);
+                    prjExpHandle.Dock = DockStyle.Fill;
+                }
+            }
+            else
+            {
+                prjExpHandle = ProjectExplorer.Instance(projectFile) as ProjectExplorer;
+                prjExpHandle.Show();
+                prjExpHandle.BringToFront();
+                prjExpHandle.MdiParent = this;
+                mainView.Panel1.Controls.Add(prjExpHandle);
+                prjExpHandle.Dock = DockStyle.Fill;
+            }
+        }
+
+        private void dateiToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var info = new FileInfo(projectFile);
+
+            var ofd = new System.Windows.Forms.OpenFileDialog()
+            {
+                CheckPathExists = true,
+                CheckFileExists = true,
+                AddExtension = true,
+                InitialDirectory = info.DirectoryName,
+                OkRequiresInteraction = true,
+                Multiselect = false
+            };
+
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                if (codeEditor.Text is not null or "")
+                {
+                    try
+                    {
+                        var code = new StringBuilder();
+
+                        code.Append(string.Join("\n", File.ReadAllLines(ofd.FileName)));
+
+                        var fileInfo = new FileInfo(ofd.FileName);
+
+                        txtFileName.Text = fileInfo.Name;
+
+                        codeEditor.SetTextAndRefresh(code.ToString(), true);
+
+                        status.Text = "Project Bereit";
+                    }
+                    catch (Exception ex)
+                    {
+                        LABLibary.Forms.ErrorDialog.ErrorManager.AddError(ex.Message, true, "CodeEditorFileOperation");
+                        LABLibary.Forms.ErrorDialog.Show();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Save First?");
+                }
+            }
+
+
+        }
+
+        private void startfensterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var newInstance = new Process()
+            {
+                StartInfo = new ProcessStartInfo()
+                {
+                    FileName = Application.ExecutablePath,
+                    Arguments = "--startWindow"
+
+                }
+            };
+
+            newInstance.Start();
+        }
+
+        private void radBrowseEditor1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void contentsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var chat = new SupportChat();
+            chat.Show();
         }
     }
 
     public class MyFunctionality
     {
         private int max = 0;
-        private int divisor = 2;
+        private int divisor = 1111;
         public MyFunctionality(object MyObject = null, int Max = 0, int Divisor = 10)
         {
             object myObject = MyObject;
@@ -407,7 +697,7 @@ namespace srvlocal_gui.LAB
         }
         public void LoadingProject(object status)
         {
-            divisor = 210;
+            divisor = 1910;
 
             try
             {

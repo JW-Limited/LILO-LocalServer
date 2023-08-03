@@ -192,7 +192,7 @@ namespace srvlocal
                             }
                             else
                             {
-                                var indexHtml = GenerateIndexHtml(filePath);
+                                var indexHtml = auto_generators.GenerateIndexHtml.Instance().v1(filePath);
                                 var content = Encoding.UTF8.GetBytes(indexHtml);
                                 response.ContentLength64 = content.Length;
                                 response.OutputStream.Write(content, 0, content.Length);
@@ -201,28 +201,11 @@ namespace srvlocal
                         else
                         {
 
-                            //HandelError(context, request);
-
-
-                            var indexFilePath = Path.Combine(dir + "\\error\\404\\index.html");
-
-                            if (File.Exists(indexFilePath))
-                            {
-                                if (File.Exists(indexFilePath))
-                                {
-                                    var content = File.ReadAllBytes(indexFilePath);
-                                    response.ContentLength64 = content.Length;
-                                    response.OutputStream.Write(content, 0, content.Length);
-                                };
-                            }
-                            else
-                            {
-                                response.StatusCode = (int)HttpStatusCode.NotFound;
-                                var errorHtml = GenerateErrorHtml(HttpStatusCode.NotFound, "The File, you searching for doesn´t exist.");
-                                var content = Encoding.UTF8.GetBytes(errorHtml);
-                                response.ContentLength64 = content.Length;
-                                response.OutputStream.Write(content, 0, content.Length);
-                            }
+                            response.StatusCode = (int)HttpStatusCode.NotFound;
+                            var errorHtml = auto_generators.GenerateIndexHtml.Instance().v1(filePath);
+                            var content = Encoding.UTF8.GetBytes(errorHtml);
+                            response.ContentLength64 = content.Length;
+                            response.OutputStream.Write(content, 0, content.Length);
 
                         }
                     }

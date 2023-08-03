@@ -39,9 +39,9 @@
             webView21.DefaultBackgroundColor = Color.White;
             webView21.Dock = DockStyle.Fill;
             webView21.Location = new Point(0, 0);
-            webView21.Margin = new Padding(2, 2, 2, 2);
+            webView21.Margin = new Padding(2);
             webView21.Name = "webView21";
-            webView21.Size = new Size(931, 553);
+            webView21.Size = new Size(1043, 680);
             webView21.Source = new Uri("http://localhost:8080/codeEditor/", UriKind.Absolute);
             webView21.TabIndex = 0;
             webView21.ZoomFactor = 1D;
@@ -51,10 +51,10 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(931, 553);
+            ClientSize = new Size(1043, 680);
             Controls.Add(webView21);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "EditorJS";
             Text = "EditorJS";
             ((System.ComponentModel.ISupportInitialize)webView21).EndInit();

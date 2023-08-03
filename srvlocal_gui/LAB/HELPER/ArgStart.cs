@@ -1,4 +1,4 @@
-﻿using System; 
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,7 +28,7 @@ namespace srvlocal_gui
             this.ShowInTaskbar = visible;
             this.ShowIcon = visible;
 
-            
+
         }
 
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
@@ -43,11 +43,11 @@ namespace srvlocal_gui
 
         public static void SaveExit(bool inTray)
         {
-            if(inTray)
+            if (inTray)
             {
                 DialogResult msg = MessageBox.Show("Do you really want to close the JW Limited DCC. Some applications going to work no more.", "JW Limited DDC", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
 
-                if(msg == DialogResult.OK)
+                if (msg == DialogResult.OK)
                 {
                     if (Process.GetProcessesByName("srvlocal").Length > 0)
                     {
@@ -67,7 +67,7 @@ namespace srvlocal_gui
         private void Cred(object sender, EventArgs e)
         {
             credentialDialog1.ShowDialog();
-            if(credentialDialog1.Password == "password" && credentialDialog1.UserName == "admin")
+            if (credentialDialog1.Password == "password" && credentialDialog1.UserName == "admin")
             {
                 var coon = ConsoleEmu.Instance();
                 coon.Show();
@@ -80,10 +80,10 @@ namespace srvlocal_gui
             this.ShowInTaskbar = visible;
             this.ShowIcon = visible;
 
-            if(!visible)
+            if (!visible)
             {
                 this.WindowState = FormWindowState.Minimized;
-                
+
             }
         }
     }

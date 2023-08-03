@@ -17,6 +17,7 @@ using srvlocal_gui.AppMananger;
 using LABLibary.Forms;
 using System.Net;
 using srvlocal_gui.LAB.SETTINGS;
+using static srvlocal_gui.Program;
 
 namespace srvlocal_gui
 {
@@ -26,21 +27,29 @@ namespace srvlocal_gui
         /// <summary>
         ///  The main debug ErrorManager.
         /// </summary>
+        
         #region ErrorManager
 
         public static List<string> ErrorList = new List<string>();
         public static bool RestartTrue = false;
 
-        private const string SettingsFileName = "settings.json";
+        private const string SettingsFileName = "C:\\LILO\\host\\settings.json";
 
         private static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
         {
             var exception = e.ExceptionObject as Exception;
-            var errorMessage = GetDetailedErrorMessage(exception);
+            if (exception is not null)
+            {
+                var errorMessage = GetDetailedErrorMessage(exception);
 
-            AddErrorMessageToList(errorMessage);
-            LogErrorMessage(errorMessage);
-            AddErrorToErrorManager(errorMessage);
+
+                AddErrorMessageToList(errorMessage);
+                LogErrorMessage(errorMessage);
+                AddErrorToErrorManager(errorMessage);
+
+            }
+
+
             ShowErrorDialog();
         }
 
@@ -82,7 +91,7 @@ namespace srvlocal_gui
                 errorMessage.AppendLine($"Source: {exception.Source}");
             }
 
-            if (exception.StackTrace != null)
+            if (exception.StackTrace is not null or "")
             {
                 // Additional stack trace information, such as line numbers
                 var stackTrace = new StackTrace(exception, true);
@@ -94,8 +103,12 @@ namespace srvlocal_gui
                     var method = frame.GetMethod();
                     var line = frame.GetFileLineNumber();
 
-                    errorMessage.AppendLine($"Method: {method.Name} ({method.Module})");
-                    errorMessage.AppendLine($"Line: {line}");
+                    if (method is not null)
+                    {
+                        errorMessage.AppendLine($"Method: {method.Name} ({method.Module})");
+                        errorMessage.AppendLine($"Line: {line}");
+                    }
+
                 }
             }
 
@@ -147,8 +160,11 @@ namespace srvlocal_gui
                         var method = frame.GetMethod();
                         var line = frame.GetFileLineNumber();
 
-                        errorMessage.AppendLine($"Method: {method.Name} ({method.Module})");
-                        errorMessage.AppendLine($"Line: {line}");
+                        if (method is not null)
+                        {
+                            errorMessage.AppendLine($"Method: {method.Name} ({method.Module})");
+                            errorMessage.AppendLine($"Line: {line}");
+                        }
                     }
                 }
             }
@@ -183,8 +199,73 @@ namespace srvlocal_gui
         #endregion
 
         /// <summary>
+        ///  Hardcoded Data for Debugging.
+        /// </summary>
+
+        #region DataTemplates
+
+        public class SettingsTemplate
+        {
+            public User admin
+            {
+                get
+                {
+                    var _admin = new User(Environment.UserName, "admin")
+                    {
+                        CanChangeConfig = true,
+                        Email = Environment.UserName + "@jwlmt.com",
+                        FavouriteColor = Color.AliceBlue,
+                        ButtonColor = Color.FromArgb(94, 148, 255)
+                    };
+
+                    return _admin;
+                }
+            }
+
+            public User guest
+            {
+                get
+                {
+                    User _guest = new User("guest", "none")
+                    {
+                        CanChangeConfig = false,
+                        Email = "guest@noemail.com",
+                        FavouriteColor = Color.Azure,
+                        ButtonColor = Color.FromArgb(94, 148, 255)
+                    };
+
+                    return _guest;
+                }
+            }
+
+
+
+        }
+
+        #endregion
+
+        public const string dist = "C:\\LILO\\dist";
+        public const string req = "C:\\LILO\\req";
+        public const string host = "C:\\LILO\\host";
+        public const string TestProject = "C:\\Users\\joeva\\Desktop\\TestProjekt\\TestProjekt.lab";
+
+        /// <summary>
+        ///  Required Files and Variabels.
+        /// </summary>
+
+        public static string[] requiredFiles = 
+        { 
+            "srvlocal.exe", 
+            "srvlocal.dll", 
+            "srvlocal.runtimeconfig.json" 
+        };
+
+        /// <summary>
         ///  The main entry point for the application.
         /// </summary>
+        /// 
+
+
         [STAThread]
         private static void Main(string[] args)
         {
@@ -193,36 +274,71 @@ namespace srvlocal_gui
 
             Prerequisite();
 
+            if (!CheckIfDirIsValid())
+            {
+                StringBuilder sb = new StringBuilder();
+                foreach (var files in GetMissingFiles())
+                {
+                    sb.AppendLine("+-> " + files);
+                }
+
+                CreateDirectoryIfNotExists();
+
+                MessageBox.Show("The Program detected that some Resources maybe Missing or arent in the specified installation directory:\n\n" + sb + "\nPlease contact the support if you run in errors while using the program.", "Missing Files", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Task.Run(() =>
+                {
+                    StringBuilder sb3 = new StringBuilder();
+                    foreach (var files in GetMissingFiles())
+                    {
+                        sb3.Append(" " + files + ",");
+                    }
+
+                    Logger.Instance.Log("Missing resources :" + sb3.ToString(), Logger.LogLevel.Warning);
+                });
+            }
+            else
+            {
+                Logger.Instance.Log("Application Domain is satisfied.", logLevel: Logger.LogLevel.Info);
+            }
+
             if (Enum.TryParse(Helper.User.CheckUserPermissions(), out Helper.User._UserRights userRights))
             {
                 Console.WriteLine(SettingsManager.Instance.GetSetting(settings => settings.WindowTitle, "default value"));
                 ApplicationConfiguration.Initialize();
                 AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(CurrentDomain_UnhandledException);
-                
+
                 AutoGenerators.ShowReadMeDialog();
                 bool startWithNoWindow = false;
 
-                foreach (var arg in args)
+                if(args is not null)
                 {
-                    switch (arg)
+                    foreach (var arg in args)
                     {
-                        case "--start":
-                            startWithNoWindow = true;
-                            break;
-                        case "--nowin":
-                            startWithNoWindow = false;
-                            break;
-                        case "--help":
-                            InfoDialog.Show(AutoGenerators.ShowHelp(), "Help - Or visit US");
-                            return;
-                        case "--version":
-                            InfoDialog.Show(AutoGenerators.ShowVersion(), "Version");
-                            return;
-                        default:
-                            OpenBuilderGui(arg);
-                            break;
+                        switch (arg)
+                        {
+                            case "--start":
+                                startWithNoWindow = true;
+                                break;
+                            case "--nowin":
+                                startWithNoWindow = false;
+                                break;
+                            case "--help":
+                                InfoDialog.Show(AutoGenerators.ShowHelp(), "Help - Or visit US");
+                                return;
+                            case "--version":
+                                InfoDialog.Show(AutoGenerators.ShowVersion(), "Version");
+                                return;
+                            case "--startWindow":
+                                OpenBuilderGui(arg,StartWindow.Instance());
+                                return;
+                            default:
+                                OpenBuilderGui(arg);
+                                break;
+                        }
                     }
                 }
+
+                
 
                 if (startWithNoWindow)
                 {
@@ -240,37 +356,23 @@ namespace srvlocal_gui
 
         internal static void Prerequisite()
         {
-            GenerateDirectoryContents("C:\\LILO\\dist");
-            GenerateDirectoryContents("C:\\LILO\\req");
-            GenerateDirectoryContents("C:\\LILO\\host");
+            GenerateDirectoryContents(dist);
+            GenerateDirectoryContents(req);
+            GenerateDirectoryContents(host);
 
-            if (!File.Exists(Path.Combine("C:\\LILO\\host",SettingsFileName)))
+            if (!File.Exists(Path.Combine(dist, SettingsFileName)))
             {
                 Logger.Instance.Log("Settings file was not found. Initializing SettingsManager and generating it.");
 
-                var admin = new User(Environment.UserName, "admin")
-                {
-                    CanChangeConfig = true,
-                    Email = "ceo@jwlmt.com",
-                    FavouriteColor = Color.AliceBlue,
-                    ButtonColor = Color.FromArgb(94, 148, 255)
-                };
-
-                var guest = new User("guest", "none")
-                {
-                    CanChangeConfig = false,
-                    Email = "guest@jwlmt.com",
-                    FavouriteColor = Color.Azure,
-                    ButtonColor = Color.FromArgb(94, 148, 255)
-                };
+                SettingsTemplate settingsTemplate = new SettingsTemplate();
 
                 List<User> listUser = new List<User>
                 {
-                    admin,
-                    guest
+                    settingsTemplate.admin,
+                    settingsTemplate.guest
                 };
 
-                SettingsManager.Instance.UpdateSettings(new Settings
+                Settings def = new Settings
                 {
                     WindowTitle = "LILO-LocalServer",
                     ProductVersion = 1,
@@ -278,54 +380,37 @@ namespace srvlocal_gui
                     CustomPortConfig = false,
                     CustomCDNConfig = false,
                     Port = 8080,
-                    CDNPath = "C:\\LILO\\dist",
+                    CDNPath = dist,
                     Users = listUser
-                });
+                };
+
+                SettingsManager.Instance.UpdateSettings(def);
             }
         }
 
-        private static void OpenBuilderGui(string arg)
+        private static void OpenBuilderGui(string arg, Form overwrite = null)
         {
-            if (!CheckIfDirIsValid())
-            {
-                StringBuilder sb = new StringBuilder();
-                foreach (var files in GetMissingFiles())
-                {
-                    sb.AppendLine("+-> " + files);
-                }
-                CreateDirectoryIfNotExists();
-                MessageBox.Show("The Program detected that some Resources maybe Missing or arent in the specified installation directory:\n\n" + sb + "\nPlease contact the support if you run in errors while using the program.", "Missing Files", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Task.Run(() =>
-                {
-                    StringBuilder sb3 = new StringBuilder();
-                    foreach (var files in GetMissingFiles())
-                    {
-                        sb3.Append(" " + files + ",");
-                    }
-
-                    Logger.Instance.Log("Missing resources :" + sb3.ToString(), Logger.LogLevel.Warning);
-                    //Browser_();
-                });
-            }
-
             var startedForm = new Form();
             if (DebugSettings.Default.debug)
             {
                 switch (DebugSettings.Default.debugForm)
                 {
-                    default:
-                        startedForm = Form1.Instance /*(arg)*/;
-                        break;
                     case "builder":
-                        builder_gui.Instance(arg);
+                        startedForm = builder_gui.Instance(TestProject,builder_gui.StartMode.Debug);
+                        break;
+                    case "start":
+                        startedForm = StartWindow.Instance();
+                        break;
+                    case "splash":
+                        startedForm = SplashScreen.Instance();
                         break;
                 }
             }
             else
             {
-                if(File.Exists(arg))
+                if (File.Exists(arg))
                 {
-                    startedForm = builder_gui.Instance(arg);
+                    startedForm = builder_gui.Instance(arg, builder_gui.StartMode.ProjectFile);
                 }
                 else
                 {
@@ -333,7 +418,15 @@ namespace srvlocal_gui
                 }
             }
 
-            Application.Run(startedForm);
+            if (overwrite is not null) startedForm = overwrite;
+
+            ApplicationContext appEx = new ApplicationContext()
+            {
+                MainForm = startedForm,
+                Tag = "LAB"
+            };
+
+            Application.Run(appEx);
         }
 
         private static void StartSrvLocalProcess(bool noWindow)
@@ -386,6 +479,7 @@ namespace srvlocal_gui
             }
         }
 
+
         public static void GenerateDirectoryContents(string directoryPath)
         {
             if (Directory.Exists(directoryPath))
@@ -431,7 +525,7 @@ namespace srvlocal_gui
 
         public static bool CheckIfDirIsValid()
         {
-            string[] requiredFiles = { "srvlocal.exe", "srvlocal.dll", "srvlocal.runtimeconfig.json"};
+            
             string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
 
             return requiredFiles.All(file => File.Exists(Path.Combine(baseDirectory, file)));
@@ -459,17 +553,15 @@ namespace srvlocal_gui
 
         public static List<string> GetMissingFiles()
         {
-            string[] requiredFiles = { "srvlocal.exe", "srvlocal.dll", "srvlocal.runtimeconfig.json" };
             string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
 
             return requiredFiles.Where(file => !File.Exists(Path.Combine(baseDirectory, file))).ToList();
         }
 
-        
-
-        public static void Browser_(string url = "https://github.com/JW-Limited/LILO-LocalServer", bool startInLocalBrowser = true)
+        public static void Browser_(string url = "https://github.com/JW-Limited/LILO-LocalServer", bool startInLocalBrowser = true, Form1.ChildrenUse usage = Form1.ChildrenUse.WebView)
         {
-            if(startInLocalBrowser) {
+            if (startInLocalBrowser)
+            {
                 try
                 {
                     Process.Start(url);
@@ -509,8 +601,9 @@ namespace srvlocal_gui
             }
             else
             {
-                var inapp = FileViewForm.Instance(url);
-                inapp.ShowDialog();
+                var inapp = FileViewForm.Instance(url, WebViewFormMode.ProtectedLoginMode);
+                Form1.Instance.OpenInApp(inapp,"Authentication", Form1.ChildrenUse.Auth);
+                //inapp.ShowDialog();
             }
         }
 

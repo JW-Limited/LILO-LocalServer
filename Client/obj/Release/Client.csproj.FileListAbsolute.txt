@@ -4,7 +4,6 @@ C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Client\bin\Release\Guna.UI2.dll
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Client\bin\Release\SaaUI.dll
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Client\bin\Release\SaaUI.xml
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Client\obj\Release\Client.csproj.AssemblyReference.cache
-C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Client\obj\Release\Client.csproj.SuggestedBindingRedirects.cache
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Client\obj\Release\Client.ChatWindow.resources
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Client\obj\Release\Client.LoginWindow.resources
 C:\Users\joeva\Documents\GitHub\LILO-LocalServer\Client\obj\Release\Client.Properties.Resources.resources

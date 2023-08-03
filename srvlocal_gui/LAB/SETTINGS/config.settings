@@ -11,5 +11,14 @@
     <Setting Name="srvlocal_path" Type="System.String" Scope="User">
       <Value Profile="(Default)">C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-windows\srvlocal.exe</Value>
     </Setting>
+    <Setting Name="resource_dir" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\joeva\Documents\GitHub\LILO-LocalServer\srvlocal_gui\bin\Debug\net7.0-windows\</Value>
+    </Setting>
+    <Setting Name="resource_img" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="useNewUI" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
